@@ -12,8 +12,9 @@ FAMGATEWAY_POLL_URL=https://famgateway.in/api/checkout-status.php
 DOWNLOAD_ENCRYPTION_SECRET=e7b4c91a82f3d64e9a1c5b8e2f0d4c7a9b1e3f5a7c9d0e2b4f6a8c0e2d4f6a8c
 
 # 3. APPLICATION & DEPLOYMENT CONFIGURATION
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-PAYMENT_REDIRECT_URL=http://localhost:3000/success
+NEXT_PUBLIC_SITE_URL=https://anon-trove-ebooks.vercel.app
+PAYMENT_REDIRECT_URL=https://anon-trove-ebooks.vercel.app/success
 GITHUB_REPO_URL=https://github.com/tarikk786786/Ebook.git
+VERCEL_PRODUCTION_URL=https://anon-trove-ebooks.vercel.app
 NEXT_PUBLIC_STORE_NAME=AnonTrove
 NEXT_PUBLIC_STORE_TAGLINE=Zero-Trace Digital Bookshelf & Secure Knowledge Vault
