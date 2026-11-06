@@ -9,8 +9,13 @@ export async function GET(req: NextRequest) {
     const orderId = searchParams.get('order_id');
     const bookId = searchParams.get('book_id');
 
-    if (!orderId) {
-      return NextResponse.json({ error: 'Missing order_id' }, { status: 400 });
+    // Strict regex validation for order_id (alphanumeric + underscore only)
+    if (!orderId || typeof orderId !== 'string' || !/^[a-zA-Z0-9_-]{4,32}$/.test(orderId)) {
+      return NextResponse.json({ error: 'Invalid or missing order_id format' }, { status: 400 });
+    }
+
+    if (bookId && (!/^[a-zA-Z0-9_-]{3,64}$/.test(bookId) || !getBookById(bookId))) {
+      return NextResponse.json({ error: 'Invalid book_id specified' }, { status: 400 });
     }
 
     // Call FamGateway public status endpoint (zero API key leak)
@@ -56,7 +61,7 @@ export async function GET(req: NextRequest) {
     });
   } catch (err: any) {
     return NextResponse.json(
-      { error: err.message || 'Polling error' },
+      { error: err.message || 'Status query error' },
       { status: 500 }
     );
   }

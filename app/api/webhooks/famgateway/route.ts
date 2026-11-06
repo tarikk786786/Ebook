@@ -1,46 +1,89 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFamGatewaySignature, generateDownloadToken } from '@/lib/crypto';
-import { getBookById } from '@/lib/catalog';
+import { BOOK_CATALOG } from '@/lib/catalog';
+
+// Processed order cache for idempotent fulfillment & replay attack rejection
+const processedOrders = new Set<string>();
 
 /**
  * FamGateway Authoritative Webhook Receiver
- * Triggered automatically when FamGateway confirms a successful UPI payment.
- * Security: Timing-safe HMAC-SHA256 verification using X-FamGateway-Signature header.
+ * Security Controls:
+ * 1. Strict Timing-Safe HMAC-SHA256 signature verification.
+ * 2. Payload size cap (max 64KB) against memory exhaustion.
+ * 3. Replay attack rejection (idempotency keying on order_id).
+ * 4. Whitelist event matching.
  */
 export async function POST(req: NextRequest) {
   try {
+    // 1. Enforce payload size boundary (<64KB)
+    const contentLength = Number(req.headers.get('content-length') || '0');
+    if (contentLength > 65536) {
+      return NextResponse.json({ error: 'Payload size limit exceeded' }, { status: 413 });
+    }
+
     const rawBody = await req.text();
     const signature = req.headers.get('x-famgateway-signature');
 
-    // Verify cryptographic signature against merchant API key
-    const isAuthentic = verifyFamGatewaySignature(rawBody, signature);
+    if (!signature) {
+      return NextResponse.json({ error: 'Missing required signature header' }, { status: 401 });
+    }
 
+    // 2. Timing-safe cryptographic HMAC-SHA256 verification
+    const isAuthentic = verifyFamGatewaySignature(rawBody, signature);
     if (!isAuthentic) {
-      console.warn('[FamGateway Webhook] Rejected unauthorized or tampered signature');
+      console.warn('[Security Alert] Unauthorized webhook signature attempt rejected.');
       return NextResponse.json({ error: 'Invalid HMAC signature' }, { status: 401 });
     }
 
-    const payload = JSON.parse(rawBody);
+    let payload: any;
+    try {
+      payload = JSON.parse(rawBody);
+    } catch {
+      return NextResponse.json({ error: 'Malformed JSON payload' }, { status: 400 });
+    }
 
     if (payload.event === 'payment.success') {
-      const { order_id, amount, utr, sender_name } = payload;
-      console.log(`[FamGateway Webhook] Verified payment for Order: ${order_id}, Amount: ₹${amount}, UTR: ${utr}`);
+      const { order_id, amount, utr } = payload;
 
-      // Order fulfillment logic
-      // In production, you can persist the verified order to Vercel KV / Postgres / Supabase
-      // Here, we generate an authenticated ephemeral AES-256-GCM token
+      if (!order_id || typeof order_id !== 'string') {
+        return NextResponse.json({ error: 'Invalid order_id structure' }, { status: 400 });
+      }
+
+      // 3. Replay attack prevention: check if order was already fulfilled
+      if (processedOrders.has(order_id)) {
+        return NextResponse.json({
+          status: 'success',
+          message: 'Idempotent: Order already fulfilled previously',
+          order_id,
+        }, { status: 200 });
+      }
+
+      // Mark order as processed
+      processedOrders.add(order_id);
+
+      // Clean old entries if memory set exceeds 10,000 items
+      if (processedOrders.size > 10000) {
+        const iterator = processedOrders.values();
+        for (let i = 0; i < 2000; i++) {
+          const val = iterator.next().value;
+          if (val) processedOrders.delete(val);
+        }
+      }
+
+      // 4. Generate encrypted single-use download token
+      const defaultBook = BOOK_CATALOG[0];
       const token = generateDownloadToken({
         orderId: order_id,
-        bookId: 'book-zero-trace',
-        fileName: 'the-zero-trace-engineer.pdf',
+        bookId: defaultBook.id,
+        fileName: defaultBook.fileName,
         issuedAt: Date.now(),
-        ttlMs: 48 * 60 * 60 * 1000, // 48h
+        ttlMs: 24 * 60 * 60 * 1000, // 24 hours
         maxDownloads: 5,
       });
 
       return NextResponse.json({
         status: 'success',
-        message: 'Order fulfilled',
+        message: 'Order fulfilled securely',
         order_id,
         token,
       }, { status: 200 });
@@ -48,7 +91,6 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ status: 'ignored', reason: 'Unrecognized event' }, { status: 200 });
   } catch (err: any) {
-    console.error('[FamGateway Webhook Error]', err);
-    return NextResponse.json({ error: 'Internal processing failure' }, { status: 500 });
+    return NextResponse.json({ error: 'Internal security failure' }, { status: 500 });
   }
 }

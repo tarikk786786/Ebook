@@ -4,16 +4,23 @@ import { createFamGatewayOrder } from '@/lib/famgateway';
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    let body: any;
+    try {
+      body = await req.json();
+    } catch {
+      return NextResponse.json({ error: 'Malformed JSON body' }, { status: 400 });
+    }
+
     const { bookId } = body;
 
-    if (!bookId) {
-      return NextResponse.json({ error: 'Missing bookId' }, { status: 400 });
+    // Strict input pattern validation (prevent injection)
+    if (!bookId || typeof bookId !== 'string' || !/^[a-zA-Z0-9_-]{3,64}$/.test(bookId)) {
+      return NextResponse.json({ error: 'Invalid or missing bookId format' }, { status: 400 });
     }
 
     const book = getBookById(bookId);
     if (!book) {
-      return NextResponse.json({ error: 'Book not found' }, { status: 404 });
+      return NextResponse.json({ error: 'Book does not exist in catalog' }, { status: 404 });
     }
 
     const host = req.headers.get('host') || 'localhost:3000';
@@ -50,9 +57,8 @@ export async function POST(req: NextRequest) {
       },
     });
   } catch (err: any) {
-    console.error('Checkout error:', err);
     return NextResponse.json(
-      { error: err.message || 'Failed to initialize payment order' },
+      { error: err.message || 'Payment initialization error' },
       { status: 500 }
     );
   }
