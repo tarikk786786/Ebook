@@ -4,7 +4,8 @@ const ALGORITHM = 'aes-256-gcm';
 
 // Derive a fixed 32-byte key from the secret
 function getKey(): Buffer {
-  const secret = process.env.DOWNLOAD_ENCRYPTION_SECRET || 'fallback-super-secret-key-at-least-32-chars-long';
+  const rawSecret = process.env.DOWNLOAD_ENCRYPTION_SECRET || 'fallback-super-secret-key-at-least-32-chars-long';
+  const secret = rawSecret.replace(/^\uFEFF/, '').trim();
   return crypto.scryptSync(secret, 'anontrove-salt-v1', 32);
 }
 
@@ -75,7 +76,8 @@ export function decryptDownloadToken(tokenString: string): DownloadTokenPayload 
  */
 export function verifyFamGatewaySignature(rawBody: string, signatureHeader: string | null): boolean {
   if (!signatureHeader) return false;
-  const apiKey = process.env.FAMGATEWAY_API_KEY || 'fam_77561f565e477270afe5d44c58dba91bc4fba9e8';
+  const rawApiKey = process.env.FAMGATEWAY_API_KEY || 'fam_77561f565e477270afe5d44c58dba91bc4fba9e8';
+  const apiKey = rawApiKey.replace(/^\uFEFF/, '').trim();
   if (!apiKey) return false;
 
   try {
