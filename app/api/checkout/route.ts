@@ -25,7 +25,9 @@ export async function POST(req: NextRequest) {
 
     const host = req.headers.get('host') || 'localhost:3000';
     const protocol = req.headers.get('x-forwarded-proto') || (host.startsWith('localhost') ? 'http' : 'https');
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || `${protocol}://${host}`;
+    const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || '';
+    const cleanSiteUrl = rawSiteUrl.replace(/^\uFEFF/, '').trim();
+    const siteUrl = cleanSiteUrl.startsWith('http') ? cleanSiteUrl : `${protocol}://${host}`;
 
     const redirectUrl = `${siteUrl}/success?book_id=${encodeURIComponent(book.id)}`;
     const webhookUrl = `${siteUrl}/api/webhooks/famgateway`;
