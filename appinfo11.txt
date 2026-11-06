@@ -14,5 +14,6 @@ DOWNLOAD_ENCRYPTION_SECRET=e7b4c91a82f3d64e9a1c5b8e2f0d4c7a9b1e3f5a7c9d0e2b4f6a8
 # 3. APPLICATION & DEPLOYMENT CONFIGURATION
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 PAYMENT_REDIRECT_URL=http://localhost:3000/success
+GITHUB_REPO_URL=https://github.com/tarikk786786/Ebook.git
 NEXT_PUBLIC_STORE_NAME=AnonTrove
 NEXT_PUBLIC_STORE_TAGLINE=Zero-Trace Digital Bookshelf & Secure Knowledge Vault
