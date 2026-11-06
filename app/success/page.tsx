@@ -46,7 +46,7 @@ function SuccessContent() {
 
         <div>
           <span className="text-[11px] font-mono uppercase px-2 py-0.5 bg-emerald-950 text-emerald-400 border border-emerald-800 rounded">
-            FamGateway Verified
+            Instant Payment Verified
           </span>
           <h1 className="text-2xl font-bold text-white mt-2">Payment Completed!</h1>
           <p className="text-xs text-slate-400 mt-1">

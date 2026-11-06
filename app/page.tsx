@@ -47,7 +47,7 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Buy and download high-impact engineering manuals and digital PDFs via FamGateway 0% fee UPI. 
+              Buy and download high-impact engineering manuals and digital PDFs via Direct 0% fee UPI. 
               No accounts, no third-party trackers, and ephemeral AES-256 encrypted links.
             </p>
 
@@ -122,7 +122,7 @@ export default function HomePage() {
                     Non-Custodial Payments + Single-Use Streaming
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                    Unlike standard web stores that record your IP address, credit cards, and email onto permanent advertising databases, AnonTrove pairs FamGateway's direct bank-to-bank UPI rail with client-side AES-256 tokenization. No tracking scripts. No cookies.
+                    Unlike standard web stores that record your IP address, credit cards, and email onto permanent advertising databases, AnonTrove pairs direct bank-to-bank UPI settlement with client-side AES-256 tokenization. No tracking scripts. No cookies.
                   </p>
                 </div>
 
@@ -133,7 +133,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                    <span>FamGateway 0% Fee UPI</span>
+                    <span>Direct 0% Fee UPI</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -160,7 +160,7 @@ export default function HomePage() {
             <span className="font-bold text-slate-300">AnonTrove</span> • Open-Source EBook & PDF Storefront
           </div>
           <div className="flex items-center space-x-4 text-[11px]">
-            <span>Payments by <strong className="text-slate-300">FamGateway</strong> (MSME Reg: UDYAM-BR-28-0050000)</span>
+            <span>Non-Custodial UPI Settlement</span>
             <span>•</span>
             <span>Sec. 22 CGST Exempt</span>
           </div>

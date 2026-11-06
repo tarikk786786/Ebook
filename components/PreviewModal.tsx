@@ -86,7 +86,7 @@ export default function PreviewModal({ book, onClose, onBuy }: PreviewModalProps
               <span className="text-2xl font-black text-white font-mono">₹{book.priceInInr}</span>
               <span className="text-xs text-slate-500 line-through">₹{book.originalPriceInInr}</span>
             </div>
-            <p className="text-[10px] text-slate-400">Zero-Trace Delivery via FamGateway</p>
+            <p className="text-[10px] text-slate-400">Zero-Trace Encrypted Delivery</p>
           </div>
 
           <button

@@ -183,7 +183,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
           <div className="flex items-center space-x-2">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-300 font-mono">
-              FamGateway UPI Payment
+              Instant UPI Payment
             </span>
           </div>
           <button
@@ -200,7 +200,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
             <div className="py-12 flex flex-col items-center justify-center space-y-4">
               <Loader2 className="w-10 h-10 text-emerald-400 animate-spin" />
               <p className="text-sm text-slate-300 font-medium">Generating Dynamic UPI Session...</p>
-              <p className="text-xs text-slate-500">Contacting FamGateway Non-Custodial Node</p>
+              <p className="text-xs text-slate-500">Connecting Secure UPI Channel...</p>
             </div>
           ) : error ? (
             <div className="py-8 flex flex-col items-center justify-center text-center space-y-3">
@@ -229,7 +229,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
                 </span>
                 <h3 className="text-xl font-bold text-white mt-2">Purchase Confirmed!</h3>
                 <p className="text-xs text-slate-400 mt-1 max-w-xs">
-                  Your payment of <strong className="text-white">₹{order?.amount}</strong> was verified by FamGateway.
+                  Your payment of <strong className="text-white">₹{order?.amount}</strong> has been verified successfully.
                 </p>
               </div>
 
@@ -372,7 +372,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
 
         {/* Footer Note */}
         <div className="px-6 py-3 bg-[#0B0F17]/80 border-t border-slate-800/80 text-[10px] text-slate-500 flex items-center justify-between">
-          <span>Powered by FamGateway v2.0</span>
+          <span>Non-Custodial UPI Rail</span>
           <span>Zero-Trace Encryption</span>
         </div>
       </div>

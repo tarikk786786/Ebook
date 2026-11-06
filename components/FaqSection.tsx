@@ -18,15 +18,15 @@ const FAQS: FaqItem[] = [
   },
   {
     icon: Zap,
-    question: 'Why do you use FamGateway for payments?',
+    question: 'Why do you use direct UPI settlement?',
     answer:
-      'FamGateway is India’s premier 100% free, non-custodial automated UPI payment gateway. Unlike traditional custodial gateways that charge 2-3% + GST and require corporate Current Accounts, FamGateway settles funds peer-to-peer (P2P) directly to the merchant within 0 seconds with 0.0% transaction fees. It is fully compliant under Section 22 of the CGST Act (turnover exemption under ₹20 Lakhs/year).',
+      'We use a 100% free, non-custodial automated UPI payment architecture. Unlike traditional custodial gateways that charge 2-3% + GST and require corporate Current Accounts, funds settle peer-to-peer (P2P) directly to the merchant account within 0 seconds with 0.0% transaction fees. It is fully compliant under Section 22 of the CGST Act (turnover exemption under ₹20 Lakhs/year).',
   },
   {
     icon: Shield,
     question: 'How do encrypted webhooks and API calls work?',
     answer:
-      'When you complete a UPI payment, FamGateway signs the HTTP notification using a timing-safe HMAC-SHA256 signature (X-FamGateway-Signature). The Vercel Serverless edge function verifies the authenticity before generating an encrypted single-use file stream token. Intermediaries or proxy snoops cannot forge payment confirmations.',
+      'When you complete a UPI payment, the automated payment rail signs the HTTP notification using a timing-safe HMAC-SHA256 signature (X-FamGateway-Signature). The Vercel Serverless edge function verifies the authenticity before generating an encrypted single-use file stream token. Intermediaries or proxy snoops cannot forge payment confirmations.',
   },
   {
     icon: RefreshCcw,
@@ -51,7 +51,7 @@ export default function FaqSection() {
             Transparent Architecture
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-3">
-            Privacy, Cryptography & FamGateway FAQ
+            Privacy, Cryptography & UPI FAQ
           </h2>
           <p className="text-sm text-slate-400 mt-2">
             No telemetry, zero-fee direct UPI settlement, and stateless ephemeral delivery.

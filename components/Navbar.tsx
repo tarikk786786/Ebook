@@ -33,10 +33,10 @@ export default function Navbar() {
             <span>0% Logs • No Accounts</span>
           </div>
 
-          {/* FamGateway badge */}
+          {/* UPI badge */}
           <div className="flex items-center space-x-1.5 px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-800/50 text-xs text-emerald-300">
             <Zap className="h-3.5 w-3.5 text-emerald-400 fill-emerald-400" />
-            <span className="font-medium">FamGateway 0% Fee UPI</span>
+            <span className="font-medium">Direct 0% Fee UPI</span>
           </div>
         </div>
       </div>
