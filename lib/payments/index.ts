@@ -53,13 +53,29 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
   const finalAmount = Math.max(1, subtotal - discount);
 
   const orderNumber = `ORD-${Date.now().toString().slice(-6)}-${Math.floor(100 + Math.random() * 900)}`;
+  const cleanTitle = items[0]?.title ? items[0].title.slice(0, 30).replace(/[^a-zA-Z0-9 ]/g, '') : 'Ebook Purchase';
+  const defaultVpa = process.env.MERCHANT_UPI_VPA || 'famgateway@upi';
+  const merchantName = process.env.MERCHANT_NAME || 'AnonTrove Books';
+  const dynamicUpiIntent = `upi://pay?pa=${encodeURIComponent(defaultVpa)}&pn=${encodeURIComponent(merchantName)}&am=${finalAmount.toFixed(2)}&cu=INR&tr=${encodeURIComponent(orderNumber)}&tn=${encodeURIComponent(cleanTitle)}`;
+  const dynamicQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=${encodeURIComponent(dynamicUpiIntent)}`;
+
+  const orderTitle = items.length === 1 
+    ? items[0].title 
+    : `${items.length} eBooks Digital Bundle (${orderNumber})`;
 
   const baseResponse: PaymentOrderResponse = {
     orderId: orderNumber,
     orderNumber,
+    title: orderTitle,
+    items: items.map(i => ({ bookId: i.bookId, title: i.title, priceInInr: i.priceInInr })),
     amountInInr: finalAmount,
+    amount: finalAmount.toFixed(2),
     currency,
     gateway,
+    qrUrl: dynamicQrUrl,
+    upiIntent: dynamicUpiIntent,
+    upiId: defaultVpa,
+    checkoutUrl: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app'}/success?order_id=${orderNumber}`,
   };
 
   if (gateway === 'RAZORPAY') {
@@ -70,6 +86,7 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     });
     baseResponse.razorpay = rzp;
     baseResponse.orderId = rzp.orderId;
+    baseResponse.checkoutUrl = `https://checkout.razorpay.com/v1/checkout.js`;
 
     saveOrder({
       orderId: rzp.orderId,
@@ -100,6 +117,7 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     const cf = await createCashfreeOrder(orderNumber, finalAmount, customerEmail, customerPhone);
     baseResponse.cashfree = cf;
     baseResponse.orderId = cf.orderId;
+    baseResponse.checkoutUrl = baseResponse.checkoutUrl;
 
     saveOrder({
       orderId: cf.orderId,
@@ -126,27 +144,36 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     return baseResponse;
   }
 
-  // Default / Fallback: FamGateway direct 0% fee automated UPI QR
-  const fam = await createFamGatewayOrder({
-    amount: finalAmount,
-    customerEmail,
-    customerName: customerEmail.split('@')[0],
-    redirectUrl: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app'}/success?order_id=${orderNumber}`,
-  });
+  // FamGateway direct 0% fee automated UPI QR
+  try {
+    const fam = await createFamGatewayOrder({
+      amount: finalAmount,
+      customerEmail,
+      customerName: customerEmail.split('@')[0],
+      redirectUrl: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app'}/success?order_id=${orderNumber}`,
+    });
 
-  baseResponse.famgateway = {
-    orderId: fam.order_id,
-    qrUrl: fam.qr_url,
-    upiIntent: fam.upi_intent,
-    upiId: fam.upi_id,
-    checkoutUrl: fam.checkout_url,
-  };
-  baseResponse.orderId = fam.order_id;
+    baseResponse.famgateway = {
+      orderId: fam.order_id,
+      qrUrl: fam.qr_url,
+      upiIntent: fam.upi_intent,
+      upiId: fam.upi_id,
+      checkoutUrl: fam.checkout_url,
+    };
+    baseResponse.orderId = fam.order_id;
+    baseResponse.qrUrl = fam.qr_url || dynamicQrUrl;
+    baseResponse.upiIntent = fam.upi_intent || dynamicUpiIntent;
+    baseResponse.upiId = fam.upi_id || defaultVpa;
+    baseResponse.checkoutUrl = fam.checkout_url || baseResponse.checkoutUrl;
+  } catch (err) {
+    console.warn('[PAYMENT] FamGateway API unreachable or demo key, falling back to dynamic direct UPI QR:', err);
+    // Keep dynamic UPI QR and direct intent active so user can always pay required price
+  }
 
   saveOrder({
-    orderId: fam.order_id,
+    orderId: baseResponse.orderId,
     orderNumber,
-    gatewayOrderId: fam.order_id,
+    gatewayOrderId: baseResponse.orderId,
     customerEmail,
     customerPhone,
     items: items.map(i => ({

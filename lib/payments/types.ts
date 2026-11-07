@@ -33,8 +33,15 @@ export interface PaymentOrderResponse {
   orderId: string;
   orderNumber: string;
   amountInInr: number;
+  amount: string;
   currency: string;
   gateway: PaymentGatewayType;
+  title?: string;
+  items?: Array<{ bookId: string; title: string; priceInInr: number }>;
+  qrUrl?: string;
+  upiIntent?: string;
+  upiId?: string;
+  checkoutUrl?: string;
   // Gateway-specific fields
   razorpay?: {
     orderId: string;

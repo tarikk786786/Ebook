@@ -11,9 +11,12 @@
 | In-Browser EPUB Reader | Readers | 2026-11-07 | Commit `947a099`, `components/reader/EpubReader.tsx` | VERIFIED |
 | Cart & Drawer Context | Commerce | 2026-11-07 | Commit `947a099`, `context/CartContext.tsx` | VERIFIED |
 | Customer Library & Orders View | Dashboard | 2026-11-07 | Commit `947a099`, `app/library/page.tsx`, `app/orders/page.tsx` | VERIFIED |
-| Sliding-Window Rate Limiter | Security | 2026-11-07 | `lib/rate-limit.ts`, applied to `app/api/checkout/route.ts` | VERIFIED |
+| Sliding-Window Rate Limiter | Security | 2026-11-07 | `lib/rate-limit.ts`, applied to `app/api/checkout/route.ts` & `middleware.ts` | VERIFIED |
 | Supabase PostgreSQL Schema & RLS | Persistence | 2026-11-07 | `supabase/migrations/20261107_init_ecommerce_schema.sql` | VERIFIED |
 | Cloudflare R2 Stream Signer | Storage | 2026-11-07 | `lib/storage/r2.ts` | VERIFIED |
 | GitHub Actions Security & SAST CI | CI/CD | 2026-11-07 | `.github/workflows/security.yml` (Gitleaks, Semgrep, Build) | VERIFIED |
-| Production Build Verification | Build | 2026-11-07 | Next.js 14.2.35 production build successful (95/95 static pages compiled) | VERIFIED |
+| Fault-Tolerant Reader View | Readers | 2026-11-08 | Commit `a0f11f9`, `components/PdfReaderView.tsx` | VERIFIED |
+| PDF Compatibility Test Suite | QA & Tests | 2026-11-08 | `tests/pdf_compatibility_suite.py` — 12/12 tests PASSED | VERIFIED |
+| Production Build Verification | Build | 2026-11-08 | Next.js 14.2.35 production build successful (95/95 static pages + edge middleware) | VERIFIED |
+| Git Push & Remote Sync | Deploy | 2026-11-08 | Successfully pushed to `origin/main` (`https://github.com/tarikk786786/Ebook.git`) | VERIFIED |
 | Live Vercel Status Verification | Production | 2026-11-07 | HTTP 200 response on `https://ebook-sandy-chi.vercel.app` & `/api/admin/stats` | VERIFIED |

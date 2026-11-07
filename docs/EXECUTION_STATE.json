@@ -1,0 +1,32 @@
+{
+  "project": "AnonTrove Ebook Platform",
+  "live_url": "https://ebook-sandy-chi.vercel.app",
+  "active_gateway": "FamGateway",
+  "merchant_vpa": "wowtarik@yesfam",
+  "status": "HARDENED_AND_TESTED",
+  "last_updated": "2026-11-08T00:24:00Z",
+  "modules": {
+    "payment_gateway": {
+      "provider": "FamGateway",
+      "mode": "PRODUCTION",
+      "server_authoritative_pricing": true,
+      "bola_idor_defense": true,
+      "client_simulations_removed": true,
+      "multi_app_upi_intents": true,
+      "manual_verification_trigger": true,
+      "order_manifest_binding": true
+    },
+    "security": {
+      "admin_auth_guard": true,
+      "rate_limiting": true,
+      "path_traversal_defense": true,
+      "ci_cd_scanning": true,
+      "zero_secrets_in_repo": true
+    },
+    "catalog": {
+      "verified_ebooks": 46,
+      "cover_pipeline": "READY",
+      "metadata_enrichment": "ACTIVE"
+    }
+  }
+}

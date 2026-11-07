@@ -105,29 +105,35 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
     return () => clearInterval(timer);
   }, [loading, status]);
 
+  const [isManualChecking, setIsManualChecking] = useState<boolean>(false);
+
+  const checkPayment = async () => {
+    if (!order || !book) return;
+    try {
+      setIsManualChecking(true);
+      const res = await fetch(`/api/poll?order_id=${encodeURIComponent(order.orderId)}&book_id=${encodeURIComponent(book.id)}`);
+      if (!res.ok) return;
+      const data = await res.json();
+
+      if (data.status === 'success') {
+        setStatus('success');
+        setUtr(data.utr || 'VERIFIED');
+        setDownloadUrl(data.downloadUrl);
+        if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
+      } else if (data.status === 'expired') {
+        setStatus('expired');
+        if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
+      }
+    } catch {
+      // Silent fail on transient poll errors
+    } finally {
+      setIsManualChecking(false);
+    }
+  };
+
   // Poll for status
   useEffect(() => {
     if (!order || status !== 'pending') return;
-
-    const checkPayment = async () => {
-      try {
-        const res = await fetch(`/api/poll?order_id=${encodeURIComponent(order.orderId)}&book_id=${encodeURIComponent(book?.id || '')}`);
-        if (!res.ok) return;
-        const data = await res.json();
-
-        if (data.status === 'success') {
-          setStatus('success');
-          setUtr(data.utr || 'VERIFIED');
-          setDownloadUrl(data.downloadUrl);
-          if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
-        } else if (data.status === 'expired') {
-          setStatus('expired');
-          if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
-        }
-      } catch (e) {
-        // Silent fail on transient poll errors
-      }
-    };
 
     pollIntervalRef.current = setInterval(checkPayment, 2500);
 
@@ -151,26 +157,10 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
     setTimeout(() => setCopiedUpi(false), 2000);
   };
 
-  // Dev simulation tool to test complete flow without requiring live bank balance
-  const handleSimulatePayment = () => {
-    setStatus('success');
-    setUtr('SIMULATED_UTR_' + Math.random().toString(36).substring(2, 10).toUpperCase());
-    
-    // Request a token directly
-    fetch(`/api/poll?order_id=${encodeURIComponent(order?.orderId || 'fg_test')}&book_id=${encodeURIComponent(book.id)}`)
-      .then(r => r.json())
-      .then(d => {
-        if (d.downloadUrl) {
-          setDownloadUrl(d.downloadUrl);
-        } else {
-          // Generate a fallback client route
-          setDownloadUrl(`/api/download/dev-token`);
-        }
-      })
-      .catch(() => {
-        setDownloadUrl('/api/download/dev-token');
-      });
-  };
+  // Dedicated UPI Deep-link schemes
+  const getPhonePeIntent = (upi: string) => upi.replace(/^upi:/i, 'phonepe:');
+  const getGPayIntent = (upi: string) => upi.replace(/^upi:\/\/pay/i, 'gpay://upi/pay');
+  const getPaytmIntent = (upi: string) => upi.replace(/^upi:/i, 'paytmmp:');
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
@@ -329,15 +319,38 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
                 </div>
               </div>
 
-              {/* Mobile Deep-link Button */}
+              {/* Mobile UPI App Grid */}
               {order?.upiIntent && (
-                <a
-                  href={order.upiIntent}
-                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-2 shadow-md shadow-emerald-500/20 active:scale-[0.98] transition-all"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  <span>Pay via PhonePe / GPay / Paytm / FamPay</span>
-                </a>
+                <div className="space-y-2">
+                  <div className="grid grid-cols-3 gap-2">
+                    <a
+                      href={getPhonePeIntent(order.upiIntent)}
+                      className="py-2.5 px-2 rounded-xl bg-purple-950/60 hover:bg-purple-900/80 border border-purple-700/50 text-purple-200 font-medium text-xs flex flex-col items-center justify-center space-y-1 transition-all active:scale-95"
+                    >
+                      <span className="font-bold text-[11px] tracking-tight">PhonePe</span>
+                    </a>
+                    <a
+                      href={getGPayIntent(order.upiIntent)}
+                      className="py-2.5 px-2 rounded-xl bg-sky-950/60 hover:bg-sky-900/80 border border-sky-700/50 text-sky-200 font-medium text-xs flex flex-col items-center justify-center space-y-1 transition-all active:scale-95"
+                    >
+                      <span className="font-bold text-[11px] tracking-tight">Google Pay</span>
+                    </a>
+                    <a
+                      href={getPaytmIntent(order.upiIntent)}
+                      className="py-2.5 px-2 rounded-xl bg-blue-950/60 hover:bg-blue-900/80 border border-blue-700/50 text-blue-200 font-medium text-xs flex flex-col items-center justify-center space-y-1 transition-all active:scale-95"
+                    >
+                      <span className="font-bold text-[11px] tracking-tight">Paytm</span>
+                    </a>
+                  </div>
+
+                  <a
+                    href={order.upiIntent}
+                    className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-2 shadow-md shadow-emerald-500/20 active:scale-[0.98] transition-all"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>Open Any UPI App (BHIM / CRED / Other)</span>
+                  </a>
+                </div>
               )}
 
               {/* UPI ID copy fallback */}
@@ -358,6 +371,25 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
                   </button>
                 </div>
               )}
+
+              {/* Manual Verification Trigger */}
+              <button
+                onClick={checkPayment}
+                disabled={isManualChecking}
+                className="w-full py-2 px-3 rounded-lg border border-slate-700 hover:border-slate-600 bg-slate-900/60 hover:bg-slate-800/80 text-slate-300 text-[11px] font-medium flex items-center justify-center space-x-2 transition-all disabled:opacity-50"
+              >
+                {isManualChecking ? (
+                  <>
+                    <Loader2 className="w-3 h-3 animate-spin text-emerald-400" />
+                    <span>Verifying with Bank...</span>
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                    <span>Paid on mobile? Click to verify instantly</span>
+                  </>
+                )}
+              </button>
             </div>
           )}
         </div>
