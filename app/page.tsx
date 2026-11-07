@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import BookCard from '@/components/BookCard';
 import ReaderModal from '@/components/ReaderModal';
 import PaymentModal from '@/components/PaymentModal';
-import SecurityInspector from '@/components/SecurityInspector';
 import FaqSection from '@/components/FaqSection';
 import { BOOK_CATALOG, Book } from '@/lib/catalog';
 import { 
@@ -22,11 +21,22 @@ import {
   Download,
   Sparkles,
   ArrowRight,
-  Package
+  Tag,
+  SlidersHorizontal,
+  TrendingDown,
+  Flame,
+  Check,
+  Eye,
+  Layers
 } from 'lucide-react';
+
+type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
+type SortOption = 'CHEAPEST' | 'POPULAR' | 'RATING' | 'TITLE';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedPriceTier, setSelectedPriceTier] = useState<PriceTier>('ALL');
+  const [sortBy, setSortBy] = useState<SortOption>('CHEAPEST');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
   const [previewBook, setPreviewBook] = useState<Book | null>(null);
@@ -34,6 +44,7 @@ export default function HomePage() {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const BOOKS_PER_PAGE = 24;
 
+  // Categories list
   const categories = useMemo(() => {
     const publishedBooks = BOOK_CATALOG.filter((b) => b.status !== 'DRAFT');
     const rawCats = Array.from(new Set(publishedBooks.map((b) => b.category))).filter(Boolean);
@@ -41,11 +52,19 @@ export default function HomePage() {
     return ['All', 'Zebra Learn Collection', ...otherCats];
   }, []);
 
+  // Filter & Sort
   const filteredBooks = useMemo(() => {
-    return BOOK_CATALOG.filter((book) => {
+    let result = BOOK_CATALOG.filter((book) => {
       if (book.status === 'DRAFT') return false;
-      if (book.id === 'book-master-bundle') return false; // Featured in top banner
+      if (book.id === 'book-master-bundle') return false;
 
+      // Price filter
+      if (selectedPriceTier === '29' && book.priceInInr > 29) return false;
+      if (selectedPriceTier === 'UNDER_49' && book.priceInInr > 49) return false;
+      if (selectedPriceTier === 'UNDER_99' && book.priceInInr > 99) return false;
+      if (selectedPriceTier === 'PREMIUM' && book.priceInInr < 100) return false;
+
+      // Category filter
       const isZebraMatch = 
         book.category === 'Zebra Learn Collection' ||
         (book.tags && book.tags.includes('Zebra Learn')) ||
@@ -61,21 +80,39 @@ export default function HomePage() {
         matchesCategory = book.category === selectedCategory;
       }
 
-      const matchesSearch = searchQuery.trim() === '' || 
-        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (book.sourceTelegram && book.sourceTelegram.toLowerCase().includes(searchQuery.toLowerCase()));
+      if (!matchesCategory) return false;
 
-      return matchesCategory && matchesSearch;
+      // Search query filter
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        const matches = 
+          book.title.toLowerCase().includes(q) ||
+          book.subtitle.toLowerCase().includes(q) ||
+          book.author.toLowerCase().includes(q) ||
+          book.description.toLowerCase().includes(q) ||
+          (book.sourceTelegram && book.sourceTelegram.toLowerCase().includes(q));
+        if (!matches) return false;
+      }
+
+      return true;
     });
-  }, [selectedCategory, searchQuery]);
+
+    // Sorting
+    result.sort((a, b) => {
+      if (sortBy === 'CHEAPEST') return a.priceInInr - b.priceInInr;
+      if (sortBy === 'POPULAR') return (b.reviewCount || 0) - (a.reviewCount || 0);
+      if (sortBy === 'RATING') return (b.rating || 0) - (a.rating || 0);
+      if (sortBy === 'TITLE') return a.title.localeCompare(b.title);
+      return 0;
+    });
+
+    return result;
+  }, [selectedCategory, selectedPriceTier, sortBy, searchQuery]);
 
   // Reset to page 1 on filter/search change
-  React.useEffect(() => {
+  useEffect(() => {
     setCurrentPage(1);
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, selectedPriceTier, sortBy, searchQuery]);
 
   const totalPages = Math.max(1, Math.ceil(filteredBooks.length / BOOKS_PER_PAGE));
   const currentBooks = useMemo(() => {
@@ -95,6 +132,30 @@ export default function HomePage() {
   // Master Bundle Object
   const masterBundleBook: Book = BOOK_CATALOG.find(b => b.id === 'book-master-bundle') || BOOK_CATALOG[0];
 
+  // Hand-picked spotlight steal deals
+  const spotlightDeals: Book[] = useMemo(() => {
+    const targetIds = [
+      'book-101-linux-commands',
+      'book-10-trading-strategies-by-aseem-singhal',
+      'book-basics-of-equity-research-by-zebra-learn',
+      'book-010-cyber-security-notes-cybersecurity-day-2p'
+    ];
+    return targetIds
+      .map(id => BOOK_CATALOG.find(b => b.id === id))
+      .filter((b): b is Book => Boolean(b));
+  }, []);
+
+  const searchTags = [
+    'Linux Commands',
+    'Trading Strategies',
+    'Zebra Learn',
+    'Cybersecurity',
+    'Python',
+    'AutoCAD',
+    'Exam Prep Notes',
+    'Stock Market'
+  ];
+
   return (
     <>
       <Navbar
@@ -104,62 +165,183 @@ export default function HomePage() {
         onToggleCurrency={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
       />
 
-      <main className="flex-1">
-        {/* Bookstore Hero */}
-        <section className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-800/80">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <main className="flex-1 bg-[#090D14]">
+        {/* Universal Bookstore Hero */}
+        <section className="relative overflow-hidden pt-12 pb-16 md:pt-16 md:pb-20 border-b border-slate-800/80">
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
 
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
             {/* Pill */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300 mb-6 shadow-sm">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
-              <span className="font-mono text-emerald-400 font-semibold">Independent Digital Bookstore</span>
+            <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-slate-300 mb-6 shadow-sm">
+              <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Universal Mega Digital Library</span>
               <span className="text-slate-600">•</span>
-              <span>DRM-Free • PDF & EPUB</span>
+              <span className="text-amber-300 font-semibold">1,700+ DRM-Free eBooks Starting at Just ₹29</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">
-              Essential Technical Books.{' '}
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
+              Massive Universal eBook Collection.{' '}
               <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
-                Zero Tracking.
+                Unbeatable Cheap Prices.
               </span>
             </h1>
 
-            <p className="mt-5 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              In-depth engineering manuals and solo founder playbooks delivered directly to your device. 
-              No accounts, zero telemetry, and instant encrypted delivery via 0% fee UPI.
+            <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Discover over <strong className="text-white">1,700+ full-length digital books</strong> across Software Engineering, Stock Trading, Cybersecurity, AI & LLMs, Zebra Learn, AutoCAD, and College Exam Notes. Direct 0% fee UPI payment, instant encrypted download, and lifetime DRM-free access.
             </p>
 
-            {/* Device Compatibility Ribbon */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 border-y border-slate-800/60 py-3.5 max-w-3xl mx-auto">
-              <span className="text-slate-500 text-[11px] uppercase font-mono font-semibold">Compatible with:</span>
-              <div className="flex items-center space-x-1.5 text-slate-300">
-                <Tablet className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Kindle & e-Readers</span>
+            {/* Quick Value Pillars */}
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
+              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
+                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
+                  <Flame className="w-4 h-4 text-amber-400 fill-amber-400" />
+                  <span>1,350+ @ ₹29</span>
+                </div>
+                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
+                  Unmatched micro-pricing for students & self-learners.
+                </div>
               </div>
-              <div className="flex items-center space-x-1.5 text-slate-300">
-                <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Apple Books & iPad</span>
+
+              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
+                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
+                  <Zap className="w-4 h-4 text-emerald-400 fill-emerald-400" />
+                  <span>0% Fee UPI QR</span>
+                </div>
+                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
+                  Scan with GPay, PhonePe or Paytm. No accounts needed.
+                </div>
               </div>
-              <div className="flex items-center space-x-1.5 text-slate-300">
-                <Laptop className="w-3.5 h-3.5 text-emerald-400" />
-                <span>PDF Readers (Mac/PC)</span>
+
+              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
+                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
+                  <Download className="w-4 h-4 text-teal-400" />
+                  <span>100% DRM-Free</span>
+                </div>
+                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
+                  Genuine PDF files you own forever on all your devices.
+                </div>
               </div>
-              <div className="flex items-center space-x-1.5 text-slate-300">
-                <Download className="w-3.5 h-3.5 text-emerald-400" />
-                <span>DRM-Free Lifetime Files</span>
+
+              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
+                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
+                  <Tablet className="w-4 h-4 text-cyan-400" />
+                  <span>Universal Format</span>
+                </div>
+                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
+                  Kindle, iPad, Android tablets, Mac & Windows laptops.
+                </div>
               </div>
+            </div>
+
+            {/* Quick Search Tag Chips */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
+              <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold mr-1">Popular searches:</span>
+              {searchTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setSearchQuery(tag)}
+                  className={`text-[11px] px-3 py-1 rounded-full border transition-all ${
+                    searchQuery.toLowerCase() === tag.toLowerCase()
+                      ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400'
+                      : 'bg-slate-900/90 text-slate-300 border-slate-800 hover:border-emerald-500/50 hover:text-white'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="text-[11px] px-2.5 py-1 rounded-full bg-rose-950/80 text-rose-300 border border-rose-800/60 hover:bg-rose-900 font-semibold"
+                >
+                  Clear ✕
+                </button>
+              )}
             </div>
           </div>
         </section>
 
+        {/* Spotlight Steal Deals of the Day (4 Bestsellers under ₹99) */}
+        {spotlightDeals.length > 0 && searchQuery === '' && selectedCategory === 'All' && selectedPriceTier === 'ALL' && (
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-b border-slate-800/60">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <div className="flex items-center space-x-2">
+                  <Flame className="w-5 h-5 text-amber-400 fill-amber-400" />
+                  <h2 className="text-xl font-extrabold text-white tracking-tight">Today's Universal Steal Deals</h2>
+                  <span className="px-2 py-0.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-[10px] font-mono font-bold text-amber-300 uppercase">
+                    Up to 90% Off
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400 mt-1">
+                  Hand-picked community favorites at micro-pricing. Instant download upon scan.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {spotlightDeals.map((book) => (
+                <div 
+                  key={book.id}
+                  className="bg-[#111724] border border-slate-800 hover:border-emerald-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10"
+                >
+                  <div>
+                    <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-slate-900 shadow-md mb-3">
+                      <img 
+                        src={book.coverImage} 
+                        alt={book.title} 
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute top-2 left-2 bg-emerald-500 text-slate-950 font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
+                        ₹{book.priceInInr} ONLY
+                      </div>
+                    </div>
+                    <h3 className="text-sm font-bold text-white line-clamp-1">{book.title}</h3>
+                    <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">By {book.author}</p>
+                    <div className="mt-2 text-[10px] font-mono text-slate-400 flex items-center space-x-1.5">
+                      <span>{book.pages} Pages</span>
+                      <span>•</span>
+                      <span>{book.format}</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
+                    <div>
+                      <div className="text-lg font-black text-emerald-400 font-mono">₹{book.priceInInr}</div>
+                      <div className="text-[10px] text-slate-500 line-through">₹{book.originalPriceInInr}</div>
+                    </div>
+
+                    <div className="flex items-center space-x-1.5">
+                      <button
+                        onClick={() => setPreviewBook(book)}
+                        className="p-2 rounded-xl bg-slate-800/70 hover:bg-slate-800 text-slate-300 border border-slate-700 text-xs"
+                        title="Look Inside"
+                      >
+                        <Eye className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => setBuyingBook(book)}
+                        className="px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center space-x-1 shadow-md shadow-emerald-500/20 active:scale-95 transition-all"
+                      >
+                        <Zap className="w-3.5 h-3.5 fill-current" />
+                        <span>Get ₹{book.priceInInr}</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Master Bundle Special Offer Showcase */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
-          <div className="bg-gradient-to-r from-[#121826] via-[#151D2F] to-[#121826] border border-emerald-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-gradient-to-r from-[#111724] via-[#141E30] to-[#111724] border border-emerald-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-3 max-w-2xl">
               <div className="flex items-center space-x-2">
                 <span className="px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 rounded-md shadow-sm">
-                  Limited Bundle Deal
+                  Limited Boxset Deal
                 </span>
                 <span className="text-xs text-emerald-400 font-mono font-semibold">Save 86% Off</span>
               </div>
@@ -188,7 +370,7 @@ export default function HomePage() {
               <div className="text-3xl font-black text-white font-mono my-1">
                 ₹399.00
               </div>
-              <div className="text-[11px] text-emerald-400 font-medium mb-3">0% Fees • Instant Bank Settlement</div>
+              <div className="text-[11px] text-emerald-400 font-medium mb-3">0% Fees • Instant QR Settlement</div>
 
               <button
                 onClick={() => setBuyingBook(masterBundleBook)}
@@ -201,24 +383,85 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Catalog Shelf Section */}
-        <section id="catalog-shelf" className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Category Filter & Mobile Search Bar */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-            <div>
-              <div className="flex items-center space-x-2">
-                <h2 className="text-2xl font-bold text-white tracking-tight">Browse Digital Bookshelf</h2>
-                <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono font-semibold text-emerald-400">
-                  {filteredBooks.length.toLocaleString()} Titles
-                </span>
+        {/* Main Catalog Shelf Section */}
+        <section id="catalog-shelf" className="py-8 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header & Controls Bar */}
+          <div className="space-y-4 mb-8">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center space-x-2">
+                  <h2 className="text-2xl font-bold text-white tracking-tight">Browse Digital Bookshelf</h2>
+                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono font-semibold text-emerald-400">
+                    {filteredBooks.length.toLocaleString()} Titles Available
+                  </span>
+                </div>
+                <p className="text-xs text-slate-400 mt-1">
+                  Showing {filteredBooks.length > 0 ? (currentPage - 1) * BOOKS_PER_PAGE + 1 : 0}–{Math.min(currentPage * BOOKS_PER_PAGE, filteredBooks.length)} of {filteredBooks.length.toLocaleString()} e-books
+                </p>
               </div>
-              <p className="text-xs text-slate-400 mt-1">
-                Showing {filteredBooks.length > 0 ? (currentPage - 1) * BOOKS_PER_PAGE + 1 : 0}–{Math.min(currentPage * BOOKS_PER_PAGE, filteredBooks.length)} of {filteredBooks.length.toLocaleString()} e-books
-              </p>
+
+              {/* Price Tier Selector & Sort Option */}
+              <div className="flex flex-wrap items-center gap-2">
+                {/* Price Presets */}
+                <div className="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs">
+                  <button
+                    onClick={() => setSelectedPriceTier('ALL')}
+                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
+                      selectedPriceTier === 'ALL'
+                        ? 'bg-emerald-500 text-slate-950 font-bold'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    All Prices
+                  </button>
+                  <button
+                    onClick={() => setSelectedPriceTier('29')}
+                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
+                      selectedPriceTier === '29'
+                        ? 'bg-emerald-500 text-slate-950 font-bold'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    🔥 ₹29 Deals
+                  </button>
+                  <button
+                    onClick={() => setSelectedPriceTier('UNDER_49')}
+                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
+                      selectedPriceTier === 'UNDER_49'
+                        ? 'bg-emerald-500 text-slate-950 font-bold'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    ⚡ Under ₹49
+                  </button>
+                  <button
+                    onClick={() => setSelectedPriceTier('UNDER_99')}
+                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
+                      selectedPriceTier === 'UNDER_99'
+                        ? 'bg-emerald-500 text-slate-950 font-bold'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    💎 Under ₹99
+                  </button>
+                </div>
+
+                {/* Sort Dropdown */}
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as SortOption)}
+                  className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-300 focus:outline-none focus:border-emerald-500 font-medium"
+                >
+                  <option value="CHEAPEST">Price: Low to High (Cheapest)</option>
+                  <option value="POPULAR">Most Popular</option>
+                  <option value="RATING">Highest Rated</option>
+                  <option value="TITLE">Title A–Z</option>
+                </select>
+              </div>
             </div>
 
             {/* Category Filter Tabs */}
-            <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 max-w-full">
+            <div className="flex items-center space-x-1.5 overflow-x-auto pb-2 scrollbar-thin max-w-full">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -255,7 +498,7 @@ export default function HomePage() {
                 <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800/80 pt-6">
                   <p className="text-xs text-slate-400 font-mono">
                     Page <span className="text-white font-bold">{currentPage}</span> of{' '}
-                    <span className="text-white font-bold">{totalPages}</span>
+                    <span className="text-white font-bold">{totalPages}</span> ({filteredBooks.length.toLocaleString()} total eBooks)
                   </p>
 
                   <div className="flex items-center space-x-2">
@@ -308,171 +551,49 @@ export default function HomePage() {
               )}
             </>
           ) : (
-            <div className="py-16 text-center bg-[#121826] border border-slate-800 rounded-2xl">
-              <Search className="w-8 h-8 text-slate-500 mx-auto mb-2" />
-              <h3 className="text-base font-bold text-white">No volumes matched your search</h3>
-              <p className="text-xs text-slate-400 mt-1">Try adjusting keywords or selecting "All" categories</p>
+            <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-dashed border-slate-800 p-8">
+              <BookOpen className="w-12 h-12 text-slate-600 mx-auto mb-3" />
+              <h3 className="text-base font-bold text-white">No eBooks match your filter</h3>
+              <p className="text-xs text-slate-400 mt-1 max-w-sm mx-auto">
+                Try clearing search terms or selecting "All Prices" to explore the full collection of 1,700+ titles.
+              </p>
               <button
                 onClick={() => {
-                  setSearchQuery('');
                   setSelectedCategory('All');
+                  setSelectedPriceTier('ALL');
+                  setSearchQuery('');
                 }}
-                className="mt-4 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-medium text-white rounded-xl"
+                className="mt-4 px-4 py-2 bg-emerald-500 text-slate-950 rounded-xl text-xs font-bold hover:bg-emerald-400 transition-colors"
               >
-                Reset Filters
+                Reset All Filters
               </button>
             </div>
           )}
         </section>
 
-        {/* How It Works Section */}
-        <section className="py-12 bg-[#0E131F] border-y border-slate-800/80">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-10">
-              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-950/70 border border-emerald-800/60 px-3 py-1 rounded-full">
-                Simple 3-Step Reading Experience
-              </span>
-              <h3 className="text-2xl font-bold text-white mt-3">How Buying an eBook Works</h3>
-              <p className="text-xs text-slate-400 mt-1">Direct from independent author to your device</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-[#121826] border border-slate-800 p-6 rounded-2xl space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold">
-                  01
-                </div>
-                <h4 className="text-base font-bold text-white">Choose Your Volume</h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  Click "Look Inside" to preview sample chapters, inspect the table of contents, and verify technical depth in our browser reader.
-                </p>
-              </div>
-
-              <div className="bg-[#121826] border border-slate-800 p-6 rounded-2xl space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold">
-                  02
-                </div>
-                <h4 className="text-base font-bold text-white">Instant UPI Scan</h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  Scan the dynamic QR code with any UPI app (GPay, PhonePe, Paytm, Cred). Settle peer-to-peer with 0% gateway commission.
-                </p>
-              </div>
-
-              <div className="bg-[#121826] border border-slate-800 p-6 rounded-2xl space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold">
-                  03
-                </div>
-                <h4 className="text-base font-bold text-white">Read on Any Device</h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  An encrypted, single-use stream token delivers your DRM-free PDF and EPUB files immediately. Transfer to Kindle or tablet anytime.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Reader Reviews & Testimonials */}
-        <section className="py-16 max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-950/70 border border-emerald-800/60 px-3 py-1 rounded-full">
-              Reader Feedback
-            </span>
-            <h3 className="text-2xl font-bold text-white mt-3">What Software Engineers & Solo Founders Say</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#121826] border border-slate-800 p-5 rounded-2xl space-y-3 text-xs leading-relaxed">
-              <div className="flex text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                ))}
-              </div>
-              <p className="text-slate-300">
-                "The Zero-Trace Engineer changed how I design web apps. The chapters on replacing databases with ephemeral AES-256 tokens are worth 10x the price alone."
-              </p>
-              <div className="pt-2 border-t border-slate-800/80 text-slate-400">
-                <strong className="text-white block font-medium">Vikram Sen</strong>
-                <span className="text-[10px]">Staff Security Engineer</span>
-              </div>
-            </div>
-
-            <div className="bg-[#121826] border border-slate-800 p-5 rounded-2xl space-y-3 text-xs leading-relaxed">
-              <div className="flex text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                ))}
-              </div>
-              <p className="text-slate-300">
-                "High-Volume UPI Protocols is the only comprehensive guide on non-custodial Indian payments. Implemented multi-wallet failover pools in an afternoon."
-              </p>
-              <div className="pt-2 border-t border-slate-800/80 text-slate-400">
-                <strong className="text-white block font-medium">Aditi Rao</strong>
-                <span className="text-[10px]">FinTech Founder</span>
-              </div>
-            </div>
-
-            <div className="bg-[#121826] border border-slate-800 p-5 rounded-2xl space-y-3 text-xs leading-relaxed">
-              <div className="flex text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                ))}
-              </div>
-              <p className="text-slate-300">
-                "Zero to Prod got my micro-tool to its first 50 paying users without paying a single dollar for servers. Vercel + UPI checkout is pure magic."
-              </p>
-              <div className="pt-2 border-t border-slate-800/80 text-slate-400">
-                <strong className="text-white block font-medium">Rohan Gupta</strong>
-                <span className="text-[10px]">Indie Hacker</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Security & Cryptographic Inspector */}
-        <SecurityInspector />
-
-        {/* FAQ Section */}
+        {/* Universal Guarantee & FAQ */}
         <FaqSection />
       </main>
 
-      {/* Bookstore Footer */}
-      <footer className="border-t border-slate-800/80 bg-[#0B0F17] py-10 text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center space-x-2">
-              <BookOpen className="w-4 h-4 text-emerald-400" />
-              <span className="font-bold text-slate-300 text-sm">AnonTrove Bookstore</span>
-              <span className="text-slate-600">•</span>
-              <span>Independent Digital Publishing Platform</span>
-            </div>
-            <div className="flex items-center space-x-4 text-[11px]">
-              <span>Non-Custodial UPI Settlement</span>
-              <span>•</span>
-              <span>Sec. 22 CGST Exempt</span>
-              <span>•</span>
-              <span>Zero-Trace Privacy Engine</span>
-            </div>
-          </div>
-          <div className="text-[11px] text-slate-600 text-center sm:text-left">
-            All eBooks are delivered DRM-free with lifetime personal reading license. Compatible with Amazon Kindle, Apple Books, Kobo, Android, and all standard PDF/EPUB readers.
-          </div>
-        </div>
-      </footer>
+      {/* Reader Modal (Look Inside) */}
+      {previewBook && (
+        <ReaderModal
+          book={previewBook}
+          onClose={() => setPreviewBook(null)}
+          onBuy={(b) => {
+            setPreviewBook(null);
+            setBuyingBook(b);
+          }}
+        />
+      )}
 
-      {/* Interactive Reader Modal */}
-      <ReaderModal
-        book={previewBook}
-        onClose={() => setPreviewBook(null)}
-        onBuy={(book) => {
-          setPreviewBook(null);
-          setBuyingBook(book);
-        }}
-      />
-
-      {/* Secure UPI Payment Modal */}
-      <PaymentModal
-        book={buyingBook}
-        onClose={() => setBuyingBook(null)}
-      />
+      {/* Instant UPI Payment Modal */}
+      {buyingBook && (
+        <PaymentModal
+          book={buyingBook}
+          onClose={() => setBuyingBook(null)}
+        />
+      )}
     </>
   );
 }
