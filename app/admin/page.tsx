@@ -23,7 +23,8 @@ import {
   FileCheck,
   Sliders,
   CheckSquare,
-  Square
+  Square,
+  ExternalLink
 } from 'lucide-react';
 
 interface BookItem {
@@ -44,6 +45,7 @@ interface BookItem {
   status: 'DRAFT' | 'PUBLISHED';
   sourceTelegram?: string;
   telegramMessageId?: number;
+  telegramLink?: string;
   sha256?: string;
 }
 
@@ -498,8 +500,19 @@ export default function AdminDashboardPage() {
                               {book.fileSize} • {book.format.replace(' (DRM-Free)', '')}
                             </td>
                             <td className="p-3">
-                              <div className="max-w-[160px] truncate text-slate-300 text-[11px]">
-                                {book.sourceTelegram || 'tbooks library'}
+                              <div className="flex items-center space-x-1 max-w-[160px] truncate text-slate-300 text-[11px]">
+                                <span className="truncate">{book.sourceTelegram || 'tbooks library'}</span>
+                                {book.telegramLink && (
+                                  <a
+                                    href={book.telegramLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-emerald-400 hover:text-emerald-300 shrink-0"
+                                    title="Open Original Telegram Post"
+                                  >
+                                    <ExternalLink className="w-3 h-3" />
+                                  </a>
+                                )}
                               </div>
                               {book.telegramMessageId && (
                                 <span className="text-[10px] font-mono text-emerald-400/80">
@@ -522,13 +535,23 @@ export default function AdminDashboardPage() {
                               </button>
                             </td>
                             <td className="p-3 text-right">
-                              <button
-                                onClick={() => setEditingBook(book)}
-                                className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
-                                title="Edit Metadata"
-                              >
-                                <Edit3 className="w-3.5 h-3.5" />
-                              </button>
+                              <div className="flex items-center justify-end space-x-1.5">
+                                <Link
+                                  href={`/book/${book.slug}`}
+                                  target="_blank"
+                                  className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-emerald-400 transition-colors"
+                                  title="View on Website"
+                                >
+                                  <Eye className="w-3.5 h-3.5" />
+                                </Link>
+                                <button
+                                  onClick={() => setEditingBook(book)}
+                                  className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+                                  title="Edit Metadata"
+                                >
+                                  <Edit3 className="w-3.5 h-3.5" />
+                                </button>
+                              </div>
                             </td>
                           </tr>
                         );

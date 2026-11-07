@@ -35,20 +35,39 @@ export default function HomePage() {
   const BOOKS_PER_PAGE = 24;
 
   const categories = useMemo(() => {
-    const cats = Array.from(new Set(BOOK_CATALOG.map((b) => b.category))).filter(Boolean);
-    return ['All', ...cats];
+    const publishedBooks = BOOK_CATALOG.filter((b) => b.status !== 'DRAFT');
+    const rawCats = Array.from(new Set(publishedBooks.map((b) => b.category))).filter(Boolean);
+    const otherCats = rawCats.filter((c) => c !== 'Zebra Learn Collection');
+    return ['All', 'Zebra Learn Collection', ...otherCats];
   }, []);
 
   const filteredBooks = useMemo(() => {
     return BOOK_CATALOG.filter((book) => {
       if (book.status === 'DRAFT') return false;
       if (book.id === 'book-master-bundle') return false; // Featured in top banner
-      const matchesCategory = selectedCategory === 'All' || book.category === selectedCategory;
+
+      const isZebraMatch = 
+        book.category === 'Zebra Learn Collection' ||
+        (book.tags && book.tags.includes('Zebra Learn')) ||
+        book.publisher === 'Zebra Learn' ||
+        (book.title + ' ' + book.author + ' ' + (book.badge || '')).toLowerCase().includes('zebra');
+
+      let matchesCategory = false;
+      if (selectedCategory === 'All') {
+        matchesCategory = true;
+      } else if (selectedCategory === 'Zebra Learn Collection') {
+        matchesCategory = isZebraMatch;
+      } else {
+        matchesCategory = book.category === selectedCategory;
+      }
+
       const matchesSearch = searchQuery.trim() === '' || 
         book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         book.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
         book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.description.toLowerCase().includes(searchQuery.toLowerCase());
+        book.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (book.sourceTelegram && book.sourceTelegram.toLowerCase().includes(searchQuery.toLowerCase()));
+
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
