@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { getBookCatalog, Book, INITIAL_BOOK_CATALOG } from '@/lib/catalog';
+import { verifyAdminAccess } from '@/lib/auth/admin';
 
 function getRegistryFilePath(): string {
   const dataDir = path.resolve(process.cwd(), 'data');
@@ -35,6 +36,10 @@ function saveRegistry(books: Book[]) {
 }
 
 export async function GET(req: NextRequest) {
+  if (!verifyAdminAccess(req)) {
+    return NextResponse.json({ success: false, error: 'Unauthorized: Admin authentication token required' }, { status: 401 });
+  }
+
   try {
     const { searchParams } = new URL(req.url);
     const search = (searchParams.get('search') || '').toLowerCase().trim();
@@ -72,6 +77,10 @@ export async function GET(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
+  if (!verifyAdminAccess(req)) {
+    return NextResponse.json({ success: false, error: 'Unauthorized: Admin authentication token required' }, { status: 401 });
+  }
+
   try {
     const body = await req.json();
     const { action, bookId, bookIds, updates } = body;

@@ -2,6 +2,7 @@ import { CreateOrderParams, PaymentOrderResponse, PaymentGatewayType, CouponDisc
 import { createRazorpayOrder } from './razorpay';
 import { createCashfreeOrder } from './cashfree';
 import { createFamGatewayOrder } from '../famgateway';
+import { saveOrder } from '@/lib/orders/store';
 
 // Server-side verified coupon database (Can be backed by Supabase)
 const ACTIVE_COUPONS: Record<string, { type: 'PERCENTAGE' | 'FIXED_INR'; value: number; minOrder: number }> = {
@@ -69,6 +70,29 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     });
     baseResponse.razorpay = rzp;
     baseResponse.orderId = rzp.orderId;
+
+    saveOrder({
+      orderId: rzp.orderId,
+      orderNumber,
+      gatewayOrderId: rzp.orderId,
+      customerEmail,
+      customerPhone,
+      items: items.map(i => ({
+        bookId: i.bookId,
+        title: i.title,
+        priceInInr: i.priceInInr,
+        fileName: i.fileName,
+        format: i.format,
+      })),
+      subtotalInr: subtotal,
+      discountInr: discount,
+      totalInr: finalAmount,
+      couponCode,
+      gateway: 'RAZORPAY',
+      status: 'PENDING',
+      createdAt: new Date().toISOString(),
+    });
+
     return baseResponse;
   }
 
@@ -76,6 +100,29 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     const cf = await createCashfreeOrder(orderNumber, finalAmount, customerEmail, customerPhone);
     baseResponse.cashfree = cf;
     baseResponse.orderId = cf.orderId;
+
+    saveOrder({
+      orderId: cf.orderId,
+      orderNumber,
+      gatewayOrderId: cf.orderId,
+      customerEmail,
+      customerPhone,
+      items: items.map(i => ({
+        bookId: i.bookId,
+        title: i.title,
+        priceInInr: i.priceInInr,
+        fileName: i.fileName,
+        format: i.format,
+      })),
+      subtotalInr: subtotal,
+      discountInr: discount,
+      totalInr: finalAmount,
+      couponCode,
+      gateway: 'CASHFREE',
+      status: 'PENDING',
+      createdAt: new Date().toISOString(),
+    });
+
     return baseResponse;
   }
 
@@ -95,5 +142,28 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     checkoutUrl: fam.checkout_url,
   };
   baseResponse.orderId = fam.order_id;
+
+  saveOrder({
+    orderId: fam.order_id,
+    orderNumber,
+    gatewayOrderId: fam.order_id,
+    customerEmail,
+    customerPhone,
+    items: items.map(i => ({
+      bookId: i.bookId,
+      title: i.title,
+      priceInInr: i.priceInInr,
+      fileName: i.fileName,
+      format: i.format,
+    })),
+    subtotalInr: subtotal,
+    discountInr: discount,
+    totalInr: finalAmount,
+    couponCode,
+    gateway: 'FAMGATEWAY',
+    status: 'PENDING',
+    createdAt: new Date().toISOString(),
+  });
+
   return baseResponse;
 }

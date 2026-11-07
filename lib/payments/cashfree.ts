@@ -75,6 +75,22 @@ export function verifyCashfreeWebhook(
   timestampHeader: string
 ): WebhookResult {
   try {
+    // Timestamp Freshness Check (300-second / 5-minute replay window)
+    if (timestampHeader) {
+      const parsedTime = Number(timestampHeader);
+      const eventTimeMs = parsedTime > 1000000000000 ? parsedTime : parsedTime * 1000;
+      if (!isNaN(eventTimeMs) && Math.abs(Date.now() - eventTimeMs) > 300000) {
+        return {
+          verified: false,
+          orderNumber: '',
+          gatewayOrderId: '',
+          amountInInr: 0,
+          status: 'FAILED',
+          error: 'Cashfree webhook timestamp expired (replay attack defense)',
+        };
+      }
+    }
+
     if (CASHFREE_SECRET_KEY) {
       const dataToSign = timestampHeader + rawBody;
       const expectedSignature = crypto
@@ -82,7 +98,10 @@ export function verifyCashfreeWebhook(
         .update(dataToSign)
         .digest('base64');
 
-      if (signatureHeader !== expectedSignature) {
+      const expectedBuf = Buffer.from(expectedSignature, 'utf8');
+      const actualBuf = Buffer.from(signatureHeader, 'utf8');
+
+      if (expectedBuf.length !== actualBuf.length || !crypto.timingSafeEqual(expectedBuf, actualBuf)) {
         return {
           verified: false,
           orderNumber: '',

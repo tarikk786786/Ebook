@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyCashfreeWebhook } from '@/lib/payments/cashfree';
 import { dispatchMarketingEvent } from '@/lib/marketing/n8n';
+import { markOrderPaid } from '@/lib/orders/store';
+
+const processedCashfreeEvents = new Set<string>();
 
 export async function POST(req: NextRequest) {
   try {
@@ -15,9 +18,29 @@ export async function POST(req: NextRequest) {
     }
 
     if (result.status === 'PAID') {
+      const eventKey = `${result.gatewayPaymentId || result.gatewayOrderId}`;
+
+      // Idempotency check: Replay attack prevention
+      if (eventKey && processedCashfreeEvents.has(eventKey)) {
+        return NextResponse.json({ status: 'ok', message: 'Event already processed (Idempotent)' });
+      }
+
       console.log(`[CASHFREE WEBHOOK] Payment verified for Order: ${result.orderNumber}, UTR: ${result.bankUtr}`);
 
-      // Dispatch to n8n marketing workflow
+      // 1. Mark order paid in persistent order store
+      if (result.orderNumber || result.gatewayOrderId) {
+        markOrderPaid(result.orderNumber || result.gatewayOrderId, {
+          gatewayOrderId: result.gatewayOrderId,
+          bankUtr: result.bankUtr,
+          amountInInr: result.amountInInr,
+        });
+      }
+
+      if (eventKey) {
+        processedCashfreeEvents.add(eventKey);
+      }
+
+      // 2. Dispatch to n8n marketing workflow
       await dispatchMarketingEvent('order_paid', {
         orderNumber: result.orderNumber,
         gatewayOrderId: result.gatewayOrderId,

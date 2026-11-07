@@ -10,7 +10,7 @@ const securityHeaders = [
   },
   {
     key: 'X-Frame-Options',
-    value: 'DENY',
+    value: 'SAMEORIGIN', // Allows safe same-origin iframe embedding for internal PDF/EPUB reader
   },
   {
     key: 'X-Content-Type-Options',
@@ -18,25 +18,26 @@ const securityHeaders = [
   },
   {
     key: 'Referrer-Policy',
-    value: 'no-referrer',
+    value: 'strict-origin-when-cross-origin',
   },
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()',
+    value: 'camera=(), microphone=(), geolocation=(), payment=(self "https://checkout.razorpay.com" "https://sdk.cashfree.com"), browsing-topics=()',
   },
   {
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com https://sdk.cashfree.com",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: https://famgateway.in https://images.unsplash.com",
-      "connect-src 'self' https://famgateway.in",
-      "font-src 'self'",
+      "img-src 'self' data: blob: https://famgateway.in https://images.unsplash.com https://*.r2.cloudflarestorage.com",
+      "connect-src 'self' https://famgateway.in https://api.razorpay.com https://checkout.razorpay.com https://lumberjack.razorpay.com https://api.cashfree.com https://sandbox.cashfree.com https://*.supabase.co",
+      "font-src 'self' data:",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
-      "frame-ancestors 'none'",
+      "frame-ancestors 'self'",
+      "frame-src 'self' https://checkout.razorpay.com https://sdk.cashfree.com",
     ].join('; '),
   },
 ];
@@ -44,6 +45,7 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Strips 'X-Powered-By: Next.js' to prevent technology fingerprinting
+  outputFileTracing: false,
   headers: async () => [
     {
       source: '/:path*',
@@ -51,6 +53,7 @@ const nextConfig = {
     },
   ],
   images: {
+    dangerouslyAllowSVG: false, // Disables unauthenticated SVG parsing to mitigate GHSA-2464-fhr4-w9xw
     remotePatterns: [
       {
         protocol: 'https',

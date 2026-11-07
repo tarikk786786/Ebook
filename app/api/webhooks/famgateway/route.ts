@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFamGatewaySignature, generateDownloadToken } from '@/lib/crypto';
 import { BOOK_CATALOG } from '@/lib/catalog';
+import { markOrderPaid } from '@/lib/orders/store';
 
 // Processed order cache for idempotent fulfillment & replay attack rejection
 const processedOrders = new Set<string>();
@@ -58,8 +59,12 @@ export async function POST(req: NextRequest) {
         }, { status: 200 });
       }
 
-      // Mark order as processed
+      // Mark order as processed in-memory and persistent store
       processedOrders.add(order_id);
+      markOrderPaid(order_id, {
+        bankUtr: utr,
+        amountInInr: Number(amount) || undefined,
+      });
 
       // Clean old entries if memory set exceeds 10,000 items
       if (processedOrders.size > 10000) {

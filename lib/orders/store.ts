@@ -1,0 +1,113 @@
+import fs from 'fs';
+import path from 'path';
+
+export interface OrderItem {
+  bookId: string;
+  title: string;
+  priceInInr: number;
+  fileName: string;
+  format?: string;
+}
+
+export interface StoredOrder {
+  orderId: string;
+  orderNumber: string;
+  gatewayOrderId?: string;
+  customerEmail: string;
+  customerPhone?: string;
+  items: OrderItem[];
+  subtotalInr: number;
+  discountInr: number;
+  totalInr: number;
+  couponCode?: string;
+  gateway: string;
+  status: 'PENDING' | 'PAID' | 'EXPIRED' | 'FAILED';
+  createdAt: string;
+  paidAt?: string;
+  bankUtr?: string;
+  issuedTokens?: Array<{
+    bookId: string;
+    token: string;
+    issuedAt: string;
+  }>;
+}
+
+function getOrdersFilePath(): string {
+  const dataDir = path.resolve(process.cwd(), 'data');
+  if (!fs.existsSync(dataDir)) {
+    try {
+      fs.mkdirSync(dataDir, { recursive: true });
+    } catch {}
+  }
+  return path.join(dataDir, 'orders_store.json');
+}
+
+// In-memory fallback cache for serverless read/write performance
+let memoryOrders: StoredOrder[] | null = null;
+
+export function loadAllOrders(): StoredOrder[] {
+  if (memoryOrders) return memoryOrders;
+  const filePath = getOrdersFilePath();
+  if (fs.existsSync(filePath)) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const parsed = JSON.parse(content);
+      if (Array.isArray(parsed)) {
+        memoryOrders = parsed;
+        return memoryOrders;
+      }
+    } catch (e) {
+      console.error('Error reading orders_store.json:', e);
+    }
+  }
+  memoryOrders = [];
+  return memoryOrders;
+}
+
+export function saveOrder(order: StoredOrder): void {
+  const orders = loadAllOrders();
+  const existingIdx = orders.findIndex(o => o.orderId === order.orderId || o.orderNumber === order.orderNumber);
+  if (existingIdx >= 0) {
+    orders[existingIdx] = { ...orders[existingIdx], ...order };
+  } else {
+    orders.unshift(order);
+  }
+
+  // Keep latest 2,000 orders in disk store
+  if (orders.length > 2000) {
+    orders.length = 2000;
+  }
+  memoryOrders = orders;
+
+  try {
+    const filePath = getOrdersFilePath();
+    fs.writeFileSync(filePath, JSON.stringify(orders, null, 2), 'utf-8');
+  } catch (e) {
+    console.error('Error saving order to disk (read-only filesystem fallback):', e);
+  }
+}
+
+export function getOrderById(id: string): StoredOrder | undefined {
+  const orders = loadAllOrders();
+  return orders.find(o => 
+    o.orderId === id || 
+    o.orderNumber === id || 
+    o.gatewayOrderId === id
+  );
+}
+
+export function markOrderPaid(
+  orderIdentifier: string, 
+  details: { gatewayOrderId?: string; bankUtr?: string; amountInInr?: number }
+): StoredOrder | null {
+  const order = getOrderById(orderIdentifier);
+  if (!order) return null;
+
+  order.status = 'PAID';
+  order.paidAt = new Date().toISOString();
+  if (details.gatewayOrderId) order.gatewayOrderId = details.gatewayOrderId;
+  if (details.bankUtr) order.bankUtr = details.bankUtr;
+
+  saveOrder(order);
+  return order;
+}

@@ -46,11 +46,11 @@ const BASE_URL = process.env.FAMGATEWAY_BASE_URL || 'https://famgateway.in';
  * Server-to-server call using secret API key.
  */
 export async function createFamGatewayOrder(params: CreateOrderParams): Promise<FamGatewayOrderResponse['data']> {
-  const rawApiKey = process.env.FAMGATEWAY_API_KEY || 'fam_77561f565e477270afe5d44c58dba91bc4fba9e8';
-  const apiKey = rawApiKey.replace(/^\uFEFF/, '').trim();
-  if (!apiKey) {
+  const rawApiKey = process.env.FAMGATEWAY_API_KEY;
+  if (!rawApiKey) {
     throw new Error('FAMGATEWAY_API_KEY environment variable is not configured');
   }
+  const apiKey = rawApiKey.replace(/^\uFEFF/, '').trim();
 
   const payload = {
     api_key: apiKey,

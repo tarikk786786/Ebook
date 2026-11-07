@@ -76,7 +76,7 @@ All keys, tokens, and configuration parameters are documented in [`appinfo11.txt
 
 | Variable Name | Purpose | Example / Default |
 |---|---|---|
-| `FAMGATEWAY_API_KEY` | FamGateway Merchant API Key for creating orders & signing webhooks | `fam_77561f565e477270afe5d44c58dba91bc4fba9e8` |
+| `FAMGATEWAY_API_KEY` | FamGateway Merchant API Key for creating orders & signing webhooks | `fam_live_placeholder_key` |
 | `FAMGATEWAY_BASE_URL` | FamGateway production endpoint | `https://famgateway.in` |
 | `FAMGATEWAY_POLL_URL` | Public-safe client polling endpoint | `https://famgateway.in/api/checkout-status.php` |
 | `DOWNLOAD_ENCRYPTION_SECRET` | 32-byte / 64-hex key used to encrypt AES-256-GCM tokens | `e7b4c91a82f3d64e9a1c5b8e2f0d4c7a9b1...` |

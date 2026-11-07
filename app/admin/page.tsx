@@ -24,7 +24,10 @@ import {
   Sliders,
   CheckSquare,
   Square,
-  ExternalLink
+  ExternalLink,
+  Lock,
+  Key,
+  LogOut
 } from 'lucide-react';
 
 interface BookItem {
@@ -83,9 +86,77 @@ export default function AdminDashboardPage() {
   const [updating, setUpdating] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<'inventory' | 'sources' | 'pipeline'>('inventory');
 
+  // Admin Zero-Trust Authentication State
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [adminToken, setAdminToken] = useState<string>('');
+  const [secretInput, setSecretInput] = useState<string>('');
+  const [authError, setAuthError] = useState<string>('');
+  const [authLoading, setAuthLoading] = useState<boolean>(false);
+
+  const getActiveToken = () => {
+    if (adminToken) return adminToken;
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('anontrove_admin_secret') || '';
+    }
+    return '';
+  };
+
+  const adminFetch = async (url: string, options: RequestInit = {}) => {
+    const token = getActiveToken();
+    const headers = new Headers(options.headers || {});
+    if (token) {
+      headers.set('x-admin-token', token);
+    }
+    return fetch(url, { ...options, headers });
+  };
+
+  const verifyAndLogin = async (tokenCandidate: string) => {
+    if (!tokenCandidate || tokenCandidate.trim().length < 8) {
+      setAuthError('Please enter a valid administrative access secret.');
+      return;
+    }
+    try {
+      setAuthLoading(true);
+      setAuthError('');
+      const res = await fetch('/api/admin/stats', {
+        headers: { 'x-admin-token': tokenCandidate.trim() },
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setAdminToken(tokenCandidate.trim());
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('anontrove_admin_secret', tokenCandidate.trim());
+        }
+        setIsAuthenticated(true);
+        setStats(data.stats);
+        loadBooksWithToken(tokenCandidate.trim());
+      } else {
+        setAuthError(data.error || 'Access Denied: Invalid Administrative Secret.');
+      }
+    } catch (e: any) {
+      setAuthError('Connection error during admin validation.');
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  const handleLogout = () => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('anontrove_admin_secret');
+    }
+    setAdminToken('');
+    setIsAuthenticated(false);
+    setStats(null);
+    setBooks([]);
+  };
+
   const fetchStats = async () => {
     try {
-      const res = await fetch('/api/admin/stats');
+      const res = await adminFetch('/api/admin/stats');
+      if (res.status === 401) {
+        handleLogout();
+        return;
+      }
       const data = await res.json();
       if (data.success) {
         setStats(data.stats);
@@ -95,10 +166,31 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const loadBooksWithToken = async (token: string) => {
+    try {
+      setLoading(true);
+      const res = await fetch('/api/admin/books', {
+        headers: { 'x-admin-token': token },
+      });
+      const data = await res.json();
+      if (data.success) {
+        setBooks(data.books);
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const fetchBooks = async () => {
     try {
       setLoading(true);
-      const res = await fetch('/api/admin/books');
+      const res = await adminFetch('/api/admin/books');
+      if (res.status === 401) {
+        handleLogout();
+        return;
+      }
       const data = await res.json();
       if (data.success) {
         setBooks(data.books);
@@ -111,14 +203,18 @@ export default function AdminDashboardPage() {
   };
 
   useEffect(() => {
-    fetchStats();
-    fetchBooks();
+    const saved = typeof window !== 'undefined' ? sessionStorage.getItem('anontrove_admin_secret') : null;
+    if (saved) {
+      verifyAndLogin(saved);
+    } else {
+      setLoading(false);
+    }
   }, []);
 
   const handleToggleStatus = async (bookId: string) => {
     try {
       setUpdating(true);
-      const res = await fetch('/api/admin/books', {
+      const res = await adminFetch('/api/admin/books', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'TOGGLE_STATUS', bookId })
@@ -139,7 +235,7 @@ export default function AdminDashboardPage() {
     if (selectedIds.length === 0) return;
     try {
       setUpdating(true);
-      const res = await fetch('/api/admin/books', {
+      const res = await adminFetch('/api/admin/books', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -166,7 +262,7 @@ export default function AdminDashboardPage() {
     if (!editingBook) return;
     try {
       setUpdating(true);
-      const res = await fetch('/api/admin/books', {
+      const res = await adminFetch('/api/admin/books', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -218,6 +314,78 @@ export default function AdminDashboardPage() {
     setSelectedIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
   };
 
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex items-center justify-center p-4">
+        <div className="max-w-md w-full bg-[#121826] border border-slate-800 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500" />
+          
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <Lock className="w-5 h-5" />
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-white">AnonTrove Admin Enclave</h1>
+              <p className="text-xs text-slate-400">Zero-Trust Protected Administrative Portal</p>
+            </div>
+          </div>
+
+          <form onSubmit={(e) => { e.preventDefault(); verifyAndLogin(secretInput); }} className="space-y-4">
+            <div>
+              <label className="block text-xs font-medium text-slate-300 mb-1.5 flex items-center justify-between">
+                <span>Administrative Access Secret</span>
+                <span className="text-[10px] text-slate-500 font-mono">ADMIN_ACCESS_SECRET</span>
+              </label>
+              <div className="relative">
+                <input
+                  type="password"
+                  value={secretInput}
+                  onChange={(e) => setSecretInput(e.target.value)}
+                  placeholder="Enter secret token..."
+                  className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-700/80 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 font-mono"
+                  autoFocus
+                />
+                <Key className="w-4 h-4 text-slate-500 absolute right-3.5 top-3" />
+              </div>
+            </div>
+
+            {authError && (
+              <div className="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-center space-x-2">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                <span>{authError}</span>
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={authLoading}
+              className="w-full py-2.5 px-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20 disabled:opacity-50 flex items-center justify-center space-x-2"
+            >
+              {authLoading ? (
+                <>
+                  <RefreshCw className="w-4 h-4 animate-spin" />
+                  <span>Verifying Credentials...</span>
+                </>
+              ) : (
+                <>
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>Unlock Admin Vault</span>
+                </>
+              )}
+            </button>
+          </form>
+
+          <div className="mt-6 pt-4 border-t border-slate-800 text-center">
+            <Link href="/" className="text-xs text-slate-400 hover:text-emerald-400 transition-colors inline-flex items-center space-x-1">
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Return to Public Storefront</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col font-sans">
       {/* Top Header */}
@@ -260,6 +428,14 @@ export default function AdminDashboardPage() {
             >
               View Storefront
             </Link>
+            <button
+              onClick={handleLogout}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-rose-950/40 border border-rose-900/60 hover:bg-rose-900/60 text-xs font-medium text-rose-300 transition-colors"
+              title="Sign Out of Admin Enclave"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>Sign Out</span>
+            </button>
           </div>
         </div>
       </header>
@@ -463,7 +639,79 @@ export default function AdminDashboardPage() {
                     ) : (
                       filteredBooks.map((book) => {
                         const isSelected = selectedIds.includes(book.id);
-                        return (
+                        if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex items-center justify-center p-4">
+        <div className="max-w-md w-full bg-[#121826] border border-slate-800 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500" />
+          
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <Lock className="w-5 h-5" />
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-white">AnonTrove Admin Enclave</h1>
+              <p className="text-xs text-slate-400">Zero-Trust Protected Administrative Portal</p>
+            </div>
+          </div>
+
+          <form onSubmit={(e) => { e.preventDefault(); verifyAndLogin(secretInput); }} className="space-y-4">
+            <div>
+              <label className="block text-xs font-medium text-slate-300 mb-1.5 flex items-center justify-between">
+                <span>Administrative Access Secret</span>
+                <span className="text-[10px] text-slate-500 font-mono">ADMIN_ACCESS_SECRET</span>
+              </label>
+              <div className="relative">
+                <input
+                  type="password"
+                  value={secretInput}
+                  onChange={(e) => setSecretInput(e.target.value)}
+                  placeholder="Enter secret token..."
+                  className="w-full px-3.5 py-2.5 bg-slate-900 border border-slate-700/80 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 font-mono"
+                  autoFocus
+                />
+                <Key className="w-4 h-4 text-slate-500 absolute right-3.5 top-3" />
+              </div>
+            </div>
+
+            {authError && (
+              <div className="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-center space-x-2">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                <span>{authError}</span>
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={authLoading}
+              className="w-full py-2.5 px-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20 disabled:opacity-50 flex items-center justify-center space-x-2"
+            >
+              {authLoading ? (
+                <>
+                  <RefreshCw className="w-4 h-4 animate-spin" />
+                  <span>Verifying Credentials...</span>
+                </>
+              ) : (
+                <>
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>Unlock Admin Vault</span>
+                </>
+              )}
+            </button>
+          </form>
+
+          <div className="mt-6 pt-4 border-t border-slate-800 text-center">
+            <Link href="/" className="text-xs text-slate-400 hover:text-emerald-400 transition-colors inline-flex items-center space-x-1">
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Return to Public Storefront</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
                           <tr key={book.id} className={`hover:bg-slate-900/50 transition-colors ${isSelected ? 'bg-emerald-950/20' : ''}`}>
                             <td className="p-3 text-center">
                               <button onClick={() => toggleSelectOne(book.id)} className="text-slate-400 hover:text-white">

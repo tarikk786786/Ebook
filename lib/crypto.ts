@@ -76,7 +76,11 @@ export function decryptDownloadToken(tokenString: string): DownloadTokenPayload 
  */
 export function verifyFamGatewaySignature(rawBody: string, signatureHeader: string | null): boolean {
   if (!signatureHeader) return false;
-  const rawApiKey = process.env.FAMGATEWAY_API_KEY || 'fam_77561f565e477270afe5d44c58dba91bc4fba9e8';
+  const rawApiKey = process.env.FAMGATEWAY_API_KEY;
+  if (!rawApiKey) {
+    console.error('FAMGATEWAY_API_KEY environment variable is not configured');
+    return false;
+  }
   const apiKey = rawApiKey.replace(/^\uFEFF/, '').trim();
   if (!apiKey) return false;
 

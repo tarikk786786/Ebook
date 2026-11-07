@@ -4,8 +4,42 @@ import { BOOK_CATALOG } from '@/lib/catalog';
 import fs from 'fs';
 import path from 'path';
 
-// In-memory token download counter (token -> count) to prevent unlimited scraping
+// Token download counter (tokenHash -> count) with persistent disk cache
 const tokenDownloadCounts = new Map<string, number>();
+
+function getTokenHash(token: string): string {
+  // Use last 24 characters of token as safe index
+  return token.slice(-24);
+}
+
+function getTokenDownloadCount(tokenHash: string): number {
+  try {
+    const dataDir = path.resolve(process.cwd(), 'data');
+    const countsFile = path.join(dataDir, 'token_usage.json');
+    if (fs.existsSync(countsFile)) {
+      const data = JSON.parse(fs.readFileSync(countsFile, 'utf8'));
+      return data[tokenHash] || 0;
+    }
+  } catch {}
+  return tokenDownloadCounts.get(tokenHash) || 0;
+}
+
+function incrementTokenDownloadCount(tokenHash: string): number {
+  const current = getTokenDownloadCount(tokenHash) + 1;
+  tokenDownloadCounts.set(tokenHash, current);
+  try {
+    const dataDir = path.resolve(process.cwd(), 'data');
+    if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+    const countsFile = path.join(dataDir, 'token_usage.json');
+    let data: Record<string, number> = {};
+    if (fs.existsSync(countsFile)) {
+      try { data = JSON.parse(fs.readFileSync(countsFile, 'utf8')); } catch {}
+    }
+    data[tokenHash] = current;
+    fs.writeFileSync(countsFile, JSON.stringify(data, null, 2), 'utf8');
+  } catch {}
+  return current;
+}
 
 export async function GET(
   req: NextRequest,
@@ -49,7 +83,8 @@ export async function GET(
     }
 
     // Enforce Max Download limits (default 5 downloads per valid token)
-    const currentCount = tokenDownloadCounts.get(token) || 0;
+    const tokenHash = getTokenHash(token);
+    const currentCount = getTokenDownloadCount(tokenHash);
     const maxAllowed = payload.maxDownloads || 5;
 
     if (currentCount >= maxAllowed) {
@@ -101,8 +136,8 @@ export async function GET(
       return new NextResponse('Asset storage temporarily unmounted', { status: 404 });
     }
 
-    // Increment download count
-    tokenDownloadCounts.set(token, currentCount + 1);
+    // Increment download count (persisted across serverless lambdas)
+    incrementTokenDownloadCount(tokenHash);
 
     const stat = fs.statSync(targetFilePath);
     const fileStream = fs.createReadStream(targetFilePath);
