@@ -2,9 +2,18 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getBookById } from '@/lib/catalog';
 import { createUnifiedPaymentOrder } from '@/lib/payments';
 import { CartItem, PaymentGatewayType } from '@/lib/payments/types';
+import { checkRateLimit } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
+    const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'anonymous-ip';
+    const rateCheck = checkRateLimit(`checkout:${ip}`, 20, 60 * 1000);
+    if (!rateCheck.allowed) {
+      return NextResponse.json(
+        { error: 'Rate limit exceeded. Please wait a minute before retrying checkout.' },
+        { status: 429, headers: { 'Retry-After': '60' } }
+      );
+    }
     let body: any;
     try {
       body = await req.json();
@@ -41,19 +50,31 @@ export async function POST(req: NextRequest) {
         },
       ];
     } 
-    // Support 2: Multi-item Cart
+    // Support 2: Multi-item Cart (Strict Server-Side Price Verification)
     else if (Array.isArray(items) && items.length > 0) {
-      checkoutItems = items.map((i: any) => ({
-        bookId: String(i.bookId),
-        title: String(i.title),
-        author: String(i.author || 'Author'),
-        priceInInr: Number(i.priceInInr) || 29,
-        originalPriceInInr: Number(i.originalPriceInInr) || 499,
-        format: String(i.format || 'PDF'),
-        coverImage: String(i.coverImage || ''),
-        fileName: String(i.fileName || 'book.pdf'),
-        quantity: 1,
-      }));
+      for (const rawItem of items) {
+        const rawBookId = String(rawItem.bookId || '');
+        if (!rawBookId || !/^[a-zA-Z0-9_-]{3,64}$/.test(rawBookId)) {
+          return NextResponse.json({ error: 'Invalid bookId format in cart items' }, { status: 400 });
+        }
+        const verifiedBook = getBookById(rawBookId);
+        if (!verifiedBook) {
+          return NextResponse.json({ error: `Item ${rawBookId} is not available in catalog` }, { status: 400 });
+        }
+
+        checkoutItems.push({
+          bookId: verifiedBook.id,
+          title: verifiedBook.title,
+          author: verifiedBook.author,
+          // CRITICAL: Always use server catalog price; discard any client price tampering
+          priceInInr: verifiedBook.priceInInr,
+          originalPriceInInr: verifiedBook.originalPriceInInr,
+          format: verifiedBook.format,
+          coverImage: verifiedBook.coverImage,
+          fileName: verifiedBook.fileName,
+          quantity: 1,
+        });
+      }
     } else {
       return NextResponse.json({ error: 'No items provided for checkout' }, { status: 400 });
     }
