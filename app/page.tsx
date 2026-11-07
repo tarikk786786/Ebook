@@ -50,6 +50,7 @@ export default function HomePage() {
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   const [previewBook, setPreviewBook] = useState<Book | null>(null);
   const [buyingBook, setBuyingBook] = useState<Book | null>(null);
+  const [cartOrder, setCartOrder] = useState<any>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const BOOKS_PER_PAGE = 24;
 
@@ -780,33 +781,8 @@ export default function HomePage() {
       {/* Slide-Over Multi-Item Shopping Cart Drawer */}
       <CartDrawer 
         onStartCheckout={(orderData, gateway) => {
-          // Launch payment session modal or gateway redirect
-          if (gateway === 'FAMGATEWAY' && orderData.qrUrl) {
-            setBuyingBook({
-              id: orderData.orderId,
-              slug: 'custom-order',
-              title: `Multi-Item Order (${orderData.orderNumber})`,
-              subtitle: 'Encrypted Digital Delivery',
-              author: 'AnonTrove Press',
-              description: 'Multi-item reading cart purchase.',
-              priceInInr: orderData.amountInInr,
-              originalPriceInInr: orderData.amountInInr * 2,
-              pages: 100,
-              format: 'PDF / EPUB',
-              fileSize: 'Bundle',
-              category: 'Digital Bundle',
-              coverImage: '/covers/default-book.jpg',
-              sampleExcerpt: ['Multi-item reading cart purchase verified.'],
-              tableOfContents: ['1. License & Watermark', '2. Digital Volumes'],
-              fileName: 'order.pdf',
-              status: 'PUBLISHED',
-              rating: 5.0,
-              reviewCount: 1,
-              readingTime: '1 hr',
-              edition: '1st Edition',
-              tags: ['Bundle', 'Digital Download'],
-            });
-          }
+          // Launch payment session modal with dynamic UPI QR & direct redirect option
+          setCartOrder(orderData);
         }} 
       />
 
@@ -822,11 +798,15 @@ export default function HomePage() {
         />
       )}
 
-      {/* Instant UPI Payment Modal */}
-      {buyingBook && (
+      {/* Dynamic UPI QR & Redirect Payment Modal */}
+      {(buyingBook || cartOrder) && (
         <PaymentModal
           book={buyingBook}
-          onClose={() => setBuyingBook(null)}
+          initialOrder={cartOrder}
+          onClose={() => {
+            setBuyingBook(null);
+            setCartOrder(null);
+          }}
         />
       )}
     </>

@@ -1,4 +1,16 @@
-export type PaymentGatewayType = 'RAZORPAY' | 'CASHFREE' | 'FAMGATEWAY';
+export type PaymentGatewayType = 'FAMPAY' | 'FAMGATEWAY';
+
+export type PaymentStatus =
+  | 'CREATED'
+  | 'PENDING'
+  | 'PROCESSING'
+  | 'SUCCESS'
+  | 'FAILED'
+  | 'EXPIRED'
+  | 'CANCELLED'
+  | 'REVIEW_REQUIRED'
+  | 'REFUND_PENDING'
+  | 'REFUNDED';
 
 export interface CartItem {
   bookId: string;
@@ -42,18 +54,15 @@ export interface PaymentOrderResponse {
   upiIntent?: string;
   upiId?: string;
   checkoutUrl?: string;
-  // Gateway-specific fields
-  razorpay?: {
-    orderId: string;
-    keyId: string;
-    amountInPaise: number;
-  };
-  cashfree?: {
-    orderId: string;
-    paymentSessionId: string;
-    orderExpiryTime: string;
-  };
+  // Exclusive FamPay / FamGateway fields
   famgateway?: {
+    orderId: string;
+    qrUrl: string;
+    upiIntent: string;
+    upiId: string;
+    checkoutUrl: string;
+  };
+  fampay?: {
     orderId: string;
     qrUrl: string;
     upiIntent: string;
@@ -68,7 +77,7 @@ export interface WebhookResult {
   gatewayOrderId: string;
   gatewayPaymentId?: string;
   amountInInr: number;
-  status: 'PAID' | 'FAILED' | 'PENDING';
+  status: PaymentStatus;
   bankUtr?: string;
   error?: string;
 }

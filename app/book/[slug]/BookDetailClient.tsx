@@ -25,8 +25,11 @@ import {
   Check,
   Smartphone,
   Tablet,
-  Laptop
+  Laptop,
+  ShoppingBag
 } from 'lucide-react';
+import CartDrawer from '@/components/CartDrawer';
+import { useCart } from '@/context/CartContext';
 
 interface BookDetailClientProps {
   book: Book;
@@ -34,9 +37,12 @@ interface BookDetailClientProps {
 }
 
 export default function BookDetailClient({ book, relatedBooks }: BookDetailClientProps) {
+  const { addToCart, items } = useCart();
+  const isInCart = items.some((i) => i.bookId === book.id);
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
   const [searchQuery, setSearchQuery] = useState('');
   const [isBuying, setIsBuying] = useState(false);
+  const [cartOrder, setCartOrder] = useState<any>(null);
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -255,13 +261,27 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   </p>
                 </div>
 
-                <button
-                  onClick={() => setIsBuying(true)}
-                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 transition-all active:scale-[0.98]"
-                >
-                  <Zap className="w-4 h-4 fill-current" />
-                  <span>Instant Checkout</span>
-                </button>
+                <div className="flex items-center space-x-2.5">
+                  <button
+                    onClick={() => addToCart(book)}
+                    className={`px-4 py-3.5 rounded-xl border font-bold text-xs flex items-center justify-center space-x-1.5 transition-all ${
+                      isInCart
+                        ? 'bg-emerald-950/80 border-emerald-500/60 text-emerald-300'
+                        : 'bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-200'
+                    }`}
+                  >
+                    <ShoppingBag className="w-4 h-4 text-emerald-400" />
+                    <span>{isInCart ? 'In Cart' : '+ Cart'}</span>
+                  </button>
+
+                  <button
+                    onClick={() => setIsBuying(true)}
+                    className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 transition-all active:scale-[0.98]"
+                  >
+                    <Zap className="w-4 h-4 fill-current" />
+                    <span>Instant Checkout</span>
+                  </button>
+                </div>
               </div>
 
               {/* Description */}
@@ -420,11 +440,22 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
         />
       )}
 
-      {/* Payment Modal */}
-      {isBuying && (
+      {/* Slide-Over Multi-Item Shopping Cart Drawer */}
+      <CartDrawer 
+        onStartCheckout={(orderData) => {
+          setCartOrder(orderData);
+        }} 
+      />
+
+      {/* Dynamic UPI QR & Redirect Payment Modal */}
+      {(isBuying || cartOrder) && (
         <PaymentModal
-          book={book}
-          onClose={() => setIsBuying(false)}
+          book={isBuying ? book : null}
+          initialOrder={cartOrder}
+          onClose={() => {
+            setIsBuying(false);
+            setCartOrder(null);
+          }}
         />
       )}
     </>

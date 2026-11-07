@@ -13,41 +13,64 @@ import {
   Clock, 
   AlertCircle,
   Copy,
-  Check
+  Check,
+  CreditCard,
+  Smartphone,
+  Globe,
+  ArrowRight
 } from 'lucide-react';
 
-interface PaymentModalProps {
-  book: Book | null;
-  onClose: () => void;
-}
-
-interface OrderData {
+export interface OrderData {
   orderId: string;
+  orderNumber?: string;
   amount: string;
   qrUrl: string;
   checkoutUrl: string;
   upiIntent: string;
   upiId: string;
+  title?: string;
+  format?: string;
+  fileSize?: string;
+  coverImage?: string;
+  items?: Array<{ bookId: string; title: string; priceInInr: number }>;
 }
 
-export default function PaymentModal({ book, onClose }: PaymentModalProps) {
-  const [loading, setLoading] = useState<boolean>(true);
+export interface PaymentModalProps {
+  book?: Book | null;
+  initialOrder?: OrderData | null;
+  onClose: () => void;
+}
+
+export default function PaymentModal({ book, initialOrder, onClose }: PaymentModalProps) {
+  const [loading, setLoading] = useState<boolean>(!initialOrder);
   const [error, setError] = useState<string | null>(null);
-  const [order, setOrder] = useState<OrderData | null>(null);
+  const [order, setOrder] = useState<OrderData | null>(initialOrder || null);
   
   // Status states: 'pending' | 'success' | 'expired'
   const [status, setStatus] = useState<'pending' | 'success' | 'expired'>('pending');
   const [utr, setUtr] = useState<string>('');
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
+  const [downloadItems, setDownloadItems] = useState<Array<{ bookId: string; title: string; downloadUrl: string }>>([]);
   
   // 10-minute countdown (600 seconds)
   const [timeLeft, setTimeLeft] = useState<number>(600);
   const [copiedUpi, setCopiedUpi] = useState<boolean>(false);
+  const [isManualChecking, setIsManualChecking] = useState<boolean>(false);
+  const [activeTab, setActiveTab] = useState<'qr' | 'redirect'>('qr');
 
   const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Initialize payment session
+  // Initialize payment session if not provided directly
   useEffect(() => {
+    if (initialOrder) {
+      setOrder(initialOrder);
+      setLoading(false);
+      setError(null);
+      setStatus('pending');
+      setTimeLeft(600);
+      return;
+    }
+
     if (!book) return;
 
     let isMounted = true;
@@ -85,7 +108,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
       isMounted = false;
       if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
     };
-  }, [book]);
+  }, [book, initialOrder]);
 
   // Countdown timer
   useEffect(() => {
@@ -105,20 +128,24 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
     return () => clearInterval(timer);
   }, [loading, status]);
 
-  const [isManualChecking, setIsManualChecking] = useState<boolean>(false);
-
   const checkPayment = async () => {
-    if (!order || !book) return;
+    if (!order) return;
     try {
       setIsManualChecking(true);
-      const res = await fetch(`/api/poll?order_id=${encodeURIComponent(order.orderId)}&book_id=${encodeURIComponent(book.id)}`);
+      const targetBookId = book?.id || (order.items && order.items[0]?.bookId) || '';
+      const pollUrl = `/api/poll?order_id=${encodeURIComponent(order.orderId)}${targetBookId ? `&book_id=${encodeURIComponent(targetBookId)}` : ''}`;
+      
+      const res = await fetch(pollUrl);
       if (!res.ok) return;
       const data = await res.json();
 
       if (data.status === 'success') {
         setStatus('success');
-        setUtr(data.utr || 'VERIFIED');
+        setUtr(data.utr || 'VERIFIED-UPI');
         setDownloadUrl(data.downloadUrl);
+        if (data.downloadItems && Array.isArray(data.downloadItems)) {
+          setDownloadItems(data.downloadItems);
+        }
         if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
       } else if (data.status === 'expired') {
         setStatus('expired');
@@ -142,7 +169,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
     };
   }, [order, status, book]);
 
-  if (!book) return null;
+  if (!book && !initialOrder) return null;
 
   const formatTimer = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -162,6 +189,34 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
   const getGPayIntent = (upi: string) => upi.replace(/^upi:\/\/pay/i, 'gpay://upi/pay');
   const getPaytmIntent = (upi: string) => upi.replace(/^upi:/i, 'paytmmp:');
 
+  const title = book?.title || order?.title || 'Premium eBook Collection';
+  const format = book?.format || order?.format || 'PDF / EPUB';
+  const fileSize = book?.fileSize || order?.fileSize || 'Instant Delivery';
+  const amount = order?.amount || (book ? book.priceInInr.toFixed(2) : '49.00');
+
+  // Dev simulation tool to test complete flow without live bank credentials
+  const handleSimulatePayment = () => {
+    setStatus('success');
+    setUtr('SIMULATED_UTR_' + Math.random().toString(36).substring(2, 10).toUpperCase());
+    
+    const targetBookId = book?.id || (order?.items && order.items[0]?.bookId) || 'book-zero-trace';
+    fetch(`/api/poll?order_id=${encodeURIComponent(order?.orderId || 'fg_test')}&book_id=${encodeURIComponent(targetBookId)}`)
+      .then(r => r.json())
+      .then(d => {
+        if (d.downloadUrl) {
+          setDownloadUrl(d.downloadUrl);
+        } else {
+          setDownloadUrl(`/api/download/dev-token`);
+        }
+        if (d.downloadItems) {
+          setDownloadItems(d.downloadItems);
+        }
+      })
+      .catch(() => {
+        setDownloadUrl('/api/download/dev-token');
+      });
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div 
@@ -173,7 +228,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
           <div className="flex items-center space-x-2">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-300 font-mono">
-              Instant UPI Payment
+              Secure Checkout • Dynamic UPI & Redirect
             </span>
           </div>
           <button
@@ -189,8 +244,8 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
           {loading ? (
             <div className="py-12 flex flex-col items-center justify-center space-y-4">
               <Loader2 className="w-10 h-10 text-emerald-400 animate-spin" />
-              <p className="text-sm text-slate-300 font-medium">Generating Dynamic UPI Session...</p>
-              <p className="text-xs text-slate-500">Connecting Secure UPI Channel...</p>
+              <p className="text-sm text-slate-300 font-medium">Generating Dynamic Session & UPI QR...</p>
+              <p className="text-xs text-slate-500">Binding Exact Price: ₹{amount}</p>
             </div>
           ) : error ? (
             <div className="py-8 flex flex-col items-center justify-center text-center space-y-3">
@@ -233,25 +288,40 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
                   <span className="text-emerald-400 font-semibold">{utr}</span>
                 </div>
                 <div className="flex justify-between text-slate-400">
-                  <span>Token Validity:</span>
-                  <span className="text-slate-200">24 Hours (AES-256)</span>
+                  <span>Settlement:</span>
+                  <span className="text-slate-200">Non-Custodial Direct</span>
                 </div>
               </div>
 
-              {downloadUrl && (
+              {/* Single or Multi-Item Download Links */}
+              {downloadItems && downloadItems.length > 1 ? (
+                <div className="w-full space-y-2 max-h-48 overflow-y-auto pr-1">
+                  <span className="text-[11px] font-mono text-slate-400 block text-left">Your Unlocked Volumes:</span>
+                  {downloadItems.map((item, idx) => (
+                    <a
+                      key={idx}
+                      href={item.downloadUrl}
+                      className="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-emerald-400 font-bold text-xs flex items-center justify-between transition-colors"
+                    >
+                      <span className="truncate mr-2">{item.title}</span>
+                      <DownloadCloud className="w-4 h-4 shrink-0" />
+                    </a>
+                  ))}
+                </div>
+              ) : downloadUrl ? (
                 <a
                   href={downloadUrl}
-                  download={book.fileName}
+                  download={book ? book.fileName : 'ebook.pdf'}
                   className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-all"
                 >
                   <DownloadCloud className="w-5 h-5" />
-                  <span>Download eBook ({book.format})</span>
+                  <span>Download eBook ({format})</span>
                 </a>
-              )}
+              ) : null}
 
               <p className="text-[11px] text-slate-500 flex items-center justify-center space-x-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-                <span>Zero trackers used. Single-use authenticated link.</span>
+                <span>Zero trackers used. Single-use 24h token.</span>
               </p>
             </div>
           ) : status === 'expired' ? (
@@ -272,39 +342,159 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
               </button>
             </div>
           ) : (
-            /* Active QR / Intent State */
+            /* Active QR / Redirect Option State */
             <div className="space-y-4">
-              {/* Product and Price Header */}
+              {/* Product and Required Price Header */}
               <div className="flex items-center justify-between pb-3 border-b border-slate-800/80">
-                <div className="max-w-[240px]">
-                  <h4 className="text-sm font-bold text-white truncate">{book.title}</h4>
-                  <p className="text-xs text-slate-400">{book.format} • {book.fileSize}</p>
+                <div className="max-w-[230px]">
+                  <h4 className="text-sm font-bold text-white truncate">{title}</h4>
+                  <p className="text-xs text-slate-400">{format} • {fileSize}</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-xl font-mono font-black text-emerald-400">
+                  <div className="text-2xl font-mono font-black text-emerald-400">
                     ₹{order?.amount}
                   </div>
-                  <div className="text-[10px] text-slate-400">0% Fees</div>
+                  <span className="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-800 text-[10px] text-emerald-400 font-mono font-semibold">
+                    Required Price
+                  </span>
                 </div>
               </div>
 
-              {/* Dynamic QR Code Box */}
-              <div className="flex flex-col items-center justify-center p-3 bg-white rounded-2xl shadow-inner">
-                {order?.qrUrl ? (
-                  <img
-                    src={order.qrUrl}
-                    alt="Scan UPI QR"
-                    className="w-48 h-48 object-contain rounded-lg"
-                  />
-                ) : (
-                  <div className="w-48 h-48 flex items-center justify-center bg-slate-100 rounded-lg text-slate-400 text-xs">
-                    QR Unavailable
-                  </div>
-                )}
-                <span className="text-[11px] text-slate-700 font-mono font-semibold mt-1">
-                  Scan with any UPI App
-                </span>
+              {/* Mode Switcher: QR Code vs Redirect Options */}
+              <div className="grid grid-cols-2 gap-1.5 p-1 bg-slate-900 rounded-xl border border-slate-800">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('qr')}
+                  className={`py-1.5 text-xs font-semibold rounded-lg flex items-center justify-center space-x-1.5 transition-all ${
+                    activeTab === 'qr'
+                      ? 'bg-slate-800 text-white shadow-sm'
+                      : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  <QrCode className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Dynamic QR Code</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('redirect')}
+                  className={`py-1.5 text-xs font-semibold rounded-lg flex items-center justify-center space-x-1.5 transition-all ${
+                    activeTab === 'redirect'
+                      ? 'bg-slate-800 text-white shadow-sm'
+                      : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  <Globe className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>Redirect Options</span>
+                </button>
               </div>
+
+              {activeTab === 'qr' ? (
+                /* Dynamic QR Code Box */
+                <div className="space-y-3">
+                  <div className="flex flex-col items-center justify-center p-3.5 bg-white rounded-2xl shadow-inner relative">
+                    {order?.qrUrl ? (
+                      <img
+                        src={order.qrUrl}
+                        alt={`Scan UPI QR for ₹${order.amount}`}
+                        className="w-48 h-48 object-contain rounded-lg"
+                      />
+                    ) : (
+                      <div className="w-48 h-48 flex items-center justify-center bg-slate-100 rounded-lg text-slate-400 text-xs">
+                        QR Unavailable
+                      </div>
+                    )}
+                    <div className="mt-1 flex items-center space-x-1 text-slate-800 font-mono font-bold text-xs">
+                      <span>Exact Amount:</span>
+                      <span className="text-emerald-700 font-black">₹{order?.amount}</span>
+                    </div>
+                    <span className="text-[10px] text-slate-500 font-sans">
+                      Scan with PhonePe, GPay, Paytm, BHIM, Cred
+                    </span>
+                  </div>
+
+                  {/* Mobile Deep-link Quick Buttons */}
+                  {order?.upiIntent && (
+                    <div className="space-y-2">
+                      <div className="grid grid-cols-3 gap-2">
+                        <a
+                          href={getPhonePeIntent(order.upiIntent)}
+                          className="py-2 px-1 rounded-xl bg-purple-950/60 hover:bg-purple-900/80 border border-purple-700/50 text-purple-200 font-medium text-xs flex flex-col items-center justify-center space-y-0.5 transition-all active:scale-95"
+                        >
+                          <span className="font-bold text-[11px] tracking-tight">PhonePe</span>
+                          <span className="text-[9px] text-purple-400 font-mono">₹{order.amount}</span>
+                        </a>
+                        <a
+                          href={getGPayIntent(order.upiIntent)}
+                          className="py-2 px-1 rounded-xl bg-sky-950/60 hover:bg-sky-900/80 border border-sky-700/50 text-sky-200 font-medium text-xs flex flex-col items-center justify-center space-y-0.5 transition-all active:scale-95"
+                        >
+                          <span className="font-bold text-[11px] tracking-tight">Google Pay</span>
+                          <span className="text-[9px] text-sky-400 font-mono">₹{order.amount}</span>
+                        </a>
+                        <a
+                          href={getPaytmIntent(order.upiIntent)}
+                          className="py-2 px-1 rounded-xl bg-blue-950/60 hover:bg-blue-900/80 border border-blue-700/50 text-blue-200 font-medium text-xs flex flex-col items-center justify-center space-y-0.5 transition-all active:scale-95"
+                        >
+                          <span className="font-bold text-[11px] tracking-tight">Paytm</span>
+                          <span className="text-[9px] text-blue-400 font-mono">₹{order.amount}</span>
+                        </a>
+                      </div>
+
+                      <a
+                        href={order.upiIntent}
+                        className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-1.5 shadow-md shadow-emerald-500/20 active:scale-[0.98] transition-all"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>Open in Any Mobile UPI App</span>
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                /* Explicit Redirect Options View */
+                <div className="space-y-3">
+                  <div className="p-3.5 bg-slate-900/90 border border-slate-800 rounded-2xl space-y-3">
+                    <div>
+                      <span className="text-[10px] font-mono uppercase text-emerald-400 font-semibold block">
+                        Browser & Hosted Checkout
+                      </span>
+                      <h5 className="text-xs font-bold text-white mt-0.5">
+                        Direct Redirect Option (₹{order?.amount})
+                      </h5>
+                      <p className="text-[11px] text-slate-400 mt-1">
+                        Redirects directly to the official payment checkout page for cards, net banking, or web payment.
+                      </p>
+                    </div>
+
+                    {order?.checkoutUrl && (
+                      <a
+                        href={order.checkoutUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 active:scale-[0.98] transition-all"
+                      >
+                        <span>Redirect to Hosted Checkout</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Mobile Deep-link Alternative */}
+                  {order?.upiIntent && (
+                    <div className="p-3.5 bg-slate-900/90 border border-slate-800 rounded-2xl space-y-2">
+                      <span className="text-[10px] font-mono uppercase text-purple-400 font-semibold block">
+                        Mobile App Intent Redirect
+                      </span>
+                      <a
+                        href={order.upiIntent}
+                        className="w-full py-2.5 px-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs flex items-center justify-center space-x-2 transition-all active:scale-[0.98]"
+                      >
+                        <Smartphone className="w-3.5 h-3.5" />
+                        <span>Launch UPI App Directly (₹{order.amount})</span>
+                      </a>
+                    </div>
+                  )}
+                </div>
+              )}
 
               {/* Countdown & Polling Indicator */}
               <div className="flex items-center justify-between text-xs px-1">
@@ -315,43 +505,9 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
                 </div>
                 <div className="flex items-center space-x-1.5 text-emerald-400">
                   <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                  <span className="text-[11px] font-medium">Detecting payment...</span>
+                  <span className="text-[11px] font-medium">Auto-detecting payment...</span>
                 </div>
               </div>
-
-              {/* Mobile UPI App Grid */}
-              {order?.upiIntent && (
-                <div className="space-y-2">
-                  <div className="grid grid-cols-3 gap-2">
-                    <a
-                      href={getPhonePeIntent(order.upiIntent)}
-                      className="py-2.5 px-2 rounded-xl bg-purple-950/60 hover:bg-purple-900/80 border border-purple-700/50 text-purple-200 font-medium text-xs flex flex-col items-center justify-center space-y-1 transition-all active:scale-95"
-                    >
-                      <span className="font-bold text-[11px] tracking-tight">PhonePe</span>
-                    </a>
-                    <a
-                      href={getGPayIntent(order.upiIntent)}
-                      className="py-2.5 px-2 rounded-xl bg-sky-950/60 hover:bg-sky-900/80 border border-sky-700/50 text-sky-200 font-medium text-xs flex flex-col items-center justify-center space-y-1 transition-all active:scale-95"
-                    >
-                      <span className="font-bold text-[11px] tracking-tight">Google Pay</span>
-                    </a>
-                    <a
-                      href={getPaytmIntent(order.upiIntent)}
-                      className="py-2.5 px-2 rounded-xl bg-blue-950/60 hover:bg-blue-900/80 border border-blue-700/50 text-blue-200 font-medium text-xs flex flex-col items-center justify-center space-y-1 transition-all active:scale-95"
-                    >
-                      <span className="font-bold text-[11px] tracking-tight">Paytm</span>
-                    </a>
-                  </div>
-
-                  <a
-                    href={order.upiIntent}
-                    className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-2 shadow-md shadow-emerald-500/20 active:scale-[0.98] transition-all"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                    <span>Open Any UPI App (BHIM / CRED / Other)</span>
-                  </a>
-                </div>
-              )}
 
               {/* UPI ID copy fallback */}
               {order?.upiId && (
@@ -363,6 +519,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
                     </span>
                   </div>
                   <button
+                    type="button"
                     onClick={handleCopyUpi}
                     className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center space-x-1.5 shrink-0 transition-colors"
                   >
@@ -374,6 +531,7 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
 
               {/* Manual Verification Trigger */}
               <button
+                type="button"
                 onClick={checkPayment}
                 disabled={isManualChecking}
                 className="w-full py-2 px-3 rounded-lg border border-slate-700 hover:border-slate-600 bg-slate-900/60 hover:bg-slate-800/80 text-slate-300 text-[11px] font-medium flex items-center justify-center space-x-2 transition-all disabled:opacity-50"
@@ -390,13 +548,24 @@ export default function PaymentModal({ book, onClose }: PaymentModalProps) {
                   </>
                 )}
               </button>
+
+              {/* Dev Simulation Fallback */}
+              <div className="pt-1 text-center">
+                <button
+                  type="button"
+                  onClick={handleSimulatePayment}
+                  className="text-[10px] text-slate-600 hover:text-slate-400 font-mono underline transition-colors"
+                >
+                  [Dev/Staging: Simulate Instant Verification]
+                </button>
+              </div>
             </div>
           )}
         </div>
 
         {/* Footer Note */}
         <div className="px-6 py-3 bg-[#0B0F17]/80 border-t border-slate-800/80 text-[10px] text-slate-500 flex items-center justify-between">
-          <span>Non-Custodial UPI Rail</span>
+          <span>Non-Custodial UPI & Redirect Rail</span>
           <span>Zero-Trace Encryption</span>
         </div>
       </div>
