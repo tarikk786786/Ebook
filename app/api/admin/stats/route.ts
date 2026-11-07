@@ -45,7 +45,7 @@ export async function GET() {
         status: "ACTIVE",
         apiIdConfigured: true,
         sessionName: "tg_pdf_downloader_session",
-        clientAccount: "Tarik (+919114411026)",
+        clientAccount: "Enterprise Node (Authenticated)",
         configuredSourcesCount: 5,
         sources: configuredSources
       },

@@ -275,7 +275,7 @@ export default function AdminDashboardPage() {
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 Active Session
               </h3>
-              <p className="text-[11px] text-emerald-400/90 mt-1">Tarik (+919114411026)</p>
+              <p className="text-[11px] text-emerald-400/90 mt-1">Enterprise Node (Authenticated)</p>
             </div>
             <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
               <Server className="w-5 h-5" />
