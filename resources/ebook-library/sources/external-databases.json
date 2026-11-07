@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Open Library API",
+    "endpoint": "https://openlibrary.org/api/books",
+    "auth_required": false,
+    "rate_limit": "100 req/min",
+    "license": "Open Data Commons Open Database License (ODbL)",
+    "priority": 1,
+    "use_case": "ISBN, canonical author, edition and cover images lookup."
+  },
+  {
+    "name": "Google Books API",
+    "endpoint": "https://www.googleapis.com/books/v1/volumes",
+    "auth_required": false,
+    "rate_limit": "1,000 req/day (free)",
+    "license": "Public Google API terms",
+    "priority": 2,
+    "use_case": "Detailed descriptions, categories, page counts, thumbnail previews."
+  },
+  {
+    "name": "Internet Archive Books API",
+    "endpoint": "https://archive.org/advancedsearch.php",
+    "auth_required": false,
+    "rate_limit": "Generous public access",
+    "license": "Public Domain / CC0 / Open Access",
+    "priority": 3,
+    "use_case": "Full-text OCR search, public domain book scans, historical editions."
+  },
+  {
+    "name": "Crossref API",
+    "endpoint": "https://api.crossref.org/works",
+    "auth_required": false,
+    "rate_limit": "Polite pool with mailto header: 50 req/sec",
+    "license": "CC0 for metadata",
+    "priority": 4,
+    "use_case": "Academic monographs, DOI verification, peer-reviewed books."
+  },
+  {
+    "name": "Wikidata SPARQL",
+    "endpoint": "https://query.wikidata.org/sparql",
+    "auth_required": false,
+    "rate_limit": "Standard Wikimedia policy",
+    "license": "CC0",
+    "priority": 5,
+    "use_case": "Author canonical entities, multi-lingual titles, series sequences."
+  }
+]

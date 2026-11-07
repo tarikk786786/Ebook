@@ -1,0 +1,8 @@
+{
+  "status": "HEALTHY",
+  "last_audit": "2026-11-07T20:10:00Z",
+  "total_sources_active": 5,
+  "telegram_mtproto_session": "ACTIVE",
+  "floodwait_risk": "MINIMAL (exponential backoff active)",
+  "local_cache_integrity": "100% verified (1,697 files)"
+}

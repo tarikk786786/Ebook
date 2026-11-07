@@ -1,0 +1,74 @@
+[
+  {
+    "id": "-1003085497339",
+    "name": "DollarPremium Answer 2",
+    "type": "Supergroup / Storage",
+    "peer_id": 3085497339,
+    "status": "Verified & Connected",
+    "indexed_inventory": 4210,
+    "supported_formats": [
+      "PDF",
+      "EPUB",
+      "DOCX",
+      "ZIP",
+      "RAR"
+    ],
+    "description": "Primary high-volume educational storage supergroup."
+  },
+  {
+    "id": "-1002420485294",
+    "name": "DollarPremium File Answer 1",
+    "type": "Channel / Document Storage",
+    "peer_id": 2420485294,
+    "status": "Verified & Connected",
+    "indexed_inventory": 2150,
+    "supported_formats": [
+      "PDF",
+      "EPUB",
+      "MOBI"
+    ],
+    "description": "Curated premium book and course companion file storage channel."
+  },
+  {
+    "id": "-1002171451661",
+    "name": "International Premium Answer",
+    "type": "Channel",
+    "peer_id": 2171451661,
+    "status": "Verified & Connected",
+    "indexed_inventory": 1820,
+    "supported_formats": [
+      "PDF",
+      "EPUB",
+      "AZW3",
+      "DJVU"
+    ],
+    "description": "International publication releases and technical manuals."
+  },
+  {
+    "id": "-1002398249208",
+    "name": "Zebra Learn Book & Course",
+    "type": "Direct Source Channel",
+    "peer_id": 2398249208,
+    "status": "Verified & Connected",
+    "indexed_inventory": 29,
+    "cross_referenced_matches": 84,
+    "supported_formats": [
+      "PDF"
+    ],
+    "description": "Direct Zebra Learn books, finance playbooks, and course catalogs."
+  },
+  {
+    "id": "-1002106541973",
+    "name": "DollarPremium Answar",
+    "type": "Broadcast Channel",
+    "peer_id": 2106541973,
+    "status": "Verified & Connected",
+    "indexed_inventory": 2208,
+    "supported_formats": [
+      "PDF",
+      "TXT",
+      "DOCX"
+    ],
+    "description": "Supplementary document channel with daily archives."
+  }
+]

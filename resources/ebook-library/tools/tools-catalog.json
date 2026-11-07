@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Telethon",
+    "category": "Telegram MTProto Client",
+    "repo": "https://github.com/LonamiWebs/Telethon",
+    "license": "MIT",
+    "maintenance": "Actively maintained",
+    "purpose": "Non-blocking MTProto channel scanning, message scraping, FloodWait backoff."
+  },
+  {
+    "name": "PyMuPDF (fitz)",
+    "category": "PDF & Document Engine",
+    "repo": "https://github.com/pymupdf/PyMuPDF",
+    "license": "AGPL-3.0 / Commercial",
+    "maintenance": "Actively maintained",
+    "purpose": "Fast cover image rendering (130 DPI), table of contents extraction, page counting."
+  },
+  {
+    "name": "Pillow (PIL)",
+    "category": "Image Processing",
+    "repo": "https://github.com/python-pillow/Pillow",
+    "license": "HPND",
+    "maintenance": "Actively maintained",
+    "purpose": "Aesthetic book jacket generation, thumbnail resizing, cover formatting."
+  },
+  {
+    "name": "EbookLib",
+    "category": "EPUB/MOBI Parser",
+    "repo": "https://github.com/aerkalov/ebooklib",
+    "license": "AGPL-3.0",
+    "maintenance": "Stable",
+    "purpose": "EPUB metadata extraction, spine ordering, chapter navigation."
+  },
+  {
+    "name": "SQLite FTS5",
+    "category": "Search & Indexing Engine",
+    "repo": "https://www.sqlite.org/fts5.html",
+    "license": "Public Domain",
+    "maintenance": "Core SQLite Component",
+    "purpose": "Zero-dependency embedded full-text search across titles, authors, descriptions."
+  }
+]
