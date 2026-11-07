@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Book } from '@/lib/catalog';
-import { BookOpen, FileText, DownloadCloud, Zap, Eye, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Star, Clock, FileText, Zap, Eye, Download } from 'lucide-react';
 
 interface BookCardProps {
   book: Book;
@@ -25,88 +25,123 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
     : `$${(book.originalPriceInInr / 85).toFixed(2)}`;
 
   return (
-    <div className="group relative bg-[#121826] border border-slate-800 hover:border-emerald-500/40 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/5 flex flex-col justify-between">
-      {/* Top Banner & Image with subtle dark gradient overlay */}
-      <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+    <div className="group relative bg-[#121826] border border-slate-800/90 hover:border-emerald-500/50 rounded-2xl p-4 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 flex flex-col justify-between">
+      {/* 3D Vertical Book Jacket Mockup */}
+      <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-slate-900 shadow-xl mb-4 group-hover:-translate-y-1 transition-transform duration-300">
+        {/* Book Cover Image */}
         <img
           src={book.coverImage}
           alt={book.title}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#121826] via-transparent to-transparent" />
 
-        {/* Badges */}
-        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-          <span className="px-2.5 py-1 text-[10px] font-semibold tracking-wide uppercase bg-[#0B0F17]/85 backdrop-blur-md text-emerald-400 border border-emerald-500/30 rounded-lg">
+        {/* 3D Realistic Spine Shadow & Book Highlight */}
+        <div className="absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/60 via-black/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-y-0 left-3 w-[1px] bg-white/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17]/90 via-transparent to-black/20 pointer-events-none" />
+
+        {/* Floating Category & Bestseller Badges */}
+        <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
+          <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-emerald-300 border border-emerald-500/40 rounded-md">
             {book.category}
           </span>
           {book.badge && (
-            <span className="px-2 py-0.5 text-[10px] font-bold uppercase bg-amber-500 text-slate-950 rounded-md">
+            <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-950 rounded-md shadow-md">
               {book.badge}
             </span>
           )}
         </div>
 
-        {/* Format Tag */}
-        <div className="absolute bottom-2 right-3 text-[11px] font-mono text-slate-300 bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm border border-white/5">
-          {book.format} • {book.fileSize}
+        {/* Overlay Book Spine Title Preview */}
+        <div className="absolute bottom-2.5 left-3 right-3 text-left pointer-events-none">
+          <span className="text-[10px] text-emerald-400 font-mono block font-semibold">{book.edition}</span>
+          <h4 className="text-sm font-bold text-white line-clamp-1 drop-shadow-md">{book.title}</h4>
         </div>
       </div>
 
-      {/* Book Metadata */}
-      <div className="p-5 flex-1 flex flex-col justify-between">
+      {/* Book Metadata & Editorial Info */}
+      <div className="flex-1 flex flex-col justify-between space-y-3">
         <div>
+          {/* Star Rating & Reading Time */}
+          <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1.5">
+            <div className="flex items-center space-x-1">
+              <div className="flex text-amber-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3 h-3 fill-current" />
+                ))}
+              </div>
+              <span className="font-semibold text-slate-200">{book.rating}</span>
+              <span className="text-slate-500">({book.reviewCount})</span>
+            </div>
+            <div className="flex items-center space-x-1 text-slate-400">
+              <Clock className="w-3 h-3 text-slate-500" />
+              <span>{book.readingTime}</span>
+            </div>
+          </div>
+
+          {/* Book Title & Byline */}
           <h3 className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors line-clamp-1">
             {book.title}
           </h3>
-          <p className="text-xs text-slate-400 mt-1 line-clamp-2">
-            {book.subtitle}
+          <p className="text-xs text-slate-400 line-clamp-1 mt-0.5">
+            By <span className="text-slate-300 font-medium">{book.author}</span>
           </p>
 
-          <p className="text-xs text-slate-500 mt-3 line-clamp-2 leading-relaxed">
+          <p className="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
             {book.description}
           </p>
+
+          {/* Formats Pill */}
+          <div className="mt-3 flex items-center space-x-1.5 text-[10px] font-mono text-slate-400">
+            <span className="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+              {book.format}
+            </span>
+            <span>•</span>
+            <span>{book.pages} Pages</span>
+            <span>•</span>
+            <span>{book.fileSize}</span>
+          </div>
         </div>
 
-        <div className="mt-5 pt-4 border-t border-slate-800/80">
-          <div className="flex items-center justify-between mb-4">
+        {/* Pricing & Purchase Actions */}
+        <div className="pt-3 border-t border-slate-800/80">
+          <div className="flex items-baseline justify-between mb-3">
             <div>
-              <div className="flex items-baseline space-x-2">
-                <span className="text-2xl font-black text-white font-mono">
+              <div className="flex items-baseline space-x-1.5">
+                <span className="text-xl font-black text-white font-mono">
                   {displayPrice}
                 </span>
                 <span className="text-xs text-slate-500 line-through">
                   {displayOriginalPrice}
                 </span>
-                <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-900/60">
-                  {discountPercent}% OFF
-                </span>
               </div>
-              <span className="text-[10px] text-slate-400">Direct 0% UPI • Instant Stream</span>
+              <span className="text-[10px] text-emerald-400 font-medium">
+                Save {discountPercent}% • 0% Fee UPI
+              </span>
             </div>
 
-            <div className="text-right text-[11px] text-slate-400">
-              <span className="block font-medium text-slate-300">{book.pages} Pages</span>
-              <span className="text-[10px] text-slate-500">AES-256 Verified</span>
-            </div>
+            <span className="text-[10px] text-slate-400 text-right">
+              Instant Delivery<br />
+              <strong className="text-slate-300 font-mono">Kindle & iPad Ready</strong>
+            </span>
           </div>
 
           {/* Action Buttons */}
           <div className="grid grid-cols-2 gap-2">
             <button
               onClick={() => onSelectPreview(book)}
-              className="w-full py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-medium flex items-center justify-center space-x-1.5 transition-colors"
+              className="w-full py-2 px-2.5 rounded-xl border border-slate-700 bg-slate-800/40 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-medium flex items-center justify-center space-x-1.5 transition-colors"
             >
               <Eye className="w-3.5 h-3.5" />
-              <span>Read Sample</span>
+              <span>Look Inside</span>
             </button>
 
             <button
               onClick={() => onSelectBuy(book)}
-              className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-1.5 shadow-md shadow-emerald-500/20 transition-all active:scale-[0.98]"
+              className="w-full py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-1.5 shadow-md shadow-emerald-500/20 transition-all active:scale-[0.98]"
             >
               <Zap className="w-3.5 h-3.5 fill-current" />
-              <span>Instant Buy</span>
+              <span>Buy eBook</span>
             </button>
           </div>
         </div>
