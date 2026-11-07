@@ -32,7 +32,10 @@ export default function HomePage() {
   const [previewBook, setPreviewBook] = useState<Book | null>(null);
   const [buyingBook, setBuyingBook] = useState<Book | null>(null);
 
-  const categories = ['All', 'Security & Privacy', 'FinTech & Payments', 'AI & Agents', 'Indie Hacking', 'Architecture'];
+  const categories = useMemo(() => {
+    const cats = Array.from(new Set(BOOK_CATALOG.map((b) => b.category))).filter(Boolean);
+    return ['All', ...cats];
+  }, []);
 
   const filteredBooks = useMemo(() => {
     return BOOK_CATALOG.filter((book) => {
