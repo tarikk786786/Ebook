@@ -11,10 +11,16 @@ interface Props {
   };
 }
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  return BOOK_CATALOG.filter(b => b.status === 'PUBLISHED').map((book) => ({
-    slug: book.slug,
-  }));
+  // Prerender the top featured / Zebra Learn books at build time
+  return BOOK_CATALOG
+    .filter(b => b.status === 'PUBLISHED')
+    .slice(0, 80)
+    .map((book) => ({
+      slug: book.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
