@@ -48,7 +48,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "10.1 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 274,
     "readingTime": "2.1 hrs",
@@ -66,7 +66,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/10 Trading Strategies BY ASEEM SINGHAL.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 887,
+    "telegramLink": "https://t.me/c/2398249208/887",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "FinTech & Trading",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-101-linux-commands",
@@ -707,7 +715,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "3.9 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 240,
     "readingTime": "1.5 hrs",
@@ -725,7 +733,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Basics of Equity Research by Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 883,
+    "telegramLink": "https://t.me/c/2398249208/883",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "FinTech & Trading",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-bbrecon-masterflow-2025",
@@ -904,7 +920,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "66.9 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 399,
     "readingTime": "2.2 hrs",
@@ -922,7 +938,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Breaking into B2B Marketing By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 915,
+    "telegramLink": "https://t.me/c/2398249208/915",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Marketing & Growth",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-breaking-into-information-security-learning-the-ropes-101",
@@ -1101,7 +1125,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "34.5 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 390,
     "readingTime": "2.2 hrs",
@@ -1119,7 +1143,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Campus To Corporate By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 925,
+    "telegramLink": "https://t.me/c/2398249208/925",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Careers & Leadership",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-canva-unlimited-panels-methodpdf",
@@ -1167,7 +1199,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "21.8 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 260,
     "readingTime": "2.3 hrs",
@@ -1185,7 +1217,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Careers In Supply Chain BY SANDEEP CHATTERJEE.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 895,
+    "telegramLink": "https://t.me/c/2398249208/895",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Careers & Leadership",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-chatgpt-offsec",
@@ -1662,7 +1702,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "5.6 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 381,
     "readingTime": "1.6 hrs",
@@ -1680,7 +1720,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Corporate Growth Code By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 913,
+    "telegramLink": "https://t.me/c/2398249208/913",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Business & Strategy",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-cors-misconfiguration",
@@ -46324,7 +46372,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "14.6 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 206,
     "readingTime": "2.0 hrs",
@@ -46342,7 +46390,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Facebook Ads 101 By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 919,
+    "telegramLink": "https://t.me/c/2398249208/919",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Marketing & Growth",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-facebook-group-link-1-1",
@@ -46390,7 +46446,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "3.3 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 343,
     "readingTime": "1.5 hrs",
@@ -46408,7 +46464,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/First 365 Days of Your Startup By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 911,
+    "telegramLink": "https://t.me/c/2398249208/911",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Business & Startups",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-from-bills-to-benefits-by-zebra-learn",
@@ -46423,7 +46487,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "15.9 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 131,
     "readingTime": "1.0 hrs",
@@ -46441,7 +46505,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/From Bills to Benefits By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 903,
+    "telegramLink": "https://t.me/c/2398249208/903",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "HR & Management",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-fundraising-framework-by-zebra-learn",
@@ -46456,7 +46528,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "21.9 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 377,
     "readingTime": "1.6 hrs",
@@ -46474,7 +46546,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/FUNDRAISING FRAMEWORK By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 905,
+    "telegramLink": "https://t.me/c/2398249208/905",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Business & Startups",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-funnel-marketing-mastery-by-zebra-learn",
@@ -46489,7 +46569,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "93.4 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 275,
     "readingTime": "1.9 hrs",
@@ -46507,7 +46587,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Funnel Marketing Mastery By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 923,
+    "telegramLink": "https://t.me/c/2398249208/923",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Marketing & Growth",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-github-dorking",
@@ -46879,7 +46967,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "8.0 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 70,
     "readingTime": "1.3 hrs",
@@ -46897,7 +46985,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/How did Upstox Secure 10 Million+ Userbase by zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 897,
+    "telegramLink": "https://t.me/c/2398249208/897",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Business & Strategy",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-how-to-get-the-women-you-desire-into-bed",
@@ -47011,7 +47107,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "24.7 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 120,
     "readingTime": "1.8 hrs",
@@ -47029,7 +47125,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/How_UpGrad_Helped_1M+_Professionals_Level_Up!_By_Zebra_Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 909,
+    "telegramLink": "https://t.me/c/2398249208/909",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Business & Strategy",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-hr-career-gps-by-zebra-learn",
@@ -47044,7 +47148,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "10.4 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 250,
     "readingTime": "2.0 hrs",
@@ -47062,7 +47166,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/HR Career GPS By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 929,
+    "telegramLink": "https://t.me/c/2398249208/929",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "HR & Management",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-hr-life-decoded-by-zebra-learn",
@@ -47077,7 +47189,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "9.3 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 61,
     "readingTime": "2.2 hrs",
@@ -47095,7 +47207,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/HR Life Decoded By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 927,
+    "telegramLink": "https://t.me/c/2398249208/927",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "HR & Management",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-http-desync-attack",
@@ -47208,7 +47328,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "14.1 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 372,
     "readingTime": "2.2 hrs",
@@ -47226,7 +47346,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Insurance Made Simple by zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 893,
+    "telegramLink": "https://t.me/c/2398249208/893",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Personal Finance",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-international-premium-answer-20250422-053725-apexcreed-2-lec",
@@ -51421,7 +51549,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "3.8 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 129,
     "readingTime": "2.8 hrs",
@@ -51439,7 +51567,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/LinkedIn_ Personal Branding System By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 931,
+    "telegramLink": "https://t.me/c/2398249208/931",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Marketing & Growth",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-linux-essentials-for-cybersecurity",
@@ -51883,7 +52019,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "11.8 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 283,
     "readingTime": "2.7 hrs",
@@ -51901,7 +52037,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Mutual Fund Playbook by zebra learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 891,
+    "telegramLink": "https://t.me/c/2398249208/891",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Personal Finance",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-netflix-case-studypptx",
@@ -53892,7 +54036,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "12.2 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 179,
     "readingTime": "1.3 hrs",
@@ -53910,7 +54054,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Screener (10 minute stock analysis )by Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 877,
+    "telegramLink": "https://t.me/c/2398249208/877",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "FinTech & Trading",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-seo-101-by-zebra-learn",
@@ -53925,7 +54077,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "11.3 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 118,
     "readingTime": "2.3 hrs",
@@ -53943,7 +54095,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/SEO 101 By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 917,
+    "telegramLink": "https://t.me/c/2398249208/917",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Marketing & Growth",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-seo-crawls",
@@ -54118,7 +54278,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "93.8 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 389,
     "readingTime": "2.5 hrs",
@@ -54136,7 +54296,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Taxation Simplified - Part 1 by Rishita Motwani.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 881,
+    "telegramLink": "https://t.me/c/2398249208/881",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Personal Finance",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-taxation-simplified-part-2-by-rishita-motwani",
@@ -54151,7 +54319,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "62.6 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 163,
     "readingTime": "1.6 hrs",
@@ -54169,7 +54337,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/Taxation Simplified - Part 2 by Rishita Motwani.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 879,
+    "telegramLink": "https://t.me/c/2398249208/879",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Personal Finance",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-technical-analysis-of-access-token-theft-and-manipulation-20",
@@ -54249,7 +54425,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "12.9 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 185,
     "readingTime": "2.1 hrs",
@@ -54267,7 +54443,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/The Angel Investor's Toolkit BY RACHIT PODDAR.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 885,
+    "telegramLink": "https://t.me/c/2398249208/885",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "FinTech & Trading",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-the-intelligent-pre-ipo-investor-by-ashok-devanampriya",
@@ -54282,7 +54466,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "6.6 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 206,
     "readingTime": "3.5 hrs",
@@ -54300,7 +54484,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/The Intelligent Pre-IPO Investor BY ASHOK DEVANAMPRIYA.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 889,
+    "telegramLink": "https://t.me/c/2398249208/889",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "FinTech & Trading",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-the-mobile-application-hackers-handbook",
@@ -54381,7 +54573,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "6.7 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 239,
     "readingTime": "2.8 hrs",
@@ -54399,7 +54591,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/The Slice Economy By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 933,
+    "telegramLink": "https://t.me/c/2398249208/933",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Business & Strategy",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-the-zepto-way-by-zebra-learn",
@@ -54414,7 +54614,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "14.0 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 224,
     "readingTime": "1.7 hrs",
@@ -54432,7 +54632,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/The Zepto Way By zebra learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 899,
+    "telegramLink": "https://t.me/c/2398249208/899",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Business & Strategy",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-the-zero-commission-revolution-by-zebra-learn",
@@ -54447,7 +54655,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "28.4 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 374,
     "readingTime": "1.3 hrs",
@@ -54465,7 +54673,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/The Zero Commission Revolution By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 901,
+    "telegramLink": "https://t.me/c/2398249208/901",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "FinTech & Trading",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-the-ai-agent-architect",
@@ -55070,7 +55286,7 @@
     "format": "PDF (DRM-Free)",
     "fileSize": "37.2 MB",
     "category": "Zebra Learn Collection",
-    "badge": "Bestseller",
+    "badge": "Zebra Learn Master Edition",
     "rating": 4.9,
     "reviewCount": 275,
     "readingTime": "2.6 hrs",
@@ -55088,7 +55304,15 @@
       "Part 3: Advanced Real-World Case Studies"
     ],
     "storagePath": "private_storage/WhatsApp Marketing  By Zebra Learn.pdf",
-    "status": "PUBLISHED"
+    "status": "PUBLISHED",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 921,
+    "telegramLink": "https://t.me/c/2398249208/921",
+    "publisher": "Zebra Learn",
+    "tags": [
+      "Marketing & Growth",
+      "Zebra Learn"
+    ]
   },
   {
     "id": "book-windows-11-security-book",
@@ -55452,5 +55676,3271 @@
     ],
     "storagePath": "private_storage/🔐 OWASP_ Security Code Review Guide_.pdf",
     "status": "PUBLISHED"
+  },
+  {
+    "id": "book-the-untold-story-of-how-inmobi-disrupted-the-adtech-industry-by",
+    "slug": "the-untold-story-of-how-inmobi-disrupted-the-adtech-industry-by",
+    "title": "The_Untold_Story_of_How_InMobi_Disrupted_the_AdTech_Industry_By",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on The_Untold_Story_of_How_InMobi_Disrupted_the_AdTech_Industry_By. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "13.1 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-untold-story-of-how-inmobi-disrupted-the-adtech-industry-by.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of The_Untold_Story_of_How_InMobi_Disrupted_the_AdTech_Industry_By.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "The_Untold_Story_of_How_InMobi_Disrupted_the_AdTech_Industry_By.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 907,
+    "telegramLink": "https://t.me/c/2398249208/907",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-startup-finance-360",
+    "slug": "startup-finance-360",
+    "title": "Startup Finance 360°",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Rahul Saria",
+    "description": "Comprehensive and authoritative guide on Startup Finance 360°. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 310,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "77.7 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "7 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/startup-finance-360.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Startup Finance 360°.",
+      "Curated under FinTech & Trading by Rahul Saria.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Startup Finance 360.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Coursedollar99 Answer",
+    "telegramMessageId": 4700,
+    "telegramLink": "https://t.me/c/2179939763/4700",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "FinTech & Trading",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-startup-finance-360-ebook-original-pdf",
+    "slug": "startup-finance-360-ebook-original-pdf",
+    "title": "Startup Finance 360°",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Rahul Saria",
+    "description": "Comprehensive and authoritative guide on Startup Finance 360°. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 338,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "84.7 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "8 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/startup-finance-360-ebook-original-pdf.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Startup Finance 360°.",
+      "Curated under FinTech & Trading by Rahul Saria.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "startup finance 360 ebook  original pdf.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3646,
+    "telegramLink": "https://t.me/c/2055909796/3646",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-12-covered-calls-trading-strategies",
+    "slug": "12-covered-calls-trading-strategies",
+    "title": "12-Covered Calls - Trading Strategies",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 12-Covered Calls - Trading Strategies. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "0.0 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/12-covered-calls-trading-strategies.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 12-Covered Calls - Trading Strategies.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "12-Covered Calls - Trading Strategies.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "International Premium Answer",
+    "telegramMessageId": 13727,
+    "telegramLink": "https://t.me/c/2171451661/13727",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-sanet-st-professional-trading-masterclass-the-golden-strategyrar",
+    "slug": "sanet-st-professional-trading-masterclass-the-golden-strategyrar",
+    "title": "SANET_ST_Professional_Trading_Masterclass_The_Golden_Strategy.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on SANET_ST_Professional_Trading_Masterclass_The_Golden_Strategy.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 1642,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "410.6 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "41 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/sanet-st-professional-trading-masterclass-the-golden-strategyrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of SANET_ST_Professional_Trading_Masterclass_The_Golden_Strategy.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "SANET_ST_Professional_Trading_Masterclass_The_Golden_Strategy.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Udemy courses FREE courseguy",
+    "telegramMessageId": 1355,
+    "telegramLink": "https://t.me/c/1859983396/1355",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-sanet-st-forex-trading-strategy-price-action-execution-part4rar",
+    "slug": "sanet-st-forex-trading-strategy-price-action-execution-part4rar",
+    "title": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part4.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part4.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 594,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "148.7 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "14 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/sanet-st-forex-trading-strategy-price-action-execution-part4rar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part4.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part4.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Udemy courses FREE courseguy",
+    "telegramMessageId": 914,
+    "telegramLink": "https://t.me/c/1859983396/914",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-sanet-st-forex-trading-strategy-price-action-execution-part3rar",
+    "slug": "sanet-st-forex-trading-strategy-price-action-execution-part3rar",
+    "title": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part3.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part3.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 3980,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "995.0 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "99 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/sanet-st-forex-trading-strategy-price-action-execution-part3rar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part3.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part3.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Udemy courses FREE courseguy",
+    "telegramMessageId": 913,
+    "telegramLink": "https://t.me/c/1859983396/913",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-sanet-st-forex-trading-strategy-price-action-execution-part2rar",
+    "slug": "sanet-st-forex-trading-strategy-price-action-execution-part2rar",
+    "title": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part2.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part2.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 3980,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "995.0 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "99 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/sanet-st-forex-trading-strategy-price-action-execution-part2rar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part2.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part2.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Udemy courses FREE courseguy",
+    "telegramMessageId": 912,
+    "telegramLink": "https://t.me/c/1859983396/912",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-sanet-st-forex-trading-strategy-price-action-execution-part1rar",
+    "slug": "sanet-st-forex-trading-strategy-price-action-execution-part1rar",
+    "title": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part1.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part1.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 3980,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "995.0 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "99 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/sanet-st-forex-trading-strategy-price-action-execution-part1rar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part1.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "sanet_st_Forex_Trading_Strategy_Price_Action_Execution_part1.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Udemy courses FREE courseguy",
+    "telegramMessageId": 911,
+    "telegramLink": "https://t.me/c/1859983396/911",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-83-chapter-8-gold-digger-trading-strategyrar",
+    "slug": "83-chapter-8-gold-digger-trading-strategyrar",
+    "title": "8.3 Chapter 8 Gold Digger Trading Strategy.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 8.3 Chapter 8 Gold Digger Trading Strategy.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 2567,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "642.0 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "64 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/83-chapter-8-gold-digger-trading-strategyrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 8.3 Chapter 8 Gold Digger Trading Strategy.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "8.3 Chapter 8 Gold Digger Trading Strategy.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 120891,
+    "telegramLink": "https://t.me/c/3085497339/120891",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-82-chapter-8-gold-digger-trading-strategyrar",
+    "slug": "82-chapter-8-gold-digger-trading-strategyrar",
+    "title": "8.2 Chapter 8 Gold Digger Trading Strategy.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 8.2 Chapter 8 Gold Digger Trading Strategy.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 3004,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "751.2 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "75 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/82-chapter-8-gold-digger-trading-strategyrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 8.2 Chapter 8 Gold Digger Trading Strategy.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "8.2 Chapter 8 Gold Digger Trading Strategy.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 120890,
+    "telegramLink": "https://t.me/c/3085497339/120890",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-81-chapter-8-gold-digger-trading-strategyrar",
+    "slug": "81-chapter-8-gold-digger-trading-strategyrar",
+    "title": "8.1 Chapter 8 Gold Digger Trading Strategy.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 8.1 Chapter 8 Gold Digger Trading Strategy.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 1742,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "435.7 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "43 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/81-chapter-8-gold-digger-trading-strategyrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 8.1 Chapter 8 Gold Digger Trading Strategy.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "8.1 Chapter 8 Gold Digger Trading Strategy.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 120889,
+    "telegramLink": "https://t.me/c/3085497339/120889",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-7-chapter-7-contrarian-trading-strategyrar",
+    "slug": "7-chapter-7-contrarian-trading-strategyrar",
+    "title": "7. Chapter 7 Contrarian Trading Strategy.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 7. Chapter 7 Contrarian Trading Strategy.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 466,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "116.7 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "11 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/7-chapter-7-contrarian-trading-strategyrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 7. Chapter 7 Contrarian Trading Strategy.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "7. Chapter 7 Contrarian Trading Strategy.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 120888,
+    "telegramLink": "https://t.me/c/3085497339/120888",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-1-chapter-1-trading-strategies-time-framesrar",
+    "slug": "1-chapter-1-trading-strategies-time-framesrar",
+    "title": "1. Chapter 1 Trading Strategies & Time Frames.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 1. Chapter 1 Trading Strategies & Time Frames.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 1487,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "371.8 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "37 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/1-chapter-1-trading-strategies-time-framesrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 1. Chapter 1 Trading Strategies & Time Frames.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "1. Chapter 1 Trading Strategies & Time Frames.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 120882,
+    "telegramLink": "https://t.me/c/3085497339/120882",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-8-trading-strategies-softwaresrar",
+    "slug": "8-trading-strategies-softwaresrar",
+    "title": "8. Trading Strategies & Softwares.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 8. Trading Strategies & Softwares.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 2702,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "675.6 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "67 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/8-trading-strategies-softwaresrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 8. Trading Strategies & Softwares.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "8. Trading Strategies & Softwares.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 120878,
+    "telegramLink": "https://t.me/c/3085497339/120878",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-zebra-learn-the-trading-mastermind",
+    "slug": "zebra-learn-the-trading-mastermind",
+    "title": "The Trading Mastermind",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Aseem Singhal",
+    "description": "Comprehensive and authoritative guide on The Trading Mastermind. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "18.4 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/zebra-learn-the-trading-mastermind.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of The Trading Mastermind.",
+      "Curated under FinTech & Trading by Aseem Singhal.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Zebra  Learn  - The Trading Mastermind.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Coursedollar99 Answer",
+    "telegramMessageId": 4718,
+    "telegramLink": "https://t.me/c/2179939763/4718",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "FinTech & Trading",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-trading-mastermind-become-a-trading-expert-from-scratch-by-zebralearn",
+    "slug": "trading-mastermind-become-a-trading-expert-from-scratch-by-zebralearn",
+    "title": "Trading_Mastermind_Become_A_Trading_Expert_From_Scratch_by_ZebraLearn",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Trading_Mastermind_Become_A_Trading_Expert_From_Scratch_by_ZebraLearn. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "18.9 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/trading-mastermind-become-a-trading-expert-from-scratch-by-zebralearn.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Trading_Mastermind_Become_A_Trading_Expert_From_Scratch_by_ZebraLearn.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Trading_Mastermind_Become_A_Trading_Expert_From_Scratch_by_ZebraLearn.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 10313,
+    "telegramLink": "https://t.me/c/2055909796/10313",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-zebralearn-the-trading-mastermind",
+    "slug": "zebralearn-the-trading-mastermind",
+    "title": "The Trading Mastermind",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Aseem Singhal",
+    "description": "Comprehensive and authoritative guide on The Trading Mastermind. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "18.9 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/zebralearn-the-trading-mastermind.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of The Trading Mastermind.",
+      "Curated under FinTech & Trading by Aseem Singhal.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Zebralearn-The Trading Mastermind.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3637,
+    "telegramLink": "https://t.me/c/2055909796/3637",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-stock-investing-mastermind",
+    "slug": "stock-investing-mastermind",
+    "title": "Stock Investing Mastermind",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on Stock Investing Mastermind. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 159,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "39.9 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/stock-investing-mastermind.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Stock Investing Mastermind.",
+      "Curated under FinTech & Trading by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Stock Investing Mastermind.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Coursedollar99 Answer",
+    "telegramMessageId": 4720,
+    "telegramLink": "https://t.me/c/2179939763/4720",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "FinTech & Trading",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-zebralearn-stock-investing-mastermind",
+    "slug": "zebralearn-stock-investing-mastermind",
+    "title": "Stock Investing Mastermind",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on Stock Investing Mastermind. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 157,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "39.3 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/zebralearn-stock-investing-mastermind.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Stock Investing Mastermind.",
+      "Curated under FinTech & Trading by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Zebralearn-Stock Investing Mastermind.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3636,
+    "telegramLink": "https://t.me/c/2055909796/3636",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-zebra-learn-fundraising-decoded",
+    "slug": "zebra-learn-fundraising-decoded",
+    "title": "Fundraising Decoded",
+    "subtitle": "Business & Startups • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on Fundraising Decoded. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 279,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "70.0 MB",
+    "category": "Business & Startups",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "6 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/zebra-learn-fundraising-decoded.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Fundraising Decoded.",
+      "Curated under Business & Startups by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Zebra learn Fundraising Decoded.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3641,
+    "telegramLink": "https://t.me/c/2055909796/3641",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "Business & Startups",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-mindful-marketing",
+    "slug": "mindful-marketing",
+    "title": "Mindful Marketing",
+    "subtitle": "Marketing & Growth • Zebra Learn Master Edition",
+    "author": "Rajesh Srinivasan",
+    "description": "Comprehensive and authoritative guide on Mindful Marketing. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 161,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "40.3 MB",
+    "category": "Marketing & Growth",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "4 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/mindful-marketing.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Mindful Marketing.",
+      "Curated under Marketing & Growth by Rajesh Srinivasan.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Mindful Marketing.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Coursedollar99 Answer",
+    "telegramMessageId": 4702,
+    "telegramLink": "https://t.me/c/2179939763/4702",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "Marketing & Growth",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-market-mind-games-a-radical-psychology-of-investing-trading-and",
+    "slug": "market-mind-games-a-radical-psychology-of-investing-trading-and",
+    "title": "Market_Mind_Games_A_Radical_Psychology_of_Investing,_Trading_and",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Market_Mind_Games_A_Radical_Psychology_of_Investing,_Trading_and. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "1.1 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/market-mind-games-a-radical-psychology-of-investing-trading-and.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Market_Mind_Games_A_Radical_Psychology_of_Investing,_Trading_and.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Market_Mind_Games_A_Radical_Psychology_of_Investing,_Trading_and.epub",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 10367,
+    "telegramLink": "https://t.me/c/2055909796/10367",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-51-trading-strategies",
+    "slug": "51-trading-strategies",
+    "title": "51 Trading Strategies",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on 51 Trading Strategies. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 319,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "79.8 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "7 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/51-trading-strategies.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 51 Trading Strategies.",
+      "Curated under FinTech & Trading by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "51 Trading Strategies.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3645,
+    "telegramLink": "https://t.me/c/2055909796/3645",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "FinTech & Trading",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-financial-modelling-handbook-zebra-learn",
+    "slug": "financial-modelling-handbook-zebra-learn",
+    "title": "Financial Modelling Handbook",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on Financial Modelling Handbook. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "22.1 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/financial-modelling-handbook-zebra-learn.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Financial Modelling Handbook.",
+      "Curated under FinTech & Trading by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Financial Modelling Handbook Zebra Learn.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3635,
+    "telegramLink": "https://t.me/c/2055909796/3635",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-financial-statement-analysis",
+    "slug": "financial-statement-analysis",
+    "title": "Financial Statement Analysis",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on Financial Statement Analysis. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 341,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "85.3 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "8 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/financial-statement-analysis.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Financial Statement Analysis.",
+      "Curated under FinTech & Trading by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Financial statement analysis.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3643,
+    "telegramLink": "https://t.me/c/2055909796/3643",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "FinTech & Trading",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-financial-statement-analysis-a-practitioners-guide-martin-s-fridson",
+    "slug": "financial-statement-analysis-a-practitioners-guide-martin-s-fridson",
+    "title": "Financial Statement Analysis",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on Financial Statement Analysis. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "2.5 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/financial-statement-analysis-a-practitioners-guide-martin-s-fridson.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Financial Statement Analysis.",
+      "Curated under FinTech & Trading by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Financial_Statement_Analysis_A_Practitioners_Guide_Martin_S_Fridson.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 10363,
+    "telegramLink": "https://t.me/c/2055909796/10363",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-zebra-learn-the-industry-handbook",
+    "slug": "zebra-learn-the-industry-handbook",
+    "title": "The Industry Handbook",
+    "subtitle": "Business & Strategy • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "Comprehensive and authoritative guide on The Industry Handbook. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 203,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "50.8 MB",
+    "category": "Business & Strategy",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/zebra-learn-the-industry-handbook.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of The Industry Handbook.",
+      "Curated under Business & Strategy by Zebra Learn.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Zebra Learn - The industry Handbook.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Coursedollar99 Answer",
+    "telegramMessageId": 4714,
+    "telegramLink": "https://t.me/c/2179939763/4714",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "Business & Strategy",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-zebralearn-industry-handbook",
+    "slug": "zebralearn-industry-handbook",
+    "title": "Zebralearn-Industry Handbook",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Zebralearn-Industry Handbook. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 203,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "50.9 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/zebralearn-industry-handbook.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Zebralearn-Industry Handbook.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Zebralearn-Industry Handbook.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3640,
+    "telegramLink": "https://t.me/c/2055909796/3640",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-money-guide-by-anushka-rathod-how-to-manage-your-taxes-investments",
+    "slug": "the-money-guide-by-anushka-rathod-how-to-manage-your-taxes-investments",
+    "title": "The Money Guide",
+    "subtitle": "Personal Finance • Zebra Learn Master Edition",
+    "author": "Anushka Rathod",
+    "description": "Comprehensive and authoritative guide on The Money Guide. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 171,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "42.8 MB",
+    "category": "Personal Finance",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "4 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-money-guide-by-anushka-rathod-how-to-manage-your-taxes-investments.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of The Money Guide.",
+      "Curated under Personal Finance by Anushka Rathod.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "The_Money_Guide_by_Anushka_Rathod_How_to_Manage_Your_Taxes,_Investments.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 95626,
+    "telegramLink": "https://t.me/c/3085497339/95626",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Personal Finance",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-guide-to-making-money-with-chatgpt-and-other-ai-toolszip",
+    "slug": "the-guide-to-making-money-with-chatgpt-and-other-ai-toolszip",
+    "title": "The Guide to Making Money with ChatGPT and Other AI Tools.zip",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on The Guide to Making Money with ChatGPT and Other AI Tools.zip. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 14934,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "3733.7 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "373 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-guide-to-making-money-with-chatgpt-and-other-ai-toolszip.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of The Guide to Making Money with ChatGPT and Other AI Tools.zip.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "The Guide to Making Money with ChatGPT and Other AI Tools.zip",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "BITTU free courses",
+    "telegramMessageId": 3953,
+    "telegramLink": "https://t.me/c/1961514306/3953",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-microservices-interview-readiness-course-joinbittufreecrar",
+    "slug": "microservices-interview-readiness-course-joinbittufreecrar",
+    "title": "Microservices Interview Readiness Course @joinBITTUfreec.rar",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Microservices Interview Readiness Course @joinBITTUfreec.rar. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 2299,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "574.9 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "57 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/microservices-interview-readiness-course-joinbittufreecrar.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Microservices Interview Readiness Course @joinBITTUfreec.rar.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Microservices Interview Readiness Course @joinBITTUfreec.rar",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "BITTU free courses",
+    "telegramMessageId": 2870,
+    "telegramLink": "https://t.me/c/1961514306/2870",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-040-lecture-notes-screener",
+    "slug": "040-lecture-notes-screener",
+    "title": "040) (Lecture Notes) Screener",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on 040) (Lecture Notes) Screener. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "0.1 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/040-lecture-notes-screener.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of 040) (Lecture Notes) Screener.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "040) (Lecture Notes) Screener.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 95996,
+    "telegramLink": "https://t.me/c/3085497339/95996",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "Zebra Learn Collection",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-basics-of-equity-research-part2zip",
+    "slug": "basics-of-equity-research-part2zip",
+    "title": "Basics of Equity Research-Part2.zip",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Basics of Equity Research-Part2.zip. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 7532,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "1883.1 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "188 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/basics-of-equity-research-part2zip.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Basics of Equity Research-Part2.zip.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Basics of Equity Research-Part2.zip",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "CourseDollarStock Answer",
+    "telegramMessageId": 3664,
+    "telegramLink": "https://t.me/c/2055909796/3664",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "Zebra Learn Collection",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-whatsapp-ban",
+    "slug": "whatsapp-ban",
+    "title": "Whatsapp Ban",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Whatsapp Ban. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "0.2 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/whatsapp-ban.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Whatsapp Ban.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Whatsapp Ban.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 131680,
+    "telegramLink": "https://t.me/c/3085497339/131680",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-best-practices-pdf",
+    "slug": "best-practices-pdf",
+    "title": "Best Practices PDF",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Best Practices PDF. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "1.8 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/best-practices-pdf.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Best Practices PDF.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Best Practices PDF.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 131678,
+    "telegramLink": "https://t.me/c/3085497339/131678",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-whatsapp-business-message-templates",
+    "slug": "whatsapp-business-message-templates",
+    "title": "WhatsApp Business Message Templates",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on WhatsApp Business Message Templates. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "1.1 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/whatsapp-business-message-templates.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of WhatsApp Business Message Templates.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "WhatsApp Business Message Templates.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 131673,
+    "telegramLink": "https://t.me/c/3085497339/131673",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-whatsapp-api-course-deck",
+    "slug": "whatsapp-api-course-deck",
+    "title": "Whatsapp API course deck",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Whatsapp API course deck. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "0.3 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/whatsapp-api-course-deck.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Whatsapp API course deck.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Whatsapp API course deck.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 131669,
+    "telegramLink": "https://t.me/c/3085497339/131669",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-key-metrics",
+    "slug": "key-metrics",
+    "title": "Key Metrics",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Key Metrics. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "0.2 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/key-metrics.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Key Metrics.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Key Metrics.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 131665,
+    "telegramLink": "https://t.me/c/3085497339/131665",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-whatsapp-label-guide",
+    "slug": "whatsapp-label-guide",
+    "title": "Whatsapp Label Guide",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on Whatsapp Label Guide. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 120,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "0.2 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "3 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/whatsapp-label-guide.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Whatsapp Label Guide.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Whatsapp Label Guide.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 131655,
+    "telegramLink": "https://t.me/c/3085497339/131655",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-whatsapp-marketing-automation-advanced-programzip",
+    "slug": "whatsapp-marketing-automation-advanced-programzip",
+    "title": "WhatsApp Marketing & Automation Advanced Program.zip",
+    "subtitle": "Zebra Learn Collection • Zebra Learn Master Edition",
+    "author": "Zebra Learn & Industry Experts",
+    "description": "Comprehensive and authoritative guide on WhatsApp Marketing & Automation Advanced Program.zip. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 5050,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "1262.7 MB",
+    "category": "Zebra Learn Collection",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "126 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/whatsapp-marketing-automation-advanced-programzip.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of WhatsApp Marketing & Automation Advanced Program.zip.",
+      "Curated under Zebra Learn Collection by Zebra Learn & Industry Experts.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "WhatsApp Marketing & Automation Advanced Program.zip",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Coursedollar99 Answer",
+    "telegramMessageId": 3202,
+    "telegramLink": "https://t.me/c/2179939763/3202",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Zebra Learn Collection",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-startupology-by-vivek-chadha",
+    "slug": "startupology-by-vivek-chadha",
+    "title": "Startupology: Your Day One Startup Manual",
+    "subtitle": "Business & Startups • Zebra Learn Master Edition",
+    "author": "Vivek Chadha",
+    "description": "Comprehensive and authoritative guide on Startupology: Your Day One Startup Manual. Published by Zebra Learn with real-world case studies, actionable frameworks, and verified practitioner playbooks.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 577,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "144.3 MB",
+    "category": "Business & Startups",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 420,
+    "readingTime": "14 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/startupology-by-vivek-chadha.jpg",
+    "sampleExcerpt": [
+      "Authoritative master edition of Startupology: Your Day One Startup Manual.",
+      "Curated under Business & Startups by Vivek Chadha.",
+      "Published with high-resolution visual infographics and step-by-step corporate playbooks."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundational Architecture & Core Frameworks",
+      "Part 2: Real-World Case Studies & Corporate Strategy",
+      "Part 3: Tactical Workflows & Implementation Roadmap",
+      "Part 4: Scaling, Governance & Risk Mitigation"
+    ],
+    "fileName": "Startupology by Vivek Chadha.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "DollarPremium Answer 2",
+    "telegramMessageId": 90346,
+    "telegramLink": "https://t.me/c/3085497339/90346",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Verified Edition",
+      "Business & Startups",
+      "Zebra Learn"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-residential-real-estate",
+    "slug": "residential-real-estate",
+    "title": "Master Residential Real Estate",
+    "subtitle": "Real Estate • Zebra Learn Master Edition",
+    "author": "Ashwinder R Singh",
+    "description": "The definitive guide on Master Residential Real Estate by Ashwinder R Singh. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Real Estate",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/residential-real-estate.jpg",
+    "sampleExcerpt": [
+      "Master Residential Real Estate by Ashwinder R Singh - Zebra Learn New Book.",
+      "Authoritative digital edition covering Real Estate."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Master Residential Real Estate by Ashwinder R Singh.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Real Estate",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-commercial-real-estate",
+    "slug": "commercial-real-estate",
+    "title": "Master Commercial Real Estate",
+    "subtitle": "Real Estate • Zebra Learn Master Edition",
+    "author": "Ashwinder R Singh",
+    "description": "The definitive guide on Master Commercial Real Estate by Ashwinder R Singh. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Real Estate",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/commercial-real-estate.jpg",
+    "sampleExcerpt": [
+      "Master Commercial Real Estate by Ashwinder R Singh - Zebra Learn New Book.",
+      "Authoritative digital edition covering Real Estate."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Master Commercial Real Estate by Ashwinder R Singh.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Real Estate",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-future-options",
+    "slug": "future-options",
+    "title": "Future & Options (FnO) Mastermind",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Aseem Singhal",
+    "description": "The definitive guide on Future & Options (FnO) Mastermind by Aseem Singhal. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/future-options.jpg",
+    "sampleExcerpt": [
+      "Future & Options (FnO) Mastermind by Aseem Singhal - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Future & Options (FnO) Mastermind by Aseem Singhal.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-money-smart-in-your-20s-30s",
+    "slug": "money-smart-in-your-20s-30s",
+    "title": "Money Smart in your 20s & 30s",
+    "subtitle": "Personal Finance • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "The definitive guide on Money Smart in your 20s & 30s by Zebra Learn. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Personal Finance",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/money-smart-in-your-20s-30s.jpg",
+    "sampleExcerpt": [
+      "Money Smart in your 20s & 30s by Zebra Learn - Zebra Learn New Book.",
+      "Authoritative digital edition covering Personal Finance."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Money Smart in your 20s & 30s by Zebra Learn.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Personal Finance",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-money-smart-in-your-30s-40s",
+    "slug": "money-smart-in-your-30s-40s",
+    "title": "Money Smart in your 30s & 40s",
+    "subtitle": "Personal Finance • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "The definitive guide on Money Smart in your 30s & 40s by Zebra Learn. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Personal Finance",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/money-smart-in-your-30s-40s.jpg",
+    "sampleExcerpt": [
+      "Money Smart in your 30s & 40s by Zebra Learn - Zebra Learn New Book.",
+      "Authoritative digital edition covering Personal Finance."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Money Smart in your 30s & 40s by Zebra Learn.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Personal Finance",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-consulting-way",
+    "slug": "the-consulting-way",
+    "title": "The Consulting Way",
+    "subtitle": "Careers & Leadership • Zebra Learn Master Edition",
+    "author": "Sandeep Chatterjee",
+    "description": "The definitive guide on The Consulting Way by Sandeep Chatterjee. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Careers & Leadership",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-consulting-way.jpg",
+    "sampleExcerpt": [
+      "The Consulting Way by Sandeep Chatterjee - Zebra Learn New Book.",
+      "Authoritative digital edition covering Careers & Leadership."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The Consulting Way by Sandeep Chatterjee.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Careers & Leadership",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-decoding-b2b-marketing",
+    "slug": "decoding-b2b-marketing",
+    "title": "Decoding B2B Marketing",
+    "subtitle": "Marketing & Growth • Zebra Learn Master Edition",
+    "author": "Rajesh Kumar",
+    "description": "The definitive guide on Decoding B2B Marketing by Rajesh Kumar. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Marketing & Growth",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/decoding-b2b-marketing.jpg",
+    "sampleExcerpt": [
+      "Decoding B2B Marketing by Rajesh Kumar - Zebra Learn New Book.",
+      "Authoritative digital edition covering Marketing & Growth."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Decoding B2B Marketing by Rajesh Kumar.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Marketing & Growth",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-employee-retention-mastermind",
+    "slug": "employee-retention-mastermind",
+    "title": "Employee Retention Mastermind",
+    "subtitle": "HR & Management • Zebra Learn Master Edition",
+    "author": "Harjeet Khanduja",
+    "description": "The definitive guide on Employee Retention Mastermind by Harjeet Khanduja. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "HR & Management",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/employee-retention-mastermind.jpg",
+    "sampleExcerpt": [
+      "Employee Retention Mastermind by Harjeet Khanduja - Zebra Learn New Book.",
+      "Authoritative digital edition covering HR & Management."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Employee Retention Mastermind by Harjeet Khanduja.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "HR & Management",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-employee-management-mastermind",
+    "slug": "employee-management-mastermind",
+    "title": "Employee Management Mastermind",
+    "subtitle": "HR & Management • Zebra Learn Master Edition",
+    "author": "Harjeet Khanduja",
+    "description": "The definitive guide on Employee Management Mastermind by Harjeet Khanduja. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "HR & Management",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/employee-management-mastermind.jpg",
+    "sampleExcerpt": [
+      "Employee Management Mastermind by Harjeet Khanduja - Zebra Learn New Book.",
+      "Authoritative digital edition covering HR & Management."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Employee Management Mastermind by Harjeet Khanduja.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "HR & Management",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-hiring-mastermind",
+    "slug": "hiring-mastermind",
+    "title": "Hiring Mastermind",
+    "subtitle": "HR & Management • Zebra Learn Master Edition",
+    "author": "Harjeet Khanduja",
+    "description": "The definitive guide on Hiring Mastermind by Harjeet Khanduja. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "HR & Management",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/hiring-mastermind.jpg",
+    "sampleExcerpt": [
+      "Hiring Mastermind by Harjeet Khanduja - Zebra Learn New Book.",
+      "Authoritative digital edition covering HR & Management."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Hiring Mastermind by Harjeet Khanduja.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "HR & Management",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-7ms-of-digital-transformation",
+    "slug": "the-7ms-of-digital-transformation",
+    "title": "The 7Ms of Digital Transformation",
+    "subtitle": "Business & Strategy • Zebra Learn Master Edition",
+    "author": "Arindam Dutta",
+    "description": "The definitive guide on The 7Ms of Digital Transformation by Arindam Dutta. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Business & Strategy",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-7ms-of-digital-transformation.jpg",
+    "sampleExcerpt": [
+      "The 7Ms of Digital Transformation by Arindam Dutta - Zebra Learn New Book.",
+      "Authoritative digital edition covering Business & Strategy."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The 7Ms of Digital Transformation by Arindam Dutta.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Business & Strategy",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-interview-ready",
+    "slug": "interview-ready",
+    "title": "Interview Ready",
+    "subtitle": "Careers & Leadership • Zebra Learn Master Edition",
+    "author": "CA Shivam Palan",
+    "description": "The definitive guide on Interview Ready by CA Shivam Palan. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Careers & Leadership",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/interview-ready.jpg",
+    "sampleExcerpt": [
+      "Interview Ready by CA Shivam Palan - Zebra Learn New Book.",
+      "Authoritative digital edition covering Careers & Leadership."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Interview Ready by CA Shivam Palan.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Careers & Leadership",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-power-of-emotional-marketing",
+    "slug": "the-power-of-emotional-marketing",
+    "title": "The Power of Emotional Marketing",
+    "subtitle": "Marketing & Growth • Zebra Learn Master Edition",
+    "author": "Bhuvana Subramanyan",
+    "description": "The definitive guide on The Power of Emotional Marketing by Bhuvana Subramanyan. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Marketing & Growth",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-power-of-emotional-marketing.jpg",
+    "sampleExcerpt": [
+      "The Power of Emotional Marketing by Bhuvana Subramanyan - Zebra Learn New Book.",
+      "Authoritative digital edition covering Marketing & Growth."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The Power of Emotional Marketing by Bhuvana Subramanyan.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Marketing & Growth",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-angel-investing-360",
+    "slug": "angel-investing-360",
+    "title": "Angel Investing 360",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Vineet Agarwal",
+    "description": "The definitive guide on Angel Investing 360 by Vineet Agarwal. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/angel-investing-360.jpg",
+    "sampleExcerpt": [
+      "Angel Investing 360 by Vineet Agarwal - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Angel Investing 360 by Vineet Agarwal.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-private-equity-360",
+    "slug": "private-equity-360",
+    "title": "Private Equity 360°",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Vinit Rai",
+    "description": "The definitive guide on Private Equity 360° by Vinit Rai. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/private-equity-360.jpg",
+    "sampleExcerpt": [
+      "Private Equity 360° by Vinit Rai - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Private Equity 360° by Vinit Rai.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-marketing-psychology-decoded",
+    "slug": "marketing-psychology-decoded",
+    "title": "Marketing Psychology Decoded",
+    "subtitle": "Marketing & Growth • Zebra Learn Master Edition",
+    "author": "Suvodip Sen",
+    "description": "The definitive guide on Marketing Psychology Decoded by Suvodip Sen. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Marketing & Growth",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/marketing-psychology-decoded.jpg",
+    "sampleExcerpt": [
+      "Marketing Psychology Decoded by Suvodip Sen - Zebra Learn New Book.",
+      "Authoritative digital edition covering Marketing & Growth."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Marketing Psychology Decoded by Suvodip Sen.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Marketing & Growth",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-fixing-leadership-second-edition",
+    "slug": "fixing-leadership-second-edition",
+    "title": "Fixing Leadership : Second Edition",
+    "subtitle": "Careers & Leadership • Zebra Learn Master Edition",
+    "author": "Stan Peake",
+    "description": "The definitive guide on Fixing Leadership : Second Edition by Stan Peake. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Careers & Leadership",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/fixing-leadership-second-edition.jpg",
+    "sampleExcerpt": [
+      "Fixing Leadership : Second Edition by Stan Peake - Zebra Learn New Book.",
+      "Authoritative digital edition covering Careers & Leadership."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Fixing Leadership : Second Edition by Stan Peake.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Careers & Leadership",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-bookpreneur",
+    "slug": "the-bookpreneur",
+    "title": "The BookPreneur",
+    "subtitle": "Business & Startups • Zebra Learn Master Edition",
+    "author": "Anurag Sundarka",
+    "description": "The definitive guide on The BookPreneur by Anurag Sundarka. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Business & Startups",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-bookpreneur.jpg",
+    "sampleExcerpt": [
+      "The BookPreneur by Anurag Sundarka - Zebra Learn New Book.",
+      "Authoritative digital edition covering Business & Startups."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The BookPreneur by Anurag Sundarka.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Business & Startups",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-generative-ai-360",
+    "slug": "generative-ai-360",
+    "title": "Generative AI 360°",
+    "subtitle": "AI, LLMs & Data Science • Zebra Learn Master Edition",
+    "author": "Hitesh Motwani",
+    "description": "The definitive guide on Generative AI 360° by Hitesh Motwani. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "AI, LLMs & Data Science",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/generative-ai-360.jpg",
+    "sampleExcerpt": [
+      "Generative AI 360° by Hitesh Motwani - Zebra Learn New Book.",
+      "Authoritative digital edition covering AI, LLMs & Data Science."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Generative AI 360° by Hitesh Motwani.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "AI, LLMs & Data Science",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-behavioral-finance-way",
+    "slug": "the-behavioral-finance-way",
+    "title": "The Behavioral Finance Way",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Meghna Dangi",
+    "description": "The definitive guide on The Behavioral Finance Way by Meghna Dangi. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-behavioral-finance-way.jpg",
+    "sampleExcerpt": [
+      "The Behavioral Finance Way by Meghna Dangi - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The Behavioral Finance Way by Meghna Dangi.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-marketing-made-easy",
+    "slug": "marketing-made-easy",
+    "title": "Marketing Made Easy",
+    "subtitle": "Marketing & Growth • Zebra Learn Master Edition",
+    "author": "Deb Gooha",
+    "description": "The definitive guide on Marketing Made Easy by Deb Gooha. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Marketing & Growth",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/marketing-made-easy.jpg",
+    "sampleExcerpt": [
+      "Marketing Made Easy by Deb Gooha - Zebra Learn New Book.",
+      "Authoritative digital edition covering Marketing & Growth."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Marketing Made Easy by Deb Gooha.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Marketing & Growth",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-brandology",
+    "slug": "brandology",
+    "title": "Brandology",
+    "subtitle": "Marketing & Growth • Zebra Learn Master Edition",
+    "author": "Reena Jagtap",
+    "description": "The definitive guide on Brandology by Reena Jagtap. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Marketing & Growth",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/brandology.jpg",
+    "sampleExcerpt": [
+      "Brandology by Reena Jagtap - Zebra Learn New Book.",
+      "Authoritative digital edition covering Marketing & Growth."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Brandology by Reena Jagtap.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Marketing & Growth",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-martech-playbook",
+    "slug": "the-martech-playbook",
+    "title": "The MarTech Playbook",
+    "subtitle": "Marketing & Growth • Zebra Learn Master Edition",
+    "author": "Ashish Bajaj",
+    "description": "The definitive guide on The MarTech Playbook by Ashish Bajaj. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Marketing & Growth",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-martech-playbook.jpg",
+    "sampleExcerpt": [
+      "The MarTech Playbook by Ashish Bajaj - Zebra Learn New Book.",
+      "Authoritative digital edition covering Marketing & Growth."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The MarTech Playbook by Ashish Bajaj.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Marketing & Growth",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-banking-career-playbook",
+    "slug": "the-banking-career-playbook",
+    "title": "The Banking Career Playbook",
+    "subtitle": "Careers & Leadership • Zebra Learn Master Edition",
+    "author": "Mrutyunjay Mahapatra",
+    "description": "The definitive guide on The Banking Career Playbook by Mrutyunjay Mahapatra. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Careers & Leadership",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-banking-career-playbook.jpg",
+    "sampleExcerpt": [
+      "The Banking Career Playbook by Mrutyunjay Mahapatra - Zebra Learn New Book.",
+      "Authoritative digital edition covering Careers & Leadership."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The Banking Career Playbook by Mrutyunjay Mahapatra.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Careers & Leadership",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-break-the-career-code",
+    "slug": "break-the-career-code",
+    "title": "Break the Career Code",
+    "subtitle": "Careers & Leadership • Zebra Learn Master Edition",
+    "author": "Vibha Kagzi",
+    "description": "The definitive guide on Break the Career Code by Vibha Kagzi. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Careers & Leadership",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/break-the-career-code.jpg",
+    "sampleExcerpt": [
+      "Break the Career Code by Vibha Kagzi - Zebra Learn New Book.",
+      "Authoritative digital edition covering Careers & Leadership."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Break the Career Code by Vibha Kagzi.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Careers & Leadership",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-cfo-playbook",
+    "slug": "the-cfo-playbook",
+    "title": "The CFO Playbook",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Sambasivan G",
+    "description": "The definitive guide on The CFO Playbook by Sambasivan G. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-cfo-playbook.jpg",
+    "sampleExcerpt": [
+      "The CFO Playbook by Sambasivan G - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The CFO Playbook by Sambasivan G.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-anatomy-of-ma",
+    "slug": "the-anatomy-of-ma",
+    "title": "The Anatomy of M&A",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Parthasarathy VS & Asha Prasuna",
+    "description": "The definitive guide on The Anatomy of M&A by Parthasarathy VS & Asha Prasuna. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-anatomy-of-ma.jpg",
+    "sampleExcerpt": [
+      "The Anatomy of M&A by Parthasarathy VS & Asha Prasuna - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The Anatomy of M&A by Parthasarathy VS & Asha Prasuna.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-financial-management-handbook",
+    "slug": "financial-management-handbook",
+    "title": "Financial Management Handbook",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Raja Natarajan",
+    "description": "The definitive guide on Financial Management Handbook by Raja Natarajan. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/financial-management-handbook.jpg",
+    "sampleExcerpt": [
+      "Financial Management Handbook by Raja Natarajan - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Financial Management Handbook by Raja Natarajan.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-mindful-business-growth",
+    "slug": "mindful-business-growth",
+    "title": "Mindful Business Growth",
+    "subtitle": "Business & Strategy • Zebra Learn Master Edition",
+    "author": "Rajesh Srinivasan",
+    "description": "The definitive guide on Mindful Business Growth by Rajesh Srinivasan. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Business & Strategy",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/mindful-business-growth.jpg",
+    "sampleExcerpt": [
+      "Mindful Business Growth by Rajesh Srinivasan - Zebra Learn New Book.",
+      "Authoritative digital edition covering Business & Strategy."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Mindful Business Growth by Rajesh Srinivasan.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Business & Strategy",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-practical-excel-handbook",
+    "slug": "the-practical-excel-handbook",
+    "title": "The Practical Excel Handbook",
+    "subtitle": "FinTech & Trading • Zebra Learn Master Edition",
+    "author": "Zebra Learn",
+    "description": "The definitive guide on The Practical Excel Handbook by Zebra Learn. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "FinTech & Trading",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-practical-excel-handbook.jpg",
+    "sampleExcerpt": [
+      "The Practical Excel Handbook by Zebra Learn - Zebra Learn New Book.",
+      "Authoritative digital edition covering FinTech & Trading."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The Practical Excel Handbook by Zebra Learn.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "FinTech & Trading",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-the-coo-playbook",
+    "slug": "the-coo-playbook",
+    "title": "The COO Playbook",
+    "subtitle": "Business & Strategy • Zebra Learn Master Edition",
+    "author": "Manav Mathur",
+    "description": "The definitive guide on The COO Playbook by Manav Mathur. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Business & Strategy",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/the-coo-playbook.jpg",
+    "sampleExcerpt": [
+      "The COO Playbook by Manav Mathur - Zebra Learn New Book.",
+      "Authoritative digital edition covering Business & Strategy."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "The COO Playbook by Manav Mathur.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Business & Strategy",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
+  },
+  {
+    "id": "book-data-storytelling-playbook",
+    "slug": "data-storytelling-playbook",
+    "title": "Data Storytelling Playbook",
+    "subtitle": "Business & Strategy • Zebra Learn Master Edition",
+    "author": "Asif Masani",
+    "description": "The definitive guide on Data Storytelling Playbook by Asif Masani. Master essential strategies, proven frameworks, and real-world case studies from India's most successful ventures.",
+    "priceInInr": 199.0,
+    "originalPriceInInr": 990.0,
+    "pages": 280,
+    "format": "PDF (DRM-Free)",
+    "fileSize": "45.0 MB",
+    "category": "Business & Strategy",
+    "badge": "Zebra Learn Master Edition",
+    "rating": 5.0,
+    "reviewCount": 380,
+    "readingTime": "6.5 hrs",
+    "edition": "2026 Verified Edition",
+    "coverImage": "/covers/data-storytelling-playbook.jpg",
+    "sampleExcerpt": [
+      "Data Storytelling Playbook by Asif Masani - Zebra Learn New Book.",
+      "Authoritative digital edition covering Business & Strategy."
+    ],
+    "tableOfContents": [
+      "Part 1: Foundations & Methodologies",
+      "Part 2: Execution Workflows & Templates",
+      "Part 3: Case Studies & Industry Breakdown"
+    ],
+    "fileName": "Data Storytelling Playbook by Asif Masani.pdf",
+    "sha256": "verified_digital_edition",
+    "sourceTelegram": "Zebra Learn Book & Course",
+    "telegramMessageId": 114,
+    "telegramLink": "https://web.telegram.org/k/#-2398249208",
+    "publisher": "Zebra Learn",
+    "language": "English",
+    "tags": [
+      "Zebra Learn",
+      "Business & Strategy",
+      "Verified Edition"
+    ],
+    "status": "PUBLISHED",
+    "importedAt": "2026-11-07T19:30:00Z"
   }
 ]
