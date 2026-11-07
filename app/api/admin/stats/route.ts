@@ -25,6 +25,12 @@ export async function GET() {
     const publishedCount = books.filter(b => b.status === 'PUBLISHED').length;
     const draftCount = books.filter(b => b.status === 'DRAFT').length;
 
+    const typeBreakdown: Record<string, number> = {};
+    for (const b of books) {
+      const t = b.primaryResourceType || 'course_material';
+      typeBreakdown[t] = (typeBreakdown[t] || 0) + 1;
+    }
+
     // Source groups configured
     const configuredSources = [
       { id: "-1003085497339", name: "DollarPremium Answer 2", type: "Supergroup / Storage", status: "Connected", indexedPdfs: 4210 },
@@ -53,7 +59,8 @@ export async function GET() {
         storageBytes: totalStorageBytes,
         storageMb: Math.round((totalStorageBytes / (1024 * 1024)) * 100) / 100,
         storageFiles: totalStorageFiles,
-        metadataCompletionRate: "94.8%"
+        metadataCompletionRate: "94.8%",
+        typeBreakdown
       }
     };
 

@@ -23,6 +23,11 @@ export interface Book {
   tableOfContents: string[];
   fileName: string;
   // Metadata & Telegram Publishing extensions:
+  primaryResourceType?: string;
+  coverStatus?: string;
+  isCustomGenerated?: boolean;
+  identificationConfidence?: number;
+  topic?: string;
   sha256?: string;
   sourceTelegram?: string;
   telegramMessageId?: number;

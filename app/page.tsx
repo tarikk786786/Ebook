@@ -32,9 +32,11 @@ import {
 
 type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
 type SortOption = 'CHEAPEST' | 'POPULAR' | 'RATING' | 'TITLE';
+type ResourceTypeFilter = 'ALL' | 'BOOKS' | 'course_material' | 'technical_manual' | 'template' | 'NOTES' | 'exam_preparation' | 'research_paper';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedResourceType, setSelectedResourceType] = useState<ResourceTypeFilter>('ALL');
   const [selectedPriceTier, setSelectedPriceTier] = useState<PriceTier>('ALL');
   const [sortBy, setSortBy] = useState<SortOption>('CHEAPEST');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -63,6 +65,18 @@ export default function HomePage() {
       if (selectedPriceTier === 'UNDER_49' && book.priceInInr > 49) return false;
       if (selectedPriceTier === 'UNDER_99' && book.priceInInr > 99) return false;
       if (selectedPriceTier === 'PREMIUM' && book.priceInInr < 100) return false;
+
+      // Resource Type filter
+      if (selectedResourceType !== 'ALL') {
+        const bType = book.primaryResourceType || 'course_material';
+        if (selectedResourceType === 'BOOKS') {
+          if (!['published_ebook', 'textbook', 'professional_book'].includes(bType)) return false;
+        } else if (selectedResourceType === 'NOTES') {
+          if (!['lecture_notes', 'study_notes'].includes(bType)) return false;
+        } else if (bType !== selectedResourceType) {
+          return false;
+        }
+      }
 
       // Category filter
       const isZebraMatch = 
@@ -107,12 +121,12 @@ export default function HomePage() {
     });
 
     return result;
-  }, [selectedCategory, selectedPriceTier, sortBy, searchQuery]);
+  }, [selectedCategory, selectedResourceType, selectedPriceTier, sortBy, searchQuery]);
 
   // Reset to page 1 on filter/search change
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedCategory, selectedPriceTier, sortBy, searchQuery]);
+  }, [selectedCategory, selectedResourceType, selectedPriceTier, sortBy, searchQuery]);
 
   const totalPages = Math.max(1, Math.ceil(filteredBooks.length / BOOKS_PER_PAGE));
   const currentBooks = useMemo(() => {
@@ -458,6 +472,91 @@ export default function HomePage() {
                   <option value="TITLE">Title A–Z</option>
                 </select>
               </div>
+            </div>
+
+            {/* Resource Type Multi-Format Filter Tabs */}
+            <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 text-xs">
+              <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold mr-1 shrink-0">Resource Type:</span>
+              <button
+                onClick={() => setSelectedResourceType('ALL')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'ALL'
+                    ? 'bg-slate-200 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                All Types
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('BOOKS')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'BOOKS'
+                    ? 'bg-emerald-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                📚 Published Books
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('course_material')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'course_material'
+                    ? 'bg-cyan-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                🎓 Course Materials
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('technical_manual')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'technical_manual'
+                    ? 'bg-purple-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                ⚡ Technical Manuals
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('template')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'template'
+                    ? 'bg-pink-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                📋 Templates & Checklists
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('NOTES')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'NOTES'
+                    ? 'bg-orange-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                📝 Lecture & Study Notes
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('exam_preparation')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'exam_preparation'
+                    ? 'bg-rose-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                🎯 Exam Preparation
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('research_paper')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'research_paper'
+                    ? 'bg-teal-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                🔬 Research Papers
+              </button>
             </div>
 
             {/* Category Filter Tabs */}

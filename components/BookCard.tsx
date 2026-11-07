@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/catalog';
-import { BookOpen, Star, Clock, FileText, Zap, Eye, Download, Tag, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Star, Clock, FileText, Zap, Eye, Download, Tag, CheckCircle2, Bookmark, Layers, Cpu, FileSpreadsheet } from 'lucide-react';
 
 interface BookCardProps {
   book: Book;
@@ -28,14 +28,32 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
     ? `₹${book.originalPriceInInr}`
     : `$${(book.originalPriceInInr / 85).toFixed(2)}`;
 
-  const isStealDeal = book.priceInInr <= 49;
+  // Determine human-readable resource type & visual theme
+  const resType = book.primaryResourceType || 'course_material';
+
+  const typeConfig: Record<string, { label: string; badgeCls: string; icon: any }> = {
+    published_ebook: { label: 'Published E-Book', badgeCls: 'bg-emerald-950/90 text-emerald-300 border-emerald-500/50', icon: BookOpen },
+    textbook: { label: 'Textbook', badgeCls: 'bg-amber-950/90 text-amber-300 border-amber-500/50', icon: Bookmark },
+    professional_book: { label: 'Professional Book', badgeCls: 'bg-blue-950/90 text-blue-300 border-blue-500/50', icon: BookOpen },
+    course_material: { label: 'Course Material', badgeCls: 'bg-cyan-950/90 text-cyan-300 border-cyan-500/50', icon: Layers },
+    lecture_notes: { label: 'Lecture Notes', badgeCls: 'bg-orange-950/90 text-orange-300 border-orange-500/50', icon: FileText },
+    study_notes: { label: 'Study Notes', badgeCls: 'bg-orange-950/90 text-orange-300 border-orange-500/50', icon: FileText },
+    exam_preparation: { label: 'Exam Prep', badgeCls: 'bg-rose-950/90 text-rose-300 border-rose-500/50', icon: FileText },
+    technical_manual: { label: 'Technical Manual', badgeCls: 'bg-purple-950/90 text-purple-300 border-purple-500/50', icon: Cpu },
+    cheat_sheet: { label: 'Cheat Sheet', badgeCls: 'bg-teal-950/90 text-teal-300 border-teal-500/50', icon: Zap },
+    template: { label: 'Template / Form', badgeCls: 'bg-pink-950/90 text-pink-300 border-pink-500/50', icon: FileSpreadsheet },
+    research_paper: { label: 'Research Paper', badgeCls: 'bg-teal-950/90 text-teal-300 border-teal-500/50', icon: FileText },
+  };
+
+  const currentType = typeConfig[resType] || { label: 'Verified Document', badgeCls: 'bg-slate-900 text-slate-300 border-slate-700', icon: FileText };
+  const TypeIcon = currentType.icon;
 
   return (
     <div className="group relative bg-[#111724] border border-slate-800/90 hover:border-emerald-500/60 rounded-2xl p-4 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/10 flex flex-col justify-between">
       {/* 3D Vertical Book Jacket Mockup */}
       <Link href={`/book/${book.slug}`} className="block">
         <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-slate-900 shadow-xl mb-4 group-hover:-translate-y-1 transition-transform duration-300">
-          {/* Book Cover Image with Fallback */}
+          {/* Cover Image with Fallback */}
           {!imgError ? (
             <img
               src={book.coverImage}
@@ -47,8 +65,8 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 flex flex-col justify-between p-4 border border-slate-700/50">
               <div className="flex items-center space-x-1.5 text-emerald-400">
-                <BookOpen className="w-5 h-5" />
-                <span className="text-[10px] font-mono uppercase font-bold tracking-wider">Universal Vault</span>
+                <TypeIcon className="w-5 h-5" />
+                <span className="text-[10px] font-mono uppercase font-bold tracking-wider">{currentType.label}</span>
               </div>
               <div className="my-auto">
                 <h5 className="text-sm font-black text-white line-clamp-3 leading-snug">{book.title}</h5>
@@ -66,31 +84,35 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17]/90 via-transparent to-black/20 pointer-events-none" />
 
           {/* Floating Badges */}
-          <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
-            {isStealDeal ? (
-              <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-emerald-500 text-slate-950 rounded-md shadow-md flex items-center space-x-1">
-                <span>⚡ {displayPrice} Deal</span>
-              </span>
-            ) : (
-              <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-emerald-300 border border-emerald-500/40 rounded-md">
-                {book.category}
-              </span>
-            )}
+          <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none gap-1">
+            <span className={`px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider backdrop-blur-md border rounded-md flex items-center space-x-1 ${currentType.badgeCls}`}>
+              <TypeIcon className="w-2.5 h-2.5" />
+              <span>{currentType.label}</span>
+            </span>
             
-            <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-950 rounded-md shadow-md">
+            <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-950 rounded-md shadow-md shrink-0">
               -{discountPercent}%
             </span>
           </div>
 
-          {/* Overlay Book Spine Title Preview */}
+          {/* Honest Thumbnail Indicator */}
+          {book.isCustomGenerated && (
+            <div className="absolute top-8 left-2.5 pointer-events-none">
+              <span className="px-1.5 py-0.5 text-[8px] font-mono uppercase bg-slate-950/80 text-slate-400 border border-slate-700/80 rounded">
+                Custom Thumbnail
+              </span>
+            </div>
+          )}
+
+          {/* Overlay Title Preview */}
           <div className="absolute bottom-2.5 left-3 right-3 text-left pointer-events-none">
-            <span className="text-[10px] text-emerald-400 font-mono block font-semibold">{book.edition}</span>
+            <span className="text-[10px] text-emerald-400 font-mono block font-semibold">{book.category}</span>
             <h4 className="text-sm font-bold text-white line-clamp-1 drop-shadow-md">{book.title}</h4>
           </div>
         </div>
       </Link>
 
-      {/* Book Metadata & Editorial Info */}
+      {/* Resource Metadata & Editorial Info */}
       <div className="flex-1 flex flex-col justify-between space-y-3">
         <div>
           {/* Star Rating & Reading Time */}
@@ -110,7 +132,7 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
             </div>
           </div>
 
-          {/* Book Title & Byline */}
+          {/* Title & Author */}
           <Link href={`/book/${book.slug}`} className="block group">
             <h3 className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors line-clamp-1">
               {book.title}
@@ -124,7 +146,7 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
             {book.description}
           </p>
 
-          {/* Formats & Source Pill */}
+          {/* Specs */}
           <div className="mt-3 flex flex-wrap items-center gap-1.5 text-[10px] font-mono text-slate-400">
             <span className="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
               {book.format}
@@ -133,14 +155,8 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
             <span>{book.pages} Pages</span>
             <span>•</span>
             <span>{book.fileSize}</span>
-            {book.sourceTelegram && (
-              <>
-                <span>•</span>
-                <span className="text-emerald-400/90 truncate max-w-[130px]" title={book.sourceTelegram}>
-                  {book.sourceTelegram}
-                </span>
-              </>
-            )}
+            <span>•</span>
+            <span className="text-emerald-400/90">{book.category}</span>
           </div>
         </div>
 
@@ -158,12 +174,12 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
               </div>
               <span className="text-[10px] text-emerald-300 font-medium flex items-center space-x-1 mt-0.5">
                 <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                <span>Instant UPI QR • DRM-Free</span>
+                <span>Instant UPI QR • Direct Download</span>
               </span>
             </div>
 
             <span className="text-[10px] text-slate-400 text-right leading-tight">
-              Lifetime PDF<br />
+              DRM-Free<br />
               <strong className="text-slate-300 font-mono">Kindle/iPad Ready</strong>
             </span>
           </div>

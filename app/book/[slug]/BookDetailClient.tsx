@@ -194,10 +194,20 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
             {/* Right Column: Complete Book Information & Telegram Provenance (7 Cols) */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs mb-3">
-                  <span>{book.edition}</span>
-                  <span>•</span>
-                  <span>{book.publisher || 'Verified Digital Publication'}</span>
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
+                    {(book.primaryResourceType || 'Resource').replace(/_/g, ' ')}
+                  </span>
+                  {book.publisher && ['published_ebook', 'textbook', 'professional_book'].includes(book.primaryResourceType || '') && (
+                    <span className="px-2.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-mono text-xs">
+                      {book.publisher}
+                    </span>
+                  )}
+                  {book.isCustomGenerated && (
+                    <span className="px-2.5 py-1 rounded-full bg-slate-950 border border-slate-700 text-slate-400 font-mono text-xs">
+                      Honest Custom Thumbnail
+                    </span>
+                  )}
                 </div>
 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
