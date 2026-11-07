@@ -26,7 +26,7 @@ const FAQS: FaqItem[] = [
     icon: Shield,
     question: 'How do encrypted webhooks and API calls work?',
     answer:
-      'When you complete a UPI payment, the automated payment rail signs the HTTP notification using a timing-safe HMAC-SHA256 signature (X-FamGateway-Signature). The Vercel Serverless edge function verifies the authenticity before generating an encrypted single-use file stream token. Intermediaries or proxy snoops cannot forge payment confirmations.',
+      'When you complete a UPI payment, the automated payment rail signs the HTTP notification using a timing-safe HMAC-SHA256 signature. The Vercel Serverless edge function verifies the authenticity before generating an encrypted single-use file stream token. Intermediaries or proxy snoops cannot forge payment confirmations.',
   },
   {
     icon: RefreshCcw,

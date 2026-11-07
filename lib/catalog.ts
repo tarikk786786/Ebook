@@ -26,6 +26,7 @@ export interface Book {
   sha256?: string;
   sourceTelegram?: string;
   telegramMessageId?: number;
+  telegramLink?: string;
   publicationYear?: string;
   publisher?: string;
   isbn?: string;
@@ -450,6 +451,10 @@ export const BOOK_CATALOG: Book[] = compileBookCatalog();
 
 export function getBookById(id: string): Book | undefined {
   return BOOK_CATALOG.find((b) => b.id === id);
+}
+
+export function getBookBySlug(slug: string): Book | undefined {
+  return BOOK_CATALOG.find((b) => b.slug === slug || b.id === `book-${slug}`);
 }
 
 export function getBookCatalog(): Book[] {

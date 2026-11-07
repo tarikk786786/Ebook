@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'AnonTrove | Zero-Trace Privacy-First Digital Bookshelf',
-  description: 'Instant, non-custodial eBook & PDF downloads with 0% fee FamGateway UPI payments and zero PII tracking.',
+  description: 'Instant, non-custodial eBook & PDF downloads with 0% fee Direct UPI payments and zero PII tracking.',
   robots: 'index, follow',
 };
 

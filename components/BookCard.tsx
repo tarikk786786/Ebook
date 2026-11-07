@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Book } from '@/lib/catalog';
-import { BookOpen, Star, Clock, FileText, Zap, Eye, Download } from 'lucide-react';
+import { BookOpen, Star, Clock, FileText, Zap, Eye, Download, ExternalLink } from 'lucide-react';
 
 interface BookCardProps {
   book: Book;

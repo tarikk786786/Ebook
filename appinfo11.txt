@@ -44,7 +44,8 @@ PAYMENT_REDIRECT_URL=https://anon-trove-ebooks.vercel.app/success
 
 # Official GitHub & Vercel Deployments:
 GITHUB_REPO_URL=https://github.com/tarikk786786/Ebook.git
-VERCEL_PRODUCTION_URL=https://anon-trove-ebooks.vercel.app
+VERCEL_PRODUCTION_URL=https://ebook-sandy-chi.vercel.app
+VERCEL_ALTERNATIVE_URL=https://anon-trove-ebooks.vercel.app
 
 # Store Branding
 NEXT_PUBLIC_STORE_NAME=AnonTrove
