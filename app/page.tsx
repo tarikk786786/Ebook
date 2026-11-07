@@ -38,7 +38,7 @@ import {
 
 type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
 type SortOption = 'CHEAPEST' | 'POPULAR' | 'RATING' | 'TITLE';
-type ResourceTypeFilter = 'ALL' | 'BOOKS' | 'course_material' | 'technical_manual' | 'template' | 'NOTES' | 'exam_preparation' | 'research_paper';
+type ResourceTypeFilter = 'ALL' | 'BOOKS' | 'NOTES' | 'code_template' | 'workbook' | 'culinary_guide' | 'technical_manual' | 'course_material';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -211,7 +211,7 @@ export default function HomePage() {
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Independent Digital Ebook Commerce</span>
               <span className="text-slate-600">•</span>
-              <span className="text-amber-300 font-semibold">1,668+ Verified Digital Titles Starting at ₹29</span>
+              <span className="text-amber-300 font-semibold">2,700+ Verified Digital Titles Starting at ₹29</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
@@ -406,7 +406,7 @@ export default function HomePage() {
               <div className="text-3xl font-black text-white font-mono my-1">
                 ₹399.00
               </div>
-              <div className="text-[11px] text-emerald-400 font-medium mb-3">Multi-Gateway • Instant Settlement</div>
+              <div className="text-[11px] text-emerald-400 font-medium mb-3">FamPay Direct UPI • Instant Settlement</div>
 
               <button
                 onClick={() => setBuyingBook(masterBundleBook)}
@@ -597,14 +597,44 @@ export default function HomePage() {
                 📚 Published Books
               </button>
               <button
-                onClick={() => setSelectedResourceType('course_material')}
+                onClick={() => setSelectedResourceType('NOTES')}
                 className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'course_material'
-                    ? 'bg-cyan-500 text-slate-950 font-bold'
+                  selectedResourceType === 'NOTES'
+                    ? 'bg-amber-500 text-slate-950 font-bold'
                     : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
                 }`}
               >
-                🎓 Course Materials
+                📝 Study & Exam Notes
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('code_template')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'code_template'
+                    ? 'bg-sky-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                💻 Code & Dev Assets
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('workbook')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'workbook'
+                    ? 'bg-pink-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                📋 Workbooks & Checklists
+              </button>
+              <button
+                onClick={() => setSelectedResourceType('culinary_guide')}
+                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  selectedResourceType === 'culinary_guide'
+                    ? 'bg-orange-500 text-slate-950 font-bold'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
+                }`}
+              >
+                🍳 Culinary Guides
               </button>
               <button
                 onClick={() => setSelectedResourceType('technical_manual')}
@@ -615,46 +645,6 @@ export default function HomePage() {
                 }`}
               >
                 ⚡ Technical Manuals
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('template')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'template'
-                    ? 'bg-pink-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                📋 Templates & Checklists
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('NOTES')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'NOTES'
-                    ? 'bg-orange-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                📝 Lecture & Study Notes
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('exam_preparation')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'exam_preparation'
-                    ? 'bg-rose-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                🎯 Exam Preparation
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('research_paper')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'research_paper'
-                    ? 'bg-teal-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                🔬 Research Papers
               </button>
             </div>
 

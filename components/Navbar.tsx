@@ -38,7 +38,7 @@ export default function Navbar({
       {/* Top Value Banner */}
       <div className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 text-slate-950 px-4 py-1 text-center text-[11px] font-bold tracking-wide flex items-center justify-center space-x-2">
         <Sparkles className="w-3 h-3 text-amber-300 animate-pulse" />
-        <span>PREMIUM DIGITAL COMMERCE: 1,668+ Verified Digital Titles Starting at ₹29 • Instant Multi-Item Checkout</span>
+        <span>PREMIUM DIGITAL COMMERCE: 2,700+ Verified Digital Titles Starting at ₹29 • Instant FamPay UPI Checkout</span>
         <Tag className="w-3 h-3 text-slate-900" />
       </div>
 
@@ -71,7 +71,7 @@ export default function Navbar({
               <input
                 ref={searchInputRef}
                 type="text"
-                placeholder="Search 1,668+ titles by name, author, topic (e.g. Linux, Trading, Python, Notes)..."
+                placeholder="Search 2,700+ titles by name, author, topic (e.g. Linux, Trading, Python, Notes)..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
                 className="w-full bg-slate-900/90 border border-slate-800 focus:border-emerald-500/60 rounded-xl pl-9 pr-12 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-emerald-500/30 transition-all shadow-inner"

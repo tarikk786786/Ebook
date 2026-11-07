@@ -295,41 +295,33 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                 </p>
               </div>
 
-              {/* Telegram Source & Security Provenance Box */}
+              {/* Digital Edition & Cryptographic Integrity Box */}
               <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
                     <ShieldCheck className="w-4 h-4" />
-                    <span>Telegram Provenance & File Integrity</span>
+                    <span>Digital Edition & Integrity Specifications</span>
                   </div>
-                  {book.telegramLink && (
-                    <a
-                      href={book.telegramLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1 px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] font-mono text-emerald-400 transition-colors"
-                    >
-                      <span>Open in Telegram</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  )}
+                  <span className="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-mono font-bold">
+                    VERIFIED ASSET
+                  </span>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
                   <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-slate-500 font-mono block uppercase">Source Channel</span>
-                    <strong className="text-slate-200 line-clamp-1">{book.sourceTelegram || 'Telegram Vault'}</strong>
+                    <span className="text-[10px] text-slate-500 font-mono block uppercase">License</span>
+                    <strong className="text-slate-200">DRM-Free Copy</strong>
                   </div>
                   <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-slate-500 font-mono block uppercase">Telegram Msg ID</span>
-                    <strong className="text-slate-200 font-mono">#{book.telegramMessageId || 'Direct'}</strong>
+                    <span className="text-[10px] text-slate-500 font-mono block uppercase">Delivery Rail</span>
+                    <strong className="text-slate-200 font-mono">FamPay UPI (0% Fee)</strong>
                   </div>
                   <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
                     <span className="text-[10px] text-slate-500 font-mono block uppercase">Format & Size</span>
                     <strong className="text-slate-200 font-mono">{book.format} • {book.fileSize}</strong>
                   </div>
                   <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-slate-500 font-mono block uppercase">Page Count</span>
+                    <span className="text-[10px] text-slate-500 font-mono block uppercase">Volume Length</span>
                     <strong className="text-slate-200 font-mono">{book.pages} Pages</strong>
                   </div>
                 </div>

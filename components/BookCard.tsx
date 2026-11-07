@@ -61,6 +61,9 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
     cheat_sheet: { label: 'Cheat Sheet', badgeCls: 'bg-teal-950/90 text-teal-300 border-teal-500/50', icon: Zap },
     template: { label: 'Template / Form', badgeCls: 'bg-pink-950/90 text-pink-300 border-pink-500/50', icon: FileSpreadsheet },
     research_paper: { label: 'Research Paper', badgeCls: 'bg-teal-950/90 text-teal-300 border-teal-500/50', icon: FileText },
+    culinary_guide: { label: 'MasterClass Culinary', badgeCls: 'bg-orange-950/90 text-orange-300 border-orange-500/50', icon: Bookmark },
+    code_template: { label: 'Code & Dev Assets', badgeCls: 'bg-sky-950/90 text-sky-300 border-sky-500/50', icon: Cpu },
+    workbook: { label: 'Action Workbook', badgeCls: 'bg-pink-950/90 text-pink-300 border-pink-500/50', icon: FileSpreadsheet },
   };
 
   const currentType = typeConfig[resType] || { label: 'Verified Document', badgeCls: 'bg-slate-900 text-slate-300 border-slate-700', icon: FileText };
