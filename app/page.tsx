@@ -39,6 +39,7 @@ export default function HomePage() {
 
   const filteredBooks = useMemo(() => {
     return BOOK_CATALOG.filter((book) => {
+      if (book.status === 'DRAFT') return false;
       if (book.id === 'book-master-bundle') return false; // Featured in top banner
       const matchesCategory = selectedCategory === 'All' || book.category === selectedCategory;
       const matchesSearch = searchQuery.trim() === '' || 

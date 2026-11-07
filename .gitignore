@@ -33,3 +33,7 @@ Thumbs.db
 
 .vercel
 .env*
+
+# Storage and large binaries
+private_storage/
+data/collector_state.json

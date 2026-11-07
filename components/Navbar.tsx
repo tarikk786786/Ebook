@@ -57,6 +57,16 @@ export default function Navbar({
 
         {/* Live Badges & Currency Switcher */}
         <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
+          {/* Live Admin Dashboard */}
+          <a
+            href="/admin"
+            className="flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-emerald-900/40 border border-emerald-700/60 text-xs text-emerald-300 hover:bg-emerald-800/50 hover:text-white transition-colors"
+            title="Open Telegram Ebook Intelligence & Import Dashboard"
+          >
+            <Shield className="h-3.5 w-3.5 text-emerald-400" />
+            <span className="font-medium text-[11px] sm:text-xs">Admin Vault</span>
+          </a>
+
           {/* Currency Toggle */}
           {onToggleCurrency && (
             <button
