@@ -31,6 +31,8 @@ export default function HomePage() {
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
   const [previewBook, setPreviewBook] = useState<Book | null>(null);
   const [buyingBook, setBuyingBook] = useState<Book | null>(null);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const BOOKS_PER_PAGE = 24;
 
   const categories = useMemo(() => {
     const cats = Array.from(new Set(BOOK_CATALOG.map((b) => b.category))).filter(Boolean);
@@ -50,6 +52,26 @@ export default function HomePage() {
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
+
+  // Reset to page 1 on filter/search change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredBooks.length / BOOKS_PER_PAGE));
+  const currentBooks = useMemo(() => {
+    const start = (currentPage - 1) * BOOKS_PER_PAGE;
+    return filteredBooks.slice(start, start + BOOKS_PER_PAGE);
+  }, [filteredBooks, currentPage]);
+
+  const handlePageChange = (p: number) => {
+    const target = Math.max(1, Math.min(p, totalPages));
+    setCurrentPage(target);
+    const shelfEl = document.getElementById('catalog-shelf');
+    if (shelfEl) {
+      shelfEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   // Master Bundle Object
   const masterBundleBook: Book = BOOK_CATALOG.find(b => b.id === 'book-master-bundle') || BOOK_CATALOG[0];
@@ -161,12 +183,19 @@ export default function HomePage() {
         </section>
 
         {/* Catalog Shelf Section */}
-        <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="catalog-shelf" className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter & Mobile Search Bar */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-              <h2 className="text-2xl font-bold text-white tracking-tight">Browse Digital Bookshelf</h2>
-              <p className="text-xs text-slate-400 mt-1">Select any eBook to read sample chapters or acquire instantly via UPI</p>
+              <div className="flex items-center space-x-2">
+                <h2 className="text-2xl font-bold text-white tracking-tight">Browse Digital Bookshelf</h2>
+                <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono font-semibold text-emerald-400">
+                  {filteredBooks.length.toLocaleString()} Titles
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 mt-1">
+                Showing {filteredBooks.length > 0 ? (currentPage - 1) * BOOKS_PER_PAGE + 1 : 0}–{Math.min(currentPage * BOOKS_PER_PAGE, filteredBooks.length)} of {filteredBooks.length.toLocaleString()} e-books
+              </p>
             </div>
 
             {/* Category Filter Tabs */}
@@ -187,19 +216,78 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* 3D Vertical Book Cards Grid */}
-          {filteredBooks.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredBooks.map((book) => (
-                <BookCard
-                  key={book.id}
-                  book={book}
-                  currency={currency}
-                  onSelectBuy={(b) => setBuyingBook(b)}
-                  onSelectPreview={(b) => setPreviewBook(b)}
-                />
-              ))}
-            </div>
+          {/* 3D Vertical Book Cards Grid (Paginated 24 per page) */}
+          {currentBooks.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {currentBooks.map((book) => (
+                  <BookCard
+                    key={book.id}
+                    book={book}
+                    currency={currency}
+                    onSelectBuy={(b) => setBuyingBook(b)}
+                    onSelectPreview={(b) => setPreviewBook(b)}
+                  />
+                ))}
+              </div>
+
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800/80 pt-6">
+                  <p className="text-xs text-slate-400 font-mono">
+                    Page <span className="text-white font-bold">{currentPage}</span> of{' '}
+                    <span className="text-white font-bold">{totalPages}</span>
+                  </p>
+
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={() => handlePageChange(currentPage - 1)}
+                      disabled={currentPage <= 1}
+                      className="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                    >
+                      ◀ Previous
+                    </button>
+
+                    {/* Page quick jumps */}
+                    <div className="flex items-center space-x-1">
+                      {Array.from({ length: Math.min(5, totalPages) }, (_, idx) => {
+                        let pageNum = currentPage;
+                        if (currentPage <= 3) {
+                          pageNum = idx + 1;
+                        } else if (currentPage >= totalPages - 2) {
+                          pageNum = totalPages - 4 + idx;
+                        } else {
+                          pageNum = currentPage - 2 + idx;
+                        }
+                        if (pageNum < 1 || pageNum > totalPages) return null;
+
+                        return (
+                          <button
+                            key={pageNum}
+                            onClick={() => handlePageChange(pageNum)}
+                            className={`w-8 h-8 rounded-lg text-xs font-mono font-bold transition-all ${
+                              currentPage === pageNum
+                                ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
+                                : 'bg-slate-900/60 border border-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-800'
+                            }`}
+                          >
+                            {pageNum}
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    <button
+                      onClick={() => handlePageChange(currentPage + 1)}
+                      disabled={currentPage >= totalPages}
+                      className="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                    >
+                      Next ▶
+                    </button>
+                  </div>
+                </div>
+              )}
+            </>
           ) : (
             <div className="py-16 text-center bg-[#121826] border border-slate-800 rounded-2xl">
               <Search className="w-8 h-8 text-slate-500 mx-auto mb-2" />
