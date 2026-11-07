@@ -3,7 +3,23 @@
 import React from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/catalog';
-import { BookOpen, Star, Clock, FileText, Zap, Eye, Download, Tag, CheckCircle2, Bookmark, Layers, Cpu, FileSpreadsheet } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
+import { 
+  BookOpen, 
+  Star, 
+  Clock, 
+  FileText, 
+  Zap, 
+  Eye, 
+  Download, 
+  Tag, 
+  CheckCircle2, 
+  Bookmark, 
+  Layers, 
+  Cpu, 
+  FileSpreadsheet,
+  ShoppingBag
+} from 'lucide-react';
 
 interface BookCardProps {
   book: Book;
@@ -14,6 +30,8 @@ interface BookCardProps {
 
 export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelectPreview }: BookCardProps) {
   const [imgError, setImgError] = React.useState(false);
+  const { addToCart, items } = useCart();
+  const isInCart = items.some((i) => i.bookId === book.id);
 
   const discountPercent = Math.max(
     65,
@@ -94,29 +112,14 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
               -{discountPercent}%
             </span>
           </div>
-
-          {/* Honest Thumbnail Indicator */}
-          {book.isCustomGenerated && (
-            <div className="absolute top-8 left-2.5 pointer-events-none">
-              <span className="px-1.5 py-0.5 text-[8px] font-mono uppercase bg-slate-950/80 text-slate-400 border border-slate-700/80 rounded">
-                Custom Thumbnail
-              </span>
-            </div>
-          )}
-
-          {/* Overlay Title Preview */}
-          <div className="absolute bottom-2.5 left-3 right-3 text-left pointer-events-none">
-            <span className="text-[10px] text-emerald-400 font-mono block font-semibold">{book.category}</span>
-            <h4 className="text-sm font-bold text-white line-clamp-1 drop-shadow-md">{book.title}</h4>
-          </div>
         </div>
       </Link>
 
-      {/* Resource Metadata & Editorial Info */}
-      <div className="flex-1 flex flex-col justify-between space-y-3">
+      {/* Book Metadata Details */}
+      <div className="flex-1 flex flex-col justify-between">
         <div>
-          {/* Star Rating & Reading Time */}
-          <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1.5">
+          {/* Rating and Reading Time */}
+          <div className="flex items-center justify-between text-xs mb-2">
             <div className="flex items-center space-x-1">
               <div className="flex text-amber-400">
                 {[...Array(5)].map((_, i) => (
@@ -161,7 +164,7 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
         </div>
 
         {/* Pricing & Purchase Actions */}
-        <div className="pt-3 border-t border-slate-800/80">
+        <div className="pt-3 border-t border-slate-800/80 mt-3">
           <div className="flex items-baseline justify-between mb-3">
             <div>
               <div className="flex items-baseline space-x-2">
@@ -174,7 +177,7 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
               </div>
               <span className="text-[10px] text-emerald-300 font-medium flex items-center space-x-1 mt-0.5">
                 <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                <span>Instant UPI QR • Direct Download</span>
+                <span>Instant Razorpay & UPI Checkout</span>
               </span>
             </div>
 
@@ -184,22 +187,35 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
             </span>
           </div>
 
-          {/* Action Buttons */}
-          <div className="grid grid-cols-2 gap-2">
+          {/* Action Buttons: Look Inside, Add to Cart, Buy Now */}
+          <div className="grid grid-cols-12 gap-1.5">
             <button
               onClick={() => onSelectPreview(book)}
-              className="w-full py-2 px-2.5 rounded-xl border border-slate-700 bg-slate-800/40 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-medium flex items-center justify-center space-x-1.5 transition-colors"
+              className="col-span-3 py-2 px-1 rounded-xl border border-slate-700 bg-slate-800/50 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-medium flex items-center justify-center transition-colors"
+              title="Look Inside Sample"
             >
               <Eye className="w-3.5 h-3.5" />
-              <span>Look Inside</span>
+            </button>
+
+            <button
+              onClick={() => addToCart(book)}
+              className={`col-span-4 py-2 px-2 rounded-xl border text-xs font-bold flex items-center justify-center space-x-1 transition-all ${
+                isInCart 
+                  ? 'bg-emerald-950/80 border-emerald-500/60 text-emerald-300' 
+                  : 'bg-slate-800/80 hover:bg-slate-800 border-slate-700 text-slate-200'
+              }`}
+              title="Add to Multi-Item Cart"
+            >
+              <ShoppingBag className="w-3.5 h-3.5 text-emerald-400" />
+              <span>{isInCart ? 'In Cart' : '+ Cart'}</span>
             </button>
 
             <button
               onClick={() => onSelectBuy(book)}
-              className="w-full py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center justify-center space-x-1.5 shadow-md shadow-emerald-500/20 transition-all active:scale-[0.98]"
+              className="col-span-5 py-2 px-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center justify-center space-x-1 shadow-md shadow-emerald-500/20 transition-all active:scale-[0.98]"
             >
               <Zap className="w-3.5 h-3.5 fill-current" />
-              <span>Get for {displayPrice}</span>
+              <span>Buy {displayPrice}</span>
             </button>
           </div>
         </div>

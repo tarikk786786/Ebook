@@ -6,6 +6,7 @@ import BookCard from '@/components/BookCard';
 import BookTable from '@/components/BookTable';
 import ReaderModal from '@/components/ReaderModal';
 import PaymentModal from '@/components/PaymentModal';
+import CartDrawer from '@/components/CartDrawer';
 import FaqSection from '@/components/FaqSection';
 import { BOOK_CATALOG, Book } from '@/lib/catalog';
 import { 
@@ -207,20 +208,20 @@ export default function HomePage() {
             {/* Pill */}
             <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-slate-300 mb-6 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Universal Open Knowledge Vault</span>
+              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Independent Digital Ebook Commerce</span>
               <span className="text-slate-600">•</span>
-              <span className="text-amber-300 font-semibold">1,668+ Curated Texts Starting at ₹29</span>
+              <span className="text-amber-300 font-semibold">1,668+ Verified Digital Titles Starting at ₹29</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Universal Open Knowledge Archive.{' '}
+              Independent Digital Ebook Store.{' '}
               <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
-                Accessible to Everyone.
+                Uncompromising Quality.
               </span>
             </h1>
 
             <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Explore over <strong className="text-white">1,668 verified digital texts</strong> across Software Engineering, Financial Markets, Cybersecurity, Artificial Intelligence, Zebra Learn Masterclasses, and Academic Exam Preparation. Direct 0% fee peer-to-peer UPI checkout, 0-second delivery, and lifetime DRM-free access.
+              Discover and own <strong className="text-white">1,668 verified digital books and guides</strong> across Software Engineering, Stock Trading, Cybersecurity, AI & Machine Learning, Zebra Learn, and Exam Prep. Instant Multi-Item Cart, Razorpay & UPI checkout, and in-browser reading.
             </p>
 
             {/* Quick Value Pillars */}
@@ -231,17 +232,17 @@ export default function HomePage() {
                   <span>1,350+ @ ₹29</span>
                 </div>
                 <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Accessible micro-pricing for students & builders.
+                  Unmatched micro-pricing for students & builders.
                 </div>
               </div>
 
               <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
                 <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
                   <Zap className="w-4 h-4 text-emerald-400 fill-emerald-400" />
-                  <span>0% Fee UPI QR</span>
+                  <span>Razorpay + Cashfree</span>
                 </div>
                 <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Scan with GPay, PhonePe or Paytm. No accounts needed.
+                  Cards, UPI QR & NetBanking with 0s delivery.
                 </div>
               </div>
 
@@ -251,17 +252,17 @@ export default function HomePage() {
                   <span>100% DRM-Free</span>
                 </div>
                 <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Genuine PDF files you own forever on all your devices.
+                  Genuine PDF & EPUB files you own forever.
                 </div>
               </div>
 
               <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
                 <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
                   <Tablet className="w-4 h-4 text-cyan-400" />
-                  <span>Universal Format</span>
+                  <span>In-Browser Reader</span>
                 </div>
                 <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Kindle, iPad, Android tablets, Mac & Windows laptops.
+                  Read anywhere with saved cross-device progress.
                 </div>
               </div>
             </div>
@@ -390,7 +391,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 text-xs text-slate-400 pt-1">
                 <span className="flex items-center space-x-1">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Instant 1-Click UPI Download</span>
+                  <span>Instant Razorpay & UPI Download</span>
                 </span>
                 <span className="flex items-center space-x-1">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
@@ -404,7 +405,7 @@ export default function HomePage() {
               <div className="text-3xl font-black text-white font-mono my-1">
                 ₹399.00
               </div>
-              <div className="text-[11px] text-emerald-400 font-medium mb-3">0% Fees • Instant QR Settlement</div>
+              <div className="text-[11px] text-emerald-400 font-medium mb-3">Multi-Gateway • Instant Settlement</div>
 
               <button
                 onClick={() => setBuyingBook(masterBundleBook)}
@@ -424,7 +425,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center space-x-2">
-                  <h2 className="text-2xl font-bold text-white tracking-tight">Browse Knowledge Vault</h2>
+                  <h2 className="text-2xl font-bold text-white tracking-tight">Browse Ebook Catalog</h2>
                   <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono font-semibold text-emerald-400">
                     {filteredBooks.length.toLocaleString()} Titles Available
                   </span>
@@ -775,6 +776,39 @@ export default function HomePage() {
         {/* Universal Guarantee & FAQ */}
         <FaqSection />
       </main>
+
+      {/* Slide-Over Multi-Item Shopping Cart Drawer */}
+      <CartDrawer 
+        onStartCheckout={(orderData, gateway) => {
+          // Launch payment session modal or gateway redirect
+          if (gateway === 'FAMGATEWAY' && orderData.qrUrl) {
+            setBuyingBook({
+              id: orderData.orderId,
+              slug: 'custom-order',
+              title: `Multi-Item Order (${orderData.orderNumber})`,
+              subtitle: 'Encrypted Digital Delivery',
+              author: 'AnonTrove Press',
+              description: 'Multi-item reading cart purchase.',
+              priceInInr: orderData.amountInInr,
+              originalPriceInInr: orderData.amountInInr * 2,
+              pages: 100,
+              format: 'PDF / EPUB',
+              fileSize: 'Bundle',
+              category: 'Digital Bundle',
+              coverImage: '/covers/default-book.jpg',
+              sampleExcerpt: ['Multi-item reading cart purchase verified.'],
+              tableOfContents: ['1. License & Watermark', '2. Digital Volumes'],
+              fileName: 'order.pdf',
+              status: 'PUBLISHED',
+              rating: 5.0,
+              reviewCount: 1,
+              readingTime: '1 hr',
+              edition: '1st Edition',
+              tags: ['Bundle', 'Digital Download'],
+            });
+          }
+        }} 
+      />
 
       {/* Reader Modal (Look Inside) */}
       {previewBook && (

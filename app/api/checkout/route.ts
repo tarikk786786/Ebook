@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getBookById } from '@/lib/catalog';
-import { createFamGatewayOrder } from '@/lib/famgateway';
+import { createUnifiedPaymentOrder } from '@/lib/payments';
+import { CartItem, PaymentGatewayType } from '@/lib/payments/types';
 
 export async function POST(req: NextRequest) {
   try {
@@ -11,56 +12,68 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Malformed JSON body' }, { status: 400 });
     }
 
-    const { bookId } = body;
+    const { bookId, items, customerEmail = 'reader@anontrove.internal', customerPhone, couponCode, gateway = 'FAMGATEWAY' } = body;
 
-    // Strict input pattern validation (prevent injection)
-    if (!bookId || typeof bookId !== 'string' || !/^[a-zA-Z0-9_-]{3,64}$/.test(bookId)) {
-      return NextResponse.json({ error: 'Invalid or missing bookId format' }, { status: 400 });
+    let checkoutItems: CartItem[] = [];
+
+    // Support 1: Single-click Buy Now
+    if (bookId) {
+      if (typeof bookId !== 'string' || !/^[a-zA-Z0-9_-]{3,64}$/.test(bookId)) {
+        return NextResponse.json({ error: 'Invalid or missing bookId format' }, { status: 400 });
+      }
+
+      const book = getBookById(bookId);
+      if (!book) {
+        return NextResponse.json({ error: 'Book does not exist in catalog' }, { status: 404 });
+      }
+
+      checkoutItems = [
+        {
+          bookId: book.id,
+          title: book.title,
+          author: book.author,
+          priceInInr: book.priceInInr,
+          originalPriceInInr: book.originalPriceInInr,
+          format: book.format,
+          coverImage: book.coverImage,
+          fileName: book.fileName,
+          quantity: 1,
+        },
+      ];
+    } 
+    // Support 2: Multi-item Cart
+    else if (Array.isArray(items) && items.length > 0) {
+      checkoutItems = items.map((i: any) => ({
+        bookId: String(i.bookId),
+        title: String(i.title),
+        author: String(i.author || 'Author'),
+        priceInInr: Number(i.priceInInr) || 29,
+        originalPriceInInr: Number(i.originalPriceInInr) || 499,
+        format: String(i.format || 'PDF'),
+        coverImage: String(i.coverImage || ''),
+        fileName: String(i.fileName || 'book.pdf'),
+        quantity: 1,
+      }));
+    } else {
+      return NextResponse.json({ error: 'No items provided for checkout' }, { status: 400 });
     }
 
-    const book = getBookById(bookId);
-    if (!book) {
-      return NextResponse.json({ error: 'Book does not exist in catalog' }, { status: 404 });
-    }
-
-    const host = req.headers.get('host') || 'localhost:3000';
-    const protocol = req.headers.get('x-forwarded-proto') || (host.startsWith('localhost') ? 'http' : 'https');
-    const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || '';
-    const cleanSiteUrl = rawSiteUrl.replace(/^\uFEFF/, '').trim();
-    const siteUrl = cleanSiteUrl.startsWith('http') ? cleanSiteUrl : `${protocol}://${host}`;
-
-    const redirectUrl = `${siteUrl}/success?book_id=${encodeURIComponent(book.id)}`;
-    const webhookUrl = `${siteUrl}/api/webhooks/famgateway`;
-
-    // Create non-custodial FamGateway UPI Order
-    // Zero PII collected: no real phone/email passed to external parties
-    const orderData = await createFamGatewayOrder({
-      amount: book.priceInInr,
-      redirectUrl,
-      webhookUrl,
-      customerName: 'Private Reader',
+    const orderResponse = await createUnifiedPaymentOrder({
+      items: checkoutItems,
+      customerEmail,
+      customerPhone,
+      couponCode,
+      gateway: gateway as PaymentGatewayType,
     });
 
     return NextResponse.json({
       status: 'success',
-      data: {
-        orderId: orderData.order_id,
-        amount: orderData.payable_amount || orderData.amount,
-        qrUrl: orderData.qr_url,
-        checkoutUrl: orderData.checkout_url,
-        upiIntent: orderData.upi_intent,
-        upiId: orderData.upi_id,
-        book: {
-          id: book.id,
-          title: book.title,
-          priceInInr: book.priceInInr,
-          format: book.format,
-        },
-      },
+      data: orderResponse,
     });
   } catch (err: any) {
+    console.error('Checkout API error:', err);
     return NextResponse.json(
-      { error: err.message || 'Payment initialization error' },
+      { error: err.message || 'Payment processing failed' },
       { status: 500 }
     );
   }
