@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import BookCard from '@/components/BookCard';
+import BookTable from '@/components/BookTable';
 import ReaderModal from '@/components/ReaderModal';
 import PaymentModal from '@/components/PaymentModal';
 import FaqSection from '@/components/FaqSection';
@@ -27,7 +28,11 @@ import {
   Flame,
   Check,
   Eye,
-  Layers
+  Layers,
+  LayoutGrid,
+  List,
+  X,
+  RotateCcw
 } from 'lucide-react';
 
 type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
@@ -41,6 +46,7 @@ export default function HomePage() {
   const [sortBy, setSortBy] = useState<SortOption>('CHEAPEST');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
+  const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   const [previewBook, setPreviewBook] = useState<Book | null>(null);
   const [buyingBook, setBuyingBook] = useState<Book | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -143,6 +149,19 @@ export default function HomePage() {
     }
   };
 
+  const handleResetFilters = () => {
+    setSelectedCategory('All');
+    setSelectedPriceTier('ALL');
+    setSelectedResourceType('ALL');
+    setSearchQuery('');
+  };
+
+  const hasActiveFilters = 
+    selectedCategory !== 'All' || 
+    selectedPriceTier !== 'ALL' || 
+    selectedResourceType !== 'ALL' || 
+    searchQuery.trim() !== '';
+
   // Master Bundle Object
   const masterBundleBook: Book = BOOK_CATALOG.find(b => b.id === 'book-master-bundle') || BOOK_CATALOG[0];
 
@@ -188,20 +207,20 @@ export default function HomePage() {
             {/* Pill */}
             <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-slate-300 mb-6 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Universal Mega Digital Library</span>
+              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Universal Open Knowledge Vault</span>
               <span className="text-slate-600">•</span>
-              <span className="text-amber-300 font-semibold">1,700+ DRM-Free eBooks Starting at Just ₹29</span>
+              <span className="text-amber-300 font-semibold">1,668+ Curated Texts Starting at ₹29</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Massive Universal eBook Collection.{' '}
+              Universal Open Knowledge Archive.{' '}
               <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
-                Unbeatable Cheap Prices.
+                Accessible to Everyone.
               </span>
             </h1>
 
             <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Discover over <strong className="text-white">1,700+ full-length digital books</strong> across Software Engineering, Stock Trading, Cybersecurity, AI & LLMs, Zebra Learn, AutoCAD, and College Exam Notes. Direct 0% fee UPI payment, instant encrypted download, and lifetime DRM-free access.
+              Explore over <strong className="text-white">1,668 verified digital texts</strong> across Software Engineering, Financial Markets, Cybersecurity, Artificial Intelligence, Zebra Learn Masterclasses, and Academic Exam Preparation. Direct 0% fee peer-to-peer UPI checkout, 0-second delivery, and lifetime DRM-free access.
             </p>
 
             {/* Quick Value Pillars */}
@@ -212,7 +231,7 @@ export default function HomePage() {
                   <span>1,350+ @ ₹29</span>
                 </div>
                 <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Unmatched micro-pricing for students & self-learners.
+                  Accessible micro-pricing for students & builders.
                 </div>
               </div>
 
@@ -249,14 +268,14 @@ export default function HomePage() {
 
             {/* Quick Search Tag Chips */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
-              <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold mr-1">Popular searches:</span>
+              <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold mr-1">Popular topics:</span>
               {searchTags.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setSearchQuery(tag)}
                   className={`text-[11px] px-3 py-1 rounded-full border transition-all ${
                     searchQuery.toLowerCase() === tag.toLowerCase()
-                      ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400'
+                      ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-md shadow-emerald-500/20'
                       : 'bg-slate-900/90 text-slate-300 border-slate-800 hover:border-emerald-500/50 hover:text-white'
                   }`}
                 >
@@ -266,9 +285,10 @@ export default function HomePage() {
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="text-[11px] px-2.5 py-1 rounded-full bg-rose-950/80 text-rose-300 border border-rose-800/60 hover:bg-rose-900 font-semibold"
+                  className="text-[11px] px-2.5 py-1 rounded-full bg-rose-950/80 text-rose-300 border border-rose-800/60 hover:bg-rose-900 font-semibold flex items-center space-x-1"
                 >
-                  Clear ✕
+                  <span>Clear</span>
+                  <X className="w-3 h-3" />
                 </button>
               )}
             </div>
@@ -282,7 +302,7 @@ export default function HomePage() {
               <div>
                 <div className="flex items-center space-x-2">
                   <Flame className="w-5 h-5 text-amber-400 fill-amber-400" />
-                  <h2 className="text-xl font-extrabold text-white tracking-tight">Today's Universal Steal Deals</h2>
+                  <h2 className="text-xl font-extrabold text-white tracking-tight">Today's Essential Steal Deals</h2>
                   <span className="px-2 py-0.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-[10px] font-mono font-bold text-amber-300 uppercase">
                     Up to 90% Off
                   </span>
@@ -400,21 +420,21 @@ export default function HomePage() {
         {/* Main Catalog Shelf Section */}
         <section id="catalog-shelf" className="py-8 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header & Controls Bar */}
-          <div className="space-y-4 mb-8">
+          <div className="space-y-4 mb-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center space-x-2">
-                  <h2 className="text-2xl font-bold text-white tracking-tight">Browse Digital Bookshelf</h2>
+                  <h2 className="text-2xl font-bold text-white tracking-tight">Browse Knowledge Vault</h2>
                   <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono font-semibold text-emerald-400">
                     {filteredBooks.length.toLocaleString()} Titles Available
                   </span>
                 </div>
                 <p className="text-xs text-slate-400 mt-1">
-                  Showing {filteredBooks.length > 0 ? (currentPage - 1) * BOOKS_PER_PAGE + 1 : 0}–{Math.min(currentPage * BOOKS_PER_PAGE, filteredBooks.length)} of {filteredBooks.length.toLocaleString()} e-books
+                  Showing {filteredBooks.length > 0 ? (currentPage - 1) * BOOKS_PER_PAGE + 1 : 0}–{Math.min(currentPage * BOOKS_PER_PAGE, filteredBooks.length)} of {filteredBooks.length.toLocaleString()} verified texts
                 </p>
               </div>
 
-              {/* Price Tier Selector & Sort Option */}
+              {/* Price Tier Selector, Sort Option & View Mode */}
               <div className="flex flex-wrap items-center gap-2">
                 {/* Price Presets */}
                 <div className="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs">
@@ -471,11 +491,88 @@ export default function HomePage() {
                   <option value="RATING">Highest Rated</option>
                   <option value="TITLE">Title A–Z</option>
                 </select>
+
+                {/* View Switcher: Grid vs Table */}
+                <div className="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`p-1.5 rounded-lg transition-all ${
+                      viewMode === 'grid'
+                        ? 'bg-emerald-500 text-slate-950 shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                    title="3D Book Jackets View"
+                  >
+                    <LayoutGrid className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('table')}
+                    className={`p-1.5 rounded-lg transition-all ${
+                      viewMode === 'table'
+                        ? 'bg-emerald-500 text-slate-950 shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                    title="Power Table View"
+                  >
+                    <List className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
 
+            {/* Active Filter Chips with 1-Click Reset */}
+            {hasActiveFilters && (
+              <div className="flex flex-wrap items-center gap-2 pt-2 pb-1 border-t border-slate-800/60">
+                <span className="text-[11px] font-mono text-slate-500 uppercase">Active filters:</span>
+                
+                {selectedCategory !== 'All' && (
+                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-800/80 text-emerald-300 text-xs">
+                    <span>Category: {selectedCategory}</span>
+                    <button onClick={() => setSelectedCategory('All')} className="hover:text-white ml-1">
+                      <X className="w-3 h-3" />
+                    </button>
+                  </span>
+                )}
+
+                {selectedPriceTier !== 'ALL' && (
+                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-amber-950/80 border border-amber-800/80 text-amber-300 text-xs">
+                    <span>Price: {selectedPriceTier === '29' ? '₹29 Only' : selectedPriceTier === 'UNDER_49' ? 'Under ₹49' : 'Under ₹99'}</span>
+                    <button onClick={() => setSelectedPriceTier('ALL')} className="hover:text-white ml-1">
+                      <X className="w-3 h-3" />
+                    </button>
+                  </span>
+                )}
+
+                {selectedResourceType !== 'ALL' && (
+                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-blue-950/80 border border-blue-800/80 text-blue-300 text-xs">
+                    <span>Type: {selectedResourceType}</span>
+                    <button onClick={() => setSelectedResourceType('ALL')} className="hover:text-white ml-1">
+                      <X className="w-3 h-3" />
+                    </button>
+                  </span>
+                )}
+
+                {searchQuery.trim() !== '' && (
+                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-800/80 text-cyan-300 text-xs">
+                    <span>Search: "{searchQuery}"</span>
+                    <button onClick={() => setSearchQuery('')} className="hover:text-white ml-1">
+                      <X className="w-3 h-3" />
+                    </button>
+                  </span>
+                )}
+
+                <button
+                  onClick={handleResetFilters}
+                  className="text-xs text-rose-400 hover:text-rose-300 flex items-center space-x-1 ml-auto font-medium"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                  <span>Reset All</span>
+                </button>
+              </div>
+            )}
+
             {/* Resource Type Multi-Format Filter Tabs */}
-            <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 text-xs">
+            <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 text-xs scrollbar-thin">
               <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold mr-1 shrink-0">Resource Type:</span>
               <button
                 onClick={() => setSelectedResourceType('ALL')}
@@ -577,20 +674,29 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* 3D Vertical Book Cards Grid (Paginated 24 per page) */}
+          {/* Book Catalog: Either 3D Jacket Grid or Power Table */}
           {currentBooks.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {currentBooks.map((book) => (
-                  <BookCard
-                    key={book.id}
-                    book={book}
-                    currency={currency}
-                    onSelectBuy={(b) => setBuyingBook(b)}
-                    onSelectPreview={(b) => setPreviewBook(b)}
-                  />
-                ))}
-              </div>
+              {viewMode === 'grid' ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {currentBooks.map((book) => (
+                    <BookCard
+                      key={book.id}
+                      book={book}
+                      currency={currency}
+                      onSelectBuy={(b) => setBuyingBook(b)}
+                      onSelectPreview={(b) => setPreviewBook(b)}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <BookTable
+                  books={currentBooks}
+                  currency={currency}
+                  onSelectBuy={(b) => setBuyingBook(b)}
+                  onSelectPreview={(b) => setPreviewBook(b)}
+                />
+              )}
 
               {/* Pagination Controls */}
               {totalPages > 1 && (
@@ -654,14 +760,10 @@ export default function HomePage() {
               <BookOpen className="w-12 h-12 text-slate-600 mx-auto mb-3" />
               <h3 className="text-base font-bold text-white">No eBooks match your filter</h3>
               <p className="text-xs text-slate-400 mt-1 max-w-sm mx-auto">
-                Try clearing search terms or selecting "All Prices" to explore the full collection of 1,700+ titles.
+                Try clearing search terms or selecting "All Prices" to explore the full collection of 1,668+ titles.
               </p>
               <button
-                onClick={() => {
-                  setSelectedCategory('All');
-                  setSelectedPriceTier('ALL');
-                  setSearchQuery('');
-                }}
+                onClick={handleResetFilters}
                 className="mt-4 px-4 py-2 bg-emerald-500 text-slate-950 rounded-xl text-xs font-bold hover:bg-emerald-400 transition-colors"
               >
                 Reset All Filters
