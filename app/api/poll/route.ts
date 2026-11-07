@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
     }
 
     // Check payment gateway status
-    let isPaid = storedOrder?.status === 'PAID';
+    let isPaid = storedOrder?.status === 'PAID' || storedOrder?.status === 'SUCCESS';
     let verifiedAmount = storedOrder?.totalInr ? storedOrder.totalInr.toString() : '0';
     let verifiedUtr = storedOrder?.bankUtr || 'VERIFIED-UPI';
 

@@ -1,18 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFamGatewaySignature, generateDownloadToken } from '@/lib/crypto';
-import { BOOK_CATALOG } from '@/lib/catalog';
-import { markOrderPaid } from '@/lib/orders/store';
+import { getOrderById, updateOrderStatus, saveOrder } from '@/lib/orders/store';
+import { checkOrderStatus } from '@/lib/famgateway';
 
-// Processed order cache for idempotent fulfillment & replay attack rejection
-const processedOrders = new Set<string>();
+// In-memory cache for event deduplication
+const processedWebhooks = new Set<string>();
 
 /**
- * FamGateway Authoritative Webhook Receiver
+ * FamPay Authoritative Webhook Receiver
+ * 
  * Security Controls:
- * 1. Strict Timing-Safe HMAC-SHA256 signature verification.
- * 2. Payload size cap (max 64KB) against memory exhaustion.
- * 3. Replay attack rejection (idempotency keying on order_id).
- * 4. Whitelist event matching.
+ * 1. Payload size restriction (<64KB) to mitigate DoS / buffer abuse.
+ * 2. Dual verification: HMAC-SHA256 signature verification with fallback to 
+ *    direct upstream server-side status confirmation (checkOrderStatus).
+ * 3. Exact order matching & amount reconciliation.
+ * 4. Replay attack rejection & idempotent fulfillment.
+ * 5. Exactly-once ebook fulfillment: tokens issued only for purchased items.
  */
 export async function POST(req: NextRequest) {
   try {
@@ -23,18 +26,7 @@ export async function POST(req: NextRequest) {
     }
 
     const rawBody = await req.text();
-    const signature = req.headers.get('x-famgateway-signature');
-
-    if (!signature) {
-      return NextResponse.json({ error: 'Missing required signature header' }, { status: 401 });
-    }
-
-    // 2. Timing-safe cryptographic HMAC-SHA256 verification
-    const isAuthentic = verifyFamGatewaySignature(rawBody, signature);
-    if (!isAuthentic) {
-      console.warn('[Security Alert] Unauthorized webhook signature attempt rejected.');
-      return NextResponse.json({ error: 'Invalid HMAC signature' }, { status: 401 });
-    }
+    const signature = req.headers.get('x-famgateway-signature') || req.headers.get('x-fampay-signature');
 
     let payload: any;
     try {
@@ -43,59 +35,116 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Malformed JSON payload' }, { status: 400 });
     }
 
-    if (payload.event === 'payment.success') {
-      const { order_id, amount, utr } = payload;
+    const orderId = payload.order_id || payload.orderId;
+    if (!orderId || typeof orderId !== 'string') {
+      return NextResponse.json({ error: 'Invalid order_id structure' }, { status: 400 });
+    }
 
-      if (!order_id || typeof order_id !== 'string') {
-        return NextResponse.json({ error: 'Invalid order_id structure' }, { status: 400 });
-      }
+    // 2. Dual Verification Architecture
+    let isAuthentic = false;
+    if (signature) {
+      isAuthentic = verifyFamGatewaySignature(rawBody, signature);
+    }
 
-      // 3. Replay attack prevention: check if order was already fulfilled
-      if (processedOrders.has(order_id)) {
-        return NextResponse.json({
-          status: 'success',
-          message: 'Idempotent: Order already fulfilled previously',
-          order_id,
-        }, { status: 200 });
-      }
-
-      // Mark order as processed in-memory and persistent store
-      processedOrders.add(order_id);
-      markOrderPaid(order_id, {
-        bankUtr: utr,
-        amountInInr: Number(amount) || undefined,
-      });
-
-      // Clean old entries if memory set exceeds 10,000 items
-      if (processedOrders.size > 10000) {
-        const iterator = processedOrders.values();
-        for (let i = 0; i < 2000; i++) {
-          const val = iterator.next().value;
-          if (val) processedOrders.delete(val);
+    // If signature is missing or verification failed, independently verify transaction
+    // directly through upstream authoritative status endpoint
+    if (!isAuthentic) {
+      try {
+        const upstreamStatus = await checkOrderStatus(orderId);
+        if (upstreamStatus.status === 'success') {
+          isAuthentic = true;
+          // Sync bank UTR from authoritative upstream if available
+          if (upstreamStatus.utr && !payload.utr) {
+            payload.utr = upstreamStatus.utr;
+          }
         }
+      } catch (upstreamErr) {
+        console.warn(`[FAMPAY WEBHOOK] Upstream status check failed for order ${orderId}:`, upstreamErr);
       }
+    }
 
-      // 4. Generate encrypted single-use download token
-      const defaultBook = BOOK_CATALOG[0];
+    if (!isAuthentic) {
+      return NextResponse.json({ error: 'Unauthorized: Webhook failed cryptographic & upstream verification' }, { status: 401 });
+    }
+
+    // 3. Match the correct order in store
+    const order = getOrderById(orderId);
+    if (!order) {
+      return NextResponse.json({ error: 'Order reference not found in store' }, { status: 404 });
+    }
+
+    // 4. Replay attack & event deduplication check
+    const eventKey = `${orderId}:${payload.utr || 'VERIFIED'}`;
+    if (processedWebhooks.has(eventKey) || order.status === 'SUCCESS' || order.status === 'PAID') {
+      return NextResponse.json({
+        status: 'success',
+        message: 'Idempotent: Order already fulfilled previously',
+        order_id: orderId,
+        tokens: order.issuedTokens || [],
+      }, { status: 200 });
+    }
+
+    // 5. Amount validation
+    if (payload.amount) {
+      const webhookAmount = Number(payload.amount);
+      if (Math.abs(webhookAmount - order.totalInr) > 0.05) {
+        updateOrderStatus(orderId, 'REVIEW_REQUIRED');
+        return NextResponse.json({ 
+          error: 'Amount mismatch: Transaction requires manual review' 
+        }, { status: 400 });
+      }
+    }
+
+    // 6. Atomic update to SUCCESS
+    updateOrderStatus(orderId, 'SUCCESS', {
+      gatewayOrderId: orderId,
+      bankUtr: payload.utr || 'VERIFIED_VIA_UPSTREAM',
+      amountInInr: order.totalInr,
+    });
+
+    processedWebhooks.add(eventKey);
+
+    // 7. Exactly-once Ebook Access Generation
+    const issuedTokens: Array<{ bookId: string; token: string; issuedAt: string }> = [];
+
+    for (const item of order.items) {
       const token = generateDownloadToken({
-        orderId: order_id,
-        bookId: defaultBook.id,
-        fileName: defaultBook.fileName,
+        orderId: order.orderId,
+        bookId: item.bookId,
+        fileName: item.fileName,
         issuedAt: Date.now(),
         ttlMs: 24 * 60 * 60 * 1000, // 24 hours
         maxDownloads: 5,
       });
 
-      return NextResponse.json({
-        status: 'success',
-        message: 'Order fulfilled securely',
-        order_id,
+      issuedTokens.push({
+        bookId: item.bookId,
         token,
-      }, { status: 200 });
+        issuedAt: new Date().toISOString(),
+      });
     }
 
-    return NextResponse.json({ status: 'ignored', reason: 'Unrecognized event' }, { status: 200 });
+    order.issuedTokens = issuedTokens;
+    saveOrder(order);
+
+    // Prune in-memory cache if it grows too large
+    if (processedWebhooks.size > 5000) {
+      const iterator = processedWebhooks.values();
+      for (let i = 0; i < 1000; i++) {
+        const val = iterator.next().value;
+        if (val) processedWebhooks.delete(val);
+      }
+    }
+
+    return NextResponse.json({
+      status: 'success',
+      message: 'Order fulfilled securely via FamPay',
+      order_id: orderId,
+      tokens: issuedTokens,
+    }, { status: 200 });
+
   } catch (err: any) {
+    console.error('[FAMPAY WEBHOOK] Critical error:', err?.message || err);
     return NextResponse.json({ error: 'Internal security failure' }, { status: 500 });
   }
 }

@@ -41,7 +41,7 @@ export default function CartDrawer({ onStartCheckout }: CartDrawerProps) {
 
   const [couponInput, setCouponInput] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
-  const [selectedGateway, setSelectedGateway] = useState<PaymentGatewayType>('RAZORPAY');
+  const selectedGateway: PaymentGatewayType = 'FAMPAY';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
 
@@ -236,53 +236,21 @@ export default function CartDrawer({ onStartCheckout }: CartDrawerProps) {
                 />
               </div>
 
-              {/* Payment Gateway Selector */}
-              <div className="pt-3 border-t border-slate-800/80 space-y-2">
-                <label className="text-[11px] font-mono text-slate-400 block">
-                  Select Payment Gateway:
-                </label>
-                <div className="grid grid-cols-3 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedGateway('RAZORPAY')}
-                    className={`p-2.5 rounded-xl border text-left flex flex-col justify-between transition-all ${
-                      selectedGateway === 'RAZORPAY'
-                        ? 'bg-emerald-950/80 border-emerald-500 text-white'
-                        : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700'
-                    }`}
-                  >
-                    <CreditCard className="w-4 h-4 text-emerald-400 mb-1" />
-                    <span className="text-[11px] font-bold block">Razorpay</span>
-                    <span className="text-[9px] text-slate-400 block">Cards / UPI</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setSelectedGateway('CASHFREE')}
-                    className={`p-2.5 rounded-xl border text-left flex flex-col justify-between transition-all ${
-                      selectedGateway === 'CASHFREE'
-                        ? 'bg-emerald-950/80 border-emerald-500 text-white'
-                        : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700'
-                    }`}
-                  >
-                    <Zap className="w-4 h-4 text-amber-400 mb-1" />
-                    <span className="text-[11px] font-bold block">Cashfree</span>
-                    <span className="text-[9px] text-slate-400 block">UPI / NetBank</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setSelectedGateway('FAMGATEWAY')}
-                    className={`p-2.5 rounded-xl border text-left flex flex-col justify-between transition-all ${
-                      selectedGateway === 'FAMGATEWAY'
-                        ? 'bg-emerald-950/80 border-emerald-500 text-white'
-                        : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700'
-                    }`}
-                  >
-                    <Zap className="w-4 h-4 text-cyan-400 mb-1" />
-                    <span className="text-[11px] font-bold block">0% UPI QR</span>
-                    <span className="text-[9px] text-slate-400 block">Peer-to-Peer</span>
-                  </button>
+              {/* Payment Method Banner (Exclusive FamPay UPI) */}
+              <div className="pt-3 border-t border-slate-800/80">
+                <div className="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+                  <div className="flex items-center space-x-2.5">
+                    <div className="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                      <Zap className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-white block">FamPay UPI Rail</span>
+                      <span className="text-[10px] text-slate-400 block font-mono">0% Fee Direct Settlement</span>
+                    </div>
+                  </div>
+                  <span className="px-2.5 py-1 rounded-lg bg-emerald-950 border border-emerald-800 text-[10px] font-mono font-bold text-emerald-400">
+                    EXCLUSIVE
+                  </span>
                 </div>
               </div>
 

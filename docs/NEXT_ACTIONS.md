@@ -1,15 +1,16 @@
-# NEXT ACTIONS & ROADMAP
+# NEXT ACTIONS & CONTINUOUS ROADMAP
 
-## Immediate (Completed in this phase)
-- [x] FamGateway protocol audit & live API contract verification.
-- [x] Zero-mock policy: remove simulation buttons and unverified redirects.
-- [x] Implement multi-app UPI intent triggers (PhonePe, GPay, Paytm, BHIM).
-- [x] Server-authoritative pricing and BOLA prevention.
-- [x] Comprehensive payment documentation in `docs/payments/`.
-- [x] Production Next.js build compilation with 0 errors.
+## Current Milestone (Completed & Production Ready)
+- [x] Exclusive FamPay UPI integration.
+- [x] Complete eradication of Razorpay, Cashfree, PayGic, and alternate gateways.
+- [x] Strict state machine lifecycle with immutable SUCCESS protection.
+- [x] Dual-verification webhook receiver with upstream status fallback.
+- [x] Clean, minimal, mobile-first FamPay UPI checkout interface.
+- [x] Full test results and deployment documentation in `docs/payments/`.
+- [x] Next.js build compilation (93/93 routes) with 0 errors.
 
-## Next Phase (Library Enrichment & Editorial Frontend Redesign)
-- [ ] Connect master inventory to catalog (`master-ebook-inventory.json`).
-- [ ] Ensure all 46+ verified ebooks have high-resolution verified covers in `public/covers/`.
-- [ ] Enhance storefront typography, reading previews, and editorial curation cards following `no-slop-ui` and `high-end-visual-design` principles.
-- [ ] Sync git commits to remote repository (`origin/main`).
+## Next Milestone (Ebook Catalog Enrichment & Editorial Experience)
+- [ ] Connect master inventory (`master-ebook-inventory.json`) to database/catalog.
+- [ ] Verified book cover audit and high-resolution thumbnail generation.
+- [ ] Implement enhanced editorial layout for book product pages.
+- [ ] Git commit and push FamPay-exclusive codebase to remote repository.

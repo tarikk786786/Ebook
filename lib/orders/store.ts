@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { PaymentStatus } from '@/lib/payments/types';
 
 export interface OrderItem {
   bookId: string;
@@ -21,7 +22,7 @@ export interface StoredOrder {
   totalInr: number;
   couponCode?: string;
   gateway: string;
-  status: 'PENDING' | 'PAID' | 'EXPIRED' | 'FAILED';
+  status: PaymentStatus | 'PAID';
   createdAt: string;
   paidAt?: string;
   bankUtr?: string;
@@ -96,18 +97,38 @@ export function getOrderById(id: string): StoredOrder | undefined {
   );
 }
 
-export function markOrderPaid(
-  orderIdentifier: string, 
-  details: { gatewayOrderId?: string; bankUtr?: string; amountInInr?: number }
+/**
+ * Updates order status according to strict payment lifecycle rules.
+ * CRITICAL INVARIANT: A successful payment ('SUCCESS' / 'PAID') can NEVER be reverted by late failure/expiry events.
+ */
+export function updateOrderStatus(
+  orderIdentifier: string,
+  newStatus: PaymentStatus,
+  details?: { gatewayOrderId?: string; bankUtr?: string; amountInInr?: number }
 ): StoredOrder | null {
   const order = getOrderById(orderIdentifier);
   if (!order) return null;
 
-  order.status = 'PAID';
-  order.paidAt = new Date().toISOString();
-  if (details.gatewayOrderId) order.gatewayOrderId = details.gatewayOrderId;
-  if (details.bankUtr) order.bankUtr = details.bankUtr;
+  // Protect SUCCESS from being overwritten by late failure, expiry, or cancellation
+  const isAlreadySuccess = order.status === 'SUCCESS' || order.status === 'PAID';
+  if (isAlreadySuccess && (newStatus === 'FAILED' || newStatus === 'EXPIRED' || newStatus === 'CANCELLED' || newStatus === 'PENDING')) {
+    return order;
+  }
+
+  order.status = newStatus;
+  if (newStatus === 'SUCCESS') {
+    order.paidAt = order.paidAt || new Date().toISOString();
+  }
+  if (details?.gatewayOrderId) order.gatewayOrderId = details.gatewayOrderId;
+  if (details?.bankUtr) order.bankUtr = details.bankUtr;
 
   saveOrder(order);
   return order;
+}
+
+export function markOrderPaid(
+  orderIdentifier: string, 
+  details: { gatewayOrderId?: string; bankUtr?: string; amountInInr?: number }
+): StoredOrder | null {
+  return updateOrderStatus(orderIdentifier, 'SUCCESS', details);
 }

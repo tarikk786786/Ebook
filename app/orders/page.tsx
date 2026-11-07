@@ -18,7 +18,7 @@ interface OrderRecord {
   orderNumber: string;
   date: string;
   amountInInr: number;
-  gateway: 'RAZORPAY' | 'CASHFREE' | 'FAMGATEWAY';
+  gateway: 'FAMPAY' | 'FAMGATEWAY';
   status: 'PAID' | 'PENDING';
   bankUtr: string;
   items: Array<{ title: string; price: number; format: string }>;
@@ -30,7 +30,7 @@ export default function CustomerOrdersPage() {
       orderNumber: 'ORD-982143',
       date: 'Today, 22:45',
       amountInInr: 98,
-      gateway: 'RAZORPAY',
+      gateway: 'FAMPAY',
       status: 'PAID',
       bankUtr: '431892019482',
       items: [
@@ -42,7 +42,7 @@ export default function CustomerOrdersPage() {
       orderNumber: 'ORD-761209',
       date: 'Nov 04, 2026',
       amountInInr: 29,
-      gateway: 'FAMGATEWAY',
+      gateway: 'FAMPAY',
       status: 'PAID',
       bankUtr: '519283746192',
       items: [
@@ -53,7 +53,7 @@ export default function CustomerOrdersPage() {
       orderNumber: 'ORD-549102',
       date: 'Oct 28, 2026',
       amountInInr: 399,
-      gateway: 'CASHFREE',
+      gateway: 'FAMPAY',
       status: 'PAID',
       bankUtr: '891029384756',
       items: [

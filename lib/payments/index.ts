@@ -1,6 +1,4 @@
-import { CreateOrderParams, PaymentOrderResponse, PaymentGatewayType, CouponDiscount } from './types';
-import { createRazorpayOrder } from './razorpay';
-import { createCashfreeOrder } from './cashfree';
+import { CreateOrderParams, PaymentOrderResponse, CouponDiscount } from './types';
 import { createFamGatewayOrder } from '../famgateway';
 import { saveOrder } from '@/lib/orders/store';
 
@@ -37,10 +35,11 @@ export function validateAndApplyCoupon(code: string | undefined, subtotalInr: nu
 }
 
 /**
- * Unified Payment Dispatcher: Handles Razorpay, Cashfree, and FamGateway
+ * Exclusive FamPay Payment Dispatcher.
+ * Exclusively creates dynamic UPI sessions via official FamPay / FamGateway rail.
  */
 export async function createUnifiedPaymentOrder(params: CreateOrderParams): Promise<PaymentOrderResponse> {
-  const { items, customerEmail, customerPhone, couponCode, gateway = 'RAZORPAY', currency = 'INR' } = params;
+  const { items, customerEmail, customerPhone, couponCode, currency = 'INR' } = params;
 
   if (!items || items.length === 0) {
     throw new Error('Cart is empty. Please add at least one ebook.');
@@ -54,8 +53,8 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
 
   const orderNumber = `ORD-${Date.now().toString().slice(-6)}-${Math.floor(100 + Math.random() * 900)}`;
   const cleanTitle = items[0]?.title ? items[0].title.slice(0, 30).replace(/[^a-zA-Z0-9 ]/g, '') : 'Ebook Purchase';
-  const defaultVpa = process.env.MERCHANT_UPI_VPA || 'famgateway@upi';
-  const merchantName = process.env.MERCHANT_NAME || 'AnonTrove Books';
+  const defaultVpa = process.env.MERCHANT_UPI_VPA || 'wowtarik@yesfam';
+  const merchantName = process.env.MERCHANT_NAME || 'AnonTrove';
   const dynamicUpiIntent = `upi://pay?pa=${encodeURIComponent(defaultVpa)}&pn=${encodeURIComponent(merchantName)}&am=${finalAmount.toFixed(2)}&cu=INR&tr=${encodeURIComponent(orderNumber)}&tn=${encodeURIComponent(cleanTitle)}`;
   const dynamicQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=${encodeURIComponent(dynamicUpiIntent)}`;
 
@@ -71,103 +70,39 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     amountInInr: finalAmount,
     amount: finalAmount.toFixed(2),
     currency,
-    gateway,
+    gateway: 'FAMPAY',
     qrUrl: dynamicQrUrl,
     upiIntent: dynamicUpiIntent,
     upiId: defaultVpa,
     checkoutUrl: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app'}/success?order_id=${orderNumber}`,
   };
 
-  if (gateway === 'RAZORPAY') {
-    const rzp = await createRazorpayOrder(orderNumber, finalAmount, {
-      customerEmail,
-      itemCount: items.length.toString(),
-      couponCode: couponCode || 'NONE',
-    });
-    baseResponse.razorpay = rzp;
-    baseResponse.orderId = rzp.orderId;
-    baseResponse.checkoutUrl = `https://checkout.razorpay.com/v1/checkout.js`;
-
-    saveOrder({
-      orderId: rzp.orderId,
-      orderNumber,
-      gatewayOrderId: rzp.orderId,
-      customerEmail,
-      customerPhone,
-      items: items.map(i => ({
-        bookId: i.bookId,
-        title: i.title,
-        priceInInr: i.priceInInr,
-        fileName: i.fileName,
-        format: i.format,
-      })),
-      subtotalInr: subtotal,
-      discountInr: discount,
-      totalInr: finalAmount,
-      couponCode,
-      gateway: 'RAZORPAY',
-      status: 'PENDING',
-      createdAt: new Date().toISOString(),
-    });
-
-    return baseResponse;
-  }
-
-  if (gateway === 'CASHFREE') {
-    const cf = await createCashfreeOrder(orderNumber, finalAmount, customerEmail, customerPhone);
-    baseResponse.cashfree = cf;
-    baseResponse.orderId = cf.orderId;
-    baseResponse.checkoutUrl = baseResponse.checkoutUrl;
-
-    saveOrder({
-      orderId: cf.orderId,
-      orderNumber,
-      gatewayOrderId: cf.orderId,
-      customerEmail,
-      customerPhone,
-      items: items.map(i => ({
-        bookId: i.bookId,
-        title: i.title,
-        priceInInr: i.priceInInr,
-        fileName: i.fileName,
-        format: i.format,
-      })),
-      subtotalInr: subtotal,
-      discountInr: discount,
-      totalInr: finalAmount,
-      couponCode,
-      gateway: 'CASHFREE',
-      status: 'PENDING',
-      createdAt: new Date().toISOString(),
-    });
-
-    return baseResponse;
-  }
-
-  // FamGateway direct 0% fee automated UPI QR
+  // FamPay direct 0% fee automated UPI QR
   try {
     const fam = await createFamGatewayOrder({
       amount: finalAmount,
       customerEmail,
-      customerName: customerEmail.split('@')[0],
+      customerName: customerEmail ? customerEmail.split('@')[0] : 'Customer',
       redirectUrl: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app'}/success?order_id=${orderNumber}`,
     });
 
-    baseResponse.famgateway = {
+    const famData = {
       orderId: fam.order_id,
       qrUrl: fam.qr_url,
       upiIntent: fam.upi_intent,
       upiId: fam.upi_id,
       checkoutUrl: fam.checkout_url,
     };
+
+    baseResponse.famgateway = famData;
+    baseResponse.fampay = famData;
     baseResponse.orderId = fam.order_id;
     baseResponse.qrUrl = fam.qr_url || dynamicQrUrl;
     baseResponse.upiIntent = fam.upi_intent || dynamicUpiIntent;
     baseResponse.upiId = fam.upi_id || defaultVpa;
     baseResponse.checkoutUrl = fam.checkout_url || baseResponse.checkoutUrl;
   } catch (err) {
-    console.warn('[PAYMENT] FamGateway API unreachable or demo key, falling back to dynamic direct UPI QR:', err);
-    // Keep dynamic UPI QR and direct intent active so user can always pay required price
+    console.warn('[FAMPAY] Upstream API call error; serving dynamic UPI QR:', err);
   }
 
   saveOrder({
@@ -187,7 +122,7 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
     discountInr: discount,
     totalInr: finalAmount,
     couponCode,
-    gateway: 'FAMGATEWAY',
+    gateway: 'FAMPAY',
     status: 'PENDING',
     createdAt: new Date().toISOString(),
   });

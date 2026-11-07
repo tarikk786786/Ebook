@@ -1,20 +1,26 @@
 {
   "project": "AnonTrove Ebook Platform",
   "live_url": "https://ebook-sandy-chi.vercel.app",
-  "active_gateway": "FamGateway",
-  "merchant_vpa": "wowtarik@yesfam",
-  "status": "HARDENED_AND_TESTED",
-  "last_updated": "2026-11-08T00:24:00Z",
+  "exclusive_gateway": "FAMPAY",
+  "provider": "FamPay / FamGateway Direct UPI Settlement",
+  "merchant_vpa": "[REDACTED]@yesfam",
+  "status": "FAMPAY_EXCLUSIVE_PRODUCTION_READY",
+  "last_updated": "2026-11-08T00:34:00Z",
   "modules": {
     "payment_gateway": {
-      "provider": "FamGateway",
+      "exclusive_provider": "FAMPAY",
+      "alternative_gateways_purged": true,
+      "razorpay_removed": true,
+      "cashfree_removed": true,
       "mode": "PRODUCTION",
       "server_authoritative_pricing": true,
       "bola_idor_defense": true,
       "client_simulations_removed": true,
-      "multi_app_upi_intents": true,
+      "native_upi_intent_launcher": true,
       "manual_verification_trigger": true,
-      "order_manifest_binding": true
+      "order_manifest_binding": true,
+      "dual_verification_webhook": true,
+      "immutable_success_state": true
     },
     "security": {
       "admin_auth_guard": true,
