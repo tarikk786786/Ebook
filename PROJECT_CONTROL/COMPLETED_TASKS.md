@@ -18,5 +18,6 @@
 | Fault-Tolerant Reader View | Readers | 2026-11-08 | Commit `a0f11f9`, `components/PdfReaderView.tsx` | VERIFIED |
 | PDF Compatibility Test Suite | QA & Tests | 2026-11-08 | `tests/pdf_compatibility_suite.py` — 12/12 tests PASSED | VERIFIED |
 | Production Build Verification | Build | 2026-11-08 | Next.js 14.2.35 production build successful (95/95 static pages + edge middleware) | VERIFIED |
+| Dynamic UPI QR & Redirect Options | Payments | 2026-11-08 | Commit `453b666`, `components/PaymentModal.tsx`, `lib/payments/index.ts`, exact price binding, deep-links, web redirect option | VERIFIED |
 | Git Push & Remote Sync | Deploy | 2026-11-08 | Successfully pushed to `origin/main` (`https://github.com/tarikk786786/Ebook.git`) | VERIFIED |
 | Live Vercel Status Verification | Production | 2026-11-07 | HTTP 200 response on `https://ebook-sandy-chi.vercel.app` & `/api/admin/stats` | VERIFIED |

@@ -1,23 +1,17 @@
 # NEXT ACTIONS & IMMEDIATE WORKFLOW
 
-1. **Catalog & Cover Staging and Commit**:
-   - Inspect uncommitted changes in `anon-trove-ebooks` (`data/books_registry.json`).
-   - Stage and commit the expanded catalog to ensure git synchronization with remote repository.
-   
-2. **Supabase PostgreSQL Schema Setup (Task ECOMM-002)**:
-   - Create `supabase/migrations/20261107_init_ecommerce_schema.sql` defining:
-     - `profiles` table linked to Supabase Auth
-     - `orders` table for Razorpay / Cashfree / UPI transactions
-     - `order_items` table
-     - `user_library` table storing access licenses, bookmarks, and read progress
-     - Strict Row-Level Security (RLS) policies.
+1. **Verify Live Vercel Deployment**:
+   - Inspect build status and health of `https://ebook-sandy-chi.vercel.app` following push of commit `453b666`.
+   - Verify dynamic UPI QR rendering and modal redirect options on mobile and desktop viewports.
 
-3. **Cloudflare R2 Adapter Verification (Task ECOMM-003)**:
-   - Ensure `lib/storage/r2.ts` provides a complete AWS S3 compatible client with fallback to local `private_storage/`.
+2. **Supabase Database Cloud Setup (When Cloud Credentials Provided)**:
+   - Apply `supabase/migrations/20261107_init_ecommerce_schema.sql` to live PostgreSQL cluster.
+   - Test authenticated session persistence and user library synchronization.
 
-4. **Security Workflow Automation (Task SEC-001)**:
-   - Scaffold `.github/workflows/security.yml` with automated Gitleaks and Semgrep checks.
+3. **Gateway Production Keys Setup**:
+   - When ready for live transactions, record production Razorpay / Cashfree API credentials in `appinfo11.txt` and production environment variables.
+   - Verify webhook signatures in production against incoming gateway payloads.
 
-5. **Deploy Verification & Synchronization (Task DEPLOY-001)**:
-   - Push commit to GitHub `main` branch to trigger Vercel automated CI/CD deployment.
-   - Verify updated catalog live on `https://ebook-sandy-chi.vercel.app`.
+4. **Continuous E-book Reader Optimizations**:
+   - Further optimize EPUB.js pagination and caching for low-bandwidth mobile connections.
+   - Expand automated E2E browser tests for checkout drawer flows.
