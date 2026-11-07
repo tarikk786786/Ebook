@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Book } from '@/lib/catalog';
 import { X, ChevronLeft, ChevronRight, BookOpen, Zap, Type, AlignLeft } from 'lucide-react';
+import PdfReaderView from './PdfReaderView';
 
 interface ReaderModalProps {
   book: Book | null;
@@ -17,20 +18,9 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
 
   if (!book) return null;
 
-  const chapters = book.tableOfContents;
-  const currentChapter = chapters[activeChapterIndex] || chapters[0];
-
-  const fontClasses = {
-    sans: 'font-sans',
-    serif: 'font-serif',
-    mono: 'font-mono',
-  }[fontFamily];
-
-  const sizeClasses = {
-    sm: 'text-sm leading-relaxed',
-    base: 'text-base leading-relaxed',
-    lg: 'text-lg leading-loose',
-  }[fontSize];
+  const chapters = book.tableOfContents && book.tableOfContents.length > 0 
+    ? book.tableOfContents 
+    : ['1. Foundational Overview', '2. Core Principles & Frameworks', '3. Practical Applications'];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
@@ -117,45 +107,25 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
               <span className="text-slate-300 font-semibold block mb-1">Full Edition Includes:</span>
               <ul className="text-[11px] text-slate-400 space-y-1 list-disc pl-4">
                 <li>{book.pages} Complete Pages</li>
-                <li>Searchable & Printable PDF</li>
+                <li>Searchable & Printable DRM-Free PDF</li>
                 <li>Code snippets & architecture diagrams</li>
                 <li>Free lifetime revision updates</li>
               </ul>
             </div>
           </div>
 
-          {/* Reading Canvas */}
-          <div className="flex-1 overflow-y-auto p-6 sm:p-10 flex flex-col justify-between bg-[#0E131F]">
-            <div className="max-w-2xl mx-auto w-full">
-              {/* Chapter Header */}
-              <div className="pb-6 border-b border-slate-800/80 mb-8">
-                <span className="text-xs font-mono uppercase tracking-widest text-emerald-400">
-                  Chapter {activeChapterIndex + 1} of {chapters.length}
-                </span>
-                <h1 className="text-xl sm:text-2xl font-bold text-white mt-1">
-                  {currentChapter}
-                </h1>
-              </div>
-
-              {/* Sample Reading Content */}
-              <div className={`text-slate-200 space-y-5 ${fontClasses} ${sizeClasses}`}>
-                {book.sampleExcerpt.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="first-letter:text-2xl first-letter:font-bold first-letter:text-emerald-400">
-                    {paragraph}
-                  </p>
-                ))}
-
-                <div className="p-4 rounded-xl bg-[#0B0F17] border border-slate-800 text-xs font-mono text-slate-400 space-y-2 mt-8 not-italic">
-                  <div className="text-emerald-400 font-bold">/// End of Public Sample Chapter</div>
-                  <p>
-                    Unlock the remaining chapters, production source code examples, and appendices by acquiring the full edition below.
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Fault-Tolerant Reading View */}
+          <div className="flex-1 flex flex-col overflow-hidden">
+            <PdfReaderView
+              book={book}
+              activeChapterIndex={activeChapterIndex}
+              onSelectChapter={setActiveChapterIndex}
+              fontFamily={fontFamily}
+              fontSize={fontSize}
+            />
 
             {/* Bottom Chapter Pagination */}
-            <div className="max-w-2xl mx-auto w-full pt-8 mt-12 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <div className="px-6 py-3 bg-[#0B0F17] border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
               <button
                 onClick={() => setActiveChapterIndex(Math.max(0, activeChapterIndex - 1))}
                 disabled={activeChapterIndex === 0}
