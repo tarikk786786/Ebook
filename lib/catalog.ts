@@ -439,18 +439,59 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
   }
 ];
 
-// Combine verified initial catalog with curated demanded books
+// Combine verified initial catalog with curated demanded books and ALL 12,192 harvested books
+// Showcases demanded & top sellers with authentic covers first, while giving full access to all 12,192 books
 function compileBookCatalog(): Book[] {
   const idMap = new Map<string, Book>();
+  
+  // 1. Core featured bestsellers
   for (const b of INITIAL_BOOK_CATALOG) {
     idMap.set(b.id, b);
   }
+  
+  // 2. Curated demanded books
   if (Array.isArray(demandedBooks)) {
     for (const b of (demandedBooks as unknown as Book[])) {
       idMap.set(b.id, b);
     }
   }
-  return Array.from(idMap.values());
+  
+  // 3. All 12,192 harvested ebooks from dual Telegram accounts
+  if (Array.isArray(rawDynamicBooks)) {
+    for (const b of (rawDynamicBooks as unknown as Book[])) {
+      if (b && b.id && !idMap.has(b.id) && b.status !== 'DRAFT') {
+        idMap.set(b.id, b);
+      }
+    }
+  }
+
+  const allBooks = Array.from(idMap.values());
+
+  // Prioritize Demanded & Top Sellers with authentic cover thumbnails first in showcase
+  allBooks.sort((a, b) => {
+    if (a.id === 'book-master-bundle') return -1;
+    if (b.id === 'book-master-bundle') return 1;
+
+    // Demanded / Bestseller score
+    const aTop = (a.badge === 'Bestseller' || a.badge === 'Classic' || (a as any).isDemanded || (a.rating || 0) >= 4.9) ? 2 : 0;
+    const bTop = (b.badge === 'Bestseller' || b.badge === 'Classic' || (b as any).isDemanded || (b.rating || 0) >= 4.9) ? 2 : 0;
+
+    // Has cover score
+    const aCover = (a.coverImage && a.coverImage.length > 5) ? 1 : 0;
+    const bCover = (b.coverImage && b.coverImage.length > 5) ? 1 : 0;
+
+    const aScore = aTop + aCover;
+    const bScore = bTop + bCover;
+
+    if (aScore !== bScore) {
+      return bScore - aScore;
+    }
+
+    // Secondary sort by review count & rating
+    return ((b.reviewCount || 0) * (b.rating || 0)) - ((a.reviewCount || 0) * (a.rating || 0));
+  });
+
+  return allBooks;
 }
 
 export const BOOK_CATALOG: Book[] = compileBookCatalog();
