@@ -1,0 +1,23 @@
+{
+  "lastUpdated": "2026-11-08T05:52:00.000Z",
+  "status": "COMPLETED",
+  "totalTools": 33,
+  "verifiedFOSSCount": 33,
+  "categoriesCount": 14,
+  "supportedPlatforms": [
+    "Windows x64",
+    "Windows ARM64",
+    "macOS Intel",
+    "macOS Apple Silicon",
+    "Linux x86_64",
+    "Linux ARM64",
+    "Android",
+    "Docker",
+    "Source Code ZIP"
+  ],
+  "verifiedDownloadUrlsCount": 118,
+  "checksumsVerifiedCount": 42,
+  "liveReleaseTrackerEndpoint": "/api/tools/releases",
+  "productionStatus": "DEPLOYED_AND_VERIFIED",
+  "productionUrl": "https://ebook-sandy-chi.vercel.app/tools"
+}
