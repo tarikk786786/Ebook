@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:security": "node --experimental-strip-types --test tests/security_regression_suite.mjs"
+    "test:security": "node --experimental-strip-types --test tests/security_regression_suite.mjs",
+    "test:seo": "node scripts/seo_audit.mjs && node scripts/validate_sitemap.mjs && node scripts/validate_schema.mjs && node scripts/check_canonicals.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1164.0",
@@ -26,6 +27,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
+    "linkinator": "^8.1.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"

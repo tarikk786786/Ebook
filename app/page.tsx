@@ -117,11 +117,23 @@ export default function HomePage() {
       return true;
     });
 
-    // Sorting
+    // Sorting: By default (POPULAR), showcase all Bestseller & Demanded books first
     if (sortBy === 'CHEAPEST') {
       result.sort((a, b) => a.priceInInr - b.priceInInr);
     } else if (sortBy === 'TITLE') {
       result.sort((a, b) => a.title.localeCompare(b.title));
+    } else {
+      // POPULAR: Prioritize Bestsellers, Demanded Guides, and High-Rating Titles
+      result.sort((a, b) => {
+        if (a.id === 'book-master-bundle') return -1;
+        if (b.id === 'book-master-bundle') return 1;
+
+        const aTop = (a.badge === 'Bestseller' || a.badge === 'All-Access Pass' || a.badge === 'Classic' || (a as any).isDemanded || (a.rating || 0) >= 4.9) ? 10 : 0;
+        const bTop = (b.badge === 'Bestseller' || b.badge === 'All-Access Pass' || b.badge === 'Classic' || (b as any).isDemanded || (b.rating || 0) >= 4.9) ? 10 : 0;
+        if (aTop !== bTop) return bTop - aTop;
+
+        return ((b.reviewCount || 0) * (b.rating || 0)) - ((a.reviewCount || 0) * (a.rating || 0));
+      });
     }
 
     return result;
@@ -135,6 +147,13 @@ export default function HomePage() {
 
   const featuredSpotlight = useMemo(() => {
     return BOOK_CATALOG.filter(b => b.status === 'PUBLISHED' && b.coverImage).slice(0, 4);
+  }, []);
+
+  const bestsellerShowcase = useMemo(() => {
+    return BOOK_CATALOG.filter(b => 
+      b.status === 'PUBLISHED' && 
+      (b.badge === 'Bestseller' || b.badge === 'All-Access Pass' || (b as any).isDemanded || (b.rating >= 4.9 && (b.reviewCount || 0) >= 200))
+    ).slice(0, 8);
   }, []);
 
   return (
@@ -280,6 +299,45 @@ export default function HomePage() {
           onSelectBuy={(b) => setBuyingBook(b)} 
           currency={currency} 
         />
+
+        {/* Dedicated Bestsellers & Demanded Masterclasses Showcase */}
+        <section id="bestsellers" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E8E4DC] scroll-mt-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FAF6F1] border border-[#F2E8DC] text-[#9A704B] text-[11px] font-semibold uppercase tracking-wider mb-2">
+                <Award className="w-3.5 h-3.5 text-[#9A704B]" />
+                Top Demanded Literature • Highest Rated by Founders & Engineers
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
+                Bestsellers & Most Demanded Titles
+              </h2>
+              <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
+                The most requested software engineering playbooks, security guides, and startup manuals.
+              </p>
+            </div>
+            <a
+              href="#catalog"
+              className="inline-flex items-center space-x-1.5 text-xs font-medium text-[#9A704B] hover:text-[#7A583B] transition-colors"
+            >
+              <span>View All 12,192+ Titles</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+            {bestsellerShowcase.map((book) => (
+              <BookCard
+                key={`bestseller-${book.id}`}
+                book={book}
+                currency={currency}
+                onSelectBuy={(b) => setBuyingBook(b)}
+                onSelectPreview={(b) => setPreviewBook(b)}
+                onToggleWishlist={toggleWishlist}
+                isWishlisted={wishlist.some(w => w.id === book.id)}
+              />
+            ))}
+          </div>
+        </section>
 
         {/* Main Catalog Shelf */}
         <section id="catalog-shelf" className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E8E4DC] scroll-mt-16">

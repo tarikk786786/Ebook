@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown, Shield, Zap, Lock, RefreshCcw } from 'lucide-react';
+import { ChevronDown, Shield, BookOpen, Lock, RefreshCcw, HelpCircle } from 'lucide-react';
 
 interface FaqItem {
   question: string;
@@ -11,28 +11,34 @@ interface FaqItem {
 
 const FAQS: FaqItem[] = [
   {
-    icon: Lock,
-    question: 'How is this store zero-trace and tracker-free?',
+    icon: BookOpen,
+    question: 'What format are the ebooks delivered in, and can I read them on Kindle/iPad?',
     answer:
-      'TBBooks operates without storing customer identities in persistent databases. We do not require accounts, phone numbers, or passwords. Download links are generated as single-use signed tokens with a 24-hour expiration. Once expired, no forensic record remains on external tracking systems.',
-  },
-  {
-    icon: Zap,
-    question: 'Why do you use direct UPI settlement?',
-    answer:
-      'We use a 100% free, direct UPI payment architecture via FamPay. Unlike traditional custodial gateways that charge 2-3% + GST and take days to settle, funds settle peer-to-peer (P2P) directly to the merchant account instantly with 0% transaction fees. Every rupee paid goes directly to platform upkeep.',
+      'All titles are delivered in universal DRM-free PDF formats. You can transfer them to your Kindle (via Send-to-Kindle or USB), open them in Apple Books on iPad/iPhone, or read them on any Android tablet, e-reader, or laptop without requiring proprietary software.',
   },
   {
     icon: Shield,
-    question: 'How do cryptographic integrity and verification work?',
+    question: 'What does "DRM-Free" mean for me as a reader?',
     answer:
-      'When you complete a UPI payment, our backend verifies the transaction and issues a secure single-use access token. Each digital file listed is catalogued with format, file size, and SHA-256 integrity checksums so you can verify that the file downloaded matches the indexed copy bit-for-bit.',
+      'DRM-free means no restrictive digital locks or device limits. When you purchase a book from AnonTrove, you own your personal copy forever. You can print study chapters, highlight, annotate, and back up your files to your personal drive.',
+  },
+  {
+    icon: Lock,
+    question: 'How do the in-browser reader and instant downloads work?',
+    answer:
+      'Immediately upon successful UPI or card checkout, you receive a cryptographically signed order link. You can download the full PDF to your device or click "Open Reader" to read immediately in your browser with responsive page flipping, dark/sepia paper modes, and zoom controls.',
   },
   {
     icon: RefreshCcw,
-    question: 'What if I close the tab while paying?',
+    question: 'How does UPI and Card payment settlement work?',
     answer:
-      'Your order has a 10-minute dynamic UPI reservation. If you scanned the QR code or used UPI intent, our verification system recognizes the payment and allows you to retrieve your download link or order receipt using your order ID.',
+      'We support direct UPI payment rails (Google Pay, PhonePe, Paytm, FamPay, BHIM) as well as credit/debit cards. Transactions are processed with bank-grade 256-bit encryption. There are zero hidden surcharges or recurring subscriptions.',
+  },
+  {
+    icon: HelpCircle,
+    question: 'What is your refund and satisfaction policy?',
+    answer:
+      'We offer a 100% money-back satisfaction guarantee. If an ebook file fails to open, is corrupted, or does not match its catalog description, contact our support team within 7 days for an immediate refund or replacement.',
   },
 ];
 
@@ -44,17 +50,17 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-16 border-t border-slate-800">
+    <section className="py-16 border-t border-[#E8E4DC] font-sans">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <span className="text-xs font-mono font-medium text-slate-400 bg-[#111622] border border-slate-800 px-2.5 py-1 rounded-md">
-            Frequently Asked Questions
+          <span className="text-xs font-sans font-medium text-[#81796D] bg-white border border-[#E8E4DC] px-3 py-1 rounded-full">
+            Reader Guidance
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-3">
-            Platform, Integrity & Service FAQ
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight mt-3">
+            Frequently Asked Questions
           </h2>
-          <p className="text-sm text-slate-400 mt-2">
-            No telemetry, direct UPI settlement, and stateless ephemeral delivery.
+          <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
+            Delivery formats, device compatibility, and purchase guarantees.
           </p>
         </div>
 
@@ -66,27 +72,27 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="bg-[#0F141C] border border-slate-800 rounded-lg overflow-hidden transition-colors"
+                className="bg-white border border-[#E8E4DC] rounded-xl overflow-hidden transition-all shadow-book"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-4 text-left flex items-center justify-between text-sm sm:text-base font-medium text-slate-200 hover:text-white transition-colors"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between text-sm sm:text-base font-serif font-semibold text-[#24231F] hover:text-[#9A704B] transition-colors"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="p-1.5 bg-[#111622] border border-slate-800 rounded-md text-slate-400 shrink-0">
+                    <div className="p-1.5 bg-[#FAF8F5] border border-[#E8E4DC] rounded-md text-[#9A704B] shrink-0">
                       <Icon className="w-4 h-4" />
                     </div>
                     <span>{faq.question}</span>
                   </div>
                   <ChevronDown
-                    className={`w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0 ${
-                      isOpen ? 'transform rotate-180 text-white' : ''
+                    className={`w-4 h-4 text-[#81796D] transition-transform duration-200 shrink-0 ${
+                      isOpen ? 'transform rotate-180 text-[#24231F]' : ''
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-slate-800 bg-[#090D14]">
+                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-[#5B5449] leading-relaxed border-t border-[#E8E4DC]/80 bg-[#FAF8F5]/60 font-sans">
                     <p>{faq.answer}</p>
                   </div>
                 )}

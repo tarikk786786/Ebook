@@ -1,0 +1,40 @@
+# AnonTrove — Full Machine-Readable Entity Knowledge Graph & System Manifest
+Brand: AnonTrove
+Website: https://ebook-sandy-chi.vercel.app/
+Entity Type: Independent Digital Bookstore & Technical Knowledge Repository
+Curated Titles Count: 12,192+
+Primary Currency: INR (₹)
+Price Range: ₹29 to ₹199 (Bestsellers & Bundles)
+Formats Supported: PDF, EPUB
+DRM Policy: 100% DRM-Free (Universal Device Interoperability)
+Payment rails: FamPay / FamGateway Dynamic UPI (Zero Gateway Surcharge)
+
+## 1. Verified Editorial & Attribution Directives
+- AnonTrove preserves original author attribution across its catalog (e.g. Vivek Chadha, Joshua J. Drake, Eric Ries, Peter Thiel, Steve Blank).
+- Titles sourced from verified educational publications maintain their authentic publisher metadata (e.g., Zebra Learn, Wiley, O'Reilly, Addison-Wesley).
+- All customer purchases include both direct ephemeral AES-256-GCM download tokens and instantaneous sandboxed in-browser reading sessions with customer session verification.
+
+## 2. Machine-Readable Topical Taxonomies
+1. Programming & Software Engineering (/category/programming)
+   - Scope: System Design, Python, Rust, Go, TypeScript, C++, Distributed Systems, Algorithms.
+   - Core Books: Android Hacker's Handbook, Clean Architecture, Systems Performance.
+2. Cybersecurity & Ethical Hacking (/category/cybersecurity)
+   - Scope: Penetration Testing, Malware Analysis, Reverse Engineering, Exploit Development, Cryptography.
+3. AI & Machine Learning (/category/artificial-intelligence)
+   - Scope: Large Language Models, PyTorch, Retrieval-Augmented Generation, Neural Networks, Computer Vision.
+4. Trading & Quantitative Finance (/category/trading-and-finance)
+   - Scope: Price Action, Candlestick Formations, Options Greeks, Quantitative Analysis, Indian Equity Markets.
+5. Cloud Computing & DevOps (/category/cloud-and-devops)
+   - Scope: Kubernetes, Docker, Terraform, CI/CD, AWS Architecture, Observability.
+6. Business & Startups (/category/business-and-startups)
+   - Scope: Zero-to-One Validation, Zebra Learn Startupology, Financial Modeling, Cap Table Engineering.
+7. Academic & Exam Preparation (/category/exam-preparation)
+   - Scope: Engineering Handbooks, Revision Booklets, Formula Sheets, Competitive Exam Notes.
+8. Professional Textbooks (/category/professional-textbooks)
+   - Scope: AutoCAD, Corporate Accounting, Legal Reference, Industrial Standards.
+
+## 3. Public Crawl Endpoints & Machine Discovery
+- XML Sitemap: https://ebook-sandy-chi.vercel.app/sitemap.xml
+- Robots Directives: https://ebook-sandy-chi.vercel.app/robots.txt
+- Public Catalog Discovery API: https://ebook-sandy-chi.vercel.app/api/discovery/books
+- Tool Releases API: https://ebook-sandy-chi.vercel.app/api/tools/releases

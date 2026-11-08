@@ -1,0 +1,26 @@
+# AnonTrove — Verified Digital Ebooks & Technical Knowledge Platform
+> AnonTrove is an independent digital publishing and ebook platform providing verified DRM-free PDF/EPUB technical handbooks, computer science textbooks, software engineering manuals, and trading frameworks.
+
+## Core Platform Attributes
+- **Target Audience:** Software engineers, cybersecurity analysts, quantitative traders, founders, students, and self-directed learners.
+- **Delivery Model:** Instant download delivery via secure AES-256-GCM tokens plus zero-install in-browser reader with custom canvas watermarking.
+- **Payment Rails:** FamPay & FamGateway dynamic UPI integration with 0% gateway surcharge for Indian domestic UPI rails (PhonePe, Google Pay, Paytm, CRED).
+- **Format:** Strictly DRM-free PDF and EPUB files. No proprietary application lock-in.
+- **Verification Guarantee:** Every digital title is verified for formatting, table of contents completeness, and technical readability.
+
+## Primary Knowledge Clusters & Category Landing Hubs
+- [Programming & Software Engineering](https://ebook-sandy-chi.vercel.app/category/programming): Web development, backend architecture, Python, Rust, TypeScript, and system design manuals.
+- [Cybersecurity & Ethical Hacking](https://ebook-sandy-chi.vercel.app/category/cybersecurity): Defensive security, network analysis, penetration testing, and reverse engineering handbooks.
+- [AI & Machine Learning](https://ebook-sandy-chi.vercel.app/category/artificial-intelligence): Deep learning, LLM engineering, PyTorch, RAG architectures, and prompt design frameworks.
+- [Trading & Quantitative Finance](https://ebook-sandy-chi.vercel.app/category/trading-and-finance): Price action strategies, options hedging, technical analysis, and Indian equity frameworks.
+- [Cloud Architecture & DevOps](https://ebook-sandy-chi.vercel.app/category/cloud-and-devops): Kubernetes administration, Docker containerization, AWS architectures, and CI/CD pipelines.
+- [Business & Startups](https://ebook-sandy-chi.vercel.app/category/business-and-startups): Founder manuals, Zebra Learn startup frameworks, financial modeling, and venture playbooks.
+- [Academic & Exam Preparation](https://ebook-sandy-chi.vercel.app/category/exam-preparation): Engineering revision booklets, formula sheets, and solved question sets.
+- [Professional Textbooks](https://ebook-sandy-chi.vercel.app/category/professional-textbooks): Industry reference manuals, accounting standards, and CAD engineering designs.
+- [Ebook Reading Tools](https://ebook-sandy-chi.vercel.app/tools): Curated open-source tools for reading, converting, and indexing digital documents (Calibre, Pandoc, Tesseract, Foliate).
+
+## Key Public Information & Policies
+- [About Us & Verification Process](https://ebook-sandy-chi.vercel.app/about): Editorial guidelines and quality assurance protocols.
+- [Mission Statement](https://ebook-sandy-chi.vercel.app/mission): Democratic access to knowledge and educational equality.
+- [Copyright & DMCA Policy](https://ebook-sandy-chi.vercel.app/copyright): Authorship protection and legal takedown workflow.
+- [Pricing & Service Fee Transparency](https://ebook-sandy-chi.vercel.app/service-fee): Zero markup breakdown explaining low pricing tiers.
