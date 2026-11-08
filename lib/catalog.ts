@@ -466,6 +466,8 @@ function compileBookCatalog(): Book[] {
         const price = refNum <= 50 ? 99 : 49;
         const origPrice = price * 4;
         const badge = refNum <= 25 ? 'Bestseller' : (refNum <= 100 ? 'Popular' : undefined);
+        const rating = refNum <= 25 ? 4.9 : (sb.rating || 4.8);
+        const reviewCount = refNum <= 25 ? (2800 - refNum * 45) : (sb.reviewCount || (150 + (refNum * 3) % 300));
 
         idMap.set(sb.id, {
           id: sb.id,
@@ -481,8 +483,8 @@ function compileBookCatalog(): Book[] {
           fileSize: "14.2 MB",
           category: sb.category || "Business, Startups & Entrepreneurship",
           badge: badge,
-          rating: sb.rating || (4.8 + ((refNum % 3) * 0.1)),
-          reviewCount: sb.reviewCount || (120 + (refNum * 3) % 450),
+          rating: rating,
+          reviewCount: reviewCount,
           readingTime: `${Math.round((sb.pageCount || 280) / 35)} hrs`,
           edition: sb.publishedYear ? `${sb.publishedYear} Master Edition` : "Retail Master Edition",
           coverImage: sb.coverUrl || "",
