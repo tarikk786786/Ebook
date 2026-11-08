@@ -48,14 +48,14 @@ export default function Navbar({
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <span className="font-serif font-bold text-xl tracking-tight text-[#24231F] group-hover:text-[#9A704B] transition-colors">
+              <span className="font-serif font-bold text-lg sm:text-xl tracking-tight text-[#24231F] group-hover:text-[#9A704B] transition-colors">
                 AnonTrove
               </span>
-              <span className="text-[10px] uppercase font-sans font-medium px-1.5 py-0.5 bg-[#FAF8F5] text-[#81796D] border border-[#E8E4DC] rounded">
+              <span className="text-[10px] uppercase font-sans font-medium px-1.5 py-0.5 bg-[#FAF8F5] text-[#81796D] border border-[#E8E4DC] rounded hidden xs:inline-block">
                 Est. 2024
               </span>
             </div>
-            <p className="text-[10px] text-[#81796D] font-sans tracking-wide">Independent Digital Bookstore</p>
+            <p className="text-[10px] text-[#81796D] font-sans tracking-wide hidden sm:block">Independent Digital Bookstore</p>
           </div>
         </Link>
 
@@ -99,7 +99,7 @@ export default function Navbar({
         )}
 
         {/* Action Controls */}
-        <div className="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
+        <div className="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
           {/* Currency Toggle */}
           {onToggleCurrency && (
             <button
@@ -162,7 +162,7 @@ export default function Navbar({
               <Search className="w-4 h-4 text-[#81796D] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
-                placeholder="Search 12,192+ titles..."
+                placeholder="Search by title, author, or topic..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
                 className="w-full bg-[#FAF8F5] border border-[#E8E4DC] rounded-md pl-9 pr-3 py-2 text-xs text-[#24231F] focus:outline-none"

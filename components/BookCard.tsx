@@ -9,7 +9,8 @@ import {
   Eye, 
   ShoppingBag,
   Zap,
-  Check
+  Check,
+  Heart
 } from 'lucide-react';
 
 interface BookCardProps {
@@ -29,6 +30,7 @@ export default function BookCard({
   onToggleWishlist,
   isWishlisted = false,
 }: BookCardProps) {
+  const [imgLoaded, setImgLoaded] = React.useState(false);
   const [imgError, setImgError] = React.useState(false);
   const { addToCart, items } = useCart();
   const isInCart = items.some((i) => i.bookId === book.id);
@@ -49,14 +51,21 @@ export default function BookCard({
     <article className="group bg-white border border-[#E8E4DC] hover:border-[#D5CEBE] rounded-lg p-3.5 transition-all duration-200 flex flex-col justify-between shadow-book hover:shadow-book-hover">
       <div>
         {/* Cover Thumbnail with Link */}
-        <Link href={`/book/${book.slug}`} className="block relative aspect-[3/4] w-full rounded overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-3">
+        <Link prefetch={false} href={`/book/${book.slug}`} className="block relative aspect-[3/4] w-full rounded overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-3">
+          {!imgLoaded && !imgError && (
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5] via-[#F0EAE1] to-[#FAF8F5] animate-pulse" />
+          )}
+
           {!imgError ? (
             <img
               src={book.coverImage}
               alt={book.title}
+              onLoad={() => setImgLoaded(true)}
               onError={() => setImgError(true)}
               loading="lazy"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
+              className={`w-full h-full object-cover object-center group-hover:scale-[1.02] transition-all duration-300 ${
+                imgLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
             />
           ) : (
             <div className="w-full h-full bg-[#FAF8F5] flex flex-col justify-between p-4 border border-[#E8E4DC]">
@@ -89,11 +98,31 @@ export default function BookCard({
               </span>
             )}
           </div>
+
+          {/* Interactive Wishlist Toggle */}
+          {onToggleWishlist && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onToggleWishlist(book);
+              }}
+              title={isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}
+              className="absolute top-2 right-2 z-10 w-7 h-7 rounded-full bg-white/90 hover:bg-white border border-[#E8E4DC] flex items-center justify-center transition-all shadow-sm hover:scale-105"
+            >
+              <Heart
+                className={`w-3.5 h-3.5 transition-colors ${
+                  isWishlisted ? 'fill-rose-500 text-rose-500' : 'text-[#81796D] hover:text-[#24231F]'
+                }`}
+              />
+            </button>
+          )}
         </Link>
 
         {/* Title & Author */}
         <div className="space-y-1">
-          <Link href={`/book/${book.slug}`} className="block">
+          <Link prefetch={false} href={`/book/${book.slug}`} className="block">
             <h3 className="font-serif text-sm font-semibold text-[#24231F] group-hover:text-[#9A704B] transition-colors line-clamp-2 leading-snug">
               {book.title}
             </h3>
@@ -127,6 +156,7 @@ export default function BookCard({
             </button>
           ) : (
             <Link
+              prefetch={false}
               href={`/book/${book.slug}`}
               className="py-1.5 px-2 rounded border border-[#E8E4DC] bg-white hover:bg-[#FAF8F5] text-xs font-medium text-[#6E685F] hover:text-[#24231F] transition-colors flex items-center justify-center gap-1"
             >

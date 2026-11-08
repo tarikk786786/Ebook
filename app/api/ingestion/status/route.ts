@@ -2,8 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { getRegistry, getIngestionSources, getIngestionJobs } from '@/lib/ingestion';
+import { verifyAdminAccess } from '@/lib/auth/admin';
 
 export async function GET(req: NextRequest) {
+  if (!verifyAdminAccess(req)) {
+    return NextResponse.json({ success: false, error: 'Unauthorized: Admin authentication token required' }, { status: 401 });
+  }
+
   try {
     const books = getRegistry();
     const sources = getIngestionSources();

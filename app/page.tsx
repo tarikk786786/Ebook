@@ -406,7 +406,7 @@ export default function HomePage() {
           </div>
 
           {/* Filtering Control Bar */}
-          <div className="bg-white border border-[#E8E4DC] rounded-xl p-4 sm:p-5 mb-8 shadow-book space-y-4">
+          <div className="bg-white border border-[#E8E4DC] rounded-xl p-4 sm:p-5 mb-8 shadow-book space-y-4 max-w-full overflow-hidden">
             {/* Collection & Archive Selector Tabs */}
             <div className="space-y-1.5">
               <div className="flex items-center justify-between">

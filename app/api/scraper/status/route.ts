@@ -1,9 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getDiscoveredBooks, getCatalogMetadata, getSourceRegistry } from '@/lib/scraper';
+import { verifyAdminAccess } from '@/lib/auth/admin';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
+  if (!verifyAdminAccess(request)) {
+    return NextResponse.json({ success: false, error: 'Unauthorized: Admin authentication token required' }, { status: 401 });
+  }
+
   try {
     const books = getDiscoveredBooks();
     const metadata = getCatalogMetadata();
