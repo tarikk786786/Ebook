@@ -22,22 +22,22 @@ const securityHeaders = [
   },
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), payment=(self "https://checkout.razorpay.com" "https://sdk.cashfree.com"), browsing-topics=()',
+    value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
   },
   {
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com https://sdk.cashfree.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://famgateway.in https://images.unsplash.com https://*.r2.cloudflarestorage.com",
-      "connect-src 'self' https://famgateway.in https://api.razorpay.com https://checkout.razorpay.com https://lumberjack.razorpay.com https://api.cashfree.com https://sandbox.cashfree.com https://*.supabase.co",
+      "connect-src 'self' https://famgateway.in https://*.supabase.co",
       "font-src 'self' data:",
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'self'",
-      "frame-src 'self' https://checkout.razorpay.com https://sdk.cashfree.com",
+      "frame-src 'self'",
     ].join('; '),
   },
 ];
@@ -45,7 +45,6 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Strips 'X-Powered-By: Next.js' to prevent technology fingerprinting
-  outputFileTracing: false,
   headers: async () => [
     {
       source: '/:path*',

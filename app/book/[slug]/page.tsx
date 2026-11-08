@@ -14,10 +14,9 @@ interface Props {
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  // Prerender the top featured / Zebra Learn books at build time
+  // Prerender all published books at build time for instant CDN loading and zero SSR failures
   return BOOK_CATALOG
-    .filter(b => b.status === 'PUBLISHED')
-    .slice(0, 80)
+    .filter(b => b.status === 'PUBLISHED' && b.slug)
     .map((book) => ({
       slug: book.slug,
     }));
@@ -49,10 +48,16 @@ export default function BookDetailPage({ params }: Props) {
     notFound();
   }
 
-  // Get related books from same category
-  const relatedBooks = BOOK_CATALOG.filter(
-    (b) => b.id !== book.id && b.status === 'PUBLISHED' && (b.category === book.category || (book.tags && b.tags && b.tags.some(t => book.tags?.includes(t))))
-  ).slice(0, 4);
+  // Get related books safely
+  const bookTags = Array.isArray(book.tags) ? book.tags : [];
+  const relatedBooks = BOOK_CATALOG.filter((b) => {
+    if (b.id === book.id || b.status !== 'PUBLISHED') return false;
+    if (b.category && b.category === book.category) return true;
+    if (Array.isArray(b.tags) && bookTags.length > 0) {
+      return b.tags.some((t) => bookTags.includes(t));
+    }
+    return false;
+  }).slice(0, 4);
 
   return <BookDetailClient book={book} relatedBooks={relatedBooks} />;
 }

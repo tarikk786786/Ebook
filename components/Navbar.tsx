@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { BookOpen, Search, Zap, Lock, Sparkles, Tag, ShoppingBag, Bookmark } from 'lucide-react';
+import { BookOpen, Search, Zap, Lock, Sparkles, Tag, ShoppingBag, Bookmark, Wrench } from 'lucide-react';
 
 interface NavbarProps {
   searchQuery?: string;
@@ -85,6 +85,16 @@ export default function Navbar({
 
         {/* Action Controls & Value Badges */}
         <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+          {/* Ebook Tools Directory Link */}
+          <Link
+            href="/tools"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 text-xs font-semibold text-slate-200 hover:text-white transition-colors"
+            title="Ebook Tools & Download Center"
+          >
+            <Wrench className="w-3.5 h-3.5 text-teal-400" />
+            <span className="hidden sm:inline">Tools</span>
+          </Link>
+
           {/* Customer Library Link */}
           <Link
             href="/library"
