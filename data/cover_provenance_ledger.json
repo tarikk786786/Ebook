@@ -1,0 +1,249 @@
+{
+  "test-book-001": {
+    "book_id": "test-book-001",
+    "title": "The Lean Startup",
+    "cover_url": "/covers/the-lean-startup.jpg",
+    "confidence": 0.899,
+    "file_size_bytes": 40563,
+    "dimensions": "344x500",
+    "phash": "a0d71fe06a05679e",
+    "dhash": "daf266cb9583b631",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Book Repository",
+      "source_url": "https://openlibrary.org/isbn/9780307887894",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Book Repository"
+    }
+  },
+  "test-book-002": {
+    "book_id": "test-book-002",
+    "title": "Zero to One: Notes on Startups, or How to Build the Future",
+    "cover_url": "/covers/zero-to-one-notes-on-startups-or-how-to-build-the-future.jpg",
+    "confidence": 0.826,
+    "file_size_bytes": 21806,
+    "dimensions": "332x500",
+    "phash": "b63e6fdbd0908321",
+    "dhash": "2d664da4ac451616",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Book Repository",
+      "source_url": "https://openlibrary.org/isbn/9780804139298",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Book Repository"
+    }
+  },
+  "test-book-003": {
+    "book_id": "test-book-003",
+    "title": "Thinking, Fast and Slow",
+    "cover_url": "/covers/thinking-fast-and-slow.jpg",
+    "confidence": 0.858,
+    "file_size_bytes": 18135,
+    "dimensions": "337x500",
+    "phash": "be99c335b4cac03c",
+    "dhash": "d02b313726974508",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Book Repository",
+      "source_url": "https://openlibrary.org/isbn/9780374275631",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Book Repository"
+    }
+  },
+  "test-book-004": {
+    "book_id": "test-book-004",
+    "title": "Rich Dad Poor Dad",
+    "cover_url": "/covers/rich-dad-poor-dad.jpg",
+    "confidence": 0.893,
+    "file_size_bytes": 49119,
+    "dimensions": "333x500",
+    "phash": "95a3671d3c7972c0",
+    "dhash": "5ecacc32b23812e2",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Book Repository",
+      "source_url": "https://openlibrary.org/isbn/9781612680194",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Book Repository"
+    }
+  },
+  "test-book-005": {
+    "book_id": "test-book-005",
+    "title": "Atomic Habits",
+    "cover_url": "/covers/atomic-habits.jpg",
+    "confidence": 0.886,
+    "file_size_bytes": 44896,
+    "dimensions": "331x500",
+    "phash": "a9c6fdb091c4d20f",
+    "dhash": "8607e1e8bb9f1733",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Book Repository",
+      "source_url": "https://openlibrary.org/isbn/9780735211292",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Book Repository"
+    }
+  },
+  "book-0001": {
+    "book_id": "book-0001",
+    "title": "The Lean Startup",
+    "cover_url": "/covers/the-lean-startup.jpg",
+    "confidence": 0.857,
+    "file_size_bytes": 40563,
+    "dimensions": "344x500",
+    "phash": "a0d71fe06a05679e",
+    "dhash": "daf266cb9583b631",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL16086010W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  },
+  "book-0002": {
+    "book_id": "book-0002",
+    "title": "The Startup Owner's Manual",
+    "cover_url": "/covers/the-startup-owner-s-manual.jpg",
+    "confidence": 0.844,
+    "file_size_bytes": 46355,
+    "dimensions": "404x500",
+    "phash": "fd2ea4d0d4a7e1c0",
+    "dhash": "0e17032b001b0717",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL16793860W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  },
+  "book-0003": {
+    "book_id": "book-0003",
+    "title": "Zero to One",
+    "cover_url": "/covers/zero-to-one.jpg",
+    "confidence": 0.824,
+    "file_size_bytes": 25721,
+    "dimensions": "432x500",
+    "phash": "b63e2c39d3919195",
+    "dhash": "2f274ce968069686",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL17078706W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  },
+  "book-0005": {
+    "book_id": "book-0005",
+    "title": "The Mom Test",
+    "cover_url": "/covers/the-mom-test.jpg",
+    "confidence": 0.847,
+    "file_size_bytes": 30856,
+    "dimensions": "324x500",
+    "phash": "c36a6cc4b49a9be4",
+    "dhash": "848269f8cce8e8c4",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL23982116W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  },
+  "book-0006": {
+    "book_id": "book-0006",
+    "title": "The Founder's Dilemmas",
+    "cover_url": "/covers/the-founder-s-dilemmas.jpg",
+    "confidence": 0.844,
+    "file_size_bytes": 28841,
+    "dimensions": "319x500",
+    "phash": "bc3f9484c16b6b61",
+    "dhash": "f8371b3b968f869e",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL16152741W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  },
+  "book-0007": {
+    "book_id": "book-0007",
+    "title": "Venture Deals",
+    "cover_url": "/covers/venture-deals.jpg",
+    "confidence": 0.853,
+    "file_size_bytes": 35662,
+    "dimensions": "336x500",
+    "phash": "99db6aa666a59845",
+    "dhash": "d979f8f8fc3d3f10",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL16134369W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  },
+  "book-0009": {
+    "book_id": "book-0009",
+    "title": "The Startup Playbook",
+    "cover_url": "/covers/the-startup-playbook.jpg",
+    "confidence": 0.854,
+    "file_size_bytes": 40997,
+    "dimensions": "390x500",
+    "phash": "b9619696643dce86",
+    "dhash": "0f9c3b0b86717afc",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL16646321W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  },
+  "book-0010": {
+    "book_id": "book-0010",
+    "title": "The Art of the Start 2.0",
+    "cover_url": "/covers/the-art-of-the-start-2-0.jpg",
+    "confidence": 0.823,
+    "file_size_bytes": 29747,
+    "dimensions": "325x500",
+    "phash": "8941e49d2b669d3b",
+    "dhash": "f2c3e2c33830babc",
+    "rights": {
+      "rights_type": "COMMUNITY_ARCHIVE",
+      "is_cleared": true,
+      "clearance_score": 0.95,
+      "risk_level": "LOW",
+      "attribution": "Open Library / Internet Archive Public Metadata",
+      "source_url": "https://openlibrary.org/works/OL20001839W",
+      "license_notice": "Archived via Open Library / Internet Archive bibliographic index. Open Library / Internet Archive Public Metadata"
+    }
+  }
+}

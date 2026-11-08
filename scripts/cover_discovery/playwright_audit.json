@@ -1,0 +1,85 @@
+{
+  "url": "https://ebook-sandy-chi.vercel.app/",
+  "page_title": "AnonTrove | Premium Independent Ebook & Publishing House",
+  "images_tested": 36,
+  "images_loaded_cleanly": 7,
+  "images_broken": 23,
+  "broken_srcs": [
+    "https://covers.openlibrary.org/b/id/7104760-L.jpg",
+    "https://covers.openlibrary.org/b/id/8742256-L.jpg",
+    "https://covers.openlibrary.org/b/id/9002334-L.jpg",
+    "https://covers.openlibrary.org/b/id/7104760-L.jpg",
+    "https://covers.openlibrary.org/b/id/8742256-L.jpg",
+    "https://covers.openlibrary.org/b/id/9002334-L.jpg",
+    "https://covers.openlibrary.org/b/id/10660557-L.jpg",
+    "https://covers.openlibrary.org/b/id/12893128-L.jpg",
+    "https://covers.openlibrary.org/b/id/8732100-L.jpg",
+    "https://covers.openlibrary.org/b/id/7104760-L.jpg",
+    "https://covers.openlibrary.org/b/id/8742256-L.jpg",
+    "https://covers.openlibrary.org/b/id/9002334-L.jpg",
+    "https://covers.openlibrary.org/b/id/10660557-L.jpg",
+    "https://covers.openlibrary.org/b/id/12893128-L.jpg",
+    "https://covers.openlibrary.org/b/id/8732100-L.jpg",
+    "https://covers.openlibrary.org/b/id/12177932-L.jpg",
+    "https://covers.openlibrary.org/b/id/12209126-L.jpg",
+    "https://covers.openlibrary.org/b/id/6679955-L.jpg",
+    "https://covers.openlibrary.org/b/id/668146-L.jpg",
+    "https://covers.openlibrary.org/b/id/8846247-L.jpg",
+    "https://covers.openlibrary.org/b/id/8122897-L.jpg",
+    "https://covers.openlibrary.org/b/id/4985314-L.jpg",
+    "https://covers.openlibrary.org/b/id/7256399-L.jpg"
+  ],
+  "sample_rendered_cards": [
+    {
+      "src": "/covers/master-bundle.jpg",
+      "alt": "Complete 6-Volume Digital Engineering & ",
+      "rendered_ok": true
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/7104760-L.jpg",
+      "alt": "The Lean Startup",
+      "rendered_ok": false
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/8742256-L.jpg",
+      "alt": "The Startup Owner's Manual",
+      "rendered_ok": false
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/9002334-L.jpg",
+      "alt": "Zero to One",
+      "rendered_ok": false
+    },
+    {
+      "src": "/covers/master-bundle.jpg",
+      "alt": "Complete 6-Volume Digital Engineering & ",
+      "rendered_ok": true
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/7104760-L.jpg",
+      "alt": "The Lean Startup",
+      "rendered_ok": false
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/8742256-L.jpg",
+      "alt": "The Startup Owner's Manual",
+      "rendered_ok": false
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/9002334-L.jpg",
+      "alt": "Zero to One",
+      "rendered_ok": false
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/7279515-L.jpg",
+      "alt": "The Hard Thing About Hard Things",
+      "rendered_ok": true
+    },
+    {
+      "src": "https://covers.openlibrary.org/b/id/10660557-L.jpg",
+      "alt": "The Mom Test",
+      "rendered_ok": false
+    }
+  ],
+  "screenshot_saved": null
+}

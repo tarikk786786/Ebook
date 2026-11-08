@@ -1,0 +1,51 @@
+{
+  "book cover fetcher": [
+    {
+      "description": "Book Notes is a full-stack web app for tracking books you\u00e2\u20ac\u2122ve read. Users can add, edit, delete, review, and rate books, with data stored in PostgreSQL and book covers fetched using the Open Library API.",
+      "fullName": "maurizio-7/book-reviews",
+      "stargazersCount": 0,
+      "url": "https://github.com/maurizio-7/book-reviews"
+    },
+    {
+      "description": "A fullstack app for the book lovers. Authentication set up with Passport with backend in Express using Supabase for storing data, dynamic UI with EJS templating, book covers fetched from open source library API. Supports full CRUD functionality, sorting/filtering/searching, light-dark mode",
+      "fullName": "Ehiz-js/scribble",
+      "stargazersCount": 0,
+      "url": "https://github.com/Ehiz-js/scribble"
+    },
+    {
+      "description": "A full\u00e2\u20ac\u2018stack web app for tracking non\u00e2\u20ac\u2018fiction books I\u00e2\u20ac\u2122ve read, inspired by Derek Sivers\u00e2\u20ac\u2122 book notes site. Users can add books, rate them, store reading dates and personal notes, and see automatic book covers fetched from the Open Library Covers API.",
+      "fullName": "SafiyaMaryam/Book-Notes-App",
+      "stargazersCount": 0,
+      "url": "https://github.com/SafiyaMaryam/Book-Notes-App"
+    }
+  ],
+  "openlibrary covers": [
+    {
+      "description": "A very small gem that wraps the OpenLibrary's Covers API",
+      "fullName": "sandbergja/openlibrary-covers",
+      "stargazersCount": 0,
+      "url": "https://github.com/sandbergja/openlibrary-covers"
+    },
+    {
+      "description": "Full-Stack Flask Web Application for Managing Books & Authors with Search, Sort & OpenLibrary Covers",
+      "fullName": "seb0305/Book-Alchemy",
+      "stargazersCount": 0,
+      "url": "https://github.com/seb0305/Book-Alchemy"
+    },
+    {
+      "description": "A website wich allows you to archive your books, uses Google Books Api, Zxing and OpenLibrary Covers API ",
+      "fullName": "its-tujo/JBooks",
+      "stargazersCount": 1,
+      "url": "https://github.com/its-tujo/JBooks"
+    },
+    {
+      "description": "A small CRUD web app for book reviews built with Node.js and Express, using EJS for templating and PostgreSQL for persistence. It supports creating, reading, updating, and deleting reviews, plus cover previews via the OpenLibrary Covers API.",
+      "fullName": "mohammedalorf/MyBooksReview",
+      "stargazersCount": 0,
+      "url": "https://github.com/mohammedalorf/MyBooksReview"
+    }
+  ],
+  "google books cover python": [],
+  "calibre metadata plugin": "'charmap' codec can't decode byte 0x8d in position 577: character maps to <undefined>",
+  "extract epub cover python": []
+}
