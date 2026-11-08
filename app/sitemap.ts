@@ -1,10 +1,11 @@
+import { getSiteUrl } from '@/lib/site';
 import { MetadataRoute } from 'next';
 import { BOOK_CATALOG } from '@/lib/catalog';
 import { getAllCategories } from '@/lib/categories';
 import { getAllTools } from '@/lib/tools';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+  const siteUrl = getSiteUrl();
   const now = new Date();
 
   // 1. Static high-priority indexable pages

@@ -1,3 +1,4 @@
+import { getSiteUrl } from '@/lib/site';
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+  const siteUrl = getSiteUrl();
   const canonicalUrl = `${siteUrl}/category/${category.slug}`;
 
   return {
@@ -73,7 +74,7 @@ export default function CategoryPage({ params }: Props) {
   }
 
   const books = getBooksForCategory(category.slug);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+  const siteUrl = getSiteUrl();
   const canonicalUrl = `${siteUrl}/category/${category.slug}`;
 
   // Structured Data: BreadcrumbList + FAQPage + CollectionPage

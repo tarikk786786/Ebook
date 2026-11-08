@@ -1,3 +1,4 @@
+import { getSiteUrl } from '@/lib/site';
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+  const siteUrl = getSiteUrl();
   const canonicalUrl = `${siteUrl}/book/${book.slug}`;
   const cleanDescription = book.description 
     ? book.description.slice(0, 160) 
@@ -71,7 +72,7 @@ export default function BookDetailPage({ params }: Props) {
     notFound();
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+  const siteUrl = getSiteUrl();
   const canonicalUrl = `${siteUrl}/book/${book.slug}`;
   const coverUrl = book.coverImage 
     ? (book.coverImage.startsWith('http') ? book.coverImage : `${siteUrl}${book.coverImage}`)

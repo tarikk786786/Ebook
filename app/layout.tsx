@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Providers from '@/components/Providers';
+import { getSiteMetadataBase, getSiteUrl } from '@/lib/site';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: getSiteMetadataBase(),
   title: {
     default: 'AnonTrove | Premium Independent Ebook & Publishing House',
     template: '%s | AnonTrove',
