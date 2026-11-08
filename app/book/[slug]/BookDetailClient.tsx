@@ -293,7 +293,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     className="py-3 px-4 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-colors shadow-sm"
                   >
                     <Zap className="w-4 h-4" />
-                    <span>Instant UPI / Card Buy</span>
+                    <span>Instant UPI Buy</span>
                   </button>
                 </div>
 

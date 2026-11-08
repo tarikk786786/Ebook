@@ -211,10 +211,6 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E4DC] text-xs font-sans font-medium text-[#81796D]">
-                <Award className="w-3.5 h-3.5 text-[#9A704B]" />
-                <span>Independent Digital Bookstore • {TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+ Verified Titles</span>
-              </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#24231F] leading-[1.12]">
                 Universal Digital Library & Independent Bookstore.
@@ -231,7 +227,7 @@ export default function HomePage() {
                   className="w-full sm:w-auto px-6 py-3.5 bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-sm"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span>Explore {TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+ Titles</span>
+                  <span>Explore Catalog</span>
                 </a>
 
                 <a
@@ -354,7 +350,7 @@ export default function HomePage() {
               href="#catalog-shelf"
               className="inline-flex items-center space-x-1.5 text-xs font-medium text-[#9A704B] hover:text-[#7A583B] transition-colors"
             >
-              <span>View All {TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+ Titles</span>
+              <span>View All Titles</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -386,8 +382,8 @@ export default function HomePage() {
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
                 The AnonTrove Catalog Shelf
               </h2>
-              <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
-                Explore <strong>{TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+</strong> curated study guides, technical manuals & reference materials across connected libraries • Showing {filteredBooks.length.toLocaleString()} items on this shelf • Page {currentPage} of {totalPages || 1}
+                            <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
+                Curated study guides, technical manuals, and reference materials across our digital collection.
               </p>
             </div>
 
@@ -416,7 +412,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold text-[#81796D] uppercase tracking-wider">Collections & Archives:</span>
                 <span className="text-[11px] text-[#9A704B] font-medium hidden sm:inline">
-                  {selectedCollection === 'ALL' ? `Showing complete library (${TOTAL_MAPPED_DOCUMENTS.toLocaleString()} titles)` : selectedCollection === 'LATEST_2026' ? '1,000 Curated 2026 Masterclasses' : selectedCollection === 'HINDI' ? '2,065+ Hindi Literature & Regional Titles' : selectedCollection === 'BUSINESS' ? '6,181+ Business & Non-Fiction Books' : selectedCollection === 'CLASSIC_ARCHIVE' ? '12k+ Classic Archive' : selectedCollection === 'DEALS_29' ? '₹29 Steal Deals' : 'Filtered Collection'}
+                  {selectedCollection === 'ALL' ? 'Complete Library Collection' : selectedCollection === 'LATEST_2026' ? '1,000 Curated 2026 Masterclasses' : selectedCollection === 'HINDI' ? '2,065+ Hindi Literature & Regional Titles' : selectedCollection === 'BUSINESS' ? '6,181+ Business & Non-Fiction Books' : selectedCollection === 'CLASSIC_ARCHIVE' ? '12k+ Classic Archive' : selectedCollection === 'DEALS_29' ? '₹29 Steal Deals' : 'Filtered Collection'}
                 </span>
               </div>
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
