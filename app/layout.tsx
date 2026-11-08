@@ -7,10 +7,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.ver
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'AnonTrove | Premium Independent Ebook & Technical Knowledge Platform',
+    default: 'AnonTrove | Premium Independent Ebook & Publishing House',
     template: '%s | AnonTrove',
   },
-  description: 'Independent digital publishing and ebook platform selling 12,192+ verified PDF and EPUB technical guides, computer science textbooks, and trading manuals with instant UPI delivery and in-browser reading.',
+  description: 'Independent digital bookstore offering 12,192+ verified, DRM-free software engineering manuals, computer science textbooks, and professional guides with instant UPI checkout and in-browser reading.',
   robots: {
     index: true,
     follow: true,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: 'AnonTrove | Premium Independent Ebook Platform',
+    title: 'AnonTrove | Premium Independent Ebook & Publishing House',
     description: 'Explore 12,192+ verified digital books, technical manuals, and computer science guides starting at ₹29. Zero DRM lock-in, instant UPI checkout, and in-browser reading.',
     url: siteUrl,
     siteName: 'AnonTrove',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AnonTrove | Independent Ebook Platform',
+    title: 'AnonTrove | Independent Digital Publishing',
     description: 'Explore 12,192+ verified digital books, technical manuals, and computer science guides. Instant UPI checkout & in-browser reader.',
   },
 };
@@ -70,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <script
@@ -82,7 +82,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className="min-h-screen bg-[#0B0F17] text-slate-100 antialiased flex flex-col justify-between selection:bg-emerald-500/30 selection:text-emerald-300">
+      <body className="min-h-screen bg-[#F7F5F0] text-[#24231F] font-sans antialiased flex flex-col justify-between selection:bg-[#E8E4DC] selection:text-[#24231F]">
         <Providers>
           {children}
         </Providers>

@@ -1,822 +1,538 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import BookCard from '@/components/BookCard';
-import BookTable from '@/components/BookTable';
 import ReaderModal from '@/components/ReaderModal';
 import PaymentModal from '@/components/PaymentModal';
 import CartDrawer from '@/components/CartDrawer';
+import WishlistDrawer from '@/components/WishlistDrawer';
+import BundlesSection from '@/components/BundlesSection';
+import NewsletterSection from '@/components/NewsletterSection';
 import FaqSection from '@/components/FaqSection';
-import EmotionalMissionSection from '@/components/EmotionalMissionSection';
-import ServiceFeeBreakdown from '@/components/ServiceFeeBreakdown';
-import StudentMessageSection from '@/components/StudentMessageSection';
-import TransparencyTrustSection from '@/components/TransparencyTrustSection';
 import Footer from '@/components/Footer';
-import AvailabilityBadge from '@/components/AvailabilityBadge';
-import CuratorLetterSection from '@/components/CuratorLetterSection';
 import { BOOK_CATALOG, Book } from '@/lib/catalog';
+import { AUTHORITATIVE_CATEGORIES } from '@/lib/categories';
 import { 
   ShieldCheck, 
-  Zap, 
-  Lock, 
   BookOpen, 
-  Star, 
   Search, 
-  CheckCircle2, 
-  Smartphone, 
-  Tablet, 
-  Laptop, 
-  Download,
+  ArrowRight, 
+  SlidersHorizontal, 
+  RotateCcw,
   Sparkles,
-  ArrowRight,
-  Tag,
-  SlidersHorizontal,
-  TrendingDown,
-  Flame,
-  Check,
-  Eye,
   Layers,
-  LayoutGrid,
-  List,
-  X,
-  RotateCcw
+  ChevronLeft,
+  ChevronRight,
+  Tablet,
+  Laptop,
+  Smartphone,
+  CheckCircle2,
+  Lock,
+  Zap,
+  Award
 } from 'lucide-react';
 
-type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
-type SortOption = 'FEATURED' | 'CHEAPEST' | 'POPULAR' | 'RATING' | 'TITLE';
-type ResourceTypeFilter = 'ALL' | 'BOOKS' | 'NOTES' | 'code_template' | 'workbook' | 'culinary_guide' | 'technical_manual' | 'course_material';
+type PriceTier = 'ALL' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
+type SortOption = 'POPULAR' | 'CHEAPEST' | 'TITLE';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [selectedResourceType, setSelectedResourceType] = useState<ResourceTypeFilter>('ALL');
   const [selectedPriceTier, setSelectedPriceTier] = useState<PriceTier>('ALL');
-  const [sortBy, setSortBy] = useState<SortOption>('FEATURED');
+  const [sortBy, setSortBy] = useState<SortOption>('POPULAR');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
-  const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
+  
+  // Modals & Drawers state
   const [previewBook, setPreviewBook] = useState<Book | null>(null);
   const [buyingBook, setBuyingBook] = useState<Book | null>(null);
   const [cartOrder, setCartOrder] = useState<any>(null);
+  const [wishlist, setWishlist] = useState<Book[]>([]);
+  const [isWishlistOpen, setIsWishlistOpen] = useState(false);
+  
+  // Pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
   const BOOKS_PER_PAGE = 24;
 
-  // Categories list
-  const categories = useMemo(() => {
-    const publishedBooks = BOOK_CATALOG.filter((b) => b.status !== 'DRAFT');
-    const rawCats = Array.from(new Set(publishedBooks.map((b) => b.category))).filter(Boolean);
-    const otherCats = rawCats.filter((c) => c !== 'Zebra Learn Collection');
-    return ['All', 'Zebra Learn Collection', ...otherCats];
+  // Load wishlist from local storage
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('anontrove_wishlist');
+      if (stored) {
+        setWishlist(JSON.parse(stored));
+      }
+    } catch {}
+  }, []);
+
+  const toggleWishlist = (book: Book) => {
+    setWishlist(prev => {
+      const exists = prev.some(b => b.id === book.id);
+      const next = exists ? prev.filter(b => b.id !== book.id) : [...prev, book];
+      try {
+        localStorage.setItem('anontrove_wishlist', JSON.stringify(next));
+      } catch {}
+      return next;
+    });
+  };
+
+  // Distinct category list
+  const categoryFilters = useMemo(() => {
+    return ['All', ...AUTHORITATIVE_CATEGORIES.map(c => c.name)];
   }, []);
 
   // Filter & Sort
   const filteredBooks = useMemo(() => {
     let result = BOOK_CATALOG.filter((book) => {
       if (book.status === 'DRAFT') return false;
-      if (book.id === 'book-master-bundle') return false;
 
       // Price filter
-      if (selectedPriceTier === '29' && book.priceInInr > 29) return false;
       if (selectedPriceTier === 'UNDER_49' && book.priceInInr > 49) return false;
       if (selectedPriceTier === 'UNDER_99' && book.priceInInr > 99) return false;
       if (selectedPriceTier === 'PREMIUM' && book.priceInInr < 100) return false;
 
-      // Resource Type filter
-      if (selectedResourceType !== 'ALL') {
-        const bType = book.primaryResourceType || 'course_material';
-        if (selectedResourceType === 'BOOKS') {
-          if (!['published_ebook', 'textbook', 'professional_book'].includes(bType)) return false;
-        } else if (selectedResourceType === 'NOTES') {
-          if (!['lecture_notes', 'study_notes'].includes(bType)) return false;
-        } else if (bType !== selectedResourceType) {
+      // Category filter
+      if (selectedCategory !== 'All') {
+        const catDef = AUTHORITATIVE_CATEGORIES.find(c => c.name === selectedCategory);
+        if (catDef) {
+          const match = catDef.matchedCatalogCategories.some(
+            mc => book.category?.toLowerCase() === mc.toLowerCase()
+          );
+          if (!match && book.category !== selectedCategory) return false;
+        } else if (book.category !== selectedCategory) {
           return false;
         }
       }
 
-      // Category filter
-      const isZebraMatch = 
-        book.category === 'Zebra Learn Collection' ||
-        (book.tags && book.tags.includes('Zebra Learn')) ||
-        book.publisher === 'Zebra Learn' ||
-        (book.title + ' ' + book.author + ' ' + (book.badge || '')).toLowerCase().includes('zebra');
-
-      let matchesCategory = false;
-      if (selectedCategory === 'All') {
-        matchesCategory = true;
-      } else if (selectedCategory === 'Zebra Learn Collection') {
-        matchesCategory = isZebraMatch;
-      } else {
-        matchesCategory = book.category === selectedCategory;
-      }
-
-      if (!matchesCategory) return false;
-
-      // Search query filter
-      if (searchQuery.trim() !== '') {
-        const q = searchQuery.toLowerCase();
-        const matches = 
-          book.title.toLowerCase().includes(q) ||
-          book.subtitle.toLowerCase().includes(q) ||
-          book.author.toLowerCase().includes(q) ||
-          book.description.toLowerCase().includes(q) ||
-          (book.sourceTelegram && book.sourceTelegram.toLowerCase().includes(q));
-        if (!matches) return false;
+      // Search query
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase().trim();
+        const inTitle = book.title.toLowerCase().includes(q);
+        const inAuthor = (book.author || '').toLowerCase().includes(q);
+        const inDesc = (book.description || '').toLowerCase().includes(q);
+        const inCat = (book.category || '').toLowerCase().includes(q);
+        if (!inTitle && !inAuthor && !inDesc && !inCat) return false;
       }
 
       return true;
     });
 
     // Sorting
-    result.sort((a, b) => {
-      if (sortBy === 'FEATURED') {
-        const aTop = (a.badge === 'Bestseller' || a.badge === 'Classic' || (a as any).isDemanded || (a.rating || 0) >= 4.9) ? 2 : 0;
-        const bTop = (b.badge === 'Bestseller' || b.badge === 'Classic' || (b as any).isDemanded || (b.rating || 0) >= 4.9) ? 2 : 0;
-        const aCover = (a.coverImage && a.coverImage.length > 5) ? 1 : 0;
-        const bCover = (b.coverImage && b.coverImage.length > 5) ? 1 : 0;
-        if (aTop + aCover !== bTop + bCover) return (bTop + bCover) - (aTop + aCover);
-        return ((b.reviewCount || 0) * (b.rating || 0)) - ((a.reviewCount || 0) * (a.rating || 0));
-      }
-      if (sortBy === 'CHEAPEST') return a.priceInInr - b.priceInInr;
-      if (sortBy === 'POPULAR') return (b.reviewCount || 0) - (a.reviewCount || 0);
-      if (sortBy === 'RATING') return (b.rating || 0) - (a.rating || 0);
-      if (sortBy === 'TITLE') return a.title.localeCompare(b.title);
-      return 0;
-    });
+    if (sortBy === 'CHEAPEST') {
+      result.sort((a, b) => a.priceInInr - b.priceInInr);
+    } else if (sortBy === 'TITLE') {
+      result.sort((a, b) => a.title.localeCompare(b.title));
+    }
 
     return result;
-  }, [selectedCategory, selectedResourceType, selectedPriceTier, sortBy, searchQuery]);
+  }, [selectedCategory, selectedPriceTier, sortBy, searchQuery]);
 
-  // Reset to page 1 on filter/search change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [selectedCategory, selectedResourceType, selectedPriceTier, sortBy, searchQuery]);
-
-  const totalPages = Math.max(1, Math.ceil(filteredBooks.length / BOOKS_PER_PAGE));
+  const totalPages = Math.ceil(filteredBooks.length / BOOKS_PER_PAGE);
   const currentBooks = useMemo(() => {
     const start = (currentPage - 1) * BOOKS_PER_PAGE;
     return filteredBooks.slice(start, start + BOOKS_PER_PAGE);
   }, [filteredBooks, currentPage]);
 
-  const handlePageChange = (p: number) => {
-    const target = Math.max(1, Math.min(p, totalPages));
-    setCurrentPage(target);
-    const shelfEl = document.getElementById('catalog-shelf');
-    if (shelfEl) {
-      shelfEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const handleResetFilters = () => {
-    setSelectedCategory('All');
-    setSelectedPriceTier('ALL');
-    setSelectedResourceType('ALL');
-    setSearchQuery('');
-  };
-
-  const hasActiveFilters = 
-    selectedCategory !== 'All' || 
-    selectedPriceTier !== 'ALL' || 
-    selectedResourceType !== 'ALL' || 
-    searchQuery.trim() !== '';
-
-  // Master Bundle Object
-  const masterBundleBook: Book = BOOK_CATALOG.find(b => b.id === 'book-master-bundle') || BOOK_CATALOG[0];
-
-  // Hand-picked spotlight steal deals
-  const spotlightDeals: Book[] = useMemo(() => {
-    const targetIds = [
-      'book-101-linux-commands',
-      'book-100m-money-models-how-to-make-money',
-      'book-basics-of-equity-research-by-zebra-learn',
-      'book-android-hackers-handbook'
-    ];
-    return targetIds
-      .map(id => BOOK_CATALOG.find(b => b.id === id))
-      .filter((b): b is Book => Boolean(b));
+  const featuredSpotlight = useMemo(() => {
+    return BOOK_CATALOG.filter(b => b.status === 'PUBLISHED' && b.coverImage).slice(0, 4);
   }, []);
 
-  const searchTags = [
-    'Linux Commands',
-    'Trading Strategies',
-    'Zebra Learn',
-    'Cybersecurity',
-    'Python',
-    'AutoCAD',
-    'Exam Prep Notes',
-    'Stock Market'
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-[#F7F5F0] text-[#24231F] flex flex-col font-sans">
       <Navbar
         searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
+        onSearchChange={(q) => {
+          setSearchQuery(q);
+          setCurrentPage(1);
+        }}
         currency={currency}
         onToggleCurrency={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
+        wishlistCount={wishlist.length}
+        onOpenWishlist={() => setIsWishlistOpen(true)}
       />
 
-      <main className="flex-1 bg-[#090D14]">
-        {/* Transparent Ebook Service Mission Hero (Section 1) */}
-        <section className="pt-12 pb-16 md:pt-16 md:pb-20 border-b border-slate-800">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            {/* Clean Pill */}
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded bg-slate-800/80 border border-slate-700 text-xs text-slate-300 mb-6">
-              <span className="font-mono text-slate-300 uppercase tracking-wider text-[11px] font-semibold">Ethical Knowledge Access</span>
-              <span className="text-slate-600">•</span>
-              <span className="text-slate-400">Convenience fee starting at ₹29</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
-              Knowledge Should Never Be Out of Reach.
-            </h1>
-
-            <div className="mt-5 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed space-y-3">
-              <p>
-                Millions of useful books and learning resources already exist across the internet. Some are freely available, some are available through libraries, and others require subscriptions or purchases.
-              </p>
-              <p>
-                Finding the right book, checking its edition, and locating complete files can take hours of searching. We built this platform to make that journey easier.
-              </p>
-              <p className="text-slate-400 text-xs sm:text-sm">
-                Our small service fee supports the technology, storage, and maintenance that bring useful learning resources together in one convenient place.
-              </p>
-              <p className="text-white font-semibold text-base sm:text-lg pt-1">
-                We believe that money should never be the reason someone gives up on learning.
-              </p>
-            </div>
-
-            {/* Clean Solid CTAs */}
-            <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a
-                href="#catalog-shelf"
-                className="w-full sm:w-auto px-6 py-2.5 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs flex items-center justify-center space-x-2 shadow-sm transition-colors"
-              >
-                <BookOpen className="w-3.5 h-3.5" />
-                <span>Explore the Library</span>
-              </a>
-
-              <a
-                href="#service-fee-explanation"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium text-xs flex items-center justify-center space-x-2 transition-colors"
-              >
-                <span>How Our Service Works</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
-              </a>
-            </div>
-
-            {/* Restrained Value Pillars */}
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-2.5 max-w-3xl mx-auto">
-              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
-                <div className="text-slate-200 text-xs font-semibold">From ₹29</div>
-                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Micro-fee for students.</div>
+      <main className="flex-1">
+        {/* Editorial Hero Section */}
+        <section className="border-b border-[#E8E4DC] bg-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E4DC] text-xs font-sans font-medium text-[#81796D]">
+                <Award className="w-3.5 h-3.5 text-[#9A704B]" />
+                <span>Independent Digital Bookstore • 12,192+ Verified Titles</span>
               </div>
 
-              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
-                <div className="text-slate-200 text-xs font-semibold">FamPay UPI</div>
-                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Zero gateway fee markup.</div>
-              </div>
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#24231F] leading-[1.12]">
+                Curated Technical Literature for Serious Minds.
+              </h1>
 
-              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
-                <div className="text-slate-200 text-xs font-semibold">DRM-Free</div>
-                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Standard PDF & EPUB files.</div>
-              </div>
+              <p className="text-sm sm:text-base text-[#6E685F] max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                Explore an independent catalog of software engineering handbooks, computer science textbooks, and quantitative trading guides. Universal DRM-free PDF delivery starting at ₹29.
+              </p>
 
-              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
-                <div className="text-slate-200 text-xs font-semibold">In-Browser Reader</div>
-                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Instant mobile & desktop reading.</div>
-              </div>
-            </div>
-
-            {/* Clean Topic Filter Tags */}
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-1.5 max-w-2xl mx-auto">
-              <span className="text-[11px] font-mono text-slate-400 uppercase font-semibold mr-1">Popular:</span>
-              {searchTags.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => setSearchQuery(tag)}
-                  className={`text-[11px] px-2.5 py-1 rounded border transition-colors ${
-                    searchQuery.toLowerCase() === tag.toLowerCase()
-                      ? 'bg-white text-slate-950 font-semibold border-white'
-                      : 'bg-[#111622] text-slate-300 border-slate-800 hover:border-slate-600 hover:text-white'
-                  }`}
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+                <a
+                  href="#catalog"
+                  className="w-full sm:w-auto px-6 py-3.5 bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-sm"
                 >
-                  {tag}
-                </button>
-              ))}
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="text-[11px] px-2 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 font-medium flex items-center space-x-1"
-                >
-                  <span>Clear</span>
-                  <X className="w-3 h-3" />
-                </button>
-              )}
-            </div>
-          </div>
-        </section>
+                  <BookOpen className="w-4 h-4" />
+                  <span>Explore 12,192+ Titles</span>
+                </a>
 
-        {/* Spotlight Steal Deals of the Day (4 Bestsellers under ₹99) */}
-        {spotlightDeals.length > 0 && searchQuery === '' && selectedCategory === 'All' && selectedPriceTier === 'ALL' && (
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-b border-slate-800/60">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <div className="flex items-center space-x-2">
-                  <Flame className="w-5 h-5 text-amber-400 fill-amber-400" />
-                  <h2 className="text-xl font-extrabold text-white tracking-tight">Today's Essential Steal Deals</h2>
-                  <span className="px-2 py-0.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-[10px] font-mono font-bold text-amber-300 uppercase">
-                    Up to 90% Off
-                  </span>
-                </div>
-                <p className="text-xs text-slate-400 mt-1">
-                  Hand-picked community favorites at micro-pricing. Instant download upon scan.
-                </p>
+                <a
+                  href="#bundles"
+                  className="w-full sm:w-auto px-6 py-3.5 border border-[#E8E4DC] hover:border-[#D5CEBE] bg-white hover:bg-[#FAF8F5] text-[#24231F] font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2"
+                >
+                  <Layers className="w-4 h-4 text-[#9A704B]" />
+                  <span>Curated Topic Bundles</span>
+                </a>
+              </div>
+
+              {/* Trust Value Badges */}
+              <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-[#81796D]">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#9A704B]" />
+                  <span>100% DRM-Free PDF</span>
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#9A704B]" />
+                  <span>In-Browser Cloud Reader</span>
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#9A704B]" />
+                  <span>Direct UPI & Card Settlement</span>
+                </span>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {spotlightDeals.map((book) => (
-                <div 
-                  key={book.id}
-                  className="bg-[#111724] border border-slate-800 hover:border-emerald-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/10"
-                >
-                  <div>
-                    <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-slate-900 shadow-md mb-3">
-                      <img 
-                        src={book.coverImage} 
-                        alt={book.title} 
+            {/* Right: Curated Book Fan Showcase */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md aspect-[4/3] flex items-center justify-center">
+                {featuredSpotlight.map((book, idx) => {
+                  const offsets = [
+                    '-translate-x-12 -rotate-6 z-10',
+                    '-translate-x-4 -rotate-2 z-20',
+                    'translate-x-4 rotate-2 z-30',
+                    'translate-x-12 rotate-6 z-20'
+                  ];
+                  return (
+                    <div
+                      key={book.id}
+                      className={`absolute w-36 sm:w-44 aspect-[3/4] bg-white border border-[#E8E4DC] rounded-lg overflow-hidden shadow-book-hover transition-transform duration-300 hover:scale-105 ${offsets[idx % 4]}`}
+                    >
+                      <img
+                        src={book.coverImage}
+                        alt={book.title}
                         className="w-full h-full object-cover"
-                        loading="lazy"
                       />
-                      <div className="absolute top-2 left-2 bg-emerald-500 text-slate-950 font-extrabold text-[10px] px-2 py-0.5 rounded shadow">
-                        ₹{book.priceInInr} ONLY
-                      </div>
                     </div>
-                    <h3 className="text-sm font-bold text-white line-clamp-1">{book.title}</h3>
-                    <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">By {book.author}</p>
-                    <div className="mt-2 text-[10px] font-mono text-slate-400 flex items-center space-x-1.5">
-                      <span>{book.pages} Pages</span>
-                      <span>•</span>
-                      <span>{book.format}</span>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
-                    <div>
-                      <div className="text-lg font-black text-emerald-400 font-mono">₹{book.priceInInr}</div>
-                      <div className="text-[10px] text-slate-500 line-through">₹{book.originalPriceInInr}</div>
-                    </div>
-
-                    <div className="flex items-center space-x-1.5">
-                      <button
-                        onClick={() => setPreviewBook(book)}
-                        className="p-2 rounded-xl bg-slate-800/70 hover:bg-slate-800 text-slate-300 border border-slate-700 text-xs"
-                        title="Look Inside"
-                      >
-                        <Eye className="w-3.5 h-3.5" />
-                      </button>
-                      <button
-                        onClick={() => setBuyingBook(book)}
-                        className="px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs flex items-center space-x-1 shadow-md shadow-emerald-500/20 active:scale-95 transition-all"
-                      >
-                        <Zap className="w-3.5 h-3.5 fill-current" />
-                        <span>Get ₹{book.priceInInr}</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Master Bundle Special Offer Showcase */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="bg-gradient-to-r from-[#111724] via-[#141E30] to-[#111724] border border-emerald-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <div className="flex items-center space-x-2">
-                <span className="px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 rounded-md shadow-sm">
-                  Limited Boxset Deal
-                </span>
-                <span className="text-xs text-emerald-400 font-mono font-semibold">Save 86% Off</span>
+                  );
+                })}
               </div>
-
-              <h2 className="text-xl sm:text-2xl font-bold text-white">
-                The Complete 6-Volume Digital Engineering Boxset
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Unlock all 6 published editions (1,046 pages): Security, FinTech UPI, Autonomous AI Agents, Zero-Dollar SaaS, Resilient Microservices, and Technical Copywriting. Includes all PDFs, EPUBs, and code repositories.
-              </p>
-
-              <div className="flex flex-wrap gap-4 text-xs text-slate-400 pt-1">
-                <span className="flex items-center space-x-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Instant FamPay UPI Download • 0% Fee</span>
-                </span>
-                <span className="flex items-center space-x-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>All Future Revisions Included</span>
-                </span>
-              </div>
-            </div>
-
-            <div className="text-center md:text-right shrink-0 bg-[#0B0F17]/80 p-5 rounded-2xl border border-slate-800 w-full md:w-auto">
-              <div className="text-xs text-slate-500 line-through">Regular: ₹2,999.00</div>
-              <div className="text-3xl font-black text-white font-mono my-1">
-                ₹399.00
-              </div>
-              <div className="text-[11px] text-emerald-400 font-medium mb-3">FamPay Direct UPI • Instant Settlement</div>
-
-              <button
-                onClick={() => setBuyingBook(masterBundleBook)}
-                className="w-full md:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-all"
-              >
-                <Zap className="w-4 h-4 fill-current" />
-                <span>Get Complete Boxset (₹399)</span>
-              </button>
             </div>
           </div>
         </section>
 
-                {/* Transparent Curator Open Letter */}
-        <CuratorLetterSection />
+        {/* 10 Topical Category Pillars */}
+        <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+            <span className="text-xs uppercase font-sans font-semibold tracking-wider text-[#9A704B]">
+              Topical Classification
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
+              Explore by Core Discipline
+            </h2>
+            <p className="text-xs sm:text-sm text-[#6E685F]">
+              Browse 10 authoritative categories structured for software engineers, traders, and students.
+            </p>
+          </div>
 
-        {/* Main Catalog Shelf Section */}
-        <section id="catalog-shelf" className="py-8 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header & Controls Bar */}
-          <div className="space-y-4 mb-6">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div>
-                <div className="flex items-center space-x-2">
-                  <h2 className="text-2xl font-bold text-white tracking-tight">Browse Ebook Catalog</h2>
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono font-semibold text-emerald-400">
-                    {filteredBooks.length.toLocaleString()} Titles Available
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+            {AUTHORITATIVE_CATEGORIES.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/category/${cat.slug}`}
+                className="group bg-white border border-[#E8E4DC] hover:border-[#D5CEBE] p-4 rounded-xl shadow-book hover:shadow-book-hover transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <span className="text-[10px] font-sans font-semibold uppercase text-[#9A704B]">
+                    {cat.badge}
                   </span>
+                  <h3 className="font-serif text-xs sm:text-sm font-bold text-[#24231F] group-hover:text-[#9A704B] transition-colors mt-1 line-clamp-2">
+                    {cat.name}
+                  </h3>
+                  <p className="text-[11px] text-[#81796D] mt-1.5 line-clamp-2 leading-relaxed">
+                    {cat.description}
+                  </p>
                 </div>
-                <p className="text-xs text-slate-400 mt-1">
-                  Showing {filteredBooks.length > 0 ? (currentPage - 1) * BOOKS_PER_PAGE + 1 : 0}–{Math.min(currentPage * BOOKS_PER_PAGE, filteredBooks.length)} of {filteredBooks.length.toLocaleString()} verified texts
-                </p>
+                <div className="mt-3 pt-2 border-t border-[#E8E4DC] flex items-center justify-between text-[10px] font-sans font-medium text-[#81796D]">
+                  <span>Explore Shelf</span>
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform text-[#9A704B]" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Curated Ebook Bundles */}
+        <BundlesSection 
+          onSelectBuy={(b) => setBuyingBook(b)} 
+          currency={currency} 
+        />
+
+        {/* Main Catalog Shelf */}
+        <section id="catalog-shelf" className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E8E4DC] scroll-mt-16">
+          <div id="catalog" className="absolute -top-16" />
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FAF6F1] border border-[#F2E8DC] text-[#9A704B] text-[11px] font-semibold uppercase tracking-wider mb-2">
+                <Sparkles className="w-3 h-3 text-[#9A704B]" />
+                100% Real Covers • Verified DRM-Free Digital Editions
               </div>
-
-              {/* Price Tier Selector, Sort Option & View Mode */}
-              <div className="flex flex-wrap items-center gap-2">
-                {/* Price Presets */}
-                <div className="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs">
-                  <button
-                    onClick={() => setSelectedPriceTier('ALL')}
-                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
-                      selectedPriceTier === 'ALL'
-                        ? 'bg-emerald-500 text-slate-950 font-bold'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    All Prices
-                  </button>
-                  <button
-                    onClick={() => setSelectedPriceTier('29')}
-                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
-                      selectedPriceTier === '29'
-                        ? 'bg-emerald-500 text-slate-950 font-bold'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    🔥 ₹29 Deals
-                  </button>
-                  <button
-                    onClick={() => setSelectedPriceTier('UNDER_49')}
-                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
-                      selectedPriceTier === 'UNDER_49'
-                        ? 'bg-emerald-500 text-slate-950 font-bold'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    ⚡ Under ₹49
-                  </button>
-                  <button
-                    onClick={() => setSelectedPriceTier('UNDER_99')}
-                    className={`px-3 py-1 rounded-lg font-medium transition-all ${
-                      selectedPriceTier === 'UNDER_99'
-                        ? 'bg-emerald-500 text-slate-950 font-bold'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    💎 Under ₹99
-                  </button>
-                </div>
-
-                {/* Sort Dropdown */}
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as SortOption)}
-                  className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-300 focus:outline-none focus:border-emerald-500 font-medium"
-                >
-                  <option value="FEATURED">⭐ Showcase: Demanded & Top Sellers (With Cover)</option>
-                  <option value="CHEAPEST">Price: Low to High (Cheapest)</option>
-                  <option value="POPULAR">Most Popular</option>
-                  <option value="RATING">Highest Rated</option>
-                  <option value="TITLE">Title A–Z</option>
-                </select>
-
-                {/* View Switcher: Grid vs Table */}
-                <div className="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-1.5 rounded-lg transition-all ${
-                      viewMode === 'grid'
-                        ? 'bg-emerald-500 text-slate-950 shadow-sm'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                    title="3D Book Jackets View"
-                  >
-                    <LayoutGrid className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('table')}
-                    className={`p-1.5 rounded-lg transition-all ${
-                      viewMode === 'table'
-                        ? 'bg-emerald-500 text-slate-950 shadow-sm'
-                        : 'text-slate-400 hover:text-white'
-                    }`}
-                    title="Power Table View"
-                  >
-                    <List className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
+                The AnonTrove Catalog Shelf
+              </h2>
+              <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
+                Explore <strong>{filteredBooks.length.toLocaleString()}</strong> verified titles • 1,000 Curated Startup & Business Masterclasses • Page {currentPage} of {totalPages || 1}
+              </p>
             </div>
 
-            {/* Active Filter Chips with 1-Click Reset */}
-            {hasActiveFilters && (
-              <div className="flex flex-wrap items-center gap-2 pt-2 pb-1 border-t border-slate-800/60">
-                <span className="text-[11px] font-mono text-slate-500 uppercase">Active filters:</span>
-                
-                {selectedCategory !== 'All' && (
-                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-800/80 text-emerald-300 text-xs">
-                    <span>Category: {selectedCategory}</span>
-                    <button onClick={() => setSelectedCategory('All')} className="hover:text-white ml-1">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-
-                {selectedPriceTier !== 'ALL' && (
-                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-amber-950/80 border border-amber-800/80 text-amber-300 text-xs">
-                    <span>Price: {selectedPriceTier === '29' ? '₹29 Only' : selectedPriceTier === 'UNDER_49' ? 'Under ₹49' : 'Under ₹99'}</span>
-                    <button onClick={() => setSelectedPriceTier('ALL')} className="hover:text-white ml-1">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-
-                {selectedResourceType !== 'ALL' && (
-                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-blue-950/80 border border-blue-800/80 text-blue-300 text-xs">
-                    <span>Type: {selectedResourceType}</span>
-                    <button onClick={() => setSelectedResourceType('ALL')} className="hover:text-white ml-1">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-
-                {searchQuery.trim() !== '' && (
-                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-800/80 text-cyan-300 text-xs">
-                    <span>Search: "{searchQuery}"</span>
-                    <button onClick={() => setSearchQuery('')} className="hover:text-white ml-1">
-                      <X className="w-3 h-3" />
-                    </button>
-                  </span>
-                )}
-
-                <button
-                  onClick={handleResetFilters}
-                  className="text-xs text-rose-400 hover:text-rose-300 flex items-center space-x-1 ml-auto font-medium"
-                >
-                  <RotateCcw className="w-3 h-3" />
-                  <span>Reset All</span>
-                </button>
-              </div>
-            )}
-
-            {/* Resource Type Multi-Format Filter Tabs */}
-            <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 text-xs scrollbar-thin">
-              <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold mr-1 shrink-0">Resource Type:</span>
-              <button
-                onClick={() => setSelectedResourceType('ALL')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'ALL'
-                    ? 'bg-slate-200 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
+            {/* Quick Sorting Filter */}
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-[#81796D]">Sort by:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => {
+                  setSortBy(e.target.value as SortOption);
+                  setCurrentPage(1);
+                }}
+                className="bg-white border border-[#E8E4DC] rounded-md px-3 py-1.5 text-xs text-[#24231F] focus:outline-none focus:border-[#9A704B]"
               >
-                All Types
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('BOOKS')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'BOOKS'
-                    ? 'bg-emerald-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                📚 Published Books
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('NOTES')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'NOTES'
-                    ? 'bg-amber-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                📝 Study & Exam Notes
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('code_template')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'code_template'
-                    ? 'bg-sky-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                💻 Code & Dev Assets
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('workbook')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'workbook'
-                    ? 'bg-pink-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                📋 Workbooks & Checklists
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('culinary_guide')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'culinary_guide'
-                    ? 'bg-orange-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                🍳 Culinary Guides
-              </button>
-              <button
-                onClick={() => setSelectedResourceType('technical_manual')}
-                className={`px-3 py-1 rounded-lg font-medium whitespace-nowrap transition-all ${
-                  selectedResourceType === 'technical_manual'
-                    ? 'bg-purple-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                ⚡ Technical Manuals
-              </button>
+                <option value="POPULAR">Most Popular</option>
+                <option value="CHEAPEST">Price: Lowest First</option>
+                <option value="TITLE">Title (A-Z)</option>
+              </select>
             </div>
+          </div>
 
-            {/* Category Filter Tabs */}
-            <div className="flex items-center space-x-1.5 overflow-x-auto pb-2 scrollbar-thin max-w-full">
-              {categories.map((cat) => (
+          {/* Filtering Control Bar */}
+          <div className="bg-white border border-[#E8E4DC] rounded-xl p-4 mb-8 shadow-book space-y-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium text-[#81796D] mr-2">Discipline:</span>
+              {categoryFilters.slice(0, 9).map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${
+                  onClick={() => {
+                    setSelectedCategory(cat);
+                    setCurrentPage(1);
+                  }}
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                     selectedCategory === cat
-                      ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800'
+                      ? 'bg-[#24231F] text-white shadow-sm'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
                   }`}
                 >
                   {cat}
                 </button>
               ))}
             </div>
+
+            <div className="flex flex-wrap items-center justify-between pt-3 border-t border-[#E8E4DC] gap-3 text-xs">
+              <div className="flex items-center gap-2">
+                <span className="text-[#81796D]">Price Cap:</span>
+                <button
+                  onClick={() => { setSelectedPriceTier('ALL'); setCurrentPage(1); }}
+                  className={`px-2.5 py-1 rounded text-xs ${selectedPriceTier === 'ALL' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                >
+                  All Prices
+                </button>
+                <button
+                  onClick={() => { setSelectedPriceTier('UNDER_49'); setCurrentPage(1); }}
+                  className={`px-2.5 py-1 rounded text-xs ${selectedPriceTier === 'UNDER_49' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                >
+                  Under ₹49
+                </button>
+                <button
+                  onClick={() => { setSelectedPriceTier('UNDER_99'); setCurrentPage(1); }}
+                  className={`px-2.5 py-1 rounded text-xs ${selectedPriceTier === 'UNDER_99' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                >
+                  Under ₹99
+                </button>
+              </div>
+
+              {(selectedCategory !== 'All' || selectedPriceTier !== 'ALL' || searchQuery) && (
+                <button
+                  onClick={() => {
+                    setSelectedCategory('All');
+                    setSelectedPriceTier('ALL');
+                    setSearchQuery('');
+                    setCurrentPage(1);
+                  }}
+                  className="flex items-center gap-1 text-[#9A704B] hover:text-[#24231F] transition-colors"
+                >
+                  <RotateCcw className="w-3.5 h-3.5" />
+                  <span>Reset Filters</span>
+                </button>
+              )}
+            </div>
           </div>
 
-          {/* Book Catalog: Either 3D Jacket Grid or Power Table */}
-          {currentBooks.length > 0 ? (
-            <>
-              {viewMode === 'grid' ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {currentBooks.map((book) => (
-                    <BookCard
-                      key={book.id}
-                      book={book}
-                      currency={currency}
-                      onSelectBuy={(b) => setBuyingBook(b)}
-                      onSelectPreview={(b) => setPreviewBook(b)}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <BookTable
-                  books={currentBooks}
-                  currency={currency}
-                  onSelectBuy={(b) => setBuyingBook(b)}
-                  onSelectPreview={(b) => setPreviewBook(b)}
-                />
-              )}
+          {/* High-Converting Trust Badges */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 text-xs font-sans">
+            <div className="flex items-center gap-2.5 p-3 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] text-[#24231F]">
+              <Zap className="w-4 h-4 text-[#9A704B] shrink-0" />
+              <div>
+                <p className="font-semibold text-[11px] leading-tight">Instant UPI Delivery</p>
+                <p className="text-[10px] text-[#81796D] leading-tight mt-0.5">Automated 0% fee checkout</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2.5 p-3 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] text-[#24231F]">
+              <BookOpen className="w-4 h-4 text-[#9A704B] shrink-0" />
+              <div>
+                <p className="font-semibold text-[11px] leading-tight">Universal DRM-Free</p>
+                <p className="text-[10px] text-[#81796D] leading-tight mt-0.5">PDF for Kindle, iPad & Mac</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2.5 p-3 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] text-[#24231F]">
+              <ShieldCheck className="w-4 h-4 text-[#9A704B] shrink-0" />
+              <div>
+                <p className="font-semibold text-[11px] leading-tight">100% Real Cover Scans</p>
+                <p className="text-[10px] text-[#81796D] leading-tight mt-0.5">Verified publisher editions</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2.5 p-3 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] text-[#24231F]">
+              <Lock className="w-4 h-4 text-[#9A704B] shrink-0" />
+              <div>
+                <p className="font-semibold text-[11px] leading-tight">Zero-Trace Privacy</p>
+                <p className="text-[10px] text-[#81796D] leading-tight mt-0.5">No accounts or tracking</p>
+              </div>
+            </div>
+          </div>
 
-              {/* Pagination Controls */}
-              {totalPages > 1 && (
-                <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800/80 pt-6">
-                  <p className="text-xs text-slate-400 font-mono">
-                    Page <span className="text-white font-bold">{currentPage}</span> of{' '}
-                    <span className="text-white font-bold">{totalPages}</span> ({filteredBooks.length.toLocaleString()} total eBooks)
-                  </p>
+          {/* Book Cards Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {currentBooks.map((book) => (
+              <BookCard
+                key={book.id}
+                book={book}
+                currency={currency}
+                onSelectBuy={(b) => setBuyingBook(b)}
+                onSelectPreview={(b) => setPreviewBook(b)}
+                onToggleWishlist={toggleWishlist}
+                isWishlisted={wishlist.some(w => w.id === book.id)}
+              />
+            ))}
+          </div>
 
-                  <div className="flex items-center space-x-2">
-                    <button
-                      onClick={() => handlePageChange(currentPage - 1)}
-                      disabled={currentPage <= 1}
-                      className="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-                    >
-                      ◀ Previous
-                    </button>
-
-                    {/* Page quick jumps */}
-                    <div className="flex items-center space-x-1">
-                      {Array.from({ length: Math.min(5, totalPages) }, (_, idx) => {
-                        let pageNum = currentPage;
-                        if (currentPage <= 3) {
-                          pageNum = idx + 1;
-                        } else if (currentPage >= totalPages - 2) {
-                          pageNum = totalPages - 4 + idx;
-                        } else {
-                          pageNum = currentPage - 2 + idx;
-                        }
-                        if (pageNum < 1 || pageNum > totalPages) return null;
-
-                        return (
-                          <button
-                            key={pageNum}
-                            onClick={() => handlePageChange(pageNum)}
-                            className={`w-8 h-8 rounded-lg text-xs font-mono font-bold transition-all ${
-                              currentPage === pageNum
-                                ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                                : 'bg-slate-900/60 border border-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-800'
-                            }`}
-                          >
-                            {pageNum}
-                          </button>
-                        );
-                      })}
-                    </div>
-
-                    <button
-                      onClick={() => handlePageChange(currentPage + 1)}
-                      disabled={currentPage >= totalPages}
-                      className="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-                    >
-                      Next ▶
-                    </button>
-                  </div>
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-dashed border-slate-800 p-8">
-              <BookOpen className="w-12 h-12 text-slate-600 mx-auto mb-3" />
-              <h3 className="text-base font-bold text-white">No eBooks match your filter</h3>
-              <p className="text-xs text-slate-400 mt-1 max-w-sm mx-auto">
-                Try clearing search terms or selecting "All Prices" to explore the full collection of {BOOK_CATALOG.length.toLocaleString()}+ verified titles.
-              </p>
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="mt-12 pt-6 border-t border-[#E8E4DC] flex items-center justify-between text-xs text-[#6E685F]">
               <button
-                onClick={handleResetFilters}
-                className="mt-4 px-4 py-2 bg-emerald-500 text-slate-950 rounded-xl text-xs font-bold hover:bg-emerald-400 transition-colors"
+                disabled={currentPage === 1}
+                onClick={() => {
+                  setCurrentPage(p => Math.max(1, p - 1));
+                  window.scrollTo({ top: document.getElementById('catalog-shelf')?.offsetTop || document.getElementById('catalog')?.offsetTop || 0, behavior: 'smooth' });
+                }}
+                className="px-4 py-2 rounded-lg border border-[#E8E4DC] bg-white hover:bg-[#FAF8F5] disabled:opacity-40 transition-colors flex items-center gap-1.5"
               >
-                Reset All Filters
+                <ChevronLeft className="w-4 h-4" />
+                <span>Previous</span>
+              </button>
+
+              <div className="font-mono text-xs text-[#24231F]">
+                Page <strong>{currentPage}</strong> of <strong>{totalPages}</strong>
+              </div>
+
+              <button
+                disabled={currentPage >= totalPages}
+                onClick={() => {
+                  setCurrentPage(p => Math.min(totalPages, p + 1));
+                  window.scrollTo({ top: document.getElementById('catalog-shelf')?.offsetTop || document.getElementById('catalog')?.offsetTop || 0, behavior: 'smooth' });
+                }}
+                className="px-4 py-2 rounded-lg border border-[#E8E4DC] bg-white hover:bg-[#FAF8F5] disabled:opacity-40 transition-colors flex items-center gap-1.5"
+              >
+                <span>Next</span>
+                <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           )}
         </section>
 
-        {/* Section 2: Emotional Mission Section */}
-        <EmotionalMissionSection />
+        {/* Brand Values & Publishing Standards */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E8E4DC]">
+          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+            <span className="text-xs uppercase font-sans font-semibold tracking-wider text-[#9A704B]">
+              The AnonTrove Standard
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
+              Why Engineers & Students Choose AnonTrove
+            </h2>
+            <p className="text-xs sm:text-sm text-[#6E685F]">
+              High-signal educational literature without bloated software subscriptions.
+            </p>
+          </div>
 
-        {/* Section 3: Where Our Service Fee Goes */}
-        <div id="service-fee-explanation">
-          <ServiceFeeBreakdown />
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-white border border-[#E8E4DC] rounded-xl p-6 space-y-2.5 shadow-book">
+              <div className="w-10 h-10 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] flex items-center justify-center text-[#9A704B]">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="font-serif text-base font-bold text-[#24231F]">DRM-Free Universal PDF</h3>
+              <p className="text-xs text-[#6E685F] leading-relaxed">
+                Permanent ownership of your files. Read on Kindle, iPad, Remarkable tablet, or desktop laptop with zero restrictions.
+              </p>
+            </div>
 
-        {/* Section 4: A Message to Students and Readers */}
-        <StudentMessageSection />
+            <div className="bg-white border border-[#E8E4DC] rounded-xl p-6 space-y-2.5 shadow-book">
+              <div className="w-10 h-10 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] flex items-center justify-center text-[#9A704B]">
+                <BookOpen className="w-5 h-5" />
+              </div>
+              <h3 className="font-serif text-base font-bold text-[#24231F]">Zero-Install Reader</h3>
+              <p className="text-xs text-[#6E685F] leading-relaxed">
+                Read immediately in your browser upon purchase. Clean responsive pagination, dark/sepia paper modes, and instant search.
+              </p>
+            </div>
 
-        {/* Section 5: Transparency and Trust */}
-        <TransparencyTrustSection />
+            <div className="bg-white border border-[#E8E4DC] rounded-xl p-6 space-y-2.5 shadow-book">
+              <div className="w-10 h-10 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] flex items-center justify-center text-[#9A704B]">
+                <Zap className="w-5 h-5" />
+              </div>
+              <h3 className="font-serif text-base font-bold text-[#24231F]">Direct UPI Checkout</h3>
+              <p className="text-xs text-[#6E685F] leading-relaxed">
+                Instant delivery using Google Pay, PhonePe, Paytm, FamPay, or BHIM with zero processing surcharges.
+              </p>
+            </div>
 
-        {/* Universal Guarantee & FAQ */}
+            <div className="bg-white border border-[#E8E4DC] rounded-xl p-6 space-y-2.5 shadow-book">
+              <div className="w-10 h-10 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] flex items-center justify-center text-[#9A704B]">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="font-serif text-base font-bold text-[#24231F]">100% Satisfaction Guarantee</h3>
+              <p className="text-xs text-[#6E685F] leading-relaxed">
+                Complete money-back guarantee if an edition does not match its catalog description or encounters reading defects.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter & Free Primer Funnel */}
+        <NewsletterSection />
+
+        {/* Frequently Asked Questions */}
         <FaqSection />
       </main>
 
-      {/* Section 8: Universal Mission Statement & Footer */}
       <Footer />
 
-      {/* Slide-Over Multi-Item Shopping Cart Drawer */}
-      <CartDrawer 
-        onStartCheckout={(orderData, gateway) => {
-          // Launch payment session modal with dynamic UPI QR & direct redirect option
-          setCartOrder(orderData);
-        }} 
-      />
+      {/* Modals & Drawers */}
+      {buyingBook && (
+        <PaymentModal
+          book={buyingBook}
+          onClose={() => setBuyingBook(null)}
+        />
+      )}
 
-      {/* Reader Modal (Look Inside) */}
       {previewBook && (
         <ReaderModal
           book={previewBook}
@@ -828,17 +544,29 @@ export default function HomePage() {
         />
       )}
 
-      {/* Dynamic UPI QR & Redirect Payment Modal */}
-      {(buyingBook || cartOrder) && (
+      {cartOrder && (
         <PaymentModal
-          book={buyingBook}
           initialOrder={cartOrder}
-          onClose={() => {
-            setBuyingBook(null);
-            setCartOrder(null);
-          }}
+          onClose={() => setCartOrder(null)}
         />
       )}
-    </>
+
+      <CartDrawer 
+        onStartCheckout={(orderData) => setCartOrder(orderData)} 
+      />
+
+      <WishlistDrawer
+        isOpen={isWishlistOpen}
+        onClose={() => setIsWishlistOpen(false)}
+        wishlist={wishlist}
+        onRemove={(id) => {
+          setWishlist(prev => {
+            const next = prev.filter(b => b.id !== id);
+            try { localStorage.setItem('anontrove_wishlist', JSON.stringify(next)); } catch {}
+            return next;
+          });
+        }}
+      />
+    </div>
   );
 }

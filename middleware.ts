@@ -11,6 +11,16 @@ const rateLimitMap = new Map<string, RateLimitBucket>();
 
 function checkRateLimit(ip: string, limit: number, windowMs: number): boolean {
   const now = Date.now();
+
+  // Periodic inline eviction if map grows
+  if (rateLimitMap.size > 1000) {
+    rateLimitMap.forEach((val, key) => {
+      if (now > val.resetAt) {
+        rateLimitMap.delete(key);
+      }
+    });
+  }
+
   const bucket = rateLimitMap.get(ip);
 
   if (!bucket || now > bucket.resetAt) {
@@ -28,16 +38,6 @@ function checkRateLimit(ip: string, limit: number, windowMs: number): boolean {
   bucket.count++;
   return true;
 }
-
-// Periodic cleanup to avoid memory leak in long-lived edge runtimes
-setInterval(() => {
-  const now = Date.now();
-  rateLimitMap.forEach((val, key) => {
-    if (now > val.resetAt) {
-      rateLimitMap.delete(key);
-    }
-  });
-}, 60000);
 
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;

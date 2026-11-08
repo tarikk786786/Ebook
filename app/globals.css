@@ -3,40 +3,60 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Playfair Display", "Lora", "Georgia", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+/* Warm Editorial Reading Canvas */
 body {
-  background-color: #0b0f17;
-  color: #f8fafc;
+  background-color: #F7F5F0;
+  color: #24231F;
   font-family: var(--font-sans);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Sleek Scrollbar */
+/* Human-Crafted Book Cover Aspect Ratio & Spine Shadow */
+.book-spine-shadow {
+  box-shadow: inset 3px 0 5px -1px rgba(0, 0, 0, 0.15),
+              0 8px 16px -2px rgba(36, 35, 31, 0.12),
+              0 2px 4px -1px rgba(36, 35, 31, 0.08);
+}
+
+/* Soft Editorial Dividers */
+hr, .border-editorial {
+  border-color: #E8E4DC;
+}
+
+/* Clean, Non-Neon Restrained Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0f17;
+  background: #F7F5F0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+  background: #D5CEBE;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #B5AC99;
 }
 
-/* Glow effects */
-.glow-emerald {
-  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+/* Focus states for accessibility without glow */
+*:focus-visible {
+  outline: 2px solid #9A704B;
+  outline-offset: 2px;
 }
 
-.glow-subtle {
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+/* Typography Enhancements */
+h1, h2, h3, .font-editorial {
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
 }
