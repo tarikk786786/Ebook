@@ -30,6 +30,9 @@ import {
 } from 'lucide-react';
 import CartDrawer from '@/components/CartDrawer';
 import { useCart } from '@/context/CartContext';
+import Footer from '@/components/Footer';
+import AvailabilityBadge from '@/components/AvailabilityBadge';
+import ServiceFeeInfoBox from '@/components/ServiceFeeInfoBox';
 
 interface BookDetailClientProps {
   book: Book;
@@ -216,6 +219,10 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   )}
                 </div>
 
+                <div className="mb-3">
+                  <AvailabilityBadge book={book} size="md" showDescription={true} />
+                </div>
+
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
                   {book.title}
                 </h1>
@@ -283,6 +290,9 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   </button>
                 </div>
               </div>
+
+              {/* Transparent Service Fee Explanation (Section 7) */}
+              <ServiceFeeInfoBox amountInInr={book.priceInInr} />
 
               {/* Description */}
               <div className="space-y-3">
@@ -419,6 +429,8 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
           )}
         </div>
       </main>
+
+      <Footer />
 
       {/* Reader Modal */}
       {isPreviewing && (

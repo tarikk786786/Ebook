@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/catalog';
 import { useCart } from '@/context/CartContext';
+import AvailabilityBadge from '@/components/AvailabilityBadge';
 import { 
   BookOpen, 
   Star, 
@@ -111,9 +112,7 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
               <span>{currentType.label}</span>
             </span>
             
-            <span className="px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-950 rounded-md shadow-md shrink-0">
-              -{discountPercent}%
-            </span>
+            <AvailabilityBadge book={book} size="sm" />
           </div>
         </div>
       </Link>
@@ -180,7 +179,7 @@ export default function BookCard({ book, currency = 'INR', onSelectBuy, onSelect
               </div>
               <span className="text-[10px] text-emerald-300 font-medium flex items-center space-x-1 mt-0.5">
                 <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                <span>Instant Razorpay & UPI Checkout</span>
+                <span>Instant FamPay UPI • 0% Fee</span>
               </span>
             </div>
 

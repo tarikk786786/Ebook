@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/catalog';
+import AvailabilityBadge from '@/components/AvailabilityBadge';
 import { 
   BookOpen, 
   Bookmark, 
@@ -122,10 +123,13 @@ export default function BookTable({
                   {/* Type & Category */}
                   <td className="py-3 px-4 hidden sm:table-cell">
                     <div className="flex flex-col gap-1 items-start">
-                      <span className={`px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border rounded-md flex items-center space-x-1 ${currentType.badgeCls}`}>
-                        <TypeIcon className="w-2.5 h-2.5" />
-                        <span>{currentType.label}</span>
-                      </span>
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className={`px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider border rounded-md flex items-center space-x-1 ${currentType.badgeCls}`}>
+                          <TypeIcon className="w-2.5 h-2.5" />
+                          <span>{currentType.label}</span>
+                        </span>
+                        <AvailabilityBadge book={book} size="sm" />
+                      </div>
                       <span className="text-[10px] text-slate-400 line-clamp-1">
                         {book.category}
                       </span>

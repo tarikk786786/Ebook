@@ -8,6 +8,12 @@ import ReaderModal from '@/components/ReaderModal';
 import PaymentModal from '@/components/PaymentModal';
 import CartDrawer from '@/components/CartDrawer';
 import FaqSection from '@/components/FaqSection';
+import EmotionalMissionSection from '@/components/EmotionalMissionSection';
+import ServiceFeeBreakdown from '@/components/ServiceFeeBreakdown';
+import StudentMessageSection from '@/components/StudentMessageSection';
+import TransparencyTrustSection from '@/components/TransparencyTrustSection';
+import Footer from '@/components/Footer';
+import AvailabilityBadge from '@/components/AvailabilityBadge';
 import { BOOK_CATALOG, Book } from '@/lib/catalog';
 import { 
   ShieldCheck, 
@@ -209,29 +215,59 @@ export default function HomePage() {
       />
 
       <main className="flex-1 bg-[#090D14]">
-        {/* Universal Bookstore Hero */}
-        <section className="relative overflow-hidden pt-12 pb-16 md:pt-16 md:pb-20 border-b border-slate-800/80">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
+        {/* Transparent Ebook Service Mission Hero (Section 1) */}
+        <section className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-800/80">
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-emerald-500/10 rounded-full blur-[160px] pointer-events-none" />
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
             {/* Pill */}
             <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-slate-300 mb-6 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Independent Digital Ebook Commerce</span>
+              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Ethical Knowledge Access</span>
               <span className="text-slate-600">•</span>
-              <span className="text-amber-300 font-semibold">Curated Demanded Digital Ebooks Starting at ₹29</span>
+              <span className="text-amber-300 font-semibold">Transparent Service Fee (from ₹29)</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Curated Digital Ebook Store.{' '}
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
-                Only Verified Demanded Editions.
-              </span>
+              Knowledge Should Never Be Out of Reach.
             </h1>
 
-            <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Discover and own <strong className="text-white">authentic, high-demand ebooks with verified covers</strong> across Software Engineering, Stock Trading, Cybersecurity, AI & Machine Learning, Zebra Learn, and Professional Guides. Instant Multi-Item Cart, exclusive FamPay UPI QR checkout, and instant DRM-free reading.
-            </p>
+            <div className="mt-6 text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed space-y-3.5 text-center">
+              <p>
+                Millions of useful books and learning resources already exist across the internet. Some are freely available, some are available through libraries, and others require subscriptions or purchases.
+              </p>
+              <p>
+                But finding the right book, checking its availability, identifying the correct edition and organizing everything in one place can take hours of searching.
+              </p>
+              <p className="text-emerald-300 font-medium">
+                We built this platform to make that journey easier.
+              </p>
+              <p className="text-slate-300 text-xs sm:text-sm">
+                Our small service fee supports the technology, storage, organization and maintenance that help bring useful learning resources together in one convenient destination.
+              </p>
+              <p className="text-white font-extrabold text-base sm:text-xl pt-2">
+                We believe that money should never be the reason someone gives up on learning.
+              </p>
+            </div>
+
+            {/* CTAs */}
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+              <a
+                href="#catalog-shelf"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 transition-all active:scale-[0.98]"
+              >
+                <BookOpen className="w-4 h-4" />
+                <span>Explore the Library</span>
+              </a>
+
+              <a
+                href="#service-fee-explanation"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-white font-bold text-sm flex items-center justify-center space-x-2 transition-all"
+              >
+                <span>How Our Service Works</span>
+                <ArrowRight className="w-4 h-4 text-emerald-400" />
+              </a>
+            </div>
 
             {/* Quick Value Pillars */}
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
@@ -773,9 +809,26 @@ export default function HomePage() {
           )}
         </section>
 
+        {/* Section 2: Emotional Mission Section */}
+        <EmotionalMissionSection />
+
+        {/* Section 3: Where Our Service Fee Goes */}
+        <div id="service-fee-explanation">
+          <ServiceFeeBreakdown />
+        </div>
+
+        {/* Section 4: A Message to Students and Readers */}
+        <StudentMessageSection />
+
+        {/* Section 5: Transparency and Trust */}
+        <TransparencyTrustSection />
+
         {/* Universal Guarantee & FAQ */}
         <FaqSection />
       </main>
+
+      {/* Section 8: Universal Mission Statement & Footer */}
+      <Footer />
 
       {/* Slide-Over Multi-Item Shopping Cart Drawer */}
       <CartDrawer 
