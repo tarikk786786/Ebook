@@ -4,7 +4,10 @@ const ALGORITHM = 'aes-256-gcm';
 
 // Derive a fixed 32-byte key from the secret
 function getKey(): Buffer {
-  const rawSecret = process.env.DOWNLOAD_ENCRYPTION_SECRET || 'fallback-super-secret-key-at-least-32-chars-long';
+  const rawSecret = process.env.DOWNLOAD_ENCRYPTION_SECRET;
+  if (!rawSecret || rawSecret.trim().length < 32) {
+    throw new Error('[FATAL SECURITY] DOWNLOAD_ENCRYPTION_SECRET environment variable is missing or shorter than 32 characters. Cryptographic operations halted to prevent insecure fallback token generation.');
+  }
   const secret = rawSecret.replace(/^\uFEFF/, '').trim();
   return crypto.scryptSync(secret, 'anontrove-salt-v1', 32);
 }

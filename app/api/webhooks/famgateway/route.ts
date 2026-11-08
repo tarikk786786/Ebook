@@ -40,35 +40,25 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid order_id structure' }, { status: 400 });
     }
 
-    // 2. Dual Verification Architecture
-    let isAuthentic = false;
-    if (signature) {
-      isAuthentic = verifyFamGatewaySignature(rawBody, signature);
+    // 2. Strict Cryptographic Verification Architecture
+    if (!signature) {
+      return NextResponse.json(
+        { error: 'Unauthorized: Missing webhook signature header' },
+        { status: 401 }
+      );
     }
 
-    // If signature is missing or verification failed, independently verify transaction
-    // directly through upstream authoritative status endpoint
+    const isAuthentic = verifyFamGatewaySignature(rawBody, signature);
     if (!isAuthentic) {
-      try {
-        const upstreamStatus = await checkOrderStatus(orderId);
-        if (upstreamStatus.status === 'success') {
-          isAuthentic = true;
-          // Sync bank UTR from authoritative upstream if available
-          if (upstreamStatus.utr && !payload.utr) {
-            payload.utr = upstreamStatus.utr;
-          }
-        }
-      } catch (upstreamErr) {
-        console.warn(`[FAMPAY WEBHOOK] Upstream status check failed for order ${orderId}:`, upstreamErr);
-      }
+      return NextResponse.json(
+        { error: 'Unauthorized: Webhook failed cryptographic verification' },
+        { status: 401 }
+      );
     }
 
-    if (!isAuthentic) {
-      return NextResponse.json({ error: 'Unauthorized: Webhook failed cryptographic & upstream verification' }, { status: 401 });
-    }
-
-    // 3. Match the correct order in store
-    const order = getOrderById(orderId);
+    // 3. Match the correct order in store (authoritative: local + cloud)
+    const { findOrderAuthoritative } = await import('@/lib/orders/store');
+    const order = await findOrderAuthoritative(orderId);
     if (!order) {
       return NextResponse.json({ error: 'Order reference not found in store' }, { status: 404 });
     }
@@ -80,7 +70,6 @@ export async function POST(req: NextRequest) {
         status: 'success',
         message: 'Idempotent: Order already fulfilled previously',
         order_id: orderId,
-        tokens: order.issuedTokens || [],
       }, { status: 200 });
     }
 
@@ -140,7 +129,6 @@ export async function POST(req: NextRequest) {
       status: 'success',
       message: 'Order fulfilled securely via FamPay',
       order_id: orderId,
-      tokens: issuedTokens,
     }, { status: 200 });
 
   } catch (err: any) {

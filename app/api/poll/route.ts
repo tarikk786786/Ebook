@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { checkOrderStatus } from '@/lib/famgateway';
 import { getBookById } from '@/lib/catalog';
 import { generateDownloadToken } from '@/lib/crypto';
-import { getOrderById, markOrderPaid } from '@/lib/orders/store';
+import { findOrderAuthoritative, markOrderPaid } from '@/lib/orders/store';
 
 export async function GET(req: NextRequest) {
   try {
@@ -15,30 +15,32 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid or missing order_id format' }, { status: 400 });
     }
 
-    // Look up persistent order record
-    const storedOrder = getOrderById(orderId);
+    // Look up persistent order record (authoritative: local + cloud)
+    const storedOrder = await findOrderAuthoritative(orderId);
+
+    // Fail Closed: If no verified order record exists, reject entitlement verification
+    if (!storedOrder) {
+      return NextResponse.json(
+        { error: 'Order reference not found in authoritative order records. Cannot verify purchase entitlement.' },
+        { status: 404 }
+      );
+    }
 
     // CRITICAL SECURITY FIX (BOLA / IDOR): Verify requested book belongs to this order
-    if (storedOrder) {
-      if (requestedBookId) {
-        const belongsToOrder = storedOrder.items.some(i => i.bookId === requestedBookId);
-        if (!belongsToOrder) {
-          return NextResponse.json(
-            { error: 'Security Authorization Failure: The requested book is not part of this purchased order.' },
-            { status: 403 }
-          );
-        }
-      }
-    } else if (requestedBookId) {
-      if (!/^[a-zA-Z0-9_-]{3,64}$/.test(requestedBookId) || !getBookById(requestedBookId)) {
-        return NextResponse.json({ error: 'Invalid book_id specified' }, { status: 400 });
+    if (requestedBookId) {
+      const belongsToOrder = storedOrder.items.some(i => i.bookId === requestedBookId);
+      if (!belongsToOrder) {
+        return NextResponse.json(
+          { error: 'Security Authorization Failure: The requested book is not part of this purchased order.' },
+          { status: 403 }
+        );
       }
     }
 
     // Check payment gateway status
-    let isPaid = storedOrder?.status === 'PAID' || storedOrder?.status === 'SUCCESS';
-    let verifiedAmount = storedOrder?.totalInr ? storedOrder.totalInr.toString() : '0';
-    let verifiedUtr = storedOrder?.bankUtr || 'VERIFIED-UPI';
+    let isPaid = storedOrder.status === 'PAID' || storedOrder.status === 'SUCCESS';
+    let verifiedAmount = storedOrder.totalInr ? storedOrder.totalInr.toString() : '0';
+    let verifiedUtr = storedOrder.bankUtr || 'VERIFIED-UPI';
 
     if (!isPaid) {
       const statusData = await checkOrderStatus(orderId);
@@ -66,19 +68,21 @@ export async function GET(req: NextRequest) {
     }
 
     if (isPaid) {
-      // Determine target book to generate token for
-      let targetBookId = requestedBookId;
-      if (!targetBookId && storedOrder && storedOrder.items.length > 0) {
-        targetBookId = storedOrder.items[0].bookId;
+      // Determine target book to generate token for strictly from verified order items
+      if (!storedOrder.items || storedOrder.items.length === 0) {
+        return NextResponse.json({ error: 'Order contains no valid items' }, { status: 400 });
       }
 
-      const book = targetBookId ? getBookById(targetBookId) : null;
-      const fileName = book ? book.fileName : (storedOrder?.items[0]?.fileName || 'purchased-ebook.pdf');
+      const targetBookId = requestedBookId || storedOrder.items[0].bookId;
+      const targetItem = storedOrder.items.find(i => i.bookId === targetBookId) || storedOrder.items[0];
+
+      const book = getBookById(targetBookId);
+      const fileName = book ? book.fileName : (targetItem.fileName || 'purchased-ebook.pdf');
 
       // Generate single-use, 24h encrypted download token (AES-256-GCM)
       const primaryToken = generateDownloadToken({
         orderId,
-        bookId: targetBookId || 'book-zero-trace',
+        bookId: targetBookId,
         fileName,
         issuedAt: Date.now(),
         ttlMs: 24 * 60 * 60 * 1000, // 24 hours
@@ -86,7 +90,7 @@ export async function GET(req: NextRequest) {
       });
 
       // Also generate tokens for all books in a multi-item cart
-      const downloadItems = (storedOrder?.items || []).map(item => {
+      const downloadItems = storedOrder.items.map(item => {
         const itemBook = getBookById(item.bookId);
         const itemFileName = itemBook ? itemBook.fileName : item.fileName;
         const itemToken = generateDownloadToken({
@@ -111,7 +115,7 @@ export async function GET(req: NextRequest) {
         utr: verifiedUtr,
         token: primaryToken,
         downloadUrl: `/api/download/${primaryToken}`,
-        bookTitle: book?.title || storedOrder?.items[0]?.title || 'Purchased eBook',
+        bookTitle: book?.title || storedOrder.items[0]?.title || 'Purchased eBook',
         downloadItems: downloadItems.length > 0 ? downloadItems : undefined,
       });
     }

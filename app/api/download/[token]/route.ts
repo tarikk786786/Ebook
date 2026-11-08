@@ -42,6 +42,19 @@ function incrementTokenDownloadCount(tokenHash: string): number {
   return current;
 }
 
+function inferMimeType(fileName: string): string {
+  const ext = path.extname(fileName).toLowerCase();
+  switch (ext) {
+    case '.pdf': return 'application/pdf';
+    case '.epub': return 'application/epub+zip';
+    case '.mobi': return 'application/x-mobipocket-ebook';
+    case '.azw3': return 'application/vnd.amazon.ebook';
+    case '.cbz': return 'application/vnd.comicbook+zip';
+    case '.zip': return 'application/zip';
+    default: return 'application/octet-stream';
+  }
+}
+
 export async function GET(
   req: NextRequest,
   { params }: { params: { token: string } }
@@ -153,7 +166,7 @@ export async function GET(
       return new NextResponse(fileStream as any, {
         status: 200,
         headers: {
-          'Content-Type': 'application/pdf',
+          'Content-Type': inferMimeType(safeFileName),
           'Content-Length': stat.size.toString(),
           'Content-Disposition': `attachment; filename="${safeFileName}"`,
           'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0',

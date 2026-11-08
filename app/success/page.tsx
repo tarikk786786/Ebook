@@ -25,6 +25,7 @@ function SuccessContent() {
   const [status, setStatus] = useState<'pending' | 'verified' | 'failed'>('pending');
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
+  const [readerToken, setReaderToken] = useState<string | null>(null);
   const [downloadItems, setDownloadItems] = useState<Array<{ bookId: string; title: string; downloadUrl: string }>>([]);
   const [utr, setUtr] = useState<string>('');
   const [orderAmount, setOrderAmount] = useState<string>('');
@@ -47,6 +48,7 @@ function SuccessContent() {
       if (data.status === 'success' && data.token) {
         setStatus('verified');
         setDownloadUrl(data.downloadUrl);
+        setReaderToken(data.token);
         if (data.downloadItems) {
           setDownloadItems(data.downloadItems);
         }
@@ -150,7 +152,15 @@ function SuccessContent() {
                 )
               )}
 
-              {book && (
+              {readerToken ? (
+                <Link
+                  href={`/reader/${encodeURIComponent(readerToken)}`}
+                  className="w-full py-3 px-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 text-slate-200 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-colors"
+                >
+                  <BookOpen className="w-4 h-4 text-emerald-400" />
+                  <span>Open in Secure In-Browser Reader</span>
+                </Link>
+              ) : book ? (
                 <Link
                   href={`/book/${book.slug}/read`}
                   className="w-full py-3 px-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-colors"
@@ -158,7 +168,7 @@ function SuccessContent() {
                   <BookOpen className="w-4 h-4 text-emerald-400" />
                   <span>Open in Browser Reader</span>
                 </Link>
-              )}
+              ) : null}
             </div>
           </>
         ) : status === 'pending' ? (

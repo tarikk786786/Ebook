@@ -28,9 +28,9 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+      "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob: https://famgateway.in https://images.unsplash.com https://*.r2.cloudflarestorage.com",
+      "img-src 'self' data: blob: https://famgateway.in https://images.unsplash.com https://api.qrserver.com https://covers.openlibrary.org https://books.google.com https://*.r2.cloudflarestorage.com",
       "connect-src 'self' https://famgateway.in https://*.supabase.co",
       "font-src 'self' data:",
       "object-src 'none'",

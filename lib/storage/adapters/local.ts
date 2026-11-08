@@ -11,7 +11,11 @@ export class LocalStorageAdapter implements IStorageAdapter {
 
   constructor(baseDir?: string, signSecret?: string) {
     this.baseDir = baseDir || path.resolve(process.cwd(), 'private_storage');
-    this.signSecret = signSecret || process.env.STORAGE_SIGN_SECRET || 'anontrove-local-storage-secret-key-32';
+    const secret = signSecret || process.env.STORAGE_SIGN_SECRET || process.env.DOWNLOAD_ENCRYPTION_SECRET;
+    if (!secret || secret.trim().length < 32) {
+      throw new Error('[FATAL SECURITY] STORAGE_SIGN_SECRET or DOWNLOAD_ENCRYPTION_SECRET must be configured (min 32 characters) for LocalStorageAdapter.');
+    }
+    this.signSecret = secret.trim();
     if (!fs.existsSync(this.baseDir)) {
       try {
         fs.mkdirSync(this.baseDir, { recursive: true });

@@ -89,3 +89,69 @@ export async function updateSupabaseOrderStatus(
     return false;
   }
 }
+
+/**
+ * Authoritatively retrieves an order by order_id or order_number from Supabase.
+ */
+export async function fetchOrderByOrderId(orderId: string): Promise<StoredOrder | null> {
+  if (!isSupabaseConfigured()) return null;
+
+  try {
+    const encodedId = encodeURIComponent(orderId);
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/orders?or=(gateway_order_id.eq.${encodedId},order_number.eq.${encodedId})&select=*`,
+      {
+        method: 'GET',
+        headers: getHeaders(),
+        cache: 'no-store',
+      }
+    );
+
+    if (!res.ok) return null;
+    const rows = await res.json();
+    if (!Array.isArray(rows) || rows.length === 0) return null;
+
+    const row = rows[0];
+
+    // Query itemized purchases
+    let items: any[] = [];
+    try {
+      const itemsRes = await fetch(
+        `${SUPABASE_URL}/rest/v1/order_items?order_id=eq.${encodeURIComponent(row.id)}&select=*`,
+        { method: 'GET', headers: getHeaders(), cache: 'no-store' }
+      );
+      if (itemsRes.ok) {
+        const itemRows = await itemsRes.json();
+        if (Array.isArray(itemRows)) {
+          items = itemRows.map(it => ({
+            bookId: it.book_id,
+            title: it.title || it.book_id,
+            priceInInr: it.price_at_purchase || 0,
+            fileName: it.file_name || `${it.book_id}.pdf`,
+          }));
+        }
+      }
+    } catch {}
+
+    return {
+      orderId: row.gateway_order_id || row.order_number,
+      orderNumber: row.order_number,
+      gatewayOrderId: row.gateway_order_id,
+      customerEmail: row.customer_email,
+      customerPhone: row.customer_phone,
+      items,
+      subtotalInr: row.subtotal_inr,
+      discountInr: row.discount_inr || 0,
+      totalInr: row.total_inr,
+      couponCode: row.coupon_code,
+      gateway: row.gateway || 'FAMPAY',
+      status: row.status,
+      createdAt: row.created_at,
+      paidAt: row.paid_at,
+      bankUtr: row.bank_utr,
+    };
+  } catch (err) {
+    console.warn('[SUPABASE] fetchOrderByOrderId failure:', err);
+    return null;
+  }
+}

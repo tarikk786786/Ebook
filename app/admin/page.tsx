@@ -433,6 +433,14 @@ export default function AdminDashboardPage() {
               <span className="hidden md:inline">Tools Manager</span>
             </Link>
             <Link
+              href="/admin/discovery"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/80 text-xs text-emerald-300 hover:border-emerald-500/80 hover:text-white transition-colors"
+              title="Global 1,000 Startup and Business Book Discovery Engine"
+            >
+              <Database className="w-3.5 h-3.5 text-emerald-400" />
+              <span className="hidden md:inline">1,000 Discovery</span>
+            </Link>
+            <Link
               href="/admin/scraper"
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-teal-400 hover:border-teal-500/50 hover:text-white transition-colors"
               title="Manage Universal Ebook Scraper and Discovery"

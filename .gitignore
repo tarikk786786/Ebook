@@ -37,5 +37,6 @@ Thumbs.db
 # Storage and large binaries
 private_storage/
 data/collector_state.json
+*.db
 appinfo11.txt
 appinfo11*.txt

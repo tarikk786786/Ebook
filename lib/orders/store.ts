@@ -104,6 +104,28 @@ export function getOrderById(id: string): StoredOrder | undefined {
 }
 
 /**
+ * Authoritatively retrieves an order checking local memory/disk cache first,
+ * falling back to Supabase PostgreSQL database when running in ephemeral serverless runtimes.
+ */
+export async function findOrderAuthoritative(id: string): Promise<StoredOrder | null> {
+  const localOrder = getOrderById(id);
+  if (localOrder) return localOrder;
+
+  try {
+    const { fetchOrderByOrderId } = await import('@/lib/supabase');
+    const cloudOrder = await fetchOrderByOrderId(id);
+    if (cloudOrder) {
+      saveOrder(cloudOrder);
+      return cloudOrder;
+    }
+  } catch (err) {
+    console.warn('[ORDERS STORE] Authoritative cloud lookup failed:', err);
+  }
+
+  return null;
+}
+
+/**
  * Updates order status according to strict payment lifecycle rules.
  * CRITICAL INVARIANT: A successful payment ('SUCCESS' / 'PAID') can NEVER be reverted by late failure/expiry events.
  */

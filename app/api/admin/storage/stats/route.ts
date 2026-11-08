@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getStorageAdapter } from '@/lib/storage';
+import { verifyAdminAccess } from '@/lib/auth/admin';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(req: NextRequest) {
+  if (!verifyAdminAccess(req)) {
+    return NextResponse.json(
+      { success: false, error: 'Unauthorized: Admin authentication token required' },
+      { status: 401 }
+    );
+  }
+
   try {
     const storage = getStorageAdapter();
     const [connTest, usage] = await Promise.all([

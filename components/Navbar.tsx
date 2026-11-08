@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { BookOpen, Search, Zap, Lock, Sparkles, Tag, ShoppingBag, Bookmark, Wrench } from 'lucide-react';
+import { BookOpen, Search, Zap, Lock, Sparkles, Tag, ShoppingBag, Bookmark, Wrench, Globe } from 'lucide-react';
 
 interface NavbarProps {
   searchQuery?: string;
@@ -85,6 +85,16 @@ export default function Navbar({
 
         {/* Action Controls & Value Badges */}
         <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+          {/* 1,000 Curated Discovery Catalog Link */}
+          <Link
+            href="/books"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-emerald-950/50 border border-emerald-800/60 hover:border-emerald-500/60 text-xs font-semibold text-emerald-300 hover:text-emerald-200 transition-colors"
+            title="1,000 Global Startup & Business Books Discovery"
+          >
+            <Globe className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="hidden sm:inline">1,000 Books</span>
+          </Link>
+
           {/* Mission Link */}
           <Link
             href="/mission"
@@ -144,7 +154,7 @@ export default function Navbar({
           {/* UPI Direct badge */}
           <div className="hidden lg:flex items-center space-x-1 px-2.5 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300">
             <Zap className="h-3.5 w-3.5 text-emerald-400 fill-emerald-400" />
-            <span className="font-semibold text-[11px]">Razorpay + UPI</span>
+            <span className="font-semibold text-[11px]">FamPay UPI Direct</span>
           </div>
         </div>
       </div>
