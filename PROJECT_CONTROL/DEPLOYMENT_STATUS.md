@@ -15,10 +15,21 @@
 ### 1. Instant Active Live Domain
 - `https://tarikk786786.github.io` &mdash; **LIVE (HTTP 200 OK)**. Complete bookstore and 1,600+ catalog titles embedded with zero external branding.
 
-### 2. Edge-Verified Free Domain
-- `tarik.thedev.id` &mdash; Verified on Vercel Edge (`thedev-id/thedev.id` [PR #1390](https://github.com/thedev-id/thedev.id/pull/1390)).
+### 2. Devs.Surf Domains Claimed & Authoritatively Configured (API)
+*All 5 registered under account `Tarik Islam` (`princetarikislam@gmail.com`) with CNAME pointing to `cname.vercel-dns.com` and `_vercel` verification TXT:*
+| Domain | Status | DNS Target | Record Types |
+|---|---|---|---|
+| **`tbbooks.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
+| **`tarik.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
+| **`ebook.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
+| **`read.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
+| **`tbstore.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
 
-### 3. Official Developer Registry PRs Submitted & Queued
+### 3. Edge-Verified Free Domains on Vercel
+- `tarik.thedev.id` &mdash; Verified on Vercel Edge (`thedev-id/thedev.id` [PR #1390](https://github.com/thedev-id/thedev.id/pull/1390)).
+- `tb.us.kg`, `book.us.kg`, `tbbooks.us.kg`, `tarik.us.kg`, `ebook.us.kg` &mdash; Pre-Verified on Vercel Edge.
+
+### 4. Official Developer Registry PRs Submitted & Queued
 | Domain | Registry | PR Link | Status |
 |---|---|---|---|
 | `tb.is-a.bot` | `free-domains/is-a.bot` | [PR #784](https://github.com/free-domains/is-a.bot/pull/784) | Passing CI (Domain) |
@@ -38,5 +49,5 @@
 ---
 
 ## 🔒 Security & Credential Hygiene
-- All access tokens and DNS configurations are centralized and synchronized in `appinfo11.txt`.
+- All API keys, tokens (including `DEVS_SURF_API_KEY`), and DNS configurations are centralized and synchronized in `appinfo11.txt`.
 - No sensitive keys or tokens committed to public Git repos.
