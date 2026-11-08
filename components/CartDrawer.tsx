@@ -126,7 +126,7 @@ export default function CartDrawer({ onStartCheckout }: CartDrawerProps) {
               </div>
               <h4 className="text-sm font-bold text-white">Your cart is empty</h4>
               <p className="text-xs text-slate-400 max-w-xs mx-auto">
-                Explore over 1,668+ curated e-books, guides, and courses starting at just ₹29.
+                Explore over 12,000+ curated e-books, technical guides, and courses starting at just ₹29.
               </p>
               <button
                 onClick={closeCart}

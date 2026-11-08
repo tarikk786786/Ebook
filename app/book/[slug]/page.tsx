@@ -32,13 +32,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+  const canonicalUrl = `${siteUrl}/book/${book.slug}`;
+  const cleanDescription = book.description 
+    ? book.description.slice(0, 160) 
+    : `${book.title} by ${book.author}. Download verified DRM-free PDF technical guide at AnonTrove.`;
+  const coverUrl = book.coverImage 
+    ? (book.coverImage.startsWith('http') ? book.coverImage : `${siteUrl}${book.coverImage}`)
+    : undefined;
+
   return {
     title: `${book.title} by ${book.author} | AnonTrove Digital Bookstore`,
-    description: book.description,
+    description: cleanDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
-      title: `${book.title} | ${book.subtitle}`,
-      description: book.description,
-      images: [book.coverImage],
+      title: `${book.title} | ${book.subtitle || 'AnonTrove Digital Edition'}`,
+      description: cleanDescription,
+      url: canonicalUrl,
+      siteName: 'AnonTrove',
+      images: coverUrl ? [coverUrl] : undefined,
+      type: 'book',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${book.title} by ${book.author}`,
+      description: cleanDescription,
+      images: coverUrl ? [coverUrl] : undefined,
     },
   };
 }
@@ -49,6 +70,72 @@ export default function BookDetailPage({ params }: Props) {
   if (!book) {
     notFound();
   }
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
+  const canonicalUrl = `${siteUrl}/book/${book.slug}`;
+  const coverUrl = book.coverImage 
+    ? (book.coverImage.startsWith('http') ? book.coverImage : `${siteUrl}${book.coverImage}`)
+    : undefined;
+
+  // Schema.org: Book + Offer + Breadcrumbs (Strict Zero Fake Reviews Compliance)
+  const bookSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Book',
+    name: book.title,
+    headline: book.subtitle || book.title,
+    author: {
+      '@type': 'Person',
+      name: book.author || 'Author',
+    },
+    ...(book.publisher ? {
+      publisher: {
+        '@type': 'Organization',
+        name: book.publisher,
+      }
+    } : {}),
+    bookFormat: 'https://schema.org/EBook',
+    ...(book.pages ? { numberOfPages: book.pages } : {}),
+    inLanguage: book.language || 'en',
+    description: book.description,
+    ...(coverUrl ? { image: coverUrl } : {}),
+    url: canonicalUrl,
+    offers: {
+      '@type': 'Offer',
+      price: book.priceInInr,
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: canonicalUrl,
+      seller: {
+        '@type': 'Organization',
+        name: 'AnonTrove',
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: siteUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: book.category || 'eBooks',
+        item: `${siteUrl}#categories`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: book.title,
+        item: canonicalUrl,
+      },
+    ],
+  };
 
   // Get related books safely
   const bookTags = Array.isArray(book.tags) ? book.tags : [];
@@ -61,5 +148,17 @@ export default function BookDetailPage({ params }: Props) {
     return false;
   }).slice(0, 4);
 
-  return <BookDetailClient book={book} relatedBooks={relatedBooks} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <BookDetailClient book={book} relatedBooks={relatedBooks} />
+    </>
+  );
 }

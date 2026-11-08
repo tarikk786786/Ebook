@@ -775,7 +775,7 @@ export default function HomePage() {
               <BookOpen className="w-12 h-12 text-slate-600 mx-auto mb-3" />
               <h3 className="text-base font-bold text-white">No eBooks match your filter</h3>
               <p className="text-xs text-slate-400 mt-1 max-w-sm mx-auto">
-                Try clearing search terms or selecting "All Prices" to explore the full collection of 1,668+ titles.
+                Try clearing search terms or selecting "All Prices" to explore the full collection of {BOOK_CATALOG.length.toLocaleString()}+ verified titles.
               </p>
               <button
                 onClick={handleResetFilters}
