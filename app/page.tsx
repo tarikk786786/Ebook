@@ -203,7 +203,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E4DC] text-xs font-sans font-medium text-[#81796D]">
                 <Award className="w-3.5 h-3.5 text-[#9A704B]" />
-                <span>Independent Digital Bookstore • 86,269+ Verified Documents & Titles</span>
+                <span>Independent Digital Bookstore • 18,100+ Books & Study Guides</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#24231F] leading-[1.12]">
@@ -217,11 +217,11 @@ export default function HomePage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
                 <a
-                  href="#catalog"
+                  href="#catalog-shelf"
                   className="w-full sm:w-auto px-6 py-3.5 bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-sm"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span>Explore 86,269+ Titles</span>
+                  <span>Explore 18,100+ Titles</span>
                 </a>
 
                 <a
@@ -245,7 +245,7 @@ export default function HomePage() {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#9A704B]" />
-                  <span>Direct UPI & Card Settlement</span>
+                  <span>Direct Instant UPI Delivery</span>
                 </span>
               </div>
             </div>
@@ -331,7 +331,7 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FAF6F1] border border-[#F2E8DC] text-[#9A704B] text-[11px] font-semibold uppercase tracking-wider mb-2">
                 <Award className="w-3.5 h-3.5 text-[#9A704B]" />
-                Top Demanded Literature • Highest Rated by Founders & Engineers
+                Curated Academic & Professional Literature • Instant PDF Delivery
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
                 Bestsellers & Most Demanded Titles
@@ -341,10 +341,10 @@ export default function HomePage() {
               </p>
             </div>
             <a
-              href="#catalog"
+              href="#catalog-shelf"
               className="inline-flex items-center space-x-1.5 text-xs font-medium text-[#9A704B] hover:text-[#7A583B] transition-colors"
             >
-              <span>View All 12,192+ Titles</span>
+              <span>View All 18,100+ Titles</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

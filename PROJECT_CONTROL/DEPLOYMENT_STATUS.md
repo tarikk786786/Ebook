@@ -57,6 +57,10 @@ Suffixes that are registered in Mozilla PSL are accepted by Vercel edge without 
 | `tarik.is-not.cool` | `is-not-cool/registration` | [PR #288](https://github.com/is-not-cool/registration/pull/288) | Queued |
 | `tb.creepers.sbs` | `creepersbs/register` | [PR #167](https://github.com/creepersbs/register/pull/167) | Queued |
 | `tarik.creepers.sbs` | `creepersbs/register` | [PR #168](https://github.com/creepersbs/register/pull/168) | Queued |
+| **`tb.is-a-good.dev`** | `is-a-good-dev/register` | [PR #1380](https://github.com/is-a-good-dev/register/pull/1380) | **New (Queued)** |
+| **`tb.is-amaz.ing`** | `is-amazing/register` | [PR #309](https://github.com/is-amazing/register/pull/309) | **New (Queued)** |
+| **`tb.foo.ng`** | `Pokymon/foo.ng` | [PR #378](https://github.com/Pokymon/foo.ng/pull/378) | **New (Queued)** |
+| **`tb.cool.fluxcast.dev`** | `IlyaP358/fluxcast-domains` | [PR #141](https://github.com/IlyaP358/fluxcast-domains/pull/141) | **New (Queued)** |
 
 ---
 

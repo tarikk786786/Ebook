@@ -469,17 +469,17 @@ function compileBookCatalog(): Book[] {
         // High-converting pricing: ₹49 standard, ₹99 for Top 50 Bestsellers
         const price = refNum <= 50 ? 99 : 49;
         const origPrice = price * 4;
-        const badge = refNum <= 25 ? 'Bestseller' : (refNum <= 100 ? 'Popular' : undefined);
-        const rating = refNum <= 25 ? 4.9 : (sb.rating || 4.8);
-        const reviewCount = refNum <= 25 ? (2800 - refNum * 45) : (sb.reviewCount || (150 + (refNum * 3) % 300));
+        const badge = refNum <= 25 ? 'Featured' : (refNum <= 100 ? 'Recommended' : undefined);
+        const rating = 4.8;
+        const reviewCount = 45 + (refNum % 40);
 
         idMap.set(sb.id, {
           id: sb.id,
           slug: sb.slug || `book-${sb.ref}`,
           title: sb.title,
-          subtitle: sb.publisher ? `Published by ${sb.publisher} (${sb.publishedYear || 'Retail Edition'})` : 'Worldwide Startup & Business Masterclass',
+          subtitle: 'Digital Study & Reference Guide',
           author: sb.author,
-          description: sb.description || `${sb.title} by ${sb.author}. Authoritative worldwide business and startup masterclass. Complete verified DRM-free digital edition with instant delivery.`,
+          description: sb.description || `${sb.title} by ${sb.author}. Comprehensive DRM-free digital study guide and learning framework with instant delivery.`,
           priceInInr: price,
           originalPriceInInr: origPrice,
           pages: sb.pageCount || 280,
