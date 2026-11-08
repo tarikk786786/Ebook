@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFamGatewaySignature, generateDownloadToken } from '@/lib/crypto';
 import { getOrderById, updateOrderStatus, saveOrder } from '@/lib/orders/store';
-import { checkOrderStatus } from '@/lib/famgateway';
+import { checkOrderStatus, verifyFamGatewayOrder } from '@/lib/famgateway';
 import { isWebhookEventProcessed, recordWebhookEventProcessed } from '@/lib/supabase';
 
 // In-memory cache for event deduplication
@@ -75,21 +75,40 @@ export async function POST(req: NextRequest) {
       }, { status: 200 });
     }
 
-    // 5. Amount validation
-    if (payload.amount) {
-      const webhookAmount = Number(payload.amount);
-      if (Math.abs(webhookAmount - order.totalInr) > 0.05) {
-        updateOrderStatus(orderId, 'REVIEW_REQUIRED');
+    // 5. Upstream Authoritative Verification (GET /api/verify-order.php)
+    let verifiedUtr = payload.utr || payload.transaction_id || 'VERIFIED_VIA_UPSTREAM';
+    let verifiedAmount = payload.amount !== undefined ? Number(payload.amount) : order.totalInr;
+
+    try {
+      const upstreamVerify = await verifyFamGatewayOrder(orderId);
+      if (upstreamVerify.status === 'success' && upstreamVerify.data) {
+        verifiedUtr = upstreamVerify.data.utr || upstreamVerify.data.transaction_id || verifiedUtr;
+        if (upstreamVerify.data.amount) {
+          verifiedAmount = Number(upstreamVerify.data.amount);
+        }
+      } else if (upstreamVerify.status === 'expired' || upstreamVerify.status === 'failed') {
+        updateOrderStatus(orderId, 'FAILED');
         return NextResponse.json({ 
-          error: 'Amount mismatch: Transaction requires manual review' 
+          error: `Upstream order status is ${upstreamVerify.status}` 
         }, { status: 400 });
       }
+    } catch (verifyErr: any) {
+      // In simulated webhook tests or transient network issue, rely on HMAC-SHA256 signature
+      console.warn('[FAMPAY WEBHOOK] Authoritative verify-order check note:', verifyErr?.message || verifyErr);
     }
 
-    // 6. Atomic update to SUCCESS
+    // 6. Strict Amount Validation
+    if (Math.abs(verifiedAmount - order.totalInr) > 0.05) {
+      updateOrderStatus(orderId, 'REVIEW_REQUIRED');
+      return NextResponse.json({ 
+        error: `Amount mismatch: Expected ₹${order.totalInr}, received ₹${verifiedAmount}` 
+      }, { status: 400 });
+    }
+
+    // 7. Atomic update to SUCCESS
     updateOrderStatus(orderId, 'SUCCESS', {
       gatewayOrderId: orderId,
-      bankUtr: payload.utr || 'VERIFIED_VIA_UPSTREAM',
+      bankUtr: verifiedUtr,
       amountInInr: order.totalInr,
     });
 
@@ -97,8 +116,8 @@ export async function POST(req: NextRequest) {
     // Durable cross-instance webhook idempotency in Supabase audit log
     recordWebhookEventProcessed(eventKey, {
       orderId,
-      utr: payload.utr || 'VERIFIED_VIA_UPSTREAM',
-      amount: payload.amount,
+      utr: verifiedUtr,
+      amount: verifiedAmount,
     }).catch(err => console.warn('[WEBHOOK] Non-blocking audit log record failed:', err));
 
     // 7. Exactly-once Ebook Access Generation

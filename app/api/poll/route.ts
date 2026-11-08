@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { checkOrderStatus } from '@/lib/famgateway';
+import { checkOrderStatus, verifyFamGatewayOrder } from '@/lib/famgateway';
 import { getBookById } from '@/lib/catalog';
 import { generateDownloadToken } from '@/lib/crypto';
 import { findOrderAuthoritative, markOrderPaid } from '@/lib/orders/store';
@@ -48,6 +48,20 @@ export async function GET(req: NextRequest) {
         isPaid = true;
         verifiedAmount = statusData.amount || verifiedAmount;
         verifiedUtr = statusData.utr || statusData.transaction_id || verifiedUtr;
+
+        // Perform authoritative secondary check if API key is present
+        try {
+          const authVerify = await verifyFamGatewayOrder(orderId);
+          if (authVerify.status === 'success' && authVerify.data) {
+            verifiedUtr = authVerify.data.utr || authVerify.data.transaction_id || verifiedUtr;
+            if (authVerify.data.amount) {
+              verifiedAmount = String(authVerify.data.amount);
+            }
+          }
+        } catch (authErr) {
+          console.warn('[POLL] Secondary verification note:', authErr);
+        }
+
         markOrderPaid(orderId, {
           bankUtr: verifiedUtr,
           amountInInr: Number(verifiedAmount) || undefined,

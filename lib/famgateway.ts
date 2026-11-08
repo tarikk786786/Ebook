@@ -1,6 +1,7 @@
 /**
  * FamGateway Client Library (TypeScript / Next.js)
- * Official FamGateway API reference: https://famgateway.in/docs.md
+ * Official FamGateway API reference: https://famgateway.in/docs.txt
+ * OpenAPI Spec: https://famgateway.in/openapi.json
  * Non-custodial 0.0% fee automated UPI payment gateway.
  */
 
@@ -36,6 +37,20 @@ export interface OrderStatusResponse {
   transaction_id?: string;
   utr?: string;
   sender_name?: string;
+  message?: string;
+}
+
+export interface VerifyOrderResponse {
+  status: 'success' | 'pending' | 'expired' | 'failed';
+  data?: {
+    order_id: string;
+    transaction_id: string;
+    amount: number;
+    payable_amount: number;
+    utr: string;
+    sender_name?: string;
+    payment_time_ist?: string;
+  };
   message?: string;
 }
 
@@ -103,6 +118,43 @@ export async function checkOrderStatus(orderId: string): Promise<OrderStatusResp
 
   if (!response.ok) {
     throw new Error(`Status check HTTP error (${response.status})`);
+  }
+
+  return await response.json();
+}
+
+/**
+ * Authoritative Server-to-Server Order Verification using FamGateway's authenticated API.
+ * Uses X-Api-Key to fetch bank UTR and authoritative confirmation.
+ */
+export async function verifyFamGatewayOrder(orderId: string): Promise<VerifyOrderResponse> {
+  const rawApiKey = process.env.FAMGATEWAY_API_KEY;
+  if (!rawApiKey) {
+    throw new Error('FAMGATEWAY_API_KEY environment variable is not configured');
+  }
+  const apiKey = rawApiKey.replace(/^\uFEFF/, '').trim();
+
+  const url = `${BASE_URL}/api/verify-order.php?order_id=${encodeURIComponent(orderId)}`;
+  const response = await fetch(url, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'X-Api-Key': apiKey,
+    },
+    cache: 'no-store',
+  });
+
+  if (!response.ok) {
+    if (response.status === 408) {
+      return { status: 'expired', message: 'Order expired - payment window timed out' };
+    }
+    if (response.status === 404) {
+      return { status: 'failed', message: 'Order not found' };
+    }
+    if (response.status === 401) {
+      throw new Error('FamGateway API authentication failed (invalid API key)');
+    }
+    throw new Error(`FamGateway order verification HTTP error (${response.status})`);
   }
 
   return await response.json();
