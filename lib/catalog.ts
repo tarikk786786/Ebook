@@ -1,4 +1,5 @@
-import dynamicBooks from '@/data/books_registry.json';
+import demandedBooks from '@/data/demanded_books_registry.json';
+import rawDynamicBooks from '@/data/books_registry.json';
 
 export interface Book {
   id: string;
@@ -91,7 +92,7 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
     "reviewCount": 680,
     "readingTime": "9.2 hrs",
     "edition": "First Edition (Zebra Learn)",
-    "coverImage": "/covers/startupology.jpg",
+    "coverImage": "/covers/startupology-by-vivek-chadha.jpg",
     "sampleExcerpt": [
       "Startupology by Vivek Chadha - Zebra Learn New Book. Your Day One Startup Manual."
     ],
@@ -124,7 +125,7 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
     "reviewCount": 512,
     "readingTime": "6.5 hrs",
     "edition": "2026 Edition (Zebra Learn)",
-    "coverImage": "/covers/the-money-guide.jpg",
+    "coverImage": "/covers/the-money-guide-by-anushka-rathod-how-to-manage-your-taxes-investments.jpg",
     "sampleExcerpt": [
       "The Money Guide by Anushka Rathod: How to Manage Your Taxes, Investments, and Build Sustainable Wealth."
     ],
@@ -223,7 +224,7 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
     "reviewCount": 320,
     "readingTime": "7.2 hrs",
     "edition": "Zebra Learn Edition",
-    "coverImage": "/covers/the-trading-mastermind.jpg",
+    "coverImage": "/covers/zebra-learn-the-trading-mastermind.jpg",
     "sampleExcerpt": [
       "The Trading Mastermind: Become a Trading Expert from Scratch by Zebra Learn."
     ],
@@ -289,7 +290,7 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
     "reviewCount": 310,
     "readingTime": "7.5 hrs",
     "edition": "Zebra Learn Edition",
-    "coverImage": "/covers/fundraising-decoded.jpg",
+    "coverImage": "/covers/zebra-learn-fundraising-decoded.jpg",
     "sampleExcerpt": [
       "Fundraising Decoded: How to Raise Your First Crore and Pitch to Top Tier Angels."
     ],
@@ -355,7 +356,7 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
     "reviewCount": 395,
     "readingTime": "7.0 hrs",
     "edition": "Zebra Learn Edition",
-    "coverImage": "/covers/financial-modelling-handbook.jpg",
+    "coverImage": "/covers/financial-modelling-handbook-zebra-learn.jpg",
     "sampleExcerpt": [
       "Financial Modelling Handbook: Building professional three-statement dynamic models."
     ],
@@ -421,7 +422,7 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
     "reviewCount": 410,
     "readingTime": "9.5 hrs",
     "edition": "Zebra Learn Edition",
-    "coverImage": "/covers/the-industry-handbook.jpg",
+    "coverImage": "/covers/zebra-learn-the-industry-handbook.jpg",
     "sampleExcerpt": [
       "The Industry Handbook by Zebra Learn: Comprehensive sectoral analysis and KPIs."
     ],
@@ -438,14 +439,14 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
   }
 ];
 
-// Combine initial catalog with dynamic registry
+// Combine verified initial catalog with curated demanded books
 function compileBookCatalog(): Book[] {
   const idMap = new Map<string, Book>();
   for (const b of INITIAL_BOOK_CATALOG) {
     idMap.set(b.id, b);
   }
-  if (Array.isArray(dynamicBooks)) {
-    for (const b of (dynamicBooks as unknown as Book[])) {
+  if (Array.isArray(demandedBooks)) {
+    for (const b of (demandedBooks as unknown as Book[])) {
       idMap.set(b.id, b);
     }
   }
@@ -455,11 +456,21 @@ function compileBookCatalog(): Book[] {
 export const BOOK_CATALOG: Book[] = compileBookCatalog();
 
 export function getBookById(id: string): Book | undefined {
-  return BOOK_CATALOG.find((b) => b.id === id);
+  const found = BOOK_CATALOG.find((b) => b.id === id);
+  if (found) return found;
+  if (Array.isArray(rawDynamicBooks)) {
+    return (rawDynamicBooks as unknown as Book[]).find((b) => b.id === id);
+  }
+  return undefined;
 }
 
 export function getBookBySlug(slug: string): Book | undefined {
-  return BOOK_CATALOG.find((b) => b.slug === slug || b.id === `book-${slug}`);
+  const found = BOOK_CATALOG.find((b) => b.slug === slug || b.id === `book-${slug}`);
+  if (found) return found;
+  if (Array.isArray(rawDynamicBooks)) {
+    return (rawDynamicBooks as unknown as Book[]).find((b) => b.slug === slug || b.id === `book-${slug}`);
+  }
+  return undefined;
 }
 
 export function getBookCatalog(): Book[] {

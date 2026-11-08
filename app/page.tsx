@@ -171,9 +171,9 @@ export default function HomePage() {
   const spotlightDeals: Book[] = useMemo(() => {
     const targetIds = [
       'book-101-linux-commands',
-      'book-10-trading-strategies-by-aseem-singhal',
+      'book-100m-money-models-how-to-make-money',
       'book-basics-of-equity-research-by-zebra-learn',
-      'book-010-cyber-security-notes-cybersecurity-day-2p'
+      'book-android-hackers-handbook'
     ];
     return targetIds
       .map(id => BOOK_CATALOG.find(b => b.id === id))
@@ -211,18 +211,18 @@ export default function HomePage() {
               <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Independent Digital Ebook Commerce</span>
               <span className="text-slate-600">•</span>
-              <span className="text-amber-300 font-semibold">2,700+ Verified Digital Titles Starting at ₹29</span>
+              <span className="text-amber-300 font-semibold">Curated Demanded Digital Ebooks Starting at ₹29</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
-              Independent Digital Ebook Store.{' '}
+              Curated Digital Ebook Store.{' '}
               <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
-                Uncompromising Quality.
+                Only Verified Demanded Editions.
               </span>
             </h1>
 
             <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Discover and own <strong className="text-white">1,668 verified digital books and guides</strong> across Software Engineering, Stock Trading, Cybersecurity, AI & Machine Learning, Zebra Learn, and Exam Prep. Instant Multi-Item Cart, Razorpay & UPI checkout, and in-browser reading.
+              Discover and own <strong className="text-white">authentic, high-demand ebooks with verified covers</strong> across Software Engineering, Stock Trading, Cybersecurity, AI & Machine Learning, Zebra Learn, and Professional Guides. Instant Multi-Item Cart, exclusive FamPay UPI QR checkout, and instant DRM-free reading.
             </p>
 
             {/* Quick Value Pillars */}
@@ -230,7 +230,7 @@ export default function HomePage() {
               <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
                 <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
                   <Flame className="w-4 h-4 text-amber-400 fill-amber-400" />
-                  <span>1,350+ @ ₹29</span>
+                  <span>Demanded @ ₹29</span>
                 </div>
                 <div className="text-slate-400 text-[11px] mt-1 leading-snug">
                   Unmatched micro-pricing for students & builders.
@@ -240,10 +240,10 @@ export default function HomePage() {
               <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
                 <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
                   <Zap className="w-4 h-4 text-emerald-400 fill-emerald-400" />
-                  <span>Razorpay + Cashfree</span>
+                  <span>FamPay UPI Exclusive</span>
                 </div>
                 <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Cards, UPI QR & NetBanking with 0s delivery.
+                  Dynamic UPI QR & App Intent with 0% gateway fees.
                 </div>
               </div>
 
