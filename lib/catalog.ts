@@ -548,13 +548,25 @@ function compileBookCatalog(): Book[] {
 }
 
 export const BOOK_CATALOG: Book[] = compileBookCatalog();
+export const TOTAL_MAPPED_DOCUMENTS = 83925;
 
 export function getBookById(id: string): Book | undefined {
   const found = BOOK_CATALOG.find((b) => b.id === id || b.slug === id);
   if (found) return found;
   if (Array.isArray(rawDynamicBooks)) {
-    return (rawDynamicBooks as unknown as Book[]).find((b) => b.id === id || b.slug === id);
+    const rawMatch = (rawDynamicBooks as unknown as Book[]).find((b) => b.id === id || b.slug === id);
+    if (rawMatch) return rawMatch;
   }
+  try {
+    if (typeof window === 'undefined') { const fs = eval("require('fs')");
+    const path = eval("require('path')");
+    const masterPath = path.resolve(process.cwd(), 'data', 'all_83925_catalog.json');
+    if (fs.existsSync(masterPath)) {
+      const masterList = JSON.parse(fs.readFileSync(masterPath, 'utf8'));
+      const masterMatch = masterList.find((b: any) => b.id === id || b.slug === id);
+      if (masterMatch) return masterMatch;
+    }
+  } } catch {}
   return undefined;
 }
 
@@ -562,8 +574,19 @@ export function getBookBySlug(slug: string): Book | undefined {
   const found = BOOK_CATALOG.find((b) => b.slug === slug || b.id === `book-${slug}`);
   if (found) return found;
   if (Array.isArray(rawDynamicBooks)) {
-    return (rawDynamicBooks as unknown as Book[]).find((b) => b.slug === slug || b.id === `book-${slug}`);
+    const rawMatch = (rawDynamicBooks as unknown as Book[]).find((b) => b.slug === slug || b.id === `book-${slug}`);
+    if (rawMatch) return rawMatch;
   }
+  try {
+    if (typeof window === 'undefined') { const fs = eval("require('fs')");
+    const path = eval("require('path')");
+    const masterPath = path.resolve(process.cwd(), 'data', 'all_83925_catalog.json');
+    if (fs.existsSync(masterPath)) {
+      const masterList = JSON.parse(fs.readFileSync(masterPath, 'utf8'));
+      const masterMatch = masterList.find((b: any) => b.slug === slug || b.id === `book-${slug}`);
+      if (masterMatch) return masterMatch;
+    }
+  } } catch {}
   return undefined;
 }
 
