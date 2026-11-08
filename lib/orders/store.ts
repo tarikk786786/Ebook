@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PaymentStatus } from '@/lib/payments/types';
+import { syncOrderToSupabase } from '@/lib/supabase';
 
 export interface OrderItem {
   bookId: string;
@@ -86,6 +87,11 @@ export function saveOrder(order: StoredOrder): void {
   } catch (e) {
     console.error('Error saving order to disk (read-only filesystem fallback):', e);
   }
+
+  // Asynchronous cloud sync to Supabase PostgreSQL table
+  try {
+    syncOrderToSupabase(order).catch(() => {});
+  } catch {}
 }
 
 export function getOrderById(id: string): StoredOrder | undefined {
