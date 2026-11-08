@@ -12,7 +12,7 @@ import BundlesSection from '@/components/BundlesSection';
 import NewsletterSection from '@/components/NewsletterSection';
 import FaqSection from '@/components/FaqSection';
 import Footer from '@/components/Footer';
-import { BOOK_CATALOG, Book } from '@/lib/catalog';
+import { BOOK_CATALOG, Book, TOTAL_MAPPED_DOCUMENTS } from '@/lib/catalog';
 import { AUTHORITATIVE_CATEGORIES } from '@/lib/categories';
 import { 
   ShieldCheck, 
@@ -36,12 +36,14 @@ import {
   Archive,
   FileText,
   Code,
-  X
+  X,
+  Languages,
+  Briefcase
 } from 'lucide-react';
 
 type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
 type SortOption = 'POPULAR' | 'CHEAPEST' | 'TITLE';
-type CollectionFilter = 'ALL' | 'LATEST_2026' | 'CLASSIC_ARCHIVE' | 'DEALS_29' | 'BOOKS' | 'NOTES' | 'CODE';
+type CollectionFilter = 'ALL' | 'LATEST_2026' | 'HINDI' | 'BUSINESS' | 'CLASSIC_ARCHIVE' | 'DEALS_29' | 'BOOKS' | 'NOTES' | 'CODE';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -95,6 +97,14 @@ export default function HomePage() {
 
       // Collection & Archive filter
       if (selectedCollection === 'LATEST_2026' && !book.isLatest) return false;
+      if (selectedCollection === 'HINDI') {
+        const isHindi = book.language === 'hi' || (book.tags && book.tags.includes('hindi')) || (book.category && book.category.toLowerCase().includes('hindi')) || /[\u0900-\u097F]/.test(book.title);
+        if (!isHindi) return false;
+      }
+      if (selectedCollection === 'BUSINESS') {
+        const isBiz = (book.category && (book.category.toLowerCase().includes('business') || book.category.toLowerCase().includes('startup') || book.category.toLowerCase().includes('finance') || book.category.toLowerCase().includes('management'))) || (book.tags && book.tags.some(t => ['business', 'startup', 'finance'].includes(t.toLowerCase())));
+        if (!isBiz) return false;
+      }
       if (selectedCollection === 'CLASSIC_ARCHIVE' && !book.isClassicArchive) return false;
       if (selectedCollection === 'DEALS_29' && book.priceInInr > 29) return false;
       if (selectedCollection === 'BOOKS') {
@@ -203,15 +213,15 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E4DC] text-xs font-sans font-medium text-[#81796D]">
                 <Award className="w-3.5 h-3.5 text-[#9A704B]" />
-                <span>Independent Digital Bookstore • 18,100+ Books & Study Guides</span>
+                <span>Independent Digital Bookstore • {TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+ Verified Titles</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#24231F] leading-[1.12]">
-                Curated Technical Literature for Serious Minds.
+                Universal Digital Library & Independent Bookstore.
               </h1>
 
               <p className="text-sm sm:text-base text-[#6E685F] max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Explore an independent catalog of software engineering handbooks, computer science textbooks, and quantitative trading guides. Universal DRM-free PDF delivery starting at ₹29.
+                Explore an independent catalog of software engineering handbooks, computer science textbooks, Hindi literature, and business manuals. Universal DRM-free PDF & EPUB delivery starting at ₹29.
               </p>
 
               {/* CTAs */}
@@ -221,7 +231,7 @@ export default function HomePage() {
                   className="w-full sm:w-auto px-6 py-3.5 bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-sm"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span>Explore 18,100+ Titles</span>
+                  <span>Explore {TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+ Titles</span>
                 </a>
 
                 <a
@@ -344,7 +354,7 @@ export default function HomePage() {
               href="#catalog-shelf"
               className="inline-flex items-center space-x-1.5 text-xs font-medium text-[#9A704B] hover:text-[#7A583B] transition-colors"
             >
-              <span>View All 18,100+ Titles</span>
+              <span>View All {TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+ Titles</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -377,7 +387,7 @@ export default function HomePage() {
                 The AnonTrove Catalog Shelf
               </h2>
               <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
-                Explore <strong>18,100+</strong> curated study guides, technical manuals & reference materials • Showing {filteredBooks.length.toLocaleString()} items on this shelf • Page {currentPage} of {totalPages || 1}
+                Explore <strong>{TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+</strong> curated study guides, technical manuals & reference materials across connected libraries • Showing {filteredBooks.length.toLocaleString()} items on this shelf • Page {currentPage} of {totalPages || 1}
               </p>
             </div>
 
@@ -406,7 +416,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <span className="text-xs font-semibold text-[#81796D] uppercase tracking-wider">Collections & Archives:</span>
                 <span className="text-[11px] text-[#9A704B] font-medium hidden sm:inline">
-                  {selectedCollection === 'ALL' ? 'Showing combined library (18,102 titles)' : selectedCollection === 'LATEST_2026' ? '1,000 Curated 2026 Masterclasses' : selectedCollection === 'CLASSIC_ARCHIVE' ? '17,085 Harvested Telegram Documents' : selectedCollection === 'DEALS_29' ? '2,600+ ₹29 Steal Deals' : 'Filtered Collection'}
+                  {selectedCollection === 'ALL' ? `Showing complete library (${TOTAL_MAPPED_DOCUMENTS.toLocaleString()} titles)` : selectedCollection === 'LATEST_2026' ? '1,000 Curated 2026 Masterclasses' : selectedCollection === 'HINDI' ? '2,065+ Hindi Literature & Regional Titles' : selectedCollection === 'BUSINESS' ? '6,181+ Business & Non-Fiction Books' : selectedCollection === 'CLASSIC_ARCHIVE' ? '12k+ Classic Archive' : selectedCollection === 'DEALS_29' ? '₹29 Steal Deals' : 'Filtered Collection'}
                 </span>
               </div>
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
@@ -418,7 +428,7 @@ export default function HomePage() {
                       : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
                   }`}
                 >
-                  <span>🌟 All Ebooks (18,100+)</span>
+                  <span>🌟 All Titles ({TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+)</span>
                 </button>
                 <button
                   onClick={() => { setSelectedCollection('LATEST_2026'); setCurrentPage(1); }}
@@ -430,6 +440,28 @@ export default function HomePage() {
                 >
                   <Sparkles className="w-3.5 h-3.5 text-amber-400" />
                   <span>🚀 Latest 2026 Books (1,000)</span>
+                </button>
+                <button
+                  onClick={() => { setSelectedCollection('HINDI'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'HINDI'
+                      ? 'bg-[#E05A47] text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#E05A47]'
+                  }`}
+                >
+                  <Languages className="w-3.5 h-3.5 text-orange-400" />
+                  <span>🇮🇳 Hindi Books (2,065+)</span>
+                </button>
+                <button
+                  onClick={() => { setSelectedCollection('BUSINESS'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'BUSINESS'
+                      ? 'bg-[#1E3A8A] text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#1E3A8A]'
+                  }`}
+                >
+                  <Briefcase className="w-3.5 h-3.5 text-sky-400" />
+                  <span>💼 Business & Non-Fiction (6,180+)</span>
                 </button>
                 <button
                   onClick={() => { setSelectedCollection('CLASSIC_ARCHIVE'); setCurrentPage(1); }}

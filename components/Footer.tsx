@@ -20,7 +20,7 @@ export default function Footer() {
           </h3>
           
           <p className="text-sm text-[#A8A29E] leading-relaxed max-w-2xl mx-auto">
-            AnonTrove is an independent digital bookstore. Over 12,192+ verified titles formatted in universal DRM-free PDF with instant in-browser reading and direct UPI access.
+            AnonTrove is an independent digital bookstore. Over 86,260+ verified titles formatted in universal DRM-free PDF with instant in-browser reading and direct UPI access.
           </p>
         </div>
       </div>
@@ -84,7 +84,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li>
                 <Link href="/#catalog" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
-                  Complete Catalog (12,192 Titles)
+                  Complete Catalog (86,260+ Titles)
                 </Link>
               </li>
               <li>
