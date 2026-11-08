@@ -1,6 +1,6 @@
-# Ignore huge storage assets from Vercel serverless deployment bundle
+# Ignore heavy local binary storage and archives from Vercel deployment
 /private_storage/
-/storage/
+/storage_cache/
 *.pdf
 .git
 node_modules
