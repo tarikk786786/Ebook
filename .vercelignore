@@ -10,3 +10,6 @@ node_modules
 docs
 projects
 
+data/all_83925_catalog.json
+data/scraper/
+data/*.db
