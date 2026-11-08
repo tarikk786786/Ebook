@@ -61,6 +61,8 @@ Suffixes that are registered in Mozilla PSL are accepted by Vercel edge without 
 | **`tb.is-amaz.ing`** | `is-amazing/register` | [PR #309](https://github.com/is-amazing/register/pull/309) | **New (Queued)** |
 | **`tb.foo.ng`** | `Pokymon/foo.ng` | [PR #378](https://github.com/Pokymon/foo.ng/pull/378) | **New (Queued)** |
 | **`tb.cool.fluxcast.dev`** | `IlyaP358/fluxcast-domains` | [PR #141](https://github.com/IlyaP358/fluxcast-domains/pull/141) | **New (Queued)** |
+| **`tb.is-app.top`** | `is-app-top/register` | [PR #18](https://github.com/is-app-top/register/pull/18) | **New (Queued)** |
+| **`tb.is-my.id`** | `partofmyid/register` | [PR #106](https://github.com/partofmyid/register/pull/106) | **New (Queued)** |
 
 ---
 
