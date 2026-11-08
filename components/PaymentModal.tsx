@@ -189,14 +189,14 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-md bg-[#111724] border border-slate-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col"
+        className="relative w-full max-w-md bg-[#111724] border border-slate-800 rounded-lg shadow-xl overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0B0F17]/70">
           <div className="flex items-center space-x-2.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-200 font-mono">
+            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-slate-200 font-mono">
               FamPay UPI Checkout
             </span>
           </div>
@@ -293,7 +293,7 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
                 <a
                   href={downloadUrl}
                   download={book ? book.fileName : 'ebook.pdf'}
-                  className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-all"
+                  className="w-full py-3 px-4 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-sm flex items-center justify-center space-x-2 shadow-sm transition-colors"
                 >
                   <DownloadCloud className="w-5 h-5" />
                   <span>Download eBook ({format})</span>
@@ -351,21 +351,21 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
               </div>
 
               {/* Dynamic QR Code Box */}
-              <div className="flex flex-col items-center justify-center p-3.5 bg-white rounded-2xl shadow-inner relative">
+              <div className="flex flex-col items-center justify-center p-3.5 bg-white rounded-lg shadow-inner relative">
                 {order?.qrUrl ? (
                   <img
                     src={order.qrUrl}
                     alt={`Scan UPI QR to pay ₹${order.amount}`}
-                    className="w-48 h-48 object-contain rounded-lg"
+                    className="w-48 h-48 object-contain rounded-md"
                   />
                 ) : (
-                  <div className="w-48 h-48 flex items-center justify-center bg-slate-100 rounded-lg text-slate-400 text-xs">
+                  <div className="w-48 h-48 flex items-center justify-center bg-slate-100 rounded-md text-slate-400 text-xs">
                     QR Unavailable
                   </div>
                 )}
                 <div className="mt-1 flex items-center space-x-1 text-slate-800 font-mono font-bold text-xs">
                   <span>Pay:</span>
-                  <span className="text-emerald-700 font-black">₹{order?.amount}</span>
+                  <span className="text-slate-900 font-bold">₹{order?.amount}</span>
                 </div>
                 <span className="text-[10px] text-slate-500">
                   Scan using FamPay or any UPI app
@@ -376,9 +376,9 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
               {order?.upiIntent && (
                 <a
                   href={order.upiIntent}
-                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-2 shadow-md shadow-emerald-500/20 active:scale-[0.98] transition-all"
+                  className="w-full py-2.5 px-4 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs flex items-center justify-center space-x-2 shadow-sm transition-colors"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                   <span>Pay via FamPay / UPI App (₹{order.amount})</span>
                 </a>
               )}

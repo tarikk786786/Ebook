@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { BookOpen, Search, Zap, Lock, Sparkles, Tag, ShoppingBag, Bookmark, Wrench, Globe } from 'lucide-react';
+import { BookOpen, Search, Zap, ShoppingBag, Bookmark, Wrench, Globe, Heart } from 'lucide-react';
 
 interface NavbarProps {
   searchQuery?: string;
@@ -34,32 +34,29 @@ export default function Navbar({
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-[#0B0F17]/95 backdrop-blur-md">
-      {/* Top Value Banner */}
-      <div className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 text-slate-950 px-4 py-1 text-center text-[11px] font-bold tracking-wide flex items-center justify-center space-x-2">
-        <Sparkles className="w-3 h-3 text-amber-300 animate-pulse" />
-        <span>KNOWLEDGE SHOULD BE ACCESSIBLE: 12,000+ Curated Digital Titles Starting at ₹29 • Instant FamPay UPI Checkout</span>
-        <Tag className="w-3 h-3 text-slate-900" />
+    <header className="sticky top-0 z-40 border-b border-slate-800 bg-[#0B0F17]/95 backdrop-blur-md">
+      {/* Top Editorial Value Banner */}
+      <div className="bg-[#090D14] border-b border-slate-800/80 text-slate-400 px-4 py-1.5 text-center text-xs flex items-center justify-center gap-2">
+        <span className="text-slate-200 font-medium">Knowledge Access Mission:</span>
+        <span className="text-slate-400">12,000+ Curated Digital Titles Starting at ₹29 • Transparent Upkeep & Open Curation</span>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-4">
         {/* Brand */}
         <Link href="/" className="flex items-center space-x-3 shrink-0 group">
-          <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-            <div className="h-full w-full bg-[#0B0F17] rounded-[10px] flex items-center justify-center">
-              <BookOpen className="h-5 w-5 text-emerald-400" />
-            </div>
+          <div className="h-9 w-9 rounded-md bg-[#111622] border border-slate-800 flex items-center justify-center text-slate-200">
+            <BookOpen className="h-4.5 w-4.5 text-slate-200" />
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <span className="font-extrabold text-base tracking-tight text-white group-hover:text-emerald-300 transition-colors">
-                TB<span className="text-emerald-400">Books</span>
+              <span className="font-semibold text-base tracking-tight text-white group-hover:text-slate-200 transition-colors">
+                TBBooks
               </span>
-              <span className="text-[10px] uppercase font-mono px-2 py-0.5 bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 rounded-full font-bold">
-                Store
+              <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 bg-slate-800/80 text-slate-300 border border-slate-700/60 rounded">
+                Vault
               </span>
             </div>
-            <p className="text-[10px] text-slate-400 hidden sm:block">Digital Literature Vault</p>
+            <p className="text-[10px] text-slate-500 hidden sm:block">Digital Literature Vault</p>
           </div>
         </Link>
 
@@ -67,14 +64,14 @@ export default function Navbar({
         {onSearchChange && (
           <div className="flex-1 max-w-lg hidden md:block">
             <div className="relative">
-              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 ref={searchInputRef}
                 type="text"
-                placeholder="Search 2,700+ titles by name, author, topic (e.g. Linux, Trading, Python, Notes)..."
+                placeholder="Search 12,000+ titles by name, author, topic (e.g. Linux, Trading, Python)..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                className="w-full bg-slate-900/90 border border-slate-800 focus:border-emerald-500/60 rounded-xl pl-9 pr-12 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-emerald-500/30 transition-all shadow-inner"
+                className="w-full bg-[#0F141C] border border-slate-800 focus:border-slate-600 rounded-md pl-9 pr-12 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none transition-colors"
               />
               <kbd className="absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 text-[10px] text-slate-400 font-mono pointer-events-none hidden lg:inline-block">
                 /
@@ -84,57 +81,57 @@ export default function Navbar({
         )}
 
         {/* Action Controls & Value Badges */}
-        <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
-          {/* 1,000 Curated Discovery Catalog Link */}
-          <Link
-            href="/books"
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-emerald-950/50 border border-emerald-800/60 hover:border-emerald-500/60 text-xs font-semibold text-emerald-300 hover:text-emerald-200 transition-colors"
-            title="1,000 Global Startup & Business Books Discovery"
-          >
-            <Globe className="w-3.5 h-3.5 text-emerald-400" />
-            <span className="hidden sm:inline">1,000 Books</span>
-          </Link>
-
+        <div className="flex items-center space-x-2 shrink-0">
           {/* Mission Link */}
           <Link
             href="/mission"
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 text-xs font-semibold text-slate-200 hover:text-white transition-colors"
+            className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-md bg-[#111622] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors"
             title="Our Mission & Transparent Purpose"
           >
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span className="hidden sm:inline">Mission</span>
+            <Heart className="w-3.5 h-3.5 text-slate-400" />
+            <span className="hidden sm:inline">Our Mission</span>
+          </Link>
+
+          {/* 1,000 Curated Discovery Catalog Link */}
+          <Link
+            href="/books"
+            className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-md bg-[#111622] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors"
+            title="1,000 Global Startup & Business Books Discovery"
+          >
+            <Globe className="w-3.5 h-3.5 text-slate-400" />
+            <span className="hidden sm:inline">Catalog</span>
           </Link>
 
           {/* Ebook Tools Directory Link */}
           <Link
             href="/tools"
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 text-xs font-semibold text-slate-200 hover:text-white transition-colors"
+            className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-md bg-[#111622] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors"
             title="Ebook Tools & Download Center"
           >
-            <Wrench className="w-3.5 h-3.5 text-teal-400" />
+            <Wrench className="w-3.5 h-3.5 text-slate-400" />
             <span className="hidden sm:inline">Tools</span>
           </Link>
 
           {/* Customer Library Link */}
           <Link
             href="/library"
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 text-xs font-semibold text-slate-200 hover:text-white transition-colors"
+            className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-md bg-[#111622] border border-slate-800 hover:border-slate-700 text-xs font-medium text-slate-300 hover:text-white transition-colors"
             title="My Reading Library"
           >
-            <Bookmark className="w-3.5 h-3.5 text-emerald-400" />
-            <span className="hidden sm:inline">My Library</span>
+            <Bookmark className="w-3.5 h-3.5 text-slate-400" />
+            <span className="hidden sm:inline">Library</span>
           </Link>
 
           {/* Cart Trigger Button */}
           <button
             onClick={openCart}
-            className="relative flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-emerald-950/60 border border-emerald-800/80 hover:bg-emerald-900/80 text-emerald-300 text-xs font-bold transition-all shadow-sm active:scale-95"
+            className="relative flex items-center space-x-1.5 px-3 py-1.5 rounded-md bg-white hover:bg-slate-100 text-slate-950 text-xs font-semibold transition-colors shadow-sm"
             title="Open Shopping Cart"
           >
-            <ShoppingBag className="w-4 h-4 text-emerald-400" />
+            <ShoppingBag className="w-3.5 h-3.5 text-slate-900" />
             <span className="hidden sm:inline">Cart</span>
             {itemCount > 0 && (
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-slate-950 font-mono text-[10px] font-black">
+              <span className="ml-1 px-1.5 py-0.2 rounded-full bg-slate-900 text-white font-mono text-[10px] font-bold">
                 {itemCount}
               </span>
             )}
@@ -144,21 +141,20 @@ export default function Navbar({
           {onToggleCurrency && (
             <button
               onClick={onToggleCurrency}
-              className="px-2.5 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300 hover:text-white hover:border-slate-700 transition-colors shadow-sm hidden sm:block"
+              className="px-2 py-1.5 rounded-md bg-[#111622] border border-slate-800 text-xs font-mono text-slate-300 hover:text-white hover:border-slate-700 transition-colors hidden sm:block"
               title="Toggle estimated display currency"
             >
               {currency === 'INR' ? '₹ INR' : '$ USD'}
             </button>
           )}
 
-          {/* UPI Direct badge */}
-          <div className="hidden lg:flex items-center space-x-1 px-2.5 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300">
-            <Zap className="h-3.5 w-3.5 text-emerald-400 fill-emerald-400" />
-            <span className="font-semibold text-[11px]">FamPay UPI Direct</span>
+          {/* FamPay UPI Direct badge */}
+          <div className="hidden lg:flex items-center space-x-1 px-2.5 py-1.5 rounded-md bg-[#111622] border border-slate-800 text-xs text-slate-400">
+            <Zap className="h-3 w-3 text-slate-400" />
+            <span className="font-mono text-[11px]">FamPay UPI Direct</span>
           </div>
         </div>
       </div>
     </header>
   );
 }
-

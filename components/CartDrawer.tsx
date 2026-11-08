@@ -130,7 +130,7 @@ export default function CartDrawer({ onStartCheckout }: CartDrawerProps) {
               </p>
               <button
                 onClick={closeCart}
-                className="mt-3 px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl transition-colors"
+                className="mt-3 px-4 py-2 bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs rounded-md transition-colors shadow-sm"
               >
                 Start Exploring
               </button>
@@ -287,7 +287,7 @@ export default function CartDrawer({ onStartCheckout }: CartDrawerProps) {
             <button
               onClick={handleCheckout}
               disabled={isSubmitting}
-              className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-all disabled:opacity-50"
+              className="w-full py-3 px-4 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs sm:text-sm flex items-center justify-center space-x-2 transition-colors shadow-sm disabled:opacity-50"
             >
               {isSubmitting ? (
                 <>

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { verifyFamGatewaySignature, generateDownloadToken } from '@/lib/crypto';
 import { getOrderById, updateOrderStatus, saveOrder } from '@/lib/orders/store';
 import { checkOrderStatus } from '@/lib/famgateway';
+import { isWebhookEventProcessed, recordWebhookEventProcessed } from '@/lib/supabase';
 
 // In-memory cache for event deduplication
 const processedWebhooks = new Set<string>();
@@ -63,9 +64,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Order reference not found in store' }, { status: 404 });
     }
 
-    // 4. Replay attack & event deduplication check
+    // 4. Replay attack & event deduplication check (in-memory + Supabase audit log)
     const eventKey = `${orderId}:${payload.utr || 'VERIFIED'}`;
-    if (processedWebhooks.has(eventKey) || order.status === 'SUCCESS' || order.status === 'PAID') {
+    const alreadyLogged = await isWebhookEventProcessed(eventKey);
+    if (processedWebhooks.has(eventKey) || alreadyLogged || order.status === 'SUCCESS' || order.status === 'PAID') {
       return NextResponse.json({
         status: 'success',
         message: 'Idempotent: Order already fulfilled previously',
@@ -92,6 +94,12 @@ export async function POST(req: NextRequest) {
     });
 
     processedWebhooks.add(eventKey);
+    // Durable cross-instance webhook idempotency in Supabase audit log
+    recordWebhookEventProcessed(eventKey, {
+      orderId,
+      utr: payload.utr || 'VERIFIED_VIA_UPSTREAM',
+      amount: payload.amount,
+    }).catch(err => console.warn('[WEBHOOK] Non-blocking audit log record failed:', err));
 
     // 7. Exactly-once Ebook Access Generation
     const issuedTokens: Array<{ bookId: string; token: string; issuedAt: string }> = [];

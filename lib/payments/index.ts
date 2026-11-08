@@ -1,6 +1,7 @@
 import { CreateOrderParams, PaymentOrderResponse, CouponDiscount } from './types';
 import { createFamGatewayOrder } from '../famgateway';
 import { saveOrder } from '@/lib/orders/store';
+import QRCode from 'qrcode';
 
 // Server-side verified coupon database (Can be backed by Supabase)
 const ACTIVE_COUPONS: Record<string, { type: 'PERCENTAGE' | 'FIXED_INR'; value: number; minOrder: number }> = {
@@ -56,7 +57,23 @@ export async function createUnifiedPaymentOrder(params: CreateOrderParams): Prom
   const defaultVpa = process.env.MERCHANT_UPI_VPA || 'wowtarik@yesfam';
   const merchantName = process.env.MERCHANT_NAME || 'AnonTrove';
   const dynamicUpiIntent = `upi://pay?pa=${encodeURIComponent(defaultVpa)}&pn=${encodeURIComponent(merchantName)}&am=${finalAmount.toFixed(2)}&cu=INR&tr=${encodeURIComponent(orderNumber)}&tn=${encodeURIComponent(cleanTitle)}`;
-  const dynamicQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=${encodeURIComponent(dynamicUpiIntent)}`;
+  
+  // Zero-Trace In-Memory QR Generation (Prevents 3rd-party transaction metadata leakage)
+  let dynamicQrUrl = '';
+  try {
+    dynamicQrUrl = await QRCode.toDataURL(dynamicUpiIntent, {
+      margin: 1,
+      width: 300,
+      errorCorrectionLevel: 'M',
+      color: {
+        dark: '#000000',
+        light: '#ffffff',
+      },
+    });
+  } catch (qrErr) {
+    console.warn('[QR] Local QR generation error:', qrErr);
+    dynamicQrUrl = '';
+  }
 
   const orderTitle = items.length === 1 
     ? items[0].title 

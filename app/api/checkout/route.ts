@@ -1,8 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
 import { getBookById } from '@/lib/catalog';
 import { createUnifiedPaymentOrder } from '@/lib/payments';
 import { CartItem, PaymentGatewayType } from '@/lib/payments/types';
 import { checkRateLimit } from '@/lib/rate-limit';
+
+const CheckoutItemSchema = z.object({
+  bookId: z.string().min(3).max(64).regex(/^[a-zA-Z0-9_-]+$/, 'bookId contains invalid characters'),
+  quantity: z.number().int().positive().max(10).optional().default(1),
+});
+
+const CheckoutRequestSchema = z.object({
+  bookId: z.string().min(3).max(64).regex(/^[a-zA-Z0-9_-]+$/, 'bookId contains invalid characters').optional(),
+  items: z.array(CheckoutItemSchema).max(50).optional(),
+  customerEmail: z.string().email('Invalid email address format').max(128).optional().default('reader@anontrove.internal'),
+  customerPhone: z.string().regex(/^\+?[0-9]{10,15}$/, 'Invalid phone number format').max(16).optional(),
+  couponCode: z.string().min(2).max(32).regex(/^[a-zA-Z0-9_-]+$/, 'Invalid coupon format').optional(),
+  gateway: z.enum(['FAMGATEWAY', 'FAMPAY', 'UPI']).optional().default('FAMGATEWAY'),
+}).refine(data => Boolean(data.bookId || (data.items && data.items.length > 0)), {
+  message: 'Either bookId or a non-empty items array must be provided for checkout',
+});
 
 export async function POST(req: NextRequest) {
   try {
@@ -21,16 +38,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Malformed JSON body' }, { status: 400 });
     }
 
-    const { bookId, items, customerEmail = 'reader@anontrove.internal', customerPhone, couponCode, gateway = 'FAMGATEWAY' } = body;
+    const parseResult = CheckoutRequestSchema.safeParse(body);
+    if (!parseResult.success) {
+      return NextResponse.json(
+        {
+          error: 'Invalid checkout request data',
+          issues: parseResult.error.issues.map(i => ({
+            path: i.path.join('.'),
+            message: i.message,
+          })),
+        },
+        { status: 400 }
+      );
+    }
+
+    const { bookId, items, customerEmail, customerPhone, couponCode, gateway } = parseResult.data;
 
     let checkoutItems: CartItem[] = [];
 
     // Support 1: Single-click Buy Now
     if (bookId) {
-      if (typeof bookId !== 'string' || !/^[a-zA-Z0-9_-]{3,64}$/.test(bookId)) {
-        return NextResponse.json({ error: 'Invalid or missing bookId format' }, { status: 400 });
-      }
-
       const book = getBookById(bookId);
       if (!book) {
         return NextResponse.json({ error: 'Book does not exist in catalog' }, { status: 404 });
@@ -51,15 +78,11 @@ export async function POST(req: NextRequest) {
       ];
     } 
     // Support 2: Multi-item Cart (Strict Server-Side Price Verification)
-    else if (Array.isArray(items) && items.length > 0) {
+    else if (items && items.length > 0) {
       for (const rawItem of items) {
-        const rawBookId = String(rawItem.bookId || '');
-        if (!rawBookId || !/^[a-zA-Z0-9_-]{3,64}$/.test(rawBookId)) {
-          return NextResponse.json({ error: 'Invalid bookId format in cart items' }, { status: 400 });
-        }
-        const verifiedBook = getBookById(rawBookId);
+        const verifiedBook = getBookById(rawItem.bookId);
         if (!verifiedBook) {
-          return NextResponse.json({ error: `Item ${rawBookId} is not available in catalog` }, { status: 400 });
+          return NextResponse.json({ error: `Item ${rawItem.bookId} is not available in catalog` }, { status: 400 });
         }
 
         checkoutItems.push({
@@ -72,7 +95,7 @@ export async function POST(req: NextRequest) {
           format: verifiedBook.format,
           coverImage: verifiedBook.coverImage,
           fileName: verifiedBook.fileName,
-          quantity: 1,
+          quantity: rawItem.quantity || 1,
         });
       }
     } else {

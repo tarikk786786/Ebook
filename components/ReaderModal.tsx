@@ -25,7 +25,7 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-4xl h-[90vh] bg-[#0E131F] border border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+        className="relative w-full max-w-4xl h-[90vh] bg-[#0E131F] border border-slate-800 rounded-lg shadow-xl flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Action Bar */}
@@ -166,10 +166,10 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
               onClose();
               onBuy(book);
             }}
-            className="py-2.5 px-6 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center space-x-2 shadow-lg shadow-emerald-500/20 active:scale-[0.98] transition-all"
+            className="py-2 px-5 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs flex items-center space-x-1.5 transition-colors shadow-sm"
           >
-            <Zap className="w-4 h-4 fill-current" />
-            <span>Buy Full Edition with UPI</span>
+            <Zap className="w-3.5 h-3.5 fill-current" />
+            <span>Get Full Edition with UPI</span>
           </button>
         </div>
       </div>

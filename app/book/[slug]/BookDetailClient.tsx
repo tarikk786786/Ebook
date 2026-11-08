@@ -12,15 +12,10 @@ import {
   Star, 
   Clock, 
   ShieldCheck, 
-  Download, 
-  ExternalLink, 
   FileText, 
   Zap, 
-  CheckCircle2, 
   Layers, 
-  Lock, 
   Share2, 
-  Send,
   Eye,
   Check,
   Smartphone,
@@ -81,19 +76,19 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
       <main className="flex-1 pb-20">
         {/* Breadcrumb Header */}
-        <div className="border-b border-slate-800/80 bg-slate-900/40">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="border-b border-slate-800 bg-[#090D14]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
             <Link 
               href="/" 
-              className="inline-flex items-center space-x-2 text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors"
+              className="inline-flex items-center space-x-2 text-xs font-mono text-slate-400 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Back to Digital Bookstore</span>
+              <span>Back to Library Shelf</span>
             </Link>
 
             <button
               onClick={handleShare}
-              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg border border-slate-700 bg-slate-800/60 hover:bg-slate-800 text-xs text-slate-300 transition-colors"
+              className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-md border border-slate-800 bg-[#111622] hover:bg-[#161B28] text-xs text-slate-300 hover:text-white transition-colors"
             >
               {copiedLink ? (
                 <>
@@ -114,9 +109,9 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 md:pt-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            {/* Left Column: 3D Book Cover & Fast Actions (5 Cols) */}
+            {/* Left Column: Book Cover & Fast Actions (5 Cols) */}
             <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-2xl overflow-hidden bg-slate-900 border border-slate-700/60 shadow-2xl shadow-emerald-950/20">
+              <div className="relative w-full max-w-[340px] aspect-[3/4] rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shadow-md">
                 {!imgError ? (
                   <img
                     src={book.coverImage}
@@ -125,96 +120,95 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     className="w-full h-full object-cover object-center"
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 p-6 flex flex-col justify-between border border-slate-700">
-                    <div className="flex items-center space-x-2 text-emerald-400">
-                      <BookOpen className="w-6 h-6" />
-                      <span className="font-mono text-xs uppercase font-bold tracking-wider">Digital Edition</span>
+                  <div className="w-full h-full bg-[#0F141C] p-6 flex flex-col justify-between border border-slate-800">
+                    <div className="flex items-center space-x-2 text-slate-400">
+                      <BookOpen className="w-5 h-5" />
+                      <span className="font-mono text-xs uppercase font-medium tracking-wider">Digital Edition</span>
                     </div>
                     <div>
-                      <span className="text-xs text-emerald-400 font-mono font-semibold">{book.edition}</span>
-                      <h2 className="text-xl font-black text-white mt-1 leading-snug">{book.title}</h2>
-                      <p className="text-sm text-slate-300 mt-2">By {book.author}</p>
+                      <span className="text-xs text-slate-400 font-mono">{book.edition}</span>
+                      <h2 className="text-lg font-bold text-white mt-1 leading-snug">{book.title}</h2>
+                      <p className="text-sm text-slate-400 mt-2">By {book.author}</p>
                     </div>
-                    <div className="text-xs text-slate-400 font-mono">
+                    <div className="text-xs text-slate-500 font-mono">
                       {book.pages} Pages • DRM-Free
                     </div>
                   </div>
                 )}
 
-                {/* Realistic Book Spine Shadow */}
-                <div className="absolute inset-y-0 left-0 w-4 bg-gradient-to-r from-black/70 via-black/30 to-transparent pointer-events-none" />
-                <div className="absolute inset-y-0 left-4 w-[1px] bg-white/20 pointer-events-none" />
+                {/* Subtle Book Spine Shadow */}
+                <div className="absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/60 to-transparent pointer-events-none" />
 
                 {/* Badges */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                  <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-emerald-300 border border-emerald-500/40 rounded-lg">
+                  <span className="px-2 py-0.5 text-[10px] font-mono font-medium uppercase tracking-wider bg-black/80 text-slate-200 border border-slate-700 rounded">
                     {book.category}
                   </span>
                   {book.badge && (
-                    <span className="px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-950 rounded-lg shadow-lg">
+                    <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-200 text-slate-950 rounded">
                       {book.badge}
                     </span>
                   )}
                 </div>
               </div>
 
-              {/* Quick Action Preview Button */}
-              <div className="w-full max-w-[360px] mt-4 grid grid-cols-2 gap-3">
+              {/* Quick Action Buttons */}
+              <div className="w-full max-w-[340px] mt-4 grid grid-cols-2 gap-2.5">
                 <button
                   onClick={() => setIsPreviewing(true)}
-                  className="py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all"
+                  className="py-2 px-3 rounded-md border border-slate-800 bg-[#111622] hover:bg-[#161B28] text-slate-200 hover:text-white text-xs font-medium flex items-center justify-center space-x-2 transition-colors"
                 >
-                  <Eye className="w-4 h-4 text-emerald-400" />
-                  <span>Look Inside Excerpt</span>
+                  <Eye className="w-3.5 h-3.5 text-slate-400" />
+                  <span>Preview Excerpt</span>
                 </button>
 
                 <button
                   onClick={() => setIsBuying(true)}
-                  className="py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 transition-all active:scale-[0.98]"
+                  className="py-2 px-3 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs flex items-center justify-center space-x-1.5 transition-colors shadow-sm"
                 >
-                  <Zap className="w-4 h-4 fill-current" />
+                  <Zap className="w-3.5 h-3.5 fill-current" />
                   <span>Get Book {displayPrice}</span>
                 </button>
               </div>
 
               {/* Device Compatibility */}
-              <div className="w-full max-w-[360px] mt-6 p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 space-y-2">
-                <div className="font-mono text-[11px] uppercase text-slate-400 font-semibold flex items-center space-x-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <div className="w-full max-w-[340px] mt-5 p-3.5 rounded-lg bg-[#0F141C] border border-slate-800 text-xs text-slate-400 space-y-2">
+                <div className="font-mono text-[11px] uppercase text-slate-300 font-medium flex items-center space-x-1.5">
+                  <ShieldCheck className="w-4 h-4 text-slate-400" />
                   <span>Zero DRM • Instant Universal Delivery</span>
                 </div>
-                <div className="flex items-center space-x-4 text-[11px] text-slate-300 pt-1">
+                <div className="flex items-center space-x-4 text-[11px] text-slate-400 pt-1">
                   <span className="flex items-center space-x-1">
-                    <Tablet className="w-3.5 h-3.5 text-emerald-400" />
+                    <Tablet className="w-3.5 h-3.5 text-slate-500" />
                     <span>Kindle / Kobo</span>
                   </span>
                   <span className="flex items-center space-x-1">
-                    <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
+                    <Smartphone className="w-3.5 h-3.5 text-slate-500" />
                     <span>iPad / Mobile</span>
                   </span>
                   <span className="flex items-center space-x-1">
-                    <Laptop className="w-3.5 h-3.5 text-emerald-400" />
+                    <Laptop className="w-3.5 h-3.5 text-slate-500" />
                     <span>Mac / PC</span>
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Complete Book Information & Telegram Provenance (7 Cols) */}
+            {/* Right Column: Complete Book Information & Provenance (7 Cols) */}
             <div className="lg:col-span-7 space-y-6">
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
+                  <span className="px-2.5 py-0.5 rounded bg-[#111622] border border-slate-800 text-slate-300 font-mono text-xs font-medium uppercase tracking-wider">
                     {(book.primaryResourceType || 'Resource').replace(/_/g, ' ')}
                   </span>
                   {book.publisher && ['published_ebook', 'textbook', 'professional_book'].includes(book.primaryResourceType || '') && (
-                    <span className="px-2.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-mono text-xs">
+                    <span className="px-2.5 py-0.5 rounded bg-[#111622] border border-slate-800 text-slate-400 font-mono text-xs">
                       {book.publisher}
                     </span>
                   )}
                   {book.isCustomGenerated && (
-                    <span className="px-2.5 py-1 rounded-full bg-slate-950 border border-slate-700 text-slate-400 font-mono text-xs">
-                      Honest Custom Thumbnail
+                    <span className="px-2.5 py-0.5 rounded bg-[#111622] border border-slate-800 text-slate-400 font-mono text-xs">
+                      Custom Curated Thumbnail
                     </span>
                   )}
                 </div>
@@ -223,29 +217,29 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   <AvailabilityBadge book={book} size="md" showDescription={true} />
                 </div>
 
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
+                <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
                   {book.title}
                 </h1>
                 
                 {book.subtitle && (
-                  <p className="text-base sm:text-lg text-emerald-400/90 font-medium mt-1">
+                  <p className="text-base text-slate-300 font-normal mt-1">
                     {book.subtitle}
                   </p>
                 )}
 
-                <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-400">
-                  <span>By <strong className="text-slate-200">{book.author}</strong></span>
-                  <span className="text-slate-600">•</span>
-                  <div className="flex items-center space-x-1 text-amber-400">
+                <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-slate-400">
+                  <span>By <strong className="text-slate-200 font-medium">{book.author}</strong></span>
+                  <span className="text-slate-700">•</span>
+                  <div className="flex items-center space-x-1 text-slate-300">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
+                        <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
-                    <span className="font-bold text-slate-200">{book.rating}</span>
+                    <span className="font-semibold text-slate-200">{book.rating}</span>
                     <span className="text-slate-500">({book.reviewCount} reviews)</span>
                   </div>
-                  <span className="text-slate-600">•</span>
+                  <span className="text-slate-700">•</span>
                   <span className="flex items-center space-x-1 text-slate-400">
                     <Clock className="w-3.5 h-3.5 text-slate-500" />
                     <span>{book.readingTime} reading time</span>
@@ -254,38 +248,38 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
               </div>
 
               {/* Purchase Card */}
-              <div className="p-5 rounded-2xl bg-[#121826] border border-slate-700/80 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="p-4 sm:p-5 rounded-lg bg-[#0F141C] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <div className="flex items-baseline space-x-2">
-                    <span className="text-3xl font-black text-white font-mono">{displayPrice}</span>
-                    <span className="text-sm text-slate-500 line-through">{displayOriginalPrice}</span>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold font-mono">
-                      SAVE {discountPercent}%
+                    <span className="text-2xl sm:text-3xl font-bold text-white font-mono">{displayPrice}</span>
+                    <span className="text-xs text-slate-500 line-through">{displayOriginalPrice}</span>
+                    <span className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px] font-mono">
+                      Save {discountPercent}%
                     </span>
                   </div>
                   <p className="text-xs text-slate-400 mt-1">
-                    Single payment • 0% Transaction fees • Instant secure link
+                    Direct contribution • 0% Platform markup • Instant delivery
                   </p>
                 </div>
 
-                <div className="flex items-center space-x-2.5">
+                <div className="flex items-center space-x-2">
                   <button
                     onClick={() => addToCart(book)}
-                    className={`px-4 py-3.5 rounded-xl border font-bold text-xs flex items-center justify-center space-x-1.5 transition-all ${
+                    className={`px-3.5 py-2.5 rounded-md border font-medium text-xs flex items-center justify-center space-x-1.5 transition-colors ${
                       isInCart
-                        ? 'bg-emerald-950/80 border-emerald-500/60 text-emerald-300'
-                        : 'bg-slate-800 hover:bg-slate-700 border-slate-700 text-slate-200'
+                        ? 'bg-[#161B28] border-slate-600 text-white'
+                        : 'bg-[#111622] hover:bg-[#161B28] border-slate-800 text-slate-200'
                     }`}
                   >
-                    <ShoppingBag className="w-4 h-4 text-emerald-400" />
+                    <ShoppingBag className="w-3.5 h-3.5 text-slate-400" />
                     <span>{isInCart ? 'In Cart' : '+ Cart'}</span>
                   </button>
 
                   <button
                     onClick={() => setIsBuying(true)}
-                    className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 transition-all active:scale-[0.98]"
+                    className="px-5 py-2.5 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs flex items-center justify-center space-x-1.5 transition-colors shadow-sm"
                   >
-                    <Zap className="w-4 h-4 fill-current" />
+                    <Zap className="w-3.5 h-3.5 fill-current" />
                     <span>Instant Checkout</span>
                   </button>
                 </div>
@@ -295,49 +289,49 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
               <ServiceFeeInfoBox amountInInr={book.priceInInr} />
 
               {/* Description */}
-              <div className="space-y-3">
-                <h3 className="text-base font-bold text-white flex items-center space-x-2">
-                  <FileText className="w-4 h-4 text-emerald-400" />
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold text-white flex items-center space-x-2">
+                  <FileText className="w-4 h-4 text-slate-400" />
                   <span>Overview & Editorial Synopsis</span>
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {book.description}
                 </p>
               </div>
 
               {/* Digital Edition & Cryptographic Integrity Box */}
-              <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+              <div className="p-4 sm:p-5 rounded-lg bg-[#0F141C] border border-slate-800 space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
-                    <ShieldCheck className="w-4 h-4" />
+                  <div className="flex items-center space-x-2 text-slate-200 font-mono text-xs font-semibold uppercase tracking-wider">
+                    <ShieldCheck className="w-4 h-4 text-slate-400" />
                     <span>Digital Edition & Integrity Specifications</span>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-mono font-bold">
+                  <span className="px-2 py-0.5 rounded bg-[#111622] text-slate-300 border border-slate-700 text-[10px] font-mono">
                     VERIFIED ASSET
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
+                  <div className="p-2.5 rounded-md bg-[#090D14] border border-slate-800">
                     <span className="text-[10px] text-slate-500 font-mono block uppercase">License</span>
-                    <strong className="text-slate-200">DRM-Free Copy</strong>
+                    <strong className="text-slate-200 font-medium">DRM-Free Copy</strong>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
+                  <div className="p-2.5 rounded-md bg-[#090D14] border border-slate-800">
                     <span className="text-[10px] text-slate-500 font-mono block uppercase">Delivery Rail</span>
-                    <strong className="text-slate-200 font-mono">FamPay UPI (0% Fee)</strong>
+                    <strong className="text-slate-200 font-mono font-medium">FamPay UPI (0% Fee)</strong>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
+                  <div className="p-2.5 rounded-md bg-[#090D14] border border-slate-800">
                     <span className="text-[10px] text-slate-500 font-mono block uppercase">Format & Size</span>
-                    <strong className="text-slate-200 font-mono">{book.format} • {book.fileSize}</strong>
+                    <strong className="text-slate-200 font-mono font-medium">{book.format} • {book.fileSize}</strong>
                   </div>
-                  <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800">
+                  <div className="p-2.5 rounded-md bg-[#090D14] border border-slate-800">
                     <span className="text-[10px] text-slate-500 font-mono block uppercase">Volume Length</span>
-                    <strong className="text-slate-200 font-mono">{book.pages} Pages</strong>
+                    <strong className="text-slate-200 font-mono font-medium">{book.pages} Pages</strong>
                   </div>
                 </div>
 
                 {book.sha256 && (
-                  <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                  <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
                     <span className="text-slate-500">SHA-256 Checksum:</span>
                     <span className="text-slate-300 truncate max-w-[280px]">{book.sha256}</span>
                   </div>
@@ -346,15 +340,15 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
               {/* Table of Contents */}
               {book.tableOfContents && book.tableOfContents.length > 0 && (
-                <div className="space-y-3">
-                  <h3 className="text-base font-bold text-white flex items-center space-x-2">
-                    <Layers className="w-4 h-4 text-emerald-400" />
+                <div className="space-y-2.5">
+                  <h3 className="text-sm font-semibold text-white flex items-center space-x-2">
+                    <Layers className="w-4 h-4 text-slate-400" />
                     <span>Curriculum & Table of Contents</span>
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                     {book.tableOfContents.map((chapter, idx) => (
-                      <div key={idx} className="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80 text-slate-300 flex items-center space-x-2">
-                        <span className="flex h-5 w-5 rounded bg-emerald-500/10 text-emerald-400 font-mono font-bold text-[10px] items-center justify-center shrink-0">
+                      <div key={idx} className="p-2 rounded-md bg-[#0F141C] border border-slate-800 text-slate-300 flex items-center space-x-2">
+                        <span className="flex h-5 w-5 rounded bg-slate-800 text-slate-300 font-mono font-medium text-[10px] items-center justify-center shrink-0">
                           {idx + 1}
                         </span>
                         <span className="line-clamp-1">{chapter}</span>
@@ -366,12 +360,12 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
               {/* Sample Excerpt Reader */}
               {book.sampleExcerpt && book.sampleExcerpt.length > 0 && (
-                <div className="space-y-3">
-                  <h3 className="text-base font-bold text-white flex items-center space-x-2">
-                    <BookOpen className="w-4 h-4 text-emerald-400" />
+                <div className="space-y-2.5">
+                  <h3 className="text-sm font-semibold text-white flex items-center space-x-2">
+                    <BookOpen className="w-4 h-4 text-slate-400" />
                     <span>Free Excerpt Sample</span>
                   </h3>
-                  <div className="p-4 rounded-2xl bg-slate-900/40 border border-slate-800 text-xs text-slate-300 leading-relaxed font-serif space-y-2">
+                  <div className="p-4 rounded-lg bg-[#0F141C] border border-slate-800 text-xs text-slate-300 leading-relaxed font-serif space-y-2">
                     {book.sampleExcerpt.map((para, i) => (
                       <p key={i} className="italic text-slate-300">
                         &ldquo;{para}&rdquo;
@@ -386,39 +380,39 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
           {/* Related Books Grid */}
           {relatedBooks.length > 0 && (
-            <div className="mt-16 pt-12 border-t border-slate-800">
-              <h2 className="text-xl font-black text-white tracking-tight mb-6">
-                Related Books in <span className="text-emerald-400">{book.category}</span>
+            <div className="mt-16 pt-10 border-t border-slate-800">
+              <h2 className="text-lg font-bold text-white tracking-tight mb-5">
+                Related Books in <span className="text-slate-300">{book.category}</span>
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {relatedBooks.map((relBook) => (
                   <Link
                     key={relBook.id}
                     href={`/book/${relBook.slug}`}
-                    className="group bg-[#121826] border border-slate-800/90 hover:border-emerald-500/50 rounded-2xl p-4 transition-all duration-300 flex flex-col justify-between"
+                    className="group bg-[#0F141C] border border-slate-800 hover:border-slate-700 rounded-lg p-3.5 transition-colors flex flex-col justify-between"
                   >
-                    <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-slate-900 mb-3">
+                    <div className="relative aspect-[3/4] w-full rounded-md overflow-hidden bg-slate-900 mb-3 border border-slate-800/80">
                       <img
                         src={relBook.coverImage}
                         alt={relBook.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover"
                         onError={(e) => {
                           (e.target as HTMLElement).style.display = 'none';
                         }}
                       />
-                      <div className="absolute top-2 left-2 px-2 py-0.5 text-[9px] font-bold uppercase bg-black/80 text-emerald-300 rounded">
+                      <div className="absolute top-2 left-2 px-1.5 py-0.5 text-[9px] font-mono font-medium uppercase bg-black/80 text-slate-200 rounded">
                         {relBook.category}
                       </div>
                     </div>
 
                     <div>
-                      <h4 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors line-clamp-1">
+                      <h4 className="text-xs font-semibold text-white group-hover:text-slate-200 transition-colors line-clamp-1">
                         {relBook.title}
                       </h4>
-                      <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">By {relBook.author}</p>
-                      <div className="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-800">
-                        <span className="font-mono font-bold text-emerald-400">₹{relBook.priceInInr}</span>
+                      <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">By {relBook.author}</p>
+                      <div className="mt-2.5 flex items-center justify-between text-xs pt-2 border-t border-slate-800">
+                        <span className="font-mono font-semibold text-slate-200">₹{relBook.priceInInr}</span>
                         <span className="text-slate-500 text-[10px] font-mono">{relBook.pages} pgs</span>
                       </div>
                     </div>
