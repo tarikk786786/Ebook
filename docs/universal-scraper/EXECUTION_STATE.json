@@ -1,0 +1,29 @@
+{
+  "lastCheckpoint": "2026-11-08T05:29:10.282891+00:00",
+  "status": "COMPLETED",
+  "totalDiscovered": 121,
+  "sourceBreakdown": {
+    "Google Books": 0,
+    "Open Library": 60,
+    "Internet Archive": 53,
+    "Project Gutenberg": 0,
+    "Authorized Telegram Library": 8
+  },
+  "availabilityBreakdown": {
+    "PUBLIC_DOMAIN": 62,
+    "OPEN_ACCESS": 0,
+    "FREE_AUTHORIZED": 17,
+    "BORROWABLE": 11,
+    "PAID_STORE": 8,
+    "PREVIEW_ONLY": 0,
+    "METADATA_RECORD": 23
+  },
+  "activeAdapters": [
+    "Google Books",
+    "Open Library",
+    "Internet Archive",
+    "Project Gutenberg",
+    "Authorized Telegram Library"
+  ],
+  "scannedTopicsCount": 12
+}

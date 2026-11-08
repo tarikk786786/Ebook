@@ -27,7 +27,9 @@ import {
   ExternalLink,
   Lock,
   Key,
-  LogOut
+  LogOut,
+  Globe,
+  Wrench
 } from 'lucide-react';
 
 interface BookItem {
@@ -422,6 +424,22 @@ export default function AdminDashboardPage() {
               <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
               <span>Refresh</span>
             </button>
+            <Link
+              href="/admin/tools"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-amber-400 hover:border-amber-500/50 hover:text-white transition-colors"
+              title="Manage Ebook Tools Directory"
+            >
+              <Wrench className="w-3.5 h-3.5" />
+              <span className="hidden md:inline">Tools Manager</span>
+            </Link>
+            <Link
+              href="/admin/scraper"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-teal-400 hover:border-teal-500/50 hover:text-white transition-colors"
+              title="Manage Universal Ebook Scraper and Discovery"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              <span className="hidden md:inline">Universal Scraper</span>
+            </Link>
             <Link
               href="/"
               className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-medium text-slate-950 transition-colors"
