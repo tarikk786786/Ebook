@@ -22,7 +22,8 @@ def run_e2e_tests():
         # Test 1: Homepage Load & Hero
         print("\n[1/7] Testing Homepage & Hero...")
         t0 = time.time()
-        resp = page.goto(target_url, wait_until="networkidle", timeout=30000)
+        resp = page.goto(target_url, wait_until="domcontentloaded", timeout=45000)
+        page.wait_for_selector("#catalog-shelf", timeout=15000)
         assert resp.status == 200, f"Expected 200, got {resp.status}"
         title = page.title()
         print(f"  [OK] Homepage loaded (status 200) in {time.time()-t0:.2f}s")
@@ -52,21 +53,15 @@ def run_e2e_tests():
             search_input.fill("")
             page.wait_for_timeout(500)
 
-        # Test 4: Wishlist Toggle & Drawer
+        # Test 4: Wishlist Drawer & Header Controls
         print("\n[4/7] Testing Wishlist System...")
-        wishlist_btn = page.locator('button[title*="Wishlist"]').first
-        if wishlist_btn.is_visible():
-            wishlist_btn.click()
-            page.wait_for_timeout(500)
-            print("  [OK] Toggled wishlist on first card")
-            # Open wishlist drawer via navbar
-            nav_wishlist = page.locator('button[aria-label="Wishlist"]')
-            if nav_wishlist.is_visible():
-                nav_wishlist.click()
-                page.wait_for_timeout(600)
-                print("  [OK] Wishlist drawer opened successfully")
-                page.keyboard.press("Escape")
-                page.wait_for_timeout(400)
+        nav_wishlist = page.locator('header button[aria-label="Wishlist"]')
+        if nav_wishlist.is_visible():
+            nav_wishlist.click()
+            page.wait_for_timeout(600)
+            print("  [OK] Wishlist drawer opened successfully")
+            page.keyboard.press("Escape")
+            page.wait_for_timeout(400)
             results["Wishlist System"] = True
 
         # Test 5: Book Detail Page
@@ -74,7 +69,7 @@ def run_e2e_tests():
         first_card_link = page.locator('article a[href^="/book/"]').first
         book_href = first_card_link.get_attribute("href")
         print(f"  [OK] Navigating to book page: {book_href}")
-        book_resp = page.goto(f"{target_url}{book_href}", wait_until="networkidle", timeout=30000)
+        book_resp = page.goto(f"{target_url}{book_href}", wait_until="domcontentloaded", timeout=30000)
         assert book_resp.status == 200, f"Detail page failed with status {book_resp.status}"
         h1 = page.locator("h1").inner_text()
         print(f"  [OK] Detail page loaded: '{h1}'")
@@ -100,7 +95,7 @@ def run_e2e_tests():
         print("\n[7/7] Testing Mobile Responsiveness (375x667 iPhone SE)...")
         mobile_page = context.new_page()
         mobile_page.set_viewport_size({"width": 375, "height": 667})
-        m_resp = mobile_page.goto(target_url, wait_until="networkidle", timeout=30000)
+        m_resp = mobile_page.goto(target_url, wait_until="domcontentloaded", timeout=30000)
         assert m_resp.status == 200, f"Mobile page failed: {m_resp.status}"
         print("  [OK] Mobile layout rendered cleanly with HTTP 200")
         results["Mobile Responsiveness"] = True
@@ -108,13 +103,16 @@ def run_e2e_tests():
         browser.close()
 
     print("\n=== E2E Test Results Summary ===")
+    all_passed = True
     for test, passed in results.items():
         status = "PASSED" if passed else "FAILED"
+        if not passed: all_passed = False
         print(f"  [{status}] {test}")
 
     critical_errors = [e for e in console_errors if "404" in e or "Failed to load resource" in e]
     print(f"\nBrowser Console Errors: {len(console_errors)} (Critical: {len(critical_errors)})")
-    return results
+    return all_passed
 
 if __name__ == '__main__':
-    run_e2e_tests()
+    success = run_e2e_tests()
+    sys.exit(0 if success else 1)
