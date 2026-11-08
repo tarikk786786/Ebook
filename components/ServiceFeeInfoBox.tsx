@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Info, Sparkles, Clock, Server, ArrowRight } from 'lucide-react';
+import { ArrowRight, Info } from 'lucide-react';
 
 interface ServiceFeeInfoBoxProps {
   amountInInr: number;
@@ -11,32 +11,32 @@ interface ServiceFeeInfoBoxProps {
 
 export default function ServiceFeeInfoBox({ amountInInr, className = '' }: ServiceFeeInfoBoxProps) {
   return (
-    <div className={`p-4 rounded-2xl bg-gradient-to-b from-[#111726] to-slate-900/90 border border-amber-500/30 text-slate-300 text-xs space-y-3 shadow-lg ${className}`}>
+    <div className={`bg-[#0F141C] border border-slate-800 rounded-lg p-4 text-xs text-slate-300 space-y-2.5 ${className}`}>
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2 text-amber-300 font-mono text-[11px] font-bold uppercase tracking-wider">
-          <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-          <span>The Honest Truth: What Does ₹{amountInInr} Pay For?</span>
+        <div className="flex items-center space-x-1.5 text-slate-200 font-semibold text-xs">
+          <Info className="w-3.5 h-3.5 text-slate-400" />
+          <span>What does this ₹{amountInInr} fee cover?</span>
         </div>
-        <span className="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30 text-[9px] font-mono font-bold">
-          CONVENIENCE FEE
+        <span className="text-[10px] font-mono text-slate-400">
+          Service & Hosting
         </span>
       </div>
 
       <p className="text-slate-300 text-xs leading-relaxed">
-        <strong className="text-white">Can you find this book online for free?</strong> Yes. If you have the time to hunt through dozens of Telegram channels, WhatsApp groups, and file-hosting sites, it is likely out there.
+        If you have the time, you can locate many of these materials across public channels and online groups for free.
       </p>
 
       <p className="text-slate-400 text-[11px] leading-relaxed">
-        Your ₹{amountInInr} is <strong className="text-slate-200">not a payment for copyright or knowledge</strong>. It is a tiny convenience and maintenance fee that saves you 3+ hours of tedious searching, shields you from malicious popups, and pays for the high-speed cloud servers keeping this library accessible to students.
+        Your ₹{amountInInr} contribution does not purchase copyright or ownership. It simply pays for server hosting, file verification, and instant indexing so you do not have to spend hours searching.
       </p>
 
-      <div className="pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
-        <span className="text-emerald-400 font-mono font-semibold">100% Transparent • Zero Ad Spam</span>
+      <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+        <span className="text-slate-400">Ad-free direct access</span>
         <Link
           href="/mission"
-          className="text-amber-400 hover:text-amber-300 font-medium inline-flex items-center space-x-1 transition-colors"
+          className="text-slate-300 hover:text-white font-medium inline-flex items-center space-x-1 transition-colors"
         >
-          <span>Read Curator&apos;s Letter</span>
+          <span>Curator&apos;s full note</span>
           <ArrowRight className="w-3 h-3" />
         </Link>
       </div>

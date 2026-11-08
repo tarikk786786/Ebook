@@ -217,113 +217,87 @@ export default function HomePage() {
 
       <main className="flex-1 bg-[#090D14]">
         {/* Transparent Ebook Service Mission Hero (Section 1) */}
-        <section className="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-800/80">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-emerald-500/10 rounded-full blur-[160px] pointer-events-none" />
-
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
-            {/* Pill */}
-            <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/30 text-xs text-slate-300 mb-6 shadow-sm">
-              <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-mono text-emerald-400 font-bold uppercase tracking-wider">Ethical Knowledge Access</span>
+        <section className="pt-12 pb-16 md:pt-16 md:pb-20 border-b border-slate-800">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            {/* Clean Pill */}
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded bg-slate-800/80 border border-slate-700 text-xs text-slate-300 mb-6">
+              <span className="font-mono text-slate-300 uppercase tracking-wider text-[11px] font-semibold">Ethical Knowledge Access</span>
               <span className="text-slate-600">•</span>
-              <span className="text-amber-300 font-semibold">Transparent Service Fee (from ₹29)</span>
+              <span className="text-slate-400">Convenience fee starting at ₹29</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
               Knowledge Should Never Be Out of Reach.
             </h1>
 
-            <div className="mt-6 text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed space-y-3.5 text-center">
+            <div className="mt-5 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed space-y-3">
               <p>
                 Millions of useful books and learning resources already exist across the internet. Some are freely available, some are available through libraries, and others require subscriptions or purchases.
               </p>
               <p>
-                But finding the right book, checking its availability, identifying the correct edition and organizing everything in one place can take hours of searching.
+                Finding the right book, checking its edition, and locating complete files can take hours of searching. We built this platform to make that journey easier.
               </p>
-              <p className="text-emerald-300 font-medium">
-                We built this platform to make that journey easier.
+              <p className="text-slate-400 text-xs sm:text-sm">
+                Our small service fee supports the technology, storage, and maintenance that bring useful learning resources together in one convenient place.
               </p>
-              <p className="text-slate-300 text-xs sm:text-sm">
-                Our small service fee supports the technology, storage, organization and maintenance that help bring useful learning resources together in one convenient destination.
-              </p>
-              <p className="text-white font-extrabold text-base sm:text-xl pt-2">
+              <p className="text-white font-semibold text-base sm:text-lg pt-1">
                 We believe that money should never be the reason someone gives up on learning.
               </p>
             </div>
 
-            {/* CTAs */}
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+            {/* Clean Solid CTAs */}
+            <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href="#catalog-shelf"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/20 transition-all active:scale-[0.98]"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-md bg-white hover:bg-slate-100 text-slate-950 font-semibold text-xs flex items-center justify-center space-x-2 shadow-sm transition-colors"
               >
-                <BookOpen className="w-4 h-4" />
+                <BookOpen className="w-3.5 h-3.5" />
                 <span>Explore the Library</span>
               </a>
 
               <a
                 href="#service-fee-explanation"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-white font-bold text-sm flex items-center justify-center space-x-2 transition-all"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium text-xs flex items-center justify-center space-x-2 transition-colors"
               >
                 <span>How Our Service Works</span>
-                <ArrowRight className="w-4 h-4 text-emerald-400" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
               </a>
             </div>
 
-            {/* Quick Value Pillars */}
-            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
-              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
-                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
-                  <Flame className="w-4 h-4 text-amber-400 fill-amber-400" />
-                  <span>Demanded @ ₹29</span>
-                </div>
-                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Unmatched micro-pricing for students & builders.
-                </div>
+            {/* Restrained Value Pillars */}
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-2.5 max-w-3xl mx-auto">
+              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
+                <div className="text-slate-200 text-xs font-semibold">From ₹29</div>
+                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Micro-fee for students.</div>
               </div>
 
-              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
-                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
-                  <Zap className="w-4 h-4 text-emerald-400 fill-emerald-400" />
-                  <span>FamPay UPI Exclusive</span>
-                </div>
-                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Dynamic UPI QR & App Intent with 0% gateway fees.
-                </div>
+              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
+                <div className="text-slate-200 text-xs font-semibold">FamPay UPI</div>
+                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Zero gateway fee markup.</div>
               </div>
 
-              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
-                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
-                  <Download className="w-4 h-4 text-teal-400" />
-                  <span>100% DRM-Free</span>
-                </div>
-                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Genuine PDF & EPUB files you own forever.
-                </div>
+              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
+                <div className="text-slate-200 text-xs font-semibold">DRM-Free</div>
+                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Standard PDF & EPUB files.</div>
               </div>
 
-              <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-left">
-                <div className="flex items-center space-x-2 text-emerald-400 font-mono text-xs font-bold">
-                  <Tablet className="w-4 h-4 text-cyan-400" />
-                  <span>In-Browser Reader</span>
-                </div>
-                <div className="text-slate-400 text-[11px] mt-1 leading-snug">
-                  Read anywhere with saved cross-device progress.
-                </div>
+              <div className="p-3 rounded-lg bg-[#111622] border border-slate-800 text-left">
+                <div className="text-slate-200 text-xs font-semibold">In-Browser Reader</div>
+                <div className="text-slate-400 text-[11px] mt-0.5 leading-snug">Instant mobile & desktop reading.</div>
               </div>
             </div>
 
-            {/* Quick Search Tag Chips */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
-              <span className="text-[11px] font-mono text-slate-500 uppercase font-semibold mr-1">Popular topics:</span>
+            {/* Clean Topic Filter Tags */}
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-1.5 max-w-2xl mx-auto">
+              <span className="text-[11px] font-mono text-slate-400 uppercase font-semibold mr-1">Popular:</span>
               {searchTags.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => setSearchQuery(tag)}
-                  className={`text-[11px] px-3 py-1 rounded-full border transition-all ${
+                  className={`text-[11px] px-2.5 py-1 rounded border transition-colors ${
                     searchQuery.toLowerCase() === tag.toLowerCase()
-                      ? 'bg-emerald-500 text-slate-950 font-bold border-emerald-400 shadow-md shadow-emerald-500/20'
-                      : 'bg-slate-900/90 text-slate-300 border-slate-800 hover:border-emerald-500/50 hover:text-white'
+                      ? 'bg-white text-slate-950 font-semibold border-white'
+                      : 'bg-[#111622] text-slate-300 border-slate-800 hover:border-slate-600 hover:text-white'
                   }`}
                 >
                   {tag}
@@ -332,7 +306,7 @@ export default function HomePage() {
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="text-[11px] px-2.5 py-1 rounded-full bg-rose-950/80 text-rose-300 border border-rose-800/60 hover:bg-rose-900 font-semibold flex items-center space-x-1"
+                  className="text-[11px] px-2 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 font-medium flex items-center space-x-1"
                 >
                   <span>Clear</span>
                   <X className="w-3 h-3" />

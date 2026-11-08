@@ -8,8 +8,7 @@ import {
   ShieldCheck, 
   ExternalLink, 
   Lock, 
-  HelpCircle,
-  Sparkles
+  FileText
 } from 'lucide-react';
 import { Book } from '@/lib/catalog';
 
@@ -34,7 +33,6 @@ export interface AvailabilityConfig {
 
 export function getAvailabilityInfo(book: Book): AvailabilityConfig {
   const categoryLower = (book.category || '').toLowerCase();
-  const titleLower = (book.title || '').toLowerCase();
   const descLower = (book.description || '').toLowerCase();
 
   // 1. Creative Commons check
@@ -48,7 +46,7 @@ export function getAvailabilityInfo(book: Book): AvailabilityConfig {
       status: 'creative_commons',
       label: 'Creative Commons Licensed',
       shortLabel: 'CC Licensed',
-      badgeCls: 'bg-cyan-950/80 text-cyan-300 border-cyan-500/40',
+      badgeCls: 'bg-slate-800/80 text-slate-300 border-slate-700',
       description: 'Distributed under open Creative Commons licensing terms.',
       icon: Globe,
     };
@@ -65,7 +63,7 @@ export function getAvailabilityInfo(book: Book): AvailabilityConfig {
       status: 'open_access',
       label: 'Open Access Resource',
       shortLabel: 'Open Access',
-      badgeCls: 'bg-teal-950/80 text-teal-300 border-teal-500/40',
+      badgeCls: 'bg-slate-800/80 text-slate-300 border-slate-700',
       description: 'Freely open academic or educational resource indexed for accessibility.',
       icon: BookOpen,
     };
@@ -82,9 +80,9 @@ export function getAvailabilityInfo(book: Book): AvailabilityConfig {
       status: 'public_domain',
       label: 'Public Domain Work',
       shortLabel: 'Public Domain',
-      badgeCls: 'bg-amber-950/80 text-amber-300 border-amber-500/40',
+      badgeCls: 'bg-slate-800/80 text-slate-300 border-slate-700',
       description: 'Free of copyright restrictions and permanently preserved in the public domain.',
-      icon: Sparkles,
+      icon: FileText,
     };
   }
 
@@ -94,7 +92,7 @@ export function getAvailabilityInfo(book: Book): AvailabilityConfig {
       status: 'free_download',
       label: 'Free & Legally Downloadable',
       shortLabel: 'Free Download',
-      badgeCls: 'bg-emerald-950/80 text-emerald-300 border-emerald-500/40',
+      badgeCls: 'bg-emerald-950/60 text-emerald-400 border-emerald-800/60',
       description: 'Freely available and legally downloadable from verified sources.',
       icon: CheckCircle2,
     };
@@ -106,7 +104,7 @@ export function getAvailabilityInfo(book: Book): AvailabilityConfig {
       status: 'official_purchase_required',
       label: 'Official Purchase Required',
       shortLabel: 'Official Purchase',
-      badgeCls: 'bg-rose-950/80 text-rose-300 border-rose-500/40',
+      badgeCls: 'bg-slate-800/80 text-slate-400 border-slate-700',
       description: 'Commercial publication requiring official publisher acquisition.',
       icon: ExternalLink,
     };
@@ -118,7 +116,7 @@ export function getAvailabilityInfo(book: Book): AvailabilityConfig {
       status: 'subscription_access',
       label: 'Library / Subscription Access',
       shortLabel: 'Library Access',
-      badgeCls: 'bg-purple-950/80 text-purple-300 border-purple-500/40',
+      badgeCls: 'bg-slate-800/80 text-slate-400 border-slate-700',
       description: 'Available via authorized university or public digital library access.',
       icon: Lock,
     };
@@ -127,10 +125,10 @@ export function getAvailabilityInfo(book: Book): AvailabilityConfig {
   // 7. Default for curated verified digital files in archive: Authorized Distribution / Indexed Archive
   return {
     status: 'authorized_distribution',
-    label: 'Authorized Distribution & Indexing',
-    shortLabel: 'Authorized Index',
-    badgeCls: 'bg-emerald-950/80 text-emerald-300 border-emerald-500/40',
-    description: 'Indexed, curated, and served via our secure digital preservation infrastructure.',
+    label: 'Verified Digital Archive',
+    shortLabel: 'Verified Archive',
+    badgeCls: 'bg-slate-800/90 text-slate-300 border-slate-700',
+    description: 'Indexed and curated in our high-speed digital preservation catalogue.',
     icon: ShieldCheck,
   };
 }
@@ -153,7 +151,7 @@ export default function AvailabilityBadge({
     return (
       <span
         title={info.description}
-        className={`inline-flex items-center space-x-1 px-2 py-0.5 rounded-md border text-[9px] font-mono font-bold uppercase tracking-wider backdrop-blur-sm ${info.badgeCls}`}
+        className={`inline-flex items-center space-x-1 px-2 py-0.5 rounded border text-[9px] font-mono uppercase tracking-wider ${info.badgeCls}`}
       >
         <Icon className="w-2.5 h-2.5 shrink-0" />
         <span>{info.shortLabel}</span>
@@ -164,7 +162,7 @@ export default function AvailabilityBadge({
   return (
     <div className="space-y-1">
       <div
-        className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg border text-xs font-mono font-bold uppercase tracking-wider ${info.badgeCls}`}
+        className={`inline-flex items-center space-x-1.5 px-2.5 py-1 rounded border text-xs font-mono uppercase tracking-wider ${info.badgeCls}`}
       >
         <Icon className="w-3.5 h-3.5 shrink-0" />
         <span>{info.label}</span>
