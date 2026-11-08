@@ -4,8 +4,8 @@
   "exclusive_gateway": "FAMPAY",
   "provider": "FamPay / FamGateway Direct UPI Settlement",
   "merchant_vpa": "[REDACTED]@yesfam",
-  "status": "CATALOG_ENRICHED_AND_UI_REFINED",
-  "last_updated": "2026-11-08T00:46:00Z",
+  "status": "ALL_MILESTONES_OPERATIONAL",
+  "last_updated": "2026-11-08T09:53:00Z",
   "modules": {
     "payment_gateway": {
       "exclusive_provider": "FAMPAY",
@@ -22,6 +22,8 @@
     },
     "catalog_enrichment": {
       "total_items": 2717,
+      "covers_on_disk": 2717,
+      "missing_covers": 0,
       "enriched_categories": 841,
       "distinct_resource_types": [
         "published_ebook",
@@ -43,6 +45,11 @@
       "in_browser_pdf_reader": true,
       "in_browser_epub_reader": true,
       "internal_telegram_clutter_removed": true
+    },
+    "cloud_persistence": {
+      "supabase_rest_client": true,
+      "asynchronous_order_sync": true,
+      "graceful_local_fallback": true
     }
   }
 }
