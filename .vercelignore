@@ -3,5 +3,10 @@
 /storage_cache/
 *.pdf
 .git
+.vercel
 node_modules
 .next
+.agents
+docs
+projects
+
