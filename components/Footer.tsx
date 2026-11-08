@@ -66,12 +66,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/category/trading-finance" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
+                <Link href="/category/trading-and-finance" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
                   Trading, Quantitative & Financial Markets
                 </Link>
               </li>
               <li>
-                <Link href="/category/cloud-devops" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
+                <Link href="/category/cloud-and-devops" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
                   Cloud Infrastructure & DevOps
                 </Link>
               </li>

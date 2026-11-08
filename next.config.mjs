@@ -50,14 +50,14 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: false, // Disables unauthenticated SVG parsing to mitigate GHSA-2464-fhr4-w9xw
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'famgateway.in',
-      },
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
+      { protocol: 'https', hostname: 'famgateway.in' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'covers.openlibrary.org' },
+      { protocol: 'https', hostname: 'books.google.com' },
+      { protocol: 'https', hostname: 'images-na.ssl-images-amazon.com' },
+      { protocol: 'https', hostname: 'm.media-amazon.com' },
+      { protocol: 'https', hostname: 'archive.org' },
+      { protocol: 'https', hostname: 'api.qrserver.com' },
     ],
   },
 };
