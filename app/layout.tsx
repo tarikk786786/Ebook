@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: 'AnonTrove | Premium Independent Ebook & Publishing House',
     template: '%s | AnonTrove',
   },
-  description: 'Independent digital bookstore offering 12,192+ verified, DRM-free software engineering manuals, computer science textbooks, and professional guides with instant UPI checkout and in-browser reading.',
+  description: 'Independent digital bookstore offering 18,100+ verified, DRM-free software engineering manuals, computer science textbooks, and professional guides with instant UPI checkout and in-browser reading.',
   robots: {
     index: true,
     follow: true,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'AnonTrove | Premium Independent Ebook & Publishing House',
-    description: 'Explore 12,192+ verified digital books, technical manuals, and computer science guides starting at ₹29. Zero DRM lock-in, instant UPI checkout, and in-browser reading.',
+    description: 'Explore 18,100+ verified digital books, technical manuals, and computer science guides starting at ₹29. Zero DRM lock-in, instant UPI checkout, and in-browser reading.',
     url: siteUrl,
     siteName: 'AnonTrove',
     locale: 'en_IN',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AnonTrove | Independent Digital Publishing',
-    description: 'Explore 12,192+ verified digital books, technical manuals, and computer science guides. Instant UPI checkout & in-browser reader.',
+    description: 'Explore 18,100+ verified digital books, technical manuals, and computer science guides. Instant UPI checkout & in-browser reader.',
   },
 };
 

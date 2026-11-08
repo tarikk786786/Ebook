@@ -60,7 +60,7 @@ export default function AffiliatePage() {
             Share Knowledge. Earn 20% Direct Commission.
           </h1>
           <p className="text-sm text-[#6E685F] leading-relaxed">
-            Join the AnonTrove Partner Program. Recommend over 12,192+ verified DRM-free digital books and software manuals to your students, followers, or colleagues. Payouts processed directly via UPI.
+            Join the AnonTrove Partner Program. Recommend over 18,100+ verified DRM-free digital books and software manuals to your students, followers, or colleagues. Payouts processed directly via UPI.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default function AffiliatePage() {
             <div className="w-10 h-10 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] flex items-center justify-center text-[#9A704B]">
               <Users className="w-5 h-5" />
             </div>
-            <h2 className="font-serif text-base font-semibold text-[#24231F]">12,192+ Verified Titles</h2>
+            <h2 className="font-serif text-base font-semibold text-[#24231F]">18,100+ Verified Titles</h2>
             <p className="text-xs text-[#6E685F] leading-relaxed">
               Recommend individual books, curated category hubs, or full-stack bundles to your community.
             </p>

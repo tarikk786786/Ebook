@@ -371,13 +371,13 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FAF6F1] border border-[#F2E8DC] text-[#9A704B] text-[11px] font-semibold uppercase tracking-wider mb-2">
                 <Sparkles className="w-3 h-3 text-[#9A704B]" />
-                100% Real Covers • Verified DRM-Free Digital Editions
+                Curated Digital Study Guides & Reference Editions
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
                 The AnonTrove Catalog Shelf
               </h2>
               <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
-                Explore <strong>86,269</strong> verified documents & titles across 753 connected channels • Showing {filteredBooks.length.toLocaleString()} active showcase masterclasses • Page {currentPage} of {totalPages || 1}
+                Explore <strong>18,100+</strong> curated study guides, technical manuals & reference materials • Showing {filteredBooks.length.toLocaleString()} items on this shelf • Page {currentPage} of {totalPages || 1}
               </p>
             </div>
 
