@@ -9,6 +9,7 @@ export interface ToolDownloadAsset {
   downloadCount: number;
   verified: boolean;
   isBinary: boolean;
+  checksum?: string;
 }
 
 export interface ToolRelease {

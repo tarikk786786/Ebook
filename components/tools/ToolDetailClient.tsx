@@ -27,7 +27,10 @@ import {
   Hash,
   Info,
   Laptop,
-  FileText
+  FileText,
+  UploadCloud,
+  RefreshCw,
+  ShieldAlert
 } from 'lucide-react';
 
 interface ToolDetailClientProps {
@@ -37,6 +40,53 @@ interface ToolDetailClientProps {
 
 export default function ToolDetailClient({ tool, relatedTools }: ToolDetailClientProps) {
   const [copiedCmd, setCopiedCmd] = useState<string | null>(null);
+  // Client-Side SHA-256 Checksum Verifier State
+  const [verifierFile, setVerifierFile] = useState<File | null>(null);
+  const [computedHash, setComputedHash] = useState<string>('');
+  const [isHashing, setIsHashing] = useState<boolean>(false);
+  const [manualCompareHash, setManualCompareHash] = useState<string>('');
+  const [dragOver, setDragOver] = useState<boolean>(false);
+
+  const computeFileHash = async (file: File) => {
+    setIsHashing(true);
+    setVerifierFile(file);
+    try {
+      const buffer = await file.arrayBuffer();
+      const digest = await window.crypto.subtle.digest('SHA-256', buffer);
+      const hashArray = Array.from(new Uint8Array(digest));
+      const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+      setComputedHash(hashHex);
+    } catch (err) {
+      console.error('Hashing error:', err);
+    } finally {
+      setIsHashing(false);
+    }
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      computeFileHash(e.dataTransfer.files[0]);
+    }
+  };
+
+  const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      computeFileHash(e.target.files[0]);
+    }
+  };
+
+  const releaseChecksums = tool.latestRelease?.checksums ? Object.values(tool.latestRelease.checksums) : [];
+  const assetChecksums = tool.downloads.map((d: any) => d.checksum).filter(Boolean) as string[];
+  const knownChecksums = [...releaseChecksums, ...assetChecksums].map((c) => c.toLowerCase());
+
+  const isOfficialMatch = computedHash && knownChecksums.includes(computedHash.toLowerCase());
+  const isManualMatch =
+    computedHash &&
+    manualCompareHash &&
+    computedHash.toLowerCase() === manualCompareHash.trim().toLowerCase();
+
   const [activeInstallTab, setActiveInstallTab] = useState<string>(
     Object.keys(tool.packageInstallCommands)[0] || 'git'
   );
@@ -325,6 +375,125 @@ export default function ToolDetailClient({ tool, relatedTools }: ToolDetailClien
                     </a>
                   </div>
                 ))}
+              </div>
+
+              {/* Client-Side Cryptographic SHA-256 Checksum Verifier */}
+              <div className="mb-6 rounded-2xl bg-slate-950/80 border border-emerald-500/30 p-5 space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <div className="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                      <Hash className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-white">Client-Side SHA-256 Binary Integrity Verifier</h4>
+                      <p className="text-[11px] text-slate-400">
+                        100% Client-Side. Verified locally in your browser using the Web Crypto API. No files are uploaded.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dropzone */}
+                <div
+                  onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+                  onDragLeave={() => setDragOver(false)}
+                  onDrop={handleDrop}
+                  className={`border-2 border-dashed rounded-xl p-6 text-center transition-all cursor-pointer ${
+                    dragOver
+                      ? 'border-emerald-400 bg-emerald-950/20'
+                      : 'border-slate-800 hover:border-slate-700 bg-slate-900/40'
+                  }`}
+                  onClick={() => document.getElementById('checksum-file-input')?.click()}
+                >
+                  <input
+                    id="checksum-file-input"
+                    type="file"
+                    className="hidden"
+                    onChange={handleFileInput}
+                  />
+                  <div className="flex flex-col items-center justify-center space-y-2">
+                    <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400">
+                      {isHashing ? (
+                        <RefreshCw className="w-5 h-5 text-emerald-400 animate-spin" />
+                      ) : (
+                        <UploadCloud className="w-5 h-5 text-emerald-400" />
+                      )}
+                    </div>
+                    <div className="text-xs text-slate-300 font-medium">
+                      {verifierFile ? (
+                        <span className="text-emerald-400 font-mono font-bold">{verifierFile.name} ({(verifierFile.size / 1024 / 1024).toFixed(2)} MB)</span>
+                      ) : (
+                        <>Drag & drop downloaded binary here, or <span className="text-emerald-400 underline">browse file</span></>
+                      )}
+                    </div>
+                    <p className="text-[10px] text-slate-500">
+                      Computes SHA-256 hash in real-time to guarantee file authenticity against developer releases.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hash Result Display */}
+                {computedHash && (
+                  <div className="space-y-3 pt-2">
+                    <div className="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">
+                          Computed SHA-256 Hash
+                        </span>
+                        <button
+                          onClick={() => handleCopy(computedHash)}
+                          className="text-[10px] text-emerald-400 hover:text-emerald-300 flex items-center space-x-1"
+                        >
+                          <Copy className="w-3 h-3" />
+                          <span>{copiedCmd === computedHash ? 'Copied' : 'Copy Hash'}</span>
+                        </button>
+                      </div>
+                      <div className="font-mono text-xs text-emerald-300 break-all select-all">
+                        {computedHash}
+                      </div>
+                    </div>
+
+                    {/* Verification Indicators */}
+                    {isOfficialMatch ? (
+                      <div className="p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/50 flex items-center space-x-2 text-xs text-emerald-300">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <span><strong>✓ Authenticity Verified!</strong> Matches official release checksum recorded in AnonTrove registry.</span>
+                      </div>
+                    ) : (
+                      <div className="space-y-2">
+                        <div className="text-[11px] text-slate-400">
+                          Compare against official developer checksum (paste below):
+                        </div>
+                        <input
+                          type="text"
+                          placeholder="Paste expected SHA-256 hash here..."
+                          value={manualCompareHash}
+                          onChange={(e) => setManualCompareHash(e.target.value)}
+                          className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 font-mono focus:outline-none focus:border-emerald-500"
+                        />
+                        {manualCompareHash && (
+                          <div className={`p-2.5 rounded-lg text-xs flex items-center space-x-2 ${
+                            isManualMatch
+                              ? 'bg-emerald-950/70 border border-emerald-500/50 text-emerald-300'
+                              : 'bg-rose-950/60 border border-rose-500/50 text-rose-300'
+                          }`}>
+                            {isManualMatch ? (
+                              <>
+                                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                                <span>Checksum Match! The binary has not been tampered with.</span>
+                              </>
+                            ) : (
+                              <>
+                                <ShieldAlert className="w-4 h-4 text-rose-400 shrink-0" />
+                                <span>Checksum mismatch. Ensure the correct platform release is being verified.</span>
+                              </>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
 
               {/* Checksum & Security Footnote */}

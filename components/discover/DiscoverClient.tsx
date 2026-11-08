@@ -51,6 +51,23 @@ export default function DiscoverClient({ initialBooks, metadata, sources }: Disc
   const [selectedFormat, setSelectedFormat] = useState('ALL');
   const [selectedSource, setSelectedSource] = useState('ALL');
   const [activeModalBook, setActiveModalBook] = useState<DiscoveredEbook | null>(null);
+  const [readerBook, setReaderBook] = useState<DiscoveredEbook | null>(null);
+
+  const getReaderEmbedUrl = (book: DiscoveredEbook) => {
+    const url = book.infoUrl || book.previewUrl || '';
+    if (url.includes('archive.org/details/')) {
+      const parts = url.split('archive.org/details/');
+      const id = parts[1].split('/')[0].split('?')[0];
+      return `https://archive.org/embed/${id}`;
+    }
+    if (book.previewUrl && (book.previewUrl.includes('books.google') || book.previewUrl.includes('preview'))) {
+      return book.previewUrl;
+    }
+    if (book.downloadUrl && (book.downloadUrl.endsWith('.pdf') || book.downloadUrl.endsWith('.html') || book.downloadUrl.endsWith('.txt'))) {
+      return book.downloadUrl;
+    }
+    return null;
+  };
 
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -373,13 +390,27 @@ export default function DiscoverClient({ initialBooks, metadata, sources }: Disc
 
                   {/* Actions Footer */}
                   <div className="pt-3 border-t border-slate-800/60 flex items-center justify-between gap-2">
-                    <button
-                      onClick={() => setActiveModalBook(book)}
-                      className="text-xs font-semibold text-slate-400 hover:text-white flex items-center"
-                    >
-                      <Info className="w-3.5 h-3.5 mr-1 text-teal-400" />
-                      Bibliographic Specs
-                    </button>
+                    <div className="flex items-center space-x-2">
+                      <button
+                        onClick={() => setActiveModalBook(book)}
+                        className="text-xs font-semibold text-slate-400 hover:text-white flex items-center"
+                        title="View Bibliographic Specs"
+                      >
+                        <Info className="w-3.5 h-3.5 mr-1 text-teal-400" />
+                        <span className="hidden sm:inline">Specs</span>
+                      </button>
+
+                      {getReaderEmbedUrl(book) && (
+                        <button
+                          onClick={() => setReaderBook(book)}
+                          className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-teal-500/10 hover:bg-teal-500/20 text-teal-300 text-xs font-semibold border border-teal-500/30 transition-colors"
+                          title="Read in Interactive In-Browser Viewer"
+                        >
+                          <BookOpen className="w-3.5 h-3.5 text-teal-400" />
+                          <span>Read</span>
+                        </button>
+                      )}
+                    </div>
 
                     {book.downloadUrl ? (
                       <a
@@ -523,6 +554,19 @@ export default function DiscoverClient({ initialBooks, metadata, sources }: Disc
 
               {/* Modal Actions */}
               <div className="flex items-center justify-end space-x-3 pt-4 border-t border-slate-800">
+                {getReaderEmbedUrl(activeModalBook) && (
+                  <button
+                    onClick={() => {
+                      const b = activeModalBook;
+                      setActiveModalBook(null);
+                      setReaderBook(b);
+                    }}
+                    className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 text-xs font-bold border border-teal-500/40 transition-all shadow-sm"
+                  >
+                    <BookOpen className="w-4 h-4 text-teal-400" />
+                    <span>Read in Browser</span>
+                  </button>
+                )}
                 {activeModalBook.downloadUrl && (
                   <a
                     href={activeModalBook.downloadUrl}
@@ -546,6 +590,69 @@ export default function DiscoverClient({ initialBooks, metadata, sources }: Disc
                   </a>
                 )}
               </div>
+            </div>
+          </div>
+        )}
+        {/* Interactive In-Browser Reader Modal */}
+        {readerBook && getReaderEmbedUrl(readerBook) && (
+          <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex flex-col justify-between p-2 sm:p-6 animate-in fade-in duration-200">
+            {/* Reader Header */}
+            <div className="flex items-center justify-between pb-3 px-2 border-b border-slate-800">
+              <div className="flex items-center space-x-3 min-w-0">
+                <div className="p-2 rounded-lg bg-teal-500/10 border border-teal-500/30 text-teal-400 shrink-0">
+                  <BookOpen className="w-5 h-5" />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-sm sm:text-base font-bold text-white truncate">
+                    {readerBook.title}
+                  </h3>
+                  <p className="text-xs text-slate-400 truncate">
+                    By {readerBook.authors.join(', ')} • Source: {readerBook.source}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-2 shrink-0">
+                {readerBook.downloadUrl && (
+                  <a
+                    href={readerBook.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors"
+                  >
+                    <Download className="w-3.5 h-3.5 text-teal-400" />
+                    <span className="hidden sm:inline">Download Copy</span>
+                  </a>
+                )}
+                <button
+                  onClick={() => setReaderBook(null)}
+                  className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+                  title="Close Reader"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Embedded Reader Frame */}
+            <div className="flex-1 w-full my-3 rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden shadow-2xl relative">
+              <iframe
+                src={getReaderEmbedUrl(readerBook)!}
+                className="w-full h-full border-0"
+                allow="fullscreen; clipboard-read; clipboard-write"
+                title={`Interactive Reader - ${readerBook.title}`}
+              />
+            </div>
+
+            {/* Reader Footer Controls */}
+            <div className="flex items-center justify-between px-2 pt-2 text-[11px] text-slate-500">
+              <span>Zero-Install Sandbox Reader • Powered by Open Repositories</span>
+              <button
+                onClick={() => setReaderBook(null)}
+                className="text-teal-400 hover:underline"
+              >
+                Close and return to catalog
+              </button>
             </div>
           </div>
         )}
