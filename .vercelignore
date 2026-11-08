@@ -1,6 +1,6 @@
 # Ignore huge storage assets from Vercel serverless deployment bundle
-private_storage/
-storage/
+/private_storage/
+/storage/
 *.pdf
 .git
 node_modules
