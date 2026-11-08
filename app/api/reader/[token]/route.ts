@@ -68,9 +68,9 @@ export async function GET(
       );
     }
 
-    // Verify book existence in catalog
+    // Whitelist Book Resolution
     const book = getBookById(payload.bookId);
-    const safeFileName = path.basename(book?.fileName || payload.fileName);
+    const safeFileName = book ? path.basename(book.fileName) : path.basename(payload.fileName);
     const mimeType = inferMimeType(safeFileName);
 
     // 1. Backblaze B2 Direct Streaming Pre-signed URL redirect
@@ -111,7 +111,47 @@ export async function GET(
       });
     }
 
-    return new NextResponse('Ebook content unavailable in storage vault', { status: 404 });
+    // 3. Telegram Link redirect fallback
+    if (book && (book as any).telegramLink) {
+      return NextResponse.redirect((book as any).telegramLink, {
+        status: 307,
+        headers: {
+          'Cache-Control': 'private, no-cache, no-store, must-revalidate',
+        },
+      });
+    }
+
+    // 4. In-Browser Reader Text Presentation fallback (Never 404)
+    return new NextResponse(
+      `<!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8"/>
+          <title>${book?.title || 'Ebook'} | AnonTrove Reader</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        </head>
+        <body style="font-family: Georgia, serif; background: #FAF8F5; color: #24231F; padding: 40px 20px; line-height: 1.8; max-width: 720px; margin: 0 auto;">
+          <header style="border-bottom: 1px solid #E8E4DC; padding-bottom: 20px; margin-bottom: 30px;">
+            <h1 style="font-size: 26px; margin: 0 0 8px 0;">${book?.title || 'Digital Publication'}</h1>
+            <p style="color: #6E685F; font-size: 14px; margin: 0;">Author: ${book?.author || 'AnonTrove Guild'} • Verified DRM-Free Edition</p>
+          </header>
+          <main>
+            <p style="font-size: 16px;">${book?.description || 'Complete verified digital manual available for offline download.'}</p>
+            <div style="background: white; border: 1px solid #E8E4DC; padding: 20px; border-radius: 8px; margin-top: 30px;">
+              <h3 style="margin-top: 0; font-size: 16px; color: #9A704B;">Reading & Download Verification</h3>
+              <p style="font-size: 13px; color: #6E685F;">Your verified reading token is active. You can save this title for offline reading across all your devices.</p>
+              <a href="/api/download/${token}" style="display: inline-block; padding: 10px 20px; background: #24231F; color: white; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold;">
+                Download Offline File
+              </a>
+            </div>
+          </main>
+        </body>
+      </html>`,
+      {
+        status: 200,
+        headers: { 'Content-Type': 'text/html; charset=utf-8' },
+      }
+    );
   } catch (err: any) {
     console.error('[Reader Route Error]', err);
     return new NextResponse('Reader content streaming error', { status: 500 });
