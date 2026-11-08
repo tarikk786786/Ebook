@@ -5,31 +5,43 @@
 - **GitHub Repositories**:
   - Storefront & Engine: `https://github.com/tarikk786786/Ebook.git`
   - Global Pages Gateway: `https://github.com/tarikk786786/tarikk786786.github.io.git`
-- **Edge Server Target**: `cname.vercel-dns.com` (Vercel Project: `prj_e2wv2wSvLch2huJsVMKl3O5Dbwo7`)
-- **Health Status**: 100% Operational
+  - TB Books Gateway: `https://github.com/tarikk786786/tbbooks-gateway.git`
+  - Tarik Gateway: `https://github.com/tarikk786786/tarik-gateway.git`
+  - Ebook Gateway: `https://github.com/tarikk786786/ebook-gateway.git`
+  - Reader Gateway: `https://github.com/tarikk786786/read-gateway.git`
+  - Store Gateway: `https://github.com/tarikk786786/tbstore-gateway.git`
+- **Health Status**: 100% Operational (HTTP 200 OK across network)
 
 ---
 
-## 🌐 Complete Global Free Domain Inventory
+## 🌐 Complete Global Free Domain Network
 
-### 1. Instant Active Live Domain
-- `https://tarikk786786.github.io` &mdash; **LIVE (HTTP 200 OK)**. Complete bookstore and 1,600+ catalog titles embedded with zero external branding.
+### 1. Active Live Gateways (HTTP 200 OK &bull; Zero External Branding)
+All 5 `devs.surf` domains are active, resolving to their dedicated Anycast CDN gateways with zero "vercel" branding in the URL:
 
-### 2. Devs.Surf Domains Claimed & Authoritatively Configured (API)
-*All 5 registered under account `Tarik Islam` (`princetarikislam@gmail.com`) with CNAME pointing to `cname.vercel-dns.com` and `_vercel` verification TXT:*
-| Domain | Status | DNS Target | Record Types |
-|---|---|---|---|
-| **`tbbooks.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
-| **`tarik.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
-| **`ebook.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
-| **`read.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
-| **`tbstore.devs.surf`** | **Claimed & Configured** | `cname.vercel-dns.com` | CNAME + TXT (`_vercel`) |
+| Domain | Gateway Repository | Target Anycast CDN | Status | Live Content |
+|---|---|---|---|---|
+| **`tbbooks.devs.surf`** | [`tarikk786786/tbbooks-gateway`](https://github.com/tarikk786786/tbbooks-gateway) | GitHub Anycast CDN | **HTTP 200 OK** | TB Books Official Gateway |
+| **`ebook.devs.surf`** | [`tarikk786786/ebook-gateway`](https://github.com/tarikk786786/ebook-gateway) | GitHub Anycast CDN | **HTTP 200 OK** | TB Ebooks Store Gateway |
+| **`read.devs.surf`** | [`tarikk786786/read-gateway`](https://github.com/tarikk786786/read-gateway) | GitHub Anycast CDN | **HTTP 200 OK** | TB Reader Portal Gateway |
+| **`tbstore.devs.surf`** | [`tarikk786786/tbstore-gateway`](https://github.com/tarikk786786/tbstore-gateway) | GitHub Anycast CDN | **HTTP 200 OK** | TB Storefront Gateway |
+| **`tarik.devs.surf`** | [`tarikk786786/tarik-gateway`](https://github.com/tarikk786786/tarik-gateway) | GitHub Anycast CDN | **HTTP 200 OK** | Tarik Personal & Author Hub |
 
-### 3. Edge-Verified Free Domains on Vercel
+> [!NOTE]
+> **Why `cname.vercel-dns.com` returned 404 on `*.devs.surf`:**
+> `devs.surf` is a private domain and is not registered in the Mozilla Public Suffix List (PSL). Vercel requires ownership verification of the apex root (`_vercel.devs.surf`), which can only be configured by the registry operator. When pointing `*.devs.surf` to Vercel DNS without apex verification, Vercel refuses routing and returns `404 DEPLOYMENT_NOT_FOUND`.
+> Routing the CNAME through GitHub Pages eliminates this bottleneck, providing full edge caching, zero branding, and Let's Encrypt automated TLS certificates.
+
+---
+
+### 2. Edge-Verified PSL Domains on Vercel
+Suffixes that are registered in Mozilla PSL are accepted by Vercel edge without apex verification:
 - `tarik.thedev.id` &mdash; Verified on Vercel Edge (`thedev-id/thedev.id` [PR #1390](https://github.com/thedev-id/thedev.id/pull/1390)).
 - `tb.us.kg`, `book.us.kg`, `tbbooks.us.kg`, `tarik.us.kg`, `ebook.us.kg` &mdash; Pre-Verified on Vercel Edge.
 
-### 4. Official Developer Registry PRs Submitted & Queued
+---
+
+### 3. Open Developer Registry Pull Requests (Passing CI & Queued)
 | Domain | Registry | PR Link | Status |
 |---|---|---|---|
 | `tb.is-a.bot` | `free-domains/is-a.bot` | [PR #784](https://github.com/free-domains/is-a.bot/pull/784) | Passing CI (Domain) |
