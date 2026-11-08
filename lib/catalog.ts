@@ -439,7 +439,7 @@ export const INITIAL_BOOK_CATALOG: Book[] = [
   }
 ];
 
-// Combine verified initial catalog with curated demanded books
+// Combine verified initial catalog with curated demanded books and dual-telegram harvest
 function compileBookCatalog(): Book[] {
   const idMap = new Map<string, Book>();
   for (const b of INITIAL_BOOK_CATALOG) {
@@ -448,6 +448,18 @@ function compileBookCatalog(): Book[] {
   if (Array.isArray(demandedBooks)) {
     for (const b of (demandedBooks as unknown as Book[])) {
       idMap.set(b.id, b);
+    }
+  }
+  if (Array.isArray(rawDynamicBooks)) {
+    const catCounts = new Map<string, number>();
+    for (const b of (rawDynamicBooks as unknown as Book[])) {
+      if (!b || !b.id || idMap.has(b.id) || b.status === 'DRAFT') continue;
+      const cat = b.category || 'General';
+      const curr = catCounts.get(cat) || 0;
+      if (curr < 250) {
+        idMap.set(b.id, b);
+        catCounts.set(cat, curr + 1);
+      }
     }
   }
   return Array.from(idMap.values());
