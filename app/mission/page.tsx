@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EmotionalMissionSection from '@/components/EmotionalMissionSection';
+import CuratorLetterSection from '@/components/CuratorLetterSection';
 import ServiceFeeBreakdown from '@/components/ServiceFeeBreakdown';
 import StudentMessageSection from '@/components/StudentMessageSection';
 import TransparencyTrustSection from '@/components/TransparencyTrustSection';
@@ -71,6 +72,8 @@ export default function MissionPage() {
         </section>
 
         {/* Core Narrative */}
+        <CuratorLetterSection />
+
         <EmotionalMissionSection />
 
         {/* Service Fee Visual Breakdown */}

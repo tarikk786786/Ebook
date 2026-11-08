@@ -14,6 +14,7 @@ import StudentMessageSection from '@/components/StudentMessageSection';
 import TransparencyTrustSection from '@/components/TransparencyTrustSection';
 import Footer from '@/components/Footer';
 import AvailabilityBadge from '@/components/AvailabilityBadge';
+import CuratorLetterSection from '@/components/CuratorLetterSection';
 import { BOOK_CATALOG, Book } from '@/lib/catalog';
 import { 
   ShieldCheck, 
@@ -436,7 +437,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 text-xs text-slate-400 pt-1">
                 <span className="flex items-center space-x-1">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Instant Razorpay & UPI Download</span>
+                  <span>Instant FamPay UPI Download • 0% Fee</span>
                 </span>
                 <span className="flex items-center space-x-1">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
@@ -462,6 +463,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+                {/* Transparent Curator Open Letter */}
+        <CuratorLetterSection />
 
         {/* Main Catalog Shelf Section */}
         <section id="catalog-shelf" className="py-8 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

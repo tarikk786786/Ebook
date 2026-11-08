@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { getAllTools, EbookTool } from '@/lib/tools';
+import { verifyAdminAccess } from '@/lib/auth/admin';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,14 +10,33 @@ function getToolsFilePath() {
   return path.join(process.cwd(), 'data', 'tools_registry.json');
 }
 
-function verifyAdmin(request: NextRequest): boolean {
-  const token = request.headers.get('x-admin-token');
-  const secret = process.env.ADMIN_ACCESS_SECRET || 'anontrove_sec_9942a78f0b1e4c62d5a3b79e180d4f6a9c1e2b4d6f8a0e2';
-  return Boolean(token && token === secret);
+function isSafePublicHttpsUrl(targetUrl: string): boolean {
+  try {
+    const parsed = new URL(targetUrl);
+    if (parsed.protocol !== 'https:') return false;
+    const host = parsed.hostname.toLowerCase();
+    // Reject loopback, private ranges, link-local, and cloud metadata services
+    if (
+      host === 'localhost' ||
+      host === '127.0.0.1' ||
+      host === '::1' ||
+      host === '169.254.169.254' ||
+      host.endsWith('.local') ||
+      host.endsWith('.internal') ||
+      /^10\./.test(host) ||
+      /^192\.168\./.test(host) ||
+      /^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(host)
+    ) {
+      return false;
+    }
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export async function GET(request: NextRequest) {
-  if (!verifyAdmin(request)) {
+  if (!verifyAdminAccess(request)) {
     return NextResponse.json({ error: 'Unauthorized administrative access' }, { status: 401 });
   }
 
@@ -42,7 +62,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function PATCH(request: NextRequest) {
-  if (!verifyAdmin(request)) {
+  if (!verifyAdminAccess(request)) {
     return NextResponse.json({ error: 'Unauthorized administrative access' }, { status: 401 });
   }
 
@@ -58,12 +78,16 @@ export async function PATCH(request: NextRequest) {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     let tools: EbookTool[] = data.tools || [];
 
-    // Link verification check action
+    // Link verification check action with strict SSRF defense
     if (action === 'verify_links') {
       const results: Record<string, { status: number; ok: boolean }> = {};
       const targetTool = tools.find((t) => t.id === id);
       if (targetTool) {
         for (const dl of targetTool.downloads) {
+          if (!isSafePublicHttpsUrl(dl.downloadUrl)) {
+            results[dl.fileName] = { status: 400, ok: false };
+            continue;
+          }
           try {
             const resp = await fetch(dl.downloadUrl, { method: 'HEAD', redirect: 'follow' });
             results[dl.fileName] = { status: resp.status, ok: resp.ok };
@@ -101,7 +125,7 @@ export async function PATCH(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  if (!verifyAdmin(request)) {
+  if (!verifyAdminAccess(request)) {
     return NextResponse.json({ error: 'Unauthorized administrative access' }, { status: 401 });
   }
 
