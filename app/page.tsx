@@ -203,7 +203,7 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E4DC] text-xs font-sans font-medium text-[#81796D]">
                 <Award className="w-3.5 h-3.5 text-[#9A704B]" />
-                <span>Independent Digital Bookstore • 83,925+ Verified Documents & Titles</span>
+                <span>Independent Digital Bookstore • 86,269+ Verified Documents & Titles</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#24231F] leading-[1.12]">
@@ -221,7 +221,7 @@ export default function HomePage() {
                   className="w-full sm:w-auto px-6 py-3.5 bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-sm"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span>Explore 83,925+ Titles</span>
+                  <span>Explore 86,269+ Titles</span>
                 </a>
 
                 <a
@@ -377,7 +377,7 @@ export default function HomePage() {
                 The AnonTrove Catalog Shelf
               </h2>
               <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
-                Explore <strong>83,925</strong> verified documents & titles across 753 connected channels • Showing {filteredBooks.length.toLocaleString()} active showcase masterclasses • Page {currentPage} of {totalPages || 1}
+                Explore <strong>86,269</strong> verified documents & titles across 753 connected channels • Showing {filteredBooks.length.toLocaleString()} active showcase masterclasses • Page {currentPage} of {totalPages || 1}
               </p>
             </div>
 

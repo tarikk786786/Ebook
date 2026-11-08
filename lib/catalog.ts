@@ -560,7 +560,7 @@ function compileBookCatalog(): Book[] {
 }
 
 export const BOOK_CATALOG: Book[] = compileBookCatalog();
-export const TOTAL_MAPPED_DOCUMENTS = 83925;
+export const TOTAL_MAPPED_DOCUMENTS = 86269;
 
 export function getBookById(id: string): Book | undefined {
   const found = BOOK_CATALOG.find((b) => b.id === id || b.slug === id);
