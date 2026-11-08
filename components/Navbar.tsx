@@ -53,13 +53,13 @@ export default function Navbar({
           <div>
             <div className="flex items-center space-x-2">
               <span className="font-extrabold text-base tracking-tight text-white group-hover:text-emerald-300 transition-colors">
-                Anon<span className="text-emerald-400">Trove</span>
+                TB<span className="text-emerald-400">Books</span>
               </span>
               <span className="text-[10px] uppercase font-mono px-2 py-0.5 bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 rounded-full font-bold">
                 Store
               </span>
             </div>
-            <p className="text-[10px] text-slate-400 hidden sm:block">Independent Ebook Commerce</p>
+            <p className="text-[10px] text-slate-400 hidden sm:block">Digital Literature Vault</p>
           </div>
         </Link>
 
@@ -151,3 +151,4 @@ export default function Navbar({
     </header>
   );
 }
+

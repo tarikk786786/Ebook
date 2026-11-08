@@ -3,22 +3,22 @@ import './globals.css';
 import Providers from '@/components/Providers';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ebook-sandy-chi.vercel.app'),
-  title: 'AnonTrove | Premium Independent Ebook Commerce Platform',
+  metadataBase: new URL('https://tb.is-a.dev'),
+  title: 'TB | Premium Independent Ebook Platform',
   description: 'Independent digital publishing and ebook ecommerce platform selling 1,668+ verified PDF and EPUB technical guides, textbooks, and masterclasses. Multi-item cart, Razorpay & UPI checkout, and in-browser reading.',
   robots: 'index, follow',
   openGraph: {
-    title: 'AnonTrove | Premium Independent Ebook Commerce Platform',
+    title: 'TB | Premium Independent Ebook Platform',
     description: 'Independent digital publishing and ebook ecommerce platform selling 1,668+ verified PDF and EPUB technical guides, textbooks, and masterclasses. Multi-item cart, Razorpay & UPI checkout, and in-browser reading.',
-    url: 'https://ebook-sandy-chi.vercel.app',
-    siteName: 'AnonTrove',
+    url: 'https://tb.is-a.dev',
+    siteName: 'TB Books',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AnonTrove | Independent Ebook Commerce',
-    description: 'Independent digital publishing and ebook ecommerce platform. Multi-item cart, Razorpay & UPI checkout, and in-browser reading.',
+    title: 'TB | Independent Ebook Platform',
+    description: 'Independent digital publishing and ebook platform. Multi-item cart, Razorpay & UPI checkout, and in-browser reading.',
   },
 };
 

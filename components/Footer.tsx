@@ -41,7 +41,7 @@ export default function Footer() {
                 </div>
               </div>
               <span className="font-extrabold text-base tracking-tight text-white group-hover:text-emerald-300 transition-colors">
-                Anon<span className="text-emerald-400">Trove</span>
+                TB<span className="text-emerald-400">Books</span>
               </span>
             </Link>
             <p className="text-xs text-slate-400 leading-relaxed">
@@ -140,3 +140,4 @@ export default function Footer() {
     </footer>
   );
 }
+
