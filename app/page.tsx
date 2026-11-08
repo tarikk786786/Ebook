@@ -31,14 +31,21 @@ import {
   CheckCircle2,
   Lock,
   Zap,
-  Award
+  Award,
+  Flame,
+  Archive,
+  FileText,
+  Code,
+  X
 } from 'lucide-react';
 
-type PriceTier = 'ALL' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
+type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
 type SortOption = 'POPULAR' | 'CHEAPEST' | 'TITLE';
+type CollectionFilter = 'ALL' | 'LATEST_2026' | 'CLASSIC_ARCHIVE' | 'DEALS_29' | 'BOOKS' | 'NOTES' | 'CODE';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCollection, setSelectedCollection] = useState<CollectionFilter>('ALL');
   const [selectedPriceTier, setSelectedPriceTier] = useState<PriceTier>('ALL');
   const [sortBy, setSortBy] = useState<SortOption>('POPULAR');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -86,7 +93,25 @@ export default function HomePage() {
     let result = BOOK_CATALOG.filter((book) => {
       if (book.status === 'DRAFT') return false;
 
+      // Collection & Archive filter
+      if (selectedCollection === 'LATEST_2026' && !book.isLatest) return false;
+      if (selectedCollection === 'CLASSIC_ARCHIVE' && !book.isClassicArchive) return false;
+      if (selectedCollection === 'DEALS_29' && book.priceInInr > 29) return false;
+      if (selectedCollection === 'BOOKS') {
+        const isBook = ['published_ebook', 'textbook', 'professional_book'].includes(book.primaryResourceType || '') || book.isLatest;
+        if (!isBook) return false;
+      }
+      if (selectedCollection === 'NOTES') {
+        const isNote = ['study_notes', 'lecture_notes', 'exam_preparation'].includes(book.primaryResourceType || '') || (book.category && book.category.includes('Notes'));
+        if (!isNote) return false;
+      }
+      if (selectedCollection === 'CODE') {
+        const isCode = ['code_template', 'template'].includes(book.primaryResourceType || '');
+        if (!isCode) return false;
+      }
+
       // Price filter
+      if (selectedPriceTier === '29' && book.priceInInr > 29) return false;
       if (selectedPriceTier === 'UNDER_49' && book.priceInInr > 49) return false;
       if (selectedPriceTier === 'UNDER_99' && book.priceInInr > 99) return false;
       if (selectedPriceTier === 'PREMIUM' && book.priceInInr < 100) return false;
@@ -137,7 +162,7 @@ export default function HomePage() {
     }
 
     return result;
-  }, [selectedCategory, selectedPriceTier, sortBy, searchQuery]);
+  }, [selectedCategory, selectedCollection, selectedPriceTier, sortBy, searchQuery]);
 
   const totalPages = Math.ceil(filteredBooks.length / BOOKS_PER_PAGE);
   const currentBooks = useMemo(() => {
@@ -375,63 +400,171 @@ export default function HomePage() {
           </div>
 
           {/* Filtering Control Bar */}
-          <div className="bg-white border border-[#E8E4DC] rounded-xl p-4 mb-8 shadow-book space-y-4">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-medium text-[#81796D] mr-2">Discipline:</span>
-              {categoryFilters.slice(0, 9).map((cat) => (
+          <div className="bg-white border border-[#E8E4DC] rounded-xl p-4 sm:p-5 mb-8 shadow-book space-y-4">
+            {/* Collection & Archive Selector Tabs */}
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold text-[#81796D] uppercase tracking-wider">Collections & Archives:</span>
+                <span className="text-[11px] text-[#9A704B] font-medium hidden sm:inline">
+                  {selectedCollection === 'ALL' ? 'Showing combined library (18,102 titles)' : selectedCollection === 'LATEST_2026' ? '1,000 Curated 2026 Masterclasses' : selectedCollection === 'CLASSIC_ARCHIVE' ? '17,085 Harvested Telegram Documents' : selectedCollection === 'DEALS_29' ? '2,600+ ₹29 Steal Deals' : 'Filtered Collection'}
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
                 <button
-                  key={cat}
-                  onClick={() => {
-                    setSelectedCategory(cat);
-                    setCurrentPage(1);
-                  }}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                    selectedCategory === cat
-                      ? 'bg-[#24231F] text-white shadow-sm'
+                  onClick={() => { setSelectedCollection('ALL'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'ALL'
+                      ? 'bg-[#24231F] text-white shadow-sm font-semibold'
                       : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
                   }`}
                 >
-                  {cat}
+                  <span>🌟 All Ebooks (18,100+)</span>
                 </button>
-              ))}
+                <button
+                  onClick={() => { setSelectedCollection('LATEST_2026'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'LATEST_2026'
+                      ? 'bg-[#9A704B] text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#9A704B]'
+                  }`}
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  <span>🚀 Latest 2026 Books (1,000)</span>
+                </button>
+                <button
+                  onClick={() => { setSelectedCollection('CLASSIC_ARCHIVE'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'CLASSIC_ARCHIVE'
+                      ? 'bg-[#2B4162] text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#2B4162]'
+                  }`}
+                >
+                  <Archive className="w-3.5 h-3.5 text-blue-400" />
+                  <span>🏛️ Classic 12k+ Telegram Archive</span>
+                </button>
+                <button
+                  onClick={() => { setSelectedCollection('DEALS_29'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'DEALS_29'
+                      ? 'bg-rose-700 text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-rose-700'
+                  }`}
+                >
+                  <Flame className="w-3.5 h-3.5 text-orange-400" />
+                  <span>🔥 ₹29 Steal Deals</span>
+                </button>
+                <button
+                  onClick={() => { setSelectedCollection('BOOKS'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'BOOKS'
+                      ? 'bg-[#24231F] text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-emerald-500" />
+                  <span>📚 Published Books</span>
+                </button>
+                <button
+                  onClick={() => { setSelectedCollection('NOTES'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'NOTES'
+                      ? 'bg-[#24231F] text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
+                  }`}
+                >
+                  <FileText className="w-3.5 h-3.5 text-amber-500" />
+                  <span>📝 Study & Exam Notes</span>
+                </button>
+                <button
+                  onClick={() => { setSelectedCollection('CODE'); setCurrentPage(1); }}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all whitespace-nowrap ${
+                    selectedCollection === 'CODE'
+                      ? 'bg-[#24231F] text-white shadow-sm font-semibold'
+                      : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
+                  }`}
+                >
+                  <Code className="w-3.5 h-3.5 text-cyan-500" />
+                  <span>💻 Code & Dev Assets</span>
+                </button>
+              </div>
             </div>
 
+            {/* Discipline Filter Tabs */}
+            <div className="space-y-1.5 pt-3 border-t border-[#E8E4DC]">
+              <span className="text-xs font-semibold text-[#81796D] uppercase tracking-wider block">Discipline & Topic:</span>
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                {categoryFilters.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setSelectedCategory(cat);
+                      setCurrentPage(1);
+                    }}
+                    className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                      selectedCategory === cat
+                        ? 'bg-[#24231F] text-white shadow-sm'
+                        : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Price Cap & Active Filter Reset */}
             <div className="flex flex-wrap items-center justify-between pt-3 border-t border-[#E8E4DC] gap-3 text-xs">
               <div className="flex items-center gap-2">
-                <span className="text-[#81796D]">Price Cap:</span>
+                <span className="text-[#81796D] font-medium">Price Cap:</span>
                 <button
                   onClick={() => { setSelectedPriceTier('ALL'); setCurrentPage(1); }}
-                  className={`px-2.5 py-1 rounded text-xs ${selectedPriceTier === 'ALL' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                  className={`px-2.5 py-1 rounded text-xs transition-colors ${selectedPriceTier === 'ALL' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
                 >
                   All Prices
                 </button>
                 <button
-                  onClick={() => { setSelectedPriceTier('UNDER_49'); setCurrentPage(1); }}
-                  className={`px-2.5 py-1 rounded text-xs ${selectedPriceTier === 'UNDER_49' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                  onClick={() => { setSelectedPriceTier('29'); setCurrentPage(1); }}
+                  className={`px-2.5 py-1 rounded text-xs transition-colors ${selectedPriceTier === '29' ? 'bg-rose-50 text-rose-700 font-semibold border border-rose-200' : 'text-[#6E685F] hover:text-[#24231F]'}`}
                 >
-                  Under ₹49
+                  🔥 ₹29 Deals
+                </button>
+                <button
+                  onClick={() => { setSelectedPriceTier('UNDER_49'); setCurrentPage(1); }}
+                  className={`px-2.5 py-1 rounded text-xs transition-colors ${selectedPriceTier === 'UNDER_49' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                >
+                  ⚡ Under ₹49
                 </button>
                 <button
                   onClick={() => { setSelectedPriceTier('UNDER_99'); setCurrentPage(1); }}
-                  className={`px-2.5 py-1 rounded text-xs ${selectedPriceTier === 'UNDER_99' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                  className={`px-2.5 py-1 rounded text-xs transition-colors ${selectedPriceTier === 'UNDER_99' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
                 >
-                  Under ₹99
+                  💎 Under ₹99
+                </button>
+                <button
+                  onClick={() => { setSelectedPriceTier('PREMIUM'); setCurrentPage(1); }}
+                  className={`px-2.5 py-1 rounded text-xs transition-colors ${selectedPriceTier === 'PREMIUM' ? 'bg-[#FAF6F1] text-[#9A704B] font-semibold border border-[#F2E8DC]' : 'text-[#6E685F] hover:text-[#24231F]'}`}
+                >
+                  🚀 ₹100+ Full Volumes
                 </button>
               </div>
 
-              {(selectedCategory !== 'All' || selectedPriceTier !== 'ALL' || searchQuery) && (
-                <button
-                  onClick={() => {
-                    setSelectedCategory('All');
-                    setSelectedPriceTier('ALL');
-                    setSearchQuery('');
-                    setCurrentPage(1);
-                  }}
+              {(selectedCategory !== 'All' || selectedCollection !== 'ALL' || selectedPriceTier !== 'ALL' || searchQuery) && (
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] text-[#81796D] hidden md:inline">Filters active</span>
+                  <button
+                    onClick={() => {
+                      setSelectedCategory('All');
+                      setSelectedCollection('ALL');
+                      setSelectedPriceTier('ALL');
+                      setSearchQuery('');
+                      setCurrentPage(1);
+                    }}
                   className="flex items-center gap-1 text-[#9A704B] hover:text-[#24231F] transition-colors"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span>Reset Filters</span>
                 </button>
+                </div>
               )}
             </div>
           </div>

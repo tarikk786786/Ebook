@@ -39,8 +39,12 @@ export interface Book {
   isbn?: string;
   language?: string;
   tags?: string[];
-  status?: 'DRAFT' | 'PUBLISHED';
+  status?: 'DRAFT' | 'PUBLISHED' | 'REJECTED' | 'PENDING_REVIEW' | 'ARCHIVED';
   importedAt?: string;
+  isLatest?: boolean;
+  isClassicArchive?: boolean;
+  isDemanded?: boolean;
+  collection?: 'LATEST_STARTUP' | 'CLASSIC_ARCHIVE' | 'CORE_FEATURED';
 }
 
 export const INITIAL_BOOK_CATALOG: Book[] = [
@@ -504,16 +508,24 @@ function compileBookCatalog(): Book[] {
           publicationYear: sb.publishedYear,
           publisher: sb.publisher,
           isbn: sb.isbn13 || sb.isbn10,
+          isLatest: true,
+          collection: 'LATEST_STARTUP',
+          primaryResourceType: 'published_ebook',
         });
       }
     }
   }
   
-  // 3. All 12,192 harvested ebooks from dual Telegram accounts
+  // 3. All 17,085 harvested ebooks from dual Telegram accounts & archive
   if (Array.isArray(rawDynamicBooks)) {
     for (const b of (rawDynamicBooks as unknown as Book[])) {
       if (b && b.id && !idMap.has(b.id) && b.status !== 'DRAFT') {
-        idMap.set(b.id, b);
+        idMap.set(b.id, {
+          ...b,
+          isClassicArchive: true,
+          collection: 'CLASSIC_ARCHIVE',
+          primaryResourceType: b.primaryResourceType || (b.category?.includes('Notes') ? 'study_notes' : 'published_ebook')
+        });
       }
     }
   }

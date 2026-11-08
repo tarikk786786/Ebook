@@ -81,8 +81,11 @@ export const AUTHORITATIVE_CATEGORIES: CategoryDefinition[] = [
     metaTitle: 'AI & Machine Learning eBooks | AnonTrove',
     metaDescription: 'Comprehensive AI & Machine Learning ebooks, LLM engineering blueprints, and PyTorch deep learning guides. Verified DRM-free PDF downloads.',
     matchedCatalogCategories: [
+      'Artificial Intelligence & Machine Learning',
       'AI & Machine Learning',
-      'Artificial Intelligence'
+      'AI & Data Science',
+      'Artificial Intelligence',
+      'Technology, Digital Business, Software & AI'
     ],
     subcategories: ['Large Language Models (LLMs)', 'Deep Learning', 'PyTorch & TensorFlow', 'RAG & Vector Databases', 'Prompt Engineering'],
     faqs: [
@@ -102,11 +105,15 @@ export const AUTHORITATIVE_CATEGORIES: CategoryDefinition[] = [
     metaTitle: 'Trading, Stocks & Options eBooks | AnonTrove',
     metaDescription: 'Download verified trading ebooks, price action guides, stock market investing blueprints, and options hedging manuals in DRM-free PDF format.',
     matchedCatalogCategories: [
+      'Trading, Stocks & Quantitative Finance',
       'Trading & Wealth',
       'Trading, Stocks & Options',
       'Trading, Finance & Investing',
       'Trading, Equity & Finance',
-      'Finance & Accounting'
+      'FinTech & Trading',
+      'Finance & Accounting',
+      'Investing, Markets & Capital Allocation',
+      'Business Finance, Accounting & Cash Flow'
     ],
     subcategories: ['Price Action & Candlesticks', 'Options Strategies', 'Risk Management', 'Value Investing', 'Algorithmic Trading'],
     faqs: [
@@ -195,6 +202,7 @@ export const AUTHORITATIVE_CATEGORIES: CategoryDefinition[] = [
     metaTitle: 'Exam Preparation & Study Notes eBooks | AnonTrove',
     metaDescription: 'Download verified study notes, exam preparation booklets, solved question banks, and concise revision notes in DRM-free PDF format.',
     matchedCatalogCategories: [
+      'Academic & Exam Preparation Notes',
       'Exam Preparation & Study Notes',
       'Course Notes & Exam Prep',
       'Academic & Exam Preparation'
