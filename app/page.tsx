@@ -37,14 +37,14 @@ import {
 } from 'lucide-react';
 
 type PriceTier = 'ALL' | '29' | 'UNDER_49' | 'UNDER_99' | 'PREMIUM';
-type SortOption = 'CHEAPEST' | 'POPULAR' | 'RATING' | 'TITLE';
+type SortOption = 'FEATURED' | 'CHEAPEST' | 'POPULAR' | 'RATING' | 'TITLE';
 type ResourceTypeFilter = 'ALL' | 'BOOKS' | 'NOTES' | 'code_template' | 'workbook' | 'culinary_guide' | 'technical_manual' | 'course_material';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedResourceType, setSelectedResourceType] = useState<ResourceTypeFilter>('ALL');
   const [selectedPriceTier, setSelectedPriceTier] = useState<PriceTier>('ALL');
-  const [sortBy, setSortBy] = useState<SortOption>('CHEAPEST');
+  const [sortBy, setSortBy] = useState<SortOption>('FEATURED');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
@@ -121,6 +121,14 @@ export default function HomePage() {
 
     // Sorting
     result.sort((a, b) => {
+      if (sortBy === 'FEATURED') {
+        const aTop = (a.badge === 'Bestseller' || a.badge === 'Classic' || (a as any).isDemanded || (a.rating || 0) >= 4.9) ? 2 : 0;
+        const bTop = (b.badge === 'Bestseller' || b.badge === 'Classic' || (b as any).isDemanded || (b.rating || 0) >= 4.9) ? 2 : 0;
+        const aCover = (a.coverImage && a.coverImage.length > 5) ? 1 : 0;
+        const bCover = (b.coverImage && b.coverImage.length > 5) ? 1 : 0;
+        if (aTop + aCover !== bTop + bCover) return (bTop + bCover) - (aTop + aCover);
+        return ((b.reviewCount || 0) * (b.rating || 0)) - ((a.reviewCount || 0) * (a.rating || 0));
+      }
       if (sortBy === 'CHEAPEST') return a.priceInInr - b.priceInInr;
       if (sortBy === 'POPULAR') return (b.reviewCount || 0) - (a.reviewCount || 0);
       if (sortBy === 'RATING') return (b.rating || 0) - (a.rating || 0);
@@ -488,6 +496,7 @@ export default function HomePage() {
                   onChange={(e) => setSortBy(e.target.value as SortOption)}
                   className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-300 focus:outline-none focus:border-emerald-500 font-medium"
                 >
+                  <option value="FEATURED">⭐ Showcase: Demanded & Top Sellers (With Cover)</option>
                   <option value="CHEAPEST">Price: Low to High (Cheapest)</option>
                   <option value="POPULAR">Most Popular</option>
                   <option value="RATING">Highest Rated</option>
