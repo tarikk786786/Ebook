@@ -550,10 +550,10 @@ function compileBookCatalog(): Book[] {
 export const BOOK_CATALOG: Book[] = compileBookCatalog();
 
 export function getBookById(id: string): Book | undefined {
-  const found = BOOK_CATALOG.find((b) => b.id === id);
+  const found = BOOK_CATALOG.find((b) => b.id === id || b.slug === id);
   if (found) return found;
   if (Array.isArray(rawDynamicBooks)) {
-    return (rawDynamicBooks as unknown as Book[]).find((b) => b.id === id);
+    return (rawDynamicBooks as unknown as Book[]).find((b) => b.id === id || b.slug === id);
   }
   return undefined;
 }
