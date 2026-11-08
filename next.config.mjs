@@ -9,10 +9,6 @@ const securityHeaders = [
     value: 'max-age=63072000; includeSubDomains; preload',
   },
   {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN', // Allows safe same-origin iframe embedding for internal PDF/EPUB reader
-  },
-  {
     key: 'X-Content-Type-Options',
     value: 'nosniff',
   },
@@ -36,7 +32,7 @@ const securityHeaders = [
       "object-src 'none'",
       "base-uri 'self'",
       "form-action 'self'",
-      "frame-ancestors 'self'",
+      "frame-ancestors 'self' https://tarikk786786.github.io https://*.github.io https://*.devs.surf https://*.thedev.id https://*.is-a.bot https://*.is-cod.in https://*.is-not.cool https://*.creepers.sbs https://*.us.kg",
       "frame-src 'self'",
     ].join('; '),
   },
