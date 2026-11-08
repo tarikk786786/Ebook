@@ -497,7 +497,6 @@ export default function HomePage() {
                   className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-300 focus:outline-none focus:border-emerald-500 font-medium"
                 >
                   <option value="FEATURED">⭐ Showcase: Demanded & Top Sellers (With Cover)</option>
-                  <option value="FEATURED">⭐ Showcase: Demanded & Top Sellers (With Cover)</option>
                   <option value="CHEAPEST">Price: Low to High (Cheapest)</option>
                   <option value="POPULAR">Most Popular</option>
                   <option value="RATING">Highest Rated</option>

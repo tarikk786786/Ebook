@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { decryptDownloadToken } from '@/lib/crypto';
 import { BOOK_CATALOG } from '@/lib/catalog';
+import { getStorageAdapter } from '@/lib/storage';
 import fs from 'fs';
 import path from 'path';
 
@@ -114,7 +115,7 @@ export async function GET(
       );
     }
 
-    // Strict Whitelist Validation against BOOK_CATALOG
+    // Whitelist Validation against BOOK_CATALOG
     const validBook = BOOK_CATALOG.find(
       (b) => b.id === payload.bookId && b.fileName === payload.fileName
     );
@@ -123,43 +124,70 @@ export async function GET(
       return new NextResponse('Resource authorization mismatch.', { status: 403 });
     }
 
-    // Path traversal defense & canonical boundary verification
-    const privateStorageDir = path.resolve(process.cwd(), 'private_storage');
     const safeFileName = path.basename(validBook.fileName);
+    const storageKey = (validBook as any).storageKey || safeFileName;
+    const storage = getStorageAdapter();
+
+    // 1. Direct Backblaze B2 Pre-signed redirect (HTTP 307)
+    if (storage.provider === 'b2') {
+      incrementTokenDownloadCount(tokenHash);
+      const signedUrl = await storage.getSignedUrl(storageKey, 900, safeFileName);
+      return NextResponse.redirect(signedUrl, {
+        status: 307,
+        headers: {
+          'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
+          'X-Robots-Tag': 'noindex, nofollow, noarchive',
+        },
+      });
+    }
+
+    // 2. Local Storage streaming fallback (Development / On-premise)
+    const privateStorageDir = path.resolve(process.cwd(), 'private_storage');
     const targetFilePath = path.resolve(privateStorageDir, safeFileName);
 
-    if (!targetFilePath.startsWith(privateStorageDir)) {
-      return new NextResponse('Access Denied', { status: 403 });
+    if (targetFilePath.startsWith(privateStorageDir) && fs.existsSync(targetFilePath)) {
+      incrementTokenDownloadCount(tokenHash);
+      const stat = fs.statSync(targetFilePath);
+      const fileStream = fs.createReadStream(targetFilePath);
+
+      return new NextResponse(fileStream as any, {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/pdf',
+          'Content-Length': stat.size.toString(),
+          'Content-Disposition': `attachment; filename="${safeFileName}"`,
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+          'X-Content-Type-Options': 'nosniff',
+          'X-Download-Options': 'noopen',
+          'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet',
+          'Referrer-Policy': 'no-referrer',
+        },
+      });
     }
 
-    if (!fs.existsSync(targetFilePath)) {
-      return new NextResponse('Asset storage temporarily unmounted', { status: 404 });
+    // 3. Fallback: If not on local disk and B2 credentials configured in env
+    if (process.env.B2_KEY_ID && process.env.B2_APPLICATION_KEY) {
+      try {
+        const { BackblazeB2Adapter } = await import('@/lib/storage/adapters/b2');
+        const b2 = new BackblazeB2Adapter();
+        incrementTokenDownloadCount(tokenHash);
+        const signedUrl = await b2.getSignedUrl(storageKey, 900, safeFileName);
+        return NextResponse.redirect(signedUrl, {
+          status: 307,
+          headers: {
+            'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
+          },
+        });
+      } catch (e) {
+        console.error('[Download] B2 fallback redirect error:', e);
+      }
     }
 
-    // Increment download count (persisted across serverless lambdas)
-    incrementTokenDownloadCount(tokenHash);
-
-    const stat = fs.statSync(targetFilePath);
-    const fileStream = fs.createReadStream(targetFilePath);
-
-    // Stream file with strict anti-forensic & anti-cache headers
-    return new NextResponse(fileStream as any, {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Length': stat.size.toString(),
-        'Content-Disposition': `attachment; filename="${safeFileName}"`,
-        // Strict anti-forensic and zero-cache directives
-        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0',
-        'Pragma': 'no-cache',
-        'Expires': '0',
-        'X-Content-Type-Options': 'nosniff',
-        'X-Download-Options': 'noopen',
-        'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet',
-        'Referrer-Policy': 'no-referrer',
-      },
-    });
+    return new NextResponse('Asset storage temporarily unmounted', { status: 404 });
   } catch (err: any) {
+    console.error('[Download Route Error]', err);
     return new NextResponse('Secure streaming failure', { status: 500 });
   }
 }
