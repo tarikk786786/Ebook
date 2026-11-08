@@ -19,6 +19,8 @@
 | **Phase 7** | Reader & Fulfillment Integrity | **COMPLETE** | Direct pre-signed 15-minute download token with zero-proxy Vercel serverless memory protection |
 | **Phase 8** | Backup, Recovery & Disaster Resilience | **COMPLETE** | `project-docs/BACKUP_RESTORE.md` with rclone and restic automated snapshot routines |
 | **Phase 9** | End-to-End System Testing & Hardening | **COMPLETE** | Live FamPay UPI checkout test HTTP 200 OK (`orderId: fg_*`), CSP verified |
+| **Phase 10** | Ebook Tools Download Center | **COMPLETE** | `/tools`, 33 pre-rendered `/tools/[slug]`, release tracker, `/admin/tools` (HTTP 200 OK) |
+| **Phase 11** | Universal Discovery & Scraper Engine | **COMPLETE** | `/discover`, 12-source registry, AI metadata engine, `/admin/scraper` control plane (HTTP 200 OK) |
 
 ---
 
@@ -90,6 +92,24 @@
 
 ---
 
+### Phase 10: Ebook Tools Download Center
+- [x] Curate and verify 33 FOSS ebook tools across 14 categories in `data/tools_registry.json`.
+- [x] Build `lib/tools.ts` TypeScript schema and data access layer.
+- [x] Build `app/tools/page.tsx` with 14 categories, OS filters, format filters, FOSS toggle, sorting, and search.
+- [x] Build dynamic pre-rendered tool detail pages `app/tools/[slug]/page.tsx` with OS CLI install tabs, release notes, and verified downloads.
+- [x] Build `app/api/tools/releases/route.ts` serving GitHub release metadata and checksums.
+- [x] Build `app/admin/tools/page.tsx` and `app/api/admin/tools/route.ts` with zero-trust token authentication and live link verifier.
+- [x] Author comprehensive documentation in `docs/tools/` (inventory, audit, download verification, release tracker, security report).
+
+### Phase 11: Universal Internet Ebook Discovery & Acquisition Engine
+- [x] Build 12-source registry `data/scraper/source_registry.json` with rate limits, crawl permissions, and copyright policies.
+- [x] Implement polite rate-limited Python crawlers (`scripts/scraper/`) for Google Books, Open Library, Internet Archive, Gutenberg, and Telegram.
+- [x] Implement AI Metadata Normalization & Deduplication Engine (`ai_metadata_engine.py`) with ISBN checksum validation and rights tagging.
+- [x] Ingest and catalog 121 unique verified books in `data/scraper/universal_catalog.json`.
+- [x] Build public `app/discover/page.tsx` with real-time format, source, and availability filtering.
+- [x] Build `app/admin/scraper/page.tsx` administrative control plane for source toggling, crawler triggering, and audit.
+- [x] Author system documentation in `docs/universal-scraper/` (master plan, source registry, scraper status, import log, security report, next actions).
+
 ## Live Production Verification Log
 
 | Endpoint / Asset | Probe Type | Response | Status |
@@ -100,3 +120,9 @@
 | `https://ebook-sandy-chi.vercel.app/book/basics-of-equity-research-by-zebra-learn` | GET | HTTP 200 OK | Verified |
 | `https://ebook-sandy-chi.vercel.app/covers/100m-money-models-how-to-make-money.jpg` | GET (image/jpeg) | HTTP 200 OK | Verified |
 | `https://ebook-sandy-chi.vercel.app/api/checkout` | POST (FamPay UPI) | HTTP 200 OK (`orderId: fg_*`) | Verified |
+| `https://ebook-sandy-chi.vercel.app/tools` | GET | HTTP 200 OK (431 kB) | Verified |
+| `https://ebook-sandy-chi.vercel.app/tools/calibre` | GET | HTTP 200 OK (104 kB) | Verified |
+| `https://ebook-sandy-chi.vercel.app/api/tools/releases` | GET | HTTP 200 OK (50 kB) | Verified |
+| `https://ebook-sandy-chi.vercel.app/discover` | GET | HTTP 200 OK (1.35 MB) | Verified |
+| `https://ebook-sandy-chi.vercel.app/api/scraper/status` | GET | HTTP 200 OK (16.4 kB) | Verified |
+| `https://ebook-sandy-chi.vercel.app/admin/scraper` | GET | HTTP 200 OK (9.9 kB) | Verified |
