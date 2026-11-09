@@ -1,99 +1,110 @@
 'use client';
 
 import React from 'react';
-import { Clock, Server, BookOpen, CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
+import { Clock, Server, BookOpen, CheckCircle2, Heart, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export default function CuratorLetterSection() {
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 my-10">
-      <div className="bg-[#111622] border border-slate-800 rounded-xl p-6 sm:p-8 space-y-6">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 my-12">
+      <div className="bg-[#1C1A17] border border-[#38352F] rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8 relative overflow-hidden">
+        {/* Glow ambient accent */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#9A704B]/10 rounded-full blur-[100px] pointer-events-none" />
+
         {/* Section Header */}
-        <div className="border-b border-slate-800/80 pb-4">
-          <div className="text-[11px] font-mono tracking-wider text-slate-400 uppercase font-semibold">
-            Note from the Curator
+        <div className="border-b border-[#38352F]/80 pb-6 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#9A704B]/15 border border-[#9A704B]/30 text-[#D4AF37] text-[11px] font-mono uppercase tracking-wider font-semibold mb-3">
+            <Heart className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
+            <span>Honest Curator&apos;s Note • Why We Charge So Little</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-bold text-white mt-1">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#FAF6F1] tracking-tight">
             You don&apos;t have to pay to find these books.
           </h2>
-          <p className="text-sm text-slate-300 mt-1.5 leading-relaxed">
-            Most of the material indexed here can be found across public channels, archives, and discussion groups if you have the time to look. Here is why this index exists and what ₹29 covers.
+          <p className="text-sm sm:text-base text-[#D6D3D1] mt-2 max-w-3xl leading-relaxed">
+            Most of the material indexed here can be found across public channels, archives, and discussion groups if you have hours to search. Here is why this index exists and what ₹9 to ₹29 actually covers.
           </p>
         </div>
 
         {/* Narrative */}
-        <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-[#A8A29E] leading-relaxed relative z-10">
           <p>
-            If you spend several hours digging through scattered channels, cloud folders, and forum threads, you can likely find many of these files for free. We do not claim authorship or copyright ownership over these publications.
+            If you spend several hours digging through scattered channels, cloud folders, dead mirrors, and ad-infested forums, you can likely locate many of these files for free. <strong className="text-[#FAF6F1]">We do not claim authorship or copyright ownership over these publications.</strong>
           </p>
           <p>
-            What you are paying is not the price of the book. It is a small service fee to cover the time spent finding, checking, and organizing files, plus the ongoing cost of fast hosting and index search so students and readers can access what they need in seconds.
+            What you contribute is <strong className="text-[#FAF6F1]">never the purchase price of the book</strong>. It is a tiny, nominal service fee (₹9 to ₹29) that supports the time spent verifying, cleaning, and cataloguing complete editions, plus the ongoing monthly cost of high-speed cloud storage nodes, zero-ad direct delivery, and instant in-browser reading.
           </p>
         </div>
 
-        {/* 3 Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-          <div className="bg-[#0B0F17] border border-slate-800/80 rounded-lg p-4 space-y-2">
-            <div className="flex items-center space-x-2 text-slate-200 text-xs font-semibold">
-              <Clock className="w-4 h-4 text-slate-400" />
-              <span>Time Saved</span>
+        {/* 3 Value Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 relative z-10">
+          <div className="bg-[#141311] border border-[#2D2A26] rounded-xl p-5 space-y-2.5">
+            <div className="flex items-center space-x-2 text-[#FAF6F1] text-xs font-semibold">
+              <Clock className="w-4 h-4 text-[#D4AF37]" />
+              <span className="font-serif text-sm">Time Saved</span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              We locate, clean, and verify complete files so you do not have to deal with broken mirrors or mislabeled downloads.
+            <p className="text-xs text-[#A8A29E] leading-relaxed">
+              We locate, virus-scan, organize, and verify complete table-of-contents so you don&apos;t waste hours fighting broken links, watermarked spam, or fake files.
             </p>
           </div>
 
-          <div className="bg-[#0B0F17] border border-slate-800/80 rounded-lg p-4 space-y-2">
-            <div className="flex items-center space-x-2 text-slate-200 text-xs font-semibold">
-              <Server className="w-4 h-4 text-slate-400" />
-              <span>Hosting Costs</span>
+          <div className="bg-[#141311] border border-[#2D2A26] rounded-xl p-5 space-y-2.5">
+            <div className="flex items-center space-x-2 text-[#FAF6F1] text-xs font-semibold">
+              <Server className="w-4 h-4 text-[#D4AF37]" />
+              <span className="font-serif text-sm">Fast Hosting & Zero Ads</span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Cloud storage nodes, search indexing, and ad-free direct downloads carry fixed server and bandwidth costs each month.
+            <p className="text-xs text-[#A8A29E] leading-relaxed">
+              High-throughput encrypted cloud storage, instant UPI webhooks, and direct DRM-free PDF delivery carry real monthly bandwidth and compute costs.
             </p>
           </div>
 
-          <div className="bg-[#0B0F17] border border-slate-800/80 rounded-lg p-4 space-y-2">
-            <div className="flex items-center space-x-2 text-slate-200 text-xs font-semibold">
-              <BookOpen className="w-4 h-4 text-slate-400" />
-              <span>Student Access</span>
+          <div className="bg-[#141311] border border-[#2D2A26] rounded-xl p-5 space-y-2.5">
+            <div className="flex items-center space-x-2 text-[#FAF6F1] text-xs font-semibold">
+              <BookOpen className="w-4 h-4 text-[#D4AF37]" />
+              <span className="font-serif text-sm">Student & Learner Access</span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Expensive paywalls lock out self-taught learners. A ₹29 micro-contribution keeps this library accessible to anyone.
+            <p className="text-xs text-[#A8A29E] leading-relaxed">
+              Expensive ₹2,000+ paywalls lock out ambitious students and self-taught engineers. A ₹9–₹29 micro-fee democratizes learning for everyone.
             </p>
           </div>
         </div>
 
         {/* Honest Checklist */}
-        <div className="bg-[#0B0F17] border border-slate-800 rounded-lg p-4 space-y-2 text-xs text-slate-300">
-          <div className="flex items-start space-x-2">
-            <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+        <div className="bg-[#141311] border border-[#2D2A26] rounded-xl p-5 space-y-3 text-xs text-[#D6D3D1] relative z-10">
+          <div className="flex items-start space-x-3">
+            <CheckCircle2 className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
             <span>
-              <strong className="text-white">If you have time to search on your own:</strong> You do not need to pay here. Every reader is free to search original sources.
+              <strong className="text-[#FAF6F1]">If you have time to search on your own:</strong> You do not need to pay anything here. Every reader is always free to explore public archives directly.
             </span>
           </div>
-          <div className="flex items-start space-x-2">
-            <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+          <div className="flex items-start space-x-3">
+            <CheckCircle2 className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
             <span>
-              <strong className="text-white">If you want instant access in one place:</strong> Your ₹29 keeps the servers online for other learners.
+              <strong className="text-[#FAF6F1]">If you want clean, instant access in one second:</strong> Your ₹9–₹29 directly covers server uptime and keeps the index online for learners worldwide.
             </span>
           </div>
-          <div className="flex items-start space-x-2">
-            <CheckCircle2 className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+          <div className="flex items-start space-x-3">
+            <CheckCircle2 className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
             <span>
-              <strong className="text-white">If you can afford the official publication:</strong> Please support original authors and publishers directly.
+              <strong className="text-[#FAF6F1]">If you can afford the official publication:</strong> We encourage you to support original authors, universities, and commercial publishers directly.
             </span>
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-800/80">
-          <span>Curator & Developer</span>
-          <a
-            href="#catalog-shelf"
-            className="text-slate-300 hover:text-white font-medium underline underline-offset-4 transition-colors"
-          >
-            Browse Verified Catalog
-          </a>
+        {/* Footer info */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-[#78716C] pt-2 border-t border-[#38352F]/80 gap-3 relative z-10">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
+            <span>Transparent Zero-Deception Guarantee • Dedicated Reader Support: apnix7@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/mission"
+              className="text-[#FAF6F1] hover:text-[#D4AF37] font-medium transition-colors flex items-center gap-1"
+            >
+              <span>Full Mission &amp; Service Fee Breakdown</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

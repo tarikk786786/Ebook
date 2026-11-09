@@ -15,6 +15,7 @@ import {
   Check,
   RefreshCw,
   Lock,
+  Heart,
   BookOpen
 } from 'lucide-react';
 import { trackPurchase } from '@/lib/analytics';
@@ -492,10 +493,13 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
           )}
         </div>
 
-        {/* Footer Note */}
-        <div className="px-6 py-3 bg-[#FAF8F5] border-t border-[#E8E4DC] text-[11px] text-[#81796D] flex items-center justify-between">
-          <span>Direct UPI & Card Settlement</span>
-          <span>Zero Surcharge • 100% Secure</span>
+        {/* Footer Note: Education & Nominal Fee Guarantee */}
+        <div className="px-6 py-3 bg-[#FAF8F5] border-t border-[#E8E4DC] text-[11px] text-[#81796D] flex flex-col sm:flex-row items-center justify-between gap-1">
+          <span className="flex items-center gap-1.5 text-[#24231F] font-medium">
+            <Heart className="w-3.5 h-3.5 text-[#9A704B] fill-[#9A704B]" />
+            <span>₹{order?.amount} nominal service fee • Supporting student education</span>
+          </span>
+          <span className="text-[10px] text-[#9A704B]">Zero Surcharge • 100% Secure UPI</span>
         </div>
       </div>
     </div>

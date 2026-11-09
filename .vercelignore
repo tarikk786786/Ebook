@@ -1,7 +1,6 @@
 # Ignore heavy local binary storage and archives from Vercel deployment
 /private_storage/
 /storage_cache/
-*.pdf
 .git
 .vercel
 node_modules
@@ -18,4 +17,3 @@ data/*.csv
 data/*.zip
 data/reports/
 public/data/reports/*.csv
-public/*.pdf

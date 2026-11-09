@@ -7,10 +7,12 @@ import PaymentModal from '@/components/PaymentModal';
 import ReaderModal from '@/components/ReaderModal';
 import { Book } from '@/lib/catalog';
 import { 
-  ArrowLeft, 
+  ArrowLeft,
+  ArrowRight, 
   BookOpen, 
   Clock, 
-  ShieldCheck, 
+  ShieldCheck,
+  Heart, 
   FileText, 
   Zap, 
   Layers, 
@@ -463,6 +465,36 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     * Price Integrity: Digital eBook editions isolated from physical print editions; prices verified through automated discovery.
                   </span>
                   <span className="font-mono text-[#9A704B] shrink-0">{book.priceVerifiedAt || 'Verified 2026-11-09'}</span>
+                </div>
+              </div>
+
+              {/* Transparent Educational Mission & Why So Cheap Card */}
+              <div className="p-5 rounded-2xl bg-[#1C1A17] border border-[#38352F] text-white shadow-md space-y-3 relative overflow-hidden">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-1.5 rounded-lg bg-[#9A704B]/20 text-[#D4AF37]">
+                    <Heart className="w-4 h-4 fill-[#D4AF37]" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#9A704B] font-semibold block">Curator&apos;s Guarantee</span>
+                    <h4 className="font-serif text-sm font-bold text-[#FAF6F1]">
+                      Why is this eBook priced at only {displayPrice}?
+                    </h4>
+                  </div>
+                </div>
+                <div className="text-xs text-[#A8A29E] leading-relaxed space-y-2">
+                  <p>
+                    You are not paying for copyright ownership or commercial resale. This <strong className="text-[#FAF6F1]">{displayPrice} is a nominal service contribution</strong> covering high-speed encrypted cloud storage, zero-ad direct downloading, and ongoing catalog indexing.
+                  </p>
+                  <p>
+                    Our mission is <strong className="text-[#FAF6F1]">Education For Everyone</strong>. We believe that expensive commercial paywalls (often ₹1,500+) should never prevent ambitious students and independent developers from studying. If you can comfortably afford the official publisher edition, please support authors and publishers directly!
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-[#38352F]/80 flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#78716C]">
+                  <span>Reader Support: apnix7@gmail.com</span>
+                  <Link href="/mission" className="text-[#D4AF37] hover:underline font-medium inline-flex items-center gap-1">
+                    <span>Read Curator&apos;s Full Letter</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
                 </div>
               </div>
 

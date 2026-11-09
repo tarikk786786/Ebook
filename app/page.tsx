@@ -10,6 +10,9 @@ import CartDrawer from '@/components/CartDrawer';
 import WishlistDrawer from '@/components/WishlistDrawer';
 import CommandKModal from '@/components/CommandKModal';
 import BundlesSection from '@/components/BundlesSection';
+import CuratorLetterSection from '@/components/CuratorLetterSection';
+import ServiceFeeBreakdown from '@/components/ServiceFeeBreakdown';
+import StudentMessageSection from '@/components/StudentMessageSection';
 import NewsletterSection from '@/components/NewsletterSection';
 import FaqSection from '@/components/FaqSection';
 import Footer from '@/components/Footer';
@@ -33,6 +36,7 @@ import {
   Lock,
   Zap,
   Award,
+  Heart,
   Flame,
   Archive,
   FileText,
@@ -322,6 +326,33 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Educational Mission & Honest Pricing Banner */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 mb-8">
+          <a
+            href="#curator-letter"
+            className="group flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#FAF6F1] via-[#FFFDF9] to-[#FAF6F1] border-2 border-[#E8E4DC] hover:border-[#9A704B]/60 transition-all shadow-sm hover:shadow-md"
+          >
+            <div className="flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-[#9A704B]/15 border border-[#9A704B]/30 flex items-center justify-center text-[#9A704B] shrink-0">
+                <Heart className="w-5 h-5 fill-[#9A704B] text-[#9A704B]" />
+              </div>
+              <div>
+                <div className="text-sm font-serif font-bold text-[#24231F] flex items-center gap-2">
+                  <span>Why is everything priced so affordably (₹9 – ₹29)?</span>
+                  <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-[#9A704B]/10 text-[#9A704B] font-semibold border border-[#9A704B]/20">Our Mission</span>
+                </div>
+                <p className="text-xs text-[#6E685F] mt-0.5">
+                  We charge only a nominal ₹9 to ₹29 maintenance &amp; storage fee to democratize education for every student and self-taught engineer.
+                </p>
+              </div>
+            </div>
+            <div className="mt-3 sm:mt-0 flex items-center gap-1.5 text-xs font-semibold text-[#9A704B] group-hover:translate-x-1 transition-transform">
+              <span>Read Curator&apos;s Open Letter</span>
+              <ArrowRight className="w-4 h-4" />
+            </div>
+          </a>
+        </div>
 
         {/* 10 Topical Category Pillars */}
         <section className="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -833,6 +864,17 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Transparent Curator Open Letter: Why We Sell So Cheap & Education Mission */}
+        <div id="curator-letter" className="scroll-mt-16">
+          <CuratorLetterSection />
+        </div>
+
+        {/* Cost Breakdown & Where Contributions Go */}
+        <ServiceFeeBreakdown />
+
+        {/* Dedication To Every Student & Independent Learner */}
+        <StudentMessageSection />
 
         {/* Newsletter & Free Primer Funnel */}
         <NewsletterSection />
