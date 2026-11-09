@@ -222,7 +222,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   ) : (
                     <span className="px-2 py-0.5 text-[9px] font-sans font-medium uppercase tracking-wider bg-neutral-900/80 text-amber-200/90 border border-neutral-700/60 rounded backdrop-blur-sm flex items-center gap-1 shadow-sm">
                       <Sparkles className="w-2.5 h-2.5 text-amber-400" />
-                      Catalogue Custom Artwork
+                      Cover not verified
                     </span>
                   )}
                 </div>
@@ -403,7 +403,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     <div>
                       <span className="font-medium text-[#6E685F] text-[10px] uppercase tracking-wide">Amazon India (Kindle)</span>
                       <div className="text-base font-bold font-serif text-[#24231F] mt-1">
-                        {book.lowestComparablePrice ? `₹${book.lowestComparablePrice}` : 'Price unavailable'}
+                        {book.lowestComparablePrice ? `₹${book.lowestComparablePrice}` : 'Marketplace listing not verified'}
                       </div>
                     </div>
                     <div className="text-[10px] text-[#81796D] space-y-0.5 pt-2 border-t border-[#E8E4DC] mt-2">
@@ -426,7 +426,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     <div>
                       <span className="font-medium text-[#6E685F] text-[10px] uppercase tracking-wide">Google Play Books</span>
                       <div className="text-base font-bold font-serif text-[#24231F] mt-1">
-                        {book.marketCurrentPrice ? `₹${book.marketCurrentPrice}` : 'Price unavailable'}
+                        {book.marketCurrentPrice ? `₹${book.marketCurrentPrice}` : 'Marketplace listing not verified'}
                       </div>
                     </div>
                     <div className="text-[10px] text-[#81796D] space-y-0.5 pt-2 border-t border-[#E8E4DC] mt-2">
