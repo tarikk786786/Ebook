@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAllDiscoveryBooks, getDiscoveryCategories } from '@/lib/discovery/catalog';
+import { DiscoveryStore } from '@/lib/discovery/store';
 
 export const dynamic = 'force-dynamic';
 
@@ -7,6 +8,7 @@ export async function GET(req: NextRequest) {
   try {
     const books = getAllDiscoveryBooks();
     const categories = getDiscoveryCategories();
+    const discoveryStats = DiscoveryStore.getDiscoveryStats();
 
     let verifiedCount = 0;
     let partiallyVerifiedCount = 0;
@@ -30,7 +32,9 @@ export async function GET(req: NextRequest) {
         discoveredCount: books.length - (verifiedCount + partiallyVerifiedCount),
         withIsbn,
         withCover,
-        source: 'Master Unified Global Digital Archive (86,337 Volumes)',
+        source: 'Open Library • Google Books API • Internet Archive • Master Archive',
+        // New real-time multi-provider discovery metrics
+        automatedDiscovery: discoveryStats
       },
     });
   } catch (err: any) {

@@ -1,0 +1,62 @@
+[
+  {
+    "ref": "ol-OL21640039W",
+    "id": "book-ol-OL21640039W",
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "category": "Business & Entrepreneurship",
+    "categorySlug": "business",
+    "slug": "the-psychology-of-money-morgan-housel",
+    "isbn13": null,
+    "isbn10": null,
+    "publisher": "Open Library Press",
+    "publishedYear": 2020,
+    "pageCount": 280,
+    "description": "Comprehensive edition of The Psychology of Money by Morgan Housel.",
+    "language": "ger",
+    "coverUrl": "https://covers.openlibrary.org/b/id/10389354-L.jpg",
+    "coverImage": "https://covers.openlibrary.org/b/id/10389354-L.jpg",
+    "image": "https://covers.openlibrary.org/b/id/10389354-L.jpg",
+    "previewUrl": "https://openlibrary.org/works/OL21640039W",
+    "infoUrl": "https://openlibrary.org/works/OL21640039W",
+    "rating": 4.6,
+    "reviewCount": 120,
+    "openlibraryWorkId": "/works/OL21640039W",
+    "verificationStatus": "VERIFIED",
+    "demandScore": 49,
+    "demandGrade": "VERIFIED_BESTSELLER",
+    "demandEvidence": {
+      "bestsellerRank": null,
+      "bestsellerList": "Open Library Trending",
+      "searchInterestScore": 25,
+      "ratingsCount": 0,
+      "averageRating": 4.2,
+      "readingLogCount": 0,
+      "recencyScore": 60,
+      "confidenceScore": 75,
+      "breakdown": {
+        "bestsellerPoints": 30,
+        "reviewPoints": 4,
+        "searchInterestPoints": 5,
+        "recencyPoints": 6,
+        "metadataQualityPoints": 4
+      }
+    },
+    "approvalStatus": "APPROVED",
+    "targetSections": [
+      "TRENDING_EBOOKS",
+      "TOP_BESTSELLERS"
+    ],
+    "source": "OPEN_LIBRARY",
+    "sourceUrl": "https://openlibrary.org/works/OL21640039W",
+    "confidenceLevel": "MEDIUM",
+    "collectedAt": "2026-11-09T08:43:40.810Z",
+    "priceInInr": 49,
+    "originalPriceInInr": 199,
+    "badge": "TRENDING",
+    "format": "PDF (DRM-Free)",
+    "provenance": {
+      "open_library": true
+    }
+  }
+]

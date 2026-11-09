@@ -241,7 +241,7 @@ export function filterDiscoveryBooks(options: DiscoveryFilterOptions = {}) {
       case 'TITLE_ASC':
         return a.title.localeCompare(b.title);
       case 'YEAR_DESC':
-        return (parseInt(b.publishedYear || '0', 10)) - (parseInt(a.publishedYear || '0', 10));
+        return (parseInt(String(b.publishedYear || '0'), 10)) - (parseInt(String(a.publishedYear || '0'), 10));
       case 'RATING_DESC':
         return (b.rating || 0) - (a.rating || 0);
       case 'REF_ASC':

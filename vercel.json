@@ -9,6 +9,10 @@
     {
       "path": "/api/cron/token-cleanup",
       "schedule": "0 */6 * * *"
+    },
+    {
+      "path": "/api/cron/discovery",
+      "schedule": "0 6 * * *"
     }
   ],
   "headers": [

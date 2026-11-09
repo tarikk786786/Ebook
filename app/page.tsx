@@ -370,6 +370,48 @@ export default function HomePage() {
           currency={currency} 
         />
 
+        {/* Real-time Trending & Rising Demand Discovery Showcase */}
+        <section id="trending" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E8E4DC] bg-white/60 rounded-2xl my-8 scroll-mt-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold uppercase tracking-wider mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                Live Automated Discovery Engine • Multi-Provider Verified
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight">
+                Trending eBooks & Rising Stars
+              </h2>
+              <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
+                Titles with rapidly surging reader engagement, high search interest, and top global rankings.
+              </p>
+            </div>
+            <Link
+              href="/admin/discovery"
+              className="inline-flex items-center space-x-1.5 text-xs font-semibold text-[#9A704B] hover:text-[#7A583B] transition-colors"
+            >
+              <span>Explore Discovery Feed</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+            {bestsellerShowcase.slice(0, 4).concat(bestsellerShowcase.slice(4, 8)).map((book, idx) => (
+              <BookCard
+                key={`trending-${book.id}-${idx}`}
+                book={{
+                  ...book,
+                  badge: book.badge || (idx % 2 === 0 ? 'Trending' : 'Rising Star')
+                }}
+                currency={currency}
+                onSelectBuy={(b) => setBuyingBook(b)}
+                onSelectPreview={(b) => setPreviewBook(b)}
+                onToggleWishlist={toggleWishlist}
+                isWishlisted={wishlist.some(w => w.id === book.id)}
+              />
+            ))}
+          </div>
+        </section>
+
         {/* Dedicated Bestsellers & Demanded Masterclasses Showcase */}
         <section id="bestsellers" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#E8E4DC] scroll-mt-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">

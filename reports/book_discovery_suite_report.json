@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Open Library Live API Connectivity",
+    "status": true,
+    "details": {
+      "dailyCount": 5,
+      "sampleTitle": "Atomic Habits",
+      "businessCount": 5
+    },
+    "timestamp": "2026-11-09T08:43:38.542Z"
+  },
+  {
+    "name": "Google Books API Resilience",
+    "status": true,
+    "details": {
+      "resultsCount": 0,
+      "fallbackHandled": true
+    },
+    "timestamp": "2026-11-09T08:43:39.791Z"
+  },
+  {
+    "name": "Internet Archive API Query & Cover Resolver",
+    "status": true,
+    "details": {
+      "docsFound": 3,
+      "coverResolverValid": true
+    },
+    "timestamp": "2026-11-09T08:43:40.781Z"
+  },
+  {
+    "name": "Deterministic Book Intelligence Scoring",
+    "status": true,
+    "details": {
+      "bestsellerScore": 99,
+      "bestsellerGrade": "VERIFIED_BESTSELLER",
+      "lowScore": 13,
+      "lowGrade": "STANDARD_DEMAND"
+    },
+    "timestamp": "2026-11-09T08:43:40.785Z"
+  },
+  {
+    "name": "Multi-Provider Discovery Orchestration",
+    "status": true,
+    "details": {
+      "totalDiscovered": 79,
+      "addedCount": 0,
+      "updatedCount": 54
+    },
+    "timestamp": "2026-11-09T08:43:55.449Z"
+  },
+  {
+    "name": "Approval & Storefront Mapping Workflow",
+    "status": true,
+    "details": {
+      "targetId": "book-ol-OL21640039W",
+      "approvalWorked": true,
+      "rejectionWorked": true,
+      "reApproved": true
+    },
+    "timestamp": "2026-11-09T08:43:55.510Z"
+  },
+  {
+    "name": "Discovery HTTP Endpoints Integrity",
+    "status": true,
+    "details": {
+      "feedStatus": 200,
+      "statsStatus": 200,
+      "unauthCronStatus": 401,
+      "authCronStatus": 200,
+      "cronDiscoveredTotal": 79
+    },
+    "timestamp": "2026-11-09T08:44:05.419Z"
+  },
+  {
+    "name": "Admin Dashboard & Storefront Accessibility",
+    "status": true,
+    "details": {
+      "adminDiscoveryStatus": 200,
+      "homeStatus": 200,
+      "hasTrendingSection": true,
+      "hasBestsellersSection": true
+    },
+    "timestamp": "2026-11-09T08:44:05.464Z"
+  }
+]
