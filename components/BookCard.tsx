@@ -35,12 +35,14 @@ export default function BookCard({
 }: BookCardProps) {
   const [imgSrc, setImgSrc] = useState<string>(book.coverImage || `/api/covers/${book.slug}`);
   const [imgError, setImgError] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const { addToCart, items } = useCart();
   const isInCart = items.some((i) => i.bookId === book.id);
 
   useEffect(() => {
     setImgSrc(book.coverImage || `/api/covers/${book.slug}`);
     setImgError(false);
+    setIsLoaded(false);
   }, [book.id, book.slug, book.coverImage]);
 
   const handleImageError = () => {
@@ -104,32 +106,44 @@ export default function BookCard({
           href={`/book/${book.slug}`} 
           className="block relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-3 group/cover"
         >
-          {!imgError ? (
-            <img
-              src={imgSrc}
-              alt={book.title}
-              onError={handleImageError}
-              loading="lazy"
-              className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-            />
-          ) : (
-            <div className="w-full h-full bg-[#FAF8F5] flex flex-col justify-between p-4 border border-[#E8E4DC]">
-              <div className="flex items-center space-x-1 text-[#81796D]">
-                <BookOpen className="w-3.5 h-3.5" />
-                <span className="text-[10px] font-sans font-medium uppercase tracking-wider">
+          {/* High-contrast authentic publisher hardcover background (NEVER blank) */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1E2330] via-[#141824] to-[#0A0D14] text-white flex flex-col justify-between p-3 select-none">
+            <div className="flex items-center justify-between text-slate-300">
+              <div className="flex items-center space-x-1">
+                <BookOpen className="w-3 h-3 text-emerald-400" />
+                <span className="text-[9px] font-sans font-medium uppercase tracking-wider text-emerald-400">
                   {book.format || 'PDF'}
                 </span>
               </div>
-              <div className="my-auto">
-                <h4 className="font-serif text-xs font-semibold text-[#24231F] line-clamp-3 leading-snug">
-                  {book.title}
-                </h4>
-                <p className="text-[11px] text-[#81796D] mt-1 line-clamp-1">{book.author}</p>
-              </div>
-              <div className="text-[10px] text-[#81796D] font-mono">
-                {book.pages} Pages • DRM-Free
-              </div>
+              <span className="text-[9px] font-mono text-slate-400">{book.pages || 280}p</span>
             </div>
+            <div className="my-auto py-2">
+              <h4 className="font-serif text-[11px] font-bold text-white line-clamp-3 leading-snug">
+                {book.title}
+              </h4>
+              <p className="text-[10px] text-amber-300/90 mt-1 line-clamp-1 italic font-serif">
+                {book.author}
+              </p>
+            </div>
+            <div className="text-[9px] text-slate-400 font-mono tracking-wider uppercase border-t border-slate-700/60 pt-1.5 flex justify-between">
+              <span>AnonTrove</span>
+              <span className="text-emerald-400">DRM-Free</span>
+            </div>
+          </div>
+
+          {/* Real cover image layer smoothly fades in when loaded */}
+          {!imgError && (
+            <img
+              src={imgSrc}
+              alt={book.title}
+              onLoad={() => setIsLoaded(true)}
+              onError={handleImageError}
+              loading="lazy"
+              className={cn(
+                "relative z-1 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-all duration-300 ease-out",
+                isLoaded ? "opacity-100" : "opacity-0"
+              )}
+            />
           )}
 
           {/* Clean Editorial Badges (Aceternity / Magic UI pill pattern) */}
