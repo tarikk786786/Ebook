@@ -44,7 +44,17 @@ export async function POST(req: NextRequest) {
 export async function GET(req: NextRequest) {
   const code = req.nextUrl.searchParams.get('code');
   if (!code) {
-    return NextResponse.json({ success: false, error: 'Referral code required' }, { status: 400 });
+    return NextResponse.json({
+      success: true,
+      program: {
+        name: 'AnonTrove Ebooks Affiliate Partner Program',
+        commissionRatePercent: 30,
+        payoutTerms: 'Instant / Weekly UPI direct transfer to your verified UPI ID',
+        cookieDurationDays: 30,
+        referralTemplate: 'https://ebook-sandy-chi.vercel.app/?ref=YOUR_CODE',
+        registrationEndpoint: '/api/affiliate'
+      }
+    });
   }
 
   const affiliate = getAffiliateByCode(code);
