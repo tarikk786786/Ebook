@@ -74,6 +74,27 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+
+          {/* Direct Support & Contact Card */}
+          <div className="p-8 rounded-3xl bg-[#111724] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div className="space-y-2">
+              <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                <Globe className="w-4 h-4" />
+                <span>Dedicated Reader & Author Support</span>
+              </div>
+              <h3 className="text-xl font-bold text-white">Have questions, rights inquiries, or need reading assistance?</h3>
+              <p className="text-xs sm:text-sm text-slate-400 max-w-xl">
+                Our support team is available 24/7 to assist with download access, receipt retrieval, format inquiries, and official publisher/author correspondence.
+              </p>
+            </div>
+            <a
+              href="mailto:apnix7@gmail.com"
+              className="inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm font-bold transition-all shadow-lg shadow-emerald-500/20 shrink-0"
+            >
+              <span>Email: apnix7@gmail.com</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </section>
 
         {/* Transparency Commitments */}

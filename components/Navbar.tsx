@@ -78,6 +78,9 @@ export default function Navbar({
           <Link href="/mission" className="hover:text-[#24231F] transition-colors">
             Mission
           </Link>
+          <Link href="/about" className="hover:text-[#24231F] transition-colors">
+            About & Support
+          </Link>
         </nav>
 
         {/* Global Search Bar */}
@@ -210,6 +213,13 @@ export default function Navbar({
             className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
           >
             Our Mission
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
+          >
+            About & Support
           </Link>
           <div className="pt-2 flex items-center justify-between text-xs text-[#6E685F]">
             <span>Currency: <strong>{currency}</strong></span>
