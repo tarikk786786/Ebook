@@ -1,0 +1,30 @@
+{
+  "manifest_file": "public/all_ebooks_pdf_list.txt",
+  "total_manifest_records": 86260,
+  "status_accounting_breakdown": {
+    "DUPLICATE_CANDIDATE": 69045,
+    "NEEDS_REVIEW": 8,
+    "NON_BOOK_DOCUMENT": 2542,
+    "PARTIALLY_ENRICHED": 144,
+    "RIGHTS_QUARANTINED": 114,
+    "SOURCE_FILE_MISSING": 11439,
+    "SUCCESSFULLY_ENRICHED": 2968
+  },
+  "document_type_breakdown": {
+    "Course notes": 11077,
+    "Magazine": 8,
+    "Presentation": 103,
+    "Published book": 60951,
+    "Research report": 2017,
+    "Study guide": 43,
+    "Technical manual": 3996,
+    "Workbook": 329,
+    "eBook": 7736
+  },
+  "accounting_equation_balanced": true,
+  "rules_enforced": [
+    "Zero catalogue loss: all 86,260 records accounted for",
+    "Zero fake authenticity: no fabricated ISBNs or authors",
+    "Rights review: third-party scrapers quarantined"
+  ]
+}

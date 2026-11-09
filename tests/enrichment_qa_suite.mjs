@@ -72,6 +72,17 @@ assert(authorsWithBio >= 30, `${authorsWithBio} authors have rich biographical d
 const auditLog = JSON.parse(fs.readFileSync('data/enrichment_audit_log.json', 'utf8'));
 assert(auditLog.length >= 50, `Enrichment audit log records ${auditLog.length} atomic modifications`);
 
+// 7. Phase 18 Non-Negotiable Reconciliation Accounting Equation
+const recPath = 'data/reports/reconciliation_accounting_summary.json';
+assert(fs.existsSync(recPath), 'Reconciliation accounting summary exists');
+const rec = JSON.parse(fs.readFileSync(recPath, 'utf8'));
+assert(rec.total_manifest_records === 86260, `Total manifest records audited: ${rec.total_manifest_records} (must be exactly 86,260)`);
+assert(rec.accounting_equation_balanced === true, 'Accounting equation is balanced (sum of explicit statuses equals 86,260)');
+
+// 8. Full Status CSV Export Verification
+const csvPath = 'data/reports/manifest_86260_status_report.csv';
+assert(fs.existsSync(csvPath) && fs.statSync(csvPath).size > 1000000, 'Manifest 86,260 status report CSV exists and is populated (>1MB)');
+
 console.log('\n====================================================');
 console.log(`QA VERIFICATION SUMMARY: ${passedTests}/${totalTests} TESTS PASSED`);
 console.log('====================================================');
