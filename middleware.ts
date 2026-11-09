@@ -39,8 +39,37 @@ function checkRateLimit(ip: string, limit: number, windowMs: number): boolean {
   return true;
 }
 
+// Multi-Domain Whitelist for CORS
+const ALLOWED_ORIGINS = new Set([
+  'https://ebook-sandy-chi.vercel.app',
+  'https://anontrove.vercel.app',
+  'https://anontrove-books.vercel.app',
+  'https://anontrove-store.vercel.app',
+  'https://trovebooks.vercel.app',
+  'https://read.devs.surf',
+  'https://tbstore.devs.surf',
+  'https://tbbooks.devs.surf',
+  'https://ebook.devs.surf',
+  'https://tarikk786786.github.io',
+  'http://localhost:3000',
+]);
+
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
+  const origin = req.headers.get('origin') || '';
+
+  // Handle CORS Preflight (OPTIONS)
+  if (req.method === 'OPTIONS') {
+    const preflightHeaders = new Headers();
+    if (ALLOWED_ORIGINS.has(origin)) {
+      preflightHeaders.set('Access-Control-Allow-Origin', origin);
+      preflightHeaders.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+      preflightHeaders.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-admin-token');
+      preflightHeaders.set('Access-Control-Allow-Credentials', 'true');
+      preflightHeaders.set('Access-Control-Max-Age', '86400');
+    }
+    return new NextResponse(null, { status: 204, headers: preflightHeaders });
+  }
 
   // 1. Path Traversal & Injection Defense
   if (pathname.includes('..') || pathname.includes('%2e%2e') || pathname.includes('\0')) {
@@ -86,6 +115,15 @@ export function middleware(req: NextRequest) {
   }
 
   const response = NextResponse.next();
+
+  // Attach CORS headers if request matches origin
+  if (ALLOWED_ORIGINS.has(origin)) {
+    response.headers.set('Access-Control-Allow-Origin', origin);
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-admin-token');
+    response.headers.set('Access-Control-Allow-Credentials', 'true');
+  }
+
   return response;
 }
 
