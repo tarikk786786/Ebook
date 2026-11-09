@@ -45,7 +45,7 @@
 | **TASK-P3-03** | Fix unauthenticated access on `/api/admin/storage/stats` | HIGH | AppSec / Backend | COMPLETED | `app/api/admin/storage/stats/route.ts` | Auth probe | None | Verified 401 gate |
 | **TASK-P4-01** | Implement secure in-browser PDF/EPUB reader with ephemeral stream access | HIGH | Content Protection Engineer | COMPLETED | `components/reader/*`, `app/reader/*` | Rendering & auth test | None | Verified canvas & EPUB stream |
 | **TASK-P5-01** | Fix webhook token leakage and tighten FamPay replay/idempotency verification | CRITICAL | Payment Security Engineer | COMPLETED | `app/api/webhooks/famgateway/route.ts` | Webhook test | None | Verified 0 token exposure |
-| **TASK-P6-01** | Persist itemized book entitlements in Supabase PostgreSQL orders | HIGH | Database Security | NOT STARTED | `lib/supabase.ts`, `schema_and_rls.sql` | Supabase sync test | None | Awaiting Phase 6 |
+| **TASK-P6-01** | Persist itemized book entitlements in Supabase PostgreSQL orders | HIGH | Database Security | COMPLETED | `lib/supabase.ts`, `schema_and_rls.sql` | Supabase sync test & payload validation | None | Verified itemized order_items |
 | **TASK-P7-01** | Harden CSP (remove unsafe-eval, local QR generation instead of qrserver.com) | MEDIUM | Frontend Security | COMPLETED | `next.config.mjs`, `lib/payments/index.ts` | CSP audit | None | Verified build |
 | **TASK-P8-01** | Pin GitHub Actions to commit SHAs and configure Actionlint / Scorecard | MEDIUM | Supply Chain Engineer | COMPLETED | `.github/workflows/*` | CI lint | None | Verified SHA pinning |
 
