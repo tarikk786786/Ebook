@@ -221,7 +221,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E8E4DC] shadow-sm backdrop-blur-sm">
                 <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-[11px] font-medium text-[#24231F]">
-                  18,529 Verified Manuals & Textbooks
+                  {BOOK_CATALOG.length.toLocaleString()} Verified Manuals & Textbooks
                 </span>
                 <span className="text-[#81796D] hidden xs:inline">•</span>
                 <span className="text-[11px] font-semibold text-[#9A704B] hidden xs:inline">Zero DRM</span>
@@ -274,7 +274,7 @@ export default function HomePage() {
               {/* Tremor / Park UI Inspired Key Metric Cards */}
               <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
-                  <div className="text-lg font-bold font-serif text-[#24231F]">18,529+</div>
+                  <div className="text-lg font-bold font-serif text-[#24231F]">{BOOK_CATALOG.length.toLocaleString()}+</div>
                   <div className="text-[11px] text-[#81796D] font-sans">Verified Manuals</div>
                 </div>
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">

@@ -87,7 +87,7 @@ export default function CommandKModal({
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search 18,529 eBooks by title, author, category, or ISBN..."
+            placeholder={`Search ${(books.length || 18286).toLocaleString()} eBooks by title, author, category, or ISBN...`}
             value={query}
             onChange={e => {
               setQuery(e.target.value);
@@ -183,7 +183,7 @@ export default function CommandKModal({
             <span><kbd className="px-1 py-0.5 bg-white border border-[#E8E4DC] rounded text-[#24231F]">↑</kbd> <kbd className="px-1 py-0.5 bg-white border border-[#E8E4DC] rounded text-[#24231F]">↓</kbd> Navigate</span>
             <span><kbd className="px-1 py-0.5 bg-white border border-[#E8E4DC] rounded text-[#24231F]">↵</kbd> Select</span>
           </div>
-          <span className="text-[#9A704B] font-medium font-mono">18,529 Verified eBooks Indexed</span>
+          <span className="text-[#9A704B] font-medium font-mono">{(books.length || 18286).toLocaleString()} Verified eBooks Indexed</span>
         </div>
       </div>
     </div>

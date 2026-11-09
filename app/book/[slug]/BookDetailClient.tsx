@@ -401,7 +401,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     <div>
                       <span className="font-medium text-[#6E685F] text-[10px] uppercase tracking-wide">Amazon India (Kindle)</span>
                       <div className="text-base font-bold font-serif text-[#24231F] mt-1">
-                        ₹{book.lowestComparablePrice || Math.round((book.originalPriceInInr || 990) * 0.75)}
+                        {book.lowestComparablePrice ? `₹${book.lowestComparablePrice}` : 'Price unavailable'}
                       </div>
                     </div>
                     <div className="text-[10px] text-[#81796D] space-y-0.5 pt-2 border-t border-[#E8E4DC] mt-2">
@@ -424,7 +424,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     <div>
                       <span className="font-medium text-[#6E685F] text-[10px] uppercase tracking-wide">Google Play Books</span>
                       <div className="text-base font-bold font-serif text-[#24231F] mt-1">
-                        ₹{book.marketCurrentPrice || Math.round((book.originalPriceInInr || 990) * 0.8)}
+                        {book.marketCurrentPrice ? `₹${book.marketCurrentPrice}` : 'Price unavailable'}
                       </div>
                     </div>
                     <div className="text-[10px] text-[#81796D] space-y-0.5 pt-2 border-t border-[#E8E4DC] mt-2">

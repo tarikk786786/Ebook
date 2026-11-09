@@ -32,6 +32,7 @@ export interface OrderData {
   fileSize?: string;
   coverImage?: string;
   items?: Array<{ bookId: string; title: string; priceInInr: number }>;
+  gateway?: string;
 }
 
 export interface PaymentModalProps {
@@ -139,17 +140,59 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
 
     try {
       setIsManualChecking(true);
-      const res = await fetch(`/api/poll?orderId=${encodeURIComponent(order.orderId)}`);
+      const res = await fetch(`/api/poll?order_id=${encodeURIComponent(order.orderId)}&orderId=${encodeURIComponent(order.orderId)}`);
       const data = await res.json();
 
-      if (data.status === 'COMPLETED' || data.status === 'SUCCESS') {
+      const isStatusSuccess = data.status === 'COMPLETED' || data.status === 'SUCCESS' || data.status === 'success';
+
+      if (isStatusSuccess) {
         setStatus('success');
-        setUtr(data.utr || data.bankRef || 'UPI-' + Math.random().toString().slice(2, 10));
+        const resolvedUtr = data.utr || data.bankRef || 'UPI-' + Math.random().toString().slice(2, 10);
+        setUtr(resolvedUtr);
         setDownloadUrl(data.downloadUrl);
-        if (data.items && Array.isArray(data.items)) {
-          setDownloadItems(data.items);
-        }
+        const resolvedItems = (data.items && Array.isArray(data.items)) 
+          ? data.items 
+          : (data.downloadItems && Array.isArray(data.downloadItems))
+            ? data.downloadItems
+            : (order.items && Array.isArray(order.items))
+              ? order.items
+              : [{ bookId: book?.id || 'book', title: title, price: Number(order.amount), format }];
+        
+        setDownloadItems(resolvedItems);
         if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
+
+        // Securely persist verified order to customer's personal device storage
+        try {
+          if (typeof window !== 'undefined') {
+            const rawSaved = localStorage.getItem('anontrove_customer_orders');
+            const existingOrders = rawSaved ? JSON.parse(rawSaved) : [];
+            const isAlreadySaved = existingOrders.some((o: any) => o.orderId === order.orderId || o.orderNumber === order.orderId);
+            if (!isAlreadySaved) {
+              const newOrderRecord = {
+                orderId: order.orderId,
+                orderNumber: order.orderId.startsWith('ORD-') ? order.orderId : `ORD-${order.orderId.slice(-6).toUpperCase()}`,
+                date: new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }),
+                amountInInr: Number(order.amount) || (book?.priceInInr || 49),
+                gateway: (order as any).gateway || 'UPI',
+                status: 'PAID',
+                bankUtr: resolvedUtr,
+                token: data.token || null,
+                items: resolvedItems.map((it: any) => ({
+                  bookId: it.bookId || book?.id,
+                  title: it.title || it.name || title,
+                  price: it.priceInInr || it.price || Number(order.amount),
+                  format: it.format || format || 'PDF',
+                  token: it.token || data.token || null,
+                  downloadUrl: it.downloadUrl || data.downloadUrl || null,
+                })),
+              };
+              existingOrders.unshift(newOrderRecord);
+              localStorage.setItem('anontrove_customer_orders', JSON.stringify(existingOrders.slice(0, 50)));
+            }
+          }
+        } catch (storageErr) {
+          console.warn('[PaymentModal] Order save to client storage error:', storageErr);
+        }
 
         // Fire analytics purchase event
         trackPurchase(
@@ -157,7 +200,7 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
           order.items ? order.items.map(i => ({ id: i.bookId, name: i.title, price: i.priceInInr })) : [{ id: book?.id || 'book', name: title, price: Number(order.amount) }],
           Number(order.amount)
         );
-      } else if (data.status === 'EXPIRED') {
+      } else if (data.status === 'EXPIRED' || data.status === 'expired') {
         setStatus('expired');
         if (pollIntervalRef.current) clearInterval(pollIntervalRef.current);
       }

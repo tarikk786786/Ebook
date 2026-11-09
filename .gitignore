@@ -47,3 +47,7 @@ data/enrichment_86k_final_reconciliation.csv
 data/enrichment_86k_checkpoint.db
 *.db
 data/ebook_all_86260_link_directory.csv
+data/master_manifest_pipeline.db
+data/reports/*.csv
+!data/reports/all_86k_catalogue_reports.zip
+public/data/reports/*.csv

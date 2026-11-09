@@ -25,12 +25,21 @@ export interface DownloadTokenPayload {
  * Generate an authenticated, encrypted, time-decayed token for downloading.
  * Format: iv.authTag.ciphertext (Base64URL encoded)
  */
-export function generateDownloadToken(payload: DownloadTokenPayload): string {
+export function generateDownloadToken(payload: Partial<DownloadTokenPayload> & { orderId: string; bookId: string; fileName: string }): string {
   const key = getKey();
   const iv = crypto.randomBytes(12); // GCM standard 96-bit IV
   const cipher = crypto.createCipheriv(ALGORITHM, key, iv);
 
-  const jsonStr = JSON.stringify(payload);
+  const fullPayload: DownloadTokenPayload = {
+    orderId: payload.orderId,
+    bookId: payload.bookId,
+    fileName: payload.fileName,
+    issuedAt: payload.issuedAt || Date.now(),
+    ttlMs: payload.ttlMs !== undefined ? payload.ttlMs : 24 * 60 * 60 * 1000,
+    maxDownloads: payload.maxDownloads || 5,
+  };
+
+  const jsonStr = JSON.stringify(fullPayload);
   let ciphertext = cipher.update(jsonStr, 'utf8', 'base64url');
   ciphertext += cipher.final('base64url');
   const tag = cipher.getAuthTag();
@@ -62,7 +71,9 @@ export function decryptDownloadToken(tokenString: string): DownloadTokenPayload 
 
     // Validate expiration
     const now = Date.now();
-    if (now > payload.issuedAt + payload.ttlMs) {
+    const issuedAt = payload.issuedAt || 0;
+    const ttlMs = payload.ttlMs !== undefined ? payload.ttlMs : 24 * 60 * 60 * 1000;
+    if (now > (issuedAt + ttlMs)) {
       return null; // Expired
     }
 

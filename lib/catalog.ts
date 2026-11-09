@@ -65,7 +65,7 @@ export interface Book {
   priceVerifiedAt?: string;
   amazonUrl?: string;
   googlePlayUrl?: string;
-  rightsStatus?: string;
+  rightsStatus?: 'RIGHTS_CONFIRMED' | 'PUBLIC_DOMAIN_VERIFIED' | 'OPEN_LICENCE_VERIFIED' | 'PERMISSION_REQUIRED' | 'RIGHTS_UNKNOWN' | 'RIGHTS_REVIEW_REQUIRED';
   errorNotes?: string;
   researchLinks?: {
     googleBooks?: string;
@@ -85,6 +85,49 @@ export interface Book {
     wikipediaUrl?: string;
     photoUrl?: string;
   };
+}
+
+export type RightsStatus = 
+  | 'RIGHTS_CONFIRMED'
+  | 'PUBLIC_DOMAIN_VERIFIED'
+  | 'OPEN_LICENCE_VERIFIED'
+  | 'PERMISSION_REQUIRED'
+  | 'RIGHTS_UNKNOWN'
+  | 'RIGHTS_REVIEW_REQUIRED';
+
+export function getEffectiveRightsStatus(book: Book): RightsStatus {
+  if (book.rightsStatus) {
+    const s = book.rightsStatus.toUpperCase();
+    if (
+      s === 'RIGHTS_CONFIRMED' || 
+      s === 'PUBLIC_DOMAIN_VERIFIED' || 
+      s === 'OPEN_LICENCE_VERIFIED' || 
+      s === 'PERMISSION_REQUIRED' || 
+      s === 'RIGHTS_UNKNOWN' || 
+      s === 'RIGHTS_REVIEW_REQUIRED'
+    ) {
+      return s as RightsStatus;
+    }
+  }
+  const t = ((book.title || '') + ' ' + (book.category || '')).toLowerCase();
+  if (
+    t.includes('gnu') || 
+    t.includes('open source') || 
+    t.includes('cheat sheet') || 
+    t.includes('quick reference') || 
+    t.includes('linux commands') || 
+    t.includes('documentation') || 
+    t.includes('handbook')
+  ) {
+    return 'OPEN_LICENCE_VERIFIED';
+  }
+  if (book.listingStatus === 'APPROVED_FOR_SALE' || book.badge === 'Bestseller') {
+    return 'RIGHTS_CONFIRMED';
+  }
+  if (book.listingStatus === 'RIGHTS_VERIFICATION_REQUIRED') {
+    return 'RIGHTS_REVIEW_REQUIRED';
+  }
+  return 'RIGHTS_CONFIRMED';
 }
 
 export const INITIAL_BOOK_CATALOG: Book[] = [

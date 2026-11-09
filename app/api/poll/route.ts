@@ -7,8 +7,8 @@ import { findOrderAuthoritative, markOrderPaid } from '@/lib/orders/store';
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
-    const orderId = searchParams.get('order_id');
-    const requestedBookId = searchParams.get('book_id');
+    const orderId = searchParams.get('order_id') || searchParams.get('orderId');
+    const requestedBookId = searchParams.get('book_id') || searchParams.get('bookId');
 
     // Strict regex validation for order_id (alphanumeric + underscore only)
     if (!orderId || typeof orderId !== 'string' || !/^[a-zA-Z0-9_-]{4,64}$/.test(orderId)) {

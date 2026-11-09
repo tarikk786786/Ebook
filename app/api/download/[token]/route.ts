@@ -137,6 +137,37 @@ export async function GET(
     const storageKey = (validBook as any)?.storageKey || safeFileName;
     const storage = getStorageAdapter();
 
+    // Rights & Compliance Gating
+    const isQuarantined = validBook?.rightsStatus === 'PERMISSION_REQUIRED' || validBook?.listingStatus === 'NOT_APPROVED_FOR_SALE';
+    if (isQuarantined) {
+      incrementTokenDownloadCount(tokenHash);
+      const retailerLink = validBook?.amazonUrl || validBook?.googlePlayUrl || validBook?.priceSourceUrl || 'https://www.amazon.in';
+      const complianceNotice = `AnonTrove Rights & Digital Delivery Notice
+==================================================
+Title: ${validBook?.title || 'Educational Publication'}
+Author: ${validBook?.author || 'Verified Author'}
+Distribution Status: Publisher Rights Review / Retailer Delegation
+
+In strict compliance with international copyright frameworks and our publishing standards, direct binary file distribution for this title is currently delegated to official publisher channels.
+
+Official Authorized Retailer Access:
+${retailerLink}
+
+Order Verification Token:
+${token}
+
+For institutional access or licensing queries, please contact compliance@anontrove.com.
+`;
+      return new NextResponse(complianceNotice, {
+        status: 200,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'Content-Disposition': `attachment; filename="${safeFileName.replace(/\.[^/.]+$/, '')}_Rights_Receipt.txt"`,
+          'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
+        },
+      });
+    }
+
     // 1. Direct Backblaze B2 Pre-signed redirect (HTTP 307)
     if (storage.provider === 'b2') {
       incrementTokenDownloadCount(tokenHash);
