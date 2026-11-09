@@ -368,6 +368,33 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     <div className="space-y-4">
                       <p>{book.description}</p>
                       
+                      {book.authorProfile && (
+                        <div className="p-4 bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl flex items-start gap-4 mt-4">
+                          {book.authorProfile.photoUrl && (
+                            <img
+                              src={book.authorProfile.photoUrl}
+                              alt={book.authorProfile.name}
+                              className="w-14 h-14 rounded-full object-cover border border-[#E8E4DC] shrink-0"
+                            />
+                          )}
+                          <div className="space-y-1">
+                            <span className="text-[10px] font-sans font-semibold uppercase tracking-wider text-[#9A704B]">About the Author</span>
+                            <h4 className="font-serif font-bold text-sm text-[#24231F]">{book.authorProfile.name}</h4>
+                            <p className="text-xs text-[#6E685F] leading-relaxed">{book.authorProfile.shortBio}</p>
+                            {book.authorProfile.wikipediaUrl && (
+                              <a
+                                href={book.authorProfile.wikipediaUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center text-[11px] text-[#9A704B] hover:underline gap-1 mt-1 font-medium"
+                              >
+                                View Wikipedia Profile →
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      )}
+
                       <div className="p-4 bg-[#FAF8F5] border border-[#E8E4DC] rounded-lg space-y-2 mt-4">
                         <span className="font-serif font-bold text-xs text-[#24231F] block">Who This Guide Is For:</span>
                         <ul className="space-y-1.5 text-xs text-[#6E685F]">
@@ -396,7 +423,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   )}
 
                   {activeTab === 'specifications' && (
-                    <div className="grid grid-cols-2 gap-4 text-xs">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
                       <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
                         <span className="text-[#81796D] block text-[10px] uppercase">Format</span>
                         <strong className="text-[#24231F] font-mono">{book.format || 'PDF (Universal)'}</strong>
@@ -407,7 +434,26 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                       </div>
                       <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
                         <span className="text-[#81796D] block text-[10px] uppercase">Language</span>
-                        <strong className="text-[#24231F] font-mono">English (En-US)</strong>
+                        <strong className="text-[#24231F] font-mono">{book.language || 'English (En-US)'}</strong>
+                      </div>
+                      <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
+                        <span className="text-[#81796D] block text-[10px] uppercase">Publisher</span>
+                        <strong className="text-[#24231F] truncate block" title={book.publisher || 'AnonTrove Press'}>{book.publisher || 'AnonTrove Press'}</strong>
+                      </div>
+                      <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
+                        <span className="text-[#81796D] block text-[10px] uppercase">Publication Year</span>
+                        <strong className="text-[#24231F] font-mono">{book.publicationYear || book.publishedYear || '2024'}</strong>
+                      </div>
+                      <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
+                        <span className="text-[#81796D] block text-[10px] uppercase">ISBN-13</span>
+                        <strong className="text-[#24231F] font-mono">{book.isbn13 || book.isbn || 'Verified Digital ID'}</strong>
+                      </div>
+                      <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
+                        <span className="text-[#81796D] block text-[10px] uppercase">Catalog Verification</span>
+                        <strong className="text-emerald-700 flex items-center gap-1 font-mono">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                          {book.verificationStatus || 'VERIFIED'}
+                        </strong>
                       </div>
                       <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
                         <span className="text-[#81796D] block text-[10px] uppercase">DRM Protection</span>

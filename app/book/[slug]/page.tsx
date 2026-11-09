@@ -95,6 +95,8 @@ export default function BookDetailPage({ params }: Props) {
       }
     } : {}),
     bookFormat: 'https://schema.org/EBook',
+    ...(book.isbn || book.isbn13 ? { isbn: book.isbn13 || book.isbn } : {}),
+    ...(book.publicationYear ? { datePublished: String(book.publicationYear) } : {}),
     ...(book.pages ? { numberOfPages: book.pages } : {}),
     inLanguage: book.language || 'en',
     description: book.description,

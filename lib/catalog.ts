@@ -47,6 +47,20 @@ export interface Book {
   isClassicArchive?: boolean;
   isDemanded?: boolean;
   collection?: 'LATEST_STARTUP' | 'CLASSIC_ARCHIVE' | 'CORE_FEATURED' | 'MASTER_ARCHIVE';
+  publishedYear?: number;
+  isbn10?: string;
+  isbn13?: string;
+  verificationStatus?: string;
+  confidenceScore?: number;
+  coverWebp?: string;
+  openlibraryWorkId?: string;
+  enrichedAt?: string;
+  authorProfile?: {
+    name: string;
+    shortBio?: string;
+    wikipediaUrl?: string;
+    photoUrl?: string;
+  };
 }
 
 export const INITIAL_BOOK_CATALOG: Book[] = [

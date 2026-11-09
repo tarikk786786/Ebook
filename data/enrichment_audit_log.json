@@ -1,0 +1,1308 @@
+[
+  {
+    "timestamp": "2026-11-09T08:54:25Z",
+    "bookId": "book-linux-essentials-for-cybersecurity",
+    "slug": "linux-essentials-for-cybersecurity",
+    "changes": {
+      "isbn13": "9780134853765",
+      "publisher": "Pearson Education, Limited",
+      "publicationYear": "2018"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:54:34Z",
+    "bookId": "book-javascript-tutorials",
+    "slug": "javascript-tutorials",
+    "changes": {
+      "isbn13": "9781720007845",
+      "publisher": "Independently Published",
+      "publicationYear": "2018"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:54:51Z",
+    "bookId": "book-financial-statement-analysis",
+    "slug": "financial-statement-analysis",
+    "changes": {
+      "isbn13": "9781118366318",
+      "publisher": "Wiley & Sons, Incorporated, John",
+      "publicationYear": "1991"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:54:59Z",
+    "bookId": "book-we-who-wrestle-with-god-perceptions-of-the-divine-jordan-b-peterson",
+    "slug": "we-who-wrestle-with-god-perceptions-of-the-divine-jordan-b-peterson",
+    "changes": {
+      "isbn13": "9798896602576",
+      "publisher": "Primedia eLaunch LLC",
+      "publicationYear": "2024"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:55:06Z",
+    "bookId": "book-android-hackers-handbook",
+    "slug": "android-hackers-handbook",
+    "changes": {
+      "isbn13": "9781118608647",
+      "publisher": "John Wiley & Sons Inc",
+      "publicationYear": "2014",
+      "coverImage": "/covers/android-hackers-handbook.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:55:16Z",
+    "bookId": "book-learnjava",
+    "slug": "learnjava",
+    "changes": {
+      "isbn10": "1575211831",
+      "publisher": "Sams.net",
+      "publicationYear": "1996",
+      "coverImage": "/covers/learnjava.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:55:25Z",
+    "bookId": "book-rootkits-and-bootkits",
+    "slug": "rootkits-and-bootkits",
+    "changes": {
+      "isbn13": "9781593277161",
+      "isbn10": "1593277164",
+      "publisher": "No Starch Press",
+      "publicationYear": "2019",
+      "coverImage": "/covers/rootkits-and-bootkits.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:55:35Z",
+    "bookId": "book-a-history-of-the-united-states-2nd-edition",
+    "slug": "a-history-of-the-united-states-2nd-edition",
+    "changes": {
+      "publisher": "The Teaching Company",
+      "publicationYear": "2003"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:55:39Z",
+    "bookId": "book-security-monitoring-with-wazuh",
+    "slug": "security-monitoring-with-wazuh",
+    "changes": {
+      "isbn13": "9781837633432",
+      "publisher": "de Gruyter GmbH, Walter",
+      "publicationYear": "2024"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:55:52Z",
+    "bookId": "book-social-engineering-the-science-of-human-hacking",
+    "slug": "social-engineering-the-science-of-human-hacking",
+    "changes": {
+      "isbn13": "9781118029749",
+      "isbn10": "1491577010",
+      "publisher": "Wiley Publishing",
+      "publicationYear": "2011",
+      "coverImage": "/covers/social-engineering-the-science-of-human-hacking.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:56:08Z",
+    "bookId": "book-attacking-network-protocols-a-hackers",
+    "slug": "attacking-network-protocols-a-hackers",
+    "changes": {
+      "isbn13": "9781593277505",
+      "isbn10": "1593277504",
+      "publisher": "No Starch Press",
+      "publicationYear": "2017",
+      "coverImage": "/covers/attacking-network-protocols-a-hackers.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:56:18Z",
+    "bookId": "book-open-source-intelligence-methods-and-tools",
+    "slug": "open-source-intelligence-methods-and-tools",
+    "changes": {
+      "isbn13": "9781484232125",
+      "isbn10": "1484232127",
+      "publisher": "Apress",
+      "publicationYear": "2018",
+      "coverImage": "/covers/open-source-intelligence-methods-and-tools.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:56:27Z",
+    "bookId": "book-the-end-of-alchemy-mervyn-king",
+    "slug": "the-end-of-alchemy-mervyn-king",
+    "changes": {
+      "isbn13": "9781408706107",
+      "isbn10": "1408706113",
+      "publisher": "Little, Brown Book Group Limited",
+      "publicationYear": "2016",
+      "coverImage": "/covers/the-end-of-alchemy-mervyn-king.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:56:42Z",
+    "bookId": "book-mindful-marketing",
+    "slug": "mindful-marketing",
+    "changes": {
+      "isbn13": "9780934380539",
+      "isbn10": "0934380538",
+      "publisher": "Traders Press",
+      "publicationYear": "1999",
+      "coverImage": "/covers/mindful-marketing.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:56:59Z",
+    "bookId": "book-mastering-kali-linux-for-web-penetration-testing",
+    "slug": "mastering-kali-linux-for-web-penetration-testing",
+    "changes": {
+      "isbn13": "9781784395070",
+      "isbn10": "1784395072",
+      "publisher": "Packt Publishing",
+      "publicationYear": "2017",
+      "coverImage": "/covers/mastering-kali-linux-for-web-penetration-testing.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:57:07Z",
+    "bookId": "book-park-foreman-vulnerability-management-auerbach-publications-2019",
+    "slug": "park-foreman-vulnerability-management-auerbach-publications-2019",
+    "changes": {
+      "isbn13": "9781032401430",
+      "publisher": "Taylor & Francis Group",
+      "publicationYear": "2009",
+      "coverImage": "/covers/park-foreman-vulnerability-management-auerbach-publications-2019.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:57:24Z",
+    "bookId": "book-serious-cryptography-practical-modern-encryption",
+    "slug": "serious-cryptography-practical-modern-encryption",
+    "changes": {
+      "isbn13": "9781718503847",
+      "publisher": "No Starch Press, Incorporated",
+      "publicationYear": "2017",
+      "coverImage": "/covers/serious-cryptography-practical-modern-encryption.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:57:49Z",
+    "bookId": "book-the-foundations-of-western-civilization",
+    "slug": "the-foundations-of-western-civilization",
+    "changes": {
+      "isbn13": "9781565855342",
+      "isbn10": "1565855345",
+      "publisher": "The Teaching Company",
+      "publicationYear": "2002"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:57:57Z",
+    "bookId": "book-religion-in-the-ancient-mediterranean-world",
+    "slug": "religion-in-the-ancient-mediterranean-world",
+    "changes": {
+      "isbn13": "9781598030327",
+      "isbn10": "1598030329",
+      "publisher": "The Teaching Company",
+      "publicationYear": "2005"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:58:23Z",
+    "bookId": "book-1-guidebook-1",
+    "slug": "1-guidebook-1",
+    "changes": {
+      "isbn13": "9798712306732",
+      "publisher": "Independently Published",
+      "publicationYear": "2021"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:58:32Z",
+    "bookId": "book-pentesting-apis",
+    "slug": "pentesting-apis",
+    "changes": {
+      "isbn13": "9781837633166",
+      "publisher": "Packt Publishing, Limited",
+      "publicationYear": "2024"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:59:01Z",
+    "bookId": "book-get-better-at-anything-scott-young",
+    "slug": "get-better-at-anything-scott-young",
+    "changes": {
+      "isbn13": "9780008679460",
+      "publisher": "HarperCollins Publishers Limited",
+      "publicationYear": "2024",
+      "coverImage": "/covers/get-better-at-anything-scott-young.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:59:18Z",
+    "bookId": "book-the-hacker-playbook-3-practical-guide-to-penetration-testing-learnexpl",
+    "slug": "the-hacker-playbook-3-practical-guide-to-penetration-testing-learnexpl",
+    "changes": {
+      "isbn13": "9781980901754",
+      "isbn10": "1980901759",
+      "publisher": "Independently published",
+      "publicationYear": "2018",
+      "coverImage": "/covers/the-hacker-playbook-3-practical-guide-to-penetration-testing-learnexpl.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:59:32Z",
+    "bookId": "book-linux-basics-for-hackers",
+    "slug": "linux-basics-for-hackers",
+    "changes": {
+      "isbn13": "9781718503540",
+      "isbn10": "1593278551",
+      "publisher": "No Starch Press",
+      "publicationYear": "2018",
+      "coverImage": "/covers/linux-basics-for-hackers.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T08:59:51Z",
+    "bookId": "book-a-brief-history-of-the-world",
+    "slug": "a-brief-history-of-the-world",
+    "changes": {
+      "isbn13": "9784532312800",
+      "isbn10": "9953277737",
+      "publisher": "D\u0101r al-Kutub al-\u02bbArab\u012b",
+      "publicationYear": "2005",
+      "coverImage": "/covers/a-brief-history-of-the-world.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:00:07Z",
+    "bookId": "book-cybersecurity-guide",
+    "slug": "cybersecurity-guide",
+    "changes": {
+      "isbn13": "9781803247359",
+      "publisher": "de Gruyter GmbH, Walter",
+      "publicationYear": "2024"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:00:14Z",
+    "bookId": "book-web-hacking-101-by-peter-yaworski",
+    "slug": "web-hacking-101-by-peter-yaworski",
+    "changes": {
+      "isbn13": "9798673551653",
+      "publisher": "Independently Published",
+      "publicationYear": "2020"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:04:26Z",
+    "bookId": "book-1-guidebook-guidebook-2",
+    "slug": "1-guidebook-guidebook-2",
+    "changes": {
+      "isbn13": "9780521810333",
+      "isbn10": "0521810337",
+      "publisher": "Cambridge University Press",
+      "publicationYear": "2003",
+      "coverImage": "/covers/1-guidebook-guidebook-2.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:05:04Z",
+    "bookId": "book-the-art-of-focus",
+    "slug": "the-art-of-focus",
+    "changes": {
+      "isbn13": "9780143452744",
+      "isbn10": "0143452746",
+      "publisher": "India Penguin Ananda",
+      "publicationYear": "2022",
+      "coverImage": "/covers/the-art-of-focus.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:05:25Z",
+    "bookId": "book-the-profit-magic-of-stock-transaction-timing-by-j-m-hurst",
+    "slug": "the-profit-magic-of-stock-transaction-timing-by-j-m-hurst",
+    "changes": {
+      "isbn13": "9780137260188",
+      "isbn10": "0137260180",
+      "publisher": "Prentice Hall Trade",
+      "publicationYear": "1970",
+      "coverImage": "/covers/the-profit-magic-of-stock-transaction-timing-by-j-m-hurst.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:05:48Z",
+    "bookId": "book-1-guidebook-7",
+    "slug": "1-guidebook-7",
+    "changes": {
+      "publisher": "the great courses",
+      "publicationYear": "2015"
+    },
+    "confidenceScore": 80,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:05:59Z",
+    "bookId": "book-hacking-mastery-with-kali-linux",
+    "slug": "hacking-mastery-with-kali-linux",
+    "changes": {
+      "isbn13": "9798749733471",
+      "publisher": "Independently Published",
+      "publicationYear": "2021"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:06:06Z",
+    "bookId": "book-anna-coulling-a-complete-guide-to-volume-price-analysis",
+    "slug": "anna-coulling-a-complete-guide-to-volume-price-analysis",
+    "changes": {
+      "isbn13": "9798822547292",
+      "publisher": "IRB MEDIA",
+      "publicationYear": "2022"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:06:20Z",
+    "bookId": "book-exploit",
+    "slug": "exploit",
+    "changes": {
+      "isbn13": "9798419306554",
+      "publisher": "Independently Published",
+      "publicationYear": "2022"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:06:44Z",
+    "bookId": "book-great-ideas-of-classical-physics",
+    "slug": "great-ideas-of-classical-physics",
+    "changes": {
+      "isbn13": "9781598032550",
+      "isbn10": "1598032550",
+      "publisher": "Teaching Co.",
+      "publicationYear": "2006",
+      "coverImage": "/covers/great-ideas-of-classical-physics.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:06:58Z",
+    "bookId": "book-1-guidebook-guidebook-1",
+    "slug": "1-guidebook-guidebook-1",
+    "changes": {
+      "isbn13": "9781629970400",
+      "isbn10": "1629970409",
+      "publisher": "The Great Courses",
+      "publicationYear": "2014"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:07:17Z",
+    "bookId": "book-introduction-to-sql",
+    "slug": "introduction-to-sql",
+    "changes": {
+      "isbn13": "9780136133988",
+      "isbn10": "0136133983",
+      "publisher": "Prentice Hall",
+      "publicationYear": "2006",
+      "coverImage": "/covers/introduction-to-sql.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:07:48Z",
+    "bookId": "book-myth-in-human-history",
+    "slug": "myth-in-human-history",
+    "changes": {
+      "publisher": "The Great Courses",
+      "publicationYear": "2010"
+    },
+    "confidenceScore": 80,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:07:56Z",
+    "bookId": "book-common-windows-linux-and-web-server-systems-hacking-techniques",
+    "slug": "common-windows-linux-and-web-server-systems-hacking-techniques",
+    "changes": {
+      "isbn13": "9781034734567",
+      "isbn10": "1034734563",
+      "publisher": "Blurb",
+      "publicationYear": "2021",
+      "coverImage": "/covers/common-windows-linux-and-web-server-systems-hacking-techniques.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:08:04Z",
+    "bookId": "book-purpose-profit-2",
+    "slug": "purpose-profit-2",
+    "changes": {
+      "publisher": "U.S. G.P.O.",
+      "publicationYear": "1973"
+    },
+    "confidenceScore": 80,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:08:09Z",
+    "bookId": "book-the-birth-of-the-modern-mind",
+    "slug": "the-birth-of-the-modern-mind",
+    "changes": {
+      "isbn10": "1565857283",
+      "publisher": "The Teaching Company",
+      "publicationYear": "1998"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:08:31Z",
+    "bookId": "book-understanding-the-fundamentals-of-music",
+    "slug": "understanding-the-fundamentals-of-music",
+    "changes": {
+      "isbn13": "9781598032871",
+      "isbn10": "1598032879",
+      "publisher": "The Teaching Company",
+      "publicationYear": "2007"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:08:40Z",
+    "bookId": "book-1-guidebook-guidebook",
+    "slug": "1-guidebook-guidebook",
+    "changes": {
+      "isbn13": "9781571740489",
+      "isbn10": "1571740481",
+      "publisher": "Hampton Roads Publishing Company",
+      "publicationYear": "1997",
+      "coverImage": "/covers/1-guidebook-guidebook.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:08:53Z",
+    "bookId": "book-java-programs",
+    "slug": "java-programs",
+    "changes": {
+      "isbn13": "9780074635421",
+      "isbn10": "0074635425",
+      "publisher": "McGraw-Hill Education",
+      "publicationYear": "2001"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:09:13Z",
+    "bookId": "book-plato-socrates-and-the-dialogues",
+    "slug": "plato-socrates-and-the-dialogues",
+    "changes": {
+      "isbn13": "9781598031393",
+      "isbn10": "1598031392",
+      "publisher": "The Teaching Company",
+      "publicationYear": "1996"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:09:20Z",
+    "bookId": "book-how-to-text-a-girl-a-girls-chase-guide-girls-chase-guides-pdf-room",
+    "slug": "how-to-text-a-girl-a-girls-chase-guide-girls-chase-guides-pdf-room",
+    "changes": {
+      "publisher": "Girls Chase Books",
+      "publicationYear": "2017"
+    },
+    "confidenceScore": 80,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:09:29Z",
+    "bookId": "book-claude-ai-for-beginners-the-step-by-step-guide-to-using-ai-without",
+    "slug": "claude-ai-for-beginners-the-step-by-step-guide-to-using-ai-without",
+    "changes": {
+      "isbn13": "9798252101347",
+      "publisher": "Independently published"
+    },
+    "confidenceScore": 90,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:10:01Z",
+    "bookId": "book-lovebook",
+    "slug": "lovebook",
+    "changes": {
+      "isbn13": "9788854113367",
+      "isbn10": "8483651629",
+      "publisher": "Newton Compton",
+      "publicationYear": "2009",
+      "coverImage": "/covers/lovebook.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:11:18Z",
+    "bookId": "book-how-to-get-the-women-you-desire-into-bed",
+    "slug": "how-to-get-the-women-you-desire-into-bed",
+    "changes": {
+      "isbn13": "9780963037909",
+      "isbn10": "0963037900",
+      "publisher": "Jeffries Publishing",
+      "publicationYear": "1992",
+      "coverImage": "/covers/how-to-get-the-women-you-desire-into-bed.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:11:50Z",
+    "bookId": "book-the-warrior-mindset-how-to-get-the-bulletproof-mindset-of-a-fearless",
+    "slug": "the-warrior-mindset-how-to-get-the-bulletproof-mindset-of-a-fearless",
+    "changes": {
+      "isbn13": "9781978117587",
+      "publisher": "CreateSpace Independent Publishing Platform",
+      "publicationYear": "2017"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:11:55Z",
+    "bookId": "book-best-practices-pdf",
+    "slug": "best-practices-pdf",
+    "changes": {
+      "isbn13": "9780113314645",
+      "publisher": "Stationery Office, The",
+      "publicationYear": "2015"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:12:07Z",
+    "bookId": "book-day-1",
+    "slug": "day-1",
+    "changes": {
+      "isbn13": "9783570400890",
+      "isbn10": "1593075308",
+      "publisher": "cbj Verlag",
+      "publicationYear": "2006"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:12:18Z",
+    "bookId": "book-class-workbook",
+    "slug": "class-workbook",
+    "changes": {
+      "isbn13": "9789390801602",
+      "isbn10": "9390801605",
+      "publisher": "MTG Learning Media Pvt Ltd",
+      "publicationYear": "2021",
+      "coverImage": "/covers/class-workbook.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:12:27Z",
+    "bookId": "book-mobile-report",
+    "slug": "mobile-report",
+    "changes": {
+      "isbn13": "9781622602575",
+      "publisher": "Purdue University Press",
+      "publicationYear": "2013"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:12:31Z",
+    "bookId": "book-copy-of-platinum-secrets-final",
+    "slug": "copy-of-platinum-secrets-final",
+    "changes": {
+      "isbn13": "9798595675994",
+      "publisher": "Independently Published",
+      "publicationYear": "2021"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:12:35Z",
+    "bookId": "book-melanin-madness-phase-2",
+    "slug": "melanin-madness-phase-2",
+    "changes": {
+      "isbn13": "9798828558629",
+      "publisher": "Independently Published",
+      "publicationYear": "2022"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:12:49Z",
+    "bookId": "book-data-structures-notes",
+    "slug": "data-structures-notes",
+    "changes": {
+      "publisher": "[Queen's University of Belfast]",
+      "publicationYear": "1968"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:12:56Z",
+    "bookId": "book-nso-pegasus",
+    "slug": "nso-pegasus",
+    "changes": {
+      "isbn13": "9781475539530",
+      "publisher": "International Monetary Fund",
+      "publicationYear": "2012"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:13:11Z",
+    "bookId": "book-2-stretching",
+    "slug": "2-stretching",
+    "changes": {
+      "publisher": "Stretch & Sew",
+      "publicationYear": "1977"
+    },
+    "confidenceScore": 80,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:13:20Z",
+    "bookId": "book-the-name-of-the-game",
+    "slug": "the-name-of-the-game",
+    "changes": {
+      "isbn13": "9785227044303",
+      "isbn10": "5227044309",
+      "publisher": "\"\ufe20T\ufe21sentrpoligraf\"",
+      "publicationYear": "1988",
+      "coverImage": "/covers/the-name-of-the-game.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:13:32Z",
+    "bookId": "book-1-lecture",
+    "slug": "1-lecture",
+    "changes": {
+      "isbn13": "9783442471379",
+      "isbn10": "3442471370",
+      "publisher": "Goldmann",
+      "publicationYear": "2008",
+      "coverImage": "/covers/1-lecture.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:13:45Z",
+    "bookId": "book-2-lecture",
+    "slug": "2-lecture",
+    "changes": {
+      "isbn13": "9783442471379",
+      "isbn10": "3442471370",
+      "publisher": "Goldmann",
+      "publicationYear": "2008",
+      "coverImage": "/covers/2-lecture.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:14:05Z",
+    "bookId": "book-john-the-ripper",
+    "slug": "john-the-ripper",
+    "changes": {
+      "publisher": "FAWCETT",
+      "publicationYear": "1973"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:14:15Z",
+    "bookId": "book-3-lecture",
+    "slug": "3-lecture",
+    "changes": {
+      "isbn13": "9783442471379",
+      "isbn10": "3442471370",
+      "publisher": "Goldmann",
+      "publicationYear": "2008",
+      "coverImage": "/covers/3-lecture.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:14:21Z",
+    "bookId": "book-4-lecture",
+    "slug": "4-lecture",
+    "changes": {
+      "isbn13": "9783442471379",
+      "isbn10": "3442471370",
+      "publisher": "Goldmann",
+      "publicationYear": "2008",
+      "coverImage": "/covers/4-lecture.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:14:25Z",
+    "bookId": "book-8-lecture",
+    "slug": "8-lecture",
+    "changes": {
+      "isbn13": "9783442471379",
+      "isbn10": "3442471370",
+      "publisher": "Goldmann",
+      "publicationYear": "2008",
+      "coverImage": "/covers/8-lecture.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:15:28Z",
+    "bookId": "book-2-may",
+    "slug": "2-may",
+    "changes": {
+      "isbn13": "9780545332453",
+      "isbn10": "0439783119",
+      "publisher": "Scholastic, Incorporated",
+      "publicationYear": "2011"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:16:07Z",
+    "bookId": "book-ol-OL21640039W",
+    "slug": "the-psychology-of-money-morgan-housel",
+    "changes": {
+      "isbn13": "9780857197689",
+      "publisher": "Harriman House",
+      "publicationYear": "2020",
+      "coverImage": "/covers/the-psychology-of-money-morgan-housel.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:16:14Z",
+    "bookId": "book-0001",
+    "slug": "the-lean-startup-by-eric-ries",
+    "changes": {
+      "isbn13": "9782744066405",
+      "isbn10": "3868815678",
+      "publisher": "PEARSON",
+      "publicationYear": "2011",
+      "coverImage": "/covers/the-lean-startup-by-eric-ries.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:16:26Z",
+    "bookId": "book-0002",
+    "slug": "the-startup-owners-manual-by-steve-blank-and-bob-dorf",
+    "changes": {
+      "isbn10": "9780984999309",
+      "publisher": "k&s ranch press",
+      "publicationYear": "2012",
+      "coverImage": "/covers/the-startup-owners-manual-by-steve-blank-and-bob-dorf.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:16:48Z",
+    "bookId": "book-0003",
+    "slug": "zero-to-one-by-peter-thiel-with-blake-masters",
+    "changes": {
+      "isbn13": "9780553418286",
+      "isbn10": "0553418289",
+      "publisher": "Penguin Random House USA Ex",
+      "publicationYear": "2001",
+      "coverImage": "/covers/zero-to-one-by-peter-thiel-with-blake-masters.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:16:56Z",
+    "bookId": "book-0004",
+    "slug": "the-hard-thing-about-hard-things-by-ben-horowitz",
+    "changes": {
+      "isbn13": "9781483002897",
+      "isbn10": "1483002896",
+      "publisher": "HarperCollins Publishers and Blackstone Audio",
+      "publicationYear": "2014"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:17:03Z",
+    "bookId": "book-0005",
+    "slug": "the-mom-test-by-rob-fitzpatrick",
+    "changes": {
+      "isbn13": "9781492180746",
+      "publisher": "CreateSpace",
+      "publicationYear": "2014",
+      "coverImage": "/covers/the-mom-test-by-rob-fitzpatrick.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:17:13Z",
+    "bookId": "book-0006",
+    "slug": "the-founders-dilemmas-by-noam-wasserman",
+    "changes": {
+      "isbn13": "9781400841936",
+      "publisher": "Princeton University Press",
+      "publicationYear": "2012",
+      "coverImage": "/covers/the-founders-dilemmas-by-noam-wasserman.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:17:35Z",
+    "bookId": "book-0007",
+    "slug": "venture-deals-by-brad-feld-and-jason-mendelson",
+    "changes": {
+      "isbn13": "9783527843206",
+      "publisher": "Wiley & Sons, Incorporated, John",
+      "publicationYear": "2011",
+      "coverImage": "/covers/venture-deals-by-brad-feld-and-jason-mendelson.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:17:46Z",
+    "bookId": "book-0008",
+    "slug": "disciplined-entrepreneurship-by-bill-aulet",
+    "changes": {
+      "isbn13": "9781299848641",
+      "publisher": "Wiley & Sons, Incorporated, John",
+      "publicationYear": "2013"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:18:01Z",
+    "bookId": "book-0009",
+    "slug": "the-startup-playbook-by-david-s-kidder",
+    "changes": {
+      "isbn13": "9781452124049",
+      "publisher": "Chronicle Books LLC",
+      "publicationYear": "2012",
+      "coverImage": "/covers/the-startup-playbook-by-david-s-kidder.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:18:12Z",
+    "bookId": "book-0010",
+    "slug": "the-art-of-the-start-20-by-guy-kawasaki",
+    "changes": {
+      "isbn13": "9781591847847",
+      "isbn10": "1591847842",
+      "publisher": "Portfolio/Penguin",
+      "publicationYear": "2015",
+      "coverImage": "/covers/the-art-of-the-start-20-by-guy-kawasaki.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:18:23Z",
+    "bookId": "book-0011",
+    "slug": "rework-by-jason-fried-and-david-heinemeier-hansson",
+    "changes": {
+      "isbn13": "9789731931777",
+      "isbn10": "2894724705",
+      "publisher": "Publica",
+      "publicationYear": "2010",
+      "coverImage": "/covers/rework-by-jason-fried-and-david-heinemeier-hansson.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:18:31Z",
+    "bookId": "book-0012",
+    "slug": "the-100-startup-by-chris-guillebeau",
+    "changes": {
+      "isbn13": "9780451496645",
+      "isbn10": "0451496647",
+      "publisher": "Currency",
+      "publicationYear": "2012",
+      "coverImage": "/covers/the-100-startup-by-chris-guillebeau.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:18:52Z",
+    "bookId": "book-0013",
+    "slug": "the-entrepreneurial-mindset-by-rita-gunther-mcgrath-and-ian-c-macmillan",
+    "changes": {
+      "publicationYear": "2000",
+      "coverImage": "/covers/the-entrepreneurial-mindset-by-rita-gunther-mcgrath-and-ian-c-macmillan.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:19:08Z",
+    "bookId": "book-0014",
+    "slug": "the-startup-way-by-eric-ries",
+    "changes": {
+      "isbn13": "9780241197240",
+      "isbn10": "1524762393",
+      "publisher": "Penguin Publishing Group",
+      "publicationYear": "2017"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:19:18Z",
+    "bookId": "book-0015",
+    "slug": "running-lean-by-ash-maurya",
+    "changes": {
+      "isbn13": "9781306812139",
+      "isbn10": "1449305172",
+      "publisher": "O'Reilly Media, Incorporated",
+      "publicationYear": "2012",
+      "coverImage": "/covers/running-lean-by-ash-maurya.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:19:27Z",
+    "bookId": "book-0016",
+    "slug": "the-four-steps-to-the-epiphany-by-steve-blank",
+    "changes": {
+      "isbn13": "9780989200523",
+      "isbn10": "1411601726",
+      "publisher": "K&S Ranch Publishing LLC",
+      "publicationYear": "2006"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:19:39Z",
+    "bookId": "book-0017",
+    "slug": "nail-it-then-scale-it-by-nathan-furr-and-paul-ahlstrom",
+    "changes": {
+      "isbn13": "9780983723608",
+      "isbn10": "0983723605",
+      "publisher": "NISI Institute",
+      "publicationYear": "2011"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:19:52Z",
+    "bookId": "book-0018",
+    "slug": "the-entrepreneurs-guide-to-customer-development-by-brant-cooper-and-patrick-vlaskovits",
+    "changes": {
+      "isbn13": "9781735351704",
+      "isbn10": "0982743602",
+      "publisher": "Moves the Needle Inc",
+      "publicationYear": "2010",
+      "coverImage": "/covers/the-entrepreneurs-guide-to-customer-development-by-brant-cooper-and-patrick-vlaskovits.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:20:00Z",
+    "bookId": "book-0019",
+    "slug": "the-startup-checklist-by-david-s-rose",
+    "changes": {
+      "isbn13": "9781119163794",
+      "isbn10": "111916379X",
+      "publisher": "Wiley",
+      "publicationYear": "2016",
+      "coverImage": "/covers/the-startup-checklist-by-david-s-rose.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:20:20Z",
+    "bookId": "book-0020",
+    "slug": "the-startup-ceo-by-matt-blumberg",
+    "changes": {
+      "isbn13": "9798418524461",
+      "publisher": "Independently Published",
+      "publicationYear": "2022"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:20:40Z",
+    "bookId": "book-0021",
+    "slug": "the-innovators-dna-by-jeff-dyer-hal-gregersen-and-clayton-m-christensen",
+    "changes": {
+      "isbn13": "9788984073753",
+      "isbn10": "898407375X",
+      "publisher": "Saejong Seojeok/Tsai Fong Books",
+      "publicationYear": "2011",
+      "coverImage": "/covers/the-innovators-dna-by-jeff-dyer-hal-gregersen-and-clayton-m-christensen.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:20:59Z",
+    "bookId": "book-0022",
+    "slug": "the-rainforest-by-victor-w-hwang-and-greg-horowitt",
+    "changes": {
+      "isbn13": "9780545622288",
+      "isbn10": "0545605288",
+      "publisher": "Scholastic, Incorporated",
+      "publicationYear": "2009",
+      "coverImage": "/covers/the-rainforest-by-victor-w-hwang-and-greg-horowitt.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:21:05Z",
+    "bookId": "book-0023",
+    "slug": "the-entrepreneurial-state-by-mariana-mazzucato",
+    "changes": {
+      "isbn13": "9781610396134",
+      "isbn10": "1610396138",
+      "publisher": "PublicAffairs",
+      "publicationYear": "2011",
+      "coverImage": "/covers/the-entrepreneurial-state-by-mariana-mazzucato.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:21:16Z",
+    "bookId": "book-0024",
+    "slug": "entrepreneurship-by-william-d-bygrave-and-andrew-zacharakis",
+    "changes": {
+      "isbn13": "9780078112843",
+      "isbn10": "0256141479",
+      "publisher": "McGraw-Hill Education",
+      "publicationYear": "1989",
+      "coverImage": "/covers/entrepreneurship-by-william-d-bygrave-and-andrew-zacharakis.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:21:32Z",
+    "bookId": "book-0025",
+    "slug": "new-venture-creation-by-jeffry-a-timmons-and-stephen-spinelli",
+    "changes": {
+      "isbn13": "9780071232722",
+      "isbn10": "0071232729",
+      "publisher": "McGraw Hill Higher Education",
+      "publicationYear": "1977",
+      "coverImage": "/covers/new-venture-creation-by-jeffry-a-timmons-and-stephen-spinelli.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:21:46Z",
+    "bookId": "book-0026",
+    "slug": "the-startup-equation-by-steve-fisher-and-ja-nae-duane",
+    "changes": {
+      "publicationYear": "2016"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:21:54Z",
+    "bookId": "book-0027",
+    "slug": "the-startup-of-you-by-reid-hoffman-and-ben-casnocha",
+    "changes": {
+      "publicationYear": "2012",
+      "coverImage": "/covers/the-startup-of-you-by-reid-hoffman-and-ben-casnocha.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:22:02Z",
+    "bookId": "book-0028",
+    "slug": "blitzscaling-by-reid-hoffman-and-chris-yeh",
+    "changes": {
+      "publicationYear": "2018",
+      "coverImage": "/covers/blitzscaling-by-reid-hoffman-and-chris-yeh.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:22:58Z",
+    "bookId": "book-0031",
+    "slug": "the-entrepreneurs-playbook-by-leonard-c-green-and-paul-b-brown",
+    "changes": {
+      "publicationYear": "2018",
+      "coverImage": "/covers/the-entrepreneurs-playbook-by-leonard-c-green-and-paul-b-brown.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:23:26Z",
+    "bookId": "book-0032",
+    "slug": "the-entrepreneurs-manual-by-richard-m-white",
+    "changes": {
+      "isbn10": "0801964547",
+      "publicationYear": "1977"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:23:52Z",
+    "bookId": "book-0034",
+    "slug": "entrepreneurship-successfully-launching-new-by-ventures",
+    "changes": {
+      "publicationYear": "2008",
+      "coverImage": "/covers/entrepreneurship-successfully-launching-new-by-ventures.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:24:04Z",
+    "bookId": "book-0035",
+    "slug": "the-startup-community-by-brad-feld",
+    "changes": {
+      "isbn13": "9798482074862",
+      "publisher": "Independently Published",
+      "publicationYear": "2021"
+    },
+    "confidenceScore": 95,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:24:22Z",
+    "bookId": "book-0036",
+    "slug": "venture-capital-by-andrew-metrick-and-ayako-yasuda",
+    "changes": {
+      "publicationYear": "2003",
+      "coverImage": "/covers/venture-capital-by-andrew-metrick-and-ayako-yasuda.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  },
+  {
+    "timestamp": "2026-11-09T09:24:41Z",
+    "bookId": "book-0038",
+    "slug": "the-business-model-innovation-factory-by-saul-kaplan",
+    "changes": {
+      "publicationYear": "2012",
+      "coverImage": "/covers/the-business-model-innovation-factory-by-saul-kaplan.jpg"
+    },
+    "confidenceScore": 100,
+    "status": "VERIFIED"
+  }
+]

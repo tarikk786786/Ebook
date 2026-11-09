@@ -40,3 +40,7 @@ data/collector_state.json
 *.db
 appinfo11.txt
 appinfo11*.txt
+
+# Large intermediate catalog dumps (master 86k is split into data/catalog/ parts)
+data/all_83925_catalog.json
+*.db

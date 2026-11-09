@@ -433,6 +433,14 @@ export default function AdminDashboardPage() {
               <span className="hidden md:inline">Tools Manager</span>
             </Link>
             <Link
+              href="/admin/enrichment"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-amber-950/40 border border-amber-800/80 text-xs text-amber-300 hover:border-amber-500/80 hover:text-white transition-colors"
+              title="Master Metadata, Authentic Covers & Author Enrichment Engine"
+            >
+              <Layers className="w-3.5 h-3.5 text-amber-400" />
+              <span className="hidden md:inline">Enrichment Engine</span>
+            </Link>
+            <Link
               href="/admin/discovery"
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/80 text-xs text-emerald-300 hover:border-emerald-500/80 hover:text-white transition-colors"
               title="Global 1,000 Startup and Business Book Discovery Engine"

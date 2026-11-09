@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-11-09T14:20:00Z",
+  "inventory_summary": {
+    "total_registered_titles": 86260,
+    "unique_cover_files_on_disk": 8005,
+    "core_demanded_titles": 262,
+    "curated_masterclasses": 1000,
+    "telegram_archive_titles": 17268
+  },
+  "datasets": [
+    {
+      "dataset": "Demanded Books Registry",
+      "total_books": 262,
+      "has_isbn": 0,
+      "isbn_pct": 0.0,
+      "has_description": 262,
+      "description_pct": 100.0,
+      "has_publisher": 0,
+      "publisher_pct": 0.0,
+      "has_publication_year": 0,
+      "has_author": 262,
+      "has_verified_author": 112,
+      "verified_author_pct": 42.7,
+      "has_page_count": 262,
+      "has_cover_image": 262,
+      "has_local_cover": 261,
+      "has_standard_fallback": 0,
+      "categories_count": 16,
+      "top_categories": {
+        "Programming & Software Engineering": 40,
+        "Trading, Finance & Investing": 37,
+        "Cybersecurity & Ethical Hacking": 36,
+        "AI & Machine Learning": 32,
+        "Professional Guides & Textbooks": 27
+      }
+    },
+    {
+      "dataset": "Enriched 1000 Registry",
+      "total_books": 1000,
+      "has_isbn": 911,
+      "isbn_pct": 91.1,
+      "has_description": 0,
+      "description_pct": 0.0,
+      "has_publisher": 902,
+      "publisher_pct": 90.2,
+      "has_publication_year": 926,
+      "has_author": 1000,
+      "has_verified_author": 1000,
+      "verified_author_pct": 100.0,
+      "has_page_count": 865,
+      "has_cover_image": 1000,
+      "has_local_cover": 1000,
+      "has_standard_fallback": 0,
+      "categories_count": 25,
+      "top_categories": {
+        "Small Business, Solopreneurship & Business Models": 57,
+        "Innovation, Product Management & Design": 52,
+        "Startups & Entrepreneurship": 51,
+        "Leadership & Executive Development": 51,
+        "Economics, Business History & Economic Systems": 48
+      }
+    },
+    {
+      "dataset": "Telegram Harvest Registry",
+      "total_books": 17268,
+      "has_isbn": 0,
+      "isbn_pct": 0.0,
+      "has_description": 17268,
+      "description_pct": 100.0,
+      "has_publisher": 2275,
+      "publisher_pct": 13.2,
+      "has_publication_year": 0,
+      "has_author": 17268,
+      "has_verified_author": 12914,
+      "verified_author_pct": 74.8,
+      "has_page_count": 16806,
+      "has_cover_image": 17268,
+      "has_local_cover": 17268,
+      "has_standard_fallback": 0,
+      "categories_count": 30,
+      "top_categories": {
+        "Personal Development & Psychology": 2871,
+        "Business, Startups & Entrepreneurship": 2091,
+        "Programming & Software Engineering": 2032,
+        "Business & Strategy": 1786,
+        "Academic & Exam Preparation Notes": 1502
+      }
+    },
+    {
+      "dataset": "Master 86k Catalog",
+      "total_books": 86260,
+      "has_isbn": 911,
+      "isbn_pct": 1.1,
+      "has_description": 85260,
+      "description_pct": 98.8,
+      "has_publisher": 2992,
+      "publisher_pct": 3.5,
+      "has_publication_year": 926,
+      "has_author": 86260,
+      "has_verified_author": 68053,
+      "verified_author_pct": 78.9,
+      "has_page_count": 84425,
+      "has_cover_image": 86260,
+      "has_local_cover": 2415,
+      "has_standard_fallback": 83845,
+      "categories_count": 55,
+      "top_categories": {
+        "Personal Development & Psychology": 14463,
+        "Business, Startups & Entrepreneurship": 10816,
+        "Programming & Software Engineering": 10329,
+        "Technical & Educational Guides": 9647,
+        "Academic & Exam Preparation Notes": 7507
+      }
+    }
+  ]
+}

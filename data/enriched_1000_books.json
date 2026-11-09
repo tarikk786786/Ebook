@@ -7,10 +7,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-lean-startup-by-eric-ries",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2011",
+    "isbn13": "9782744066405",
+    "isbn10": "3868815678",
+    "publisher": "PEARSON",
+    "publishedYear": 2011,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -21,11 +21,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16086010W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-lean-startup-by-eric-ries.jpg"
+    "coverImage": "/covers/the-lean-startup-by-eric-ries.jpg",
+    "isbn": "9782744066405",
+    "publicationYear": "2011",
+    "coverWebp": "/covers/the-lean-startup-by-eric-ries.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:16:14Z",
+    "authorProfile": {
+      "name": "Eric Ries",
+      "shortBio": "American entrepreneur (born 1978)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Eric_Ries",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Eric_Ries2.jpg/330px-Eric_Ries2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0002",
@@ -36,9 +48,9 @@
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-startup-owners-manual-by-steve-blank-and-bob-dorf",
     "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2012",
+    "isbn10": "9780984999309",
+    "publisher": "k&s ranch press",
+    "publishedYear": 2012,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -49,11 +61,16 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16793860W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-startup-owners-manual-by-steve-blank-and-bob-dorf.jpg"
+    "coverImage": "/covers/the-startup-owners-manual-by-steve-blank-and-bob-dorf.jpg",
+    "publicationYear": "2012",
+    "coverWebp": "/covers/the-startup-owners-manual-by-steve-blank-and-bob-dorf.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:16:26Z"
   },
   {
     "ref": "0003",
@@ -63,10 +80,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "zero-to-one-by-peter-thiel-with-blake-masters",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2001",
+    "isbn13": "9780553418286",
+    "isbn10": "0553418289",
+    "publisher": "Penguin Random House USA Ex",
+    "publishedYear": 2001,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -77,11 +94,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL17078706W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/zero-to-one-by-peter-thiel-with-blake-masters.jpg"
+    "coverImage": "/covers/zero-to-one-by-peter-thiel-with-blake-masters.jpg",
+    "isbn": "9780553418286",
+    "publicationYear": "2001",
+    "coverWebp": "/covers/zero-to-one-by-peter-thiel-with-blake-masters.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:16:48Z",
+    "authorProfile": {
+      "name": "Peter Thiel",
+      "shortBio": "American entrepreneur and venture capitalist (born 1967)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Peter_Thiel",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Peter_Thiel_by_Gage_Skidmore.jpg/330px-Peter_Thiel_by_Gage_Skidmore.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0004",
@@ -91,10 +120,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-hard-thing-about-hard-things-by-ben-horowitz",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2014",
+    "isbn13": "9781483002897",
+    "isbn10": "1483002896",
+    "publisher": "HarperCollins Publishers and Blackstone Audio",
+    "publishedYear": 2014,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -105,11 +134,21 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16818208W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-hard-thing-about-hard-things-by-ben-horowitz.jpg"
+    "coverImage": "/covers/the-hard-thing-about-hard-things-by-ben-horowitz.jpg",
+    "isbn": "9781483002897",
+    "publicationYear": "2014",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:16:56Z",
+    "authorProfile": {
+      "name": "Ben Horowitz",
+      "shortBio": "American technology entrepreneur (born 1966)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Ben_Horowitz",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/TechCrunch_Disrupt_San_Francisco_2018_-_day_2_%2842713740520%29_%28cropped%29.jpg/330px-TechCrunch_Disrupt_San_Francisco_2018_-_day_2_%2842713740520%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0005",
@@ -119,10 +158,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-mom-test-by-rob-fitzpatrick",
-    "isbn13": null,
+    "isbn13": "9781492180746",
     "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2014",
+    "publisher": "CreateSpace",
+    "publishedYear": 2014,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -133,11 +172,17 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL23982116W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-mom-test-by-rob-fitzpatrick.jpg"
+    "coverImage": "/covers/the-mom-test-by-rob-fitzpatrick.jpg",
+    "isbn": "9781492180746",
+    "publicationYear": "2014",
+    "coverWebp": "/covers/the-mom-test-by-rob-fitzpatrick.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:17:03Z"
   },
   {
     "ref": "0006",
@@ -147,10 +192,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-founders-dilemmas-by-noam-wasserman",
-    "isbn13": null,
+    "isbn13": "9781400841936",
     "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2012",
+    "publisher": "Princeton University Press",
+    "publishedYear": 2012,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -161,11 +206,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16152741W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-founders-dilemmas-by-noam-wasserman.jpg"
+    "coverImage": "/covers/the-founders-dilemmas-by-noam-wasserman.jpg",
+    "isbn": "9781400841936",
+    "publicationYear": "2012",
+    "coverWebp": "/covers/the-founders-dilemmas-by-noam-wasserman.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:17:13Z",
+    "authorProfile": {
+      "name": "Noam T. Wasserman",
+      "shortBio": "American academic",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Noam_T._Wasserman",
+      "photoUrl": null
+    }
   },
   {
     "ref": "0007",
@@ -175,10 +232,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "venture-deals-by-brad-feld-and-jason-mendelson",
-    "isbn13": null,
+    "isbn13": "9783527843206",
     "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2011",
+    "publisher": "Wiley & Sons, Incorporated, John",
+    "publishedYear": 2011,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -189,11 +246,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16134369W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/venture-deals-by-brad-feld-and-jason-mendelson.jpg"
+    "coverImage": "/covers/venture-deals-by-brad-feld-and-jason-mendelson.jpg",
+    "isbn": "9783527843206",
+    "publicationYear": "2011",
+    "coverWebp": "/covers/venture-deals-by-brad-feld-and-jason-mendelson.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:17:35Z",
+    "authorProfile": {
+      "name": "Brad Feld",
+      "shortBio": "American entrepreneur blogger (born 1965)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Brad_Feld",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Brad-Feld-Techstars-June-24-2013.jpg/330px-Brad-Feld-Techstars-June-24-2013.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0008",
@@ -203,10 +272,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "disciplined-entrepreneurship-by-bill-aulet",
-    "isbn13": null,
+    "isbn13": "9781299848641",
     "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2013",
+    "publisher": "Wiley & Sons, Incorporated, John",
+    "publishedYear": 2013,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -217,11 +286,21 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL21508040W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/disciplined-entrepreneurship-by-bill-aulet.jpg"
+    "coverImage": "/covers/disciplined-entrepreneurship-by-bill-aulet.jpg",
+    "isbn": "9781299848641",
+    "publicationYear": "2013",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:17:46Z",
+    "authorProfile": {
+      "name": "Bill Aulet",
+      "shortBio": "Author and managing director",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Bill_Aulet",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Secretary_Kerry_Shakes_Hands_With_Business_Leaders_Before_Speaking_About_the_Future_of_Job_Creation_at_MIT%27s_Innovation_Forum_%2832063649352%29.jpg/330px-Secretary_Kerry_Shakes_Hands_With_Business_Leaders_Before_Speaking_About_the_Future_of_Job_Creation_at_MIT%27s_Innovation_Forum_%2832063649352%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0009",
@@ -231,10 +310,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-startup-playbook-by-david-s-kidder",
-    "isbn13": null,
+    "isbn13": "9781452124049",
     "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2012",
+    "publisher": "Chronicle Books LLC",
+    "publishedYear": 2012,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -245,11 +324,17 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16646321W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-startup-playbook-by-david-s-kidder.jpg"
+    "coverImage": "/covers/the-startup-playbook-by-david-s-kidder.jpg",
+    "isbn": "9781452124049",
+    "publicationYear": "2012",
+    "coverWebp": "/covers/the-startup-playbook-by-david-s-kidder.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:18:01Z"
   },
   {
     "ref": "0010",
@@ -259,10 +344,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-art-of-the-start-20-by-guy-kawasaki",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2015",
+    "isbn13": "9781591847847",
+    "isbn10": "1591847842",
+    "publisher": "Portfolio/Penguin",
+    "publishedYear": 2015,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -273,11 +358,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL20001839W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-art-of-the-start-20-by-guy-kawasaki.jpg"
+    "coverImage": "/covers/the-art-of-the-start-20-by-guy-kawasaki.jpg",
+    "isbn": "9781591847847",
+    "publicationYear": "2015",
+    "coverWebp": "/covers/the-art-of-the-start-20-by-guy-kawasaki.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:18:12Z",
+    "authorProfile": {
+      "name": "Guy Kawasaki",
+      "shortBio": "American businessman and author (born 1954)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Guy_Kawasaki",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Guy_Kawasaki_at_Wikimania_2015_-_2_%28cropped%29.jpg/330px-Guy_Kawasaki_at_Wikimania_2015_-_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0011",
@@ -287,10 +384,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "rework-by-jason-fried-and-david-heinemeier-hansson",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2010",
+    "isbn13": "9789731931777",
+    "isbn10": "2894724705",
+    "publisher": "Publica",
+    "publishedYear": 2010,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -301,11 +398,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL15168112W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/rework-by-jason-fried-and-david-heinemeier-hansson.jpg"
+    "coverImage": "/covers/rework-by-jason-fried-and-david-heinemeier-hansson.jpg",
+    "isbn": "9789731931777",
+    "publicationYear": "2010",
+    "coverWebp": "/covers/rework-by-jason-fried-and-david-heinemeier-hansson.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:18:23Z",
+    "authorProfile": {
+      "name": "37signals",
+      "shortBio": "American web software company",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/37signals",
+      "photoUrl": null
+    }
   },
   {
     "ref": "0012",
@@ -315,10 +424,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-100-startup-by-chris-guillebeau",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2012",
+    "isbn13": "9780451496645",
+    "isbn10": "0451496647",
+    "publisher": "Currency",
+    "publishedYear": 2012,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -329,11 +438,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16499348W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-100-startup-by-chris-guillebeau.jpg"
+    "coverImage": "/covers/the-100-startup-by-chris-guillebeau.jpg",
+    "isbn": "9780451496645",
+    "publicationYear": "2012",
+    "coverWebp": "/covers/the-100-startup-by-chris-guillebeau.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:18:30Z",
+    "authorProfile": {
+      "name": "Chris Guillebeau",
+      "shortBio": "American author and entrepreneur (born 1978)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Chris_Guillebeau",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Chris_Guillebeau_in_sepia.jpg/330px-Chris_Guillebeau_in_sepia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0013",
@@ -346,7 +467,7 @@
     "isbn13": "9780875848341",
     "isbn10": "0875848346",
     "publisher": "Harvard Business School Press",
-    "publishedYear": "2000",
+    "publishedYear": 2000,
     "pageCount": 400,
     "description": null,
     "language": "en",
@@ -355,13 +476,18 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL8542167W",
+    "openlibraryWorkId": "/works/OL16311267W",
     "googleVolumeId": null,
     "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library_title": true
     },
-    "coverImage": "/covers/the-entrepreneurial-mindset-by-rita-gunther-mcgrath-and-ian-c-macmillan.jpg"
+    "coverImage": "/covers/the-entrepreneurial-mindset-by-rita-gunther-mcgrath-and-ian-c-macmillan.jpg",
+    "publicationYear": "2000",
+    "coverWebp": "/covers/the-entrepreneurial-mindset-by-rita-gunther-mcgrath-and-ian-c-macmillan.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:18:52Z"
   },
   {
     "ref": "0014",
@@ -371,10 +497,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-startup-way-by-eric-ries",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2017",
+    "isbn13": "9780241197240",
+    "isbn10": "1524762393",
+    "publisher": "Penguin Publishing Group",
+    "publishedYear": 2017,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -385,11 +511,21 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL20196485W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-startup-way-by-eric-ries.jpg"
+    "coverImage": "/covers/the-startup-way-by-eric-ries.jpg",
+    "isbn": "9780241197240",
+    "publicationYear": "2017",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:19:08Z",
+    "authorProfile": {
+      "name": "Eric Ries",
+      "shortBio": "American entrepreneur (born 1978)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Eric_Ries",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Eric_Ries2.jpg/330px-Eric_Ries2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0015",
@@ -399,10 +535,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "running-lean-by-ash-maurya",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2012",
+    "isbn13": "9781306812139",
+    "isbn10": "1449305172",
+    "publisher": "O'Reilly Media, Incorporated",
+    "publishedYear": 2012,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -413,11 +549,17 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16605567W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/running-lean-by-ash-maurya.jpg"
+    "coverImage": "/covers/running-lean-by-ash-maurya.jpg",
+    "isbn": "9781306812139",
+    "publicationYear": "2012",
+    "coverWebp": "/covers/running-lean-by-ash-maurya.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:19:18Z"
   },
   {
     "ref": "0016",
@@ -427,10 +569,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-four-steps-to-the-epiphany-by-steve-blank",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2006",
+    "isbn13": "9780989200523",
+    "isbn10": "1411601726",
+    "publisher": "K&S Ranch Publishing LLC",
+    "publishedYear": 2006,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -441,11 +583,21 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL9216355W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-four-steps-to-the-epiphany-by-steve-blank.jpg"
+    "coverImage": "/covers/the-four-steps-to-the-epiphany-by-steve-blank.jpg",
+    "isbn": "9780989200523",
+    "publicationYear": "2006",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:19:27Z",
+    "authorProfile": {
+      "name": "Steve Blank",
+      "shortBio": "American businessman (born 1953)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Steve_Blank",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Steve_Blank.jpg/330px-Steve_Blank.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0017",
@@ -455,10 +607,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "nail-it-then-scale-it-by-nathan-furr-and-paul-ahlstrom",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2011",
+    "isbn13": "9780983723608",
+    "isbn10": "0983723605",
+    "publisher": "NISI Institute",
+    "publishedYear": 2011,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -469,11 +621,15 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16803618W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/nail-it-then-scale-it-by-nathan-furr-and-paul-ahlstrom.jpg"
+    "coverImage": "/covers/nail-it-then-scale-it-by-nathan-furr-and-paul-ahlstrom.jpg",
+    "isbn": "9780983723608",
+    "publicationYear": "2011",
+    "confidenceScore": 95,
+    "enrichedAt": "2026-11-09T09:19:39Z"
   },
   {
     "ref": "0018",
@@ -483,10 +639,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-entrepreneurs-guide-to-customer-development-by-brant-cooper-and-patrick-vlaskovits",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2010",
+    "isbn13": "9781735351704",
+    "isbn10": "0982743602",
+    "publisher": "Moves the Needle Inc",
+    "publishedYear": 2010,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -497,11 +653,17 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL19847725W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-entrepreneurs-guide-to-customer-development-by-brant-cooper-and-patrick-vlaskovits.jpg"
+    "coverImage": "/covers/the-entrepreneurs-guide-to-customer-development-by-brant-cooper-and-patrick-vlaskovits.jpg",
+    "isbn": "9781735351704",
+    "publicationYear": "2010",
+    "coverWebp": "/covers/the-entrepreneurs-guide-to-customer-development-by-brant-cooper-and-patrick-vlaskovits.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:19:52Z"
   },
   {
     "ref": "0019",
@@ -511,10 +673,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-startup-checklist-by-david-s-rose",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2016",
+    "isbn13": "9781119163794",
+    "isbn10": "111916379X",
+    "publisher": "Wiley",
+    "publishedYear": 2016,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -525,11 +687,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL20027699W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-startup-checklist-by-david-s-rose.jpg"
+    "coverImage": "/covers/the-startup-checklist-by-david-s-rose.jpg",
+    "isbn": "9781119163794",
+    "publicationYear": "2016",
+    "coverWebp": "/covers/the-startup-checklist-by-david-s-rose.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:20:00Z",
+    "authorProfile": {
+      "name": "David S. Rose",
+      "shortBio": "American entrepreneur and investor (born 1957)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/David_S._Rose",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/David_S._Rose.jpg/330px-David_S._Rose.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0020",
@@ -539,10 +713,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-startup-ceo-by-matt-blumberg",
-    "isbn13": null,
+    "isbn13": "9798418524461",
     "isbn10": null,
-    "publisher": null,
-    "publishedYear": null,
+    "publisher": "Independently Published",
+    "publishedYear": 2022,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -551,11 +725,15 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL21056270W",
+    "openlibraryWorkId": "/works/OL31061028W",
     "googleVolumeId": null,
     "verificationStatus": "VERIFIED",
     "provenance": {},
-    "coverImage": "/covers/the-startup-ceo-by-matt-blumberg.jpg"
+    "coverImage": "/covers/the-startup-ceo-by-matt-blumberg.jpg",
+    "isbn": "9798418524461",
+    "publicationYear": "2022",
+    "confidenceScore": 95,
+    "enrichedAt": "2026-11-09T09:20:20Z"
   },
   {
     "ref": "0021",
@@ -565,10 +743,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-innovators-dna-by-jeff-dyer-hal-gregersen-and-clayton-m-christensen",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2011",
+    "isbn13": "9788984073753",
+    "isbn10": "898407375X",
+    "publisher": "Saejong Seojeok/Tsai Fong Books",
+    "publishedYear": 2011,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -579,11 +757,17 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL15921062W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-innovators-dna-by-jeff-dyer-hal-gregersen-and-clayton-m-christensen.jpg"
+    "coverImage": "/covers/the-innovators-dna-by-jeff-dyer-hal-gregersen-and-clayton-m-christensen.jpg",
+    "isbn": "9788984073753",
+    "publicationYear": "2011",
+    "coverWebp": "/covers/the-innovators-dna-by-jeff-dyer-hal-gregersen-and-clayton-m-christensen.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:20:40Z"
   },
   {
     "ref": "0022",
@@ -593,10 +777,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-rainforest-by-victor-w-hwang-and-greg-horowitt",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2012",
+    "isbn13": "9780545622288",
+    "isbn10": "0545605288",
+    "publisher": "Scholastic, Incorporated",
+    "publishedYear": 2009,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -605,13 +789,25 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL20382444W",
+    "openlibraryWorkId": "/works/OL17420307W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-rainforest-by-victor-w-hwang-and-greg-horowitt.jpg"
+    "coverImage": "/covers/the-rainforest-by-victor-w-hwang-and-greg-horowitt.jpg",
+    "isbn": "9780545622288",
+    "publicationYear": "2009",
+    "coverWebp": "/covers/the-rainforest-by-victor-w-hwang-and-greg-horowitt.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:20:59Z",
+    "authorProfile": {
+      "name": "Rainbow Magic",
+      "shortBio": "British children's book series",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Rainbow_Magic",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0f/Rainbow_Magic_Logo.png/330px-Rainbow_Magic_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0023",
@@ -621,10 +817,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-entrepreneurial-state-by-mariana-mazzucato",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "2011",
+    "isbn13": "9781610396134",
+    "isbn10": "1610396138",
+    "publisher": "PublicAffairs",
+    "publishedYear": 2011,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -635,11 +831,23 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL16808725W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-entrepreneurial-state-by-mariana-mazzucato.jpg"
+    "coverImage": "/covers/the-entrepreneurial-state-by-mariana-mazzucato.jpg",
+    "isbn": "9781610396134",
+    "publicationYear": "2011",
+    "coverWebp": "/covers/the-entrepreneurial-state-by-mariana-mazzucato.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:21:05Z",
+    "authorProfile": {
+      "name": "Mariana Mazzucato",
+      "shortBio": "Italian-American economist and professor (born 1968)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Mariana_Mazzucato",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Mariana_Mazzucato_2016_%28cropped%29.jpg/330px-Mariana_Mazzucato_2016_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0024",
@@ -649,10 +857,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "entrepreneurship-by-william-d-bygrave-and-andrew-zacharakis",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "1994",
+    "isbn13": "9780078112843",
+    "isbn10": "0256141479",
+    "publisher": "McGraw-Hill Education",
+    "publishedYear": 1989,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -661,13 +869,19 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL2124359W",
+    "openlibraryWorkId": "/works/OL2688120W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/entrepreneurship-by-william-d-bygrave-and-andrew-zacharakis.jpg"
+    "coverImage": "/covers/entrepreneurship-by-william-d-bygrave-and-andrew-zacharakis.jpg",
+    "isbn": "9780078112843",
+    "publicationYear": "1989",
+    "coverWebp": "/covers/entrepreneurship-by-william-d-bygrave-and-andrew-zacharakis.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:21:16Z"
   },
   {
     "ref": "0025",
@@ -677,10 +891,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "new-venture-creation-by-jeffry-a-timmons-and-stephen-spinelli",
-    "isbn13": null,
-    "isbn10": null,
-    "publisher": null,
-    "publishedYear": "1977",
+    "isbn13": "9780071232722",
+    "isbn10": "0071232729",
+    "publisher": "McGraw Hill Higher Education",
+    "publishedYear": 1977,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -691,11 +905,17 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL1974818W",
     "googleVolumeId": null,
-    "verificationStatus": "PARTIALLY_VERIFIED",
+    "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/new-venture-creation-by-jeffry-a-timmons-and-stephen-spinelli.jpg"
+    "coverImage": "/covers/new-venture-creation-by-jeffry-a-timmons-and-stephen-spinelli.jpg",
+    "isbn": "9780071232722",
+    "publicationYear": "1977",
+    "coverWebp": "/covers/new-venture-creation-by-jeffry-a-timmons-and-stephen-spinelli.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:21:32Z"
   },
   {
     "ref": "0026",
@@ -708,7 +928,7 @@
     "isbn13": "9780071832366",
     "isbn10": "0071832378",
     "publisher": "McGraw-Hill Education",
-    "publishedYear": "2016",
+    "publishedYear": 2016,
     "pageCount": 304,
     "description": null,
     "language": "en",
@@ -723,7 +943,16 @@
     "provenance": {
       "open_library_title": true
     },
-    "coverImage": "/covers/the-startup-equation-by-steve-fisher-and-ja-nae-duane.jpg"
+    "coverImage": "/covers/the-startup-equation-by-steve-fisher-and-ja-nae-duane.jpg",
+    "publicationYear": "2016",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:21:46Z",
+    "authorProfile": {
+      "name": "Steve Fisher",
+      "shortBio": "Topics referred to by the same term",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Steve_Fisher",
+      "photoUrl": null
+    }
   },
   {
     "ref": "0027",
@@ -736,7 +965,7 @@
     "isbn13": "9780307971432",
     "isbn10": "0307971430",
     "publisher": "Crown Business",
-    "publishedYear": "2012",
+    "publishedYear": 2012,
     "pageCount": 272,
     "description": null,
     "language": "en",
@@ -751,7 +980,18 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-startup-of-you-by-reid-hoffman-and-ben-casnocha.jpg"
+    "coverImage": "/covers/the-startup-of-you-by-reid-hoffman-and-ben-casnocha.jpg",
+    "publicationYear": "2012",
+    "coverWebp": "/covers/the-startup-of-you-by-reid-hoffman-and-ben-casnocha.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:21:54Z",
+    "authorProfile": {
+      "name": "Reid Hoffman",
+      "shortBio": "American internet entrepreneur (born 1967)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Reid_Hoffman",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/2022_Reid_Hoffman_%28cropped%29.jpg/330px-2022_Reid_Hoffman_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0028",
@@ -764,7 +1004,7 @@
     "isbn13": "9780008303655",
     "isbn10": "8416997519",
     "publisher": "HarperCollins Publishers Limited",
-    "publishedYear": "2018",
+    "publishedYear": 2018,
     "pageCount": 320,
     "description": null,
     "language": "en",
@@ -779,7 +1019,18 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/blitzscaling-by-reid-hoffman-and-chris-yeh.jpg"
+    "coverImage": "/covers/blitzscaling-by-reid-hoffman-and-chris-yeh.jpg",
+    "publicationYear": "2018",
+    "coverWebp": "/covers/blitzscaling-by-reid-hoffman-and-chris-yeh.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:22:02Z",
+    "authorProfile": {
+      "name": "Reid Hoffman",
+      "shortBio": "American internet entrepreneur (born 1967)",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Reid_Hoffman",
+      "photoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/2022_Reid_Hoffman_%28cropped%29.jpg/330px-2022_Reid_Hoffman_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
   },
   {
     "ref": "0029",
@@ -803,9 +1054,11 @@
     "reviewCount": null,
     "openlibraryWorkId": null,
     "googleVolumeId": null,
-    "verificationStatus": "VERIFIED",
+    "verificationStatus": "NEEDS_REVIEW",
     "provenance": {},
-    "coverImage": "/covers/the-startup-community-way-by-brad-feld-and-ian-hathaway.jpg"
+    "coverImage": "/covers/the-startup-community-way-by-brad-feld-and-ian-hathaway.jpg",
+    "confidenceScore": 40,
+    "enrichedAt": "2026-11-09T09:22:06Z"
   },
   {
     "ref": "0030",
@@ -829,9 +1082,11 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL36046389W",
     "googleVolumeId": null,
-    "verificationStatus": "VERIFIED",
+    "verificationStatus": "NEEDS_REVIEW",
     "provenance": {},
-    "coverImage": "/covers/the-entrepreneurial-bible-to-venture-capital-by-andrew-romans.jpg"
+    "coverImage": "/covers/the-entrepreneurial-bible-to-venture-capital-by-andrew-romans.jpg",
+    "confidenceScore": 40,
+    "enrichedAt": "2026-11-09T09:22:16Z"
   },
   {
     "ref": "0031",
@@ -844,7 +1099,7 @@
     "isbn13": "9780359211081",
     "isbn10": "0359209890",
     "publisher": "Lulu.com",
-    "publishedYear": "2018",
+    "publishedYear": 2018,
     "pageCount": 480,
     "description": null,
     "language": "en",
@@ -859,7 +1114,12 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-entrepreneurs-playbook-by-leonard-c-green-and-paul-b-brown.jpg"
+    "coverImage": "/covers/the-entrepreneurs-playbook-by-leonard-c-green-and-paul-b-brown.jpg",
+    "publicationYear": "2018",
+    "coverWebp": "/covers/the-entrepreneurs-playbook-by-leonard-c-green-and-paul-b-brown.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:22:58Z"
   },
   {
     "ref": "0032",
@@ -870,9 +1130,9 @@
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-entrepreneurs-manual-by-richard-m-white",
     "isbn13": null,
-    "isbn10": null,
+    "isbn10": "0801964547",
     "publisher": "American Film Institute",
-    "publishedYear": "1975",
+    "publishedYear": 1977,
     "pageCount": 80,
     "description": null,
     "language": "en",
@@ -881,13 +1141,16 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL17597290W",
+    "openlibraryWorkId": "/works/OL6918603W",
     "googleVolumeId": null,
     "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-entrepreneurs-manual-by-richard-m-white.jpg"
+    "coverImage": "/covers/the-entrepreneurs-manual-by-richard-m-white.jpg",
+    "publicationYear": "1977",
+    "confidenceScore": 95,
+    "enrichedAt": "2026-11-09T09:23:26Z"
   },
   {
     "ref": "0033",
@@ -911,11 +1174,13 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL20151979W",
     "googleVolumeId": null,
-    "verificationStatus": "VERIFIED",
+    "verificationStatus": "NEEDS_REVIEW",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/scaling-your-startup-mastering-the-four-stages-from-by-idea-to-10-billion.jpg"
+    "coverImage": "/covers/scaling-your-startup-mastering-the-four-stages-from-by-idea-to-10-billion.jpg",
+    "confidenceScore": 40,
+    "enrichedAt": "2026-11-09T09:23:33Z"
   },
   {
     "ref": "0034",
@@ -928,7 +1193,7 @@
     "isbn13": "9780136169840",
     "isbn10": "0136083536",
     "publisher": "Prentice Hall",
-    "publishedYear": "2004",
+    "publishedYear": 2008,
     "pageCount": 588,
     "description": null,
     "language": "en",
@@ -937,13 +1202,18 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL7947084W",
+    "openlibraryWorkId": "/works/OL20108704W",
     "googleVolumeId": null,
     "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/entrepreneurship-successfully-launching-new-by-ventures.jpg"
+    "coverImage": "/covers/entrepreneurship-successfully-launching-new-by-ventures.jpg",
+    "publicationYear": "2008",
+    "coverWebp": "/covers/entrepreneurship-successfully-launching-new-by-ventures.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:23:52Z"
   },
   {
     "ref": "0035",
@@ -953,10 +1223,10 @@
     "category": "Startups & Entrepreneurship",
     "categorySlug": "startups-entrepreneurship",
     "slug": "the-startup-community-by-brad-feld",
-    "isbn13": null,
+    "isbn13": "9798482074862",
     "isbn10": null,
-    "publisher": null,
-    "publishedYear": null,
+    "publisher": "Independently Published",
+    "publishedYear": 2021,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -965,11 +1235,15 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL17537974W",
+    "openlibraryWorkId": "/works/OL36317783W",
     "googleVolumeId": null,
     "verificationStatus": "VERIFIED",
     "provenance": {},
-    "coverImage": "/covers/the-startup-community-by-brad-feld.jpg"
+    "coverImage": "/covers/the-startup-community-by-brad-feld.jpg",
+    "isbn": "9798482074862",
+    "publicationYear": "2021",
+    "confidenceScore": 95,
+    "enrichedAt": "2026-11-09T09:24:04Z"
   },
   {
     "ref": "0036",
@@ -982,7 +1256,7 @@
     "isbn13": "9780470574171",
     "isbn10": "0470566345",
     "publisher": "Wiley",
-    "publishedYear": "2010",
+    "publishedYear": 2003,
     "pageCount": 549,
     "description": null,
     "language": "en",
@@ -991,13 +1265,24 @@
     "infoUrl": null,
     "rating": null,
     "reviewCount": null,
-    "openlibraryWorkId": "/works/OL15455282W",
+    "openlibraryWorkId": "/works/OL20994143W",
     "googleVolumeId": null,
     "verificationStatus": "VERIFIED",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/venture-capital-by-andrew-metrick-and-ayako-yasuda.jpg"
+    "coverImage": "/covers/venture-capital-by-andrew-metrick-and-ayako-yasuda.jpg",
+    "publicationYear": "2003",
+    "coverWebp": "/covers/venture-capital-by-andrew-metrick-and-ayako-yasuda.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:24:22Z",
+    "authorProfile": {
+      "name": "Michael Wright",
+      "shortBio": "Topics referred to by the same term",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Michael_Wright",
+      "photoUrl": null
+    }
   },
   {
     "ref": "0037",
@@ -1021,11 +1306,13 @@
     "reviewCount": null,
     "openlibraryWorkId": "/works/OL17537974W",
     "googleVolumeId": null,
-    "verificationStatus": "VERIFIED",
+    "verificationStatus": "NEEDS_REVIEW",
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/startup-cities-why-only-a-few-cities-dominate-the-by-global-startup-scene.jpg"
+    "coverImage": "/covers/startup-cities-why-only-a-few-cities-dominate-the-by-global-startup-scene.jpg",
+    "confidenceScore": 40,
+    "enrichedAt": "2026-11-09T09:24:27Z"
   },
   {
     "ref": "0038",
@@ -1038,7 +1325,7 @@
     "isbn13": "9781118149560",
     "isbn10": "1118149564",
     "publisher": "John Wiley & Sons",
-    "publishedYear": "2012",
+    "publishedYear": 2012,
     "pageCount": null,
     "description": null,
     "language": "en",
@@ -1053,7 +1340,12 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-business-model-innovation-factory-by-saul-kaplan.jpg"
+    "coverImage": "/covers/the-business-model-innovation-factory-by-saul-kaplan.jpg",
+    "publicationYear": "2012",
+    "coverWebp": "/covers/the-business-model-innovation-factory-by-saul-kaplan.webp",
+    "coverStatus": "VERIFIED_AUTHENTIC",
+    "confidenceScore": 100,
+    "enrichedAt": "2026-11-09T09:24:41Z"
   },
   {
     "ref": "0039",
@@ -2789,7 +3081,7 @@
     "slug": "trillion-dollar-coach-by-eric-schmidt-jonathan-rosenberg-and-alan-eagle",
     "isbn13": "9781982626297",
     "isbn10": "1473675960",
-    "publisher": "Planeta Estratégia",
+    "publisher": "Planeta Estrat\u00e9gia",
     "publishedYear": "2019",
     "pageCount": 240,
     "description": null,
@@ -3427,10 +3719,10 @@
     "ref": "0124",
     "id": "book-0124",
     "title": "The Product Book",
-    "author": "Josh Anon and Carlos González de Villaumbrosia",
+    "author": "Josh Anon and Carlos Gonz\u00e1lez de Villaumbrosia",
     "category": "Innovation, Product Management & Design",
     "categorySlug": "innovation-product-design",
-    "slug": "the-product-book-by-josh-anon-and-carlos-gonzález-de-villaumbrosia",
+    "slug": "the-product-book-by-josh-anon-and-carlos-gonz\u00e1lez-de-villaumbrosia",
     "isbn13": "9780998973814",
     "isbn10": "0998973815",
     "publisher": "Product School",
@@ -3438,7 +3730,7 @@
     "pageCount": 314,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/the-product-book-by-josh-anon-and-carlos-gonzález-de-villaumbrosia.jpg",
+    "coverUrl": "/covers/the-product-book-by-josh-anon-and-carlos-gonz\u00e1lez-de-villaumbrosia.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -3449,7 +3741,7 @@
     "provenance": {
       "open_library_title": true
     },
-    "coverImage": "/covers/the-product-book-by-josh-anon-and-carlos-gonzález-de-villaumbrosia.jpg"
+    "coverImage": "/covers/the-product-book-by-josh-anon-and-carlos-gonz\u00e1lez-de-villaumbrosia.jpg"
   },
   {
     "ref": "0125",
@@ -4515,10 +4807,10 @@
     "ref": "0163",
     "id": "book-0163",
     "title": "Blue Ocean Strategy",
-    "author": "W. Chan Kim and Renée Mauborgne",
+    "author": "W. Chan Kim and Ren\u00e9e Mauborgne",
     "category": "Business Strategy & Competitive Advantage",
     "categorySlug": "business-strategy",
-    "slug": "blue-ocean-strategy-by-w-chan-kim-and-renée-mauborgne",
+    "slug": "blue-ocean-strategy-by-w-chan-kim-and-ren\u00e9e-mauborgne",
     "isbn13": "9781591396192",
     "isbn10": "9864175351",
     "publisher": "Harvard Business School Press",
@@ -4526,7 +4818,7 @@
     "pageCount": 298,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/blue-ocean-strategy-by-w-chan-kim-and-renée-mauborgne.jpg",
+    "coverUrl": "/covers/blue-ocean-strategy-by-w-chan-kim-and-ren\u00e9e-mauborgne.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -4537,7 +4829,7 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/blue-ocean-strategy-by-w-chan-kim-and-renée-mauborgne.jpg"
+    "coverImage": "/covers/blue-ocean-strategy-by-w-chan-kim-and-ren\u00e9e-mauborgne.jpg"
   },
   {
     "ref": "0164",
@@ -4739,10 +5031,10 @@
     "ref": "0171",
     "id": "book-0171",
     "title": "Your Strategy Needs a Strategy",
-    "author": "Martin Reeves, Knut Haanæs and Janmejaya Sinha",
+    "author": "Martin Reeves, Knut Haan\u00e6s and Janmejaya Sinha",
     "category": "Business Strategy & Competitive Advantage",
     "categorySlug": "business-strategy",
-    "slug": "your-strategy-needs-a-strategy-by-martin-reeves-knut-haanæs-and-janmejaya-sinha",
+    "slug": "your-strategy-needs-a-strategy-by-martin-reeves-knut-haan\u00e6s-and-janmejaya-sinha",
     "isbn13": "9781625275868",
     "isbn10": "1625275862",
     "publisher": "Harvard Business Review Press",
@@ -4750,7 +5042,7 @@
     "pageCount": 271,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/your-strategy-needs-a-strategy-by-martin-reeves-knut-haanæs-and-janmejaya-sinha.jpg",
+    "coverUrl": "/covers/your-strategy-needs-a-strategy-by-martin-reeves-knut-haan\u00e6s-and-janmejaya-sinha.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -4761,7 +5053,7 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/your-strategy-needs-a-strategy-by-martin-reeves-knut-haanæs-and-janmejaya-sinha.jpg"
+    "coverImage": "/covers/your-strategy-needs-a-strategy-by-martin-reeves-knut-haan\u00e6s-and-janmejaya-sinha.jpg"
   },
   {
     "ref": "0172",
@@ -5165,7 +5457,7 @@
     "slug": "the-long-tail-by-chris-anderson",
     "isbn13": "9781846570872",
     "isbn10": "1610660064",
-    "publisher": "Éditions Logiques",
+    "publisher": "\u00c9ditions Logiques",
     "publishedYear": "2006",
     "pageCount": 238,
     "description": null,
@@ -5549,10 +5841,10 @@
     "ref": "0200",
     "id": "book-0200",
     "title": "The Strategy and Tactics of Pricing",
-    "author": "Thomas T. Nagle and Georg Müller",
+    "author": "Thomas T. Nagle and Georg M\u00fcller",
     "category": "Business Strategy & Competitive Advantage",
     "categorySlug": "business-strategy",
-    "slug": "the-strategy-and-tactics-of-pricing-by-thomas-t-nagle-and-georg-müller",
+    "slug": "the-strategy-and-tactics-of-pricing-by-thomas-t-nagle-and-georg-m\u00fcller",
     "isbn13": "9780132043588",
     "isbn10": "0132043580",
     "publisher": "Pearson",
@@ -5560,7 +5852,7 @@
     "pageCount": 368,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/the-strategy-and-tactics-of-pricing-by-thomas-t-nagle-and-georg-müller.jpg",
+    "coverUrl": "/covers/the-strategy-and-tactics-of-pricing-by-thomas-t-nagle-and-georg-m\u00fcller.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -5571,7 +5863,7 @@
     "provenance": {
       "open_library_title": true
     },
-    "coverImage": "/covers/the-strategy-and-tactics-of-pricing-by-thomas-t-nagle-and-georg-müller.jpg"
+    "coverImage": "/covers/the-strategy-and-tactics-of-pricing-by-thomas-t-nagle-and-georg-m\u00fcller.jpg"
   },
   {
     "ref": "0201",
@@ -5829,10 +6121,10 @@
     "ref": "0210",
     "id": "book-0210",
     "title": "Dare to Lead",
-    "author": "Brené Brown",
+    "author": "Bren\u00e9 Brown",
     "category": "Leadership & Executive Development",
     "categorySlug": "leadership-executive-development",
-    "slug": "dare-to-lead-by-brené-brown",
+    "slug": "dare-to-lead-by-bren\u00e9-brown",
     "isbn13": "9781592408412",
     "isbn10": "1470814757",
     "publisher": "Sextante",
@@ -5840,7 +6132,7 @@
     "pageCount": 251,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/dare-to-lead-by-brené-brown.jpg",
+    "coverUrl": "/covers/dare-to-lead-by-bren\u00e9-brown.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -5851,7 +6143,7 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/dare-to-lead-by-brené-brown.jpg"
+    "coverImage": "/covers/dare-to-lead-by-bren\u00e9-brown.jpg"
   },
   {
     "ref": "0211",
@@ -7541,7 +7833,7 @@
     "slug": "no-rules-rules-by-reed-hastings-and-erin-meyer",
     "isbn13": "9780753553633",
     "isbn10": "6555600314",
-    "publisher": "Intrínseca",
+    "publisher": "Intr\u00ednseca",
     "publishedYear": "2020",
     "pageCount": 320,
     "description": null,
@@ -8571,7 +8863,7 @@
     "slug": "made-to-stick-by-chip-heath-and-dan-heath",
     "isbn13": "9780812982008",
     "isbn10": "1905211570",
-    "publisher": "דיונון",
+    "publisher": "\u05d3\u05d9\u05d5\u05e0\u05d5\u05df",
     "publishedYear": "1998",
     "pageCount": 291,
     "description": null,
@@ -13479,7 +13771,7 @@
     "slug": "the-essays-of-warren-buffett-by-lawrence-a-cunningham",
     "isbn13": "9780966446128",
     "isbn10": "1611637589",
-    "publisher": "VNR Verlag für die Deutsche Wirtschaft",
+    "publisher": "VNR Verlag f\u00fcr die Deutsche Wirtschaft",
     "publishedYear": "1997",
     "pageCount": 291,
     "description": null,
@@ -14007,7 +14299,7 @@
     "slug": "the-intelligent-investor-by-benjamin-graham",
     "isbn13": "9780060115913",
     "isbn10": "3898798275",
-    "publisher": "HarperCollins Español",
+    "publisher": "HarperCollins Espa\u00f1ol",
     "publishedYear": "1949",
     "pageCount": 368,
     "description": null,
@@ -14841,10 +15133,10 @@
     "ref": "0533",
     "id": "book-0533",
     "title": "Reminiscences of a Stock Operator",
-    "author": "Edwin Lefèvre",
+    "author": "Edwin Lef\u00e8vre",
     "category": "Investing, Markets & Capital Allocation",
     "categorySlug": "investing-markets-capital-allocation",
-    "slug": "reminiscences-of-a-stock-operator-by-edwin-lefèvre",
+    "slug": "reminiscences-of-a-stock-operator-by-edwin-lef\u00e8vre",
     "isbn13": "9781945934889",
     "isbn10": "1697125271",
     "publisher": "J. Wiley",
@@ -14852,7 +15144,7 @@
     "pageCount": 273,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/reminiscences-of-a-stock-operator-by-edwin-lefèvre.jpg",
+    "coverUrl": "/covers/reminiscences-of-a-stock-operator-by-edwin-lef\u00e8vre.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -14863,7 +15155,7 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/reminiscences-of-a-stock-operator-by-edwin-lefèvre.jpg"
+    "coverImage": "/covers/reminiscences-of-a-stock-operator-by-edwin-lef\u00e8vre.jpg"
   },
   {
     "ref": "0534",
@@ -15405,7 +15697,7 @@
     "slug": "the-automatic-millionaire-by-david-bach",
     "isbn13": "9780743538411",
     "isbn10": "0767923820",
-    "publisher": "Vintage Español",
+    "publisher": "Vintage Espan\u0303ol",
     "publishedYear": "2003",
     "pageCount": 240,
     "description": null,
@@ -16355,7 +16647,7 @@
     "slug": "capital-in-the-twenty-first-century-by-thomas-piketty",
     "isbn13": "9782021082289",
     "isbn10": "0674979850",
-    "publisher": "Éditions du Seuil",
+    "publisher": "\u00c9ditions du Seuil",
     "publishedYear": "2013",
     "pageCount": 816,
     "description": null,
@@ -17083,7 +17375,7 @@
     "slug": "the-box-by-marc-levinson",
     "isbn13": "9781400880751",
     "isbn10": "0691123241",
-    "publisher": "日経BP社",
+    "publisher": "\u65e5\u7d4cBP\u793e",
     "publishedYear": "2006",
     "pageCount": 395,
     "description": null,
@@ -19709,7 +20001,7 @@
     "slug": "the-war-of-art-by-steven-pressfield",
     "isbn13": "9781590710036",
     "isbn10": "1936891166",
-    "publisher": "‎ Black Irish Entertainment LLC",
+    "publisher": "\u200e Black Irish Entertainment LLC",
     "publishedYear": "2002",
     "pageCount": 192,
     "description": null,
@@ -20681,10 +20973,10 @@
     "ref": "0742",
     "id": "book-0742",
     "title": "The Lean Manager",
-    "author": "Michael Ballé and Freddy Ballé",
+    "author": "Michael Ball\u00e9 and Freddy Ball\u00e9",
     "category": "Operations, Process, Quality & Supply Chain",
     "categorySlug": "operations-process-supply-chain",
-    "slug": "the-lean-manager-by-michael-ballé-and-freddy-ballé",
+    "slug": "the-lean-manager-by-michael-ball\u00e9-and-freddy-ball\u00e9",
     "isbn13": "9781283892940",
     "isbn10": "1283892944",
     "publisher": "Business Expert Press",
@@ -20692,7 +20984,7 @@
     "pageCount": null,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/the-lean-manager-by-michael-ballé-and-freddy-ballé.jpg",
+    "coverUrl": "/covers/the-lean-manager-by-michael-ball\u00e9-and-freddy-ball\u00e9.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -20703,7 +20995,7 @@
     "provenance": {
       "open_library_title": true
     },
-    "coverImage": "/covers/the-lean-manager-by-michael-ballé-and-freddy-ballé.jpg"
+    "coverImage": "/covers/the-lean-manager-by-michael-ball\u00e9-and-freddy-ball\u00e9.jpg"
   },
   {
     "ref": "0743",
@@ -21989,7 +22281,7 @@
     "slug": "the-worlds-i-see-by-fei-fei-li",
     "isbn13": "9781250897930",
     "isbn10": "6263555068",
-    "publisher": "中信出版社",
+    "publisher": "\u4e2d\u4fe1\u51fa\u7248\u793e",
     "publishedYear": "2023",
     "pageCount": null,
     "description": null,
@@ -26083,10 +26375,10 @@
     "ref": "0936",
     "id": "book-0936",
     "title": "The Globalization of Inequality",
-    "author": "François Bourguignon",
+    "author": "Fran\u00e7ois Bourguignon",
     "category": "Global Business, International Markets & Emerging Economies",
     "categorySlug": "global-business-emerging-markets",
-    "slug": "the-globalization-of-inequality-by-françois-bourguignon",
+    "slug": "the-globalization-of-inequality-by-fran\u00e7ois-bourguignon",
     "isbn13": "9780691175645",
     "isbn10": "1400865654",
     "publisher": "Princeton University Press",
@@ -26094,7 +26386,7 @@
     "pageCount": 224,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/the-globalization-of-inequality-by-françois-bourguignon.jpg",
+    "coverUrl": "/covers/the-globalization-of-inequality-by-fran\u00e7ois-bourguignon.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -26105,7 +26397,7 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-globalization-of-inequality-by-françois-bourguignon.jpg"
+    "coverImage": "/covers/the-globalization-of-inequality-by-fran\u00e7ois-bourguignon.jpg"
   },
   {
     "ref": "0937",
@@ -26503,10 +26795,10 @@
     "ref": "0951",
     "id": "book-0951",
     "title": "The Sustainability Revolution",
-    "author": "Andrés R. Edwards",
+    "author": "Andr\u00e9s R. Edwards",
     "category": "Sustainability, Social Enterprise, Ethics & Impact",
     "categorySlug": "sustainability-social-enterprise",
-    "slug": "the-sustainability-revolution-by-andrés-r-edwards",
+    "slug": "the-sustainability-revolution-by-andr\u00e9s-r-edwards",
     "isbn13": "9781550923254",
     "isbn10": "1550923250",
     "publisher": "New Society Publishers, Limited",
@@ -26514,7 +26806,7 @@
     "pageCount": 207,
     "description": null,
     "language": "en",
-    "coverUrl": "/covers/the-sustainability-revolution-by-andrés-r-edwards.jpg",
+    "coverUrl": "/covers/the-sustainability-revolution-by-andr\u00e9s-r-edwards.jpg",
     "previewUrl": null,
     "infoUrl": null,
     "rating": null,
@@ -26525,7 +26817,7 @@
     "provenance": {
       "open_library": true
     },
-    "coverImage": "/covers/the-sustainability-revolution-by-andrés-r-edwards.jpg"
+    "coverImage": "/covers/the-sustainability-revolution-by-andr\u00e9s-r-edwards.jpg"
   },
   {
     "ref": "0952",
