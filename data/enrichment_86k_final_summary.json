@@ -1,0 +1,42 @@
+{
+  "reportName": "Master 86,260 EBook Product Enrichment & Reconciliation",
+  "generatedAt": "2026-11-09T15:03:38.532966",
+  "totalRecordsProcessed": 86260,
+  "exactMatchWithInput": true,
+  "listingStatusBreakdown": {
+    "APPROVED_FOR_SALE": 1059,
+    "MANUAL_REVIEW": 65,
+    "NOT_APPROVED_FOR_SALE": 1308,
+    "PRICE_RESEARCH_REQUIRED": 81716,
+    "RIGHTS_VERIFICATION_REQUIRED": 2112
+  },
+  "coverProvenanceBreakdown": {
+    "AUTHENTIC": 4526,
+    "CUSTOM_ARTWORK": 81734
+  },
+  "pricingMetrics": {
+    "recordsWithComparableMarketPrice": 4526,
+    "currency": "INR",
+    "priceResearchSources": [
+      "Amazon India (Kindle Edition)",
+      "Google Play Books (eBook)",
+      "Google Books (Digital Preview)",
+      "Publisher List Price (MSRP)"
+    ],
+    "priceIntegrityRule": "Digital eBook prices strictly isolated from physical print editions; unverified prices recorded as NULL."
+  },
+  "metadataEnrichmentMetrics": {
+    "totalCatalogTitles": 86260,
+    "metadataEnrichedCount": 86260,
+    "customCatalogueArtworkLabeled": 81734,
+    "authenticPublisherCoversVerified": 4526
+  },
+  "reconciliationValidation": {
+    "sumEqualsTotalRecords": true,
+    "totalApprovedForSale": 1059,
+    "totalRightsVerificationRequired": 2112,
+    "totalPriceResearchRequired": 81716,
+    "totalManualReview": 65,
+    "totalNotApprovedForSale": 1308
+  }
+}

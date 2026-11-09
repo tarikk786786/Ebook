@@ -43,4 +43,6 @@ appinfo11*.txt
 
 # Large intermediate catalog dumps (master 86k is split into data/catalog/ parts)
 data/all_83925_catalog.json
+data/enrichment_86k_final_reconciliation.csv
+data/enrichment_86k_checkpoint.db
 *.db

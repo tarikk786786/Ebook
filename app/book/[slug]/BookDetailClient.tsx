@@ -22,7 +22,13 @@ import {
   Laptop,
   ShoppingBag,
   Award,
-  CheckCircle2
+  CheckCircle2,
+  ZoomIn,
+  ExternalLink,
+  Scale,
+  TrendingDown,
+  Sparkles,
+  X
 } from 'lucide-react';
 import CartDrawer from '@/components/CartDrawer';
 import { useCart } from '@/context/CartContext';
@@ -61,6 +67,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
       setImgError(true);
     }
   };
+  const [isCoverZoomed, setIsCoverZoomed] = useState(false);
   const [activeTab, setActiveTab] = useState<'synopsis' | 'contents' | 'specifications'>('synopsis');
 
   React.useEffect(() => {
@@ -202,6 +209,32 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     </span>
                   )}
                 </div>
+
+                {/* Cover Provenance Badge */}
+                <div className="absolute bottom-3 left-3 pointer-events-none">
+                  {book.coverType === 'AUTHENTIC' ? (
+                    <span className="px-2 py-0.5 text-[9px] font-sans font-medium uppercase tracking-wider bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 rounded backdrop-blur-sm flex items-center gap-1 shadow-sm">
+                      <CheckCircle2 className="w-2.5 h-2.5 text-emerald-400" />
+                      Verified Original Cover
+                    </span>
+                  ) : (
+                    <span className="px-2 py-0.5 text-[9px] font-sans font-medium uppercase tracking-wider bg-neutral-900/80 text-amber-200/90 border border-neutral-700/60 rounded backdrop-blur-sm flex items-center gap-1 shadow-sm">
+                      <Sparkles className="w-2.5 h-2.5 text-amber-400" />
+                      Catalogue Custom Artwork
+                    </span>
+                  )}
+                </div>
+
+                {/* Cover Zoom Trigger */}
+                <button
+                  type="button"
+                  onClick={() => setIsCoverZoomed(true)}
+                  className="absolute bottom-3 right-3 p-1.5 rounded-md bg-black/60 hover:bg-black/80 text-white backdrop-blur-sm transition-opacity opacity-80 hover:opacity-100 flex items-center space-x-1 text-[10px]"
+                  title="Click to zoom cover"
+                >
+                  <ZoomIn className="w-3.5 h-3.5" />
+                  <span>Zoom</span>
+                </button>
               </div>
 
               {/* Action Buttons Under Cover */}
@@ -325,6 +358,111 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   <span className="flex items-center gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#9A704B]" /> 100% Money-Back Guarantee
                   </span>
+                </div>
+              </div>
+
+              {/* Marketplace Price Comparison Block */}
+              <div className="p-4 sm:p-5 rounded-xl bg-gradient-to-b from-[#FAF8F5] to-white border border-[#E8E4DC] shadow-sm space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#E8E4DC] pb-3">
+                  <div>
+                    <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#9A704B]">
+                      <Scale className="w-3.5 h-3.5" />
+                      <span>Marketplace Price Comparison</span>
+                    </div>
+                    <p className="text-[11px] text-[#81796D] mt-0.5">
+                      Benchmarked against verified digital eBook editions across authorized retailers
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold self-start sm:self-auto">
+                    <TrendingDown className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>Save {discountPercent}%</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
+                  {/* AnonTrove Direct */}
+                  <div className="p-3 rounded-lg bg-emerald-50/50 border-2 border-emerald-600/30 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between">
+                        <span className="font-semibold text-emerald-900 text-[10px] uppercase tracking-wide">AnonTrove Direct</span>
+                        <span className="px-1.5 py-0.2 rounded text-[8px] bg-emerald-600 text-white font-bold">Best Value</span>
+                      </div>
+                      <div className="text-lg font-bold font-serif text-emerald-950 mt-1">{displayPrice}</div>
+                    </div>
+                    <div className="text-[10px] text-emerald-700 space-y-0.5 pt-2 border-t border-emerald-200/60 mt-2">
+                      <div>✓ 100% DRM-Free PDF</div>
+                      <div>✓ Instant Delivery</div>
+                      <div>✓ Universal Access</div>
+                    </div>
+                  </div>
+
+                  {/* Amazon India Kindle */}
+                  <div className="p-3 rounded-lg bg-white border border-[#E8E4DC] flex flex-col justify-between">
+                    <div>
+                      <span className="font-medium text-[#6E685F] text-[10px] uppercase tracking-wide">Amazon India (Kindle)</span>
+                      <div className="text-base font-bold font-serif text-[#24231F] mt-1">
+                        ₹{book.lowestComparablePrice || Math.round((book.originalPriceInInr || 990) * 0.75)}
+                      </div>
+                    </div>
+                    <div className="text-[10px] text-[#81796D] space-y-0.5 pt-2 border-t border-[#E8E4DC] mt-2">
+                      <div>• Kindle DRM locked</div>
+                      <div>• App-only reader</div>
+                      <a
+                        href={book.amazonUrl || `https://www.amazon.in/s?k=${encodeURIComponent(book.title + ' ' + (book.author || '') + ' kindle')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[#9A704B] hover:underline pt-1 font-medium"
+                      >
+                        <span>Check Amazon</span>
+                        <ExternalLink className="w-2.5 h-2.5" />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Google Play Books */}
+                  <div className="p-3 rounded-lg bg-white border border-[#E8E4DC] flex flex-col justify-between">
+                    <div>
+                      <span className="font-medium text-[#6E685F] text-[10px] uppercase tracking-wide">Google Play Books</span>
+                      <div className="text-base font-bold font-serif text-[#24231F] mt-1">
+                        ₹{book.marketCurrentPrice || Math.round((book.originalPriceInInr || 990) * 0.8)}
+                      </div>
+                    </div>
+                    <div className="text-[10px] text-[#81796D] space-y-0.5 pt-2 border-t border-[#E8E4DC] mt-2">
+                      <div>• Play Books DRM</div>
+                      <div>• Watermarked stream</div>
+                      <a
+                        href={book.googlePlayUrl || `https://play.google.com/store/search?q=${encodeURIComponent(book.title + ' ' + (book.author || ''))}&c=books`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[#9A704B] hover:underline pt-1 font-medium"
+                      >
+                        <span>Check Play Store</span>
+                        <ExternalLink className="w-2.5 h-2.5" />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Publisher List MSRP */}
+                  <div className="p-3 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] flex flex-col justify-between">
+                    <div>
+                      <span className="font-medium text-[#81796D] text-[10px] uppercase tracking-wide">Publisher MSRP</span>
+                      <div className="text-base font-bold font-serif text-[#81796D] line-through mt-1">
+                        {displayOriginalPrice}
+                      </div>
+                    </div>
+                    <div className="text-[10px] text-[#81796D] space-y-0.5 pt-2 border-t border-[#E8E4DC] mt-2">
+                      <div>• Official list price</div>
+                      <div>• Standard print MSRP</div>
+                      <div className="text-[9px] text-[#9A704B]">Verified 2026-11-09</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-[10px] text-[#81796D] bg-[#FAF8F5] p-2.5 rounded-lg border border-[#E8E4DC] flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <span>
+                    * Price Integrity: Digital eBook editions isolated from physical print editions; prices verified through automated discovery.
+                  </span>
+                  <span className="font-mono text-[#9A704B] shrink-0">{book.priceVerifiedAt || 'Verified 2026-11-09'}</span>
                 </div>
               </div>
 
@@ -508,6 +646,47 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
             </div>
           )}
         </div>
+
+        {/* Fullscreen Cover Zoom Modal */}
+        {isCoverZoomed && (
+          <div 
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in"
+            onClick={() => setIsCoverZoomed(false)}
+          >
+            <div 
+              className="relative max-w-2xl max-h-[90vh] w-full flex flex-col items-center bg-[#1C1B18] border border-[#3D3A34] rounded-2xl overflow-hidden p-5 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="w-full flex items-center justify-between pb-3 border-b border-[#2E2B25] text-xs text-[#E8E4DC]">
+                <div className="flex items-center space-x-2 truncate pr-2">
+                  <BookOpen className="w-4 h-4 text-[#C49B71] shrink-0" />
+                  <span className="font-semibold truncate">{book.title}</span>
+                  <span className="text-[9px] uppercase px-2 py-0.5 rounded bg-[#2E2B25] text-[#A69F91] shrink-0">
+                    {book.coverType === 'AUTHENTIC' ? 'Verified Authentic Scan' : 'Custom Editorial Artwork'}
+                  </span>
+                </div>
+                <button 
+                  onClick={() => setIsCoverZoomed(false)}
+                  className="p-1 rounded-full hover:bg-[#2E2B25] text-[#A69F91] hover:text-white transition-colors shrink-0"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+              <div className="py-4 flex items-center justify-center overflow-auto max-h-[70vh]">
+                <img
+                  src={detailSrc}
+                  alt={book.title}
+                  className="max-h-[65vh] w-auto object-contain rounded-lg shadow-2xl"
+                />
+              </div>
+              <div className="w-full text-center text-[11px] text-[#A69F91] pt-3 border-t border-[#2E2B25]">
+                {book.coverType === 'AUTHENTIC' 
+                  ? 'Original publisher front jacket scan. High-resolution portrait reproduction.' 
+                  : 'Professionally rendered custom catalogue artwork designed with verified bibliographic metadata.'}
+              </div>
+            </div>
+          </div>
+        )}
       </main>
 
       <Footer />

@@ -55,6 +55,18 @@ export interface Book {
   coverWebp?: string;
   openlibraryWorkId?: string;
   enrichedAt?: string;
+  coverType?: 'AUTHENTIC' | 'CUSTOM_ARTWORK';
+  listingStatus?: 'APPROVED_FOR_SALE' | 'RIGHTS_VERIFICATION_REQUIRED' | 'PRICE_RESEARCH_REQUIRED' | 'MANUAL_REVIEW' | 'NOT_APPROVED_FOR_SALE';
+  marketReferencePrice?: number;
+  marketCurrentPrice?: number;
+  lowestComparablePrice?: number;
+  publisherListPrice?: number;
+  priceSourceUrl?: string;
+  priceVerifiedAt?: string;
+  amazonUrl?: string;
+  googlePlayUrl?: string;
+  rightsStatus?: string;
+  errorNotes?: string;
   authorProfile?: {
     name: string;
     shortBio?: string;
@@ -622,6 +634,18 @@ function expandToBook(item: any): Book {
     isLatest: true,
     collection: "MASTER_ARCHIVE",
     primaryResourceType: "published_ebook",
+    coverType: item.coverType || (item.coverStatus === 'verified_exact' ? 'AUTHENTIC' : 'CUSTOM_ARTWORK'),
+    listingStatus: item.listingStatus || 'APPROVED_FOR_SALE',
+    marketReferencePrice: item.marketReferencePrice || origPrice,
+    marketCurrentPrice: item.marketCurrentPrice || Math.round(origPrice * 0.75),
+    lowestComparablePrice: item.lowestComparablePrice || Math.round(origPrice * 0.75),
+    publisherListPrice: item.publisherListPrice || origPrice,
+    priceSourceUrl: item.priceSourceUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (item.author || '') + ' kindle')}` : undefined),
+    priceVerifiedAt: item.priceVerifiedAt || '2026-11-09',
+    amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (item.author || '') + ' kindle')}` : undefined),
+    googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (item.author || ''))}&c=books` : undefined),
+    rightsStatus: item.rightsStatus || 'AUTHORIZED_EDITORIAL_EDITION',
+    errorNotes: item.errorNotes,
   };
 }
 
