@@ -43,6 +43,24 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const [detailSrc, setDetailSrc] = useState<string>(book.coverImage || `/api/covers/${book.slug}`);
+
+  React.useEffect(() => {
+    setDetailSrc(book.coverImage || `/api/covers/${book.slug}`);
+    setImgError(false);
+  }, [book.id, book.slug, book.coverImage]);
+
+  const handleCoverError = () => {
+    const apiFallback = `/api/covers/${book.slug}`;
+    const standardFallback = "/covers/standard-shelf-cover.jpg";
+    if (detailSrc !== apiFallback) {
+      setDetailSrc(apiFallback);
+    } else if (detailSrc !== standardFallback) {
+      setDetailSrc(standardFallback);
+    } else {
+      setImgError(true);
+    }
+  };
   const [activeTab, setActiveTab] = useState<'synopsis' | 'contents' | 'specifications'>('synopsis');
 
   React.useEffect(() => {
@@ -147,9 +165,9 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
               <div className="relative w-full max-w-[340px] aspect-[3/4] rounded-lg overflow-hidden bg-white border border-[#E8E4DC] shadow-book hover:shadow-book-hover transition-all">
                 {!imgError ? (
                   <img
-                    src={book.coverImage}
+                    src={detailSrc}
                     alt={book.title}
-                    onError={() => setImgError(true)}
+                    onError={handleCoverError}
                     className="w-full h-full object-cover object-center"
                   />
                 ) : (
@@ -423,8 +441,11 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   >
                     <div className="aspect-[3/4] rounded overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-2.5">
                       <img
-                        src={rb.coverImage}
+                        src={rb.coverImage || `/api/covers/${rb.slug}`}
                         alt={rb.title}
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = `/api/covers/${rb.slug}`;
+                        }}
                         className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform"
                       />
                     </div>

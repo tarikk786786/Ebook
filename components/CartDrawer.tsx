@@ -149,8 +149,11 @@ export default function CartDrawer({ onStartCheckout }: CartDrawerProps) {
                   className="flex items-center space-x-3 p-3 bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl hover:border-[#D5CEBE] transition-colors"
                 >
                   <img
-                    src={item.coverImage}
+                    src={item.coverImage || '/covers/standard-shelf-cover.jpg'}
                     alt={item.title}
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/covers/standard-shelf-cover.jpg';
+                    }}
                     className="w-12 h-16 object-cover rounded bg-white border border-[#E8E4DC] shrink-0"
                   />
                   <div className="flex-1 min-w-0">

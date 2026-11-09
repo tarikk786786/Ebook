@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/catalog';
 import { useCart } from '@/context/CartContext';
@@ -30,10 +30,28 @@ export default function BookCard({
   onToggleWishlist,
   isWishlisted = false,
 }: BookCardProps) {
-  const [imgLoaded, setImgLoaded] = React.useState(false);
-  const [imgError, setImgError] = React.useState(false);
+  const [imgSrc, setImgSrc] = useState<string>(book.coverImage || `/api/covers/${book.slug}`);
+  const [imgError, setImgError] = useState(false);
   const { addToCart, items } = useCart();
   const isInCart = items.some((i) => i.bookId === book.id);
+
+  useEffect(() => {
+    setImgSrc(book.coverImage || `/api/covers/${book.slug}`);
+    setImgError(false);
+  }, [book.id, book.slug, book.coverImage]);
+
+  const handleImageError = () => {
+    const apiFallback = `/api/covers/${book.slug}`;
+    const standardFallback = '/covers/standard-shelf-cover.jpg';
+
+    if (imgSrc !== apiFallback) {
+      setImgSrc(apiFallback);
+    } else if (imgSrc !== standardFallback) {
+      setImgSrc(standardFallback);
+    } else {
+      setImgError(true);
+    }
+  };
 
   const displayPrice = currency === 'INR'
     ? `₹${book.priceInInr}`
@@ -52,20 +70,12 @@ export default function BookCard({
       <div>
         {/* Cover Thumbnail with Link */}
         <Link prefetch={false} href={`/book/${book.slug}`} className="block relative aspect-[3/4] w-full rounded overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-3">
-          {!imgLoaded && !imgError && (
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FAF8F5] via-[#F0EAE1] to-[#FAF8F5] animate-pulse" />
-          )}
-
           {!imgError ? (
             <img
-              src={book.coverImage}
+              src={imgSrc}
               alt={book.title}
-              onLoad={() => setImgLoaded(true)}
-              onError={() => setImgError(true)}
-              loading="lazy"
-              className={`w-full h-full object-cover object-center group-hover:scale-[1.02] transition-all duration-300 ${
-                imgLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
+              onError={handleImageError}
+              className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
             />
           ) : (
             <div className="w-full h-full bg-[#FAF8F5] flex flex-col justify-between p-4 border border-[#E8E4DC]">

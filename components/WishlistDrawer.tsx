@@ -71,8 +71,11 @@ export default function WishlistDrawer({
                 >
                   <div className="w-14 h-18 aspect-[3/4] bg-white rounded overflow-hidden shrink-0 border border-[#E8E4DC]">
                     <img
-                      src={book.coverImage}
+                      src={book.coverImage || `/api/covers/${book.slug}`}
                       alt={book.title}
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = `/api/covers/${book.slug}`;
+                      }}
                       className="w-full h-full object-cover"
                     />
                   </div>
