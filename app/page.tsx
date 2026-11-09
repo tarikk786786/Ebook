@@ -8,6 +8,7 @@ import ReaderModal from '@/components/ReaderModal';
 import PaymentModal from '@/components/PaymentModal';
 import CartDrawer from '@/components/CartDrawer';
 import WishlistDrawer from '@/components/WishlistDrawer';
+import CommandKModal from '@/components/CommandKModal';
 import BundlesSection from '@/components/BundlesSection';
 import NewsletterSection from '@/components/NewsletterSection';
 import FaqSection from '@/components/FaqSection';
@@ -59,6 +60,7 @@ export default function HomePage() {
   const [cartOrder, setCartOrder] = useState<any>(null);
   const [wishlist, setWishlist] = useState<Book[]>([]);
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
+  const [isCommandKOpen, setIsCommandKOpen] = useState(false);
   
   // Pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -203,6 +205,7 @@ export default function HomePage() {
         onToggleCurrency={() => setCurrency(c => c === 'INR' ? 'USD' : 'INR')}
         wishlistCount={wishlist.length}
         onOpenWishlist={() => setIsWishlistOpen(true)}
+        onOpenCommandK={() => setIsCommandKOpen(true)}
       />
 
       <main className="flex-1">
@@ -775,6 +778,14 @@ export default function HomePage() {
 
       <CartDrawer 
         onStartCheckout={(orderData) => setCartOrder(orderData)} 
+      />
+
+      <CommandKModal
+        isOpen={isCommandKOpen}
+        onClose={() => setIsCommandKOpen(false)}
+        books={BOOK_CATALOG}
+        onSelectBook={(b) => setBuyingBook(b)}
+        onPreviewBook={(b) => setPreviewBook(b)}
       />
 
       <WishlistDrawer

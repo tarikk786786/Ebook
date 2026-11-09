@@ -12,6 +12,7 @@ interface NavbarProps {
   onToggleCurrency?: () => void;
   wishlistCount?: number;
   onOpenWishlist?: () => void;
+  onOpenCommandK?: () => void;
 }
 
 export default function Navbar({
@@ -21,6 +22,7 @@ export default function Navbar({
   onToggleCurrency,
   wishlistCount = 0,
   onOpenWishlist,
+  onOpenCommandK,
 }: NavbarProps) {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const { itemCount, openCart } = useCart();
@@ -91,9 +93,14 @@ export default function Navbar({
                 onChange={(e) => onSearchChange(e.target.value)}
                 className="w-full bg-[#FAF8F5] border border-[#E8E4DC] focus:border-[#9A704B] rounded-md pl-9 pr-10 py-1.5 text-xs text-[#24231F] placeholder-[#81796D] focus:outline-none transition-colors"
               />
-              <kbd className="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-white border border-[#E8E4DC] text-[10px] text-[#81796D] font-mono pointer-events-none">
-                /
-              </kbd>
+              <button
+                type="button"
+                onClick={onOpenCommandK || (() => searchInputRef.current?.focus())}
+                className="absolute right-2 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-white hover:bg-neutral-100 border border-[#E8E4DC] text-[10px] text-[#81796D] font-mono transition-colors flex items-center gap-0.5"
+                title="Quick Search (Ctrl+K or /)"
+              >
+                <span>⌘K</span>
+              </button>
             </div>
           </div>
         )}
