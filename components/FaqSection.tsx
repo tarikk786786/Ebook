@@ -26,19 +26,19 @@ const FAQS: FaqItem[] = [
     icon: Lock,
     question: 'How do the in-browser reader and instant downloads work?',
     answer:
-      'Immediately upon successful UPI or card checkout, you receive a cryptographically signed order link. You can download the full PDF to your device or click "Open Reader" to read immediately in your browser with responsive page flipping, dark/sepia paper modes, and zoom controls.',
+      'Immediately upon successful UPI checkout, you receive a cryptographically signed order link. You can download the full PDF to your device or click "Open Reader" to read immediately in your browser with responsive page flipping, dark/sepia paper modes, and zoom controls.',
   },
   {
     icon: RefreshCcw,
-    question: 'How does UPI and Card payment settlement work?',
+    question: 'How does UPI payment settlement work?',
     answer:
-      'We support direct UPI payment rails (Google Pay, PhonePe, Paytm, FamPay, BHIM) as well as credit/debit cards. Transactions are processed with bank-grade 256-bit encryption. There are zero hidden surcharges or recurring subscriptions.',
+      'We support direct UPI payment rails (Google Pay, PhonePe, Paytm, FamPay, BHIM) Transactions are processed with bank-grade 256-bit encryption. There are zero hidden surcharges or recurring subscriptions.',
   },
   {
     icon: HelpCircle,
     question: 'What is your refund and satisfaction policy?',
     answer:
-      'We offer a 100% money-back satisfaction guarantee. If an ebook file fails to open, is corrupted, or does not match its catalog description, contact our support team within 7 days for an immediate refund or replacement.',
+      'We offer a 100% money-back satisfaction guarantee. If an ebook file fails to open, is corrupted, or does not match its catalog description, contact our support team at apnix7@gmail.com within 7 days for an immediate refund or replacement.',
   },
 ];
 

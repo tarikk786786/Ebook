@@ -126,6 +126,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <a href="mailto:apnix7@gmail.com" className="text-[#FAF6F1] hover:text-[#9A704B] transition-colors flex items-center gap-1 font-medium">
+                  <span>Support: apnix7@gmail.com</span>
+                </a>
+              </li>
+              <li>
                 <Link href="/service-fee" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
                   Transparent Pricing & Service Fees
                 </Link>

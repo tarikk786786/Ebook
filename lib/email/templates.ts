@@ -94,7 +94,7 @@ ${readerUrl}
 
 Your download link is cryptographically authenticated. Save your files to your local drive for permanent offline access.
 
-Need help? Contact support@anontrove.com
+Need help? Contact apnix7@gmail.com
 Warm regards,
 AnonTrove Team`;
 
@@ -141,7 +141,7 @@ AnonTrove Team`;
     </p>
 
     <div class="footer">
-      AnonTrove Digital Bookstore • Questions? Contact support@anontrove.com
+      AnonTrove Digital Bookstore • Questions? Contact apnix7@gmail.com
     </div>
   </div>
 </body>

@@ -116,7 +116,7 @@ export default function CopyrightPolicyPage() {
                   <span>Designated Copyright Agent Email:</span>
                 </div>
                 <div className="text-xs font-mono text-emerald-300 mt-1">
-                  copyright@anontrove.com
+                  apnix7@gmail.com
                 </div>
               </div>
               <div className="text-xs text-slate-400 text-center sm:text-right">
