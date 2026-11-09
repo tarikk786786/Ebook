@@ -30,6 +30,42 @@ hr, .border-editorial {
   border-color: #E8E4DC;
 }
 
+/* Modern Dot Pattern Background (Aceternity UI / Magic UI pattern) */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(154, 112, 75, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Modern Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(232, 228, 220, 0.5) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(232, 228, 220, 0.5) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Glassmorphism Panel (Origin UI / Cult UI) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Shimmer Gradient Text (Magic UI / React Bits pattern) */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #24231F 0%,
+    #9A704B 45%,
+    #835C3A 55%,
+    #24231F 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
 /* Clean, Non-Neon Restrained Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -49,7 +85,16 @@ hr, .border-editorial {
   background: #B5AC99;
 }
 
-/* Focus states for accessibility without glow */
+/* Hide scrollbar for carousel shelves */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Focus states for accessibility without harsh glow */
 *:focus-visible {
   outline: 2px solid #9A704B;
   outline-offset: 2px;

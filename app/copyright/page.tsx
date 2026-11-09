@@ -85,7 +85,7 @@ export default function CopyrightPolicyPage() {
               </li>
             </ul>
             <p className="text-xs text-slate-400 pt-2">
-              We never assume that a file is free to redistribute simply because it appeared in public forums, Telegram channels, or search engines. Where redistribution rights are not held, we encourage and direct users to official publisher channels.
+              We never assume that a file is free to redistribute simply because it appeared in public web directories, forums, or search engines. Where redistribution rights are not held, we encourage and direct users to official publisher channels.
             </p>
           </div>
 

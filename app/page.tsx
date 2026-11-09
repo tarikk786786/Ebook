@@ -209,11 +209,32 @@ export default function HomePage() {
       />
 
       <main className="flex-1">
-        {/* Editorial Hero Section */}
-        <section className="border-b border-[#E8E4DC] bg-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Editorial Hero Section with Aceternity/Magic UI background & pill patterns */}
+        <section className="relative border-b border-[#E8E4DC] bg-white/90 bg-dot-pattern py-14 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          {/* Ambient subtle glow overlay */}
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#9A704B]/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
             
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+              {/* Magic UI / Aceternity inspired status badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E8E4DC] shadow-sm backdrop-blur-sm">
+                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[11px] font-medium text-[#24231F]">
+                  18,529 Verified Manuals & Textbooks
+                </span>
+                <span className="text-[#81796D] hidden xs:inline">•</span>
+                <span className="text-[11px] font-semibold text-[#9A704B] hidden xs:inline">Zero DRM</span>
+                <span className="text-[#81796D] hidden sm:inline">•</span>
+                <button 
+                  onClick={() => setIsCommandKOpen(true)}
+                  className="hidden sm:inline-flex items-center gap-1 text-[10px] bg-[#FAF8F5] hover:bg-[#EFECE4] px-2 py-0.5 rounded-full border border-[#E8E4DC] font-mono text-[#6E685F] transition-all hover:scale-105 active:scale-95"
+                  title="Quick Command Search"
+                >
+                  <Search className="w-2.5 h-2.5 text-[#9A704B]" />
+                  <span>Press ⌘K</span>
+                </button>
+              </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#24231F] leading-[1.12]">
                 Universal Digital Library & Independent Bookstore.
@@ -227,7 +248,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
                 <a
                   href="#catalog-shelf"
-                  className="w-full sm:w-auto px-6 py-3.5 bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2 shadow-sm"
+                  className="w-full sm:w-auto px-6 py-3.5 bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98]"
                 >
                   <BookOpen className="w-4 h-4" />
                   <span>Explore Catalog</span>
@@ -235,27 +256,39 @@ export default function HomePage() {
 
                 <a
                   href="#bundles"
-                  className="w-full sm:w-auto px-6 py-3.5 border border-[#E8E4DC] hover:border-[#D5CEBE] bg-white hover:bg-[#FAF8F5] text-[#24231F] font-medium text-xs rounded-lg transition-colors flex items-center justify-center space-x-2"
+                  className="w-full sm:w-auto px-6 py-3.5 border border-[#E8E4DC] hover:border-[#D5CEBE] bg-white hover:bg-[#FAF8F5] text-[#24231F] font-medium text-xs rounded-xl transition-all duration-200 flex items-center justify-center space-x-2 hover:-translate-y-0.5 active:scale-[0.98]"
                 >
                   <Layers className="w-4 h-4 text-[#9A704B]" />
                   <span>Curated Topic Bundles</span>
                 </a>
+
+                <button
+                  onClick={() => setIsCommandKOpen(true)}
+                  className="w-full sm:w-auto px-4 py-3.5 border border-[#E8E4DC] hover:border-[#9A704B]/40 bg-[#FAF8F5] hover:bg-white text-[#6E685F] hover:text-[#24231F] font-medium text-xs rounded-xl transition-all flex items-center justify-center space-x-2"
+                >
+                  <Search className="w-4 h-4 text-[#9A704B]" />
+                  <span>Quick Search (⌘K)</span>
+                </button>
               </div>
 
-              {/* Trust Value Badges */}
-              <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-[#81796D]">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#9A704B]" />
-                  <span>100% DRM-Free PDF</span>
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#9A704B]" />
-                  <span>In-Browser Cloud Reader</span>
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#9A704B]" />
-                  <span>Direct Instant UPI Delivery</span>
-                </span>
+              {/* Tremor / Park UI Inspired Key Metric Cards */}
+              <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+                <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
+                  <div className="text-lg font-bold font-serif text-[#24231F]">18,529+</div>
+                  <div className="text-[11px] text-[#81796D] font-sans">Verified Manuals</div>
+                </div>
+                <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
+                  <div className="text-lg font-bold font-serif text-[#9A704B]">₹29</div>
+                  <div className="text-[11px] text-[#81796D] font-sans">Starting Price</div>
+                </div>
+                <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
+                  <div className="text-lg font-bold font-serif text-[#24231F]">100%</div>
+                  <div className="text-[11px] text-[#81796D] font-sans">DRM-Free Standard</div>
+                </div>
+                <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
+                  <div className="text-lg font-bold font-serif text-[#24231F]">Zero Logs</div>
+                  <div className="text-[11px] text-[#81796D] font-sans">In-Browser Reader</div>
+                </div>
               </div>
             </div>
 
@@ -474,7 +507,7 @@ export default function HomePage() {
                   }`}
                 >
                   <Archive className="w-3.5 h-3.5 text-blue-400" />
-                  <span>🏛️ Classic 12k+ Telegram Archive</span>
+                  <span>🏛️ Classic 12k+ Digital Archive</span>
                 </button>
                 <button
                   onClick={() => { setSelectedCollection('DEALS_29'); setCurrentPage(1); }}

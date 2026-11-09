@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { Search, X, BookOpen, ArrowRight, Zap, Tag } from 'lucide-react';
 import { Book } from '@/lib/catalog';
 
@@ -77,14 +76,14 @@ export default function CommandKModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150 font-sans">
       <div 
-        className="w-full max-w-2xl bg-[#141414] border border-[#262626] rounded-xl shadow-2xl overflow-hidden font-sans text-neutral-200"
+        className="w-full max-w-2xl bg-white border border-[#E8E4DC] rounded-2xl shadow-2xl overflow-hidden text-[#24231F]"
         onClick={e => e.stopPropagation()}
       >
         {/* Search Input Bar */}
-        <div className="relative flex items-center px-4 py-3.5 border-b border-[#262626]">
-          <Search className="w-5 h-5 text-neutral-400 mr-3 shrink-0" />
+        <div className="relative flex items-center px-4 py-3.5 border-b border-[#E8E4DC]">
+          <Search className="w-5 h-5 text-[#81796D] mr-3 shrink-0" />
           <input
             ref={inputRef}
             type="text"
@@ -95,15 +94,15 @@ export default function CommandKModal({
               setSelectedIndex(0);
             }}
             onKeyDown={handleKeyDown}
-            className="w-full bg-transparent text-sm text-neutral-100 placeholder-neutral-500 focus:outline-none"
+            className="w-full bg-transparent text-sm text-[#24231F] placeholder-[#81796D] focus:outline-none"
           />
           <div className="flex items-center space-x-1.5 ml-2">
-            <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-neutral-400 bg-neutral-800 border border-neutral-700 rounded">
+            <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-[#81796D] bg-[#FAF8F5] border border-[#E8E4DC] rounded">
               ESC
             </kbd>
             <button 
               onClick={onClose}
-              className="p-1 text-neutral-400 hover:text-neutral-100 transition-colors"
+              className="p-1 text-[#81796D] hover:text-[#24231F] transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
@@ -111,7 +110,7 @@ export default function CommandKModal({
         </div>
 
         {/* Results List */}
-        <div className="max-h-96 overflow-y-auto p-2 divide-y divide-neutral-800/50">
+        <div className="max-h-96 overflow-y-auto p-2 divide-y divide-[#E8E4DC]/40">
           {filtered.length > 0 ? (
             filtered.map((book, idx) => {
               const isSelected = idx === selectedIndex;
@@ -123,15 +122,15 @@ export default function CommandKModal({
                     onClose();
                   }}
                   onMouseEnter={() => setSelectedIndex(idx)}
-                  className={`flex items-center justify-between p-2.5 rounded-lg cursor-pointer transition-colors ${
-                    isSelected ? 'bg-emerald-950/40 border border-emerald-500/30' : 'hover:bg-neutral-800/40'
+                  className={`flex items-center justify-between p-2.5 rounded-xl cursor-pointer transition-colors ${
+                    isSelected ? 'bg-[#FAF6F1] border border-[#F2E8DC]' : 'hover:bg-[#FAF8F5]'
                   }`}
                 >
                   <div className="flex items-center space-x-3 min-w-0">
                     {/* Thumbnail */}
-                    <div className="w-10 h-14 bg-neutral-800 rounded shrink-0 overflow-hidden relative border border-neutral-700/60">
+                    <div className="w-10 h-14 bg-[#FAF8F5] rounded-md shrink-0 overflow-hidden relative border border-[#E8E4DC]">
                       <img
-                        src={book.coverImage || '/covers/default.jpg'}
+                        src={book.coverImage || `/api/covers/${book.slug}`}
                         alt={book.title}
                         className="w-full h-full object-cover"
                         onError={(e) => {
@@ -141,13 +140,13 @@ export default function CommandKModal({
                     </div>
                     {/* Info */}
                     <div className="truncate">
-                      <h4 className="text-sm font-medium text-neutral-100 truncate">
+                      <h4 className="text-xs sm:text-sm font-semibold text-[#24231F] truncate font-serif">
                         {book.title}
                       </h4>
-                      <p className="text-xs text-neutral-400 truncate">
-                        {book.author} • <span className="text-emerald-400 font-medium">₹{book.priceInInr}</span>
+                      <p className="text-xs text-[#81796D] truncate font-sans">
+                        {book.author} • <span className="text-[#9A704B] font-bold">₹{book.priceInInr}</span>
                       </p>
-                      <span className="inline-block text-[10px] px-1.5 py-0.2 bg-neutral-800 text-neutral-400 rounded mt-0.5 border border-neutral-700">
+                      <span className="inline-block text-[9px] px-1.5 py-0.2 bg-[#FAF8F5] text-[#81796D] rounded mt-0.5 border border-[#E8E4DC] uppercase font-mono">
                         {book.category}
                       </span>
                     </div>
@@ -160,31 +159,31 @@ export default function CommandKModal({
                         onPreviewBook(book);
                         onClose();
                       }}
-                      className="px-2.5 py-1 text-xs font-medium text-neutral-300 hover:text-white bg-neutral-800 hover:bg-neutral-700 rounded border border-neutral-700 transition-colors"
+                      className="px-2.5 py-1 text-xs font-medium text-[#6E685F] hover:text-[#24231F] bg-white hover:bg-[#FAF8F5] rounded-lg border border-[#E8E4DC] transition-colors"
                     >
                       Preview
                     </button>
-                    <span className="text-xs font-semibold text-emerald-400">
-                      Buy ₹{book.priceInInr}
+                    <span className="text-xs font-bold text-[#24231F] bg-[#FAF6F1] border border-[#F2E8DC] px-2 py-0.5 rounded-md font-mono">
+                      ₹{book.priceInInr}
                     </span>
                   </div>
                 </div>
               );
             })
           ) : (
-            <div className="py-8 text-center text-sm text-neutral-500">
+            <div className="py-8 text-center text-sm text-[#81796D]">
               No matching books found for "{query}". Try another title, author, or keyword.
             </div>
           )}
         </div>
 
         {/* Footer shortcuts */}
-        <div className="px-4 py-2.5 bg-neutral-900/60 border-t border-[#262626] flex items-center justify-between text-[11px] text-neutral-500">
+        <div className="px-4 py-2.5 bg-[#FAF8F5] border-t border-[#E8E4DC] flex items-center justify-between text-[11px] text-[#81796D]">
           <div className="flex items-center space-x-3">
-            <span><kbd className="px-1 py-0.5 bg-neutral-800 rounded">↑</kbd> <kbd className="px-1 py-0.5 bg-neutral-800 rounded">↓</kbd> Navigate</span>
-            <span><kbd className="px-1 py-0.5 bg-neutral-800 rounded">↵</kbd> Select</span>
+            <span><kbd className="px-1 py-0.5 bg-white border border-[#E8E4DC] rounded text-[#24231F]">↑</kbd> <kbd className="px-1 py-0.5 bg-white border border-[#E8E4DC] rounded text-[#24231F]">↓</kbd> Navigate</span>
+            <span><kbd className="px-1 py-0.5 bg-white border border-[#E8E4DC] rounded text-[#24231F]">↵</kbd> Select</span>
           </div>
-          <span className="text-neutral-400">18,529 Verified eBooks Indexed</span>
+          <span className="text-[#9A704B] font-medium font-mono">18,529 Verified eBooks Indexed</span>
         </div>
       </div>
     </div>
