@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
         discoveredCount: books.length - (verifiedCount + partiallyVerifiedCount),
         withIsbn,
         withCover,
-        source: 'Global Reading List (1,000 Curated Startup & Business Titles)',
+        source: 'Master Unified Telegram & Digital Archive (86,337 Volumes)',
       },
     });
   } catch (err: any) {

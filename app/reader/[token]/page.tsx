@@ -73,7 +73,12 @@ export default function ReaderPage({ params }: Props) {
   const bookTitle = book?.title || 'Purchased Digital Volume';
   const bookAuthor = book?.author || 'Independent Creator';
   const bookCategory = book?.category || 'Technical Guide';
-  const format = book?.format || 'PDF';
+
+  // Derive format from explicit field first, then from file extension
+  const rawFormat = book?.format || '';
+  const fileExt = payload.fileName?.split('.').pop()?.toLowerCase() || '';
+  const format = rawFormat || fileExt || 'pdf';
+
   const expiresAt = payload.issuedAt + payload.ttlMs;
 
   return (

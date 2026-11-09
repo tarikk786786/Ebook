@@ -30,6 +30,7 @@ const securityHeaders = [
       "connect-src 'self' https://famgateway.in https://*.supabase.co",
       "font-src 'self' data:",
       "object-src 'none'",
+      "worker-src blob: 'self'",
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'self' https://tarikk786786.github.io https://*.github.io https://*.devs.surf https://*.thedev.id https://*.is-a.bot https://*.is-cod.in https://*.is-not.cool https://*.creepers.sbs https://*.us.kg",
@@ -47,7 +48,15 @@ const nextConfig = {
       headers: securityHeaders,
     },
   ],
-  images: {
+
+  webpack: (config) => {
+    // Allow pdfjs-dist to properly bundle its web worker
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      canvas: false,
+    };
+    return config;
+  },  images: {
     dangerouslyAllowSVG: false, // Disables unauthenticated SVG parsing to mitigate GHSA-2464-fhr4-w9xw
     remotePatterns: [
       { protocol: 'https', hostname: 'famgateway.in' },
