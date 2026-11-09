@@ -51,3 +51,7 @@ data/master_manifest_pipeline.db
 data/reports/*.csv
 !data/reports/all_86k_catalogue_reports.zip
 public/data/reports/*.csv
+
+# Runtime order and token usage stores
+data/orders_store.json
+data/token_usage.json
