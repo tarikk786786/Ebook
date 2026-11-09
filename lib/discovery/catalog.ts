@@ -34,7 +34,9 @@ export function loadDiscoveryBooks(): DiscoveryBook[] {
         originalPriceInInr: item.originalPriceInInr || 199,
         pages: item.pages || 280,
         format: item.format || 'PDF (DRM-Free)',
-        coverUrl: item.coverImage || '',
+        coverUrl: item.coverUrl || item.coverImage || '/covers/standard-shelf-cover.jpg',
+        coverImage: item.coverImage || item.coverUrl || '/covers/standard-shelf-cover.jpg',
+        image: item.coverUrl || item.coverImage || '/covers/standard-shelf-cover.jpg',
         isbn13: item.isbn || '',
         isbn10: item.isbn || '',
         verificationStatus: 'VERIFIED',
@@ -66,7 +68,9 @@ export function loadDiscoveryBooks(): DiscoveryBook[] {
         originalPriceInInr: item.originalPriceInInr || 199,
         pages: item.pages || 280,
         format: item.format || 'PDF (DRM-Free)',
-        coverUrl: item.coverImage || '',
+        coverUrl: item.coverUrl || item.coverImage || '/covers/standard-shelf-cover.jpg',
+        coverImage: item.coverImage || item.coverUrl || '/covers/standard-shelf-cover.jpg',
+        image: item.coverUrl || item.coverImage || '/covers/standard-shelf-cover.jpg',
         isbn13: item.isbn || '',
         isbn10: item.isbn || '',
         verificationStatus: 'VERIFIED',
@@ -116,9 +120,13 @@ export function loadDiscoveryBooks(): DiscoveryBook[] {
       for (const item of rawEnriched) {
         if (item.ref && bookMap.has(item.ref)) {
           const base = bookMap.get(item.ref)!;
+          const cover = item.coverUrl || item.coverImage || base.coverUrl || '/covers/standard-shelf-cover.jpg';
           bookMap.set(item.ref, {
             ...base,
             ...item,
+            coverUrl: cover,
+            coverImage: cover,
+            image: cover,
             provenance: {
               ...base.provenance,
               ...(item.provenance || {})

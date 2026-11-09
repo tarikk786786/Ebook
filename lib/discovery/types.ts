@@ -18,6 +18,8 @@ export interface DiscoveryBook {
   description?: string | null;
   language?: string;
   coverUrl?: string | null;
+  coverImage?: string | null;
+  image?: string | null;
   previewUrl?: string | null;
   infoUrl?: string | null;
   rating?: number | null;

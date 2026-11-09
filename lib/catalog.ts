@@ -21,6 +21,8 @@ export interface Book {
   readingTime: string;
   edition: string;
   coverImage: string;
+  coverUrl?: string;
+  image?: string;
   sampleExcerpt: string[];
   tableOfContents: string[];
   fileName: string;
@@ -491,7 +493,7 @@ function compileBookCatalog(): Book[] {
           reviewCount: reviewCount,
           readingTime: `${Math.round((sb.pageCount || 280) / 35)} hrs`,
           edition: sb.publishedYear ? `${sb.publishedYear} Master Edition` : "Retail Master Edition",
-          coverImage: sb.coverUrl || "",
+          coverImage: sb.coverUrl || sb.coverImage || "/covers/standard-shelf-cover.jpg",
           sampleExcerpt: [
             `${sb.title} by ${sb.author}.`,
             "A foundational work in entrepreneurship, strategic execution, and modern business growth.",
@@ -522,6 +524,9 @@ function compileBookCatalog(): Book[] {
       if (b && b.id && !idMap.has(b.id) && b.status !== 'DRAFT') {
         idMap.set(b.id, {
           ...b,
+          coverImage: b.coverImage || (b as any).coverUrl || "/covers/standard-shelf-cover.jpg",
+          coverUrl: (b as any).coverUrl || b.coverImage || "/covers/standard-shelf-cover.jpg",
+          image: b.coverImage || (b as any).coverUrl || "/covers/standard-shelf-cover.jpg",
           isClassicArchive: true,
           collection: 'CLASSIC_ARCHIVE',
           primaryResourceType: b.primaryResourceType || (b.category?.includes('Notes') ? 'study_notes' : 'published_ebook')
@@ -585,7 +590,7 @@ function expandToBook(item: any): Book {
     reviewCount: item.reviewCount || 45,
     readingTime: Math.round(pages / 35) + " hrs",
     edition: item.edition || "Master Digital Edition",
-    coverImage: item.coverImage || item.coverUrl || "",
+    coverImage: item.coverImage || item.coverUrl || "/covers/standard-shelf-cover.jpg",
     sampleExcerpt: item.sampleExcerpt || [
       item.title + " by " + item.author + ".",
       "A foundational technical work and comprehensive operational guide.",
