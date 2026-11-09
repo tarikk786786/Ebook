@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "name": "Personal Development & Psychology",
+    "slug": "personal-development-psychology",
+    "count": 14529
+  },
+  {
+    "id": 2,
+    "name": "Business, Startups & Entrepreneurship",
+    "slug": "business-startups-entrepreneurship",
+    "count": 10816
+  },
+  {
+    "id": 3,
+    "name": "Programming & Software Engineering",
+    "slug": "programming-software-engineering",
+    "count": 10190
+  },
+  {
+    "id": 4,
+    "name": "Technical & Educational Guides",
+    "slug": "technical-educational-guides",
+    "count": 9411
+  },
+  {
+    "id": 5,
+    "name": "Academic & Exam Preparation Notes",
+    "slug": "academic-exam-preparation-notes",
+    "count": 7507
+  },
+  {
+    "id": 6,
+    "name": "Artificial Intelligence & Machine Learning",
+    "slug": "artificial-intelligence-machine-learning",
+    "count": 7374
+  },
+  {
+    "id": 7,
+    "name": "Cybersecurity & Ethical Hacking",
+    "slug": "cybersecurity-ethical-hacking",
+    "count": 7276
+  },
+  {
+    "id": 8,
+    "name": "Trading, Stocks & Quantitative Finance",
+    "slug": "trading-stocks-quantitative-finance",
+    "count": 7227
+  },
+  {
+    "id": 9,
+    "name": "Cloud Architecture & DevOps",
+    "slug": "cloud-architecture-devops",
+    "count": 5502
+  },
+  {
+    "id": 10,
+    "name": "Business & Strategy",
+    "slug": "business-strategy",
+    "count": 1734
+  },
+  {
+    "id": 11,
+    "name": "AI & Machine Learning",
+    "slug": "ai-machine-learning",
+    "count": 794
+  },
+  {
+    "id": 12,
+    "name": "Self-Improvement & Psychology",
+    "slug": "self-improvement-psychology",
+    "count": 478
+  },
+  {
+    "id": 13,
+    "name": "Professional Guides & Textbooks",
+    "slug": "professional-guides-textbooks",
+    "count": 393
+  },
+  {
+    "id": 14,
+    "name": "Cybersecurity & Hacking",
+    "slug": "cybersecurity-hacking",
+    "count": 376
+  },
+  {
+    "id": 15,
+    "name": "Trading & Wealth",
+    "slug": "trading-wealth",
+    "count": 302
+  },
+  {
+    "id": 16,
+    "name": "Exam Preparation & Study Notes",
+    "slug": "exam-preparation-study-notes",
+    "count": 239
+  },
+  {
+    "id": 17,
+    "name": "Trading, Stocks & Options",
+    "slug": "trading-stocks-options",
+    "count": 232
+  },
+  {
+    "id": 18,
+    "name": "Business & Solopreneurship",
+    "slug": "business-solopreneurship",
+    "count": 182
+  },
+  {
+    "id": 19,
+    "name": "AI & Data Science",
+    "slug": "ai-data-science",
+    "count": 152
+  },
+  {
+    "id": 20,
+    "name": "Programming & Developer Assets",
+    "slug": "programming-developer-assets",
+    "count": 133
+  },
+  {
+    "id": 21,
+    "name": "Trading, Finance & Investing",
+    "slug": "trading-finance-investing",
+    "count": 102
+  },
+  {
+    "id": 22,
+    "name": "FinTech & Trading",
+    "slug": "fintech-trading",
+    "count": 94
+  },
+  {
+    "id": 23,
+    "name": "Small Business, Solopreneurship & Business Models",
+    "slug": "small-business-solopreneurship-business-models",
+    "count": 57
+  },
+  {
+    "id": 24,
+    "name": "Design & Creative Arts",
+    "slug": "design-creative-arts",
+    "count": 56
+  },
+  {
+    "id": 25,
+    "name": "Innovation, Product Management & Design",
+    "slug": "innovation-product-management-design",
+    "count": 52
+  },
+  {
+    "id": 26,
+    "name": "Health, Fitness & Nutrition",
+    "slug": "health-fitness-nutrition",
+    "count": 51
+  },
+  {
+    "id": 27,
+    "name": "Leadership & Executive Development",
+    "slug": "leadership-executive-development",
+    "count": 51
+  },
+  {
+    "id": 28,
+    "name": "Startups & Entrepreneurship",
+    "slug": "startups-entrepreneurship",
+    "count": 51
+  },
+  {
+    "id": 29,
+    "name": "Business & Entrepreneurship",
+    "slug": "business-entrepreneurship",
+    "count": 49
+  },
+  {
+    "id": 30,
+    "name": "Economics, Business History & Economic Systems",
+    "slug": "economics-business-history-economic-systems",
+    "count": 48
+  },
+  {
+    "id": 31,
+    "name": "Copywriting, Advertising, Content & Growth",
+    "slug": "copywriting-advertising-content-growth",
+    "count": 46
+  },
+  {
+    "id": 32,
+    "name": "Business Strategy & Competitive Advantage",
+    "slug": "business-strategy-competitive-advantage",
+    "count": 45
+  },
+  {
+    "id": 33,
+    "name": "Marketing & Growth",
+    "slug": "marketing-growth",
+    "count": 43
+  },
+  {
+    "id": 34,
+    "name": "Productivity, Focus, Habits & Execution",
+    "slug": "productivity-focus-habits-execution",
+    "count": 43
+  },
+  {
+    "id": 35,
+    "name": "Investing, Markets & Capital Allocation",
+    "slug": "investing-markets-capital-allocation",
+    "count": 42
+  },
+  {
+    "id": 36,
+    "name": "Sales, Selling & Customer Acquisition",
+    "slug": "sales-selling-customer-acquisition",
+    "count": 42
+  },
+  {
+    "id": 37,
+    "name": "Management, Organization & Company Culture",
+    "slug": "management-organization-company-culture",
+    "count": 42
+  },
+  {
+    "id": 38,
+    "name": "Psychology, Decision-Making & Behavioral Science",
+    "slug": "psychology-decision-making-behavioral-science",
+    "count": 42
+  },
+  {
+    "id": 39,
+    "name": "Marketing, Branding & Positioning",
+    "slug": "marketing-branding-positioning",
+    "count": 42
+  },
+  {
+    "id": 40,
+    "name": "Technology, Digital Business, Software & AI",
+    "slug": "technology-digital-business-software-ai",
+    "count": 42
+  },
+  {
+    "id": 41,
+    "name": "Personal Finance, Wealth & Financial Freedom",
+    "slug": "personal-finance-wealth-financial-freedom",
+    "count": 40
+  },
+  {
+    "id": 42,
+    "name": "Negotiation, Communication & Influence",
+    "slug": "negotiation-communication-influence",
+    "count": 38
+  },
+  {
+    "id": 43,
+    "name": "Founder Biographies & Business Memoirs",
+    "slug": "founder-biographies-business-memoirs",
+    "count": 37
+  },
+  {
+    "id": 44,
+    "name": "Business Finance, Accounting & Cash Flow",
+    "slug": "business-finance-accounting-cash-flow",
+    "count": 36
+  },
+  {
+    "id": 45,
+    "name": "Operations, Process, Quality & Supply Chain",
+    "slug": "operations-process-quality-supply-chain",
+    "count": 35
+  },
+  {
+    "id": 46,
+    "name": "Sustainability, Social Enterprise, Ethics & Impact",
+    "slug": "sustainability-social-enterprise-ethics-impact",
+    "count": 34
+  },
+  {
+    "id": 47,
+    "name": "Business, Sales & Marketing",
+    "slug": "business-sales-marketing",
+    "count": 32
+  },
+  {
+    "id": 48,
+    "name": "Customer Experience, Service & Customer Success",
+    "slug": "customer-experience-service-customer-success",
+    "count": 32
+  },
+  {
+    "id": 49,
+    "name": "Engineering & Architecture",
+    "slug": "engineering-architecture",
+    "count": 30
+  },
+  {
+    "id": 50,
+    "name": "Global Business, International Markets & Emerging Economies",
+    "slug": "global-business-international-markets-emerging-economies",
+    "count": 29
+  },
+  {
+    "id": 51,
+    "name": "Ecommerce, Retail, DTC & Digital Commerce",
+    "slug": "ecommerce-retail-dtc-digital-commerce",
+    "count": 29
+  },
+  {
+    "id": 52,
+    "name": "Talent, Teams, Hiring & Workplace",
+    "slug": "talent-teams-hiring-workplace",
+    "count": 26
+  },
+  {
+    "id": 53,
+    "name": "HR & Management",
+    "slug": "hr-management",
+    "count": 20
+  },
+  {
+    "id": 54,
+    "name": "Corporate Case Studies, Business Stories & Failure",
+    "slug": "corporate-case-studies-business-stories-failure",
+    "count": 19
+  },
+  {
+    "id": 55,
+    "name": "Culinary Arts & Cooking",
+    "slug": "culinary-arts-cooking",
+    "count": 13
+  }
+]
