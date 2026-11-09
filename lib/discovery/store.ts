@@ -8,60 +8,105 @@ import path from 'path';
 import type { DiscoveryBook, StorefrontSection, ApprovalStatus, DiscoveryFilterOptions } from './types';
 import { RESEARCH_CATEGORIES } from './providers/multiProvider';
 
+const IS_VERCEL = process.env.VERCEL === '1' || !!process.env.AWS_LAMBDA_FUNCTION_NAME;
 const DATA_DIR = path.resolve(process.cwd(), 'data');
-const DISCOVERY_FEED_FILE = path.join(DATA_DIR, 'discovery_books_feed.json');
-const APPROVED_BOOKS_FILE = path.join(DATA_DIR, 'discovery_approved_books.json');
-const DEMANDED_REGISTRY_FILE = path.join(DATA_DIR, 'demanded_books_registry.json');
+const TMP_DIR = path.resolve('/tmp');
+
+// In-memory cache for fast serverless execution across requests
+let memoryDiscoveredFeed: DiscoveryBook[] | null = null;
+let memoryApprovedBooks: DiscoveryBook[] | null = null;
+
+function getPaths(filename: string): { readPath: string; writePath: string } {
+  const localPath = path.join(DATA_DIR, filename);
+  const tmpPath = path.join(TMP_DIR, filename);
+
+  if (IS_VERCEL) {
+    // In serverless, read from /tmp if updated dynamically, else fallback to bundled localPath
+    const readPath = fs.existsSync(tmpPath) ? tmpPath : localPath;
+    return { readPath, writePath: tmpPath };
+  }
+  return { readPath: localPath, writePath: localPath };
+}
+
+function safeReadJson<T>(filename: string, defaultVal: T): T {
+  const { readPath } = getPaths(filename);
+  try {
+    if (fs.existsSync(readPath)) {
+      const data = JSON.parse(fs.readFileSync(readPath, 'utf8'));
+      return data as T;
+    }
+  } catch (err) {
+    console.warn(`[DiscoveryStore] Error reading ${readPath}:`, err);
+  }
+  return defaultVal;
+}
+
+function safeWriteJson(filename: string, data: any): void {
+  const { writePath } = getPaths(filename);
+  try {
+    const dir = path.dirname(writePath);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(writePath, JSON.stringify(data, null, 2), 'utf8');
+  } catch (err: any) {
+    // If writing to primary failed (e.g. EROFS on /var/task), attempt /tmp
+    if (!writePath.startsWith('/tmp') && !writePath.startsWith('\\tmp')) {
+      try {
+        const tmpTarget = path.join(TMP_DIR, filename);
+        const tmpDir = path.dirname(tmpTarget);
+        if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
+        fs.writeFileSync(tmpTarget, JSON.stringify(data, null, 2), 'utf8');
+      } catch (tmpErr) {
+        console.warn(`[DiscoveryStore] Serverless write fallback failed for ${filename}:`, tmpErr);
+      }
+    } else {
+      console.warn(`[DiscoveryStore] Write failed for ${filename}:`, err);
+    }
+  }
+}
 
 export class DiscoveryStore {
   /**
    * Loads discovered books from feed
    */
   static loadDiscoveredBooks(): DiscoveryBook[] {
-    if (!fs.existsSync(DISCOVERY_FEED_FILE)) return [];
-    try {
-      const data = JSON.parse(fs.readFileSync(DISCOVERY_FEED_FILE, 'utf8'));
-      return Array.isArray(data) ? data : [];
-    } catch (err) {
-      console.error('[DiscoveryStore] Failed reading discovery feed:', err);
-      return [];
+    if (memoryDiscoveredFeed && memoryDiscoveredFeed.length > 0) {
+      return memoryDiscoveredFeed;
     }
+    const books = safeReadJson<DiscoveryBook[]>('discovery_books_feed.json', []);
+    memoryDiscoveredFeed = Array.isArray(books) ? books : [];
+    return memoryDiscoveredFeed;
   }
 
   /**
    * Saves updated discovered books feed
    */
   static saveDiscoveredBooks(books: DiscoveryBook[]): void {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-    fs.writeFileSync(DISCOVERY_FEED_FILE, JSON.stringify(books, null, 2), 'utf8');
+    memoryDiscoveredFeed = books;
+    safeWriteJson('discovery_books_feed.json', books);
   }
 
   /**
    * Loads approved books for storefront integration
    */
   static loadApprovedBooks(): DiscoveryBook[] {
-    if (!fs.existsSync(APPROVED_BOOKS_FILE)) return [];
-    try {
-      const data = JSON.parse(fs.readFileSync(APPROVED_BOOKS_FILE, 'utf8'));
-      return Array.isArray(data) ? data : [];
-    } catch {
-      return [];
+    if (memoryApprovedBooks && memoryApprovedBooks.length > 0) {
+      return memoryApprovedBooks;
     }
+    const books = safeReadJson<DiscoveryBook[]>('discovery_approved_books.json', []);
+    memoryApprovedBooks = Array.isArray(books) ? books : [];
+    return memoryApprovedBooks;
   }
 
   /**
    * Saves approved books
    */
   static saveApprovedBooks(books: DiscoveryBook[]): void {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-    fs.writeFileSync(APPROVED_BOOKS_FILE, JSON.stringify(books, null, 2), 'utf8');
+    memoryApprovedBooks = books;
+    safeWriteJson('discovery_approved_books.json', books);
 
     // Also sync with demanded_books_registry.json for catalog integration
     try {
-      let demanded: any[] = [];
-      if (fs.existsSync(DEMANDED_REGISTRY_FILE)) {
-        demanded = JSON.parse(fs.readFileSync(DEMANDED_REGISTRY_FILE, 'utf8'));
-      }
+      const demanded = safeReadJson<any[]>('demanded_books_registry.json', []);
       const existingIds = new Set(demanded.map(b => b.id));
       for (const ab of books) {
         if (!existingIds.has(ab.id)) {
@@ -90,7 +135,7 @@ export class DiscoveryStore {
           existingIds.add(ab.id);
         }
       }
-      fs.writeFileSync(DEMANDED_REGISTRY_FILE, JSON.stringify(demanded, null, 2), 'utf8');
+      safeWriteJson('demanded_books_registry.json', demanded);
     } catch (syncErr) {
       console.warn('[DiscoveryStore] Sync with demanded_books_registry warning:', syncErr);
     }
