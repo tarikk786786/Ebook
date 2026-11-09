@@ -1,10 +1,12 @@
 import type { IStorageAdapter, StorageConfig, StorageProviderType } from './types';
 import { LocalStorageAdapter } from './adapters/local';
 import { BackblazeB2Adapter } from './adapters/b2';
+import { TelegramStorageAdapter } from './adapters/telegram';
 
 export * from './types';
 export { LocalStorageAdapter } from './adapters/local';
 export { BackblazeB2Adapter } from './adapters/b2';
+export { TelegramStorageAdapter } from './adapters/telegram';
 
 let defaultStorageInstance: IStorageAdapter | null = null;
 
@@ -22,10 +24,15 @@ export function getStorageAdapter(customConfig?: StorageConfig): IStorageAdapter
     (process.env.B2_KEY_ID || process.env.AWS_ACCESS_KEY_ID) &&
     (process.env.B2_APPLICATION_KEY || process.env.AWS_SECRET_ACCESS_KEY)
   );
+  const hasTelegramCredentials = Boolean(
+    process.env.TELEGRAM_BOT_TOKEN || process.env.BOT_TOKEN || process.env.TELEGRAM_API_ID
+  );
 
   let provider: StorageProviderType = 'local';
 
-  if (requestedProvider === 'b2' || requestedProvider === 's3' || requestedProvider === 'r2') {
+  if (requestedProvider === 'telegram' || (hasTelegramCredentials && requestedProvider !== 'b2' && requestedProvider !== 'local')) {
+    provider = 'telegram';
+  } else if (requestedProvider === 'b2' || requestedProvider === 's3' || requestedProvider === 'r2') {
     provider = hasB2Credentials ? 'b2' : 'local';
   } else if (hasB2Credentials && requestedProvider !== 'local') {
     provider = 'b2';
@@ -37,6 +44,8 @@ export function getStorageAdapter(customConfig?: StorageConfig): IStorageAdapter
 
 function createAdapter(provider: StorageProviderType, config?: StorageConfig): IStorageAdapter {
   switch (provider) {
+    case 'telegram':
+      return new TelegramStorageAdapter();
     case 'b2':
     case 's3':
     case 'r2':

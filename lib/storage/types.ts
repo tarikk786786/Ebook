@@ -1,6 +1,6 @@
 import type { Readable } from 'stream';
 
-export type StorageProviderType = 'b2' | 'local' | 's3' | 'r2';
+export type StorageProviderType = 'b2' | 'local' | 's3' | 'r2' | 'telegram';
 
 export interface StorageConfig {
   provider: StorageProviderType;

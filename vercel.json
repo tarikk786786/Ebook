@@ -1,6 +1,16 @@
 {
   "framework": "nextjs",
   "buildCommand": "npm run build",
+  "crons": [
+    {
+      "path": "/api/cron/storage-heartbeat",
+      "schedule": "0 2 * * *"
+    },
+    {
+      "path": "/api/cron/token-cleanup",
+      "schedule": "0 */6 * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/covers/(.*)",
