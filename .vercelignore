@@ -9,6 +9,13 @@ node_modules
 .agents
 docs
 projects
+screenshots
+reports
 
 data/all_83925_catalog.json
 data/*.db
+data/*.csv
+data/*.zip
+data/reports/
+public/data/reports/*.csv
+public/*.pdf
