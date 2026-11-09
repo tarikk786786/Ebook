@@ -13,6 +13,7 @@ import BundlesSection from '@/components/BundlesSection';
 import CuratorLetterSection from '@/components/CuratorLetterSection';
 import ServiceFeeBreakdown from '@/components/ServiceFeeBreakdown';
 import StudentMessageSection from '@/components/StudentMessageSection';
+import TransparencyTrustSection from '@/components/TransparencyTrustSection';
 import NewsletterSection from '@/components/NewsletterSection';
 import FaqSection from '@/components/FaqSection';
 import Footer from '@/components/Footer';
@@ -875,6 +876,9 @@ export default function HomePage() {
 
         {/* Dedication To Every Student & Independent Learner */}
         <StudentMessageSection />
+
+        {/* 8 Transparency Commitments & Honest Standards */}
+        <TransparencyTrustSection />
 
         {/* Newsletter & Free Primer Funnel */}
         <NewsletterSection />

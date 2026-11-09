@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown, Shield, BookOpen, Lock, RefreshCcw, HelpCircle } from 'lucide-react';
+import { ChevronDown, Shield, BookOpen, Lock, RefreshCcw, HelpCircle, Heart, Scale } from 'lucide-react';
 
 interface FaqItem {
   question: string;
@@ -10,6 +10,18 @@ interface FaqItem {
 }
 
 const FAQS: FaqItem[] = [
+  {
+    icon: Heart,
+    question: 'Why are books so cheap (₹9 to ₹29), and am I buying copyright ownership?',
+    answer:
+      'No. You are never paying for copyright ownership. The ₹9 to ₹29 is a nominal convenience and maintenance fee that covers high-speed encrypted cloud storage, virus scanning, table-of-contents extraction, and zero-ad instant delivery. We believe education should be accessible to students and independent learners. If you have time, you can locate many files in public web archives for free; our fee covers the curation and infrastructure to access them in seconds. If you can afford the official publisher edition, please support authors and publishers directly!',
+  },
+  {
+    icon: Scale,
+    question: 'What is your copyright, takedown, and DMCA transparency procedure?',
+    answer:
+      'We operate with 100% transparency. We do not claim ownership of third-party publications. All intellectual property remains with the original creators and publishers. If you are an author, copyright holder, or publisher and wish to have a title reviewed, updated, or removed, our designated agent responds within 24 hours at apnix7@gmail.com with zero resistance.',
+  },
   {
     icon: BookOpen,
     question: 'What format are the ebooks delivered in, and can I read them on Kindle/iPad?',
@@ -32,7 +44,7 @@ const FAQS: FaqItem[] = [
     icon: RefreshCcw,
     question: 'How does UPI payment settlement work?',
     answer:
-      'We support direct UPI payment rails (Google Pay, PhonePe, Paytm, FamPay, BHIM) Transactions are processed with bank-grade 256-bit encryption. There are zero hidden surcharges or recurring subscriptions.',
+      'We support direct UPI payment rails (Google Pay, PhonePe, Paytm, FamPay, BHIM). Transactions are processed with bank-grade 256-bit encryption. There are zero hidden surcharges, no payment gateway markups, and no recurring subscriptions.',
   },
   {
     icon: HelpCircle,
@@ -54,13 +66,13 @@ export default function FaqSection() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
           <span className="text-xs font-sans font-medium text-[#81796D] bg-white border border-[#E8E4DC] px-3 py-1 rounded-full">
-            Reader Guidance
+            Reader Guidance &amp; Honest Answers
           </span>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#24231F] tracking-tight mt-3">
             Frequently Asked Questions
           </h2>
           <p className="text-xs sm:text-sm text-[#6E685F] mt-1">
-            Delivery formats, device compatibility, and purchase guarantees.
+            Pricing transparency, copyright ethics, delivery formats, and reader guarantees.
           </p>
         </div>
 
