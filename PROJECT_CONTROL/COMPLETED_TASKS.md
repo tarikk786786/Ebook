@@ -21,3 +21,13 @@
 | Dynamic UPI QR & Redirect Options | Payments | 2026-11-08 | Commit `453b666`, `components/PaymentModal.tsx`, `lib/payments/index.ts`, exact price binding, deep-links, web redirect option | VERIFIED |
 | Git Push & Remote Sync | Deploy | 2026-11-08 | Successfully pushed to `origin/main` (`https://github.com/tarikk786786/Ebook.git`) | VERIFIED |
 | Live Vercel Status Verification | Production | 2026-11-07 | HTTP 200 response on `https://ebook-sandy-chi.vercel.app` & `/api/admin/stats` | VERIFIED |
+
+## [2026-11-09] TASK-P6-02: Eliminate Opacity-0 Gate & Multi-Tier Cover Fallback Engine
+- **Files Modified**: `components/BookCard.tsx`, `app/book/[slug]/BookDetailClient.tsx`, `app/page.tsx`, `components/CartDrawer.tsx`, `components/WishlistDrawer.tsx`
+- **Root Cause**: In `BookCard.tsx`, an image loading state `${imgLoaded ? 'opacity-100' : 'opacity-0'}` with an animated placeholder container hid cached and prerendered images because React's synthetic `onLoad` did not re-fire on cached images after client mount/hydration.
+- **Solution Implemented**:
+  1. Removed `opacity-0` image suppression and `imgLoaded` gate from `BookCard.tsx`.
+  2. Implemented multi-tier proactive fallback on image load error: primary cover -> `/api/covers/${book.slug}` (dynamic SVG generator) -> `/covers/standard-shelf-cover.jpg` -> typographic fallback.
+  3. Added responsive `useEffect` to synchronize `imgSrc` whenever book ID, slug, or coverImage change during filtering and pagination.
+  4. Verified local TypeScript checks (`tsc --noEmit`), security & catalog test suites (11/11 passed), and full production build (`next build` 336/336 static pages).
+  5. Pushed commit `44b2370` to `origin/main` (`https://github.com/tarikk786786/Ebook.git`).
