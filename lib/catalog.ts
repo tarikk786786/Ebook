@@ -67,6 +67,18 @@ export interface Book {
   googlePlayUrl?: string;
   rightsStatus?: string;
   errorNotes?: string;
+  researchLinks?: {
+    googleBooks?: string;
+    openLibrary?: string;
+    crossref?: string;
+    googleImages?: string;
+    wikimedia?: string;
+    wikipedia?: string;
+    internetArchive?: string;
+    gutenberg?: string;
+    amazon?: string;
+    googlePlay?: string;
+  };
   authorProfile?: {
     name: string;
     shortBio?: string;

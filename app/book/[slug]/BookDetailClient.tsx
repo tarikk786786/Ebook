@@ -68,7 +68,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
     }
   };
   const [isCoverZoomed, setIsCoverZoomed] = useState(false);
-  const [activeTab, setActiveTab] = useState<'synopsis' | 'contents' | 'specifications'>('synopsis');
+  const [activeTab, setActiveTab] = useState<'synopsis' | 'contents' | 'specifications' | 'research'>('synopsis');
 
   React.useEffect(() => {
     trackViewItem({
@@ -499,6 +499,17 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   >
                     Technical Specs
                   </button>
+                  <button
+                    onClick={() => setActiveTab('research')}
+                    className={`py-3 px-5 border-b-2 transition-colors flex items-center gap-1.5 ${
+                      activeTab === 'research'
+                        ? 'border-[#9A704B] text-[#9A704B] font-semibold'
+                        : 'border-transparent text-[#81796D] hover:text-[#24231F]'
+                    }`}
+                  >
+                    <span>External Research & Links</span>
+                    <span className="px-1.5 py-0.2 text-[9px] bg-amber-100 text-amber-900 rounded font-bold">86k Directory</span>
+                  </button>
                 </div>
 
                 <div className="p-6 text-xs sm:text-sm text-[#5B5449] leading-relaxed">
@@ -599,6 +610,124 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                       </div>
                     </div>
                   )}
+
+                  {activeTab === 'research' && (() => {
+                    const q = encodeURIComponent(`${book.title} ${book.author || ''}`.trim());
+                    const links = book.researchLinks || {
+                      googleBooks: `https://books.google.com/books?q=${q}`,
+                      openLibrary: `https://openlibrary.org/search?q=${q}`,
+                      crossref: `https://api.crossref.org/works?query.bibliographic=${q}&rows=5`,
+                      googleImages: `https://www.google.com/search?tbm=isch&q=${q}+book+cover`,
+                      wikimedia: `https://commons.wikimedia.org/w/index.php?search=${q}+book+cover&title=Special:MediaSearch&type=image`,
+                      wikipedia: `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(book.author || book.title)}`,
+                      internetArchive: `https://archive.org/search?query=${q}`,
+                      gutenberg: `https://www.gutenberg.org/ebooks/search/?query=${encodeURIComponent(book.title)}`,
+                      amazon: `https://www.amazon.in/s?k=${q}`,
+                      googlePlay: `https://play.google.com/store/search?q=${q}&c=books`,
+                    };
+
+                    return (
+                      <div className="space-y-4">
+                        <div className="p-3.5 bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl flex items-center justify-between">
+                          <div>
+                            <h4 className="font-serif font-bold text-xs text-[#24231F]">Universal 86,260 Bibliographic Link Directory</h4>
+                            <p className="text-[11px] text-[#6E685F] mt-0.5">Direct reference links from our master catalogue index across world digital libraries, publisher archives, and academic repositories.</p>
+                          </div>
+                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200 shrink-0">VERIFIED LOOKUP</span>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          {links.openLibrary && (
+                            <a href={links.openLibrary} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Open Library</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">View Public Book & Edition Record</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Internet Archive Open Library Catalogue</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+
+                          {links.googleBooks && (
+                            <a href={links.googleBooks} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Google Books</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Search Official Volume & ISBN</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Global Google Books Repository</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+
+                          {links.internetArchive && (
+                            <a href={links.internetArchive} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Internet Archive</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Discover Archive Lending Copy</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Universal Non-Profit Digital Library</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+
+                          {links.crossref && (
+                            <a href={links.crossref} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Crossref Metadata</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Query Academic DOI & Publisher Citations</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Official Crossref Works REST API</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+
+                          {links.wikipedia && (
+                            <a href={links.wikipedia} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Wikipedia Knowledge</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Author Biography & Bibliography</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Wikimedia Free Encyclopedia</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+
+                          {links.wikimedia && (
+                            <a href={links.wikimedia} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Wikimedia Commons</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Public Domain Cover Scans & Portraits</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Free Media Repository</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+
+                          {links.gutenberg && (
+                            <a href={links.gutenberg} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Project Gutenberg</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Check Public Domain Editions</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Classic Literature Open Access</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+
+                          {links.amazon && (
+                            <a href={links.amazon} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
+                              <div>
+                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Amazon Marketplace</span>
+                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Cross-Check Market Price & Reviews</span>
+                                <span className="text-[10px] text-[#81796D] block mt-0.5">Commercial Publisher Edition Check</span>
+                              </div>
+                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
             </div>
