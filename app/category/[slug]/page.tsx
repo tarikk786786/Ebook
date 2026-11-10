@@ -239,13 +239,7 @@ export default function CategoryPage({ params }: Props) {
                       {/* Cover Thumbnail */}
                       <div className="aspect-[3/4] w-full rounded overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-3 relative flex items-center justify-center">
                         <img
-                          src={
-                            book.coverImage &&
-                            !book.coverImage.startsWith('/book-covers/') &&
-                            !book.coverImage.startsWith('/public/')
-                              ? book.coverImage
-                              : `/api/covers/${book.slug}`
-                          }
+                          src={`/api/covers/${book.slug}`}
                           alt={`${book.title} cover`}
                           className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                           loading="lazy"
