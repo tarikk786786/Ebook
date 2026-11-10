@@ -15,20 +15,89 @@ function escapeXml(unsafe: string): string {
     .replace(/'/g, '&apos;');
 }
 
-function readLocalCover(cleanSlug: string, rawSlug: string): NextResponse | null {
+function slugify(input: string): string {
+  return (input || '')
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80);
+}
+
+/** Strip catalog volume suffixes / edition noise so OL + local files can match. */
+function cleanSearchTitle(title?: string): string {
+  if (!title) return '';
+  return title
+    .replace(/\s*[—–-]\s*Volume\s+\d+.*$/i, '')
+    .replace(/\s+Volume\s+\d+.*$/i, '')
+    .replace(/\s*\(Vol\.?\s*\d+.*?\)\s*$/i, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+function localCoverCandidates(cleanSlug: string, rawSlug: string, book?: { title?: string; author?: string; coverImage?: string } | null): string[] {
+  const out: string[] = [];
+  const push = (name?: string | null) => {
+    if (!name) return;
+    const base = name.replace(/\.(jpg|jpeg|png|webp|svg)$/i, '');
+    if (!base) return;
+    for (const ext of ['.jpg', '.webp', '.png']) {
+      const file = `${base}${ext}`;
+      if (!out.includes(file)) out.push(file);
+    }
+  };
+
+  push(cleanSlug);
+  push(rawSlug);
+
+  // Strip trailing -volume-N-ID noise used by master catalog slugs
+  const withoutVolume = cleanSlug.replace(/-volume-\d+(-\d+)?$/i, '');
+  push(withoutVolume);
+
+  // Progressive prefixes: learning-typescript-enhance-... → learning-typescript
+  const parts = withoutVolume.split('-').filter(Boolean);
+  for (let i = Math.min(parts.length, 6); i >= 2; i--) {
+    push(parts.slice(0, i).join('-'));
+  }
+
+  if (book?.coverImage) {
+    const basename = path.basename(book.coverImage.split('?')[0]);
+    if (basename && !basename.startsWith('standard-shelf')) push(basename);
+  }
+
+  if (book?.title) {
+    const titleSlug = slugify(cleanSearchTitle(book.title));
+    push(titleSlug);
+    const titleParts = titleSlug.split('-').filter(Boolean);
+    for (let i = Math.min(titleParts.length, 5); i >= 2; i--) {
+      push(titleParts.slice(0, i).join('-'));
+    }
+    if (book.author) {
+      push(`${titleSlug}-by-${slugify(book.author)}`);
+      push(`${slugify(book.title)}-by-${slugify(book.author)}`);
+    }
+  }
+
+  return out;
+}
+
+function readLocalCover(
+  cleanSlug: string,
+  rawSlug: string,
+  book?: { title?: string; author?: string; coverImage?: string } | null
+): NextResponse | null {
   const coversDir = path.join(process.cwd(), 'public', 'covers');
-  const possibleFiles = [
-    `${cleanSlug}.jpg`,
-    `${cleanSlug}.webp`,
-    `${cleanSlug}.png`,
-    `${rawSlug}`,
-  ];
+  const possibleFiles = localCoverCandidates(cleanSlug, rawSlug, book);
 
   for (const filename of possibleFiles) {
     const filePath = path.join(coversDir, filename);
     if (!fs.existsSync(filePath)) continue;
     try {
       const fileBuffer = fs.readFileSync(filePath);
+      // Tiny files are almost always broken/placeholder stubs
+      if (fileBuffer.length < 4000) continue;
+
       const ext = path.extname(filename).toLowerCase();
       const contentType =
         ext === '.webp'
@@ -45,6 +114,7 @@ function readLocalCover(cleanSlug: string, rawSlug: string): NextResponse | null
           'Content-Type': contentType,
           'Cache-Control': 'public, max-age=86400, s-maxage=86400',
           'X-Cover-Source': 'local-public-covers',
+          'X-Cover-File': filename,
           'X-Cover-Verified': 'true',
         },
       });
@@ -66,13 +136,27 @@ async function fetchOpenLibraryCover(book: {
   try {
     const isbn = book.isbn13 || book.isbn10 || book.isbn;
     let coverUrl: string | null = null;
-    if (isbn) {
-      coverUrl = `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-L.jpg`;
+
+    if (isbn && String(isbn).replace(/\D/g, '').length >= 10) {
+      coverUrl = `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(String(isbn))}-L.jpg`;
     } else if (book.title) {
-      const query = `${book.title} ${book.author || ''}`.trim();
-      const docs = await OpenLibraryProvider.searchBooks(query, 5);
-      const withCover = docs.find((d) => d.cover_i || d.cover_id);
-      coverUrl = OpenLibraryProvider.getCoverUrl(withCover?.cover_i || withCover?.cover_id || null, 'L');
+      const cleaned = cleanSearchTitle(book.title);
+      const queries = [
+        `${cleaned} ${book.author || ''}`.trim(),
+        cleaned,
+        // First significant phrase only (helps truncated catalog titles)
+        cleaned.split(/[:—(]/)[0].trim(),
+      ].filter((q, i, arr) => q.length >= 4 && arr.indexOf(q) === i);
+
+      for (const query of queries) {
+        const docs = await OpenLibraryProvider.searchBooks(query, 8);
+        const withCover = docs.find((d) => d.cover_i || d.cover_id);
+        coverUrl = OpenLibraryProvider.getCoverUrl(
+          withCover?.cover_i || withCover?.cover_id || null,
+          'L'
+        );
+        if (coverUrl) break;
+      }
     }
     if (!coverUrl) return null;
 
@@ -112,22 +196,25 @@ export async function GET(
     getBookById(cleanSlug) ||
     getBookById(`book-${cleanSlug}`);
 
-  // Prefer real Open Library art for CUSTOM_ARTWORK / unverified local synthetics.
-  // Keep authentic local scans first when coverType is AUTHENTIC.
-  const preferLocalFirst = forceLocal || book?.coverType === 'AUTHENTIC';
+  // Real publisher art (Open Library) first unless caller forces local or cover is a verified scan.
+  // Local synthetic JPGs previously blocked OL because coverType was wrongly AUTHENTIC.
+  const preferLocalFirst =
+    forceLocal ||
+    (book?.coverType === 'AUTHENTIC' &&
+      !!book.coverImage &&
+      book.coverImage.startsWith('/covers/') &&
+      !book.coverImage.includes('standard-shelf'));
 
   if (preferLocalFirst) {
-    const local = readLocalCover(cleanSlug, rawSlug);
+    const local = readLocalCover(cleanSlug, rawSlug, book);
     if (local) return local;
   }
 
   const ol = await fetchOpenLibraryCover(book);
   if (ol) return ol;
 
-  if (!preferLocalFirst) {
-    const local = readLocalCover(cleanSlug, rawSlug);
-    if (local) return local;
-  }
+  const local = readLocalCover(cleanSlug, rawSlug, book);
+  if (local) return local;
 
   const title = escapeXml(book?.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());
   const author = escapeXml(book?.author || 'AnonTrove Editorial Guild');
