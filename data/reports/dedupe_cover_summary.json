@@ -1,0 +1,10 @@
+{
+  "cover_files": 20191,
+  "hashed": 20191,
+  "errors": 0,
+  "exact_duplicate_cover_groups": 3187,
+  "exact_duplicate_cover_files": 9205,
+  "similar_cover_pairs": 794154,
+  "estimated_recoverable_bytes": 311078571,
+  "elapsed_sec": 96.4
+}
