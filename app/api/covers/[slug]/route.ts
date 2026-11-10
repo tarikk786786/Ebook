@@ -135,11 +135,13 @@ async function fetchOpenLibraryCover(book: {
   if (!book) return null;
   try {
     const isbn = book.isbn13 || book.isbn10 || book.isbn;
-    let coverUrl: string | null = null;
+    const coverUrls: string[] = [];
 
     if (isbn && String(isbn).replace(/\D/g, '').length >= 10) {
-      coverUrl = `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(String(isbn))}-L.jpg`;
-    } else if (book.title) {
+      coverUrls.push(`https://covers.openlibrary.org/b/isbn/${encodeURIComponent(String(isbn))}-L.jpg`);
+    }
+
+    if (book.title) {
       const cleaned = cleanSearchTitle(book.title);
       const titleCore = cleaned.split(/[:—(]/)[0].trim();
       const titleTokens = titleCore.split(/\s+/).filter((w) => w.length > 2).slice(0, 4).join(' ');
@@ -162,30 +164,33 @@ async function fetchOpenLibraryCover(book: {
           return authorNeedle.length > 0 && authorNeedle.every((w) => names.includes(w));
         });
         const pick = authorMatch || withCover[0];
-        coverUrl = OpenLibraryProvider.getCoverUrl(pick.cover_i || pick.cover_id || null, 'L');
-        if (coverUrl) break;
+        const url = OpenLibraryProvider.getCoverUrl(pick.cover_i || pick.cover_id || null, 'L');
+        if (url && !coverUrls.includes(url)) coverUrls.push(url);
+        if (coverUrls.length >= 3) break;
       }
     }
-    if (!coverUrl) return null;
 
-    const upstream = await fetch(coverUrl, {
-      headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' },
-      next: { revalidate: 86400 },
-    });
-    if (!upstream.ok) return null;
-    const buf = Buffer.from(await upstream.arrayBuffer());
-    // Open Library returns a tiny placeholder for missing covers
-    if (buf.length <= 2500) return null;
+    for (const coverUrl of coverUrls) {
+      const upstream = await fetch(coverUrl, {
+        headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' },
+        next: { revalidate: 86400 },
+      });
+      if (!upstream.ok) continue;
+      const buf = Buffer.from(await upstream.arrayBuffer());
+      // Open Library returns a tiny placeholder for missing covers
+      if (buf.length <= 2500) continue;
 
-    return new NextResponse(buf, {
-      status: 200,
-      headers: {
-        'Content-Type': upstream.headers.get('content-type') || 'image/jpeg',
-        'Cache-Control': 'public, max-age=86400, s-maxage=86400',
-        'X-Cover-Source': 'open-library',
-        'X-Cover-Verified': 'review-required',
-      },
-    });
+      return new NextResponse(buf, {
+        status: 200,
+        headers: {
+          'Content-Type': upstream.headers.get('content-type') || 'image/jpeg',
+          'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+          'X-Cover-Source': 'open-library',
+          'X-Cover-Verified': 'review-required',
+        },
+      });
+    }
+    return null;
   } catch {
     return null;
   }
