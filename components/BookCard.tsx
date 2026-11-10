@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/catalog';
 import { useCart } from '@/context/CartContext';
@@ -44,24 +44,13 @@ export default function BookCard({
 }: BookCardProps) {
   const [imgSrc, setImgSrc] = useState<string>(() => resolveCoverSrc(book));
   const [imgError, setImgError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const imgRef = useRef<HTMLImageElement | null>(null);
   const { addToCart, items } = useCart();
   const isInCart = items.some((i) => i.bookId === book.id);
 
   useEffect(() => {
     setImgSrc(resolveCoverSrc(book));
     setImgError(false);
-    setIsLoaded(false);
   }, [book.id, book.slug, book.coverImage]);
-
-  useEffect(() => {
-    // Cached images often skip onLoad — mark them visible immediately
-    const el = imgRef.current;
-    if (el && el.complete && el.naturalWidth > 0) {
-      setIsLoaded(true);
-    }
-  }, [imgSrc]);
 
   const handleImageError = () => {
     const apiFallback = `/api/covers/${book.slug}`;
@@ -69,10 +58,8 @@ export default function BookCard({
 
     if (imgSrc !== apiFallback) {
       setImgSrc(apiFallback);
-      setIsLoaded(false);
     } else if (imgSrc !== standardFallback) {
       setImgSrc(standardFallback);
-      setIsLoaded(false);
     } else {
       setImgError(true);
     }
@@ -154,14 +141,12 @@ export default function BookCard({
           {/* Real cover image sits above placeholder; stay visible for cached loads */}
           {!imgError && (
             <img
-              ref={imgRef}
               src={imgSrc}
               alt={book.title}
-              onLoad={() => setIsLoaded(true)}
               onError={handleImageError}
               loading="lazy"
               decoding="async"
-              className="absolute inset-0 z-10 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-300 ease-out opacity-100"
+              className="absolute inset-0 z-10 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-300 ease-out"
             />
           )}
 
