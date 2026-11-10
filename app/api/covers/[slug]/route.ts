@@ -361,14 +361,15 @@ export async function GET(
     if (cachedRemote) return cachedRemote;
   }
 
+  // IA tends to be more reachable than OL search from some networks.
+  const ia = await fetchInternetArchiveCover(book);
+  if (ia) return ia;
+
   const ol = await fetchOpenLibraryCover(book);
   if (ol) return ol;
 
   const gb = await fetchGoogleBooksCover(book);
   if (gb) return gb;
-
-  const ia = await fetchInternetArchiveCover(book);
-  if (ia) return ia;
 
   const bookAny = book as { title?: string; author?: string; category?: string; isbn?: string; isbn10?: string; isbn13?: string; pages?: number };
   const title = escapeXml(bookAny.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());

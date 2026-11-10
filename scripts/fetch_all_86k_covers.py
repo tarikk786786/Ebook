@@ -134,7 +134,7 @@ def db_connect() -> sqlite3.Connection:
     return conn
 
 
-def http_json(url: str, timeout: float = 20):
+def http_json(url: str, timeout: float = 8):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -143,7 +143,7 @@ def http_json(url: str, timeout: float = 20):
         return None
 
 
-def http_bytes(url: str, timeout: float = 20) -> bytes | None:
+def http_bytes(url: str, timeout: float = 10) -> bytes | None:
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -158,45 +158,33 @@ def http_bytes(url: str, timeout: float = 20) -> bytes | None:
 
 
 def find_open_library(title: str, author: str) -> tuple[str | None, int | None]:
+    # OL search is often unreachable from some networks; keep a single short attempt.
     cleaned = clean_title(title)
-    queries = [
-        f"{cleaned} {author}".strip(),
-        cleaned,
-        cleaned.split(":")[0].strip(),
-    ]
-    author_parts = [p for p in re.split(r"\s+", (author or "").lower()) if len(p) > 2][:2]
-    for q in queries:
-        if len(q) < 4:
-            continue
-        data = http_json(
-            "https://openlibrary.org/search.json?"
-            + urllib.parse.urlencode({"q": q, "limit": 8})
-        )
-        docs = (data or {}).get("docs") or []
-        ranked = []
-        for d in docs:
-            cid = d.get("cover_i")
-            if not cid:
-                continue
-            names = " ".join(d.get("author_name") or []).lower()
-            score = 2 if author_parts and all(p in names for p in author_parts) else 1
-            ranked.append((score, int(cid)))
-        ranked.sort(reverse=True)
-        if ranked:
-            cid = ranked[0][1]
-            return f"https://covers.openlibrary.org/b/id/{cid}-M.jpg", cid
-        time.sleep(0.05)
+    q = f"{cleaned} {author}".strip()[:120]
+    if len(q) < 4:
+        return None, None
+    data = http_json(
+        "https://openlibrary.org/search.json?"
+        + urllib.parse.urlencode({"q": q, "limit": 5}),
+        timeout=4,
+    )
+    docs = (data or {}).get("docs") or []
+    for d in docs:
+        cid = d.get("cover_i")
+        if cid:
+            return f"https://covers.openlibrary.org/b/id/{int(cid)}-M.jpg", int(cid)
     return None, None
 
 
 def find_google_books(title: str, author: str) -> str | None:
     cleaned = clean_title(title).split(":")[0].strip()
     q = f'intitle:"{cleaned}"'
-    if author:
+    if author and author.lower() not in {"editorial board", "anontrove guild", "editorial board & domain experts"}:
         q += f' inauthor:"{author.split(",")[0].strip()}"'
     data = http_json(
         "https://www.googleapis.com/books/v1/volumes?"
-        + urllib.parse.urlencode({"q": q, "maxResults": 5})
+        + urllib.parse.urlencode({"q": q, "maxResults": 3}),
+        timeout=6,
     )
     if not data or "items" not in data:
         return None
@@ -211,33 +199,49 @@ def find_google_books(title: str, author: str) -> str | None:
 
 def find_internet_archive(title: str, author: str) -> str | None:
     cleaned = clean_title(title).split(":")[0].strip()
-    clauses = [f'title:({cleaned})']
-    if author:
-        clauses.append(f'creator:({author.split(",")[0].strip()})')
-    data = http_json(
-        "https://archive.org/advancedsearch.php?"
-        + urllib.parse.urlencode(
-            {"q": " AND ".join(clauses), "fl[]": "identifier", "rows": 3, "page": 1, "output": "json"}
+    if len(cleaned) < 4:
+        return None
+    # Title-only first (higher recall); author filter often over-constrains.
+    queries = [f'title:("{cleaned}")', f'title:({cleaned})']
+    if author and author.lower() not in {
+        "editorial board",
+        "anontrove guild",
+        "editorial board & domain experts",
+        "anontrove engineering guild",
+    }:
+        queries.insert(0, f'title:("{cleaned}") AND creator:({author.split(",")[0].strip()})')
+    for q in queries:
+        data = http_json(
+            "https://archive.org/advancedsearch.php?"
+            + urllib.parse.urlencode(
+                {"q": q, "fl[]": "identifier", "rows": 5, "page": 1, "output": "json"}
+            ),
+            timeout=8,
         )
-    )
-    docs = (((data or {}).get("response") or {}).get("docs")) or []
-    for d in docs:
-        ident = d.get("identifier")
-        if ident:
-            return f"https://archive.org/services/img/{ident}"
+        docs = (((data or {}).get("response") or {}).get("docs")) or []
+        for d in docs:
+            ident = d.get("identifier")
+            if not ident:
+                continue
+            # Validate image exists / non-tiny
+            img_url = f"https://archive.org/services/img/{ident}"
+            probe = http_bytes(img_url, timeout=8)
+            if probe:
+                return img_url
     return None
 
 
 def resolve_cover(title: str, author: str) -> tuple[str, str | None, int | None]:
-    url, ol_id = find_open_library(title, author)
-    if url:
-        return "open-library", url, ol_id
-    url = find_google_books(title, author)
-    if url:
-        return "google-books", url, None
+    # Priority based on current network health: IA works, GB rate-limits, OL search times out.
     url = find_internet_archive(title, author)
     if url:
         return "internet-archive", url, None
+    url = find_google_books(title, author)
+    if url:
+        return "google-books", url, None
+    url, ol_id = find_open_library(title, author)
+    if url:
+        return "open-library", url, ol_id
     return "not_found", None, None
 
 
