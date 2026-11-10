@@ -234,11 +234,12 @@ export async function GET(
   const local = readLocalCover(cleanSlug, rawSlug, book);
   if (local) return local;
 
-  const title = escapeXml(book?.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());
-  const author = escapeXml(book?.author || 'AnonTrove Editorial Guild');
-  const category = escapeXml(book?.category || 'Curated Study Edition');
-  const isbn = escapeXml(book?.isbn13 || book?.isbn10 || 'DRM-FREE-VERIFIED');
-  const pages = book?.pages || 320;
+  const bookAny = book as { title?: string; author?: string; category?: string; isbn?: string; isbn10?: string; isbn13?: string; pages?: number };
+  const title = escapeXml(bookAny.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());
+  const author = escapeXml(bookAny.author || 'AnonTrove Editorial Guild');
+  const category = escapeXml(bookAny.category || 'Curated Study Edition');
+  const isbn = escapeXml(bookAny.isbn13 || bookAny.isbn10 || bookAny.isbn || 'DRM-FREE-VERIFIED');
+  const pages = bookAny.pages || 320;
 
   let primaryColor = '#10B981';
   const catLower = category.toLowerCase();
