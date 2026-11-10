@@ -17,12 +17,9 @@ import {
 } from 'lucide-react';
 
 function resolveCoverSrc(book: Book): string {
-  const raw = book.coverImage || '';
-  // /book-covers is local-only and not deployed to Vercel
-  if (!raw || raw.startsWith('/book-covers/') || raw.startsWith('/public/')) {
-    return `/api/covers/${book.slug}`;
-  }
-  return raw;
+  // Always route through /api/covers so Open Library can replace dark synthetic local JPGs.
+  // Authentic scans still win inside the API when coverType === AUTHENTIC.
+  return `/api/covers/${book.slug}`;
 }
 
 interface BookCardProps {

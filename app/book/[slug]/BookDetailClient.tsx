@@ -51,12 +51,9 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const resolveDetailCover = React.useCallback((cover?: string) => {
-    const raw = cover || '';
-    if (!raw || raw.startsWith('/book-covers/') || raw.startsWith('/public/')) {
-      return `/api/covers/${book.slug}`;
-    }
-    return raw;
+  const resolveDetailCover = React.useCallback((_cover?: string) => {
+    // Route through API so Open Library can replace synthetic local placeholders
+    return `/api/covers/${book.slug}`;
   }, [book.slug]);
   const [detailSrc, setDetailSrc] = useState<string>(() => resolveDetailCover(book.coverImage));
 

@@ -313,11 +313,8 @@ export default function HomePage() {
                       className={`absolute w-36 sm:w-44 aspect-[3/4] bg-white border border-[#E8E4DC] rounded-lg overflow-hidden shadow-book-hover transition-transform duration-300 hover:scale-105 ${offsets[idx % 4]}`}
                     >
                       <img
-                        src={book.coverImage || `/api/covers/${book.slug}`}
+                        src={`/api/covers/${book.slug}`}
                         alt={book.title}
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = `/api/covers/${book.slug}`;
-                        }}
                         className="w-full h-full object-cover"
                       />
                     </div>
