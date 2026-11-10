@@ -199,10 +199,27 @@ export async function GET(
   const cleanSlug = rawSlug.replace(/\.(jpg|jpeg|png|webp|svg)$/i, '');
   const forceLocal = req.nextUrl.searchParams.get('local') === '1';
 
-  const book =
+  const resolved =
     getBookBySlug(cleanSlug) ||
     getBookById(cleanSlug) ||
     getBookById(`book-${cleanSlug}`);
+
+  // Master-catalog slugs often miss exact lookup; derive a searchable title from the slug.
+  const slugTitle = cleanSlug
+    .replace(/-volume-\d+(-\d+)?$/i, '')
+    .replace(/-/g, ' ')
+    .replace(/\b\d{4,}\b/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const book = resolved || {
+    title: slugTitle,
+    author: undefined,
+    coverImage: undefined,
+    coverType: 'CUSTOM_ARTWORK' as const,
+    category: 'Curated Study Edition',
+    pages: 320,
+  };
 
   // Many /covers/*.jpg files are dark branded synthetics mislabeled AUTHENTIC.
   // Always try Open Library publisher art first unless ?local=1 is forced.
