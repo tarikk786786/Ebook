@@ -141,20 +141,28 @@ async function fetchOpenLibraryCover(book: {
       coverUrl = `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(String(isbn))}-L.jpg`;
     } else if (book.title) {
       const cleaned = cleanSearchTitle(book.title);
+      const titleCore = cleaned.split(/[:—(]/)[0].trim();
+      const titleTokens = titleCore.split(/\s+/).filter((w) => w.length > 2).slice(0, 4).join(' ');
       const queries = [
         `${cleaned} ${book.author || ''}`.trim(),
         cleaned,
-        // First significant phrase only (helps truncated catalog titles)
-        cleaned.split(/[:—(]/)[0].trim(),
+        titleCore,
+        book.author ? `${book.author} ${titleTokens}`.trim() : '',
+        book.author ? `${titleTokens} ${book.author}`.trim() : '',
       ].filter((q, i, arr) => q.length >= 4 && arr.indexOf(q) === i);
 
+      const authorNeedle = (book.author || '').toLowerCase().split(/\s+/).filter((w) => w.length > 2);
       for (const query of queries) {
-        const docs = await OpenLibraryProvider.searchBooks(query, 8);
-        const withCover = docs.find((d) => d.cover_i || d.cover_id);
-        coverUrl = OpenLibraryProvider.getCoverUrl(
-          withCover?.cover_i || withCover?.cover_id || null,
-          'L'
-        );
+        const docs = await OpenLibraryProvider.searchBooks(query, 10);
+        const withCover = docs.filter((d) => d.cover_i || d.cover_id);
+        if (!withCover.length) continue;
+
+        const authorMatch = withCover.find((d) => {
+          const names = (d.author_name || []).join(' ').toLowerCase();
+          return authorNeedle.length > 0 && authorNeedle.every((w) => names.includes(w));
+        });
+        const pick = authorMatch || withCover[0];
+        coverUrl = OpenLibraryProvider.getCoverUrl(pick.cover_i || pick.cover_id || null, 'L');
         if (coverUrl) break;
       }
     }
@@ -196,18 +204,11 @@ export async function GET(
     getBookById(cleanSlug) ||
     getBookById(`book-${cleanSlug}`);
 
-  // Real publisher art (Open Library) first unless caller forces local or cover is a verified scan.
-  // Local synthetic JPGs previously blocked OL because coverType was wrongly AUTHENTIC.
-  const preferLocalFirst =
-    forceLocal ||
-    (book?.coverType === 'AUTHENTIC' &&
-      !!book.coverImage &&
-      book.coverImage.startsWith('/covers/') &&
-      !book.coverImage.includes('standard-shelf'));
-
-  if (preferLocalFirst) {
-    const local = readLocalCover(cleanSlug, rawSlug, book);
-    if (local) return local;
+  // Many /covers/*.jpg files are dark branded synthetics mislabeled AUTHENTIC.
+  // Always try Open Library publisher art first unless ?local=1 is forced.
+  if (forceLocal) {
+    const localForced = readLocalCover(cleanSlug, rawSlug, book);
+    if (localForced) return localForced;
   }
 
   const ol = await fetchOpenLibraryCover(book);
