@@ -1,0 +1,24 @@
+{
+  "curatedCount": 1261,
+  "curatedCoverMatched": 965,
+  "directoryCount": 86205,
+  "directoryCoverMatched": 24951,
+  "part1": {
+    "total": 43168,
+    "fixedPublicPrefix": 0,
+    "matchedLocal": 23065,
+    "setApiFallback": 20103,
+    "keptExisting": 0,
+    "categoryUpdated": 0,
+    "clearedBadMatch": 17545
+  },
+  "part2": {
+    "total": 43169,
+    "fixedPublicPrefix": 0,
+    "matchedLocal": 23048,
+    "setApiFallback": 20121,
+    "keptExisting": 0,
+    "categoryUpdated": 0,
+    "clearedBadMatch": 16469
+  }
+}

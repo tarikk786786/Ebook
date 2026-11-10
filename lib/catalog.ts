@@ -701,14 +701,30 @@ function compileBookCatalog(): Book[] {
 export const BOOK_CATALOG: Book[] = compileBookCatalog();
 export const TOTAL_MAPPED_DOCUMENTS = 86337;
 
+function normalizePublicCoverPath(cover?: string | null): string | undefined {
+  if (!cover) return undefined;
+  if (cover.startsWith('/public/')) return cover.slice('/public'.length);
+  return cover;
+}
+
 function expandToBook(item: any): Book {
   const price = item.priceInInr || 49;
   const origPrice = item.originalPriceInInr || (price * 4);
   const pages = item.pages || 280;
+  const slug = item.slug || `book-${item.ref || item.id || 'item'}`;
+  const rawCover = normalizePublicCoverPath(item.coverImage || item.coverUrl);
+  const weakCover =
+    !rawCover ||
+    rawCover.includes('standard-shelf-cover') ||
+    rawCover.startsWith('/public/');
+  const coverImage = weakCover ? `/api/covers/${slug}` : rawCover;
+  const coverType =
+    item.coverType ||
+    (item.coverVerified || item.coverStatus === 'verified_exact' ? 'AUTHENTIC' : 'CUSTOM_ARTWORK');
 
   return {
     id: item.id,
-    slug: item.slug,
+    slug,
     title: item.title,
     subtitle: item.subtitle || "Digital Study & Reference Edition",
     author: item.author || "Editorial Board",
@@ -724,7 +740,7 @@ function expandToBook(item: any): Book {
     reviewCount: item.reviewCount || 45,
     readingTime: Math.round(pages / 35) + " hrs",
     edition: item.edition || "Master Digital Edition",
-    coverImage: item.coverImage || item.coverUrl || "/covers/standard-shelf-cover.jpg",
+    coverImage,
     sampleExcerpt: item.sampleExcerpt || [
       item.title + " by " + item.author + ".",
       "A foundational technical work and comprehensive operational guide.",
@@ -736,13 +752,13 @@ function expandToBook(item: any): Book {
       "Part III: Tactical Implementation & Scalable Systems",
       "Part IV: Advanced Metrics, Case Studies & Takeaways"
     ],
-    fileName: item.fileName || (item.slug + ".pdf"),
+    fileName: item.fileName || (slug + ".pdf"),
     status: "PUBLISHED",
     isbn: item.isbn || item.isbn13 || item.isbn10,
     isLatest: true,
     collection: "MASTER_ARCHIVE",
     primaryResourceType: "published_ebook",
-    coverType: item.coverType || (item.coverStatus === 'verified_exact' ? 'AUTHENTIC' : 'CUSTOM_ARTWORK'),
+    coverType,
     listingStatus: item.listingStatus || 'APPROVED_FOR_SALE',
     marketReferencePrice: item.marketReferencePrice || origPrice,
     marketCurrentPrice: item.marketCurrentPrice || Math.round(origPrice * 0.75),
@@ -767,11 +783,27 @@ function getDirectoryOverlay(): Map<string, any> {
     if (typeof window === "undefined") {
       const fs = eval("require('fs')");
       const path = eval("require('path')");
-      const dirPath = path.resolve(process.cwd(), "data", "catalog", "directory_86k_from_pdf.json");
-      if (fs.existsSync(dirPath)) {
-        const payload = JSON.parse(fs.readFileSync(dirPath, "utf8"));
+      // Slim verified cover/detail map (exact matches only) — avoids loading 36MB directory JSON
+      const coverMapPath = path.resolve(process.cwd(), "data", "catalog", "cover_map_from_pdfs.json");
+      if (fs.existsSync(coverMapPath)) {
+        const payload = JSON.parse(fs.readFileSync(coverMapPath, "utf8"));
+        const map = payload.map || {};
+        for (const [slug, entry] of Object.entries(map)) {
+          cachedDirectoryOverlay!.set(slug, entry as any);
+          const catalogNum = (entry as any)?.catalogNum;
+          if (catalogNum != null) cachedDirectoryOverlay!.set(`ref:${catalogNum}`, entry as any);
+        }
+      }
+      // Curated masterclasses still loaded for rich PDP fields (price/pages/author)
+      const curatedPath = path.resolve(process.cwd(), "data", "catalog", "curated_masterclasses_from_pdf.json");
+      if (fs.existsSync(curatedPath)) {
+        const payload = JSON.parse(fs.readFileSync(curatedPath, "utf8"));
         for (const entry of payload.books || []) {
-          if (entry?.slug) cachedDirectoryOverlay.set(entry.slug, entry);
+          if (!entry?.slug) continue;
+          const prev = cachedDirectoryOverlay!.get(entry.slug) || {};
+          cachedDirectoryOverlay!.set(entry.slug, { ...prev, ...entry });
+          if (entry.id) cachedDirectoryOverlay!.set(entry.id, entry);
+          if (entry.catalogNum != null) cachedDirectoryOverlay!.set(`ref:${entry.catalogNum}`, entry);
         }
       }
     }
@@ -780,21 +812,48 @@ function getDirectoryOverlay(): Map<string, any> {
 }
 
 function applyDirectoryOverlay(book: Book): Book {
-  const overlay = getDirectoryOverlay().get(book.slug);
-  if (!overlay) return book;
+  const map = getDirectoryOverlay();
+  const overlay = map.get(book.slug) || map.get(`ref:${(book as any).ref}`) || map.get(book.id);
+  if (!overlay) {
+    const fixed = normalizePublicCoverPath(book.coverImage);
+    if (fixed && fixed !== book.coverImage) {
+      return { ...book, coverImage: fixed };
+    }
+    return book;
+  }
   const next = { ...book };
-  if (overlay.category && (!book.category || book.category === "General & Technical Reference")) {
+  if (overlay.category && (!book.category || book.category === "General & Technical Reference" || book.category === "General")) {
     next.category = overlay.category;
   }
+  if (overlay.author && (!book.author || book.author === "Editorial Board" || book.author === "AnonTrove Guild")) {
+    // keep curated authors when present
+    if (overlay.author !== "AnonTrove Guild") next.author = overlay.author;
+  }
+  if (typeof overlay.priceInInr === "number" && overlay.priceInInr > 0) {
+    next.priceInInr = overlay.priceInInr;
+    next.originalPriceInInr = overlay.originalPriceInInr || Math.max(overlay.priceInInr * 4, overlay.priceInInr + 50);
+  }
+  if (typeof overlay.pages === "number" && overlay.pages > 0) {
+    next.pages = overlay.pages;
+    next.readingTime = `${Math.max(1, Math.round(overlay.pages / 35))} hrs`;
+  }
+  if (overlay.fileSize && overlay.fileSize !== "—") next.fileSize = overlay.fileSize;
+  if (overlay.fileName) next.fileName = overlay.fileName;
+  if (overlay.description) next.description = overlay.description;
+
+  const cover = normalizePublicCoverPath(overlay.coverImage);
   if (
-    overlay.coverVerified &&
-    overlay.coverImage &&
+    cover &&
+    (overlay.coverVerified || cover.startsWith("/covers/") || cover.startsWith("/book-covers/")) &&
     (!book.coverImage ||
       book.coverImage.includes("standard-shelf-cover") ||
-      book.coverImage.startsWith("/api/covers/"))
+      book.coverImage.startsWith("/api/covers/") ||
+      book.coverImage.startsWith("/public/"))
   ) {
-    next.coverImage = overlay.coverImage;
-    next.coverType = "AUTHENTIC";
+    next.coverImage = cover;
+    next.coverType = overlay.coverVerified ? "AUTHENTIC" : next.coverType || "CUSTOM_ARTWORK";
+  } else if (book.coverImage?.startsWith("/public/")) {
+    next.coverImage = normalizePublicCoverPath(book.coverImage) || `/api/covers/${book.slug}`;
   }
   return next;
 }
