@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { checkOrderStatus, verifyFamGatewayOrder } from '@/lib/famgateway';
 import { getBookById } from '@/lib/catalog';
 import { generateDownloadToken } from '@/lib/crypto';
+import { DOWNLOAD_TOKEN_TTL_MS } from '@/lib/payments';
 import { findOrderAuthoritative, markOrderPaid } from '@/lib/orders/store';
 
 export async function GET(req: NextRequest) {
@@ -93,13 +94,13 @@ export async function GET(req: NextRequest) {
       const book = getBookById(targetBookId);
       const fileName = book ? book.fileName : (targetItem.fileName || 'purchased-ebook.pdf');
 
-      // Generate single-use, 24h encrypted download token (AES-256-GCM)
+      // Generate short-lived encrypted download token (AES-256-GCM, max 15 minutes)
       const primaryToken = generateDownloadToken({
         orderId,
         bookId: targetBookId,
         fileName,
         issuedAt: Date.now(),
-        ttlMs: 24 * 60 * 60 * 1000, // 24 hours
+        ttlMs: DOWNLOAD_TOKEN_TTL_MS,
         maxDownloads: 5,
       });
 
@@ -112,7 +113,7 @@ export async function GET(req: NextRequest) {
           bookId: item.bookId,
           fileName: itemFileName,
           issuedAt: Date.now(),
-          ttlMs: 24 * 60 * 60 * 1000,
+          ttlMs: DOWNLOAD_TOKEN_TTL_MS,
           maxDownloads: 5,
         });
         return {

@@ -49,18 +49,27 @@ export interface PaymentOrderResponse {
   currency: string;
   gateway: PaymentGatewayType;
   title?: string;
-  items?: Array<{ bookId: string; title: string; priceInInr: number }>;
+  items?: Array<{ bookId: string; title: string; priceInInr: number; coverImage?: string }>;
+  subtotalInr?: number;
+  discountInr?: number;
+  taxInr?: number;
+  taxNote?: string;
   qrUrl?: string;
   upiIntent?: string;
   upiId?: string;
   checkoutUrl?: string;
-  // Exclusive FamPay / FamGateway fields
+  processingUrl?: string;
+  payableAmount?: string;
+  expiresAtIst?: string;
   famgateway?: {
     orderId: string;
     qrUrl: string;
     upiIntent: string;
     upiId: string;
     checkoutUrl: string;
+    amount?: string;
+    payableAmount?: string;
+    expiresAtIst?: string;
   };
   fampay?: {
     orderId: string;
@@ -68,6 +77,9 @@ export interface PaymentOrderResponse {
     upiIntent: string;
     upiId: string;
     checkoutUrl: string;
+    amount?: string;
+    payableAmount?: string;
+    expiresAtIst?: string;
   };
 }
 

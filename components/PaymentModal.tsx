@@ -85,7 +85,6 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         bookId: book.id,
-        items: [{ bookId: book.id, quantity: 1 }],
         gateway: 'FAMGATEWAY',
       }),
     })
@@ -418,14 +417,25 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
                 </span>
               </div>
 
-              {/* Mobile UPI App Intent Button */}
+              {/* FamGateway hosted checkout (preferred — app chooser + QR) */}
+              {order?.checkoutUrl && /famgateway\.in/i.test(order.checkoutUrl) && (
+                <a
+                  href={order.checkoutUrl}
+                  className="w-full py-2.5 px-4 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-medium text-xs flex items-center justify-center space-x-2 shadow-sm transition-colors"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>Pay on FamGateway Checkout (₹{order.amount})</span>
+                </a>
+              )}
+
+              {/* Generic UPI intent — OS presents installed apps (no fabricated deep links) */}
               {order?.upiIntent && (
                 <a
                   href={order.upiIntent}
                   className="w-full py-2.5 px-4 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white font-medium text-xs flex items-center justify-center space-x-2 shadow-sm transition-colors"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
-                  <span>Open in UPI App (₹{order.amount})</span>
+                  <span>Open UPI Intent (₹{order.amount})</span>
                 </a>
               )}
 

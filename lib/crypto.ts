@@ -35,7 +35,7 @@ export function generateDownloadToken(payload: Partial<DownloadTokenPayload> & {
     bookId: payload.bookId,
     fileName: payload.fileName,
     issuedAt: payload.issuedAt || Date.now(),
-    ttlMs: payload.ttlMs !== undefined ? payload.ttlMs : 24 * 60 * 60 * 1000,
+    ttlMs: payload.ttlMs !== undefined ? payload.ttlMs : 15 * 60 * 1000,
     maxDownloads: payload.maxDownloads || 5,
   };
 
@@ -72,7 +72,7 @@ export function decryptDownloadToken(tokenString: string): DownloadTokenPayload 
     // Validate expiration
     const now = Date.now();
     const issuedAt = payload.issuedAt || 0;
-    const ttlMs = payload.ttlMs !== undefined ? payload.ttlMs : 24 * 60 * 60 * 1000;
+    const ttlMs = payload.ttlMs !== undefined ? payload.ttlMs : 15 * 60 * 1000;
     if (now > (issuedAt + ttlMs)) {
       return null; // Expired
     }
@@ -85,34 +85,42 @@ export function decryptDownloadToken(tokenString: string): DownloadTokenPayload 
 }
 
 /**
- * Timing-safe HMAC-SHA256 signature verification for FamGateway webhooks.
- * Prevents timing attacks when comparing signatures.
+ * Timing-safe HMAC-SHA256 verification for FamGateway webhooks.
+ *
+ * Official OpenAPI (v2): signature = HMAC_SHA256(raw_post_body, merchant_api_key)
+ * using the Merchant Default API Key as the HMAC secret.
+ *
+ * Optional FAMGATEWAY_WEBHOOK_SECRET: if set, tried as an alternate secret
+ * (for dashboard-provided dedicated webhook secrets). Official default is API key.
  */
 export function verifyFamGatewaySignature(rawBody: string, signatureHeader: string | null): boolean {
   if (!signatureHeader) return false;
-  const rawApiKey = process.env.FAMGATEWAY_API_KEY;
-  if (!rawApiKey) {
-    console.error('FAMGATEWAY_API_KEY environment variable is not configured');
+
+  const secrets = [
+    process.env.FAMGATEWAY_WEBHOOK_SECRET,
+    process.env.FAMGATEWAY_API_KEY,
+  ]
+    .map((s) => (s || '').replace(/^\uFEFF/, '').trim())
+    .filter(Boolean);
+
+  // Deduplicate while preserving order
+  const uniqueSecrets = [...new Set(secrets)];
+  if (uniqueSecrets.length === 0) {
+    console.error('[FAMGATEWAY] No FAMGATEWAY_API_KEY / FAMGATEWAY_WEBHOOK_SECRET configured for webhook HMAC');
     return false;
   }
-  const apiKey = rawApiKey.replace(/^\uFEFF/, '').trim();
-  if (!apiKey) return false;
 
   try {
-    const expectedSig = crypto
-      .createHmac('sha256', apiKey)
-      .update(rawBody)
-      .digest('hex');
-
-    const expectedBuf = Buffer.from(expectedSig, 'utf8');
-    const actualBuf = Buffer.from(signatureHeader, 'utf8');
-
-    if (expectedBuf.length !== actualBuf.length) {
-      return false;
+    const actualBuf = Buffer.from(signatureHeader.trim(), 'utf8');
+    for (const secret of uniqueSecrets) {
+      const expectedSig = crypto.createHmac('sha256', secret).update(rawBody).digest('hex');
+      const expectedBuf = Buffer.from(expectedSig, 'utf8');
+      if (expectedBuf.length === actualBuf.length && crypto.timingSafeEqual(expectedBuf, actualBuf)) {
+        return true;
+      }
     }
-
-    return crypto.timingSafeEqual(expectedBuf, actualBuf);
-  } catch (err) {
+    return false;
+  } catch {
     return false;
   }
 }

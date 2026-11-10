@@ -29,8 +29,8 @@ export async function GET(req: NextRequest) {
     // Read Affiliates
     const affiliates = getAffiliates();
 
-    // Read Orders if existing
-    const ordersFile = path.join(dataDir, 'orders.json');
+    // Read Orders from authoritative FamGateway store
+    const ordersFile = path.join(dataDir, 'orders_store.json');
     let orders: any[] = [];
     if (fs.existsSync(ordersFile)) {
       try {
@@ -41,8 +41,14 @@ export async function GET(req: NextRequest) {
     // Calculate real numbers (zero fake simulations)
     const totalSubscribers = subscribers.length;
     const totalAffiliates = affiliates.length;
-    const totalOrdersCount = orders.length;
-    const totalRevenueInInr = orders.reduce((sum, o) => sum + (Number(o.amount) || 0), 0);
+    const paidOrders = orders.filter(
+      (o) => o.status === 'SUCCESS' || o.status === 'PAID'
+    );
+    const totalOrdersCount = paidOrders.length;
+    const totalRevenueInInr = paidOrders.reduce(
+      (sum, o) => sum + (Number(o.totalInr ?? o.amount) || 0),
+      0
+    );
 
     return NextResponse.json({
       success: true,

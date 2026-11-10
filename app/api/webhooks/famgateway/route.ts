@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFamGatewaySignature, generateDownloadToken } from '@/lib/crypto';
-import { getOrderById, updateOrderStatus, saveOrder } from '@/lib/orders/store';
-import { checkOrderStatus, verifyFamGatewayOrder } from '@/lib/famgateway';
+import { updateOrderStatus, saveOrder } from '@/lib/orders/store';
+import { verifyFamGatewayOrder } from '@/lib/famgateway';
+import { DOWNLOAD_TOKEN_TTL_MS } from '@/lib/payments';
 import { isWebhookEventProcessed, recordWebhookEventProcessed } from '@/lib/supabase';
 
 // In-memory cache for event deduplication
@@ -129,7 +130,7 @@ export async function POST(req: NextRequest) {
         bookId: item.bookId,
         fileName: item.fileName,
         issuedAt: Date.now(),
-        ttlMs: 24 * 60 * 60 * 1000, // 24 hours
+        ttlMs: DOWNLOAD_TOKEN_TTL_MS,
         maxDownloads: 5,
       });
 

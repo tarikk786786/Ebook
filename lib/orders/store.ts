@@ -158,5 +158,16 @@ export function markOrderPaid(
   orderIdentifier: string, 
   details: { gatewayOrderId?: string; bankUtr?: string; amountInInr?: number }
 ): StoredOrder | null {
-  return updateOrderStatus(orderIdentifier, 'SUCCESS', details);
+  const updated = updateOrderStatus(orderIdentifier, 'SUCCESS', details);
+  if (updated) {
+    import('@/lib/supabase')
+      .then(({ updateSupabaseOrderStatus }) =>
+        updateSupabaseOrderStatus(updated.gatewayOrderId || updated.orderId, 'SUCCESS', {
+          bankUtr: updated.bankUtr,
+          paidAt: updated.paidAt,
+        })
+      )
+      .catch(() => {});
+  }
+  return updated;
 }

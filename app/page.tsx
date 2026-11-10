@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import BookCard from '@/components/BookCard';
 import ReaderModal from '@/components/ReaderModal';
@@ -52,6 +53,10 @@ type SortOption = 'POPULAR' | 'CHEAPEST' | 'TITLE';
 type CollectionFilter = 'ALL' | 'LATEST_2026' | 'HINDI' | 'BUSINESS' | 'CLASSIC_ARCHIVE' | 'DEALS_29' | 'BOOKS' | 'NOTES' | 'CODE';
 
 export default function HomePage() {
+  const router = useRouter();
+  const startCheckout = (b: Book) => {
+    router.push(`/checkout?bookId=${encodeURIComponent(b.id)}`);
+  };
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedCollection, setSelectedCollection] = useState<CollectionFilter>('ALL');
   const [selectedPriceTier, setSelectedPriceTier] = useState<PriceTier>('ALL');
@@ -395,7 +400,7 @@ export default function HomePage() {
 
         {/* Curated Ebook Bundles */}
         <BundlesSection 
-          onSelectBuy={(b) => setBuyingBook(b)} 
+          onSelectBuy={startCheckout} 
           currency={currency} 
         />
 
@@ -432,7 +437,7 @@ export default function HomePage() {
                   badge: book.badge || (idx % 2 === 0 ? 'Trending' : 'Rising Star')
                 }}
                 currency={currency}
-                onSelectBuy={(b) => setBuyingBook(b)}
+                onSelectBuy={startCheckout}
                 onSelectPreview={(b) => setPreviewBook(b)}
                 onToggleWishlist={toggleWishlist}
                 isWishlisted={wishlist.some(w => w.id === book.id)}
@@ -471,7 +476,7 @@ export default function HomePage() {
                 key={`bestseller-${book.id}`}
                 book={book}
                 currency={currency}
-                onSelectBuy={(b) => setBuyingBook(b)}
+                onSelectBuy={startCheckout}
                 onSelectPreview={(b) => setPreviewBook(b)}
                 onToggleWishlist={toggleWishlist}
                 isWishlisted={wishlist.some(w => w.id === book.id)}
@@ -746,7 +751,7 @@ export default function HomePage() {
                 key={book.id}
                 book={book}
                 currency={currency}
-                onSelectBuy={(b) => setBuyingBook(b)}
+                onSelectBuy={startCheckout}
                 onSelectPreview={(b) => setPreviewBook(b)}
                 onToggleWishlist={toggleWishlist}
                 isWishlisted={wishlist.some(w => w.id === book.id)}
@@ -882,7 +887,7 @@ export default function HomePage() {
           onClose={() => setPreviewBook(null)}
           onBuy={(b) => {
             setPreviewBook(null);
-            setBuyingBook(b);
+            startCheckout(b);
           }}
         />
       )}
@@ -902,7 +907,7 @@ export default function HomePage() {
         isOpen={isCommandKOpen}
         onClose={() => setIsCommandKOpen(false)}
         books={BOOK_CATALOG}
-        onSelectBook={(b) => setBuyingBook(b)}
+        onSelectBook={startCheckout}
         onPreviewBook={(b) => setPreviewBook(b)}
       />
 

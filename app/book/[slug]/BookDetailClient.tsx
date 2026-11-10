@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import PaymentModal from '@/components/PaymentModal';
 import ReaderModal from '@/components/ReaderModal';
@@ -43,11 +44,14 @@ interface BookDetailClientProps {
 }
 
 export default function BookDetailClient({ book, relatedBooks }: BookDetailClientProps) {
+  const router = useRouter();
   const { addToCart, items } = useCart();
   const isInCart = items.some((i) => i.bookId === book.id);
   const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
   const [searchQuery, setSearchQuery] = useState('');
   const [isBuying, setIsBuying] = useState(false);
+  const [cartOrder, setCartOrder] = useState<any>(null);
+  const startCheckout = () => router.push(`/checkout?bookId=${encodeURIComponent(book.id)}`);
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -254,7 +258,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                 </button>
 
                 <button
-                  onClick={() => setIsBuying(true)}
+                  onClick={startCheckout}
                   className="py-2.5 px-3 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors shadow-sm"
                 >
                   <Zap className="w-3.5 h-3.5" />
@@ -346,7 +350,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   </button>
 
                   <button
-                    onClick={() => setIsBuying(true)}
+                    onClick={startCheckout}
                     className="py-3 px-4 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-colors shadow-sm"
                   >
                     <Zap className="w-4 h-4" />
@@ -870,12 +874,18 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
           onClose={() => setIsPreviewing(false)}
           onBuy={(b) => {
             setIsPreviewing(false);
-            setIsBuying(true);
+            startCheckout();
           }}
         />
       )}
 
-      <CartDrawer onStartCheckout={() => {}} />
+      {cartOrder && (
+        <PaymentModal
+          initialOrder={cartOrder}
+          onClose={() => setCartOrder(null)}
+        />
+      )}
+      <CartDrawer onStartCheckout={(orderData) => setCartOrder(orderData)} />
     </div>
   );
 }
