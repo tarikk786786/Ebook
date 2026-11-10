@@ -82,46 +82,84 @@ function localCoverCandidates(cleanSlug: string, rawSlug: string, book?: { title
   return out;
 }
 
+function readCoverFile(filePath: string, source: string, filename: string): NextResponse | null {
+  if (!fs.existsSync(filePath)) return null;
+  try {
+    const fileBuffer = fs.readFileSync(filePath);
+    // Tiny / blank stubs
+    if (fileBuffer.length < 4000) return null;
+
+    const ext = path.extname(filename).toLowerCase();
+    const contentType =
+      ext === '.webp'
+        ? 'image/webp'
+        : ext === '.png'
+        ? 'image/png'
+        : ext === '.svg'
+        ? 'image/svg+xml'
+        : 'image/jpeg';
+
+    return new NextResponse(fileBuffer, {
+      status: 200,
+      headers: {
+        'Content-Type': contentType,
+        'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+        'X-Cover-Source': source,
+        'X-Cover-File': filename,
+        'X-Cover-Verified': 'true',
+      },
+    });
+  } catch {
+    return null;
+  }
+}
+
 function readLocalCover(
   cleanSlug: string,
   rawSlug: string,
-  book?: { title?: string; author?: string; coverImage?: string } | null
+  book?: {
+    title?: string;
+    author?: string;
+    coverImage?: string;
+    id?: string;
+    catalogNum?: number | string;
+    ref?: number | string;
+  } | null
 ): NextResponse | null {
   const coversDir = path.join(process.cwd(), 'public', 'covers');
+  const bookCoversDir = path.join(process.cwd(), 'public', 'book-covers');
   const possibleFiles = localCoverCandidates(cleanSlug, rawSlug, book);
 
   for (const filename of possibleFiles) {
-    const filePath = path.join(coversDir, filename);
-    if (!fs.existsSync(filePath)) continue;
-    try {
-      const fileBuffer = fs.readFileSync(filePath);
-      // Tiny files are almost always broken/placeholder stubs
-      if (fileBuffer.length < 4000) continue;
+    const hit = readCoverFile(path.join(coversDir, filename), 'local-public-covers', filename);
+    if (hit) return hit;
+  }
 
-      const ext = path.extname(filename).toLowerCase();
-      const contentType =
-        ext === '.webp'
-          ? 'image/webp'
-          : ext === '.png'
-          ? 'image/png'
-          : ext === '.svg'
-          ? 'image/svg+xml'
-          : 'image/jpeg';
+  // Numeric catalog / manifest IDs from the 86k directory CSV / PDF
+  const numericIds = [
+    book?.catalogNum,
+    book?.ref,
+    typeof book?.id === 'string' ? book.id.replace(/^book-/, '') : undefined,
+    cleanSlug.match(/(\d{2,})$/)?.[1],
+    cleanSlug.match(/^(\d+)$/)?.[1],
+  ]
+    .map((v) => (v == null ? '' : String(v)))
+    .filter((v) => /^\d{1,6}$/.test(v));
 
-      return new NextResponse(fileBuffer, {
-        status: 200,
-        headers: {
-          'Content-Type': contentType,
-          'Cache-Control': 'public, max-age=86400, s-maxage=86400',
-          'X-Cover-Source': 'local-public-covers',
-          'X-Cover-File': filename,
-          'X-Cover-Verified': 'true',
-        },
-      });
-    } catch {
-      // try next candidate
+  for (const id of Array.from(new Set(numericIds))) {
+    for (const ext of ['.jpg', '.jpeg', '.png', '.webp']) {
+      const filename = `${id}${ext}`;
+      const fromCovers = readCoverFile(path.join(coversDir, filename), 'local-public-covers', filename);
+      if (fromCovers) return fromCovers;
+      const fromBookCovers = readCoverFile(
+        path.join(bookCoversDir, filename),
+        'local-book-covers',
+        filename
+      );
+      if (fromBookCovers) return fromBookCovers;
     }
   }
+
   return null;
 }
 

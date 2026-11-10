@@ -1,0 +1,12 @@
+{
+  "parsed": 86260,
+  "verifiedCovers": 18556,
+  "fetchedOk": 25,
+  "fetchAttempted": 400,
+  "masterPatch": {
+    "part1": 43168,
+    "part2": 43092,
+    "coverSet": 18556
+  },
+  "seconds": 140.8
+}

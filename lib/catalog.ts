@@ -789,15 +789,24 @@ function getDirectoryOverlay(): Map<string, any> {
     if (typeof window === "undefined") {
       const fs = eval("require('fs')");
       const path = eval("require('path')");
-      // Slim verified cover/detail map (exact matches only) — avoids loading 36MB directory JSON
-      const coverMapPath = path.resolve(process.cwd(), "data", "catalog", "cover_map_from_pdfs.json");
-      if (fs.existsSync(coverMapPath)) {
+      // Slim verified cover/detail maps — PDF/CSV/list matches + numbered book-covers
+      for (const mapName of [
+        "cover_map_from_pdfs.json",
+        "cover_map_from_book_covers.json",
+        "cover_map_from_pdf_list.json",
+      ]) {
+        const coverMapPath = path.resolve(process.cwd(), "data", "catalog", mapName);
+        if (!fs.existsSync(coverMapPath)) continue;
         const payload = JSON.parse(fs.readFileSync(coverMapPath, "utf8"));
         const map = payload.map || {};
         for (const [slug, entry] of Object.entries(map)) {
-          cachedDirectoryOverlay!.set(slug, entry as any);
+          const prev = cachedDirectoryOverlay!.get(slug) || {};
+          cachedDirectoryOverlay!.set(slug, { ...prev, ...(entry as any) });
           const catalogNum = (entry as any)?.catalogNum;
-          if (catalogNum != null) cachedDirectoryOverlay!.set(`ref:${catalogNum}`, entry as any);
+          if (catalogNum != null) {
+            const prevRef = cachedDirectoryOverlay!.get(`ref:${catalogNum}`) || {};
+            cachedDirectoryOverlay!.set(`ref:${catalogNum}`, { ...prevRef, ...(entry as any) });
+          }
         }
       }
       // Curated masterclasses still loaded for rich PDP fields (price/pages/author)
