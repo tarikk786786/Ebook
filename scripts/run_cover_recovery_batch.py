@@ -226,10 +226,18 @@ def export_index(conn: sqlite3.Connection) -> None:
         if slug:
             mapping[slug] = entry
     EXPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    EXPORT_PATH.write_text(
-        json.dumps({"map": mapping, "count": len(rows)}, separators=(",", ":"), ensure_ascii=False),
-        encoding="utf-8",
-    )
+    payload = json.dumps({"map": mapping, "count": len(rows)}, separators=(",", ":"), ensure_ascii=False)
+    tmp = EXPORT_PATH.with_suffix(".json.tmp")
+    tmp.write_text(payload, encoding="utf-8")
+    for attempt in range(5):
+        try:
+            tmp.replace(EXPORT_PATH)
+            break
+        except OSError:
+            time.sleep(0.4 * (attempt + 1))
+    else:
+        # Last resort: keep .tmp beside target so website can still be pointed later
+        log(f"WARN: could not replace {EXPORT_PATH.name}; left {tmp.name}")
     log(f"Exported index count={len(rows)} -> {EXPORT_PATH.name}")
 
 

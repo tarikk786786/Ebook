@@ -1,22 +1,22 @@
 {
   "total": 86260,
-  "installed_or_linked": 24247,
-  "missing": 62013,
-  "review": 251,
-  "failed": 0,
-  "duplicate_groups": 492,
+  "installed_or_linked": 12054,
+  "missing": 74206,
+  "review": 319,
+  "failed": 123,
+  "duplicate_groups": 412,
   "by_status": {
-    "not_found": 862,
-    "found": 24247,
-    "pending": 61151
+    "found": 12054,
+    "pending": 73446,
+    "not_found": 760
   },
   "by_source": {
-    "local-disk": 23745,
-    "pymupdf-pdf": 97,
+    "local-disk": 11529,
+    "pymupdf-pdf": 96,
     "epub-opf-zipfile": 1,
-    "local-pdf-render": 153,
+    "local-pdf-render": 109,
     "open-library": 25,
-    "internet-archive": 226
+    "internet-archive": 294
   },
   "files": {
     "ebook_cover_results.csv": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\data\\reports\\ebook_cover_results.csv",

@@ -404,11 +404,11 @@ def seed_db(conn: sqlite3.Connection, books: list[dict]) -> None:
     local_updates = []
     for b in books:
         n = b["catalog_num"]
+        # Only seed from catalog-number filenames to avoid ambiguous slug collisions.
         local = COVERS_DIR / f"{n}.jpg"
-        slug_local = COVERS_DIR / f"{b['slug']}.jpg"
         book_cover = ROOT / "public" / "book-covers" / f"{n}.jpg"
         chosen = None
-        for candidate in (local, slug_local, book_cover):
+        for candidate in (local, book_cover):
             if candidate.exists() and candidate.stat().st_size >= 4000:
                 chosen = candidate
                 break
