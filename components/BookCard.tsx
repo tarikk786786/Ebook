@@ -19,7 +19,8 @@ import {
 function resolveCoverSrc(book: Book): string {
   // Always route through /api/covers so Open Library can replace dark synthetic local JPGs.
   // Authentic scans still win inside the API when coverType === AUTHENTIC.
-  return `/api/covers/${book.slug}`;
+  // ?v=2 busts CDN cache of earlier synthetic SVG responses.
+  return `/api/covers/${book.slug}?v=2`;
 }
 
 interface BookCardProps {
@@ -50,10 +51,10 @@ export default function BookCard({
   }, [book.id, book.slug, book.coverImage]);
 
   const handleImageError = () => {
-    const apiFallback = `/api/covers/${book.slug}`;
+    const apiFallback = `/api/covers/${book.slug}?v=2`;
     const standardFallback = '/covers/standard-shelf-cover.jpg';
 
-    if (imgSrc !== apiFallback) {
+    if (!imgSrc.includes('/api/covers/')) {
       setImgSrc(apiFallback);
     } else if (imgSrc !== standardFallback) {
       setImgSrc(standardFallback);

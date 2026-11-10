@@ -277,7 +277,7 @@ export async function GET(
     status: 200,
     headers: {
       'Content-Type': 'image/svg+xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+      'Cache-Control': 'public, max-age=60, s-maxage=60',
       'X-Cover-Source': 'synthetic-svg',
       'X-Cover-Verified': 'false',
     },
