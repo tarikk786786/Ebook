@@ -3,8 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { BookOpen, ShieldCheck, Heart, ArrowUpRight } from 'lucide-react';
+import { getSupportEmail } from '@/lib/site';
 
 export default function Footer() {
+  const supportEmail = getSupportEmail();
   return (
     <footer className="border-t border-[#E8E4DC] bg-[#1C1917] text-[#E7E5E4] font-sans">
       {/* Editorial Mission Statement Bar */}
@@ -126,8 +128,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:apnix7@gmail.com" className="text-[#FAF6F1] hover:text-[#9A704B] transition-colors flex items-center gap-1 font-medium">
-                  <span>Support: apnix7@gmail.com</span>
+                <a href={`mailto:${supportEmail}`} className="text-[#FAF6F1] hover:text-[#9A704B] transition-colors flex items-center gap-1 font-medium">
+                  <span>Support: {supportEmail}</span>
                 </a>
               </li>
               <li>

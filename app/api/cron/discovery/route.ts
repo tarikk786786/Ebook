@@ -12,14 +12,21 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const querySecret = searchParams.get('secret');
 
-    const expectedCronSecret = process.env.CRON_SECRET || 'anontrove_cron_sec_8849b2f1e0d3c5a79b1e4f6a';
-    const expectedAdminSecret = process.env.ADMIN_ACCESS_SECRET || 'anontrove_sec_9942a78f0b1e4c62d5a3b79e180d4f6a9c1e2b4d6f8a0e2';
+    const expectedCronSecret = process.env.CRON_SECRET;
+    const expectedAdminSecret = process.env.ADMIN_ACCESS_SECRET;
 
-    const isAuthorized = 
-      authHeader === `Bearer ${expectedCronSecret}` ||
-      adminToken === expectedAdminSecret ||
-      querySecret === expectedCronSecret ||
-      querySecret === expectedAdminSecret;
+    if (!expectedCronSecret && !expectedAdminSecret) {
+      return NextResponse.json(
+        { success: false, error: 'Cron/admin secrets are not configured' },
+        { status: 503 }
+      );
+    }
+
+    const isAuthorized =
+      Boolean(expectedCronSecret && authHeader === `Bearer ${expectedCronSecret}`) ||
+      Boolean(expectedAdminSecret && adminToken === expectedAdminSecret) ||
+      Boolean(expectedCronSecret && querySecret === expectedCronSecret) ||
+      Boolean(expectedAdminSecret && querySecret === expectedAdminSecret);
 
     if (!isAuthorized) {
       return NextResponse.json({ success: false, error: 'Unauthorized cron invocation' }, { status: 401 });

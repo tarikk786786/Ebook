@@ -10,12 +10,14 @@ import {
   Headphones, 
   Cpu 
 } from 'lucide-react';
+import { getSupportEmail } from '@/lib/site';
 
 interface Props {
   condensed?: boolean;
 }
 
 export default function ServiceFeeBreakdown({ condensed = false }: Props) {
+  const supportEmail = getSupportEmail();
   const categories = [
     {
       icon: Database,
@@ -50,7 +52,7 @@ export default function ServiceFeeBreakdown({ condensed = false }: Props) {
     {
       icon: Headphones,
       title: 'Reader Support & Ethics',
-      desc: 'Dedicated customer support (apnix7@gmail.com), prompt rights review handling, and continual platform maintenance.'
+      desc: `Dedicated customer support (${supportEmail}), prompt rights review handling, and continual platform maintenance.`
     }
   ];
 

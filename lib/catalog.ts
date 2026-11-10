@@ -1,6 +1,7 @@
 import demandedBooks from '@/data/demanded_books_registry.json';
 import rawDynamicBooks from '@/data/books_registry.json';
 import enrichedStartupBooks from '@/data/enriched_1000_books.json';
+import curatedMasterclassesPdf from '@/data/catalog/curated_masterclasses_from_pdf.json';
 
 export interface Book {
   id: string;
@@ -599,6 +600,58 @@ function compileBookCatalog(): Book[] {
     }
   }
   
+  // 3b. Curated Masterclasses PDF catalogue (price/pages/author/file + matched public/covers)
+  const curatedPdfBooks = ((curatedMasterclassesPdf as any)?.books || []) as any[];
+  if (Array.isArray(curatedPdfBooks)) {
+    for (const cb of curatedPdfBooks) {
+      if (!cb?.id) continue;
+      const existing = idMap.get(cb.id) || Array.from(idMap.values()).find((b) => b.slug === cb.slug);
+      const merged: Book = {
+        id: cb.id,
+        slug: cb.slug,
+        title: cb.title,
+        subtitle: existing?.subtitle || 'Curated Masterclass Edition',
+        author: cb.author || existing?.author || 'AnonTrove Guild',
+        description: cb.description || existing?.description || `${cb.title} — DRM-free curated edition.`,
+        priceInInr: Number(cb.priceInInr) || existing?.priceInInr || 49,
+        originalPriceInInr: Number(cb.originalPriceInInr) || existing?.originalPriceInInr || 199,
+        pages: Number(cb.pages) || existing?.pages || 120,
+        format: existing?.format || 'PDF (DRM-Free)',
+        fileSize: cb.fileSize && cb.fileSize !== '—' ? cb.fileSize : (existing?.fileSize || '—'),
+        category: cb.category || existing?.category || 'Curated Masterclasses',
+        badge: cb.badge || existing?.badge,
+        rating: existing?.rating || 4.8,
+        reviewCount: existing?.reviewCount || 48,
+        readingTime: `${Math.max(1, Math.round((Number(cb.pages) || 120) / 35))} hrs`,
+        edition: 'Curated Masterclass Edition',
+        coverImage: cb.coverVerified && cb.coverImage
+          ? cb.coverImage
+          : (existing?.coverImage && !existing.coverImage.includes('standard-shelf-cover')
+            ? existing.coverImage
+            : cb.coverImage || `/api/covers/${cb.slug}`),
+        sampleExcerpt: existing?.sampleExcerpt || [
+          `${cb.title} by ${cb.author || 'AnonTrove Guild'}.`,
+          cb.note || 'DRM-free curated masterclass edition with instant delivery.',
+          'Sourced from the AnonTrove Curated Masterclasses Catalog.',
+        ],
+        tableOfContents: existing?.tableOfContents || [
+          'Part I: Foundations',
+          'Part II: Core Frameworks',
+          'Part III: Practical Application',
+          'Part IV: Reference & Takeaways',
+        ],
+        fileName: cb.fileName || existing?.fileName || `${cb.slug}.pdf`,
+        status: 'PUBLISHED',
+        isLatest: true,
+        collection: 'LATEST_STARTUP',
+        primaryResourceType: 'published_ebook',
+        coverType: cb.coverVerified ? 'AUTHENTIC' : (existing?.coverType || 'CUSTOM_ARTWORK'),
+        listingStatus: 'APPROVED_FOR_SALE',
+      };
+      idMap.set(merged.id, merged);
+    }
+  }
+
   // 3. All 17,085 harvested ebooks from dual Telegram accounts & archive
   if (Array.isArray(rawDynamicBooks)) {
     for (const b of (rawDynamicBooks as unknown as Book[])) {
@@ -705,6 +758,47 @@ function expandToBook(item: any): Book {
 }
 
 let cachedMasterIndex: any[] | null = null;
+let cachedDirectoryOverlay: Map<string, any> | null = null;
+
+function getDirectoryOverlay(): Map<string, any> {
+  if (cachedDirectoryOverlay) return cachedDirectoryOverlay;
+  cachedDirectoryOverlay = new Map();
+  try {
+    if (typeof window === "undefined") {
+      const fs = eval("require('fs')");
+      const path = eval("require('path')");
+      const dirPath = path.resolve(process.cwd(), "data", "catalog", "directory_86k_from_pdf.json");
+      if (fs.existsSync(dirPath)) {
+        const payload = JSON.parse(fs.readFileSync(dirPath, "utf8"));
+        for (const entry of payload.books || []) {
+          if (entry?.slug) cachedDirectoryOverlay.set(entry.slug, entry);
+        }
+      }
+    }
+  } catch {}
+  return cachedDirectoryOverlay;
+}
+
+function applyDirectoryOverlay(book: Book): Book {
+  const overlay = getDirectoryOverlay().get(book.slug);
+  if (!overlay) return book;
+  const next = { ...book };
+  if (overlay.category && (!book.category || book.category === "General & Technical Reference")) {
+    next.category = overlay.category;
+  }
+  if (
+    overlay.coverVerified &&
+    overlay.coverImage &&
+    (!book.coverImage ||
+      book.coverImage.includes("standard-shelf-cover") ||
+      book.coverImage.startsWith("/api/covers/"))
+  ) {
+    next.coverImage = overlay.coverImage;
+    next.coverType = "AUTHENTIC";
+  }
+  return next;
+}
+
 function getMaster86kList(): any[] {
   if (cachedMasterIndex) return cachedMasterIndex;
   try {
@@ -731,28 +825,28 @@ function getMaster86kList(): any[] {
 
 export function getBookById(id: string): Book | undefined {
   const found = BOOK_CATALOG.find((b) => b.id === id || b.slug === id);
-  if (found) return found;
+  if (found) return applyDirectoryOverlay(found);
   if (Array.isArray(rawDynamicBooks)) {
     const rawMatch = (rawDynamicBooks as unknown as Book[]).find((b) => b.id === id || b.slug === id);
-    if (rawMatch) return rawMatch;
+    if (rawMatch) return applyDirectoryOverlay(rawMatch);
   }
   const masterList = getMaster86kList();
   const masterMatch = masterList.find((b: any) => b.id === id || b.slug === id);
-  if (masterMatch) return expandToBook(masterMatch);
+  if (masterMatch) return applyDirectoryOverlay(expandToBook(masterMatch));
 
   return undefined;
 }
 
 export function getBookBySlug(slug: string): Book | undefined {
   const found = BOOK_CATALOG.find((b) => b.slug === slug || b.id === ("book-" + slug));
-  if (found) return found;
+  if (found) return applyDirectoryOverlay(found);
   if (Array.isArray(rawDynamicBooks)) {
     const rawMatch = (rawDynamicBooks as unknown as Book[]).find((b) => b.slug === slug || b.id === ("book-" + slug));
-    if (rawMatch) return rawMatch;
+    if (rawMatch) return applyDirectoryOverlay(rawMatch);
   }
   const masterList = getMaster86kList();
   const masterMatch = masterList.find((b: any) => b.slug === slug || b.id === ("book-" + slug) || b.id === slug);
-  if (masterMatch) return expandToBook(masterMatch);
+  if (masterMatch) return applyDirectoryOverlay(expandToBook(masterMatch));
 
   return undefined;
 }

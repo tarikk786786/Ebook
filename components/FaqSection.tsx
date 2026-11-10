@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, Shield, BookOpen, Lock, RefreshCcw, HelpCircle, Heart, Scale } from 'lucide-react';
+import { getSupportEmail } from '@/lib/site';
 
 interface FaqItem {
   question: string;
@@ -9,7 +10,8 @@ interface FaqItem {
   icon: any;
 }
 
-const FAQS: FaqItem[] = [
+function buildFaqs(supportEmail: string): FaqItem[] {
+  return [
   {
     icon: Heart,
     question: 'Why are books so cheap (₹9 to ₹29), and am I buying copyright ownership?',
@@ -20,7 +22,7 @@ const FAQS: FaqItem[] = [
     icon: Scale,
     question: 'What is your copyright, takedown, and DMCA transparency procedure?',
     answer:
-      'We operate with 100% transparency. We do not claim ownership of third-party publications. All intellectual property remains with the original creators and publishers. If you are an author, copyright holder, or publisher and wish to have a title reviewed, updated, or removed, our designated agent responds within 24 hours at apnix7@gmail.com with zero resistance.',
+      `We operate with 100% transparency. We do not claim ownership of third-party publications. All intellectual property remains with the original creators and publishers. If you are an author, copyright holder, or publisher and wish to have a title reviewed, updated, or removed, our designated agent responds within 24 hours at ${supportEmail} with zero resistance.`,
   },
   {
     icon: BookOpen,
@@ -50,12 +52,14 @@ const FAQS: FaqItem[] = [
     icon: HelpCircle,
     question: 'What is your refund and satisfaction policy?',
     answer:
-      'We offer a 100% money-back satisfaction guarantee. If an ebook file fails to open, is corrupted, or does not match its catalog description, contact our support team at apnix7@gmail.com within 7 days for an immediate refund or replacement.',
+      `We offer a 100% money-back satisfaction guarantee. If an ebook file fails to open, is corrupted, or does not match its catalog description, contact our support team at ${supportEmail} within 7 days for an immediate refund or replacement.`,
   },
-];
+  ];
+}
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const faqs = buildFaqs(getSupportEmail());
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -77,7 +81,7 @@ export default function FaqSection() {
         </div>
 
         <div className="space-y-3">
-          {FAQS.map((faq, idx) => {
+          {faqs.map((faq, idx) => {
             const Icon = faq.icon;
             const isOpen = openIndex === idx;
 

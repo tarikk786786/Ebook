@@ -3,8 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { Clock, Server, BookOpen, CheckCircle2, Heart, ShieldCheck, ArrowRight } from 'lucide-react';
+import { getSupportEmail } from '@/lib/site';
 
 export default function CuratorLetterSection() {
+  const supportEmail = getSupportEmail();
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 my-12">
       <div className="bg-[#1C1A17] border border-[#38352F] rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8 relative overflow-hidden">
@@ -94,7 +96,7 @@ export default function CuratorLetterSection() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-[#78716C] pt-2 border-t border-[#38352F]/80 gap-3 relative z-10">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
-            <span>Transparent Zero-Deception Guarantee • Dedicated Reader Support: apnix7@gmail.com</span>
+            <span>Transparent Zero-Deception Guarantee • Dedicated Reader Support: {supportEmail}</span>
           </div>
           <div className="flex items-center gap-4">
             <Link

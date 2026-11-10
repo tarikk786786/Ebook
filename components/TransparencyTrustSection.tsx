@@ -3,8 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Scale, ShieldCheck, Mail, CheckCircle2 } from 'lucide-react';
+import { getSupportEmail } from '@/lib/site';
 
 export default function TransparencyTrustSection() {
+  const supportEmail = getSupportEmail();
   const commitments = [
     {
       num: '01',
@@ -39,7 +41,7 @@ export default function TransparencyTrustSection() {
     {
       num: '07',
       title: 'Prompt 24-Hour DMCA / Rights Review',
-      desc: 'We maintain an active direct contact channel (apnix7@gmail.com) for authors and publishers to request instant review, correction, or removal.'
+      desc: `We maintain an active direct contact channel (${supportEmail}) for authors and publishers to request instant review, correction, or removal.`
     },
     {
       num: '08',
@@ -93,11 +95,11 @@ export default function TransparencyTrustSection() {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="mailto:apnix7@gmail.com"
+              href={`mailto:${supportEmail}`}
               className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors flex items-center gap-1 font-mono text-[11px]"
             >
               <Mail className="w-3.5 h-3.5 text-[#9A704B]" />
-              <span>apnix7@gmail.com</span>
+              <span>{supportEmail}</span>
             </a>
             <Link
               href="/copyright"

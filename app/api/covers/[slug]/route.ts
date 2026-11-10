@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { getBookBySlug, getBookById } from '@/lib/catalog';
+import { OpenLibraryProvider } from '@/lib/discovery/providers/openlibrary';
 
 export const dynamic = 'force-dynamic';
 
@@ -50,6 +51,8 @@ export async function GET(
           headers: {
             'Content-Type': contentType,
             'Cache-Control': 'public, max-age=31536000, immutable',
+            'X-Cover-Source': 'local-public-covers',
+            'X-Cover-Verified': 'true',
           },
         });
       } catch (err) {
@@ -60,6 +63,43 @@ export async function GET(
 
   // 2. Lookup book metadata from catalog or dynamic registries
   const book = getBookBySlug(cleanSlug) || getBookById(cleanSlug) || getBookById(`book-${cleanSlug}`);
+
+  // 2b. Prefer Open Library cover when ISBN/title is known (free, no API key)
+  try {
+    const isbn = book?.isbn13 || book?.isbn10 || book?.isbn;
+    let coverUrl: string | null = null;
+    if (isbn) {
+      coverUrl = `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-L.jpg`;
+    } else if (book?.title) {
+      const query = `${book.title} ${book.author || ''}`.trim();
+      const docs = await OpenLibraryProvider.searchBooks(query, 3);
+      const withCover = docs.find((d) => d.cover_i || d.cover_id);
+      coverUrl = OpenLibraryProvider.getCoverUrl(withCover?.cover_i || withCover?.cover_id || null, 'L');
+    }
+    if (coverUrl) {
+      const upstream = await fetch(coverUrl, {
+        headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' },
+        next: { revalidate: 86400 },
+      });
+      if (upstream.ok) {
+        const buf = Buffer.from(await upstream.arrayBuffer());
+        // Open Library returns a 1x1 GIF for missing covers — reject tiny payloads
+        if (buf.length > 2500) {
+          return new NextResponse(buf, {
+            status: 200,
+            headers: {
+              'Content-Type': upstream.headers.get('content-type') || 'image/jpeg',
+              'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+              'X-Cover-Source': 'open-library',
+              'X-Cover-Verified': 'review-required',
+            },
+          });
+        }
+      }
+    }
+  } catch {
+    // Fall through to synthetic SVG
+  }
 
   const title = escapeXml(book?.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());
   const author = escapeXml(book?.author || 'AnonTrove Editorial Guild');
@@ -164,6 +204,8 @@ export async function GET(
     headers: {
       'Content-Type': 'image/svg+xml; charset=utf-8',
       'Cache-Control': 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800',
+      'X-Cover-Source': 'synthetic-svg',
+      'X-Cover-Verified': 'false',
     },
   });
 }

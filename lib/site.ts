@@ -41,3 +41,18 @@ export function getSiteUrl(): string {
 export function getSiteMetadataBase(): URL {
   return new URL(getSiteUrl());
 }
+
+/** Public support contact — safe for client via NEXT_PUBLIC_SUPPORT_EMAIL. */
+export function getSupportEmail(): string {
+  const candidates = [
+    process.env.NEXT_PUBLIC_SUPPORT_EMAIL,
+    process.env.SUPPORT_EMAIL,
+    'apnix7@gmail.com',
+  ];
+  for (const candidate of candidates) {
+    if (!candidate || typeof candidate !== 'string') continue;
+    const trimmed = candidate.trim();
+    if (trimmed.includes('@')) return trimmed;
+  }
+  return 'apnix7@gmail.com';
+}

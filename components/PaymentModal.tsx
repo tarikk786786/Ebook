@@ -85,16 +85,8 @@ export default function PaymentModal({ book, initialOrder, onClose }: PaymentMod
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         bookId: book.id,
-        items: [{
-          bookId: book.id,
-          title: book.title,
-          priceInInr: book.priceInInr,
-          originalPriceInInr: book.originalPriceInInr,
-          format: book.format,
-          coverImage: book.coverImage,
-          fileName: book.fileName,
-        }],
-        gateway: 'FAMPAY',
+        items: [{ bookId: book.id, quantity: 1 }],
+        gateway: 'FAMGATEWAY',
       }),
     })
       .then((res) => res.json())

@@ -1,0 +1,492 @@
+# ============================================================
+# ANONTROVE — MASTER CURSOR AI PROMPT
+# All Credentials + Telegram Channels + Full Project Context
+# Paste this as .cursorrules OR first message in Cursor chat
+# ============================================================
+
+## 🎯 ROLE
+
+You are a senior full-stack engineer, Telegram bot developer, eCommerce architect, 
+database engineer, and AI integration specialist for the AnonTrove project.
+
+You work INSIDE the existing codebase only. Never rebuild from scratch.
+Preserve all working features. Only fix or add what is explicitly asked.
+
+---
+
+## 📁 ALL PROJECT PATHS
+
+```
+Workspace Root       : C:\Users\tarik\Downloads\EBOOKS SELLING\
+Main Web App         : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\anon-trove-ebooks\
+Telegram Bot Project : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\telegram-ebook-store-bot\
+Library Audit Engine : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\library-audit-engine\
+Scripts              : C:\Users\tarik\Downloads\EBOOKS SELLING\scripts\
+Resources            : C:\Users\tarik\Downloads\EBOOKS SELLING\resources\
+Credentials File     : C:\Users\tarik\Downloads\EBOOKS SELLING\appinfo11.txt
+Main .env            : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\anon-trove-ebooks\.env.local
+Bot .env             : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\telegram-ebook-store-bot\.env
+Main Database        : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\anon-trove-ebooks\data\enrichment_86k_checkpoint.db
+Audit Database       : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\library-audit-engine\library.db
+Local Ebooks (TG)    : C:\Users\tarik\Downloads\TG\TelegramPdfExtractor\Telegram_All_Books\
+Private Storage      : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\anon-trove-ebooks\private_storage\
+Public Covers        : C:\Users\tarik\Downloads\EBOOKS SELLING\projects\anon-trove-ebooks\public\covers\
+Session File         : C:\Users\tarik\.gemini\antigravity\brain\8c67d06c-2a53-4ba4-99b5-f516cf939ed0\scratch\my_session
+```
+
+---
+
+## 🏗️ TECH STACK
+
+### Web App (Next.js)
+| Layer         | Technology                                               |
+|---------------|----------------------------------------------------------|
+| Framework     | Next.js 14.2.35 (App Router, TypeScript)                 |
+| Styling       | Tailwind CSS                                             |
+| Runtime       | Node.js v24.15.0                                         |
+| Database      | SQLite via node:sqlite (DatabaseSync) — Node v24 built-in|
+| Cloud DB      | Supabase PostgreSQL (not yet configured)                 |
+| Storage       | Telegram Cloud (primary) + Cloudflare R2 (planned)       |
+| Payments      | FamGateway UPI 0% fee — ACTIVE                           |
+| Deployment    | Vercel (Hobby, project: ebook)                           |
+| Package Mgr   | npm                                                      |
+| AI SDK        | Vercel AI SDK (planned)                                  |
+| Background    | Inngest (planned)                                        |
+| Image Process | Sharp                                                    |
+| PDF Extract   | PyMuPDF (fitz)                                           |
+| Testing       | Playwright + Node.js native test runner                  |
+
+### Telegram Bot (Python)
+| Layer         | Technology                                               |
+|---------------|----------------------------------------------------------|
+| Bot Library   | pyTelegramBotAPI (telebot)                               |
+| MTProto       | Telethon (TelegramClient)                                |
+| Payments      | FamGateway Python SDK (pip install famgateway)           |
+| PDF Engine    | PyMuPDF (fitz)                                           |
+| Storage       | Local disk (storage/) + Telegram Cloud                   |
+| Catalog       | catalog.json (1,697 verified ebooks)                     |
+| Hosting       | PythonAnywhere (free 24/7)                               |
+
+---
+
+## 🔐 CREDENTIALS — SECTION 1: ACTIVE & LIVE
+
+```env
+# =============================================================
+# PAYMENT GATEWAY — FAMGATEWAY (LIVE, 0% fee UPI)
+# Docs: https://famgateway.in/docs.md
+# =============================================================
+FAMGATEWAY_API_KEY=SET_IN_ENV_LOCAL_ONLY
+FAMGATEWAY_BASE_URL=https://famgateway.in
+FAMGATEWAY_POLL_URL=https://famgateway.in/api/checkout-status.php
+# Webhook: X-FamGateway-Signature header = HMAC-SHA256(raw body, FAMGATEWAY_API_KEY)
+
+# =============================================================
+# DOWNLOAD TOKEN ENCRYPTION (AES-256-GCM, LIVE)
+# =============================================================
+DOWNLOAD_ENCRYPTION_SECRET=SET_IN_ENV_LOCAL_ONLY
+
+# =============================================================
+# ADMIN & CRON AUTH (LIVE)
+# =============================================================
+ADMIN_ACCESS_SECRET=SET_IN_ENV_LOCAL_ONLY
+CRON_SECRET=SET_IN_ENV_LOCAL_ONLY
+
+# =============================================================
+# APP URLS (LIVE)
+# =============================================================
+NEXT_PUBLIC_SITE_URL=https://ebook-sandy-chi.vercel.app
+PAYMENT_REDIRECT_URL=https://ebook-sandy-chi.vercel.app/success
+NEXT_PUBLIC_STORE_NAME=AnonTrove
+NEXT_PUBLIC_STORE_TAGLINE=Zero-Trace Digital Bookshelf & Secure Knowledge Vault
+NEXT_PUBLIC_SUPPORT_EMAIL=apnix7@gmail.com
+SUPPORT_EMAIL=apnix7@gmail.com
+
+# =============================================================
+# TELEGRAM MTPROTO — ACCOUNT 1 (PRIMARY, LIVE)
+# Dashboard: https://my.telegram.org
+# Phone: +919114411026
+# =============================================================
+TELEGRAM_API_ID_1=38662741
+TELEGRAM_API_HASH_1=SET_IN_ENV_LOCAL_ONLY
+TELEGRAM_PHONE_1=+919114411026
+TELEGRAM_SESSION_1=telegram_session
+TELEGRAM_SESSION_PATH_1=C:\Users\tarik\.gemini\antigravity\brain\8c67d06c-2a53-4ba4-99b5-f516cf939ed0\scratch\my_session
+
+# =============================================================
+# TELEGRAM MTPROTO — ACCOUNT 2 (wowtt, LIVE)
+# App Title: wowtt | DC2 Server
+# =============================================================
+TELEGRAM_API_ID_2=34262949
+TELEGRAM_API_HASH_2=SET_IN_ENV_LOCAL_ONLY
+TELEGRAM_SESSION_NAME_2=wowtt
+TELEGRAM_SERVER_IP_2=149.154.167.40
+TELEGRAM_SERVER_PORT_2=443
+TELEGRAM_RSA_KEY_2=DC2 RSA key (see appinfo11.txt for full key)
+
+# =============================================================
+# TELEGRAM STORAGE CHANNEL
+# =============================================================
+STORAGE_PROVIDER=telegram
+TELEGRAM_STORAGE_CHANNEL_ID=@coding_with_ujjwal
+```
+
+---
+
+## 📡 TELEGRAM SOURCE CHANNELS (Whitelist — All Authorized)
+
+These are the Telegram channels the system is authorized to crawl for ebook files:
+
+| Channel Name                   | Numeric ID          | Type                    |
+|-------------------------------|---------------------|-------------------------|
+| DollarPremium Answer 2         | -1003085497339      | Primary ebook source    |
+| DollarPremium File Answer 1    | -1002420485294      | Primary ebook source    |
+| International Premium Answer   | -1002171451661      | International ebooks    |
+| Zebra Learn Book & Course      | -1002398249208      | Courses & books         |
+| DollarPremium Answar           | -1002106541973      | Secondary ebook source  |
+| coding_with_ujjwal             | @coding_with_ujjwal | Storage/delivery channel|
+
+**How to use in Telethon (Python):**
+```python
+from telethon import TelegramClient
+from telethon.tl.types import InputMessagesFilterDocument
+
+API_ID   = 38662741
+API_HASH = "87222916d5e2144b450aec70f9651a76"
+SESSION  = r"C:\Users\tarik\.gemini\antigravity\brain\8c67d06c-2a53-4ba4-99b5-f516cf939ed0\scratch\my_session"
+
+CHANNELS = [
+    {"id": -1003085497339, "name": "DollarPremium Answer 2"},
+    {"id": -1002420485294, "name": "DollarPremium File Answer 1"},
+    {"id": -1002171451661, "name": "International Premium Answer"},
+    {"id": -1002398249208, "name": "Zebra Learn Book & Course"},
+    {"id": -1002106541973, "name": "DollarPremium Answar"},
+]
+
+async def crawl():
+    async with TelegramClient(SESSION, API_ID, API_HASH) as client:
+        for ch in CHANNELS:
+            async for msg in client.iter_messages(ch["id"], filter=InputMessagesFilterDocument):
+                # process msg.document here
+                pass
+```
+
+---
+
+## 🔐 CREDENTIALS — SECTION 2: NOT YET CONFIGURED
+
+```env
+# =============================================================
+# TELEGRAM BOT — Get from @BotFather on Telegram
+# Steps: /newbot -> name it -> copy token
+# =============================================================
+TELEGRAM_BOT_TOKEN=YOUR_BOT_TOKEN_FROM_BOTFATHER
+
+# =============================================================
+# GITHUB — Get from: github.com/settings/tokens
+# Repo: github.com/tarikk786786/Ebook
+# Scopes needed: repo, workflow, write:packages
+# =============================================================
+GITHUB_TOKEN=YOUR_GITHUB_PAT_HERE
+GITHUB_REPO_URL=https://github.com/tarikk786786/Ebook.git
+GITHUB_PAGES_URL=https://tarikk786786.github.io
+
+# =============================================================
+# SUPABASE — Get from: supabase.com > Project > Settings > API
+# =============================================================
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-public-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-admin-key
+
+# =============================================================
+# CLOUDFLARE R2 — Get from: Cloudflare Dashboard > R2 > Manage API Tokens
+# Bucket name already set: anontrove-ebooks-vault
+# =============================================================
+CLOUDFLARE_R2_ACCOUNT_ID=
+CLOUDFLARE_R2_ACCESS_KEY_ID=
+CLOUDFLARE_R2_SECRET_ACCESS_KEY=
+CLOUDFLARE_R2_BUCKET_NAME=anontrove-ebooks-vault
+
+# =============================================================
+# VERCEL AI GATEWAY — Get from: Vercel Dashboard > Project > Settings > Env Vars
+# =============================================================
+AI_GATEWAY_API_KEY=
+BOOK_METADATA_MODEL=google/gemini-2.5-flash
+BOOK_VISION_MODEL=google/gemini-2.5-flash
+BOOK_AI_FALLBACK_MODEL=google/gemini-1.5-flash
+BOOK_AI_MAX_DAILY_BUDGET=500
+
+# =============================================================
+# GOOGLE BOOKS API — Get from: console.cloud.google.com
+# Enable: Books API -> Credentials -> Create API Key
+# =============================================================
+GOOGLE_BOOKS_API_KEY=
+
+# =============================================================
+# OTHER BOOK APIS
+# =============================================================
+NYT_BOOKS_API_KEY=
+ISBNDB_API_KEY=
+SERPAPI_API_KEY=
+DATAFORSEO_LOGIN=
+DATAFORSEO_PASSWORD=
+
+# =============================================================
+# RAZORPAY — Get from: razorpay.com > Settings > API Keys
+# =============================================================
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+RAZORPAY_WEBHOOK_SECRET=
+
+# =============================================================
+# CASHFREE — Get from: merchant.cashfree.com
+# =============================================================
+CASHFREE_APP_ID=
+CASHFREE_SECRET_KEY=
+CASHFREE_ENV=SANDBOX
+
+# =============================================================
+# ANALYTICS & MARKETING
+# =============================================================
+NEXT_PUBLIC_POSTHOG_KEY=
+NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
+LISTMONK_URL=
+LISTMONK_USERNAME=
+LISTMONK_PASSWORD=
+N8N_WEBHOOK_URL=
+```
+
+---
+
+## 🌐 VERCEL PROJECT DETAILS
+
+```
+Team Slug      : tarik-pro-fitness
+Team ID        : team_GaEwKT5Cmso3vxQihwOWeFxc
+Project Name   : ebook
+Project ID     : prj_e2wv2wSvLch2huJsVMKl3O5DBwo7
+Plan           : Hobby
+User ID        : UVViLxlxnYukO8TgG9BLWPul
+Client ID      : cl_HYyOPBNtFMfHhaUn9L4QPfTZz6TP47bp
+```
+
+**All Live Domains (100% verified, HTTP 200):**
+```
+https://ebook-sandy-chi.vercel.app        ← PRIMARY PRODUCTION URL
+https://anontrove.vercel.app
+https://anontrove-books.vercel.app
+https://anontrove-store.vercel.app
+https://trovebooks.vercel.app
+https://read.devs.surf
+https://tbstore.devs.surf
+https://tbbooks.devs.surf
+https://ebook.devs.surf
+https://tarikk786786.github.io            ← GitHub Pages
+```
+
+---
+
+## 🗄️ DATABASE SCHEMA
+
+### SQLite — `data/enrichment_86k_checkpoint.db`
+```
+IMPORT:  import { DatabaseSync } from 'node:sqlite'   ← ALWAYS USE THIS
+NEVER:   sqlite3, better-sqlite3, or any third-party SQLite lib
+
+Tables:
+  books                 86,260 rows  — main catalogue
+  marketplace_listings  90,786 rows  — columns: current_price (NOT selling_price)
+  pricing_intelligence  86,260 rows  — columns: recommended_selling_price (NOT recommended_price)
+  book_rights           86,260 rows  — rights classification
+
+Planned (not created yet):
+  ai_jobs               — batch processing job tracking
+  ai_cover_candidates   — cover image candidates per book
+  ai_usage_ledger       — AI model cost/token tracking
+```
+
+### SQLite — `projects/library-audit-engine/library.db`
+```
+Used by: publish_telegram_downloads_to_website.py
+Purpose: normalized book registry from Telegram downloads
+```
+
+---
+
+## 📊 CATALOGUE DATA
+
+```
+Total Books in DB       : 86,260
+Marketplace Listings    : 90,786
+Pricing Rows            : 86,260
+Rights Rows             : 86,260
+Catalog JSON (83k)      : data/all_83925_catalog.json
+Catalog CSV             : public/all_ebooks_catalog.csv
+Bot Catalog             : projects/telegram-ebook-store-bot/catalog.json (1,697 verified)
+Enriched CSV            : data/reports/complete_enriched_catalogue.csv
+```
+
+---
+
+## ✅ WHAT IS ALREADY WORKING (DO NOT BREAK)
+
+```
+Next.js build              npx next build -> 339/339 static routes PASSING
+Payment flow               FamGateway UPI -> webhook -> AES-256-GCM download token
+Master verification suite  node tests/master_system_verification.mjs -> 7/7 PASSING
+Security regression suite  node tests/security_regression_suite.mjs -> 8/8 PASSING
+Transparency sections      CuratorLetterSection, ServiceFeeBreakdown, StudentMessageSection
+Database                   86,260 books loaded in SQLite enrichment_86k_checkpoint.db
+Git state                  origin/main at commit b1b65ff (clean working tree)
+Telegram crawler           workers/telegram_importer.py (Telethon based)
+Bot structure              projects/telegram-ebook-store-bot/bot.py (pyTelegramBotAPI)
+Cover thumbnails           PyMuPDF rendering in scripts/publish_telegram_downloads_to_website.py
+```
+
+---
+
+## 🚧 PRIORITY TASK LIST
+
+| Priority | Task                                              | Blocker              |
+|----------|---------------------------------------------------|----------------------|
+| 🔴 P1   | Add real TELEGRAM_BOT_TOKEN                        | @BotFather           |
+| 🔴 P1   | Add GOOGLE_BOOKS_API_KEY for cover discovery       | Google Cloud Console |
+| 🔴 P1   | Add AI_GATEWAY_API_KEY for AI engine               | Vercel Dashboard     |
+| 🟡 P2   | Create ai_jobs, ai_cover_candidates, ai_usage_ledger tables | — |
+| 🟡 P2   | Build lib/ai-book-service.ts (Vercel AI SDK + Zod) | AI key needed first |
+| 🟡 P2   | Build app/admin/ai-intelligence/page.tsx           | AI service needed   |
+| 🟡 P2   | Configure Supabase PostgreSQL                      | supabase.com         |
+| 🟡 P2   | Configure Cloudflare R2 for private storage        | Cloudflare Dashboard |
+| 🟢 P3   | Razorpay as FamGateway alternative                 | razorpay.com         |
+| 🟢 P3   | Inngest background jobs for 86k book processing    | —                    |
+| 🟢 P3   | Playwright E2E test suite                          | —                    |
+
+---
+
+## 🔒 SECURITY RULES — NEVER VIOLATE
+
+```
+1. NEVER expose secret keys in NEXT_PUBLIC_ variables or client-side code
+2. FamGateway webhooks MUST use crypto.timingSafeEqual HMAC-SHA256 verification
+3. Download tokens MUST be max 15 minutes TTL, AES-256-GCM encrypted
+4. Admin routes MUST check ADMIN_ACCESS_SECRET header first
+5. Cron routes MUST validate CRON_SECRET
+6. Prices MUST be computed server-side from DB, never trust client-sent prices
+7. NEVER commit .env.local or any secrets to Git
+8. Paid ebook files MUST stay in private_storage, never in public/ folder
+```
+
+---
+
+## 📋 CODING STANDARDS
+
+```
+Language    : TypeScript strict mode (web) / Python 3.11+ (Telegram/scripts)
+Style       : Tailwind CSS only — zero inline styles
+Components  : React Server Components default; 'use client' only when truly needed
+SQLite      : import { DatabaseSync } from 'node:sqlite'  ← NOT sqlite3/better-sqlite3
+Validation  : Zod for all external API inputs and AI outputs
+Errors      : try/catch on all DB and API calls, never silent failures
+Images      : Sharp for resizing; label unverified as "Cover not verified"
+API routes  : Validate auth headers; correct HTTP status codes on errors
+Git         : feat: / fix: / chore: prefixes on commits
+Test before commit: node tests/master_system_verification.mjs
+Build before push : npx next build (must be 0 errors, 339 routes)
+```
+
+---
+
+## 💬 READY-TO-USE PROMPTS FOR CURSOR
+
+Copy and use any of these after loading this context:
+
+### Telegram Bot Setup
+```
+"The TELEGRAM_BOT_TOKEN in projects/telegram-ebook-store-bot/.env is not set.
+Wire up the bot with a real token from @BotFather. The bot code is at 
+projects/telegram-ebook-store-bot/bot.py using pyTelegramBotAPI (telebot).
+Make sure it uses the FamGateway key YOUR_FAMGATEWAY_API_KEY
+and serves books from the catalog.json."
+```
+
+### Telegram Channel Crawler
+```
+"Update workers/telegram_importer.py to crawl all 5 authorized channels using Telethon.
+API_ID=38662741, API_HASH=87222916d5e2144b450aec70f9651a76.
+Channels: -1003085497339, -1002420485294, -1002171451661, -1002398249208, -1002106541973.
+Extract PDF/EPUB, render cover with PyMuPDF, deduplicate via SHA-256, 
+save to private_storage and register in data/books_registry.json."
+```
+
+### AI Book Service
+```
+"Create lib/ai-book-service.ts using Vercel AI SDK and Zod.
+Implement extractBookMetadata(), findCoverCandidates(), verifyCoverImage(),
+recommendSellingPrice(). Use node:sqlite DatabaseSync for the enrichment_86k_checkpoint.db.
+Never expose AI_GATEWAY_API_KEY to the client side."
+```
+
+### Cover Discovery
+```
+"Add Google Books API cover fetching using GOOGLE_BOOKS_API_KEY.
+For each of the 86,260 books in enrichment_86k_checkpoint.db,
+search by title + author, download thumbnail, verify it matches the book,
+save to public/covers/ using Sharp for optimization.
+Run as a background batch starting with 50 books."
+```
+
+### Database Fix
+```
+"Query the marketplace_listings table using the column 'current_price' (NOT selling_price).
+Query pricing_intelligence using 'recommended_selling_price' (NOT recommended_price).
+Use import { DatabaseSync } from 'node:sqlite' — not sqlite3 or better-sqlite3."
+```
+
+### Full System Test
+```
+"Run node tests/master_system_verification.mjs and node tests/security_regression_suite.mjs.
+Show all results. Fix any failures. Then run npx next build.
+All 339 routes must pass. Commit with message 'chore: verify all tests pass'."
+```
+
+### Deploy to Vercel
+```
+"Build and deploy to Vercel. Project is 'ebook' under team 'tarik-pro-fitness'.
+Run npx next build first. Then git add -A, git commit, git push origin main.
+Confirm deployment at https://ebook-sandy-chi.vercel.app."
+```
+
+---
+
+## 📂 KEY FILES REFERENCE
+
+```
+projects/anon-trove-ebooks/
+  .env.local                                    ← All secrets for web app
+  app/                                          ← Next.js App Router pages
+  lib/                                          ← Shared server utilities
+  data/enrichment_86k_checkpoint.db             ← Main 86k book SQLite database
+  data/books_registry.json                      ← Local ebook registry
+  workers/telegram_importer.py                  ← Telegram channel crawler
+  scripts/telegram_ebook_collector.py           ← Ebook ingestion script
+  scripts/publish_telegram_downloads_to_website.py ← Telegram -> website publisher
+  tests/master_system_verification.mjs          ← 7-test verification suite
+  tests/security_regression_suite.mjs           ← 8-test security suite
+  private_storage/                              ← Private ebook files (NEVER public)
+  public/covers/                                ← Public book cover thumbnails
+
+projects/telegram-ebook-store-bot/
+  .env                                          ← Bot token + FamGateway key
+  bot.py                                        ← Telegram bot main file
+  catalog.py                                    ← Catalog query functions
+  catalog.json                                  ← 1,697 verified ebook entries
+  storage/                                      ← Local ebook PDF files
+  covers/                                       ← Book cover images
+  build_full_catalog.py                         ← Catalog builder script
+  requirements.txt                              ← Python dependencies
+```
+
+---
+
+Generated: 2026-11-10 | Project: AnonTrove | Repo: github.com/tarikk786786/Ebook
+Production: https://ebook-sandy-chi.vercel.app | Support: apnix7@gmail.com

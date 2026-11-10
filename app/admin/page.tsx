@@ -449,6 +449,13 @@ export default function AdminDashboardPage() {
               <span className="hidden md:inline">1,000 Discovery</span>
             </Link>
             <Link
+              href="/admin/ai-intelligence"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-violet-950/40 border border-violet-800/80 text-xs text-violet-300 hover:border-violet-500/80 hover:text-white transition-colors"
+              title="AI Book Intelligence status and catalog PDF cover enrichment"
+            >
+              <span className="hidden md:inline">AI Intelligence</span>
+            </Link>
+            <Link
               href="/admin/scraper"
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-teal-400 hover:border-teal-500/50 hover:text-white transition-colors"
               title="Manage Universal Ebook Scraper and Discovery"

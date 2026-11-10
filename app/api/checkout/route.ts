@@ -16,7 +16,7 @@ const CheckoutRequestSchema = z.object({
   customerEmail: z.string().email('Invalid email address format').max(128).optional().default('reader@anontrove.internal'),
   customerPhone: z.string().regex(/^\+?[0-9]{10,15}$/, 'Invalid phone number format').max(16).optional(),
   couponCode: z.string().min(2).max(32).regex(/^[a-zA-Z0-9_-]+$/, 'Invalid coupon format').optional(),
-  gateway: z.enum(['FAMGATEWAY', 'FAMPAY', 'UPI']).optional().default('FAMGATEWAY'),
+  gateway: z.enum(['FAMGATEWAY', 'FAMPAY']).optional().default('FAMGATEWAY'),
 }).refine(data => Boolean(data.bookId || (data.items && data.items.length > 0)), {
   message: 'Either bookId or a non-empty items array must be provided for checkout',
 });
