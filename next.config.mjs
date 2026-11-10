@@ -42,6 +42,8 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Strips 'X-Powered-By: Next.js' to prevent technology fingerprinting
+  // Large catalog SSG on Hobby builders needs more than the default 60s page timeout
+  staticPageGenerationTimeout: 180,
   headers: async () => [
     {
       source: '/:path*',
