@@ -701,10 +701,15 @@ function compileBookCatalog(): Book[] {
 export const BOOK_CATALOG: Book[] = compileBookCatalog();
 export const TOTAL_MAPPED_DOCUMENTS = 86337;
 
-function normalizePublicCoverPath(cover?: string | null): string | undefined {
+function normalizePublicCoverPath(cover?: string | null, slug?: string): string | undefined {
   if (!cover) return undefined;
-  if (cover.startsWith('/public/')) return cover.slice('/public'.length);
-  return cover;
+  let path = cover;
+  if (path.startsWith('/public/')) path = path.slice('/public'.length);
+  // Local-only folder — not deployed to Vercel; use dynamic cover API instead
+  if (path.startsWith('/book-covers/')) {
+    return slug ? `/api/covers/${slug}` : undefined;
+  }
+  return path;
 }
 
 function expandToBook(item: any): Book {
@@ -712,11 +717,12 @@ function expandToBook(item: any): Book {
   const origPrice = item.originalPriceInInr || (price * 4);
   const pages = item.pages || 280;
   const slug = item.slug || `book-${item.ref || item.id || 'item'}`;
-  const rawCover = normalizePublicCoverPath(item.coverImage || item.coverUrl);
+  const rawCover = normalizePublicCoverPath(item.coverImage || item.coverUrl, slug);
   const weakCover =
     !rawCover ||
     rawCover.includes('standard-shelf-cover') ||
-    rawCover.startsWith('/public/');
+    rawCover.startsWith('/public/') ||
+    rawCover.startsWith('/book-covers/');
   const coverImage = weakCover ? `/api/covers/${slug}` : rawCover;
   const coverType =
     item.coverType ||
@@ -815,7 +821,7 @@ function applyDirectoryOverlay(book: Book): Book {
   const map = getDirectoryOverlay();
   const overlay = map.get(book.slug) || map.get(`ref:${(book as any).ref}`) || map.get(book.id);
   if (!overlay) {
-    const fixed = normalizePublicCoverPath(book.coverImage);
+    const fixed = normalizePublicCoverPath(book.coverImage, book.slug);
     if (fixed && fixed !== book.coverImage) {
       return { ...book, coverImage: fixed };
     }
@@ -841,19 +847,20 @@ function applyDirectoryOverlay(book: Book): Book {
   if (overlay.fileName) next.fileName = overlay.fileName;
   if (overlay.description) next.description = overlay.description;
 
-  const cover = normalizePublicCoverPath(overlay.coverImage);
+  const cover = normalizePublicCoverPath(overlay.coverImage, book.slug);
   if (
     cover &&
-    (overlay.coverVerified || cover.startsWith("/covers/") || cover.startsWith("/book-covers/")) &&
+    (overlay.coverVerified || cover.startsWith("/covers/") || cover.startsWith("/api/covers/")) &&
     (!book.coverImage ||
       book.coverImage.includes("standard-shelf-cover") ||
       book.coverImage.startsWith("/api/covers/") ||
-      book.coverImage.startsWith("/public/"))
+      book.coverImage.startsWith("/public/") ||
+      book.coverImage.startsWith("/book-covers/"))
   ) {
     next.coverImage = cover;
     next.coverType = overlay.coverVerified ? "AUTHENTIC" : next.coverType || "CUSTOM_ARTWORK";
-  } else if (book.coverImage?.startsWith("/public/")) {
-    next.coverImage = normalizePublicCoverPath(book.coverImage) || `/api/covers/${book.slug}`;
+  } else if (book.coverImage?.startsWith("/public/") || book.coverImage?.startsWith("/book-covers/")) {
+    next.coverImage = normalizePublicCoverPath(book.coverImage, book.slug) || `/api/covers/${book.slug}`;
   }
   return next;
 }

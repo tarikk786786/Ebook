@@ -238,19 +238,25 @@ export default function CategoryPage({ params }: Props) {
                     <div>
                       {/* Cover Thumbnail */}
                       <div className="aspect-[3/4] w-full rounded overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-3 relative flex items-center justify-center">
-                        {book.coverImage && book.coverImage.length > 5 ? (
-                          <img
-                            src={book.coverImage}
-                            alt={`${book.title} cover`}
-                            className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div className="text-center p-4">
-                            <BookOpen className="w-8 h-8 text-[#81796D] mx-auto mb-2" />
-                            <span className="text-[10px] font-sans font-medium text-[#81796D] uppercase">{book.format || 'PDF Guide'}</span>
-                          </div>
-                        )}
+                        <img
+                          src={
+                            book.coverImage &&
+                            !book.coverImage.startsWith('/book-covers/') &&
+                            !book.coverImage.startsWith('/public/')
+                              ? book.coverImage
+                              : `/api/covers/${book.slug}`
+                          }
+                          alt={`${book.title} cover`}
+                          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                          loading="lazy"
+                          onError={(e) => {
+                            const img = e.currentTarget as HTMLImageElement;
+                            const fallback = `/api/covers/${book.slug}`;
+                            if (img.src !== fallback && !img.src.endsWith(fallback)) {
+                              img.src = fallback;
+                            }
+                          }}
+                        />
                         {book.badge && (
                           <span className="absolute top-2 left-2 px-1.5 py-0.5 rounded text-[9px] font-sans font-bold bg-[#FAF6F1] text-[#9A704B] border border-[#F2E8DC]">
                             {book.badge}

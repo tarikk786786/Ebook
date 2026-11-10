@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Book } from '@/lib/catalog';
 import { useCart } from '@/context/CartContext';
@@ -15,6 +15,15 @@ import {
   Heart,
   Sparkles
 } from 'lucide-react';
+
+function resolveCoverSrc(book: Book): string {
+  const raw = book.coverImage || '';
+  // /book-covers is local-only and not deployed to Vercel
+  if (!raw || raw.startsWith('/book-covers/') || raw.startsWith('/public/')) {
+    return `/api/covers/${book.slug}`;
+  }
+  return raw;
+}
 
 interface BookCardProps {
   book: Book;
@@ -33,17 +42,26 @@ export default function BookCard({
   onToggleWishlist,
   isWishlisted = false,
 }: BookCardProps) {
-  const [imgSrc, setImgSrc] = useState<string>(book.coverImage || `/api/covers/${book.slug}`);
+  const [imgSrc, setImgSrc] = useState<string>(() => resolveCoverSrc(book));
   const [imgError, setImgError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement | null>(null);
   const { addToCart, items } = useCart();
   const isInCart = items.some((i) => i.bookId === book.id);
 
   useEffect(() => {
-    setImgSrc(book.coverImage || `/api/covers/${book.slug}`);
+    setImgSrc(resolveCoverSrc(book));
     setImgError(false);
     setIsLoaded(false);
   }, [book.id, book.slug, book.coverImage]);
+
+  useEffect(() => {
+    // Cached images often skip onLoad — mark them visible immediately
+    const el = imgRef.current;
+    if (el && el.complete && el.naturalWidth > 0) {
+      setIsLoaded(true);
+    }
+  }, [imgSrc]);
 
   const handleImageError = () => {
     const apiFallback = `/api/covers/${book.slug}`;
@@ -51,8 +69,10 @@ export default function BookCard({
 
     if (imgSrc !== apiFallback) {
       setImgSrc(apiFallback);
+      setIsLoaded(false);
     } else if (imgSrc !== standardFallback) {
       setImgSrc(standardFallback);
+      setIsLoaded(false);
     } else {
       setImgError(true);
     }
@@ -131,18 +151,17 @@ export default function BookCard({
             </div>
           </div>
 
-          {/* Real cover image layer smoothly fades in when loaded */}
+          {/* Real cover image sits above placeholder; stay visible for cached loads */}
           {!imgError && (
             <img
+              ref={imgRef}
               src={imgSrc}
               alt={book.title}
               onLoad={() => setIsLoaded(true)}
               onError={handleImageError}
               loading="lazy"
-              className={cn(
-                "relative z-1 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-all duration-300 ease-out",
-                isLoaded ? "opacity-100" : "opacity-0"
-              )}
+              decoding="async"
+              className="absolute inset-0 z-10 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-300 ease-out opacity-100"
             />
           )}
 

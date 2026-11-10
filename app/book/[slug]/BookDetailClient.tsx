@@ -51,12 +51,19 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const [detailSrc, setDetailSrc] = useState<string>(book.coverImage || `/api/covers/${book.slug}`);
+  const resolveDetailCover = React.useCallback((cover?: string) => {
+    const raw = cover || '';
+    if (!raw || raw.startsWith('/book-covers/') || raw.startsWith('/public/')) {
+      return `/api/covers/${book.slug}`;
+    }
+    return raw;
+  }, [book.slug]);
+  const [detailSrc, setDetailSrc] = useState<string>(() => resolveDetailCover(book.coverImage));
 
   React.useEffect(() => {
-    setDetailSrc(book.coverImage || `/api/covers/${book.slug}`);
+    setDetailSrc(resolveDetailCover(book.coverImage));
     setImgError(false);
-  }, [book.id, book.slug, book.coverImage]);
+  }, [book.id, book.slug, book.coverImage, resolveDetailCover]);
 
   const handleCoverError = () => {
     const apiFallback = `/api/covers/${book.slug}`;
