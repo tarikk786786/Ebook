@@ -100,11 +100,17 @@ function readCoverFile(filePath: string, source: string, filename: string): Next
         ? 'image/svg+xml'
         : 'image/jpeg';
 
+    // Reject known dark branded placeholder JPEGs (low entropy / near-black).
+    // These were previously labeled AUTHENTIC and blocked remote cover lookup.
+    if (contentType === 'image/jpeg' && isLikelyDarkSyntheticJpeg(fileBuffer)) {
+      return null;
+    }
+
     return new NextResponse(fileBuffer, {
       status: 200,
       headers: {
         'Content-Type': contentType,
-        'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+        'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
         'X-Cover-Source': source,
         'X-Cover-File': filename,
         'X-Cover-Verified': 'true',
@@ -113,6 +119,35 @@ function readCoverFile(filePath: string, source: string, filename: string): Next
   } catch {
     return null;
   }
+}
+
+/** Cheap heuristic: sample JPEG SOS entropy / size patterns of AnonTrove dark synthetics. */
+function isLikelyDarkSyntheticJpeg(buf: Buffer): boolean {
+  if (buf.length < 8000 || buf.length > 120000) return false;
+  // Marker scan for start-of-scan; then sample payload bytes for near-zero dominance.
+  let sos = -1;
+  for (let i = 0; i < Math.min(buf.length - 1, 4096); i++) {
+    if (buf[i] === 0xff && buf[i + 1] === 0xda) {
+      sos = i + 2;
+      break;
+    }
+  }
+  if (sos < 0 || sos >= buf.length) return false;
+  const start = Math.min(buf.length - 1, sos + 64);
+  const end = Math.min(buf.length, start + 4096);
+  if (end - start < 512) return false;
+  let low = 0;
+  let sum = 0;
+  const n = end - start;
+  for (let i = start; i < end; i++) {
+    const v = buf[i];
+    sum += v;
+    if (v < 32) low++;
+  }
+  const mean = sum / n;
+  const lowRatio = low / n;
+  // Dark branded covers compress to low-mean, high-zero compressed streams.
+  return mean < 55 && lowRatio > 0.42;
 }
 
 function readLocalCover(
@@ -342,8 +377,7 @@ export async function GET(
     pages: 320,
   };
 
-  // Many /covers/*.jpg files are dark branded synthetics mislabeled AUTHENTIC.
-  // Prefer local numeric/slug covers, then precomputed 86k CDN index, then live free APIs.
+  // Local first (skipping dark synthetics), then 86k index, then live free APIs.
   if (forceLocal) {
     const localForced = readLocalCover(cleanSlug, rawSlug, book);
     if (localForced) return localForced;
@@ -392,41 +426,25 @@ export async function GET(
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
   <defs>
-    <linearGradient id="cloth" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141824"/>
-      <stop offset="40%" stop-color="#1B2234"/>
-      <stop offset="100%" stop-color="#0E121B"/>
-    </linearGradient>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FDE68A"/>
-      <stop offset="50%" stop-color="#F59E0B"/>
-      <stop offset="100%" stop-color="#B45309"/>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F3EA"/>
+      <stop offset="100%" stop-color="#E8E1D2"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="900" fill="url(#cloth)"/>
-  <rect x="28" y="28" width="544" height="844" rx="10" fill="none" stroke="${primaryColor}" stroke-width="2.5" stroke-opacity="0.7"/>
-  <g transform="translate(300, 95)" text-anchor="middle">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" letter-spacing="5" fill="${primaryColor}">ANONTROVE STANDARD EDITION</text>
-  </g>
-  <g transform="translate(60, 200)">
-    <rect width="480" height="420" rx="14" fill="#0B0F19" fill-opacity="0.85" stroke="#334155" stroke-width="1.5"/>
-    <text x="240" y="50" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="${primaryColor}" text-anchor="middle">${category.slice(0, 30)}</text>
-    <text x="240" y="140" font-family="Georgia, Cambria, serif" font-size="26" font-weight="bold" fill="#F8FAFC" text-anchor="middle">
-      <tspan x="240" dy="0">${title.slice(0, 30)}</tspan>
-      ${title.length > 30 ? `<tspan x="240" dy="34">${title.slice(30, 60)}</tspan>` : ''}
-      ${title.length > 60 ? `<tspan x="240" dy="34">${title.slice(60, 90)}</tspan>` : ''}
-    </text>
-    <text x="240" y="315" font-family="Georgia, serif" font-style="italic" font-size="17" font-weight="600" fill="url(#gold)" text-anchor="middle">
-      By ${author.slice(0, 36)}
-    </text>
-    <text x="240" y="365" font-family="monospace" font-size="11" fill="#94A3B8" text-anchor="middle">
-      ${pages} Pages • Universal PDF &amp; EPUB • DRM-Free
-    </text>
-  </g>
-  <g transform="translate(300, 750)" text-anchor="middle">
-    <text y="48" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" letter-spacing="4" fill="#F8FAFC">ANONTROVE ARCHIVE</text>
-    <text y="68" font-family="monospace" font-size="10" fill="#64748B">ISBN ${isbn}</text>
-  </g>
+  <rect width="600" height="900" fill="url(#paper)"/>
+  <rect x="28" y="28" width="544" height="844" fill="none" stroke="#1F2937" stroke-width="3"/>
+  <rect x="28" y="28" width="544" height="132" fill="${primaryColor}"/>
+  <text x="50" y="110" font-family="Georgia, Cambria, serif" font-size="28" font-weight="700" fill="#FFFFFF">${title.slice(0, 28)}</text>
+  <text x="50" y="220" font-family="Georgia, serif" font-size="22" fill="#111827">
+    <tspan x="50" dy="0">${title.slice(0, 34)}</tspan>
+    ${title.length > 34 ? `<tspan x="50" dy="32">${title.slice(34, 68)}</tspan>` : ''}
+  </text>
+  <text x="50" y="320" font-family="Georgia, serif" font-size="18" fill="#374151">By ${author.slice(0, 40)}</text>
+  <rect x="50" y="350" width="160" height="4" fill="${primaryColor}"/>
+  <text x="50" y="410" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#4B5563">${category.slice(0, 40)}</text>
+  <text x="50" y="450" font-family="monospace" font-size="12" fill="#6B7280">${pages} pages · DRM-free digital edition</text>
+  <text x="50" y="820" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#6B7280">ANONTROVE ARCHIVE</text>
+  <text x="50" y="848" font-family="monospace" font-size="11" fill="#9CA3AF">ISBN ${isbn}</text>
 </svg>`;
 
   return new NextResponse(svg, {

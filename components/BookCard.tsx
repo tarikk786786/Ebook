@@ -22,7 +22,7 @@ function resolveCoverSrc(book: Book): string {
     return book.coverImage;
   }
   // Otherwise route through /api/covers (local files + free APIs + precomputed index).
-  return `/api/covers/${book.slug}?v=8`;
+  return `/api/covers/${book.slug}?v=9`;
 }
 
 interface BookCardProps {
@@ -53,7 +53,7 @@ export default function BookCard({
   }, [book.id, book.slug, book.coverImage]);
 
   const handleImageError = () => {
-    const apiFallback = `/api/covers/${book.slug}?v=8`;
+    const apiFallback = `/api/covers/${book.slug}?v=9`;
     const standardFallback = '/covers/standard-shelf-cover.jpg';
 
     if (!imgSrc.includes('/api/covers/')) {
