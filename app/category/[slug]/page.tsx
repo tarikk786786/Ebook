@@ -249,13 +249,6 @@ export default function CategoryPage({ params }: Props) {
                           alt={`${book.title} cover`}
                           className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                           loading="lazy"
-                          onError={(e) => {
-                            const img = e.currentTarget as HTMLImageElement;
-                            const fallback = `/api/covers/${book.slug}`;
-                            if (img.src !== fallback && !img.src.endsWith(fallback)) {
-                              img.src = fallback;
-                            }
-                          }}
                         />
                         {book.badge && (
                           <span className="absolute top-2 left-2 px-1.5 py-0.5 rounded text-[9px] font-sans font-bold bg-[#FAF6F1] text-[#9A704B] border border-[#F2E8DC]">
