@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { getBookBySlug, getBookById } from '@/lib/catalog';
 import { OpenLibraryProvider } from '@/lib/discovery/providers/openlibrary';
+import { lookupCoverIndex } from '@/lib/cover-url-index';
 
 export const dynamic = 'force-dynamic';
 
@@ -342,10 +343,22 @@ export async function GET(
   };
 
   // Many /covers/*.jpg files are dark branded synthetics mislabeled AUTHENTIC.
-  // Always try Open Library publisher art first unless ?local=1 is forced.
+  // Prefer local numeric/slug covers, then precomputed 86k CDN index, then live free APIs.
   if (forceLocal) {
     const localForced = readLocalCover(cleanSlug, rawSlug, book);
     if (localForced) return localForced;
+  }
+
+  const localEarly = readLocalCover(cleanSlug, rawSlug, book);
+  if (localEarly) return localEarly;
+
+  const indexed = lookupCoverIndex(cleanSlug, book as any);
+  if (indexed?.coverUrl && /^https?:\/\//i.test(indexed.coverUrl)) {
+    const cachedRemote = await fetchRemoteCover(
+      indexed.coverUrl,
+      indexed.coverSource || 'cover-index'
+    );
+    if (cachedRemote) return cachedRemote;
   }
 
   const ol = await fetchOpenLibraryCover(book);
@@ -356,9 +369,6 @@ export async function GET(
 
   const ia = await fetchInternetArchiveCover(book);
   if (ia) return ia;
-
-  const local = readLocalCover(cleanSlug, rawSlug, book);
-  if (local) return local;
 
   const bookAny = book as { title?: string; author?: string; category?: string; isbn?: string; isbn10?: string; isbn13?: string; pages?: number };
   const title = escapeXml(bookAny.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());

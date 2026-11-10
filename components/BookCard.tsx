@@ -17,10 +17,12 @@ import {
 } from 'lucide-react';
 
 function resolveCoverSrc(book: Book): string {
-  // Always route through /api/covers so Open Library can replace dark synthetic local JPGs.
-  // Authentic scans still win inside the API when coverType === AUTHENTIC.
-  // ?v=7 after 86k list + book-covers sync.
-  return `/api/covers/${book.slug}?v=7`;
+  // Prefer absolute CDN cover URLs from the 86k index when present.
+  if (book.coverImage && /^https?:\/\//i.test(book.coverImage)) {
+    return book.coverImage;
+  }
+  // Otherwise route through /api/covers (local files + free APIs + precomputed index).
+  return `/api/covers/${book.slug}?v=8`;
 }
 
 interface BookCardProps {
@@ -51,7 +53,7 @@ export default function BookCard({
   }, [book.id, book.slug, book.coverImage]);
 
   const handleImageError = () => {
-    const apiFallback = `/api/covers/${book.slug}?v=7`;
+    const apiFallback = `/api/covers/${book.slug}?v=8`;
     const standardFallback = '/covers/standard-shelf-cover.jpg';
 
     if (!imgSrc.includes('/api/covers/')) {

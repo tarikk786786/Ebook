@@ -794,6 +794,7 @@ function getDirectoryOverlay(): Map<string, any> {
         "cover_map_from_pdfs.json",
         "cover_map_from_book_covers.json",
         "cover_map_from_pdf_list.json",
+        "cover_url_index_86k.json",
       ]) {
         const coverMapPath = path.resolve(process.cwd(), "data", "catalog", mapName);
         if (!fs.existsSync(coverMapPath)) continue;
