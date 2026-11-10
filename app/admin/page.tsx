@@ -449,6 +449,13 @@ export default function AdminDashboardPage() {
               <span className="hidden md:inline">1,000 Discovery</span>
             </Link>
             <Link
+              href="/admin/cover-recovery"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-sky-950/40 border border-sky-800/80 text-xs text-sky-300 hover:border-sky-500/80 hover:text-white transition-colors"
+              title="Ebook Cover Recovery Center — Google Books + free APIs"
+            >
+              <span className="hidden md:inline">Cover Recovery</span>
+            </Link>
+            <Link
               href="/admin/ai-intelligence"
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-violet-950/40 border border-violet-800/80 text-xs text-violet-300 hover:border-violet-500/80 hover:text-white transition-colors"
               title="AI Book Intelligence status and catalog PDF cover enrichment"

@@ -767,11 +767,12 @@ function expandToBook(item: any): Book {
     coverType,
     listingStatus: item.listingStatus || 'APPROVED_FOR_SALE',
     marketReferencePrice: item.marketReferencePrice || origPrice,
-    marketCurrentPrice: item.marketCurrentPrice || Math.round(origPrice * 0.75),
-    lowestComparablePrice: item.lowestComparablePrice || Math.round(origPrice * 0.75),
+    // Only attach marketplace comps when enrichment produced real prices.
+    marketCurrentPrice: item.marketCurrentPrice || undefined,
+    lowestComparablePrice: item.lowestComparablePrice || undefined,
     publisherListPrice: item.publisherListPrice || origPrice,
-    priceSourceUrl: item.priceSourceUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (item.author || '') + ' kindle')}` : undefined),
-    priceVerifiedAt: item.priceVerifiedAt || '2026-11-09',
+    priceSourceUrl: item.priceSourceUrl || undefined,
+    priceVerifiedAt: item.priceVerifiedAt || undefined,
     amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (item.author || '') + ' kindle')}` : undefined),
     googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (item.author || ''))}&c=books` : undefined),
     rightsStatus: item.rightsStatus || 'AUTHORIZED_EDITORIAL_EDITION',
@@ -795,6 +796,7 @@ function getDirectoryOverlay(): Map<string, any> {
         "cover_map_from_book_covers.json",
         "cover_map_from_pdf_list.json",
         "cover_url_index_86k.json",
+        "market_price_overlay.json",
       ]) {
         const coverMapPath = path.resolve(process.cwd(), "data", "catalog", mapName);
         if (!fs.existsSync(coverMapPath)) continue;
@@ -856,6 +858,24 @@ function applyDirectoryOverlay(book: Book): Book {
   if (overlay.fileSize && overlay.fileSize !== "—") next.fileSize = overlay.fileSize;
   if (overlay.fileName) next.fileName = overlay.fileName;
   if (overlay.description) next.description = overlay.description;
+
+  // Real marketplace prices only — never invent verification from missing data.
+  if (typeof overlay.lowestComparablePrice === "number" && overlay.lowestComparablePrice > 0) {
+    next.lowestComparablePrice = overlay.lowestComparablePrice;
+  }
+  if (typeof overlay.marketCurrentPrice === "number" && overlay.marketCurrentPrice > 0) {
+    next.marketCurrentPrice = overlay.marketCurrentPrice;
+  }
+  if (typeof overlay.publisherListPrice === "number" && overlay.publisherListPrice > 0) {
+    next.publisherListPrice = overlay.publisherListPrice;
+    if (!next.originalPriceInInr || next.originalPriceInInr < overlay.publisherListPrice) {
+      next.originalPriceInInr = overlay.publisherListPrice;
+    }
+  }
+  if (overlay.priceVerifiedAt) next.priceVerifiedAt = overlay.priceVerifiedAt;
+  if (overlay.priceSourceUrl) next.priceSourceUrl = overlay.priceSourceUrl;
+  if (overlay.amazonUrl) next.amazonUrl = overlay.amazonUrl;
+  if (overlay.googlePlayUrl) next.googlePlayUrl = overlay.googlePlayUrl;
 
   const cover = normalizePublicCoverPath(overlay.coverImage, book.slug);
   if (

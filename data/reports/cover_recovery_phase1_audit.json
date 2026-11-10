@@ -1,0 +1,61 @@
+{
+  "project": "AnonTrove",
+  "paths": {},
+  "covers_86k": {
+    "total": 86260,
+    "by_status": {
+      "found": 24158,
+      "not_found": 527,
+      "pending": 61575
+    },
+    "found_by_source": {
+      "internet-archive": 140,
+      "local-disk": 23839,
+      "local-pdf-render": 154,
+      "open-library": 25
+    }
+  },
+  "enrichment": {
+    "books": 86260,
+    "books_with_cover_url": 86260,
+    "isbn13": 992,
+    "isbn10": 881,
+    "with_author": 86260,
+    "with_year": 86260,
+    "marketplace_listings": 90786,
+    "marketplace_priced": 9052,
+    "pricing_lowest_comparable": 4526,
+    "tables": [
+      "enriched_manifest",
+      "books",
+      "marketplace_listings",
+      "sqlite_sequence",
+      "pricing_intelligence",
+      "book_rights",
+      "price_history",
+      "audit_logs",
+      "ai_jobs",
+      "ai_cover_candidates",
+      "ai_usage_ledger"
+    ]
+  },
+  "cover_url_index": {
+    "count_field": 24158,
+    "map_keys": 52148,
+    "bytes": 21760529
+  },
+  "local_storage": {
+    "public_covers_jpg": 20132,
+    "public_covers_webp": 57,
+    "book_covers": 2909,
+    "private_storage_exists": true
+  },
+  "existing_surface": {
+    "cover_api": true,
+    "cover_index_lib": true,
+    "fetch_script": true,
+    "pdf_render_script": true,
+    "admin_discovery": true,
+    "admin_enrichment": true
+  }
+}

@@ -41,10 +41,28 @@ UA = "AnonTrove86kCoverBot/1.0 (mailto:apnix7@gmail.com)"
 LINE_RE = re.compile(
     r"^\s*(\d+)\.\s+(.*?)\s+—\s+(.*?)\s+\[(.*?)\]\s+\((.*?)\)\s*$"
 )
+GB_API_KEY = ""
 
 os.environ.setdefault("PYTHONUNBUFFERED", "1")
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+
+def load_env_key() -> str:
+    """Load GOOGLE_BOOKS_API_KEY from process env or .env.local (never print it)."""
+    existing = (os.environ.get("GOOGLE_BOOKS_API_KEY") or "").strip()
+    if existing:
+        return existing
+    env_path = ROOT / ".env.local"
+    if not env_path.exists():
+        return ""
+    for line in env_path.read_text(encoding="utf-8", errors="replace").splitlines():
+        if line.strip().startswith("#") or "=" not in line:
+            continue
+        k, _, v = line.partition("=")
+        if k.strip() == "GOOGLE_BOOKS_API_KEY":
+            return v.strip().strip('"').strip("'")
+    return ""
 
 
 def log(msg: str) -> None:
@@ -176,24 +194,47 @@ def find_open_library(title: str, author: str) -> tuple[str | None, int | None]:
     return None, None
 
 
-def find_google_books(title: str, author: str) -> str | None:
+def find_google_books(title: str, author: str, isbn13: str = "", isbn10: str = "") -> str | None:
     cleaned = clean_title(title).split(":")[0].strip()
+    queries: list[str] = []
+    if isbn13:
+        queries.append(f"isbn:{isbn13}")
+    if isbn10:
+        queries.append(f"isbn:{isbn10}")
     q = f'intitle:"{cleaned}"'
-    if author and author.lower() not in {"editorial board", "anontrove guild", "editorial board & domain experts"}:
+    if author and author.lower() not in {
+        "editorial board",
+        "anontrove guild",
+        "editorial board & domain experts",
+    }:
         q += f' inauthor:"{author.split(",")[0].strip()}"'
-    data = http_json(
-        "https://www.googleapis.com/books/v1/volumes?"
-        + urllib.parse.urlencode({"q": q, "maxResults": 3}),
-        timeout=6,
-    )
-    if not data or "items" not in data:
-        return None
-    for item in data.get("items") or []:
-        links = (item.get("volumeInfo") or {}).get("imageLinks") or {}
-        for key in ("large", "medium", "thumbnail", "smallThumbnail"):
-            u = links.get(key)
-            if u:
-                return str(u).replace("http://", "https://").replace("zoom=1", "zoom=2")
+    queries.append(q)
+    queries.append(f'intitle:"{cleaned}"')
+
+    for query in queries:
+        params = {"q": query, "maxResults": 3, "printType": "books"}
+        if GB_API_KEY:
+            params["key"] = GB_API_KEY
+        data = http_json(
+            "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(params),
+            timeout=8,
+        )
+        if not data or "items" not in data:
+            # Hard stop on quota exhaustion when key missing / exhausted
+            if isinstance(data, dict) and data.get("error"):
+                return None
+            continue
+        for item in data.get("items") or []:
+            links = (item.get("volumeInfo") or {}).get("imageLinks") or {}
+            for key in ("extraLarge", "large", "medium", "thumbnail", "smallThumbnail"):
+                u = links.get(key)
+                if u:
+                    return (
+                        str(u)
+                        .replace("http://", "https://")
+                        .replace("zoom=1", "zoom=2")
+                        .replace("&edge=curl", "")
+                    )
     return None
 
 
@@ -232,7 +273,19 @@ def find_internet_archive(title: str, author: str) -> str | None:
 
 
 def resolve_cover(title: str, author: str) -> tuple[str, str | None, int | None]:
-    # Priority based on current network health: IA works, GB rate-limits, OL search times out.
+    # Google Books first when API key is present; otherwise IA → GB → OL.
+    if GB_API_KEY:
+        url = find_google_books(title, author)
+        if url:
+            return "google-books", url, None
+        url = find_internet_archive(title, author)
+        if url:
+            return "internet-archive", url, None
+        url, ol_id = find_open_library(title, author)
+        if url:
+            return "open-library", url, ol_id
+        return "not_found", None, None
+
     url = find_internet_archive(title, author)
     if url:
         return "internet-archive", url, None
@@ -373,13 +426,22 @@ def seed_db(conn: sqlite3.Connection, books: list[dict]) -> None:
 
 
 def main():
+    global GB_API_KEY
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--limit", type=int, default=0, help="0 = all pending")
     ap.add_argument("--download-thumbs", action="store_true")
     ap.add_argument("--export-every", type=int, default=200)
     ap.add_argument("--retry-not-found", action="store_true")
+    ap.add_argument("--google-first", action="store_true", help="Force Google Books priority")
     args = ap.parse_args()
+
+    GB_API_KEY = load_env_key()
+    if args.google_first and not GB_API_KEY:
+        log("WARN: --google-first set but GOOGLE_BOOKS_API_KEY is empty in .env.local")
+    log(
+        f"Google Books API key: {'SET len=' + str(len(GB_API_KEY)) if GB_API_KEY else 'MISSING — create key in Google Cloud Credentials'}"
+    )
 
     log(f"Parsing list {LIST_PATH}")
     books = parse_list(LIST_PATH)

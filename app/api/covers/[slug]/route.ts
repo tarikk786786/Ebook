@@ -4,6 +4,8 @@ import path from 'path';
 import { getBookBySlug, getBookById } from '@/lib/catalog';
 import { OpenLibraryProvider } from '@/lib/discovery/providers/openlibrary';
 import { lookupCoverIndex } from '@/lib/cover-url-index';
+import { discoverGoogleBooksCovers } from '@/lib/cover-recovery/providers/google-books';
+import { pickBestCandidate } from '@/lib/cover-recovery/matcher';
 
 export const dynamic = 'force-dynamic';
 
@@ -287,30 +289,21 @@ async function fetchOpenLibraryCover(book: {
 async function fetchGoogleBooksCover(book: {
   title?: string;
   author?: string;
+  isbn?: string;
+  isbn10?: string;
+  isbn13?: string;
 } | undefined): Promise<NextResponse | null> {
   if (!book?.title) return null;
   try {
-    const cleaned = cleanSearchTitle(book.title);
-    const titleCore = cleaned.split(/[:—(]/)[0].trim();
-    let q = `intitle:"${titleCore}"`;
-    if (book.author) q += ` inauthor:"${book.author.split(',')[0].trim()}"`;
-    const res = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=5`,
-      { headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' }, next: { revalidate: 86400 } }
-    );
-    if (!res.ok) return null;
-    const data = await res.json();
-    const items = data?.items || [];
-    for (const item of items) {
-      const links = item?.volumeInfo?.imageLinks || {};
-      const raw =
-        links.extraLarge || links.large || links.medium || links.thumbnail || links.smallThumbnail;
-      if (!raw) continue;
-      const url = String(raw).replace('http://', 'https://').replace(/zoom=\d/, 'zoom=2');
-      const hit = await fetchRemoteCover(url, 'google-books');
-      if (hit) return hit;
-    }
-    return null;
+    const candidates = await discoverGoogleBooksCovers({
+      title: book.title,
+      author: book.author,
+      isbn13: book.isbn13 || (book.isbn?.length === 13 ? book.isbn : undefined),
+      isbn10: book.isbn10 || (book.isbn?.length === 10 ? book.isbn : undefined),
+    });
+    const preferred = pickBestCandidate(candidates) || candidates[0];
+    if (!preferred?.coverUrl) return null;
+    return await fetchRemoteCover(preferred.coverUrl, 'google-books');
   } catch {
     return null;
   }
@@ -395,15 +388,21 @@ export async function GET(
     if (cachedRemote) return cachedRemote;
   }
 
-  // IA tends to be more reachable than OL search from some networks.
+  // Google Books first (API key preferred; anonymous hits 429 quickly).
+  const gb = await fetchGoogleBooksCover(book as {
+    title?: string;
+    author?: string;
+    isbn?: string;
+    isbn10?: string;
+    isbn13?: string;
+  });
+  if (gb) return gb;
+
   const ia = await fetchInternetArchiveCover(book);
   if (ia) return ia;
 
   const ol = await fetchOpenLibraryCover(book);
   if (ol) return ol;
-
-  const gb = await fetchGoogleBooksCover(book);
-  if (gb) return gb;
 
   const bookAny = book as { title?: string; author?: string; category?: string; isbn?: string; isbn10?: string; isbn13?: string; pages?: number };
   const title = escapeXml(bookAny.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());
