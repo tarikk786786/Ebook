@@ -3,6 +3,8 @@
  * Clean, lightweight, professional HTML/Text templates matching AnonTrove's warm editorial identity.
  */
 
+import { getSupportEmail } from '@/lib/site';
+
 export interface EmailPayload {
   to: string;
   subject: string;
@@ -94,7 +96,7 @@ ${readerUrl}
 
 Your download link is cryptographically authenticated. Save your files to your local drive for permanent offline access.
 
-Need help? Contact apnix7@gmail.com
+Need help? Contact ${getSupportEmail()}
 Warm regards,
 AnonTrove Team`;
 
@@ -141,7 +143,7 @@ AnonTrove Team`;
     </p>
 
     <div class="footer">
-      AnonTrove Digital Bookstore • Questions? Contact apnix7@gmail.com
+      AnonTrove Digital Bookstore • Questions? Contact ${getSupportEmail()}
     </div>
   </div>
 </body>
