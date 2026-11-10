@@ -1,0 +1,172 @@
+{
+  "processed": 80,
+  "counts": {
+    "downloaded": 46,
+    "keep_existing": 0,
+    "not_found": 34,
+    "bad_image": 0
+  },
+  "updatedCurated": 46,
+  "sampleDownloaded": [
+    {
+      "slug": "2-the-health-stack-guide",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "2-the-health-stack-guide.jpg",
+      "bytes": 46067,
+      "title": "2. The Health Stack Guide"
+    },
+    {
+      "slug": "copy-of-platinum-secrets-final",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "copy-of-platinum-secrets-final.jpg",
+      "bytes": 37821,
+      "title": "Platinum Secrets (final)"
+    },
+    {
+      "slug": "rules-of-breaking-hearts",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "rules-of-breaking-hearts.jpg",
+      "bytes": 32444,
+      "title": "Red and White Mysterious That man Book Cover"
+    },
+    {
+      "slug": "the-end-of-alchemy-mervyn-king",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-end-of-alchemy-mervyn-king.jpg",
+      "bytes": 27816,
+      "title": "The End of Alchemy"
+    },
+    {
+      "slug": "accounting-made-simple",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "accounting-made-simple.jpg",
+      "bytes": 30085,
+      "title": "Accounting Made Simple"
+    },
+    {
+      "slug": "financial-intelligence",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "financial-intelligence.jpg",
+      "bytes": 32577,
+      "title": "Financial Intelligence"
+    },
+    {
+      "slug": "corporate-finance",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "corporate-finance.jpg",
+      "bytes": 9384,
+      "title": "Corporate Finance"
+    },
+    {
+      "slug": "cash-flow-for-dummies",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cash-flow-for-dummies.jpg",
+      "bytes": 30853,
+      "title": "Cash Flow for Dummies"
+    },
+    {
+      "slug": "financial-shenanigans",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "financial-shenanigans.jpg",
+      "bytes": 57021,
+      "title": "Financial Shenanigans"
+    },
+    {
+      "slug": "financial-intelligence-for-entrepreneurs",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "financial-intelligence-for-entrepreneurs.jpg",
+      "bytes": 26082,
+      "title": "Financial Intelligence for Entrepreneurs"
+    },
+    {
+      "slug": "investment-banking",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "investment-banking.jpg",
+      "bytes": 34186,
+      "title": "Investment Banking"
+    },
+    {
+      "slug": "simple-accounting-for-small-business",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "simple-accounting-for-small-business.jpg",
+      "bytes": 41135,
+      "title": "Simple Accounting for Small Business"
+    },
+    {
+      "slug": "principles-of-corporate-finance",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "principles-of-corporate-finance.jpg",
+      "bytes": 46712,
+      "title": "Principles of Corporate Finance"
+    },
+    {
+      "slug": "quality-of-earnings",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "quality-of-earnings.jpg",
+      "bytes": 67404,
+      "title": "Quality of Earnings"
+    },
+    {
+      "slug": "the-accounting-handbook",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-accounting-handbook.jpg",
+      "bytes": 32654,
+      "title": "The Accounting Handbook"
+    },
+    {
+      "slug": "the-black-swan",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-black-swan.jpg",
+      "bytes": 39309,
+      "title": "The Black Swan"
+    },
+    {
+      "slug": "the-accounting-game",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-accounting-game.jpg",
+      "bytes": 22472,
+      "title": "The Accounting Game"
+    },
+    {
+      "slug": "the-business-of-venture-capital",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-business-of-venture-capital.jpg",
+      "bytes": 21092,
+      "title": "The Business of Venture Capital"
+    },
+    {
+      "slug": "the-cfo-guidebook",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-cfo-guidebook.jpg",
+      "bytes": 31817,
+      "title": "The CFO Guidebook"
+    },
+    {
+      "slug": "the-dark-side-of-valuation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-dark-side-of-valuation.jpg",
+      "bytes": 16813,
+      "title": "The Dark Side of Valuation"
+    }
+  ]
+}

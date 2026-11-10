@@ -125,6 +125,36 @@ function readLocalCover(
   return null;
 }
 
+async function fetchRemoteCover(
+  url: string,
+  source: string
+): Promise<NextResponse | null> {
+  try {
+    const upstream = await fetch(url, {
+      headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' },
+      next: { revalidate: 86400 },
+    });
+    if (!upstream.ok) return null;
+    const buf = Buffer.from(await upstream.arrayBuffer());
+    // Tiny payloads are placeholders / default GIFs
+    if (buf.length <= 2500) return null;
+    if (buf.slice(0, 3).toString('ascii').toUpperCase() === 'GIF' && buf.length < 8000) {
+      return null;
+    }
+    return new NextResponse(buf, {
+      status: 200,
+      headers: {
+        'Content-Type': upstream.headers.get('content-type') || 'image/jpeg',
+        'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+        'X-Cover-Source': source,
+        'X-Cover-Verified': 'review-required',
+      },
+    });
+  } catch {
+    return null;
+  }
+}
+
 async function fetchOpenLibraryCover(book: {
   title?: string;
   author?: string;
@@ -171,24 +201,71 @@ async function fetchOpenLibraryCover(book: {
     }
 
     for (const coverUrl of coverUrls) {
-      const upstream = await fetch(coverUrl, {
-        headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' },
-        next: { revalidate: 86400 },
-      });
-      if (!upstream.ok) continue;
-      const buf = Buffer.from(await upstream.arrayBuffer());
-      // Open Library returns a tiny placeholder for missing covers
-      if (buf.length <= 2500) continue;
+      const hit = await fetchRemoteCover(coverUrl, 'open-library');
+      if (hit) return hit;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
 
-      return new NextResponse(buf, {
-        status: 200,
-        headers: {
-          'Content-Type': upstream.headers.get('content-type') || 'image/jpeg',
-          'Cache-Control': 'public, max-age=86400, s-maxage=86400',
-          'X-Cover-Source': 'open-library',
-          'X-Cover-Verified': 'review-required',
-        },
-      });
+async function fetchGoogleBooksCover(book: {
+  title?: string;
+  author?: string;
+} | undefined): Promise<NextResponse | null> {
+  if (!book?.title) return null;
+  try {
+    const cleaned = cleanSearchTitle(book.title);
+    const titleCore = cleaned.split(/[:—(]/)[0].trim();
+    let q = `intitle:"${titleCore}"`;
+    if (book.author) q += ` inauthor:"${book.author.split(',')[0].trim()}"`;
+    const res = await fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=5`,
+      { headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' }, next: { revalidate: 86400 } }
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    const items = data?.items || [];
+    for (const item of items) {
+      const links = item?.volumeInfo?.imageLinks || {};
+      const raw =
+        links.extraLarge || links.large || links.medium || links.thumbnail || links.smallThumbnail;
+      if (!raw) continue;
+      const url = String(raw).replace('http://', 'https://').replace(/zoom=\d/, 'zoom=2');
+      const hit = await fetchRemoteCover(url, 'google-books');
+      if (hit) return hit;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+async function fetchInternetArchiveCover(book: {
+  title?: string;
+  author?: string;
+} | undefined): Promise<NextResponse | null> {
+  if (!book?.title) return null;
+  try {
+    const cleaned = cleanSearchTitle(book.title).split(/[:—(]/)[0].trim();
+    const clauses = [`title:(${cleaned})`];
+    if (book.author) clauses.push(`creator:(${book.author.split(',')[0].trim()})`);
+    const q = clauses.join(' AND ');
+    const res = await fetch(
+      `https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&fl[]=identifier&rows=5&page=1&output=json`,
+      { headers: { 'User-Agent': 'AnonTroveCoverProxy/1.0' }, next: { revalidate: 86400 } }
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    const docs = data?.response?.docs || [];
+    for (const doc of docs) {
+      if (!doc?.identifier) continue;
+      const hit = await fetchRemoteCover(
+        `https://archive.org/services/img/${encodeURIComponent(doc.identifier)}`,
+        'internet-archive'
+      );
+      if (hit) return hit;
     }
     return null;
   } catch {
@@ -235,6 +312,12 @@ export async function GET(
 
   const ol = await fetchOpenLibraryCover(book);
   if (ol) return ol;
+
+  const gb = await fetchGoogleBooksCover(book);
+  if (gb) return gb;
+
+  const ia = await fetchInternetArchiveCover(book);
+  if (ia) return ia;
 
   const local = readLocalCover(cleanSlug, rawSlug, book);
   if (local) return local;
