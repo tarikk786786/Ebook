@@ -33,6 +33,19 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+try:
+    from cover_worker_control import wait_if_paused, write_status, is_paused  # noqa: E402
+except Exception:  # pragma: no cover
+    def wait_if_paused(poll_s: float = 2.0) -> None:
+        return None
+
+    def write_status(patch: dict) -> None:
+        return None
+
+    def is_paused() -> bool:
+        return False
+
 LIST_PATH = Path(r"C:\Users\tarik\Downloads\all_ebooks_pdf_list.txt")
 DB_PATH = ROOT / "data" / "covers_86k.sqlite"
 EXPORT_PATH = ROOT / "data" / "catalog" / "cover_url_index_86k.json"
@@ -434,7 +447,10 @@ def main():
     ap.add_argument("--export-every", type=int, default=200)
     ap.add_argument("--retry-not-found", action="store_true")
     ap.add_argument("--google-first", action="store_true", help="Force Google Books priority")
+    ap.add_argument("--always-download", action="store_true", help="Alias for --download-thumbs")
     args = ap.parse_args()
+    if args.always_download:
+        args.download_thumbs = True
 
     GB_API_KEY = load_env_key()
     if args.google_first and not GB_API_KEY:
@@ -466,24 +482,30 @@ def main():
     log(f"Pending to resolve: {len(pending)} | workers={args.workers} | thumbs={args.download_thumbs}")
 
     def work(row):
+        wait_if_paused()
         catalog_num, slug, title, author = row
         # jitter to reduce synchronized rate limits
-        time.sleep(random.uniform(0.01, 0.08))
+        time.sleep(random.uniform(0.05, 0.15))
         source, url, ol_id = resolve_cover(title, author or "")
         local_path = None
+        cover_url = url
         if url and args.download_thumbs:
             dest = COVERS_DIR / f"{catalog_num}.jpg"
             if save_thumb(url, dest):
                 local_path = str(dest.relative_to(ROOT)).replace("\\", "/")
+                cover_url = f"/covers/{catalog_num}.jpg"
                 # also slug copy for fuzzy API
                 if slug:
-                    save_thumb(url, COVERS_DIR / f"{slug}.jpg")
+                    try:
+                        (COVERS_DIR / f"{slug}.jpg").write_bytes(dest.read_bytes())
+                    except Exception:
+                        save_thumb(url, COVERS_DIR / f"{slug}.jpg")
         status = "found" if url else "not_found"
         return {
             "catalog_num": catalog_num,
             "status": status,
             "source": source,
-            "cover_url": url,
+            "cover_url": cover_url,
             "ol_cover_id": ol_id,
             "local_path": local_path,
             "error": None if url else "no_cover",
@@ -493,10 +515,20 @@ def main():
     found = 0
     miss = 0
     done = 0
+    write_status(
+        {
+            "job": "fetch_all_86k_covers",
+            "queued": len(pending),
+            "running": True,
+            "download_thumbs": bool(args.download_thumbs),
+            "workers": args.workers,
+        }
+    )
     with ThreadPoolExecutor(max_workers=max(1, args.workers)) as ex:
         futs = {ex.submit(work, row): row[0] for row in pending}
         batch = []
         for fut in as_completed(futs):
+            wait_if_paused()
             res = fut.result()
             batch.append(res)
             done += 1
@@ -529,6 +561,17 @@ def main():
                 batch = []
             if done % 50 == 0:
                 log(f"[{done}/{len(pending)}] found={found} miss={miss}")
+                write_status(
+                    {
+                        "job": "fetch_all_86k_covers",
+                        "done": done,
+                        "queued": len(pending),
+                        "found": found,
+                        "miss": miss,
+                        "running": True,
+                        "paused": is_paused(),
+                    }
+                )
             if done % max(50, args.export_every) == 0:
                 export_index(conn)
 
@@ -558,6 +601,15 @@ def main():
     export_index(conn)
     totals = dict(conn.execute("SELECT status, COUNT(*) FROM covers GROUP BY status").fetchall())
     log(f"DONE totals={totals}")
+    write_status(
+        {
+            "job": "fetch_all_86k_covers",
+            "running": False,
+            "found": found,
+            "miss": miss,
+            "totals": totals,
+        }
+    )
     conn.close()
 
 

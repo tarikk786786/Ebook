@@ -1,0 +1,29 @@
+{
+  "total": 86260,
+  "installed_or_linked": 24247,
+  "missing": 62013,
+  "review": 251,
+  "failed": 0,
+  "duplicate_groups": 492,
+  "by_status": {
+    "not_found": 862,
+    "found": 24247,
+    "pending": 61151
+  },
+  "by_source": {
+    "local-disk": 23745,
+    "pymupdf-pdf": 97,
+    "epub-opf-zipfile": 1,
+    "local-pdf-render": 153,
+    "open-library": 25,
+    "internet-archive": 226
+  },
+  "files": {
+    "ebook_cover_results.csv": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\data\\reports\\ebook_cover_results.csv",
+    "missing_covers.csv": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\data\\reports\\missing_covers.csv",
+    "failed_image_downloads.csv": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\data\\reports\\failed_image_downloads.csv",
+    "manual_review.csv": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\data\\reports\\manual_review.csv",
+    "duplicate_cover_images.csv": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\data\\reports\\duplicate_cover_images.csv",
+    "cover_source_statistics.csv": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\data\\reports\\cover_source_statistics.csv"
+  }
+}

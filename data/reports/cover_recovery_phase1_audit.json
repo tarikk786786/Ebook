@@ -4,13 +4,13 @@
   "covers_86k": {
     "total": 86260,
     "by_status": {
-      "found": 24158,
-      "not_found": 527,
-      "pending": 61575
+      "found": 24243,
+      "not_found": 686,
+      "pending": 61331
     },
     "found_by_source": {
-      "internet-archive": 140,
-      "local-disk": 23839,
+      "internet-archive": 220,
+      "local-disk": 23844,
       "local-pdf-render": 154,
       "open-library": 25
     }
@@ -40,9 +40,9 @@
     ]
   },
   "cover_url_index": {
-    "count_field": 24158,
-    "map_keys": 52148,
-    "bytes": 21760529
+    "count_field": 24243,
+    "map_keys": 52319,
+    "bytes": 21849610
   },
   "local_storage": {
     "public_covers_jpg": 20132,

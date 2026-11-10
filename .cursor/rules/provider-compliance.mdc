@@ -1,0 +1,16 @@
+---
+description: External book metadata provider compliance
+globs: "{lib/cover-recovery/**,scripts/**}"
+alwaysApply: false
+---
+
+# Provider compliance
+
+- Provider order: local extract → Google Books (with API key) → Internet Archive → Open Library.
+- Without `GOOGLE_BOOKS_API_KEY`, do not expect anonymous GB volume search to succeed (429).
+- Open Library: respect rate limits; do not bulk-crawl Covers API for tens of thousands of images; prefer dumps or direct link display when required.
+- Cache responses; isolate provider failures so one outage does not stop others.
+- Track source, source URL, attribution, and rights_status for every cover.
+- If terms only allow remote display, do not copy the image into owned storage.
+- Optional providers (Hardcover, ISBNdb) are adapters — app must work when they are absent.
+- Never couple the whole recovery pipeline to a single provider.

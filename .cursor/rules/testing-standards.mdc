@@ -1,0 +1,17 @@
+---
+description: Testing and acceptance standards for cover/dedupe work
+globs: "{tests/**,scripts/**,lib/cover-recovery/**}"
+alwaysApply: false
+---
+
+# Testing standards
+
+- Before claiming completion: run relevant automated checks and record evidence.
+- Required suites when touching payments/security/catalog:
+  - `node tests/master_system_verification.mjs`
+  - `node tests/security_regression_suite.mjs`
+- Pilot before scale: 100 representative books; ≥98% auto-assign precision before expanding.
+- Unit focus: ISBN normalize, confidence score, SHA-256, image validation, path mapping.
+- Data integrity: original IDs preserved; no broken downloads; no unauthorized cover overwrite.
+- Never disable security scanners or weaken tests to make CI pass.
+- Mark checklist items in `docs/IMPLEMENTATION_CHECKLIST.md` only with evidence.

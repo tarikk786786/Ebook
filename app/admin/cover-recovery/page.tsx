@@ -11,6 +11,9 @@ import {
   Image as ImageIcon,
   Key,
   ExternalLink,
+  Play,
+  Pause,
+  RotateCcw,
 } from 'lucide-react';
 
 interface CoverStats {
@@ -37,6 +40,7 @@ interface Payload {
     source: string;
     cover_url?: string;
   }>;
+  worker?: Record<string, unknown>;
   message?: string;
   error?: string;
 }
@@ -53,22 +57,31 @@ function getAdminToken(): string {
 export default function CoverRecoveryCenterPage() {
   const [data, setData] = useState<Payload | null>(null);
   const [loading, setLoading] = useState(true);
+  const [busy, setBusy] = useState(false);
+  const [actionMsg, setActionMsg] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/admin/cover-recovery', {
-        headers: { 'x-admin-token': getAdminToken() },
-        cache: 'no-store',
-      });
+      const [res, ctrl] = await Promise.all([
+        fetch('/api/admin/cover-recovery', {
+          headers: { 'x-admin-token': getAdminToken() },
+          cache: 'no-store',
+        }),
+        fetch('/api/admin/cover-recovery/control', {
+          headers: { 'x-admin-token': getAdminToken() },
+          cache: 'no-store',
+        }),
+      ]);
       const json = (await res.json()) as Payload;
+      const ctrlJson = await ctrl.json();
       if (!res.ok) {
         setError(json.error || `HTTP ${res.status}`);
         setData(null);
       } else {
-        setData(json);
+        setData({ ...json, worker: ctrlJson?.status || {} });
       }
     } catch (e: any) {
       setError(e?.message || 'Failed to load');
@@ -77,13 +90,41 @@ export default function CoverRecoveryCenterPage() {
     }
   }, []);
 
+  const runAction = async (action: string) => {
+    setBusy(true);
+    setActionMsg(null);
+    try {
+      const res = await fetch('/api/admin/cover-recovery/control', {
+        method: 'POST',
+        headers: {
+          'x-admin-token': getAdminToken(),
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ action, limit: 300, workers: 4 }),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        setActionMsg(json.error || `Action failed (${res.status})`);
+      } else {
+        setActionMsg(json.message || `Action ${action} ok`);
+        await load();
+      }
+    } catch (e: any) {
+      setActionMsg(e?.message || 'Action failed');
+    } finally {
+      setBusy(false);
+    }
+  };
+
   useEffect(() => {
     load();
-    const t = setInterval(load, 15000);
+    const t = setInterval(load, 10000);
     return () => clearInterval(t);
   }, [load]);
 
   const stats = data?.stats;
+  const worker = data?.worker || {};
+  const paused = Boolean(worker.paused);
 
   return (
     <div className="min-h-screen bg-[#0B0F14] text-slate-100">
@@ -95,10 +136,10 @@ export default function CoverRecoveryCenterPage() {
             </Link>
             <h1 className="text-2xl font-semibold tracking-tight flex items-center gap-2">
               <ImageIcon className="w-6 h-6 text-emerald-400" />
-              Ebook Cover Recovery Center
+              Ebook Image Scraping Center
             </h1>
             <p className="text-sm text-slate-400 mt-1">
-              Google Books–first discovery for the 86k catalog. Local extract and free APIs fill gaps.
+              Live recovery for 86,260 catalog records — local extract first, then authorized APIs.
             </p>
           </div>
           <button
@@ -139,8 +180,7 @@ export default function CoverRecoveryCenterPage() {
             {!data?.googleBooksKeyConfigured && (
               <div className="text-xs text-rose-100/80 space-y-1">
                 <p>
-                  Books API is enabled in Google Cloud, but no API key credential exists yet. Anonymous
-                  calls return HTTP 429.
+                  Without a key, Google Books returns HTTP 429. Open Library and Internet Archive still run.
                 </p>
                 <ol className="list-decimal ml-4 space-y-0.5">
                   <li>
@@ -154,12 +194,10 @@ export default function CoverRecoveryCenterPage() {
                       Credentials <ExternalLink className="w-3 h-3" />
                     </a>
                   </li>
-                  <li>Create credentials → API key</li>
-                  <li>Restrict the key to Books API</li>
+                  <li>Create credentials → API key (restrict to Books API)</li>
                   <li>
-                    Paste into <code className="text-rose-50">.env.local</code> as{' '}
-                    <code className="text-rose-50">GOOGLE_BOOKS_API_KEY=...</code> and add the same
-                    var in Vercel
+                    Set <code className="text-rose-50">GOOGLE_BOOKS_API_KEY</code> in{' '}
+                    <code className="text-rose-50">.env.local</code> and Vercel
                   </li>
                 </ol>
               </div>
@@ -185,6 +223,60 @@ export default function CoverRecoveryCenterPage() {
           ))}
         </div>
 
+        <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4 space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-sm font-medium text-slate-200">Worker controls</h2>
+            <div className="text-xs text-slate-400">
+              {paused ? 'Paused' : worker.running ? 'Running' : 'Idle'}
+              {typeof worker.done === 'number' ? ` · done ${String(worker.done)}` : ''}
+              {typeof worker.found === 'number' ? ` · found ${String(worker.found)}` : ''}
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              disabled={busy}
+              onClick={() => runAction('start')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-emerald-700/80 hover:bg-emerald-600 text-xs"
+            >
+              <Play className="w-3.5 h-3.5" /> Start discovery
+            </button>
+            <button
+              disabled={busy}
+              onClick={() => runAction('pause')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-amber-800/70 hover:bg-amber-700 text-xs"
+            >
+              <Pause className="w-3.5 h-3.5" /> Pause
+            </button>
+            <button
+              disabled={busy}
+              onClick={() => runAction('resume')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs"
+            >
+              Resume
+            </button>
+            <button
+              disabled={busy}
+              onClick={() => runAction('retry_failures')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs"
+            >
+              <RotateCcw className="w-3.5 h-3.5" /> Retry failures
+            </button>
+            <button
+              disabled={busy}
+              onClick={() => runAction('missing_only')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs"
+            >
+              Recover missing only
+            </button>
+          </div>
+          {actionMsg && <p className="text-xs text-slate-400">{actionMsg}</p>}
+          <pre className="text-[11px] leading-relaxed text-slate-400 whitespace-pre-wrap bg-black/40 rounded-lg p-3 border border-slate-800 overflow-x-auto">{`CLI:
+python scripts/run_cover_recovery_batch.py --pending-from-db --limit 300 --workers 4
+python scripts/fetch_all_86k_covers.py --always-download --workers 4 --export-every 100
+python scripts/generate_cover_reports.py
+python scripts/cover_worker_control.py pause|resume|status`}</pre>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-4">
           <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
             <h2 className="text-sm font-medium text-slate-200 mb-3">Found by source</h2>
@@ -202,13 +294,19 @@ export default function CoverRecoveryCenterPage() {
           </div>
 
           <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
-            <h2 className="text-sm font-medium text-slate-200 mb-3">Worker commands</h2>
-            <pre className="text-[11px] leading-relaxed text-slate-300 whitespace-pre-wrap bg-black/40 rounded-lg p-3 border border-slate-800 overflow-x-auto">{`# After setting GOOGLE_BOOKS_API_KEY in .env.local:
-python scripts/fetch_all_86k_covers.py --google-first --workers 4 --export-every 100
-
-# Retry misses later:
-python scripts/fetch_all_86k_covers.py --google-first --retry-not-found --workers 2`}</pre>
-            {data?.message && <p className="text-xs text-slate-500 mt-3">{data.message}</p>}
+            <h2 className="text-sm font-medium text-slate-200 mb-3">Reports</h2>
+            <p className="text-xs text-slate-400 mb-2">
+              Generated under <code>data/reports/</code> via{' '}
+              <code>python scripts/generate_cover_reports.py</code>
+            </p>
+            <ul className="text-xs text-slate-300 space-y-1 list-disc ml-4">
+              <li>ebook_cover_results.csv</li>
+              <li>missing_covers.csv</li>
+              <li>failed_image_downloads.csv</li>
+              <li>manual_review.csv</li>
+              <li>duplicate_cover_images.csv</li>
+              <li>cover_source_statistics.csv</li>
+            </ul>
           </div>
         </div>
 

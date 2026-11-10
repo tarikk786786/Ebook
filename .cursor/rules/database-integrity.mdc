@@ -1,0 +1,16 @@
+---
+description: Database integrity rules for catalogue, covers, and dedupe
+globs: "{data/**,scripts/**,lib/**,app/api/**}"
+alwaysApply: false
+---
+
+# Database integrity
+
+- Additive migrations only; reversible where practical.
+- Preserve all original ebook record IDs. No silent deletes.
+- `marketplace_listings.current_price` (not selling_price).
+- `pricing_intelligence.recommended_selling_price` (not recommended_price).
+- Cover status changes must be logged; never overwrite approved/manual covers.
+- Dedup: soft-suppress + quarantine first; hard delete only after explicit admin approval.
+- Backup / `rollback_data` required before any merge.
+- Dashboard metrics must come from real DB queries, never mock numbers.

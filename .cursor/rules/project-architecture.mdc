@@ -1,0 +1,22 @@
+---
+description: AnonTrove architecture constraints for Ebook Intelligence work
+alwaysApply: true
+---
+
+# Project architecture
+
+- Integrate into the existing Next.js 14 App Router site. Never rebuild the storefront.
+- Do not replace FamGateway, download tokens, auth, or payment flows.
+- Authoritative docs: `docs/PRD.md`, `docs/ARCHITECTURE.md`, `docs/IMPLEMENTATION_CHECKLIST.md`.
+- Cover jobs: `data/covers_86k.sqlite` + `scripts/run_cover_recovery_batch.py` (chunked). Do not process 86k in one HTTP request.
+- Cover display: `/api/covers/[slug]` + `public/covers/` + `cover_url_index_86k.json`.
+- SQLite in Node: `import { DatabaseSync } from 'node:sqlite'` only.
+- Do not git-push bulk cover binaries or secrets (`.env.local`).
+- Prefer extending `/admin/cover-recovery` toward `/admin/ebook-intelligence*` rather than a parallel admin stack.
+---
+
+# Identity
+
+- CSV `Index` is not automatically the website primary key.
+- Never delete/merge by title alone (~70k rows share titles).
+- Use catalog_num, file hash (SHA-256), ISBN, and admin approval for destructive actions.

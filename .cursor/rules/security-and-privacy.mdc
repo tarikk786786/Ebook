@@ -1,0 +1,17 @@
+---
+description: Security rules for admin, covers fetch, and credentials
+alwaysApply: true
+---
+
+# Security and privacy
+
+- Never expose secrets in `NEXT_PUBLIC_*`, client bundles, logs, or CSV exports.
+- Admin routes: verify `ADMIN_ACCESS_SECRET` server-side first.
+- Cron: validate `CRON_SECRET`.
+- FamGateway webhooks: HMAC-SHA256 with `crypto.timingSafeEqual`.
+- Download tokens: AES-256-GCM, max 15 minutes TTL.
+- Paid files stay in `private_storage/` — never under `public/`.
+- Remote image fetch: SSRF guards (block localhost/private IPs), revalidate redirects, size/time limits, validate magic bytes not just extension.
+- Fail closed if required crypto secrets are missing — no hardcoded fallback keys.
+- Do not bypass DRM, CAPTCHAs, or provider rate limits.
+- Do not scrape protected retailer sites for covers.

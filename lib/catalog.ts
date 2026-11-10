@@ -782,6 +782,54 @@ function expandToBook(item: any): Book {
 
 let cachedMasterIndex: any[] | null = null;
 let cachedDirectoryOverlay: Map<string, any> | null = null;
+let cachedDuplicateSuppression: {
+  suppressed: Set<number>;
+  canonicalByDuplicate: Map<number, number>;
+} | null = null;
+
+function getDuplicateSuppression() {
+  if (cachedDuplicateSuppression) return cachedDuplicateSuppression;
+  cachedDuplicateSuppression = { suppressed: new Set(), canonicalByDuplicate: new Map() };
+  try {
+    if (typeof window === "undefined") {
+      const fs = eval("require('fs')");
+      const path = eval("require('path')");
+      const p = path.resolve(process.cwd(), "data", "catalog", "duplicate_suppression.json");
+      if (!fs.existsSync(p)) return cachedDuplicateSuppression;
+      const payload = JSON.parse(fs.readFileSync(p, "utf8"));
+      for (const n of payload.suppressedCatalogNums || []) {
+        cachedDuplicateSuppression.suppressed.add(Number(n));
+      }
+      for (const [dup, canon] of Object.entries(payload.canonicalByDuplicate || {})) {
+        cachedDuplicateSuppression.canonicalByDuplicate.set(Number(dup), Number(canon));
+      }
+    }
+  } catch {}
+  return cachedDuplicateSuppression;
+}
+
+function catalogNumFromBook(book: { id?: string; slug?: string; ref?: number | string; catalogNum?: number | string } | any): number | null {
+  if (book?.catalogNum != null && Number.isFinite(Number(book.catalogNum))) return Number(book.catalogNum);
+  if (book?.ref != null && Number.isFinite(Number(book.ref))) return Number(book.ref);
+  const id = String(book?.id || "");
+  const m = id.match(/(?:^book-)?(\d+)$/);
+  if (m) return Number(m[1]);
+  const slug = String(book?.slug || "");
+  const sm = slug.match(/(\d{2,})$/);
+  if (sm) return Number(sm[1]);
+  return null;
+}
+
+function isSuppressedBook(book: any): boolean {
+  const n = catalogNumFromBook(book);
+  if (n == null) return false;
+  return getDuplicateSuppression().suppressed.has(n);
+}
+
+function resolveCanonicalCatalogNum(n: number): number {
+  const map = getDuplicateSuppression().canonicalByDuplicate;
+  return map.get(n) ?? n;
+}
 
 function getDirectoryOverlay(): Map<string, any> {
   if (cachedDirectoryOverlay) return cachedDirectoryOverlay;
@@ -903,17 +951,19 @@ function getMaster86kList(): any[] {
       const path = eval("require('path')");
       const p1Path = path.resolve(process.cwd(), "data", "catalog", "master_86k_part1.json");
       const p2Path = path.resolve(process.cwd(), "data", "catalog", "master_86k_part2.json");
+      let list: any[] = [];
       if (fs.existsSync(p1Path) && fs.existsSync(p2Path)) {
         const p1 = JSON.parse(fs.readFileSync(p1Path, "utf8"));
         const p2 = JSON.parse(fs.readFileSync(p2Path, "utf8"));
-        cachedMasterIndex = p1.concat(p2);
-        return cachedMasterIndex || [];
+        list = p1.concat(p2);
+      } else {
+        const masterPath = path.resolve(process.cwd(), "data", "catalog", "master_86k_index.json");
+        if (fs.existsSync(masterPath)) {
+          list = JSON.parse(fs.readFileSync(masterPath, "utf8"));
+        }
       }
-      const masterPath = path.resolve(process.cwd(), "data", "catalog", "master_86k_index.json");
-      if (fs.existsSync(masterPath)) {
-        cachedMasterIndex = JSON.parse(fs.readFileSync(masterPath, "utf8"));
-        return cachedMasterIndex || [];
-      }
+      cachedMasterIndex = list.filter((b: any) => !isSuppressedBook(b));
+      return cachedMasterIndex || [];
     }
   } catch {}
   return [];
@@ -921,10 +971,20 @@ function getMaster86kList(): any[] {
 
 export function getBookById(id: string): Book | undefined {
   const found = BOOK_CATALOG.find((b) => b.id === id || b.slug === id);
-  if (found) return applyDirectoryOverlay(found);
+  if (found) {
+    if (isSuppressedBook(found)) {
+      const n = catalogNumFromBook(found);
+      if (n != null) {
+        const canon = resolveCanonicalCatalogNum(n);
+        if (canon !== n) return getBookById(`book-${canon}`) || getBookById(String(canon));
+      }
+      return undefined;
+    }
+    return applyDirectoryOverlay(found);
+  }
   if (Array.isArray(rawDynamicBooks)) {
     const rawMatch = (rawDynamicBooks as unknown as Book[]).find((b) => b.id === id || b.slug === id);
-    if (rawMatch) return applyDirectoryOverlay(rawMatch);
+    if (rawMatch && !isSuppressedBook(rawMatch)) return applyDirectoryOverlay(rawMatch);
   }
   const masterList = getMaster86kList();
   const masterMatch = masterList.find((b: any) => b.id === id || b.slug === id);
@@ -935,10 +995,20 @@ export function getBookById(id: string): Book | undefined {
 
 export function getBookBySlug(slug: string): Book | undefined {
   const found = BOOK_CATALOG.find((b) => b.slug === slug || b.id === ("book-" + slug));
-  if (found) return applyDirectoryOverlay(found);
+  if (found) {
+    if (isSuppressedBook(found)) {
+      const n = catalogNumFromBook(found);
+      if (n != null) {
+        const canon = resolveCanonicalCatalogNum(n);
+        if (canon !== n) return getBookById(`book-${canon}`) || getBookById(String(canon));
+      }
+      return undefined;
+    }
+    return applyDirectoryOverlay(found);
+  }
   if (Array.isArray(rawDynamicBooks)) {
     const rawMatch = (rawDynamicBooks as unknown as Book[]).find((b) => b.slug === slug || b.id === ("book-" + slug));
-    if (rawMatch) return applyDirectoryOverlay(rawMatch);
+    if (rawMatch && !isSuppressedBook(rawMatch)) return applyDirectoryOverlay(rawMatch);
   }
   const masterList = getMaster86kList();
   const masterMatch = masterList.find((b: any) => b.slug === slug || b.id === ("book-" + slug) || b.id === slug);
@@ -948,6 +1018,5 @@ export function getBookBySlug(slug: string): Book | undefined {
 }
 
 export function getBookCatalog(): Book[] {
-
-  return BOOK_CATALOG;
+  return BOOK_CATALOG.filter((b) => !isSuppressedBook(b));
 }

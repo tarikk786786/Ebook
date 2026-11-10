@@ -146,6 +146,9 @@ export default function BookCard({
               onError={handleImageError}
               loading="lazy"
               decoding="async"
+              width={240}
+              height={320}
+              sizes="(max-width: 640px) 45vw, (max-width: 1024px) 22vw, 180px"
               className="absolute inset-0 z-10 w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-300 ease-out"
             />
           )}

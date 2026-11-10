@@ -456,6 +456,13 @@ export default function AdminDashboardPage() {
               <span className="hidden md:inline">Cover Recovery</span>
             </Link>
             <Link
+              href="/admin/deduplication"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-cyan-950/40 border border-cyan-800/80 text-xs text-cyan-300 hover:border-cyan-500/80 hover:text-white transition-colors"
+              title="Ebook Deduplication Center — exact file + metadata review"
+            >
+              <span className="hidden md:inline">Deduplication</span>
+            </Link>
+            <Link
               href="/admin/ai-intelligence"
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-violet-950/40 border border-violet-800/80 text-xs text-violet-300 hover:border-violet-500/80 hover:text-white transition-colors"
               title="AI Book Intelligence status and catalog PDF cover enrichment"

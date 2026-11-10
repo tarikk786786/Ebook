@@ -1,0 +1,16 @@
+---
+description: Admin Ebook Intelligence UI design constraints
+globs: "app/admin/**"
+alwaysApply: false
+---
+
+# Frontend design (admin)
+
+- Direction: Modern Research Library + Enterprise Operations Dashboard.
+- Reuse existing admin patterns and Tailwind tokens; do not invent a second design system.
+- Real data only — no placeholder stats or dead buttons.
+- Cover comparison: side-by-side source, confidence, edition, status; fast approve/reject.
+- Tables: server-side pagination; never load all 86k rows into client JS.
+- Accessibility: WCAG 2.2 AA target, keyboard operable, meaningful alt text.
+- Preserve storefront look separately; this rule applies to `/admin/*` intelligence surfaces.
+- Prefer extending `/admin/cover-recovery` into `/admin/ebook-intelligence` modules.

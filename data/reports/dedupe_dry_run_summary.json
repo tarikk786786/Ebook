@@ -1,0 +1,15 @@
+{
+  "total_catalog_records": 86260,
+  "high_groups": 664,
+  "medium_groups": 658,
+  "low_groups": 1473,
+  "auto_eligible_groups": 643,
+  "high_duplicate_records": 398,
+  "high_canonical_records": 300,
+  "auto_remove_eligible_count": 369,
+  "medium_duplicate_records_exclusive": 517,
+  "low_duplicate_records_exclusive": 1193,
+  "unresolved_duplicate_records": 1509,
+  "estimated_storage_recoverable_bytes": 6054406070,
+  "policy": "auto_only_exact_sha256_or_same_filepath"
+}
