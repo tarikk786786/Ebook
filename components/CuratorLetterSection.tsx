@@ -90,6 +90,12 @@ export default function CuratorLetterSection() {
               <strong className="text-[#FAF6F1]">If you can afford the official publication:</strong> We encourage you to support original authors, universities, and commercial publishers directly.
             </span>
           </div>
+          <div className="flex items-start space-x-3">
+            <CheckCircle2 className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+            <span>
+              <strong className="text-[#FAF6F1]">If a title has no cover thumbnail:</strong> The file is still genuine. Cover art is recovered separately — and if anything about the ebook is wrong, you get a full refund.
+            </span>
+          </div>
         </div>
 
         {/* Footer info */}
