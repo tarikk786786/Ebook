@@ -37,7 +37,7 @@ You can also pass the extracted CSV directly. The audit writes `data/reports/res
 
 ## Storefront behavior
 
-Book detail pages build per-book discovery URLs from the manifest-matched title/author when the compact directory is present. Existing saved `book.researchLinks` values take precedence over generated fallbacks. When a manifest ID can be matched to a catalog record, the research panel also displays the original manifest title, contributor field, category, filename and Manifest ID.
+Book detail pages build per-book discovery URLs from the manifest-matched title/author when the compact directory is present. Existing saved `book.researchLinks` values take precedence over generated fallbacks. The app matches the directory to a catalog entry by a unique, case-insensitive source filename (after normalizing Windows/POSIX path separators). It does not assume that the CSV row's Manifest ID equals the catalog's numeric ID. After a unique filename match, the research panel displays the original manifest title, unverified contributor field, category, source filename and Manifest ID.
 
 If the compact index is absent or a book has no matching manifest ID, the page still shows the generated research links using the current catalog title/author. The normal catalog, cover pipeline, checkout and delivery continue to work without the optional file.
 
