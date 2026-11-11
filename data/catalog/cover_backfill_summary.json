@@ -1,182 +1,126 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 171,
-    "keep_existing": 48,
-    "not_found": 281,
-    "bad_image": 0
+    "downloaded": 13,
+    "keep_existing": 52,
+    "not_found": 433,
+    "bad_image": 2
   },
-  "updatedCurated": 104,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "on-the-shortness-of-life",
+      "slug": "good-quality",
       "status": "downloaded",
       "source": "open-library",
-      "file": "on-the-shortness-of-life.jpg",
-      "bytes": 40471,
-      "title": "On the shortness of life"
+      "file": "good-quality.jpg",
+      "bytes": 26883,
+      "title": "Good Quality"
     },
     {
-      "slug": "power-vs-force-the-hidden-determinants-of-human",
+      "slug": "ratios",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "ratios.jpg",
+      "bytes": 11739,
+      "title": "Ratios"
+    },
+    {
+      "slug": "screener",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "screener.jpg",
+      "bytes": 23840,
+      "title": "Screener"
+    },
+    {
+      "slug": "1-formula",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "1-formula.jpg",
+      "bytes": 60241,
+      "title": "1% Formula"
+    },
+    {
+      "slug": "1-gemstones",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "1-gemstones.jpg",
+      "bytes": 26779,
+      "title": "1-Gemstones"
+    },
+    {
+      "slug": "1-2",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "power-vs-force-the-hidden-determinants-of-human.jpg",
-      "bytes": 11779,
-      "title": "Power vs Force The Hidden Determinants of Human"
+      "file": "1-2.jpg",
+      "bytes": 10134,
+      "title": "1.2"
     },
     {
-      "slug": "practice-steps-to-think-and-grow-rich",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "practice-steps-to-think-and-grow-rich.jpg",
-      "bytes": 52251,
-      "title": "Practice Steps To Think And Grow Rich"
-    },
-    {
-      "slug": "practicing-the-power-of-now",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "practicing-the-power-of-now.jpg",
-      "bytes": 22120,
-      "title": "Practicing the power of now"
-    },
-    {
-      "slug": "principles-life-and-work-dalio",
+      "slug": "1-3",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "principles-life-and-work-dalio.jpg",
-      "bytes": 9431,
-      "title": "Principles- Life and Work Dalio"
+      "file": "1-3.jpg",
+      "bytes": 12839,
+      "title": "1.3"
     },
     {
-      "slug": "psych-101-psychology-facts",
+      "slug": "1-5",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "psych-101-psychology-facts.jpg",
-      "bytes": 14900,
-      "title": "Psych 101 Psychology Facts"
+      "file": "1-5.jpg",
+      "bytes": 3576,
+      "title": "1.5"
     },
     {
-      "slug": "psych-101-psychology-facts-basics-statistics",
+      "slug": "100-ways-to-motivate-yourself",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "100-ways-to-motivate-yourself.jpg",
+      "bytes": 14229,
+      "title": "100 Ways To Motivate Yourself"
+    },
+    {
+      "slug": "108",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "psych-101-psychology-facts-basics-statistics.jpg",
-      "bytes": 18062,
-      "title": "Psych 101 Psychology Facts, Basics, Statistics,"
+      "file": "108.jpg",
+      "bytes": 9047,
+      "title": "108"
     },
     {
-      "slug": "psychology",
+      "slug": "14-000-things-to-be-happy-about",
       "status": "downloaded",
       "source": "open-library",
-      "file": "psychology.jpg",
-      "bytes": 47476,
-      "title": "Psychology"
+      "file": "14-000-things-to-be-happy-about.jpg",
+      "bytes": 31532,
+      "title": "14,000 Things to Be Happy About"
     },
     {
-      "slug": "rules-for-life",
+      "slug": "145",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "rules-for-life.jpg",
-      "bytes": 28520,
-      "title": "Rules For Life"
+      "source": "internet-archive",
+      "file": "145.jpg",
+      "bytes": 17891,
+      "title": "145"
     },
     {
-      "slug": "social-psychology",
+      "slug": "149",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "social-psychology.jpg",
-      "bytes": 42752,
-      "title": "Social Psychology"
-    },
-    {
-      "slug": "social-psychology-global-edition",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "social-psychology-global-edition.jpg",
-      "bytes": 28115,
-      "title": "Social Psychology, Global Edition"
-    },
-    {
-      "slug": "socrates-master-of-life",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "socrates-master-of-life.jpg",
-      "bytes": 9911,
-      "title": "Socrates Master Of Life"
-    },
-    {
-      "slug": "spy-secrets-that-can-save-your-life-a-former-cia",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "spy-secrets-that-can-save-your-life-a-former-cia.jpg",
-      "bytes": 45131,
-      "title": "Spy Secrets That Can Save Your Life A Former CIA"
-    },
-    {
-      "slug": "strategic-thinking",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "strategic-thinking.jpg",
-      "bytes": 60019,
-      "title": "Strategic Thinking"
-    },
-    {
-      "slug": "success-habits",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "success-habits.jpg",
-      "bytes": 30722,
-      "title": "Success Habits"
-    },
-    {
-      "slug": "the-magic-of-thinking-big-j-schwartz",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-magic-of-thinking-big-j-schwartz.jpg",
-      "bytes": 42735,
-      "title": "THE MAGIC OF THINKING BIG J Schwartz"
-    },
-    {
-      "slug": "the-art-of-creative-thinking",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-creative-thinking.jpg",
-      "bytes": 22691,
-      "title": "The Art Of Creative Thinking"
-    },
-    {
-      "slug": "the-art-of-the-good-life",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-the-good-life.jpg",
-      "bytes": 29700,
-      "title": "The Art of the Good Life"
-    },
-    {
-      "slug": "the-body-keeps-the-score",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-body-keeps-the-score.jpg",
-      "bytes": 28974,
-      "title": "The Body Keeps The Score"
-    },
-    {
-      "slug": "the-definitive-book-of-body-language",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-definitive-book-of-body-language.jpg",
-      "bytes": 6186,
-      "title": "The Definitive Book of BODY LANGUAGE"
+      "source": "internet-archive",
+      "file": "149.jpg",
+      "bytes": 5827,
+      "title": "149"
     }
   ],
-  "offset": 6000,
-  "nextOffset": 6500,
+  "offset": 6500,
+  "nextOffset": 7000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1111,
-    "keep_existing": 1695,
-    "not_found": 3683,
-    "bad_image": 11
+    "downloaded": 1124,
+    "keep_existing": 1747,
+    "not_found": 4116,
+    "bad_image": 13
   },
-  "totalProcessed": 6500
+  "totalProcessed": 7000
 }
