@@ -1,0 +1,383 @@
+[
+  {
+    "slug": "4-lecture",
+    "catalogNum": "00005",
+    "title": "Financial statement analysis",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Martin S. Fridson"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1991,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL2698457W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "calisthenics-playbook",
+    "catalogNum": "00053",
+    "title": "Get Better at Anything",
+    "currentAuthor": "Scott H. Young",
+    "suggestedAuthors": [
+      "Scott Young"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2024,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL37615545W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "copy-of-class-3-marketing-mix",
+    "catalogNum": "00059",
+    "title": "Lecture",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Александр Солженицын"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1972,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL1858560W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "notes-03-module-07",
+    "catalogNum": "00063",
+    "title": "LoveBook",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Simona Sparaco"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2009,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL26394113W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "claude-ai-for-beginners-the-step-by-step-guide-to-using-ai-without",
+    "catalogNum": "00065",
+    "title": "Cybersecurity Strategies and Best Practices",
+    "currentAuthor": "Aslaner, Milad;",
+    "suggestedAuthors": [
+      "Milad Aslaner"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2024,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL38119071W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "common-windows-linux-and-web-server-systems-hacking-techniques",
+    "catalogNum": "00066",
+    "title": "Lecture",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Александр Солженицын"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1972,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL1858560W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "digitaltimetheory",
+    "catalogNum": "00075",
+    "title": "Lecture",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Александр Солженицын"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1972,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL1858560W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "e-book-split-in-english",
+    "catalogNum": "00079",
+    "title": "Lecture",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Александр Солженицын"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1972,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL1858560W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "first-365-days-of-your-startup-by-zebra-learn",
+    "catalogNum": "00087",
+    "title": "Lecture",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Александр Солженицын"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1972,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL1858560W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "episode-29-resource-five-simple-steps-to-reclaim-your-juiciness",
+    "catalogNum": "00088",
+    "title": "Common Windows, Linux and Web Server Systems Hacking Techniques",
+    "currentAuthor": "Alassouli, Dr. Hidaia Mahmood",
+    "suggestedAuthors": [
+      "Dr Hidaia Mahmood Alassouli"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2021,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL24719719W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "get-better-at-anything-scott-young",
+    "catalogNum": "00093",
+    "title": "Serious Cryptography",
+    "currentAuthor": "Aumasson, Jean-Philippe;",
+    "suggestedAuthors": [
+      "Jean-Philippe Aumasson"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2017,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL17912167W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "jeff-nippards-neck-and-trap-guide",
+    "catalogNum": "00133",
+    "title": "Hacking Mastery With Kali Linux",
+    "currentAuthor": "Basant, Vidya",
+    "suggestedAuthors": [
+      "Vidya Basant"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2021,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL30757542W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "jeffnippardsintermediate-advancedlppprogram",
+    "catalogNum": "00136",
+    "title": "Claude AI for Beginners: The Step-by-Step Guide to Using AI Without the Overwhelm",
+    "currentAuthor": "Archer, Marcus",
+    "suggestedAuthors": [
+      "Marcus Archer"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": null,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL45949058W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "linux-basics-for-hackers",
+    "catalogNum": "00146",
+    "title": "Android Hacker's Handbook",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Joshua J. Drake",
+      "Zach Lanier",
+      "Collin Mulliner",
+      "Stephen A. Ridley",
+      "Georg Wicherski"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2014,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL21547764W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "8ac06f47-7136-46d1-b3da-ffcc469cdc99",
+    "catalogNum": "00169",
+    "title": "Myth in Human History",
+    "currentAuthor": "Grant L. Voth",
+    "suggestedAuthors": [
+      "Ph.D. Grant L. Voth"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2010,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL43284860W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "screener-10-minute-stock-analysis-by-zebra-learn",
+    "catalogNum": "00191",
+    "title": "The Name of The Game",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Nora Roberts"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1988,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL111461W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "the-let-them-theory-a-life-changing-tool-that-millions-of-people",
+    "catalogNum": "00217",
+    "title": "Linux basics for hackers",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "OccupyTheWeb"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2018,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL19542272W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "week-2-workbook-cu",
+    "catalogNum": "00242",
+    "title": "Melanin Madness",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Hope Bullard"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2022,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL28129705W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "wrist-watch-numerology",
+    "catalogNum": "00252",
+    "title": "Rootkits and Bootkits",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Alex Matrosov",
+      "Eugene Rodionov",
+      "Sergey Bratus"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2019,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL20154227W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "00-important-information-1",
+    "catalogNum": "00297",
+    "title": "Against Empathy",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Paul Bloom"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2016,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL20048765W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "001-introduction-to-recovery",
+    "catalogNum": "00323",
+    "title": "The-Hard-Thing-About-Hard-Things",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Ben Horowitz"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2014,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL16818208W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "004-self-motivation-amp-communication",
+    "catalogNum": "00384",
+    "title": "Dark Psychology Secrets",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Richard Martinez"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2018,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL29763927W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "007-r-c-k-r-reading-comprehension-mixed-questions-part",
+    "catalogNum": "00403",
+    "title": "How To Analyze People",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Alfred Smith"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2017,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL25633001W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "014-gamer-name-5000-daily-use-vocabularytopic",
+    "catalogNum": "00491",
+    "title": "Chanakya Neeti",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Chanakya"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2016,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL26446401W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "015-gamer-name-5000-daily-use-vocabularytopic",
+    "catalogNum": "00500",
+    "title": "A-book-of-five-rings",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Miyamoto Musashi"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1974,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL37791428W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  }
+]
