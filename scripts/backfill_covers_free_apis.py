@@ -28,6 +28,7 @@ from PIL import Image, ImageStat
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERS_DIR = ROOT / "public" / "covers"
+BOOK_COVERS_DIR = ROOT / "public" / "book-covers"
 CURSOR_PATH = ROOT / "data" / "catalog" / "cover_backfill_cursor.json"
 UA = "AnonTroveCoverBackfill/1.0 (mailto:apnix7@gmail.com)"
 MIN_BYTES = 3500
@@ -342,9 +343,11 @@ def process_one(book: dict[str, Any], overwrite_synthetic: bool) -> dict[str, An
         # also try coverImage basename
     if book.get("coverImage"):
         base = Path(str(book["coverImage"]).split("?")[0]).name
-        p = COVERS_DIR / base
-        if p.exists():
-            existing = p
+        for cover_root in (COVERS_DIR, BOOK_COVERS_DIR):
+            p = cover_root / base
+            if p.exists():
+                existing = p
+                break
 
     # Preserve every valid existing publisher cover. Only missing or detected
     # synthetic placeholders should be replaced by recovery candidates.
