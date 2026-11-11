@@ -111,37 +111,25 @@ export type RightsStatus =
 
 export function getEffectiveRightsStatus(book: Book): RightsStatus {
   if (book.rightsStatus) {
-    const s = book.rightsStatus.toUpperCase();
+    const status = book.rightsStatus.toUpperCase();
     if (
-      s === 'RIGHTS_CONFIRMED' || 
-      s === 'PUBLIC_DOMAIN_VERIFIED' || 
-      s === 'OPEN_LICENCE_VERIFIED' || 
-      s === 'PERMISSION_REQUIRED' || 
-      s === 'RIGHTS_UNKNOWN' || 
-      s === 'RIGHTS_REVIEW_REQUIRED'
+      status === 'RIGHTS_CONFIRMED' ||
+      status === 'PUBLIC_DOMAIN_VERIFIED' ||
+      status === 'OPEN_LICENCE_VERIFIED' ||
+      status === 'PERMISSION_REQUIRED' ||
+      status === 'RIGHTS_UNKNOWN' ||
+      status === 'RIGHTS_REVIEW_REQUIRED'
     ) {
-      return s as RightsStatus;
+      return status as RightsStatus;
     }
   }
-  const t = ((book.title || '') + ' ' + (book.category || '')).toLowerCase();
-  if (
-    t.includes('gnu') || 
-    t.includes('open source') || 
-    t.includes('cheat sheet') || 
-    t.includes('quick reference') || 
-    t.includes('linux commands') || 
-    t.includes('documentation') || 
-    t.includes('handbook')
-  ) {
-    return 'OPEN_LICENCE_VERIFIED';
-  }
-  if (book.listingStatus === 'APPROVED_FOR_SALE' || book.badge === 'Bestseller') {
-    return 'RIGHTS_CONFIRMED';
-  }
-  if (book.listingStatus === 'RIGHTS_VERIFICATION_REQUIRED') {
-    return 'RIGHTS_REVIEW_REQUIRED';
-  }
-  return 'RIGHTS_CONFIRMED';
+
+  // A title/category keyword or bestseller badge is not evidence of a licence.
+  // Only an explicit approval state may promote a record to rights-confirmed.
+  if (book.listingStatus === 'APPROVED_FOR_SALE') return 'RIGHTS_CONFIRMED';
+  if (book.listingStatus === 'RIGHTS_VERIFICATION_REQUIRED') return 'RIGHTS_REVIEW_REQUIRED';
+  if (book.listingStatus === 'NOT_APPROVED_FOR_SALE') return 'PERMISSION_REQUIRED';
+  return 'RIGHTS_REVIEW_REQUIRED';
 }
 
 export const INITIAL_BOOK_CATALOG: Book[] = [
@@ -778,7 +766,7 @@ function expandToBook(item: any): Book {
     collection: "MASTER_ARCHIVE",
     primaryResourceType: "published_ebook",
     coverType,
-    listingStatus: item.listingStatus || 'APPROVED_FOR_SALE',
+    listingStatus: item.listingStatus || 'MANUAL_REVIEW',
     marketReferencePrice: item.marketReferencePrice || origPrice,
     // Only attach marketplace comps when enrichment produced real prices.
     marketCurrentPrice: item.marketCurrentPrice || undefined,
@@ -788,7 +776,7 @@ function expandToBook(item: any): Book {
     priceVerifiedAt: item.priceVerifiedAt || undefined,
     amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (item.author || '') + ' kindle')}` : undefined),
     googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (item.author || ''))}&c=books` : undefined),
-    rightsStatus: item.rightsStatus || 'AUTHORIZED_EDITORIAL_EDITION',
+    rightsStatus: item.rightsStatus || 'RIGHTS_REVIEW_REQUIRED',
     errorNotes: item.errorNotes,
   };
 }
