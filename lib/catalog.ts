@@ -921,6 +921,7 @@ function applyResearchDirectoryOverlay(book: Book): Book {
   const generatedLinks = buildBookResearchLinks({
     title: record.listedTitle || book.title,
     author: record.listedAuthor || book.author,
+    isbn: book.isbn13 || book.isbn10 || book.isbn,
   });
 
   return {
