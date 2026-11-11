@@ -233,7 +233,8 @@ def internet_archive_urls(title: str, author: str) -> list[str]:
                 "rows": 10,
                 "page": 1,
                 "output": "json",
-            }
+            },
+            doseq=True,
         )
     )
     docs = (((data or {}).get("response") or {}).get("docs")) or []
