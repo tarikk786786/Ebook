@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 106,
-    "keep_existing": 53,
-    "not_found": 340,
-    "bad_image": 1
+    "downloaded": 179,
+    "keep_existing": 188,
+    "not_found": 133,
+    "bad_image": 0
   },
-  "updatedCurated": 61,
+  "updatedCurated": 174,
   "sampleDownloaded": [
     {
-      "slug": "essential-forensic-biology",
+      "slug": "mixed-questions",
       "status": "downloaded",
       "source": "open-library",
-      "file": "essential-forensic-biology.jpg",
-      "bytes": 41296,
-      "title": "Essential Forensic Biology"
+      "file": "mixed-questions.jpg",
+      "bytes": 25145,
+      "title": "Mixed Questions"
     },
     {
-      "slug": "essentials-of-forensic-psychological-assessment",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "essentials-of-forensic-psychological-assessment.jpg",
-      "bytes": 14766,
-      "title": "Essentials of Forensic Psychological Assessment"
-    },
-    {
-      "slug": "forensic",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "forensic.jpg",
-      "bytes": 55370,
-      "title": "Forensic"
-    },
-    {
-      "slug": "forensic-analysis-of-fire-debris-and-explosives",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "forensic-analysis-of-fire-debris-and-explosives.jpg",
-      "bytes": 23935,
-      "title": "Forensic Analysis of Fire Debris and Explosives@"
-    },
-    {
-      "slug": "forensic-anthropology-an-introduction",
+      "slug": "untitled-document",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "forensic-anthropology-an-introduction.jpg",
-      "bytes": 20621,
-      "title": "Forensic Anthropology An Introduction"
+      "file": "untitled-document.jpg",
+      "bytes": 13334,
+      "title": "Untitled document"
     },
     {
-      "slug": "forensic-engineering-investigation",
+      "slug": "trading-in-the-zone",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-engineering-investigation.jpg",
-      "bytes": 42398,
-      "title": "Forensic Engineering Investigation"
+      "file": "trading-in-the-zone.jpg",
+      "bytes": 26346,
+      "title": "Trading in the Zone"
     },
     {
-      "slug": "forensic-handwriting-identification-fundamental",
+      "slug": "bad-blood",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-handwriting-identification-fundamental.jpg",
-      "bytes": 29658,
-      "title": "Forensic Handwriting Identification Fundamental"
+      "file": "bad-blood.jpg",
+      "bytes": 21717,
+      "title": "Bad Blood"
     },
     {
-      "slug": "forensic-medical-investigation-of-motor-vehicle",
+      "slug": "billion-dollar-loser",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-medical-investigation-of-motor-vehicle.jpg",
-      "bytes": 9712,
-      "title": "Forensic Medical Investigation of Motor Vehicle"
+      "file": "billion-dollar-loser.jpg",
+      "bytes": 42291,
+      "title": "Billion Dollar Loser"
     },
     {
-      "slug": "forensic-psychologic",
+      "slug": "call-me-ted",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-psychologic.jpg",
-      "bytes": 33292,
-      "title": "Forensic Psychologic"
+      "file": "call-me-ted.jpg",
+      "bytes": 10404,
+      "title": "Call Me Ted"
     },
     {
-      "slug": "forensic-psychological-assessment-in-practice-ca",
+      "slug": "business-adventures",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-psychological-assessment-in-practice-ca.jpg",
-      "bytes": 12052,
-      "title": "Forensic Psychological Assessment in Practice Ca"
+      "file": "business-adventures.jpg",
+      "bytes": 38680,
+      "title": "Business Adventures"
     },
     {
-      "slug": "forensic-psychologists-casebook-psychological",
+      "slug": "elon-musk",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-psychologists-casebook-psychological.jpg",
-      "bytes": 11042,
-      "title": "Forensic Psychologists Casebook Psychological"
+      "file": "elon-musk.jpg",
+      "bytes": 31936,
+      "title": "Elon Musk"
     },
     {
-      "slug": "forensic-psychology",
+      "slug": "finding-my-virginity",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-psychology.jpg",
-      "bytes": 33292,
-      "title": "Forensic Psychology"
+      "file": "finding-my-virginity.jpg",
+      "bytes": 46053,
+      "title": "Finding My Virginity"
     },
     {
-      "slug": "forensic-science-in-wildlife-investigation",
+      "slug": "grinding-it-out",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-science-in-wildlife-investigation.jpg",
-      "bytes": 45257,
-      "title": "Forensic Science In Wildlife Investigation"
+      "file": "grinding-it-out.jpg",
+      "bytes": 49260,
+      "title": "Grinding It Out"
     },
     {
-      "slug": "forensic-document-examination",
+      "slug": "iacocca",
       "status": "downloaded",
       "source": "open-library",
-      "file": "forensic-document-examination.jpg",
-      "bytes": 34636,
-      "title": "Forensic document examination"
+      "file": "iacocca.jpg",
+      "bytes": 26615,
+      "title": "Iacocca"
     },
     {
-      "slug": "forensic-science-the-basics",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "forensic-science-the-basics.jpg",
-      "bytes": 17061,
-      "title": "Forensic science the basics"
-    },
-    {
-      "slug": "foundations-of-forensic-document-analysis-theory",
+      "slug": "losing-my-virginity",
       "status": "downloaded",
       "source": "open-library",
-      "file": "foundations-of-forensic-document-analysis-theory.jpg",
-      "bytes": 23412,
-      "title": "Foundations of Forensic Document Analysis Theory"
+      "file": "losing-my-virginity.jpg",
+      "bytes": 39574,
+      "title": "Losing My Virginity"
     },
     {
-      "slug": "hacking-for-dummies-beaver",
+      "slug": "made-in-america",
       "status": "downloaded",
       "source": "open-library",
-      "file": "hacking-for-dummies-beaver.jpg",
-      "bytes": 46732,
-      "title": "Hacking For Dummies Beaver"
+      "file": "made-in-america.jpg",
+      "bytes": 65995,
+      "title": "Made in America"
     },
     {
-      "slug": "handbook-of-digital-and-multimedia-forensic-evid",
+      "slug": "made-in-japan",
       "status": "downloaded",
       "source": "open-library",
-      "file": "handbook-of-digital-and-multimedia-forensic-evid.jpg",
-      "bytes": 14779,
-      "title": "Handbook of digital and multimedia forensic evid"
+      "file": "made-in-japan.jpg",
+      "bytes": 7180,
+      "title": "Made in Japan"
     },
     {
-      "slug": "introduction-to-forensic-anthropology",
+      "slug": "my-life-and-work",
       "status": "downloaded",
       "source": "open-library",
-      "file": "introduction-to-forensic-anthropology.jpg",
-      "bytes": 33076,
-      "title": "Introduction to Forensic Anthropology"
+      "file": "my-life-and-work.jpg",
+      "bytes": 18294,
+      "title": "My Life and Work"
     },
     {
-      "slug": "introduction-to-forensic-psychology",
+      "slug": "my-years-with-general-motors",
       "status": "downloaded",
       "source": "open-library",
-      "file": "introduction-to-forensic-psychology.jpg",
-      "bytes": 24102,
-      "title": "Introduction to Forensic Psychology"
+      "file": "my-years-with-general-motors.jpg",
+      "bytes": 48677,
+      "title": "My Years with General Motors"
+    },
+    {
+      "slug": "no-filter",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "no-filter.jpg",
+      "bytes": 46219,
+      "title": "No Filter"
+    },
+    {
+      "slug": "onward",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "onward.jpg",
+      "bytes": 65685,
+      "title": "Onward"
+    },
+    {
+      "slug": "pour-your-heart-into-it",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "pour-your-heart-into-it.jpg",
+      "bytes": 38879,
+      "title": "Pour Your Heart into It"
+    },
+    {
+      "slug": "shoe-dog",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "shoe-dog.jpg",
+      "bytes": 36887,
+      "title": "Shoe Dog"
     }
   ],
-  "offset": 3000,
-  "nextOffset": 3500,
+  "offset": 3500,
+  "nextOffset": 4000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 418,
-    "keep_existing": 910,
-    "not_found": 2165,
+    "downloaded": 597,
+    "keep_existing": 1098,
+    "not_found": 2298,
     "bad_image": 7
   },
-  "totalProcessed": 3500
+  "totalProcessed": 4000
 }
