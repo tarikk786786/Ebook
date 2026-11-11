@@ -49,10 +49,16 @@ function buildFaqs(supportEmail: string): FaqItem[] {
       'We support direct UPI payment rails (Google Pay, PhonePe, Paytm, FamPay, BHIM). Transactions are processed with bank-grade 256-bit encryption. There are zero hidden surcharges, no payment gateway markups, and no recurring subscriptions.',
   },
   {
+    icon: BookOpen,
+    question: 'Why do some books have no cover thumbnail?',
+    answer:
+      'A missing or temporary title-card image does not mean the ebook is fake. Many listings are still awaiting verified publisher artwork. The downloadable file is a genuine edition from our catalog. If the file is wrong, corrupt, or unreadable, email us for a full refund — no argument.',
+  },
+  {
     icon: HelpCircle,
     question: 'What is your refund and satisfaction policy?',
     answer:
-      `We offer a 100% money-back satisfaction guarantee. If an ebook file fails to open, is corrupted, or does not match its catalog description, contact our support team at ${supportEmail} within 7 days for an immediate refund or replacement.`,
+      `We offer a 100% money-back satisfaction guarantee — including when a book has no cover thumbnail. If an ebook fails to open, is corrupted, or does not match its catalog description, contact ${supportEmail} within 7 days for an immediate full refund or replacement.`,
   },
   ];
 }

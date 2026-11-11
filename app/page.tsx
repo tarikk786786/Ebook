@@ -480,6 +480,15 @@ export default function HomePage() {
             </div>
           </div>
 
+          <div className="mb-6 flex items-start gap-2.5 rounded-xl border border-[#F2E8DC] bg-[#FAF6F1] px-4 py-3 text-xs text-[#5B5449] leading-relaxed">
+            <ShieldCheck className="w-4 h-4 text-[#9A704B] shrink-0 mt-0.5" />
+            <p>
+              <strong className="text-[#24231F]">Missing cover? Still a genuine file.</strong>{' '}
+              Some titles show a title card instead of a publisher thumbnail while we recover artwork.
+              The ebook itself is real — if anything is wrong, you get a <strong className="text-[#24231F]">full refund</strong>.
+            </p>
+          </div>
+
           {/* Filtering Control Bar */}
           <div className="bg-white border border-[#E8E4DC] rounded-xl p-4 sm:p-5 mb-8 shadow-book space-y-4 max-w-full overflow-hidden">
             {/* Collection & Archive Selector Tabs */}
@@ -810,7 +819,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-serif text-base font-bold text-[#24231F]">100% Satisfaction Guarantee</h3>
               <p className="text-xs text-[#6E685F] leading-relaxed">
-                Complete money-back guarantee if an edition does not match its catalog description or encounters reading defects.
+                Full refund if a file is wrong, corrupt, or unreadable — even when a title has no thumbnail yet. Missing cover art never means a fake book.
               </p>
             </div>
           </div>

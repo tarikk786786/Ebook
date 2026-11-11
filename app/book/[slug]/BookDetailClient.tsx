@@ -218,7 +218,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
                 {/* Cover Provenance Badge */}
                 <div className="absolute bottom-3 left-3 pointer-events-none">
-                  {book.coverType === 'AUTHENTIC' ? (
+                  {book.coverType === 'AUTHENTIC' && !imgError ? (
                     <span className="px-2 py-0.5 text-[9px] font-sans font-medium uppercase tracking-wider bg-emerald-950/80 text-emerald-300 border border-emerald-700/60 rounded backdrop-blur-sm flex items-center gap-1 shadow-sm">
                       <CheckCircle2 className="w-2.5 h-2.5 text-emerald-400" />
                       Verified Original Cover
@@ -226,7 +226,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   ) : (
                     <span className="px-2 py-0.5 text-[9px] font-sans font-medium uppercase tracking-wider bg-neutral-900/80 text-amber-200/90 border border-neutral-700/60 rounded backdrop-blur-sm flex items-center gap-1 shadow-sm">
                       <Sparkles className="w-2.5 h-2.5 text-amber-400" />
-                      Cover not verified
+                      {imgError ? 'Cover pending • Genuine file' : 'Cover not verified'}
                     </span>
                   )}
                 </div>
@@ -242,6 +242,14 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   <span>Zoom</span>
                 </button>
               </div>
+
+              {(imgError || book.coverType !== 'AUTHENTIC') && (
+                <div className="w-full max-w-[340px] mt-3 rounded-lg border border-[#F2E8DC] bg-[#FAF6F1] px-3 py-2.5 text-[11px] text-[#5B5449] leading-relaxed">
+                  <strong className="text-[#24231F]">Thumbnail missing or unverified?</strong>{' '}
+                  The ebook file is still genuine. If it is wrong or will not open, you get a{' '}
+                  <strong className="text-[#24231F]">full refund</strong>.
+                </div>
+              )}
 
               {/* Action Buttons Under Cover */}
               <div className="w-full max-w-[340px] mt-4 grid grid-cols-2 gap-2.5">
