@@ -975,7 +975,12 @@ function getDirectoryOverlay(): Map<string, any> {
                 coverConfidence: "REVIEW_REQUIRED",
                 coverType: "CUSTOM_ARTWORK",
               }
-            : (entry as any);
+            : {
+                ...(entry as any),
+                ...((entry as any)?.coverVerified === true
+                  ? { coverReviewRequired: false }
+                  : {}),
+              };
           cachedDirectoryOverlay!.set(slug, { ...prev, ...incoming });
           const catalogNum = (incoming as any)?.catalogNum;
           if (catalogNum != null) {
