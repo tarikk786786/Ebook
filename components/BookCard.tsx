@@ -71,9 +71,12 @@ export default function BookCard({
     setImgError(true);
   };
 
-  const displayPrice = currency === 'INR'
-    ? `₹${book.priceInInr}`
-    : `$${(book.priceInInr / 85).toFixed(2)}`;
+  const hasListedPrice = Number(book.priceInInr) > 0;
+  const displayPrice = !hasListedPrice
+    ? 'Price pending'
+    : currency === 'INR'
+      ? `₹${book.priceInInr}`
+      : `${(book.priceInInr / 85).toFixed(2)}`;
 
   const displayOriginalPrice = currency === 'INR'
     ? `₹${book.originalPriceInInr}`
@@ -84,6 +87,10 @@ export default function BookCard({
   );
 
   const handleAddToCart = () => {
+    if (!hasListedPrice) {
+      toast.info('Price is being verified', { description: 'You can still open the book details or request this title.' });
+      return;
+    }
     addToCart(book);
     toast.success(`Added to bag`, {
       description: `${book.title.slice(0, 42)}${book.title.length > 42 ? '...' : ''} • ${displayPrice}`,
@@ -224,7 +231,7 @@ export default function BookCard({
           </div>
           <span className="text-[10px] text-[#81796D] font-sans font-medium flex items-center gap-1">
             <Zap className="w-2.5 h-2.5 text-[#9A704B]" />
-            Instant Delivery
+            {hasListedPrice ? 'Instant Delivery' : 'Pricing review'}
           </span>
         </div>
 
@@ -251,18 +258,20 @@ export default function BookCard({
           {onSelectBuy ? (
             <button
               onClick={() => onSelectBuy(book)}
-              className="py-1.5 px-2 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-medium transition-all duration-150 flex items-center justify-center gap-1 shadow-sm active:scale-95"
+              disabled={!hasListedPrice}
+              className="py-1.5 px-2 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-medium transition-all duration-150 flex items-center justify-center gap-1 shadow-sm active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Zap className="w-3.5 h-3.5 text-amber-300" />
-              <span>Buy Now</span>
+              <span>{hasListedPrice ? 'Buy Now' : 'Price pending'}</span>
             </button>
           ) : (
             <button
               onClick={handleAddToCart}
-              className="py-1.5 px-2 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-medium transition-all duration-150 flex items-center justify-center gap-1 shadow-sm active:scale-95"
+              disabled={!hasListedPrice}
+              className="py-1.5 px-2 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-medium transition-all duration-150 flex items-center justify-center gap-1 shadow-sm active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isInCart ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <ShoppingBag className="w-3.5 h-3.5" />}
-              <span>{isInCart ? 'In Bag' : 'Add to Bag'}</span>
+              <span>{!hasListedPrice ? 'Price pending' : isInCart ? 'In Bag' : 'Add to Bag'}</span>
             </button>
           )}
         </div>
