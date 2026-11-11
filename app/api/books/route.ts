@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { BOOK_CATALOG, Book } from '@/lib/catalog';
+import { getBookCatalog, Book } from '@/lib/catalog';
 
 export const dynamic = 'force-dynamic';
 
@@ -19,7 +19,8 @@ function normalizeBookCover(book: Book, baseUrl: string) {
     coverUrl: rawCover,
     image: rawCover,
     coverAbsoluteUrl: absoluteCover,
-    hasCover: true,
+    hasCover: !rawCover.includes('standard-shelf-cover'),
+    coverStatus: book.coverStatus || (rawCover.includes('standard-shelf-cover') ? 'pending' : 'linked'),
   };
 }
 
@@ -38,7 +39,7 @@ export async function GET(req: NextRequest) {
                     process.env.NEXT_PUBLIC_SITE_URL ||
                     'https://ebook-sandy-chi.vercel.app';
 
-    let books = BOOK_CATALOG.filter(b => b.status === 'PUBLISHED' || !b.status);
+    let books = getBookCatalog().filter(b => b.status === 'PUBLISHED' || !b.status);
 
     if (category !== 'ALL' && category !== 'All') {
       const catLower = category.toLowerCase();
