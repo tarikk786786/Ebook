@@ -1,6 +1,13 @@
 name: Resumable Free Cover Recovery
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/backfill_covers_free_apis.py'
+      - '.github/workflows/free-cover-recovery.yml'
+      - 'data/catalog/cover_url_index_86k.json'
+      - 'data/catalog/directory_86k_from_pdf.json'
   schedule:
     - cron: '30 2 * * *'
   workflow_dispatch:
@@ -14,7 +21,7 @@ concurrency:
 
 jobs:
   recover-covers:
-    name: Recover a small reviewable cover batch
+    name: Recover a resumable batch from the full 86k directory and indexed covers
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -32,7 +39,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check --retries 5 --timeout 60 Pillow
 
       - name: Recover the next resumable batch
-        run: python -u scripts/backfill_covers_free_apis.py --limit 120 --workers 4
+        run: python -u scripts/backfill_covers_free_apis.py --limit 500 --workers 3
         env:
           GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
 
