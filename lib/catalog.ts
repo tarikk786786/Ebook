@@ -133,7 +133,8 @@ export function getEffectiveRightsStatus(book: Book): RightsStatus {
 
   // A title/category keyword or bestseller badge is not evidence of a licence.
   // Only an explicit approval state may promote a record to rights-confirmed.
-  if (book.listingStatus === 'APPROVED_FOR_SALE') return 'RIGHTS_CONFIRMED';
+  // A storefront approval flag is not proof of copyright permission.
+  // Rights must be explicitly confirmed by the rights workflow above.
   if (book.listingStatus === 'RIGHTS_VERIFICATION_REQUIRED') return 'RIGHTS_REVIEW_REQUIRED';
   if (book.listingStatus === 'NOT_APPROVED_FOR_SALE') return 'PERMISSION_REQUIRED';
   return 'RIGHTS_REVIEW_REQUIRED';
@@ -725,10 +726,10 @@ function normalizePublicCoverPath(cover?: string | null, slug?: string): string 
 }
 
 function expandToBook(item: any): Book {
-  const price = Number(item.priceInInr) > 0 ? Number(item.priceInInr) : 49;
+  const price = Number(item.priceInInr) > 0 ? Number(item.priceInInr) : 0;
   const origPrice = Number(item.originalPriceInInr) > 0
     ? Number(item.originalPriceInInr)
-    : price * 4;
+    : 0;
   const rawPages = Number(item.pages ?? item.pageCount);
   const pages = Number.isFinite(rawPages) && rawPages > 0 ? rawPages : 0;
   const slug = item.slug || `book-${item.ref || item.id || 'item'}`;
@@ -741,9 +742,13 @@ function expandToBook(item: any): Book {
   const coverImage = weakCover ? `/api/covers/${slug}` : rawCover;
 
   const listedAuthor = String(item.author || '').trim();
-  const author = !listedAuthor || /^(unknown( author)?|editorial board|anontrove(?: guild)?|n\/?a)$/i.test(listedAuthor)
-    ? 'Author not verified'
-    : listedAuthor;
+  const author =
+    !listedAuthor ||
+    /^(unknown( author)?|editorial board|anontrove(?: guild)?|n\/?a)$/i.test(listedAuthor) ||
+    /^volume\s+\d+\s*[—-]\s*/i.test(listedAuthor) ||
+    /^(technical\s*&\s*academic research guild|technical and academic research guild)$/i.test(listedAuthor)
+      ? 'Author not verified'
+      : listedAuthor;
   const listedDescription = String(item.description || '').trim();
   const genericDescription =
     !listedDescription ||
@@ -801,7 +806,7 @@ function expandToBook(item: any): Book {
     collection: 'MASTER_ARCHIVE',
     primaryResourceType: 'published_ebook',
     coverType,
-    listingStatus: item.listingStatus || 'APPROVED_FOR_SALE',
+    listingStatus: item.listingStatus || 'RIGHTS_VERIFICATION_REQUIRED',
     marketReferencePrice: item.marketReferencePrice || origPrice,
     marketCurrentPrice: item.marketCurrentPrice || undefined,
     lowestComparablePrice: item.lowestComparablePrice || undefined,
@@ -810,7 +815,7 @@ function expandToBook(item: any): Book {
     priceVerifiedAt: item.priceVerifiedAt || undefined,
     amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (author || '') + ' kindle')}` : undefined),
     googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (author || ''))}&c=books` : undefined),
-    rightsStatus: item.rightsStatus || 'AUTHORIZED_EDITORIAL_EDITION',
+    rightsStatus: item.rightsStatus || 'RIGHTS_REVIEW_REQUIRED',
     errorNotes: item.errorNotes,
   };
 }
