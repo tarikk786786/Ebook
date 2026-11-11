@@ -85,13 +85,29 @@ export default function Footer() {
             <h4 className="text-xs font-sans uppercase tracking-wider text-[#FAF6F1] font-semibold">Platform & Tools</h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/#catalog" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
-                  Complete Catalog
+                <Link href="/#catalog-shelf" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
+                  Explore the Catalog
                 </Link>
               </li>
               <li>
-                <Link href="/#bundles" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
-                  Curated Ebook Bundles
+                <Link href="/submit-ebook" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
+                  Submit an Ebook
+                </Link>
+              </li>
+              <li>
+                <Link href="/request-ebook" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
+                  Request a Title
+                </Link>
+              </li>
+              <li>
+                <Link href="/community" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
+                  Community Wishlist Board
+                </Link>
+              </li>
+              <li>
+                <Link href="/contributor-dashboard" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors flex items-center gap-1">
+                  <span>Contributor Earnings</span>
+                  <ArrowUpRight className="w-3 h-3 text-[#9A704B]" />
                 </Link>
               </li>
               <li>
@@ -102,6 +118,11 @@ export default function Footer() {
               <li>
                 <Link href="/orders" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
                   Order History & Receipt Lookup
+                </Link>
+              </li>
+              <li>
+                <Link href="/#bundles" className="text-[#A8A29E] hover:text-[#FAF6F1] transition-colors">
+                  Curated Ebook Bundles
                 </Link>
               </li>
               <li>
