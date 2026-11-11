@@ -1017,10 +1017,10 @@ function applyDirectoryOverlay(book: Book): Book {
     return applyResearchDirectoryOverlay(book);
   }
   const next = { ...book };
-  if (overlay.category && (!book.category || book.category === "General & Technical Reference" || book.category === "General")) {
+  if (overlay.category && (!book.category || book.category === "General & Technical Reference" || book.category === "General" || book.category === "Category not verified")) {
     next.category = overlay.category;
   }
-  if (overlay.author && (!book.author || book.author === "Editorial Board" || book.author === "AnonTrove Guild")) {
+  if (overlay.author && (!book.author || book.author === "Editorial Board" || book.author === "AnonTrove Guild" || book.author === "Author not verified")) {
     // keep curated authors when present
     if (overlay.author !== "AnonTrove Guild") next.author = overlay.author;
   }
