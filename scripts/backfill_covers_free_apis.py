@@ -13,6 +13,8 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import difflib
+import threading
 import re
 import sys
 import time
@@ -32,6 +34,19 @@ BOOK_COVERS_DIR = ROOT / "public" / "book-covers"
 CURSOR_PATH = ROOT / "data" / "catalog" / "cover_backfill_cursor.json"
 UA = "AnonTroveCoverBackfill/1.0 (mailto:apnix7@gmail.com)"
 MIN_BYTES = 3500
+_OPENLIBRARY_LOCK = threading.Lock()
+_OPENLIBRARY_LAST_REQUEST = 0.0
+
+def normalize_match_text(value: str) -> str:
+    value = (value or "").lower()
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+def title_match_score(left: str, right: str) -> float:
+    a, b = normalize_match_text(clean_title(left)), normalize_match_text(clean_title(right))
+    if not a or not b:
+        return 0.0
+    return difflib.SequenceMatcher(None, a, b).ratio()
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -52,6 +67,13 @@ def clean_title(title: str) -> str:
 
 
 def http_get(url: str, timeout: float = 18) -> bytes | None:
+    global _OPENLIBRARY_LAST_REQUEST
+    if "openlibrary.org" in urllib.parse.urlparse(url).netloc:
+        with _OPENLIBRARY_LOCK:
+            wait = 0.36 - (time.monotonic() - _OPENLIBRARY_LAST_REQUEST)
+            if wait > 0:
+                time.sleep(wait)
+            _OPENLIBRARY_LAST_REQUEST = time.monotonic()
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -135,13 +157,15 @@ def open_library_urls(title: str, author: str, isbn: str | None) -> list[str]:
         ranked = []
         for d in docs:
             cover_id = d.get("cover_i") or d.get("cover_id")
-            if not cover_id:
+            candidate_title = d.get("title") or ""
+            if not cover_id or title_match_score(cleaned, candidate_title) < 0.80:
                 continue
             names = " ".join(d.get("author_name") or []).lower()
-            score = 2 if author_parts and all(p in names for p in author_parts) else 1
-            ranked.append((score, int(cover_id)))
+            author_match = bool(author_parts and any(p in names for p in author_parts))
+            title_score = title_match_score(cleaned, candidate_title)
+            ranked.append((1 if author_match else 0, title_score, int(cover_id)))
         ranked.sort(reverse=True)
-        for _, cover_id in ranked[:2]:
+        for _, _, cover_id in ranked[:2]:
             urls.append(f"https://covers.openlibrary.org/b/id/{cover_id}-L.jpg")
         if urls:
             break
@@ -167,8 +191,17 @@ def google_books_urls(title: str, author: str) -> list[str]:
     if not data or "items" not in data:
         return []
     urls = []
+    target_title = cleaned.split(":")[0].strip()
+    target_author = normalize_match_text(author)
     for item in data.get("items") or []:
-        links = (item.get("volumeInfo") or {}).get("imageLinks") or {}
+        info = item.get("volumeInfo") or {}
+        candidate_title = info.get("title") or ""
+        score = title_match_score(target_title, candidate_title)
+        candidate_authors = normalize_match_text(" ".join(info.get("authors") or []))
+        author_match = bool(target_author and any(part in candidate_authors for part in target_author.split() if len(part) > 2))
+        if score < (0.76 if author_match else 0.84):
+            continue
+        links = info.get("imageLinks") or {}
         for key in ("extraLarge", "large", "medium", "thumbnail", "smallThumbnail"):
             u = links.get(key)
             if not u:
