@@ -237,13 +237,15 @@ def internet_archive_urls(title: str, author: str) -> list[str]:
 
 
 def discover_cover(title: str, author: str, isbn: str | None = None) -> tuple[bytes | None, str]:
+    # Discover providers lazily: don't spend requests on later sources once
+    # a validated image has already been found.
     providers = [
-        ("open-library", open_library_urls(title, author, isbn)),
-        ("google-books", google_books_urls(title, author)),
-        ("internet-archive", internet_archive_urls(title, author)),
+        ("open-library", lambda: open_library_urls(title, author, isbn)),
+        ("google-books", lambda: google_books_urls(title, author)),
+        ("internet-archive", lambda: internet_archive_urls(title, author)),
     ]
-    for source, urls in providers:
-        for url in urls[:4]:
+    for source, discover in providers:
+        for url in discover()[:4]:
             data = http_get(url)
             if data and len(data) >= MIN_BYTES:
                 # IA sometimes returns tiny default GIF
