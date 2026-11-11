@@ -56,8 +56,13 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const resolveDetailCover = React.useCallback((_cover?: string) => {
-    // Route through API so Open Library can replace synthetic local placeholders
+  const resolveDetailCover = React.useCallback((cover?: string) => {
+    const source = String(cover || '');
+    // Static local covers and trusted provider image URLs should use the CDN
+    // directly; the API is only the fallback for genuinely missing covers.
+    if (/^https?:\/\//i.test(source) || source.startsWith('/covers/')) {
+      return source;
+    }
     return `/api/covers/${book.slug}?v=10`;
   }, [book.slug]);
   const [detailSrc, setDetailSrc] = useState<string>(() => resolveDetailCover(book.coverImage));
