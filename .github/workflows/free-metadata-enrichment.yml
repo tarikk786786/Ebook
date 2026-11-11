@@ -2,14 +2,19 @@ name: Resumable Verified Metadata Enrichment
 
 on:
   schedule:
-    - cron: '45 2 * * *'
+    - cron: '15 */6 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/enrich_metadata_free_apis.py'
+      - '.github/workflows/free-metadata-enrichment.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: anontrove-catalogue-enrichment-main
+  group: anontrove-metadata-enrichment-main
   cancel-in-progress: false
 
 jobs:
@@ -29,7 +34,7 @@ jobs:
           python-version: '3.11'
 
       - name: Run conservative Open Library enrichment
-        run: python -u scripts/enrich_metadata_free_apis.py --limit 250 --workers 4
+        run: python -u scripts/enrich_metadata_free_apis.py --limit 500 --workers 1
 
       - name: Commit verified overlay, review queue and cursor
         run: |
