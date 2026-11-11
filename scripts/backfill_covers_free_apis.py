@@ -346,7 +346,9 @@ def process_one(book: dict[str, Any], overwrite_synthetic: bool) -> dict[str, An
         if p.exists():
             existing = p
 
-    if existing and not is_synthetic_cover(existing) and not overwrite_synthetic:
+    # Preserve every valid existing publisher cover. Only missing or detected
+    # synthetic placeholders should be replaced by recovery candidates.
+    if existing and not is_synthetic_cover(existing):
         return {"slug": slug, "status": "keep_existing", "file": existing.name}
 
     if existing and is_synthetic_cover(existing) and not overwrite_synthetic:
