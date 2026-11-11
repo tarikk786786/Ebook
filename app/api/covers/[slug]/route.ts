@@ -383,11 +383,12 @@ export async function GET(
   });
   if (gb) return gb;
 
-  const ia = await fetchInternetArchiveCover(book);
-  if (ia) return ia;
-
+  // Prefer bibliographic ISBN/title matches before archive item thumbnails.
   const ol = await fetchOpenLibraryCover(book);
   if (ol) return ol;
+
+  const ia = await fetchInternetArchiveCover(book);
+  if (ia) return ia;
 
   return NextResponse.json(
     { success: false, error: 'cover_not_found', message: 'No sufficiently matched cover image was found for this edition.' },
