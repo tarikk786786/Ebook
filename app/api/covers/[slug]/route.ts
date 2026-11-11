@@ -216,6 +216,17 @@ function readLocalCover(
   return null;
 }
 
+function readIndexedCover(indexedPath?: string | null): NextResponse | null {
+  if (!indexedPath || !indexedPath.startsWith('/')) return null;
+  const normalized = indexedPath.split('?')[0];
+  const match = normalized.match(/^\/(covers|book-covers)\/([a-zA-Z0-9._-]+\.(?:jpg|jpeg|png|webp))$/i);
+  if (!match) return null;
+  const folder = match[1] === 'covers' ? 'covers' : 'book-covers';
+  const filename = path.basename(match[2]);
+  const root = path.join(process.cwd(), 'public', folder);
+  return readCoverFile(path.join(root, filename), 'cover-url-index', filename);
+}
+
 async function fetchRemoteCover(
   url: string,
   source: string
@@ -355,7 +366,16 @@ export async function GET(
     pages: 320,
   };
 
-  // Local first (skipping dark synthetics), then 86k index, then live free APIs.
+  // Resolve the precomputed 86k index before fuzzy title/API fallbacks.
+  // Most index entries are local paths (/covers/{catalogNum}.jpg), not URLs.
+  const indexed = lookupCoverIndex(cleanSlug, book as any);
+  const indexedCoverPath = indexed?.coverImage || indexed?.coverUrl;
+  if (indexedCoverPath?.startsWith('/')) {
+    const indexedLocal = readIndexedCover(indexedCoverPath);
+    if (indexedLocal) return indexedLocal;
+  }
+
+  // Then try title/slug-derived local files, followed by remote indexed URLs.
   if (forceLocal) {
     const localForced = readLocalCover(cleanSlug, rawSlug, book);
     if (localForced) return localForced;
@@ -364,7 +384,6 @@ export async function GET(
   const localEarly = readLocalCover(cleanSlug, rawSlug, book);
   if (localEarly) return localEarly;
 
-  const indexed = lookupCoverIndex(cleanSlug, book as any);
   const indexedCoverUrl = indexed?.coverUrl || indexed?.coverImage;
   if (indexedCoverUrl && /^https?:\/\//i.test(indexedCoverUrl)) {
     const cachedRemote = await fetchRemoteCover(
