@@ -19,7 +19,7 @@ import {
 function resolveCoverSrc(book: Book): string {
   const cover = String(book.coverImage || '');
   // Let Vercel's static asset CDN serve committed local covers directly.
-  if (/^https?:\/\//i.test(cover) || (cover.startsWith('/covers/') && !cover.includes('standard-shelf-cover'))) {
+  if (/^https?:\/\//i.test(cover) || ((cover.startsWith('/covers/') || cover.startsWith('/book-covers/')) && !cover.includes('standard-shelf-cover'))) {
     return cover;
   }
   // Resolve only genuinely missing or non-public local paths dynamically.
