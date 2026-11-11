@@ -56,3 +56,31 @@ export function buildBookResearchLinks({
     publisherOfficial: `https://www.google.com/search?q=${publisherQuery}`,
   };
 }
+
+const ALLOWED_RESEARCH_HOSTS = new Set([
+  "books.google.com",
+  "openlibrary.org",
+  "api.crossref.org",
+  "www.google.com",
+  "commons.wikimedia.org",
+  "en.wikipedia.org",
+  "archive.org",
+  "www.gutenberg.org",
+  "www.amazon.in",
+  "play.google.com",
+]);
+
+export function isSafeResearchUrl(value?: string): value is string {
+  if (!value) return false;
+  try {
+    const url = new URL(value);
+    return (
+      url.protocol === "https:" &&
+      ALLOWED_RESEARCH_HOSTS.has(url.hostname.toLowerCase()) &&
+      !url.username &&
+      !url.password
+    );
+  } catch {
+    return false;
+  }
+}
