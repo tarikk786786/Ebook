@@ -305,7 +305,10 @@ def load_targets(limit: int | None) -> list[dict[str, Any]]:
         for key in keys:
             entry = cover_index.get(str(key)) if key else None
             if isinstance(entry, dict):
-                url = entry.get("coverUrl") or entry.get("coverImage") or ""
+                indexed_title = str(entry.get("title") or "")
+                if indexed_title and title_match_score(str(book.get("title") or ""), indexed_title) < 0.90:
+                    continue
+                url = entry.get("coverImage") or entry.get("coverUrl") or ""
                 if isinstance(url, str) and (url.startswith(("https://", "http://")) or url.startswith(("/covers/", "/book-covers/"))):
                     return url
         return ""
