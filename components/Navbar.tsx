@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { BookOpen, Search, ShoppingBag, Heart, Menu, X, ArrowRight } from 'lucide-react';
+import { BookOpen, Search, ShoppingBag, Heart, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   searchQuery?: string;
@@ -62,24 +62,33 @@ export default function Navbar({
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center space-x-6 text-xs font-medium tracking-wide text-[#6E685F]">
-          <Link href="/#catalog" className="hover:text-[#24231F] transition-colors">
-            Catalog
+        <nav className="hidden lg:flex items-center flex-wrap gap-x-5 gap-y-1 text-xs font-medium tracking-wide text-[#6E685F]">
+          <Link href="/#catalog-shelf" className="hover:text-[#24231F] transition-colors">
+            Explore
           </Link>
-          <Link href="/category/programming" className="hover:text-[#24231F] transition-colors">
-            Categories
+          <Link href="/community" className="hover:text-[#24231F] transition-colors">
+            Community
           </Link>
-          <Link href="/#bestsellers" className="hover:text-[#24231F] transition-colors">
-            Bestsellers
+          <Link href="/submit-ebook" className="hover:text-[#24231F] transition-colors">
+            Submit
           </Link>
-          <Link href="/#bundles" className="hover:text-[#24231F] transition-colors">
-            Curated Bundles
+          <Link href="/request-ebook" className="hover:text-[#24231F] transition-colors">
+            Request
+          </Link>
+          <Link href="/library" className="hover:text-[#24231F] transition-colors">
+            Library
+          </Link>
+          <Link href="/orders" className="hover:text-[#24231F] transition-colors">
+            Orders
           </Link>
           <Link href="/mission" className="hover:text-[#24231F] transition-colors">
             Mission
           </Link>
-          <Link href="/about" className="hover:text-[#24231F] transition-colors">
-            About & Support
+          <Link
+            href="/contributor-dashboard"
+            className="hover:text-[#9A704B] text-[#24231F] transition-colors"
+          >
+            Earnings
           </Link>
         </nav>
 
@@ -180,44 +189,65 @@ export default function Navbar({
             </div>
           )}
           <Link
-            href="/#catalog"
+            href="/#catalog-shelf"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
           >
-            All Titles
+            Explore Books
           </Link>
           <Link
-            href="/category/programming"
+            href="/community"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
           >
-            Topical Categories
+            Community
           </Link>
           <Link
-            href="/#bestsellers"
+            href="/submit-ebook"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
           >
-            Bestsellers
+            Submit an Ebook
           </Link>
           <Link
-            href="/#bundles"
+            href="/request-ebook"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
           >
-            Curated Bundles
+            Request a Title
+          </Link>
+          <Link
+            href="/library"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
+          >
+            My Library
+          </Link>
+          <Link
+            href="/orders"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
+          >
+            My Orders
           </Link>
           <Link
             href="/mission"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
           >
-            Our Mission
+            Mission
+          </Link>
+          <Link
+            href="/contributor-dashboard"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 text-[#9A704B] font-semibold border-b border-[#E8E4DC]"
+          >
+            Contributor Earnings
           </Link>
           <Link
             href="/about"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 text-[#24231F] font-medium border-b border-[#E8E4DC]"
+            className="block py-2 text-[#6E685F] font-medium"
           >
             About & Support
           </Link>
