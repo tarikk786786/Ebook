@@ -158,8 +158,18 @@ export function markOrderPaid(
   orderIdentifier: string, 
   details: { gatewayOrderId?: string; bankUtr?: string; amountInInr?: number }
 ): StoredOrder | null {
+  const prior = getOrderById(orderIdentifier);
+  const wasAlreadyPaid =
+    prior?.status === 'SUCCESS' || prior?.status === 'PAID';
+
   const updated = updateOrderStatus(orderIdentifier, 'SUCCESS', details);
   if (updated) {
+    if (!wasAlreadyPaid) {
+      import('@/lib/orders/paid-side-effects')
+        .then(({ runPaidOrderSideEffects }) => runPaidOrderSideEffects(updated))
+        .catch(() => {});
+    }
+
     import('@/lib/supabase')
       .then(({ updateSupabaseOrderStatus }) =>
         updateSupabaseOrderStatus(updated.gatewayOrderId || updated.orderId, 'SUCCESS', {
