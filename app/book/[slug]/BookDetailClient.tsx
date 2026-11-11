@@ -793,7 +793,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                               </div>
                               <div>
                                 <span className="block text-[#81796D]">Listed category</span>
-                                <strong className="text-[#24231F]">{book.researchSource.listedCategory || 'Not listed'}</strong>
+                                <strong className="text-[#24231F]">{(book.researchSource as any).listedCategory || 'Not listed'}</strong>
                               </div>
                             </div>
                             <div>
@@ -806,7 +806,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                             </div>
                             <div>
                               <span className="block text-[10px] text-[#81796D]">Source filename</span>
-                              <p className="text-xs text-[#24231F] break-all">{book.researchSource.sourceFilename || 'Not listed'}</p>
+                              <p className="text-xs text-[#24231F] break-all">{(book.researchSource as any).sourceFilename || 'Not listed'}</p>
                             </div>
                           </div>
                         )}
