@@ -34,7 +34,7 @@ export function getCoverUrlIndex(): Map<string, CoverIndexEntry> {
   return cached;
 }
 
-export function lookupCoverIndex(slug: string, book?: { id?: string; catalogNum?: number | string; ref?: number | string; researchSource?: { manifestId?: number } } | null): CoverIndexEntry | undefined {
+export function lookupCoverIndex(slug: string, book?: { id?: string; title?: string; catalogNum?: number | string; ref?: number | string; researchSource?: { manifestId?: number } } | null): CoverIndexEntry | undefined {
   const index = getCoverUrlIndex();
   const normalizeNumeric = (value: number | string | undefined): string => {
     if (value == null) return '';
@@ -58,9 +58,25 @@ export function lookupCoverIndex(slug: string, book?: { id?: string; catalogNum?
     trailingRef ? `ref:${trailingRef}` : '',
   ].filter(Boolean) as string[];
 
+  const normalizeTitle = (value: string) => value
+    .normalize('NFKD')
+    .toLowerCase()
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+
   for (const key of candidates) {
     const hit = index.get(key);
-    if (hit?.coverUrl || hit?.coverImage) return hit;
+    if (!hit || (!hit.coverUrl && !hit.coverImage)) continue;
+    // Numeric refs are reused by multiple catalogue exports. Never accept a
+    // ref hit whose indexed title belongs to a different book.
+    if (book?.title && hit.title) {
+      const wanted = normalizeTitle(book.title);
+      const indexed = normalizeTitle(hit.title);
+      if (wanted !== indexed && !wanted.startsWith(indexed) && !indexed.startsWith(wanted)) continue;
+    }
+    return hit;
   }
   return undefined;
 }
