@@ -336,6 +336,71 @@ async function fetchInternetArchiveCover(book: {
   }
 }
 
+function xmlEscape(value: string): string {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function createCustomCoverSvg(book: { title?: string; author?: string; category?: string }, slug: string): string {
+  const palettes = [
+    ['#102A43', '#243B53', '#D9A441'],
+    ['#2D1B36', '#56334E', '#E7B7A0'],
+    ['#12372A', '#315C45', '#D7B56D'],
+    ['#252B48', '#4A527A', '#B8C6E5'],
+    ['#4A241D', '#8C4B35', '#E7B46A'],
+    ['#16324F', '#315B75', '#A9D6E5'],
+  ];
+  let hash = 0;
+  for (const char of slug) hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  const [start, end, accent] = palettes[hash % palettes.length];
+  const title = String(book.title || 'Untitled eBook').trim();
+  const words = title.split(/\s+/);
+  const lines: string[] = [];
+  let line = '';
+  for (const word of words) {
+    const next = line ? line + ' ' + word : word;
+    if (next.length > 22 && line) {
+      lines.push(line);
+      line = word;
+    } else {
+      line = next;
+    }
+  }
+  if (line) lines.push(line);
+  const visibleLines = lines.slice(0, 5);
+  if (lines.length > 5) visibleLines[4] = visibleLines[4].replace(/[.,;:!?]?$/, '…');
+  const titleMarkup = visibleLines.map((value, index) =>
+    `<text x="48" y="${290 + index * 45}" font-family="Georgia,serif" font-size="32" font-weight="700" fill="#FFFFFF">${xmlEscape(value)}</text>`
+  ).join('');
+  const author = xmlEscape(String(book.author || 'Author details pending').slice(0, 48));
+  const category = xmlEscape(String(book.category || 'Digital Library').slice(0, 34));
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="640" viewBox="0 0 480 640" role="img" aria-label="Custom cover art for ${xmlEscape(title)}">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${start}"/><stop offset="1" stop-color="${end}"/></linearGradient>
+      <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${accent}" stop-opacity=".95"/><stop offset="1" stop-color="${accent}" stop-opacity=".1"/></linearGradient>
+      <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#FFFFFF" stroke-opacity=".07" stroke-width="1"/></pattern>
+    </defs>
+    <rect width="480" height="640" fill="url(#bg)"/>
+    <rect width="480" height="640" fill="url(#grid)"/>
+    <circle cx="405" cy="112" r="126" fill="none" stroke="${accent}" stroke-opacity=".28" stroke-width="2"/>
+    <circle cx="405" cy="112" r="92" fill="none" stroke="${accent}" stroke-opacity=".22" stroke-width="1"/>
+    <path d="M0 460 C130 400 230 560 480 430 L480 640 L0 640Z" fill="#07131F" fill-opacity=".28"/>
+    <path d="M48 82H180" stroke="url(#shine)" stroke-width="5" stroke-linecap="round"/>
+    <text x="48" y="120" font-family="Arial,sans-serif" font-size="15" letter-spacing="3" font-weight="700" fill="${accent}">ANONTROVE  /  DIGITAL LIBRARY</text>
+    <text x="48" y="218" font-family="Arial,sans-serif" font-size="13" letter-spacing="2" fill="#FFFFFF" fill-opacity=".72">${category.toUpperCase()}</text>
+    ${titleMarkup}
+    <path d="M48 520H432" stroke="#FFFFFF" stroke-opacity=".28"/>
+    <text x="48" y="555" font-family="Arial,sans-serif" font-size="16" fill="#FFFFFF" fill-opacity=".9">${author}</text>
+    <rect x="48" y="580" width="236" height="28" rx="14" fill="#FFFFFF" fill-opacity=".12" stroke="#FFFFFF" stroke-opacity=".24"/>
+    <text x="166" y="599" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.3" font-weight="700" fill="#FFFFFF">CUSTOM COVER ART</text>
+    <text x="432" y="622" text-anchor="end" font-family="Arial,sans-serif" font-size="9" letter-spacing="1" fill="#FFFFFF" fill-opacity=".62">PUBLISHER COVER NOT FOUND</text>
+  </svg>`;
+}
+
 export async function GET(
   req: NextRequest,
   { params }: { params: { slug: string } }
@@ -413,15 +478,16 @@ export async function GET(
   const ia = await fetchInternetArchiveCover(book);
   if (ia) return ia;
 
-  return NextResponse.json(
-    { success: false, error: 'cover_not_found', message: 'No sufficiently matched cover image was found for this edition.' },
-    {
-      status: 404,
-      headers: {
-        'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=3600',
-        'X-Cover-Source': 'not-found',
-        'X-Cover-Verified': 'false',
-      },
-    }
-  );
+  // Keep every catalogue card visually complete without pretending an
+  // unverified graphic is the publisher's original cover. The label is embedded
+  // in the artwork and the response headers remain explicitly unverified.
+  return new NextResponse(createCustomCoverSvg(book, cleanSlug), {
+    status: 200,
+    headers: {
+      'Content-Type': 'image/svg+xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
+      'X-Cover-Source': 'generated-custom-artwork',
+      'X-Cover-Verified': 'false',
+    },
+  });
 }
