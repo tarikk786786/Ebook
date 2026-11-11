@@ -69,6 +69,9 @@ def load_master() -> list[dict[str, Any]]:
 def get_json(url: str, attempts: int = 3) -> dict[str, Any] | None:
     for attempt in range(attempts):
         try:
+            # Open Library asks automated clients to keep request volume modest.
+            # The scheduled workflow uses one worker; this delay avoids burst traffic.
+            time.sleep(1.0)
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
             with urllib.request.urlopen(req, timeout=18) as response:
                 raw = response.read()
