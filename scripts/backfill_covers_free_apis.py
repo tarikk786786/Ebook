@@ -353,7 +353,6 @@ def process_one(book: dict[str, Any], overwrite_synthetic: bool) -> dict[str, An
         # still try to replace synthetics by default
         pass
 
-    data, source = discover_cover(book["title"], book.get("author") or "", book.get("isbn"))
     # Prefer the repository's precomputed 86k cover index before making
     # additional discovery requests. Indexed matches still remain reviewable.
     indexed_url = str(book.get("coverImage") or "")
@@ -369,6 +368,7 @@ def process_one(book: dict[str, Any], overwrite_synthetic: bool) -> dict[str, An
                 "title": book["title"],
             }
 
+    data, source = discover_cover(book["title"], book.get("author") or "", book.get("isbn"))
     if not data:
         return {"slug": slug, "status": "not_found", "title": book["title"]}
 
