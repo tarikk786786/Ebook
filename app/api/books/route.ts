@@ -5,7 +5,7 @@ import { AUTHORITATIVE_CATEGORIES } from '@/lib/categories';
 export const dynamic = 'force-dynamic';
 
 function normalizeBookCover(book: Book, baseUrl: string) {
-  const rawCover = book.coverImage || (book as any).coverUrl || '/covers/standard-shelf-cover.jpg';
+  const rawCover = book.coverImage || (book as any).coverUrl || `/api/covers/${book.slug}`;
   const hasCover = !rawCover.includes('standard-shelf-cover') && !rawCover.startsWith('/api/covers/');
   const absoluteCover = rawCover.startsWith('http')
     ? rawCover
