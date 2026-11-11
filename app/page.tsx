@@ -706,6 +706,12 @@ export default function HomePage() {
 
           {/* Book Cards Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {catalogLoading && currentBooks.length === 0 && (
+              <div className="col-span-full py-10 text-center text-sm text-[#81796D]">Loading the full ebook catalogue…</div>
+            )}
+            {catalogError && (
+              <div className="col-span-full py-6 text-center text-sm text-red-700">{catalogError}. Please refresh and try again.</div>
+            )}
             {currentBooks.map((book) => (
               <BookCard
                 key={book.id}
