@@ -40,6 +40,10 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  // Include the optional gzip manifest index in the dynamic book detail route bundle.
+  outputFileTracingIncludes: {
+    "/book/[slug]": ["./data/catalog/research_link_directory.json.gz"],
+  },
   reactStrictMode: true,
   poweredByHeader: false, // Strips 'X-Powered-By: Next.js' to prevent technology fingerprinting
   // Large catalog SSG on Hobby builders needs more than the default 60s page timeout
