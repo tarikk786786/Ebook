@@ -52,7 +52,11 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [searchQuery, setSearchQuery] = useState('');
   const [isBuying, setIsBuying] = useState(false);
   const [cartOrder, setCartOrder] = useState<any>(null);
-  const startCheckout = () => router.push(`/checkout?bookId=${encodeURIComponent(book.id)}`);
+  const hasListedPrice = Number(book.priceInInr) > 0;
+  const startCheckout = () => {
+    if (!hasListedPrice) return;
+    router.push(`/checkout?bookId=${encodeURIComponent(book.id)}`);
+  };
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
@@ -93,17 +97,19 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
     });
   }, [book]);
 
-  const displayPrice = currency === 'INR'
-    ? `₹${book.priceInInr}`
-    : `$${(book.priceInInr / 85).toFixed(2)}`;
+  const displayPrice = !hasListedPrice
+    ? 'Price pending'
+    : currency === 'INR'
+      ? `₹${book.priceInInr}`
+      : `${(book.priceInInr / 85).toFixed(2)}`;
 
   const displayOriginalPrice = currency === 'INR'
     ? `₹${book.originalPriceInInr}`
     : `$${(book.originalPriceInInr / 85).toFixed(2)}`;
 
-  const discountPercent = Math.round(
-    ((book.originalPriceInInr - book.priceInInr) / book.originalPriceInInr) * 100
-  );
+  const discountPercent = hasListedPrice && Number(book.originalPriceInInr) > book.priceInInr
+    ? Math.round(((book.originalPriceInInr - book.priceInInr) / book.originalPriceInInr) * 100)
+    : 0;
 
   const handleShare = () => {
     if (typeof window !== 'undefined') {
@@ -114,6 +120,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   };
 
   const handleAddToCart = () => {
+    if (!hasListedPrice) return;
     addToCart(book);
     trackAddToCart({
       id: book.id,
@@ -263,10 +270,11 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
                 <button
                   onClick={startCheckout}
-                  className="py-2.5 px-3 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors shadow-sm"
+                  disabled={!hasListedPrice}
+                  className="py-2.5 px-3 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Zap className="w-3.5 h-3.5" />
-                  <span>Buy Now ({displayPrice})</span>
+                  <span>{hasListedPrice ? `Buy Now (${displayPrice})` : 'Price pending verification'}</span>
                 </button>
               </div>
 
@@ -347,10 +355,11 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <button
                     onClick={handleAddToCart}
-                    className="py-3 px-4 rounded-lg border border-[#E8E4DC] hover:border-[#D5CEBE] bg-white hover:bg-[#FAF8F5] text-[#24231F] text-xs font-semibold flex items-center justify-center space-x-2 transition-colors shadow-sm"
+                    disabled={!hasListedPrice}
+                    className="py-3 px-4 rounded-lg border border-[#E8E4DC] hover:border-[#D5CEBE] bg-white hover:bg-[#FAF8F5] text-[#24231F] text-xs font-semibold flex items-center justify-center space-x-2 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isInCart ? <Check className="w-4 h-4 text-[#9A704B]" /> : <ShoppingBag className="w-4 h-4" />}
-                    <span>{isInCart ? 'Added to Bag' : 'Add to Reading Bag'}</span>
+                    <span>{!hasListedPrice ? 'Price pending verification' : isInCart ? 'Added to Bag' : 'Add to Reading Bag'}</span>
                   </button>
 
                   <button
