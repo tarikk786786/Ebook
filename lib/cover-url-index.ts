@@ -36,15 +36,26 @@ export function getCoverUrlIndex(): Map<string, CoverIndexEntry> {
 
 export function lookupCoverIndex(slug: string, book?: { id?: string; catalogNum?: number | string; ref?: number | string; researchSource?: { manifestId?: number } } | null): CoverIndexEntry | undefined {
   const index = getCoverUrlIndex();
+  const normalizeNumeric = (value: number | string | undefined): string => {
+    if (value == null) return '';
+    const raw = String(value).trim();
+    return /^\d+$/.test(raw) ? raw.replace(/^0+(?=\d)/, '') : raw;
+  };
+  const catalogNum = normalizeNumeric(book?.catalogNum);
+  const ref = normalizeNumeric(book?.ref);
+  const manifestId = normalizeNumeric(book?.researchSource?.manifestId);
+  const id = normalizeNumeric(book?.id?.replace(/^book-/, ''));
+  const trailingRef = normalizeNumeric(slug.match(/(\d{2,})$/)?.[1]);
   const candidates = [
     slug,
-    book?.catalogNum != null ? `ref:${book.catalogNum}` : '',
-    book?.ref != null ? `ref:${book.ref}` : '',
-    book?.researchSource?.manifestId != null ? `ref:${book.researchSource.manifestId}` : '',
-    book?.catalogNum != null ? String(book.catalogNum) : '',
-    book?.researchSource?.manifestId != null ? String(book.researchSource.manifestId) : '',
-    book?.id?.replace(/^book-/, ''),
-    slug.match(/(\d{2,})$/)?.[1] ? `ref:${slug.match(/(\d{2,})$/)?.[1]}` : '',
+    catalogNum ? `ref:${catalogNum}` : '',
+    ref ? `ref:${ref}` : '',
+    manifestId ? `ref:${manifestId}` : '',
+    catalogNum,
+    ref,
+    manifestId,
+    id,
+    trailingRef ? `ref:${trailingRef}` : '',
   ].filter(Boolean) as string[];
 
   for (const key of candidates) {
