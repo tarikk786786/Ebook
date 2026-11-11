@@ -10,6 +10,7 @@ on:
       - 'data/catalog/directory_86k_from_pdf.json'
       - 'components/BookCard.tsx'
       - 'lib/cover-url-index.ts'
+      - 'lib/catalog.ts'
       - 'app/api/covers/[slug]/route.ts'
   schedule:
     - cron: '30 2,8,14,20 * * *'
@@ -39,7 +40,9 @@ jobs:
           python-version: '3.11'
 
       - name: Install image validation dependency
-        run: python -m pip install --disable-pip-version-check --retries 5 --timeout 60 Pillow
+        run: |
+          python -m pip install --disable-pip-version-check --retries 5 --timeout 60 Pillow
+          python -m py_compile scripts/backfill_covers_free_apis.py
 
       - name: Recover and push repeated batches until the run budget is used
         env:
