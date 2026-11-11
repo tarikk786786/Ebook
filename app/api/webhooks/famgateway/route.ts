@@ -107,11 +107,16 @@ export async function POST(req: NextRequest) {
     }
 
     // 7. Atomic update to SUCCESS
-    updateOrderStatus(orderId, 'SUCCESS', {
+    const paidOrder = updateOrderStatus(orderId, 'SUCCESS', {
       gatewayOrderId: orderId,
       bankUtr: verifiedUtr,
       amountInInr: order.totalInr,
     });
+
+    if (paidOrder) {
+      const { runPaidOrderSideEffects } = await import('@/lib/orders/paid-side-effects');
+      runPaidOrderSideEffects(paidOrder);
+    }
 
     processedWebhooks.add(eventKey);
     // Durable cross-instance webhook idempotency in Supabase audit log
