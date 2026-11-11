@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import PaymentModal from '@/components/PaymentModal';
 import ReaderModal from '@/components/ReaderModal';
-import { Book } from '@/lib/catalog';
+import { Book, getEffectiveRightsStatus } from '@/lib/catalog';
 import { buildBookResearchLinks, isSafeResearchUrl } from '@/lib/research-links';
 import { 
   ArrowLeft,
@@ -53,8 +53,10 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [isBuying, setIsBuying] = useState(false);
   const [cartOrder, setCartOrder] = useState<any>(null);
   const hasListedPrice = Number(book.priceInInr) > 0;
+  const rightsStatus = getEffectiveRightsStatus(book);
+  const canPurchase = hasListedPrice && ['RIGHTS_CONFIRMED', 'PUBLIC_DOMAIN_VERIFIED', 'OPEN_LICENCE_VERIFIED'].includes(rightsStatus);
   const startCheckout = () => {
-    if (!hasListedPrice) return;
+    if (!canPurchase) return;
     router.push(`/checkout?bookId=${encodeURIComponent(book.id)}`);
   };
   const [isPreviewing, setIsPreviewing] = useState(false);
@@ -97,8 +99,8 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
     });
   }, [book]);
 
-  const displayPrice = !hasListedPrice
-    ? 'Price pending'
+  const displayPrice = !canPurchase
+    ? 'Not available for sale'
     : currency === 'INR'
       ? `₹${book.priceInInr}`
       : `${(book.priceInInr / 85).toFixed(2)}`;
@@ -107,7 +109,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
     ? `₹${book.originalPriceInInr}`
     : `$${(book.originalPriceInInr / 85).toFixed(2)}`;
 
-  const discountPercent = hasListedPrice && Number(book.originalPriceInInr) > book.priceInInr
+  const discountPercent = canPurchase && Number(book.originalPriceInInr) > book.priceInInr
     ? Math.round(((book.originalPriceInInr - book.priceInInr) / book.originalPriceInInr) * 100)
     : 0;
 
@@ -120,7 +122,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   };
 
   const handleAddToCart = () => {
-    if (!hasListedPrice) return;
+    if (!canPurchase) return;
     addToCart(book);
     trackAddToCart({
       id: book.id,
@@ -270,11 +272,11 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
                 <button
                   onClick={startCheckout}
-                  disabled={!hasListedPrice}
+                  disabled={!canPurchase}
                   className="py-2.5 px-3 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Zap className="w-3.5 h-3.5" />
-                  <span>{hasListedPrice ? `Buy Now (${displayPrice})` : 'Price pending verification'}</span>
+                  <span>{canPurchase ? `Buy Now (${displayPrice})` : 'Rights verification required'}</span>
                 </button>
               </div>
 
@@ -359,7 +361,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     className="py-3 px-4 rounded-lg border border-[#E8E4DC] hover:border-[#D5CEBE] bg-white hover:bg-[#FAF8F5] text-[#24231F] text-xs font-semibold flex items-center justify-center space-x-2 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isInCart ? <Check className="w-4 h-4 text-[#9A704B]" /> : <ShoppingBag className="w-4 h-4" />}
-                    <span>{!hasListedPrice ? 'Price pending verification' : isInCart ? 'Added to Bag' : 'Add to Reading Bag'}</span>
+                    <span>{!canPurchase ? 'Not available for sale' : isInCart ? 'Added to Bag' : 'Add to Reading Bag'}</span>
                   </button>
 
                   <button
