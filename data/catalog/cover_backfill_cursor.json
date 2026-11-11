@@ -1,0 +1,20 @@
+{
+  "nextOffset": 500,
+  "lastOffset": 0,
+  "processed": 500,
+  "totalProcessed": 500,
+  "totalTargets": 94078,
+  "totalCounts": {
+    "downloaded": 29,
+    "keep_existing": 132,
+    "not_found": 338,
+    "bad_image": 1
+  },
+  "updatedAt": "2026-11-11T16:26:34Z",
+  "lastCounts": {
+    "downloaded": 29,
+    "keep_existing": 132,
+    "not_found": 338,
+    "bad_image": 1
+  }
+}

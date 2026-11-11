@@ -1,172 +1,182 @@
 {
-  "processed": 80,
+  "processed": 500,
   "counts": {
-    "downloaded": 46,
-    "keep_existing": 0,
-    "not_found": 34,
-    "bad_image": 0
+    "downloaded": 29,
+    "keep_existing": 132,
+    "not_found": 338,
+    "bad_image": 1
   },
-  "updatedCurated": 46,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "2-the-health-stack-guide",
+      "slug": "adapt-why-success-always-starts-with-failure",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "2-the-health-stack-guide.jpg",
-      "bytes": 46067,
-      "title": "2. The Health Stack Guide"
+      "source": "internet-archive",
+      "file": "adapt-why-success-always-starts-with-failure.jpg",
+      "bytes": 16307,
+      "title": "Adapt - Why Success Always Starts with Failure"
     },
     {
-      "slug": "copy-of-platinum-secrets-final",
+      "slug": "detective-response-for-rejection-email",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "copy-of-platinum-secrets-final.jpg",
-      "bytes": 37821,
-      "title": "Platinum Secrets (final)"
+      "source": "existing-86k-cover-index",
+      "file": "detective-response-for-rejection-email.jpg",
+      "bytes": 4836,
+      "title": "Detective] Response for Rejection Email"
     },
     {
-      "slug": "rules-of-breaking-hearts",
+      "slug": "estimation-drain-drawing",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "rules-of-breaking-hearts.jpg",
-      "bytes": 32444,
-      "title": "Red and White Mysterious That man Book Cover"
+      "source": "existing-86k-cover-index",
+      "file": "estimation-drain-drawing.jpg",
+      "bytes": 13835,
+      "title": "Estimation.] Drain Drawing"
     },
     {
-      "slug": "the-end-of-alchemy-mervyn-king",
+      "slug": "follow-every-rainbow",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-end-of-alchemy-mervyn-king.jpg",
-      "bytes": 27816,
-      "title": "The End of Alchemy"
+      "file": "follow-every-rainbow.jpg",
+      "bytes": 9475,
+      "title": "Follow Every Rainbow"
     },
     {
-      "slug": "accounting-made-simple",
+      "slug": "a-user-s-guide-to-the-brain",
       "status": "downloaded",
       "source": "open-library",
-      "file": "accounting-made-simple.jpg",
-      "bytes": 30085,
-      "title": "Accounting Made Simple"
+      "file": "a-user-s-guide-to-the-brain.jpg",
+      "bytes": 28237,
+      "title": "A User's Guide to the Brain"
     },
     {
-      "slug": "financial-intelligence",
+      "slug": "ai-2041-ten-visions-for-our-future",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "financial-intelligence.jpg",
-      "bytes": 32577,
-      "title": "Financial Intelligence"
+      "source": "internet-archive",
+      "file": "ai-2041-ten-visions-for-our-future.jpg",
+      "bytes": 5722,
+      "title": "AI 2041 Ten Visions for Our Future"
     },
     {
-      "slug": "corporate-finance",
+      "slug": "aws-certified-machine-learning-specialty-mls-c01",
       "status": "downloaded",
       "source": "open-library",
-      "file": "corporate-finance.jpg",
-      "bytes": 9384,
-      "title": "Corporate Finance"
+      "file": "aws-certified-machine-learning-specialty-mls-c01.jpg",
+      "bytes": 56493,
+      "title": "AWS Certified Machine Learning Specialty MLS C01"
     },
     {
-      "slug": "cash-flow-for-dummies",
+      "slug": "adobe-photoshop-pdf",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "cash-flow-for-dummies.jpg",
-      "bytes": 30853,
-      "title": "Cash Flow for Dummies"
+      "source": "internet-archive",
+      "file": "adobe-photoshop-pdf.jpg",
+      "bytes": 19545,
+      "title": "Adobe Photoshop PDF"
     },
     {
-      "slug": "financial-shenanigans",
+      "slug": "against-the-odds",
       "status": "downloaded",
       "source": "open-library",
-      "file": "financial-shenanigans.jpg",
-      "bytes": 57021,
-      "title": "Financial Shenanigans"
+      "file": "against-the-odds.jpg",
+      "bytes": 49044,
+      "title": "Against the Odds"
     },
     {
-      "slug": "financial-intelligence-for-entrepreneurs",
+      "slug": "all-is-well",
       "status": "downloaded",
       "source": "open-library",
-      "file": "financial-intelligence-for-entrepreneurs.jpg",
-      "bytes": 26082,
-      "title": "Financial Intelligence for Entrepreneurs"
+      "file": "all-is-well.jpg",
+      "bytes": 25062,
+      "title": "All Is Well"
     },
     {
-      "slug": "investment-banking",
+      "slug": "andersen-s-fairy-tales",
       "status": "downloaded",
       "source": "open-library",
-      "file": "investment-banking.jpg",
-      "bytes": 34186,
-      "title": "Investment Banking"
+      "file": "andersen-s-fairy-tales.jpg",
+      "bytes": 45599,
+      "title": "Andersen's Fairy Tales"
     },
     {
-      "slug": "simple-accounting-for-small-business",
+      "slug": "bhagwan-the-god-that-failed",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "simple-accounting-for-small-business.jpg",
-      "bytes": 41135,
-      "title": "Simple Accounting for Small Business"
+      "source": "internet-archive",
+      "file": "bhagwan-the-god-that-failed.jpg",
+      "bytes": 14497,
+      "title": "Bhagwan The God That Failed"
     },
     {
-      "slug": "principles-of-corporate-finance",
+      "slug": "bloodstain-pattern-analysis",
       "status": "downloaded",
       "source": "open-library",
-      "file": "principles-of-corporate-finance.jpg",
-      "bytes": 46712,
-      "title": "Principles of Corporate Finance"
+      "file": "bloodstain-pattern-analysis.jpg",
+      "bytes": 36683,
+      "title": "Bloodstain Pattern Analysis"
     },
     {
-      "slug": "quality-of-earnings",
+      "slug": "braiding-sweetgrass",
       "status": "downloaded",
       "source": "open-library",
-      "file": "quality-of-earnings.jpg",
-      "bytes": 67404,
-      "title": "Quality of Earnings"
+      "file": "braiding-sweetgrass.jpg",
+      "bytes": 25162,
+      "title": "Braiding Sweetgrass"
     },
     {
-      "slug": "the-accounting-handbook",
+      "slug": "brain-training",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-accounting-handbook.jpg",
-      "bytes": 32654,
-      "title": "The Accounting Handbook"
+      "file": "brain-training.jpg",
+      "bytes": 38521,
+      "title": "Brain Training"
     },
     {
-      "slug": "the-black-swan",
+      "slug": "communication-skills-training",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-black-swan.jpg",
-      "bytes": 39309,
-      "title": "The Black Swan"
+      "file": "communication-skills-training.jpg",
+      "bytes": 40285,
+      "title": "Communication Skills Training"
     },
     {
-      "slug": "the-accounting-game",
+      "slug": "daily-rituals-how-artists-work",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-accounting-game.jpg",
-      "bytes": 22472,
-      "title": "The Accounting Game"
+      "file": "daily-rituals-how-artists-work.jpg",
+      "bytes": 44203,
+      "title": "Daily Rituals How Artists Work"
     },
     {
-      "slug": "the-business-of-venture-capital",
+      "slug": "docker-for-rails-developers",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-business-of-venture-capital.jpg",
-      "bytes": 21092,
-      "title": "The Business of Venture Capital"
+      "file": "docker-for-rails-developers.jpg",
+      "bytes": 36738,
+      "title": "Docker for Rails Developers"
     },
     {
-      "slug": "the-cfo-guidebook",
+      "slug": "ebook-manual",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-cfo-guidebook.jpg",
-      "bytes": 31817,
-      "title": "The CFO Guidebook"
+      "source": "internet-archive",
+      "file": "ebook-manual.jpg",
+      "bytes": 10141,
+      "title": "Ebook Manual"
     },
     {
-      "slug": "the-dark-side-of-valuation",
+      "slug": "emotional-first-aid",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-dark-side-of-valuation.jpg",
-      "bytes": 16813,
-      "title": "The Dark Side of Valuation"
+      "file": "emotional-first-aid.jpg",
+      "bytes": 47743,
+      "title": "Emotional First Aid"
     }
-  ]
+  ],
+  "offset": 0,
+  "nextOffset": 500,
+  "totalTargets": 94078,
+  "cumulativeCounts": {
+    "downloaded": 29,
+    "keep_existing": 132,
+    "not_found": 338,
+    "bad_image": 1
+  },
+  "totalProcessed": 500
 }
