@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 110,
-    "keep_existing": 53,
-    "not_found": 337,
+    "downloaded": 171,
+    "keep_existing": 48,
+    "not_found": 281,
     "bad_image": 0
   },
-  "updatedCurated": 52,
+  "updatedCurated": 104,
   "sampleDownloaded": [
     {
-      "slug": "reactjs-foundations-building-interfaces",
+      "slug": "on-the-shortness-of-life",
       "status": "downloaded",
       "source": "open-library",
-      "file": "reactjs-foundations-building-interfaces.jpg",
-      "bytes": 36027,
-      "title": "Reactjs-Foundations-Building-Interfaces"
+      "file": "on-the-shortness-of-life.jpg",
+      "bytes": 40471,
+      "title": "On the shortness of life"
     },
     {
-      "slug": "sql-cheat-sheet",
+      "slug": "power-vs-force-the-hidden-determinants-of-human",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "sql-cheat-sheet.jpg",
-      "bytes": 13789,
-      "title": "SQL Cheat Sheet"
+      "file": "power-vs-force-the-hidden-determinants-of-human.jpg",
+      "bytes": 11779,
+      "title": "Power vs Force The Hidden Determinants of Human"
     },
     {
-      "slug": "sql-for-beginners",
+      "slug": "practice-steps-to-think-and-grow-rich",
       "status": "downloaded",
       "source": "open-library",
-      "file": "sql-for-beginners.jpg",
-      "bytes": 31456,
-      "title": "SQL For Beginners"
+      "file": "practice-steps-to-think-and-grow-rich.jpg",
+      "bytes": 52251,
+      "title": "Practice Steps To Think And Grow Rich"
     },
     {
-      "slug": "sagittarius",
+      "slug": "practicing-the-power-of-now",
       "status": "downloaded",
       "source": "open-library",
-      "file": "sagittarius.jpg",
-      "bytes": 37830,
-      "title": "Sagittarius"
+      "file": "practicing-the-power-of-now.jpg",
+      "bytes": 22120,
+      "title": "Practicing the power of now"
     },
     {
-      "slug": "saleem-siddiqui-learning-test-driven-development",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "saleem-siddiqui-learning-test-driven-development.jpg",
-      "bytes": 49640,
-      "title": "Saleem Siddiqui Learning Test Driven Development"
-    },
-    {
-      "slug": "software-architecture-with-c",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "software-architecture-with-c.jpg",
-      "bytes": 47655,
-      "title": "Software Architecture with C++"
-    },
-    {
-      "slug": "teach-yourself-java-in-21-days",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "teach-yourself-java-in-21-days.jpg",
-      "bytes": 37126,
-      "title": "Teach Yourself Java in 21 Days"
-    },
-    {
-      "slug": "the-code-of-criminal-procedure-1973",
+      "slug": "principles-life-and-work-dalio",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "the-code-of-criminal-procedure-1973.jpg",
-      "bytes": 11868,
-      "title": "The Code Of Criminal Procedure, 1973"
+      "file": "principles-life-and-work-dalio.jpg",
+      "bytes": 9431,
+      "title": "Principles- Life and Work Dalio"
     },
     {
-      "slug": "the-python-book",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-python-book.jpg",
-      "bytes": 39417,
-      "title": "The Python Book"
-    },
-    {
-      "slug": "the-rust-programming-language-volume-10",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-rust-programming-language-volume-10.jpg",
-      "bytes": 48432,
-      "title": "The Rust Programming Language ? Volume 10"
-    },
-    {
-      "slug": "the-rust-programming-language-volume-12",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-rust-programming-language-volume-12.jpg",
-      "bytes": 48432,
-      "title": "The Rust Programming Language ? Volume 12"
-    },
-    {
-      "slug": "the-secret",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-secret.jpg",
-      "bytes": 53097,
-      "title": "The Secret"
-    },
-    {
-      "slug": "titles",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "titles.jpg",
-      "bytes": 30339,
-      "title": "Titles"
-    },
-    {
-      "slug": "traefik-api-gateway-for-microservices-with-java",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "traefik-api-gateway-for-microservices-with-java.jpg",
-      "bytes": 39292,
-      "title": "Traefik API Gateway for Microservices With Java"
-    },
-    {
-      "slug": "typescript-4-design-patterns-and-best-practices",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "typescript-4-design-patterns-and-best-practices.jpg",
-      "bytes": 64539,
-      "title": "Typescript 4 Design Patterns and Best Practices"
-    },
-    {
-      "slug": "uddhava-gita-swami-akhandananda-saraswati",
+      "slug": "psych-101-psychology-facts",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "uddhava-gita-swami-akhandananda-saraswati.jpg",
-      "bytes": 29077,
-      "title": "Uddhava Gita - Swami Akhandananda Saraswati"
+      "file": "psych-101-psychology-facts.jpg",
+      "bytes": 14900,
+      "title": "Psych 101 Psychology Facts"
     },
     {
-      "slug": "visual-studio-code-for-python-programmers",
+      "slug": "psych-101-psychology-facts-basics-statistics",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "visual-studio-code-for-python-programmers.jpg",
-      "bytes": 26774,
-      "title": "Visual Studio Code for Python Programmers"
+      "source": "internet-archive",
+      "file": "psych-101-psychology-facts-basics-statistics.jpg",
+      "bytes": 18062,
+      "title": "Psych 101 Psychology Facts, Basics, Statistics,"
     },
     {
-      "slug": "website-audit-checklist",
+      "slug": "psychology",
       "status": "downloaded",
       "source": "open-library",
-      "file": "website-audit-checklist.jpg",
-      "bytes": 58315,
-      "title": "Website Audit Checklist"
+      "file": "psychology.jpg",
+      "bytes": 47476,
+      "title": "Psychology"
     },
     {
-      "slug": "how-to-decide",
+      "slug": "rules-for-life",
       "status": "downloaded",
       "source": "open-library",
-      "file": "how-to-decide.jpg",
-      "bytes": 29448,
-      "title": "How to Decide"
+      "file": "rules-for-life.jpg",
+      "bytes": 28520,
+      "title": "Rules For Life"
     },
     {
-      "slug": "magic-words",
+      "slug": "social-psychology",
       "status": "downloaded",
       "source": "open-library",
-      "file": "magic-words.jpg",
-      "bytes": 29412,
-      "title": "Magic Words"
+      "file": "social-psychology.jpg",
+      "bytes": 42752,
+      "title": "Social Psychology"
+    },
+    {
+      "slug": "social-psychology-global-edition",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "social-psychology-global-edition.jpg",
+      "bytes": 28115,
+      "title": "Social Psychology, Global Edition"
+    },
+    {
+      "slug": "socrates-master-of-life",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "socrates-master-of-life.jpg",
+      "bytes": 9911,
+      "title": "Socrates Master Of Life"
+    },
+    {
+      "slug": "spy-secrets-that-can-save-your-life-a-former-cia",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "spy-secrets-that-can-save-your-life-a-former-cia.jpg",
+      "bytes": 45131,
+      "title": "Spy Secrets That Can Save Your Life A Former CIA"
+    },
+    {
+      "slug": "strategic-thinking",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "strategic-thinking.jpg",
+      "bytes": 60019,
+      "title": "Strategic Thinking"
+    },
+    {
+      "slug": "success-habits",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "success-habits.jpg",
+      "bytes": 30722,
+      "title": "Success Habits"
+    },
+    {
+      "slug": "the-magic-of-thinking-big-j-schwartz",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-magic-of-thinking-big-j-schwartz.jpg",
+      "bytes": 42735,
+      "title": "THE MAGIC OF THINKING BIG J Schwartz"
+    },
+    {
+      "slug": "the-art-of-creative-thinking",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-creative-thinking.jpg",
+      "bytes": 22691,
+      "title": "The Art Of Creative Thinking"
+    },
+    {
+      "slug": "the-art-of-the-good-life",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-the-good-life.jpg",
+      "bytes": 29700,
+      "title": "The Art of the Good Life"
+    },
+    {
+      "slug": "the-body-keeps-the-score",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-body-keeps-the-score.jpg",
+      "bytes": 28974,
+      "title": "The Body Keeps The Score"
+    },
+    {
+      "slug": "the-definitive-book-of-body-language",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-definitive-book-of-body-language.jpg",
+      "bytes": 6186,
+      "title": "The Definitive Book of BODY LANGUAGE"
     }
   ],
-  "offset": 5500,
-  "nextOffset": 6000,
+  "offset": 6000,
+  "nextOffset": 6500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 940,
-    "keep_existing": 1647,
-    "not_found": 3402,
+    "downloaded": 1111,
+    "keep_existing": 1695,
+    "not_found": 3683,
     "bad_image": 11
   },
-  "totalProcessed": 6000
+  "totalProcessed": 6500
 }
