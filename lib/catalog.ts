@@ -7,6 +7,9 @@ import { buildBookResearchLinks } from '@/lib/research-links';
 export interface Book {
   id: string;
   slug: string;
+  ref?: number | string;
+  catalogNum?: number | string;
+  researchSource?: { manifestId?: number; listedTitle?: string; listedAuthor?: string };
   title: string;
   subtitle: string;
   author: string;
@@ -771,6 +774,9 @@ function expandToBook(item: any): Book {
   return {
     id: item.id,
     slug,
+    ref: item.ref,
+    catalogNum: item.catalogNum,
+    researchSource: item.researchSource,
     title: item.title,
     subtitle,
     author,
