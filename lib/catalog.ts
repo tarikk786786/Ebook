@@ -764,8 +764,9 @@ function expandToBook(item: any): Book {
     ? item.tableOfContents.filter((value: unknown) => typeof value === 'string' && value.trim())
     : [];
   const coverType =
-    item.coverType ||
-    (item.coverVerified || item.coverStatus === 'verified_exact' ? 'AUTHENTIC' : 'CUSTOM_ARTWORK');
+    item.coverVerified === true || item.coverStatus === 'verified_exact'
+      ? 'AUTHENTIC'
+      : 'CUSTOM_ARTWORK';
 
   return {
     id: item.id,
