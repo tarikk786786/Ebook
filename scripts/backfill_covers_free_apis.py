@@ -471,14 +471,20 @@ def main():
     COVERS_DIR.mkdir(parents=True, exist_ok=True)
     targets_all = load_targets(None)
     total_targets = len(targets_all)
+    previous_cursor: dict[str, Any] = {}
     if args.offset < 0:
         try:
-            cursor = json.loads(CURSOR_PATH.read_text(encoding="utf-8"))
-            offset = int(cursor.get("nextOffset", 0))
+            previous_cursor = json.loads(CURSOR_PATH.read_text(encoding="utf-8"))
+            offset = int(previous_cursor.get("nextOffset", 0))
         except Exception:
             offset = 0
+            previous_cursor = {}
     else:
         offset = args.offset
+        try:
+            previous_cursor = json.loads(CURSOR_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            previous_cursor = {}
     if total_targets:
         offset = offset % total_targets
     targets = targets_all[offset : offset + max(0, args.limit)]
@@ -511,14 +517,30 @@ def main():
     out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 
     next_offset = (offset + len(targets)) % max(1, total_targets)
+    previous_totals = previous_cursor.get("totalCounts") or {}
+    cumulative_counts = {
+        key: int(previous_totals.get(key, 0)) + int(counts.get(key, 0))
+        for key in ("downloaded", "keep_existing", "not_found", "bad_image")
+    }
+    total_processed = int(previous_cursor.get("totalProcessed", 0)) + len(targets)
     cursor_payload = {
         "nextOffset": next_offset,
         "lastOffset": offset,
         "processed": len(targets),
+        "totalProcessed": total_processed,
         "totalTargets": total_targets,
+        "totalCounts": cumulative_counts,
         "updatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "lastCounts": counts,
     }
+    summary.update({
+        "offset": offset,
+        "nextOffset": next_offset,
+        "totalTargets": total_targets,
+        "cumulativeCounts": cumulative_counts,
+        "totalProcessed": total_processed,
+    })
+    out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     CURSOR_PATH.parent.mkdir(parents=True, exist_ok=True)
     CURSOR_PATH.write_text(json.dumps(cursor_payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
