@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 63,
-    "keep_existing": 20,
-    "not_found": 415,
+    "downloaded": 36,
+    "keep_existing": 3,
+    "not_found": 459,
     "bad_image": 2
   },
-  "updatedCurated": 1,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "answers-to-basic-spiritual-questions-of-sadhaks",
+      "slug": "charaka-samhita-text-with-english-tanslation-p-v",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "answers-to-basic-spiritual-questions-of-sadhaks.jpg",
-      "bytes": 17125,
-      "title": "Answers-to-Basic-Spiritual-Questions-of-Sadhaks"
+      "file": "charaka-samhita-text-with-english-tanslation-p-v.jpg",
+      "bytes": 18192,
+      "title": "Charaka Samhita Text With English Tanslation P V"
     },
     {
-      "slug": "anthem-ayn-rand",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "anthem-ayn-rand.jpg",
-      "bytes": 4672,
-      "title": "Anthem Ayn Rand"
-    },
-    {
-      "slug": "anthology-of-the-sanyas-upanishads",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "anthology-of-the-sanyas-upanishads.jpg",
-      "bytes": 4897,
-      "title": "Anthology Of The Sanyas Upanishads"
-    },
-    {
-      "slug": "apostle-s-cove",
+      "slug": "chasing-evil",
       "status": "downloaded",
       "source": "open-library",
-      "file": "apostle-s-cove.jpg",
-      "bytes": 10253,
-      "title": "Apostle'S Cove"
+      "file": "chasing-evil.jpg",
+      "bytes": 17043,
+      "title": "Chasing Evil"
     },
     {
-      "slug": "apne-har-vichar-pan-na-karein-vishwas-edition",
+      "slug": "checklist",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "apne-har-vichar-pan-na-karein-vishwas-edition.jpg",
+      "file": "checklist.jpg",
       "bytes": 3576,
-      "title": "Apne Har Vichar Pan Na Karein Vishwas Edition"
+      "title": "Checklist"
     },
     {
-      "slug": "aquarius",
+      "slug": "child-psychotherapy-homework-planner",
       "status": "downloaded",
       "source": "open-library",
-      "file": "aquarius.jpg",
-      "bytes": 39350,
-      "title": "Aquarius"
+      "file": "child-psychotherapy-homework-planner.jpg",
+      "bytes": 29420,
+      "title": "Child Psychotherapy Homework Planner"
     },
     {
-      "slug": "art-of-conversation",
+      "slug": "childhood-sexual-abuse",
       "status": "downloaded",
       "source": "open-library",
-      "file": "art-of-conversation.jpg",
-      "bytes": 43573,
-      "title": "Art Of Conversation"
+      "file": "childhood-sexual-abuse.jpg",
+      "bytes": 6039,
+      "title": "Childhood Sexual Abuse"
     },
     {
-      "slug": "art-therapy-for-groups-a-handbook-of-themes-and",
+      "slug": "child-art-therapy",
       "status": "downloaded",
       "source": "open-library",
-      "file": "art-therapy-for-groups-a-handbook-of-themes-and.jpg",
-      "bytes": 36609,
-      "title": "Art Therapy for Groups A Handbook of Themes and"
+      "file": "child-art-therapy.jpg",
+      "bytes": 49697,
+      "title": "Child Art Therapy"
     },
     {
-      "slug": "artha-sastra-rangarajan-l-n-penguin",
+      "slug": "chip-war-chris-miller",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "artha-sastra-rangarajan-l-n-penguin.jpg",
-      "bytes": 15442,
-      "title": "Artha Sastra Rangarajan L N Penguin"
+      "file": "chip-war-chris-miller.jpg",
+      "bytes": 11211,
+      "title": "Chip war Chris miller"
     },
     {
-      "slug": "arts-activities-for-children-and-young-people-in",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "arts-activities-for-children-and-young-people-in.jpg",
-      "bytes": 38164,
-      "title": "Arts Activities for Children and Young People in"
-    },
-    {
-      "slug": "ask-yourself",
+      "slug": "chitra-adi-shankaracharya",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "ask-yourself.jpg",
-      "bytes": 6629,
-      "title": "Ask Yourself"
+      "file": "chitra-adi-shankaracharya.jpg",
+      "bytes": 11262,
+      "title": "Chitra-Adi-Shankaracharya"
     },
     {
-      "slug": "assignment-2",
+      "slug": "chromatography",
       "status": "downloaded",
       "source": "open-library",
-      "file": "assignment-2.jpg",
-      "bytes": 45479,
-      "title": "Assignment 2"
+      "file": "chromatography.jpg",
+      "bytes": 25602,
+      "title": "Chromatography"
     },
     {
-      "slug": "at-your-command",
+      "slug": "chromatography-1",
       "status": "downloaded",
       "source": "open-library",
-      "file": "at-your-command.jpg",
-      "bytes": 19381,
-      "title": "At Your Command"
+      "file": "chromatography-1.jpg",
+      "bytes": 22151,
+      "title": "Chromatography 1"
     },
     {
-      "slug": "astrology-for-everyone",
+      "slug": "cognitive-behavioral-therapy-for-bipolar-disorde",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cognitive-behavioral-therapy-for-bipolar-disorde.jpg",
+      "bytes": 22553,
+      "title": "Cognitive Behavioral Therapy for Bipolar Disorde"
+    },
+    {
+      "slug": "cognitive-behavioral-therapy-for-ptsd-a-case-for",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cognitive-behavioral-therapy-for-ptsd-a-case-for.jpg",
+      "bytes": 33639,
+      "title": "Cognitive Behavioral Therapy for PTSD A Case For"
+    },
+    {
+      "slug": "cognitive-behavioural-therapy-for-child-trauma-a",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cognitive-behavioural-therapy-for-child-trauma-a.jpg",
+      "bytes": 51374,
+      "title": "Cognitive Behavioural Therapy for Child Trauma a"
+    },
+    {
+      "slug": "cognitive-biases",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cognitive-biases.jpg",
+      "bytes": 14242,
+      "title": "Cognitive biases"
+    },
+    {
+      "slug": "cognitive-behavioral",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cognitive-behavioral.jpg",
+      "bytes": 35337,
+      "title": "Cognitive-Behavioral"
+    },
+    {
+      "slug": "collector-sahiba",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "astrology-for-everyone.jpg",
-      "bytes": 19074,
-      "title": "Astrology For Everyone"
+      "file": "collector-sahiba.jpg",
+      "bytes": 22298,
+      "title": "Collector Sahiba ??????? ??????"
     },
     {
-      "slug": "attitude-is-everything",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "attitude-is-everything.jpg",
-      "bytes": 84981,
-      "title": "Attitude Is Everything"
-    },
-    {
-      "slug": "awaken-the-giant-within-robbins",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "awaken-the-giant-within-robbins.jpg",
-      "bytes": 52731,
-      "title": "Awaken the Giant Within Robbins"
-    },
-    {
-      "slug": "awakened-imagination-the-search",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "awakened-imagination-the-search.jpg",
-      "bytes": 14944,
-      "title": "Awakened Imagination The Search"
-    },
-    {
-      "slug": "basics-cheatsheet",
+      "slug": "complex-ptsd-from-surviving-to-thriving",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "basics-cheatsheet.jpg",
-      "bytes": 3576,
-      "title": "Basics Cheatsheet"
+      "file": "complex-ptsd-from-surviving-to-thriving.jpg",
+      "bytes": 15631,
+      "title": "Complex PTSD From Surviving to Thriving"
     },
     {
-      "slug": "becoming",
+      "slug": "computer-networks-global-edition",
       "status": "downloaded",
       "source": "open-library",
-      "file": "becoming.jpg",
-      "bytes": 41074,
-      "title": "Becoming"
+      "file": "computer-networks-global-edition.jpg",
+      "bytes": 18934,
+      "title": "Computer Networks, Global Edition"
     },
     {
-      "slug": "becoming-michelle-obama",
+      "slug": "computer-networks-notes",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "becoming-michelle-obama.jpg",
-      "bytes": 7211,
-      "title": "Becoming - Michelle Obama"
+      "file": "computer-networks-notes.jpg",
+      "bytes": 11788,
+      "title": "Computer Networks Notes"
+    },
+    {
+      "slug": "contagious-why-things-catch-on",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "contagious-why-things-catch-on.jpg",
+      "bytes": 15482,
+      "title": "Contagious Why Things Catch On"
     }
   ],
-  "offset": 8000,
-  "nextOffset": 8500,
+  "offset": 8500,
+  "nextOffset": 9000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1232,
-    "keep_existing": 1810,
-    "not_found": 5441,
-    "bad_image": 17
+    "downloaded": 1268,
+    "keep_existing": 1813,
+    "not_found": 5900,
+    "bad_image": 19
   },
-  "totalProcessed": 8500
+  "totalProcessed": 9000
 }
