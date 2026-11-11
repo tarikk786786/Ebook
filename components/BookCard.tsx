@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Book } from '@/lib/catalog';
+import { Book, getEffectiveRightsStatus } from '@/lib/catalog';
 import { useCart } from '@/context/CartContext';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
@@ -72,8 +72,10 @@ export default function BookCard({
   };
 
   const hasListedPrice = Number(book.priceInInr) > 0;
-  const displayPrice = !hasListedPrice
-    ? 'Price pending'
+  const rightsStatus = getEffectiveRightsStatus(book);
+  const canPurchase = hasListedPrice && ['RIGHTS_CONFIRMED', 'PUBLIC_DOMAIN_VERIFIED', 'OPEN_LICENCE_VERIFIED'].includes(rightsStatus);
+  const displayPrice = !canPurchase
+    ? 'Not available for sale'
     : currency === 'INR'
       ? `₹${book.priceInInr}`
       : `${(book.priceInInr / 85).toFixed(2)}`;
@@ -87,7 +89,7 @@ export default function BookCard({
   );
 
   const handleAddToCart = () => {
-    if (!hasListedPrice) {
+    if (!canPurchase) {
       toast.info('Price is being verified', { description: 'You can still open the book details or request this title.' });
       return;
     }
@@ -231,7 +233,7 @@ export default function BookCard({
           </div>
           <span className="text-[10px] text-[#81796D] font-sans font-medium flex items-center gap-1">
             <Zap className="w-2.5 h-2.5 text-[#9A704B]" />
-            {hasListedPrice ? 'Instant Delivery' : 'Pricing review'}
+            {canPurchase ? 'Instant Delivery' : 'Rights review required'}
           </span>
         </div>
 
@@ -258,11 +260,11 @@ export default function BookCard({
           {onSelectBuy ? (
             <button
               onClick={() => onSelectBuy(book)}
-              disabled={!hasListedPrice}
+              disabled={!canPurchase}
               className="py-1.5 px-2 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-medium transition-all duration-150 flex items-center justify-center gap-1 shadow-sm active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Zap className="w-3.5 h-3.5 text-amber-300" />
-              <span>{hasListedPrice ? 'Buy Now' : 'Price pending'}</span>
+              <span>{canPurchase ? 'Buy Now' : 'Not for sale'}</span>
             </button>
           ) : (
             <button
@@ -271,7 +273,7 @@ export default function BookCard({
               className="py-1.5 px-2 rounded-lg bg-[#24231F] hover:bg-[#3D3B35] text-white text-xs font-medium transition-all duration-150 flex items-center justify-center gap-1 shadow-sm active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isInCart ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <ShoppingBag className="w-3.5 h-3.5" />}
-              <span>{!hasListedPrice ? 'Price pending' : isInCart ? 'In Bag' : 'Add to Bag'}</span>
+              <span>{!canPurchase ? 'Not for sale' : isInCart ? 'In Bag' : 'Add to Bag'}</span>
             </button>
           )}
         </div>
