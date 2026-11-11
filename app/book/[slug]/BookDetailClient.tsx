@@ -770,6 +770,38 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                           <p className="text-[11px] text-[#6E685F] mt-0.5">Author / contributor: {book.author || 'Not listed'}</p>
                           <p className="text-[10px] text-[#81796D] mt-1">Current catalogue filename: {book.fileName || 'Not available'}</p>
                         </div>
+                        {book.researchSource && (
+                          <div className="p-3.5 bg-white border border-[#E8E4DC] rounded-xl space-y-2">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[10px] uppercase tracking-wider font-bold text-[#9A704B]">Uploaded master directory match</span>
+                              <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200">
+                                UNVERIFIED SOURCE
+                              </span>
+                            </div>
+                            <div className="grid grid-cols-2 gap-3 text-[11px]">
+                              <div>
+                                <span className="block text-[#81796D]">Manifest ID</span>
+                                <strong className="text-[#24231F]">#{book.researchSource.manifestId}</strong>
+                              </div>
+                              <div>
+                                <span className="block text-[#81796D]">Listed category</span>
+                                <strong className="text-[#24231F]">{book.researchSource.listedCategory || 'Not listed'}</strong>
+                              </div>
+                            </div>
+                            <div>
+                              <span className="block text-[10px] text-[#81796D]">Original listed title</span>
+                              <p className="text-xs text-[#24231F]">{book.researchSource.listedTitle || 'Not listed'}</p>
+                            </div>
+                            <div>
+                              <span className="block text-[10px] text-[#81796D]">Listed contributor (not verified)</span>
+                              <p className="text-xs text-[#24231F]">{book.researchSource.listedAuthor || 'Not listed'}</p>
+                            </div>
+                            <div>
+                              <span className="block text-[10px] text-[#81796D]">Source filename</span>
+                              <p className="text-xs text-[#24231F] break-all">{book.researchSource.sourceFilename || 'Not listed'}</p>
+                            </div>
+                          </div>
+                        )}
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           {linkItems.map((item) => {
