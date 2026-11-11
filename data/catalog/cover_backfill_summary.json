@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 151,
-    "keep_existing": 155,
-    "not_found": 194,
-    "bad_image": 0
+    "downloaded": 22,
+    "keep_existing": 236,
+    "not_found": 239,
+    "bad_image": 3
   },
-  "updatedCurated": 131,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "building-a-storybrand",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-a-storybrand.jpg",
-      "bytes": 23007,
-      "title": "Building a StoryBrand"
-    },
-    {
-      "slug": "buyology",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "buyology.jpg",
-      "bytes": 5377,
-      "title": "Buyology"
-    },
-    {
-      "slug": "confessions-of-an-advertising-man",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "confessions-of-an-advertising-man.jpg",
-      "bytes": 20645,
-      "title": "Confessions of an Advertising Man"
-    },
-    {
-      "slug": "contagious",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "contagious.jpg",
-      "bytes": 28118,
-      "title": "Contagious"
-    },
-    {
-      "slug": "crushing-it",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crushing-it.jpg",
-      "bytes": 39679,
-      "title": "Crushing It!"
-    },
-    {
-      "slug": "how-brands-grow",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "how-brands-grow.jpg",
-      "bytes": 44235,
-      "title": "How Brands Grow"
-    },
-    {
-      "slug": "jab-jab-jab-right-hook",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "jab-jab-jab-right-hook.jpg",
-      "bytes": 62404,
-      "title": "Jab, Jab, Jab, Right Hook"
-    },
-    {
-      "slug": "kellogg-on-branding",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "kellogg-on-branding.jpg",
-      "bytes": 10813,
-      "title": "Kellogg on Branding"
-    },
-    {
-      "slug": "made-to-stick",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "made-to-stick.jpg",
-      "bytes": 26439,
-      "title": "Made to Stick"
-    },
-    {
-      "slug": "marketing-4-0",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "marketing-4-0.jpg",
-      "bytes": 38014,
-      "title": "Marketing 4.0"
-    },
-    {
-      "slug": "marketing-5-0",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "marketing-5-0.jpg",
-      "bytes": 47522,
-      "title": "Marketing 5.0"
-    },
-    {
-      "slug": "obviously-awesome",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "obviously-awesome.jpg",
-      "bytes": 33411,
-      "title": "Obviously Awesome"
-    },
-    {
-      "slug": "marketing-management",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "marketing-management.jpg",
-      "bytes": 53378,
-      "title": "Marketing Management"
-    },
-    {
-      "slug": "permission-marketing",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "permission-marketing.jpg",
-      "bytes": 33135,
-      "title": "Permission Marketing"
-    },
-    {
-      "slug": "principles-of-marketing",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "principles-of-marketing.jpg",
-      "bytes": 25434,
-      "title": "Principles of Marketing"
-    },
-    {
-      "slug": "ogilvy-on-advertising",
+      "slug": "untitled-presentation",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "ogilvy-on-advertising.jpg",
-      "bytes": 12599,
-      "title": "Ogilvy on Advertising"
+      "file": "untitled-presentation.jpg",
+      "bytes": 4431,
+      "title": "Untitled presentation"
     },
     {
-      "slug": "purple-cow",
+      "slug": "vulnerability-management",
       "status": "downloaded",
       "source": "open-library",
-      "file": "purple-cow.jpg",
-      "bytes": 32201,
-      "title": "Purple Cow"
+      "file": "vulnerability-management.jpg",
+      "bytes": 54454,
+      "title": "Vulnerability Management"
     },
     {
-      "slug": "the-anatomy-of-buzz",
+      "slug": "1403-pdf",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-anatomy-of-buzz.jpg",
-      "bytes": 25332,
-      "title": "The Anatomy of Buzz"
+      "source": "internet-archive",
+      "file": "1403-pdf.jpg",
+      "bytes": 13676,
+      "title": "?????? ??????? ???????? ??? ????? 1403 Pdf"
     },
     {
-      "slug": "the-brand-gap",
+      "slug": "download",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-brand-gap.jpg",
-      "bytes": 21619,
-      "title": "The Brand Gap"
+      "source": "internet-archive",
+      "file": "download.jpg",
+      "bytes": 3576,
+      "title": "Download"
     },
     {
-      "slug": "the-culting-of-brands",
+      "slug": "beyond-the-emyth",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-culting-of-brands.jpg",
-      "bytes": 26468,
-      "title": "The Culting of Brands"
+      "file": "beyond-the-emyth.jpg",
+      "bytes": 29547,
+      "title": "Beyond The Emyth"
+    },
+    {
+      "slug": "building-python-microservices-with-fastapi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "building-python-microservices-with-fastapi.jpg",
+      "bytes": 29271,
+      "title": "Building Python Microservices with FastAPI"
+    },
+    {
+      "slug": "building-modern-guis-with-tkinter-and-python",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "building-modern-guis-with-tkinter-and-python.jpg",
+      "bytes": 13651,
+      "title": "Building Modern GUIs with Tkinter and Python"
+    },
+    {
+      "slug": "business-maharajas-piramal",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "business-maharajas-piramal.jpg",
+      "bytes": 16651,
+      "title": "Business Maharajas Piramal"
+    },
+    {
+      "slug": "c-notes",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "c-notes.jpg",
+      "bytes": 41149,
+      "title": "C++ notes"
+    },
+    {
+      "slug": "career-anchors",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "career-anchors.jpg",
+      "bytes": 30241,
+      "title": "Career Anchors"
+    },
+    {
+      "slug": "clean-code",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-code.jpg",
+      "bytes": 41639,
+      "title": "Clean Code"
+    },
+    {
+      "slug": "clean-code-in-php",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-code-in-php.jpg",
+      "bytes": 34241,
+      "title": "Clean Code in PHP"
+    },
+    {
+      "slug": "data-structures-and-algorithms-in-python",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-and-algorithms-in-python.jpg",
+      "bytes": 46160,
+      "title": "Data Structures and Algorithms in Python"
+    },
+    {
+      "slug": "data-visualization-with-python",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-visualization-with-python.jpg",
+      "bytes": 45178,
+      "title": "Data Visualization with Python"
+    },
+    {
+      "slug": "designing-data-intensive-applications-volume-1",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "designing-data-intensive-applications-volume-1.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications ? Volume 1"
+    },
+    {
+      "slug": "designing-data-intensive-applications-volume-2",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "designing-data-intensive-applications-volume-2.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications ? Volume 2"
+    },
+    {
+      "slug": "devdas",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "devdas.jpg",
+      "bytes": 33531,
+      "title": "Devdas"
+    },
+    {
+      "slug": "developing-leadership",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "developing-leadership.jpg",
+      "bytes": 21136,
+      "title": "Developing Leadership"
+    },
+    {
+      "slug": "development-of-moral-philosophy-in-india",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "development-of-moral-philosophy-in-india.jpg",
+      "bytes": 43978,
+      "title": "Development Of Moral Philosophy In India"
+    },
+    {
+      "slug": "devops",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "devops.jpg",
+      "bytes": 59200,
+      "title": "Devops"
     }
   ],
-  "offset": 4000,
-  "nextOffset": 4500,
+  "offset": 4500,
+  "nextOffset": 5000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 748,
-    "keep_existing": 1253,
-    "not_found": 2492,
-    "bad_image": 7
+    "downloaded": 770,
+    "keep_existing": 1489,
+    "not_found": 2731,
+    "bad_image": 10
   },
-  "totalProcessed": 4500
+  "totalProcessed": 5000
 }
