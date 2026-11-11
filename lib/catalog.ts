@@ -838,7 +838,7 @@ let cachedResearchDirectory: Map<string, any | null> | null = null;
 function normalizeDirectoryFilename(value?: string | null): string {
   return String(value || "")
     .trim()
-    .replace(/\\\\/g, "/")
+    .replace(/\\/g, "/")
     .split("/")
     .pop()
     ?.trim()
