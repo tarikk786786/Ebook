@@ -1,166 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 18,
-    "keep_existing": 25,
+    "downloaded": 27,
+    "keep_existing": 18,
     "not_found": 455,
-    "bad_image": 2
+    "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "165",
+      "slug": "402",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "165.jpg",
-      "bytes": 19447,
-      "title": "165"
-    },
-    {
-      "slug": "167",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "167.jpg",
-      "bytes": 9270,
-      "title": "167"
-    },
-    {
-      "slug": "171",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "171.jpg",
-      "bytes": 10706,
-      "title": "171"
-    },
-    {
-      "slug": "184",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "184.jpg",
-      "bytes": 4387,
-      "title": "184"
-    },
-    {
-      "slug": "190",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "190.jpg",
-      "bytes": 12088,
-      "title": "190"
-    },
-    {
-      "slug": "191",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "191.jpg",
-      "bytes": 20650,
-      "title": "191"
-    },
-    {
-      "slug": "195",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "195.jpg",
-      "bytes": 8242,
-      "title": "195"
-    },
-    {
-      "slug": "2057-1",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "2057-1.jpg",
-      "bytes": 5164,
-      "title": "2057 1"
-    },
-    {
-      "slug": "2067-6",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "2067-6.jpg",
-      "bytes": 8703,
-      "title": "2067 6"
-    },
-    {
-      "slug": "209",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "209.jpg",
+      "file": "402.jpg",
       "bytes": 3576,
-      "title": "209"
+      "title": "402"
     },
     {
-      "slug": "229",
+      "slug": "410",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "229.jpg",
-      "bytes": 6992,
-      "title": "229"
+      "file": "410.jpg",
+      "bytes": 8549,
+      "title": "410"
     },
     {
-      "slug": "266",
+      "slug": "502",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "266.jpg",
-      "bytes": 10876,
-      "title": "266"
+      "file": "502.jpg",
+      "bytes": 7821,
+      "title": "502"
     },
     {
-      "slug": "275",
+      "slug": "539",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "275.jpg",
-      "bytes": 8954,
-      "title": "275"
-    },
-    {
-      "slug": "2785-5",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "2785-5.jpg",
-      "bytes": 9042,
-      "title": "2785 5"
-    },
-    {
-      "slug": "285",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "285.jpg",
+      "file": "539.jpg",
       "bytes": 3576,
-      "title": "285"
+      "title": "539"
     },
     {
-      "slug": "307",
+      "slug": "543",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "307.jpg",
-      "bytes": 7849,
-      "title": "307"
+      "file": "543.jpg",
+      "bytes": 5100,
+      "title": "543"
     },
     {
-      "slug": "37-how-to-talk-to-anyone",
+      "slug": "544",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "544.jpg",
+      "bytes": 5616,
+      "title": "544"
+    },
+    {
+      "slug": "5g-lte-narrowband-internet-of-things-nb-iot",
       "status": "downloaded",
       "source": "open-library",
-      "file": "37-how-to-talk-to-anyone.jpg",
-      "bytes": 30202,
-      "title": "37 How To Talk To Anyone"
+      "file": "5g-lte-narrowband-internet-of-things-nb-iot.jpg",
+      "bytes": 43256,
+      "title": "5G LTE Narrowband Internet of Things NB IoT"
     },
     {
-      "slug": "373",
+      "slug": "619",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "373.jpg",
-      "bytes": 6910,
-      "title": "373"
+      "file": "619.jpg",
+      "bytes": 26714,
+      "title": "619"
+    },
+    {
+      "slug": "625",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "625.jpg",
+      "bytes": 3576,
+      "title": "625"
+    },
+    {
+      "slug": "a-history-of-indian-literature-i",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "a-history-of-indian-literature-i.jpg",
+      "bytes": 14487,
+      "title": "A History of Indian Literature I"
+    },
+    {
+      "slug": "a-passage-to-india",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a-passage-to-india.jpg",
+      "bytes": 14970,
+      "title": "A Passage To India"
+    },
+    {
+      "slug": "a-promised-land",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a-promised-land.jpg",
+      "bytes": 29440,
+      "title": "A Promised Land"
+    },
+    {
+      "slug": "a-to-z-india-november-2021-issue",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "a-to-z-india-november-2021-issue.jpg",
+      "bytes": 11347,
+      "title": "A TO Z INDIA NOVEMBER 2021 Issue"
+    },
+    {
+      "slug": "a-true-guru",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "a-true-guru.jpg",
+      "bytes": 4516,
+      "title": "A True Guru"
+    },
+    {
+      "slug": "a-wonderful-creation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a-wonderful-creation.jpg",
+      "bytes": 5444,
+      "title": "A Wonderful Creation"
+    },
+    {
+      "slug": "a-promised-land-obama",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a-promised-land-obama.jpg",
+      "bytes": 29440,
+      "title": "A promised land Obama"
+    },
+    {
+      "slug": "a-book-of-five-rings",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a-book-of-five-rings.jpg",
+      "bytes": 50657,
+      "title": "A-book-of-five-rings"
+    },
+    {
+      "slug": "abraham-lincon",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "abraham-lincon.jpg",
+      "bytes": 36454,
+      "title": "Abraham Lincon"
+    },
+    {
+      "slug": "act-like-a-ceo",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "act-like-a-ceo.jpg",
+      "bytes": 30131,
+      "title": "Act Like a CEO"
+    },
+    {
+      "slug": "active-directory-administration-cookbook-proven",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "active-directory-administration-cookbook-proven.jpg",
+      "bytes": 46461,
+      "title": "Active Directory Administration Cookbook Proven"
     }
   ],
-  "offset": 7000,
-  "nextOffset": 7500,
+  "offset": 7500,
+  "nextOffset": 8000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1142,
-    "keep_existing": 1772,
-    "not_found": 4571,
+    "downloaded": 1169,
+    "keep_existing": 1790,
+    "not_found": 5026,
     "bad_image": 15
   },
-  "totalProcessed": 7500
+  "totalProcessed": 8000
 }
