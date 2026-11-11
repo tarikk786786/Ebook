@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 51,
-    "keep_existing": 5,
-    "not_found": 443,
-    "bad_image": 1
+    "downloaded": 64,
+    "keep_existing": 9,
+    "not_found": 425,
+    "bad_image": 2
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "dayaram",
+      "slug": "essays-vol-2",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "essays-vol-2.jpg",
+      "bytes": 22141,
+      "title": "Essays Vol 2"
+    },
+    {
+      "slug": "essential-english-words-2",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "essential-english-words-2.jpg",
+      "bytes": 50737,
+      "title": "Essential English Words 2"
+    },
+    {
+      "slug": "essential-english-words-4-2nd",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "dayaram.jpg",
-      "bytes": 12780,
-      "title": "Dayaram"
+      "file": "essential-english-words-4-2nd.jpg",
+      "bytes": 27048,
+      "title": "Essential English Words - 4 - 2nd"
     },
     {
-      "slug": "dbms",
+      "slug": "essential-english-words-2nd-ed-book-1",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "dbms.jpg",
-      "bytes": 3576,
-      "title": "Dbms"
+      "file": "essential-english-words-2nd-ed-book-1.jpg",
+      "bytes": 25146,
+      "title": "Essential English Words 2nd ed Book 1"
     },
     {
-      "slug": "descent-of-socrates",
+      "slug": "essential-english-words-6",
       "status": "downloaded",
       "source": "open-library",
-      "file": "descent-of-socrates.jpg",
-      "bytes": 34736,
-      "title": "Descent Of Socrates"
+      "file": "essential-english-words-6.jpg",
+      "bytes": 49436,
+      "title": "Essential English Words 6"
     },
     {
-      "slug": "design-patterns",
+      "slug": "essentials-of-kabc-ii-assessment",
       "status": "downloaded",
       "source": "open-library",
-      "file": "design-patterns.jpg",
-      "bytes": 40893,
-      "title": "Design Patterns"
+      "file": "essentials-of-kabc-ii-assessment.jpg",
+      "bytes": 41925,
+      "title": "Essentials of KABC II Assessment"
     },
     {
-      "slug": "detox-your-ego",
+      "slug": "essentials-of-nepsy-ii-assessment-essentials-of",
       "status": "downloaded",
       "source": "open-library",
-      "file": "detox-your-ego.jpg",
-      "bytes": 33436,
-      "title": "Detox Your Ego"
+      "file": "essentials-of-nepsy-ii-assessment-essentials-of.jpg",
+      "bytes": 32026,
+      "title": "Essentials of NEPSY II Assessment Essentials of"
     },
     {
-      "slug": "dharma-ki-avdharna",
+      "slug": "essentials-of-wnv-assessment",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "essentials-of-wnv-assessment.jpg",
+      "bytes": 14212,
+      "title": "Essentials of WNV Assessment"
+    },
+    {
+      "slug": "etiquette-for-the-21st-century",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "etiquette-for-the-21st-century.jpg",
+      "bytes": 28993,
+      "title": "Etiquette for the 21st Century"
+    },
+    {
+      "slug": "everything-is-tuberculosis",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "everything-is-tuberculosis.jpg",
+      "bytes": 8997,
+      "title": "Everything Is Tuberculosis"
+    },
+    {
+      "slug": "everything-is-fucked-manson",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "dharma-ki-avdharna.jpg",
-      "bytes": 10785,
-      "title": "Dharma Ki Avdharna"
+      "file": "everything-is-fucked-manson.jpg",
+      "bytes": 15049,
+      "title": "Everything Is Fucked Manson"
     },
     {
-      "slug": "dhyan-aur-gyan-swami-akhandananda-saraswati",
+      "slug": "exactly-what-to-say-m-jones",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "exactly-what-to-say-m-jones.jpg",
+      "bytes": 35456,
+      "title": "Exactly What to Say M Jones"
+    },
+    {
+      "slug": "ex-girlfriend",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "ex-girlfriend.jpg",
+      "bytes": 38534,
+      "title": "Ex Girlfriend"
+    },
+    {
+      "slug": "extraordinary-popular-delusions-mackay",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "extraordinary-popular-delusions-mackay.jpg",
+      "bytes": 51834,
+      "title": "Extraordinary Popular Delusions MacKay"
+    },
+    {
+      "slug": "extreme-ownership-willink",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "extreme-ownership-willink.jpg",
+      "bytes": 22221,
+      "title": "Extreme Ownership Willink"
+    },
+    {
+      "slug": "fact-questioned-documents",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "fact-questioned-documents.jpg",
+      "bytes": 19656,
+      "title": "FACT Questioned Documents"
+    },
+    {
+      "slug": "face-reading",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "face-reading.jpg",
+      "bytes": 15340,
+      "title": "Face Reading"
+    },
+    {
+      "slug": "factfulness-rosling",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "dhyan-aur-gyan-swami-akhandananda-saraswati.jpg",
-      "bytes": 13478,
-      "title": "Dhyan Aur Gyan Swami Akhandananda Saraswati"
+      "file": "factfulness-rosling.jpg",
+      "bytes": 15085,
+      "title": "Factfulness Rosling"
     },
     {
-      "slug": "did-you-know",
+      "slug": "feel-the-fear-and-do-it-anyway",
       "status": "downloaded",
       "source": "open-library",
-      "file": "did-you-know.jpg",
-      "bytes": 56732,
-      "title": "Did You Know"
+      "file": "feel-the-fear-and-do-it-anyway.jpg",
+      "bytes": 38238,
+      "title": "Feel the fear and do it anyway"
     },
     {
-      "slug": "distributed-services-with-go",
+      "slug": "feel-good-productivity",
       "status": "downloaded",
       "source": "open-library",
-      "file": "distributed-services-with-go.jpg",
-      "bytes": 38661,
-      "title": "Distributed Services with Go"
-    },
-    {
-      "slug": "django-for-professionals",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "django-for-professionals.jpg",
-      "bytes": 22359,
-      "title": "Django for professionals"
-    },
-    {
-      "slug": "django-3",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "django-3.jpg",
-      "bytes": 3576,
-      "title": "Django 3"
-    },
-    {
-      "slug": "do-epic-shit",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "do-epic-shit.jpg",
-      "bytes": 25836,
-      "title": "Do Epic Shit"
-    },
-    {
-      "slug": "do-it-today",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "do-it-today.jpg",
-      "bytes": 24194,
-      "title": "Do It Today"
-    },
-    {
-      "slug": "do-the-work",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "do-the-work.jpg",
-      "bytes": 48558,
-      "title": "Do the Work"
-    },
-    {
-      "slug": "documents",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "documents.jpg",
-      "bytes": 3576,
-      "title": "Documents"
-    },
-    {
-      "slug": "dont-believe-everything-you-feel-a-cbt-workbook",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dont-believe-everything-you-feel-a-cbt-workbook.jpg",
-      "bytes": 42369,
-      "title": "Dont Believe Everything You Feel A CBT Workbook"
-    },
-    {
-      "slug": "dopamine-detox",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dopamine-detox.jpg",
-      "bytes": 51434,
-      "title": "Dopamine Detox"
-    },
-    {
-      "slug": "draupadi",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "draupadi.jpg",
-      "bytes": 43478,
-      "title": "Draupadi"
-    },
-    {
-      "slug": "dreamjob",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dreamjob.jpg",
-      "bytes": 27002,
-      "title": "DreamJob"
-    },
-    {
-      "slug": "drive-the-surprising-truth-about-what-motivates",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "drive-the-surprising-truth-about-what-motivates.jpg",
-      "bytes": 12671,
-      "title": "Drive The surprising truth about what motivates"
+      "file": "feel-good-productivity.jpg",
+      "bytes": 34299,
+      "title": "Feel-Good Productivity"
     }
   ],
-  "offset": 9000,
-  "nextOffset": 9500,
+  "offset": 9500,
+  "nextOffset": 10000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1319,
-    "keep_existing": 1818,
-    "not_found": 6343,
-    "bad_image": 20
+    "downloaded": 1383,
+    "keep_existing": 1827,
+    "not_found": 6768,
+    "bad_image": 22
   },
-  "totalProcessed": 9500
+  "totalProcessed": 10000
 }
