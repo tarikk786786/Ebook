@@ -60,7 +60,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
     const source = String(cover || '');
     // Static local covers and trusted provider image URLs should use the CDN
     // directly; the API is only the fallback for genuinely missing covers.
-    if (/^https?:\/\//i.test(source) || source.startsWith('/covers/')) {
+    if (/^https?:\/\//i.test(source) || (source.startsWith('/covers/') && !source.includes('standard-shelf-cover'))) {
       return source;
     }
     return `/api/covers/${book.slug}?v=10`;
