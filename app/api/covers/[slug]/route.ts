@@ -196,7 +196,7 @@ function readLocalCover(
     cleanSlug.match(/(\d{2,})$/)?.[1],
     cleanSlug.match(/^(\d+)$/)?.[1],
   ]
-    .map((v) => (v == null ? '' : String(v)))
+    .map((v) => (v == null ? '' : String(v).replace(/^0+(?=\d)/, '')))
     .filter((v) => /^\d{1,6}$/.test(v));
 
   for (const id of Array.from(new Set(numericIds))) {
@@ -380,6 +380,9 @@ export async function GET(
     const localForced = readLocalCover(cleanSlug, rawSlug, book);
     if (localForced) return localForced;
   }
+
+  const explicitBookCover = readIndexedCover(book.coverImage);
+  if (explicitBookCover) return explicitBookCover;
 
   const localEarly = readLocalCover(cleanSlug, rawSlug, book);
   if (localEarly) return localEarly;
