@@ -470,6 +470,41 @@ export default function AdminDashboardPage() {
               <span className="hidden md:inline">Payments</span>
             </Link>
             <Link
+              href="/admin/contributions"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-cyan-950/40 border border-cyan-800/80 text-xs text-cyan-300 hover:border-cyan-500/80 hover:text-white transition-colors"
+              title="Community contributor submissions and license review"
+            >
+              <span className="hidden md:inline">Contributions</span>
+            </Link>
+            <Link
+              href="/admin/requests"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-amber-950/40 border border-amber-800/80 text-xs text-amber-300 hover:border-amber-500/80 hover:text-white transition-colors"
+              title="Community ebook request queue"
+            >
+              <span className="hidden md:inline">Requests</span>
+            </Link>
+            <Link
+              href="/admin/settings"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-violet-950/40 border border-violet-800/80 text-xs text-violet-300 hover:border-violet-500/80 hover:text-white transition-colors"
+              title="Community marketplace platform settings"
+            >
+              <span className="hidden md:inline">Community</span>
+            </Link>
+            <Link
+              href="/admin/earnings"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-amber-950/40 border border-amber-800/80 text-xs text-amber-300 hover:border-amber-500/80 hover:text-white transition-colors"
+              title="Contributor earnings ledger"
+            >
+              <span className="hidden md:inline">Earnings</span>
+            </Link>
+            <Link
+              href="/admin/payouts"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/80 text-xs text-emerald-300 hover:border-emerald-500/80 hover:text-white transition-colors"
+              title="Manual UPI payout queue"
+            >
+              <span className="hidden md:inline">Payouts</span>
+            </Link>
+            <Link
               href="/admin/ai-intelligence"
               className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-violet-950/40 border border-violet-800/80 text-xs text-violet-300 hover:border-violet-500/80 hover:text-white transition-colors"
               title="AI Book Intelligence status and catalog PDF cover enrichment"
