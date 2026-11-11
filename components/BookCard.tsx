@@ -84,9 +84,9 @@ export default function BookCard({
     ? `₹${book.originalPriceInInr}`
     : `$${(book.originalPriceInInr / 85).toFixed(2)}`;
 
-  const savingsPercent = Math.round(
-    ((book.originalPriceInInr - book.priceInInr) / book.originalPriceInInr) * 100
-  );
+  const savingsPercent = canPurchase && book.originalPriceInInr > book.priceInInr
+    ? Math.round(((book.originalPriceInInr - book.priceInInr) / book.originalPriceInInr) * 100)
+    : 0;
 
   const handleAddToCart = () => {
     if (!canPurchase) {
@@ -227,7 +227,7 @@ export default function BookCard({
         <div className="flex items-baseline justify-between">
           <div className="flex items-baseline gap-1.5">
             <span className="font-serif text-base font-bold text-[#24231F]">{displayPrice}</span>
-            {book.originalPriceInInr > book.priceInInr && (
+            {canPurchase && book.originalPriceInInr > book.priceInInr && (
               <span className="text-xs text-[#81796D] line-through">{displayOriginalPrice}</span>
             )}
           </div>
