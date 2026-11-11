@@ -17,11 +17,12 @@ import {
 } from 'lucide-react';
 
 function resolveCoverSrc(book: Book): string {
-  // Prefer absolute CDN cover URLs from the 86k index when present.
-  if (book.coverImage && /^https?:\/\//i.test(book.coverImage)) {
-    return book.coverImage;
+  const cover = String(book.coverImage || '');
+  // Let Vercel's static asset CDN serve committed local covers directly.
+  if (/^https?:\/\//i.test(cover) || cover.startsWith('/covers/')) {
+    return cover;
   }
-  // Otherwise route through /api/covers (local files + free APIs + precomputed index).
+  // Resolve only genuinely missing or non-public local paths dynamically.
   return `/api/covers/${book.slug}?v=10`;
 }
 
