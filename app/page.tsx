@@ -245,7 +245,7 @@ export default function HomePage() {
               <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
                   <div className="text-lg font-bold font-serif text-[#24231F]">{TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+</div>
-                  <div className="text-[11px] text-[#81796D] font-sans">Verified Manuals</div>
+                  <div className="text-[11px] text-[#81796D] font-sans">eBook records</div>
                 </div>
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
                   <div className="text-lg font-bold font-serif text-[#9A704B]">₹29</div>
@@ -691,8 +691,8 @@ export default function HomePage() {
             <div className="flex items-center gap-2.5 p-3 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] text-[#24231F]">
               <ShieldCheck className="w-4 h-4 text-[#9A704B] shrink-0" />
               <div>
-                <p className="font-semibold text-[11px] leading-tight">100% Real Cover Scans</p>
-                <p className="text-[10px] text-[#81796D] leading-tight mt-0.5">Verified publisher editions</p>
+                <p className="font-semibold text-[11px] leading-tight">Cover provenance shown</p>
+                <p className="text-[10px] text-[#81796D] leading-tight mt-0.5">Publisher matches are labelled for review</p>
               </div>
             </div>
             <div className="flex items-center gap-2.5 p-3 rounded-lg bg-[#FAF8F5] border border-[#E8E4DC] text-[#24231F]">

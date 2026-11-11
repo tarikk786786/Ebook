@@ -56,8 +56,13 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [isPreviewing, setIsPreviewing] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const resolveDetailCover = React.useCallback((_cover?: string) => {
-    // Route through API so Open Library can replace synthetic local placeholders
+  const resolveDetailCover = React.useCallback((cover?: string) => {
+    const source = String(cover || '');
+    // Static local covers and trusted provider image URLs should use the CDN
+    // directly; the API is only the fallback for genuinely missing covers.
+    if (/^https?:\/\//i.test(source) || (source.startsWith('/covers/') && !source.includes('standard-shelf-cover'))) {
+      return source;
+    }
     return `/api/covers/${book.slug}?v=10`;
   }, [book.slug]);
   const [detailSrc, setDetailSrc] = useState<string>(() => resolveDetailCover(book.coverImage));
@@ -68,15 +73,12 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   }, [book.id, book.slug, book.coverImage, resolveDetailCover]);
 
   const handleCoverError = () => {
-    const apiFallback = `/api/covers/${book.slug}?v=10`;
-    const standardFallback = "/covers/standard-shelf-cover.jpg";
     if (!detailSrc.includes('/api/covers/')) {
-      setDetailSrc(apiFallback);
-    } else if (detailSrc !== standardFallback) {
-      setDetailSrc(standardFallback);
-    } else {
-      setImgError(true);
+      setDetailSrc(`/api/covers/${book.slug}?v=10`);
+      return;
     }
+    // Keep the typographic fallback; never present a generic shelf as this book's cover.
+    setImgError(true);
   };
   const [isCoverZoomed, setIsCoverZoomed] = useState(false);
   const [activeTab, setActiveTab] = useState<'synopsis' | 'contents' | 'specifications' | 'research'>('synopsis');
@@ -122,14 +124,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
     });
   };
 
-  const chapters = book.tableOfContents && book.tableOfContents.length > 0
-    ? book.tableOfContents
-    : [
-        '1. Architecture Fundamentals & Core Foundations',
-        '2. Implementation Patterns & Design Principles',
-        '3. Practical Production Engineering & Optimization',
-        '4. Hands-on Case Studies & Advanced Reference'
-      ];
+  const chapters = Array.isArray(book.tableOfContents) ? book.tableOfContents : [];
 
   return (
     <div className="min-h-screen bg-[#F7F5F0] text-[#24231F] flex flex-col font-sans">
@@ -198,10 +193,10 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                     </div>
                     <div>
                       <h2 className="font-serif text-base font-bold text-[#24231F] leading-snug">{book.title}</h2>
-                      <p className="text-xs text-[#81796D] mt-2">By {book.author}</p>
+                      <p className="text-xs text-[#81796D] mt-2">{book.author && book.author !== 'Author not verified' ? `By ${book.author}` : 'Author not verified'}</p>
                     </div>
                     <div className="text-xs text-[#81796D] font-mono">
-                      {book.pages} Pages • DRM-Free
+                      {book.pages > 0 ? `${book.pages} pages` : 'Page count not listed'}
                     </div>
                   </div>
                 )}
@@ -603,6 +598,11 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
 
                   {activeTab === 'contents' && (
                     <ul className="space-y-2">
+                      {chapters.length === 0 && (
+                        <li className="p-4 rounded bg-[#FAF8F5] border border-dashed border-[#D8D0C4] text-xs text-[#81796D]">
+                          A verified table of contents is not available for this edition yet.
+                        </li>
+                      )}
                       {chapters.map((ch, idx) => (
                         <li key={idx} className="flex items-center justify-between p-2.5 rounded bg-[#FAF8F5] border border-[#E8E4DC]/80 text-xs text-[#24231F]">
                           <span className="font-serif font-medium">{ch}</span>
@@ -620,11 +620,11 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                       </div>
                       <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
                         <span className="text-[#81796D] block text-[10px] uppercase">Page Count</span>
-                        <strong className="text-[#24231F] font-mono">{book.pages} Pages</strong>
+                        <strong className="text-[#24231F] font-mono">{book.pages > 0 ? `${book.pages} Pages` : 'Not listed'}</strong>
                       </div>
                       <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
                         <span className="text-[#81796D] block text-[10px] uppercase">Language</span>
-                        <strong className="text-[#24231F] font-mono">{book.language || 'English (En-US)'}</strong>
+                        <strong className="text-[#24231F] font-mono">{book.language || 'Not listed'}</strong>
                       </div>
                       <div className="p-3 bg-[#FAF8F5] rounded border border-[#E8E4DC]">
                         <span className="text-[#81796D] block text-[10px] uppercase">Publisher</span>

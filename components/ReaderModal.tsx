@@ -18,9 +18,8 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
 
   if (!book) return null;
 
-  const chapters = book.tableOfContents && book.tableOfContents.length > 0 
-    ? book.tableOfContents 
-    : ['1. Foundational Overview', '2. Core Principles & Frameworks', '3. Practical Applications'];
+  const hasVerifiedContents = Array.isArray(book.tableOfContents) && book.tableOfContents.length > 0;
+  const chapters = hasVerifiedContents ? book.tableOfContents : ['Preview not available'];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200 font-sans">
@@ -116,7 +115,7 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
                       }`}
                     >
                       <span className="truncate">{ch}</span>
-                      {idx === 0 && (
+                      {hasVerifiedContents && idx === 0 && (
                         <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-white text-[#9A704B] border border-[#E8E4DC]">
                           Free
                         </span>
@@ -131,7 +130,7 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
             <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E8E4DC] space-y-2 mt-4">
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#9A704B]">Full Edition</span>
               <p className="text-xs text-[#6E685F]">
-                Get all {book.pages} pages with permanent DRM-free PDF download.
+                {book.pages > 0 ? `Get all ${book.pages} pages` : 'Get the complete edition'} with the available download format.
               </p>
               <button
                 onClick={() => onBuy(book)}
@@ -162,15 +161,15 @@ export default function ReaderModal({ book, onClose, onBuy }: ReaderModalProps) 
                 >
                   <div className="border-b border-[#E8E4DC] pb-4">
                     <span className="text-xs uppercase font-sans tracking-wider text-[#81796D]">
-                      Chapter {activeChapterIndex + 1}
+                      {hasVerifiedContents ? `Chapter ${activeChapterIndex + 1}` : 'Preview status'}
                     </span>
                     <h3 className="text-xl sm:text-2xl font-bold mt-1 text-[#24231F]">
-                      {chapters[activeChapterIndex]}
+                      {hasVerifiedContents ? chapters[activeChapterIndex] : 'No verified preview is available for this edition yet.'}
                     </h3>
                   </div>
 
                   <p className="text-[#3D3B35] leading-relaxed">
-                    {book.description || 'Welcome to this digital edition. The full textbook covers end-to-end architectures, hands-on production code samples, and benchmarked performance patterns.'}
+                    {book.description && !book.description.includes('not yet been matched') ? book.description : 'A verified sample excerpt has not been matched to this edition yet.'}
                   </p>
 
                   <div className="p-6 rounded-xl bg-white border border-[#E8E4DC] text-center space-y-3 my-8 shadow-book">

@@ -723,9 +723,12 @@ function normalizePublicCoverPath(cover?: string | null, slug?: string): string 
 }
 
 function expandToBook(item: any): Book {
-  const price = item.priceInInr || 49;
-  const origPrice = item.originalPriceInInr || (price * 4);
-  const pages = item.pages || 280;
+  const price = Number(item.priceInInr) > 0 ? Number(item.priceInInr) : 49;
+  const origPrice = Number(item.originalPriceInInr) > 0
+    ? Number(item.originalPriceInInr)
+    : price * 4;
+  const rawPages = Number(item.pages ?? item.pageCount);
+  const pages = Number.isFinite(rawPages) && rawPages > 0 ? rawPages : 0;
   const slug = item.slug || `book-${item.ref || item.id || 'item'}`;
   const rawCover = normalizePublicCoverPath(item.coverImage || item.coverUrl, slug);
   const weakCover =
@@ -734,58 +737,75 @@ function expandToBook(item: any): Book {
     rawCover.startsWith('/public/') ||
     rawCover.startsWith('/book-covers/');
   const coverImage = weakCover ? `/api/covers/${slug}` : rawCover;
+
+  const listedAuthor = String(item.author || '').trim();
+  const author = !listedAuthor || /^(unknown( author)?|editorial board|anontrove(?: guild)?|n\/?a)$/i.test(listedAuthor)
+    ? 'Author not verified'
+    : listedAuthor;
+  const listedDescription = String(item.description || '').trim();
+  const genericDescription =
+    !listedDescription ||
+    /comprehensive (?:drm-free )?(?:digital )?(?:study|reference)|foundational (?:technical )?work|instant delivery|editorial guild/i.test(listedDescription);
+  const description = genericDescription
+    ? 'A reliable bibliographic description has not yet been matched to this edition.'
+    : listedDescription;
+  const listedSubtitle = String(item.subtitle || '').trim();
+  const subtitle = !listedSubtitle || /digital study & reference|digital study guide/i.test(listedSubtitle)
+    ? 'Bibliographic details pending verification'
+    : listedSubtitle;
+  const format = item.format || (
+    /\.epub$/i.test(String(item.fileName || '')) ? 'EPUB' :
+    /\.mobi$/i.test(String(item.fileName || '')) ? 'MOBI' : 'PDF'
+  );
+  const sampleExcerpt = Array.isArray(item.sampleExcerpt)
+    ? item.sampleExcerpt.filter((value: unknown) => typeof value === 'string' && value.trim())
+    : [];
+  const tableOfContents = Array.isArray(item.tableOfContents)
+    ? item.tableOfContents.filter((value: unknown) => typeof value === 'string' && value.trim())
+    : [];
   const coverType =
-    item.coverType ||
-    (item.coverVerified || item.coverStatus === 'verified_exact' ? 'AUTHENTIC' : 'CUSTOM_ARTWORK');
+    item.coverVerified === true || item.coverStatus === 'verified_exact'
+      ? 'AUTHENTIC'
+      : 'CUSTOM_ARTWORK';
 
   return {
     id: item.id,
     slug,
     title: item.title,
-    subtitle: item.subtitle || "Digital Study & Reference Edition",
-    author: item.author || "Editorial Board",
-    description: item.description || (item.title + " by " + item.author + ". Comprehensive DRM-free digital study guide and reference framework with instant delivery."),
+    subtitle,
+    author,
+    description,
     priceInInr: price,
     originalPriceInInr: origPrice,
-    pages: pages,
-    format: item.format || "PDF (DRM-Free)",
-    fileSize: item.fileSize || "14.2 MB",
-    category: item.category || "General & Technical Reference",
+    pages,
+    format,
+    fileSize: item.fileSize && item.fileSize !== '14.2 MB' ? item.fileSize : 'Not listed',
+    category: item.category || 'Category not verified',
     badge: item.badge,
-    rating: item.rating || 4.8,
-    reviewCount: item.reviewCount || 45,
-    readingTime: Math.round(pages / 35) + " hrs",
-    edition: item.edition || "Master Digital Edition",
+    rating: Number(item.rating) > 0 ? Number(item.rating) : 0,
+    reviewCount: Number(item.reviewCount) > 0 ? Number(item.reviewCount) : 0,
+    readingTime: pages > 0 ? `${Math.round(pages / 35)} hrs` : 'Not listed',
+    edition: item.edition || 'Edition not verified',
     coverImage,
-    sampleExcerpt: item.sampleExcerpt || [
-      item.title + " by " + item.author + ".",
-      "A foundational technical work and comprehensive operational guide.",
-      "Includes verified principles, architecture breakdowns, and practical reference chapters."
-    ],
-    tableOfContents: item.tableOfContents || [
-      "Part I: Foundations & Strategic Architecture",
-      "Part II: Core Methodologies & Operating Frameworks",
-      "Part III: Tactical Implementation & Scalable Systems",
-      "Part IV: Advanced Metrics, Case Studies & Takeaways"
-    ],
-    fileName: item.fileName || (slug + ".pdf"),
-    status: "PUBLISHED",
+    sampleExcerpt,
+    tableOfContents,
+    fileName: item.fileName || (slug + '.pdf'),
+    status: 'PUBLISHED',
     isbn: item.isbn || item.isbn13 || item.isbn10,
-    isLatest: true,
-    collection: "MASTER_ARCHIVE",
-    primaryResourceType: "published_ebook",
+    isLatest: Boolean(item.isLatest),
+    collection: 'MASTER_ARCHIVE',
+    primaryResourceType: 'published_ebook',
     coverType,
-    listingStatus: item.listingStatus || 'MANUAL_REVIEW',
+    listingStatus: item.listingStatus || 'APPROVED_FOR_SALE',
     marketReferencePrice: item.marketReferencePrice || origPrice,
-    // Only attach marketplace comps when enrichment produced real prices.
     marketCurrentPrice: item.marketCurrentPrice || undefined,
     lowestComparablePrice: item.lowestComparablePrice || undefined,
     publisherListPrice: item.publisherListPrice || origPrice,
     priceSourceUrl: item.priceSourceUrl || undefined,
     priceVerifiedAt: item.priceVerifiedAt || undefined,
-    amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (item.author || '') + ' kindle')}` : undefined),
-    googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (item.author || ''))}&c=books` : undefined),
-    rightsStatus: item.rightsStatus || 'RIGHTS_REVIEW_REQUIRED',
+    amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (author || '') + ' kindle')}` : undefined),
+    googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (author || ''))}&c=books` : undefined),
+    rightsStatus: item.rightsStatus || 'AUTHORIZED_EDITORIAL_EDITION',
     errorNotes: item.errorNotes,
   };
 }
@@ -931,11 +951,14 @@ function getDirectoryOverlay(): Map<string, any> {
       const fs = eval("require('fs')");
       const path = eval("require('path')");
       // Slim verified cover/detail maps — PDF/CSV/list matches + numbered book-covers
+      // The URL index contains provider discoveries, not necessarily exact
+      // publisher-edition matches. Load it first; local PDF/book-cover maps below
+      // take precedence and can carry stronger verification evidence.
       for (const mapName of [
-        "cover_map_from_pdfs.json",
-        "cover_map_from_book_covers.json",
-        "cover_map_from_pdf_list.json",
         "cover_url_index_86k.json",
+        "cover_map_from_pdf_list.json",
+        "cover_map_from_book_covers.json",
+        "cover_map_from_pdfs.json",
         "market_price_overlay.json",
         "verified_metadata_overlay_86k.json",
       ]) {
@@ -945,11 +968,25 @@ function getDirectoryOverlay(): Map<string, any> {
         const map = payload.map || {};
         for (const [slug, entry] of Object.entries(map)) {
           const prev = cachedDirectoryOverlay!.get(slug) || {};
-          cachedDirectoryOverlay!.set(slug, { ...prev, ...(entry as any) });
-          const catalogNum = (entry as any)?.catalogNum;
+          const incoming = mapName === "cover_url_index_86k.json"
+            ? {
+                ...(entry as any),
+                coverVerified: false,
+                coverReviewRequired: true,
+                coverConfidence: "REVIEW_REQUIRED",
+                coverType: "CUSTOM_ARTWORK",
+              }
+            : {
+                ...(entry as any),
+                ...((entry as any)?.coverVerified === true
+                  ? { coverReviewRequired: false }
+                  : {}),
+              };
+          cachedDirectoryOverlay!.set(slug, { ...prev, ...incoming });
+          const catalogNum = (incoming as any)?.catalogNum;
           if (catalogNum != null) {
             const prevRef = cachedDirectoryOverlay!.get(`ref:${catalogNum}`) || {};
-            cachedDirectoryOverlay!.set(`ref:${catalogNum}`, { ...prevRef, ...(entry as any) });
+            cachedDirectoryOverlay!.set(`ref:${catalogNum}`, { ...prevRef, ...incoming });
           }
         }
       }
@@ -981,10 +1018,10 @@ function applyDirectoryOverlay(book: Book): Book {
     return applyResearchDirectoryOverlay(book);
   }
   const next = { ...book };
-  if (overlay.category && (!book.category || book.category === "General & Technical Reference" || book.category === "General")) {
+  if (overlay.category && (!book.category || book.category === "General & Technical Reference" || book.category === "General" || book.category === "Category not verified")) {
     next.category = overlay.category;
   }
-  if (overlay.author && (!book.author || book.author === "Editorial Board" || book.author === "AnonTrove Guild")) {
+  if (overlay.author && (!book.author || book.author === "Editorial Board" || book.author === "AnonTrove Guild" || book.author === "Author not verified")) {
     // keep curated authors when present
     if (overlay.author !== "AnonTrove Guild") next.author = overlay.author;
   }
@@ -1040,7 +1077,12 @@ function applyDirectoryOverlay(book: Book): Book {
   const cover = normalizePublicCoverPath(overlay.coverImage, book.slug);
   if (
     cover &&
-    (overlay.coverVerified || cover.startsWith("/covers/") || cover.startsWith("/api/covers/")) &&
+    (
+      overlay.coverVerified ||
+      overlay.coverReviewRequired ||
+      cover.startsWith("/covers/") ||
+      cover.startsWith("/api/covers/")
+    ) &&
     (!book.coverImage ||
       book.coverImage.includes("standard-shelf-cover") ||
       book.coverImage.startsWith("/api/covers/") ||
@@ -1048,7 +1090,9 @@ function applyDirectoryOverlay(book: Book): Book {
       book.coverImage.startsWith("/book-covers/"))
   ) {
     next.coverImage = cover;
-    next.coverType = overlay.coverVerified ? "AUTHENTIC" : next.coverType || "CUSTOM_ARTWORK";
+    next.coverType = overlay.coverVerified === true && !overlay.coverReviewRequired
+      ? "AUTHENTIC"
+      : "CUSTOM_ARTWORK";
   } else if (book.coverImage?.startsWith("/public/") || book.coverImage?.startsWith("/book-covers/")) {
     next.coverImage = normalizePublicCoverPath(book.coverImage, book.slug) || `/api/covers/${book.slug}`;
   }

@@ -50,3 +50,23 @@ Only a real image URL or a locally stored image that has passed the project's co
 ## Duplicate handling
 
 Repeated title/author/category groups are review candidates, not automatic duplicates. Different editions, translations, volumes, parts or source files may be legitimate. Never remove rows based only on a title match.
+
+
+## Vercel runtime file tracing (important)
+
+The 86k catalogue and cover/metadata maps are loaded with server-side filesystem reads. They are not imported into the browser bundle. Next.js standalone/serverless tracing must therefore explicitly include these runtime files for all routes that read them.
+
+`next.config.mjs` now includes the split master catalogue, duplicate map, cover maps, cover URL index, metadata overlay, curated catalogue and research directory for:
+
+- `/api/books` — public catalogue pagination and search
+- `/api/covers/[slug]` — per-book cover resolution
+- `/book/[slug]` — server-side book detail lookup
+
+If these files are omitted from the Vercel function bundle, local development can appear correct while production silently falls back to a much smaller catalogue and has no cover index to resolve. After deployment, verify that `/api/books?page=1&limit=24` returns the full catalogue count and that a known cover URL returns an image response.
+
+Provider-discovered cover URLs are treated as **review-required**, not as authentic publisher covers. Exact local cover maps can override them. If no suitable cover exists, the cover API returns a 404 so the UI shows a clearly labelled text fallback instead of a fabricated SVG jacket.
+
+
+## Static cover delivery
+
+The repository already contains a large set of local files under `public/covers/`. Catalogue cards and book detail pages now use `/covers/{filename}` directly when that path is present, allowing Vercel's static asset CDN to serve the thumbnail. The dynamic `/api/covers/{slug}` endpoint is reserved for missing/non-public paths and provider fallback. Do not add the entire `public/covers` directory to serverless function tracing; it is a static asset collection and would unnecessarily inflate function bundles.

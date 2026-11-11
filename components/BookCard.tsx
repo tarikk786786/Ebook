@@ -17,11 +17,12 @@ import {
 } from 'lucide-react';
 
 function resolveCoverSrc(book: Book): string {
-  // Prefer absolute CDN cover URLs from the 86k index when present.
-  if (book.coverImage && /^https?:\/\//i.test(book.coverImage)) {
-    return book.coverImage;
+  const cover = String(book.coverImage || '');
+  // Let Vercel's static asset CDN serve committed local covers directly.
+  if (/^https?:\/\//i.test(cover) || (cover.startsWith('/covers/') && !cover.includes('standard-shelf-cover'))) {
+    return cover;
   }
-  // Otherwise route through /api/covers (local files + free APIs + precomputed index).
+  // Resolve only genuinely missing or non-public local paths dynamically.
   return `/api/covers/${book.slug}?v=10`;
 }
 
@@ -53,16 +54,12 @@ export default function BookCard({
   }, [book.id, book.slug, book.coverImage]);
 
   const handleImageError = () => {
-    const apiFallback = `/api/covers/${book.slug}?v=10`;
-    const standardFallback = '/covers/standard-shelf-cover.jpg';
-
     if (!imgSrc.includes('/api/covers/')) {
-      setImgSrc(apiFallback);
-    } else if (imgSrc !== standardFallback) {
-      setImgSrc(standardFallback);
-    } else {
-      setImgError(true);
+      setImgSrc(`/api/covers/${book.slug}?v=10`);
+      return;
     }
+    // Do not disguise a missing cover with a generic shelf image.
+    setImgError(true);
   };
 
   const displayPrice = currency === 'INR'
@@ -122,19 +119,19 @@ export default function BookCard({
                   {book.format || 'PDF'}
                 </span>
               </div>
-              <span className="text-[9px] font-mono text-slate-400">{book.pages || 280}p</span>
+              <span className="text-[9px] font-mono text-slate-400">{book.pages > 0 ? `${book.pages}p` : 'Cover match pending'}</span>
             </div>
             <div className="my-auto py-2">
               <h4 className="font-serif text-[11px] font-bold text-white line-clamp-3 leading-snug">
                 {book.title}
               </h4>
               <p className="text-[10px] text-amber-300/90 mt-1 line-clamp-1 italic font-serif">
-                {book.author}
+                {book.author || 'Author not verified'}
               </p>
             </div>
             <div className="text-[9px] text-slate-400 font-mono tracking-wider uppercase border-t border-slate-700/60 pt-1.5 flex justify-between">
               <span>AnonTrove</span>
-              <span className="text-emerald-400">DRM-Free</span>
+              <span className="text-amber-300">Cover unavailable</span>
             </div>
           </div>
 
