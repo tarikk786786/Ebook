@@ -28,6 +28,7 @@ from PIL import Image, ImageStat
 
 ROOT = Path(__file__).resolve().parents[1]
 COVERS_DIR = ROOT / "public" / "covers"
+CURSOR_PATH = ROOT / "data" / "catalog" / "cover_backfill_cursor.json"
 UA = "AnonTroveCoverBackfill/1.0 (mailto:apnix7@gmail.com)"
 MIN_BYTES = 3500
 
@@ -341,9 +342,14 @@ def patch_curated_map(results: list[dict[str, Any]]) -> int:
         slug = b.get("slug")
         if slug in by_slug:
             b["coverImage"] = f"/covers/{slug}.jpg"
-            b["coverVerified"] = True
+            # A downloaded search-result cover is not automatically an exact
+            # bibliographic match. Keep it visible but pending human verification.
+            b["coverVerified"] = False
             b["coverSource"] = by_slug[slug].get("source") or "free-api"
-            b["coverType"] = "AUTHENTIC"
+            b["coverConfidence"] = "MEDIUM"
+            b["coverReviewRequired"] = True
+            b["coverStatus"] = "review_required"
+            b["coverType"] = "CUSTOM_ARTWORK"
             updated += 1
     if updated:
         curated_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -352,18 +358,26 @@ def patch_curated_map(results: list[dict[str, Any]]) -> int:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--limit", type=int, default=400, help="Max books to process this run")
+    parser.add_argument("--limit", type=int, default=120, help="Max books to process this run")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--overwrite-synthetic", action="store_true", default=True)
-    parser.add_argument("--offset", type=int, default=0)
+    parser.add_argument("--offset", type=int, default=-1, help="Explicit target offset; -1 resumes from cursor")
     args = parser.parse_args()
 
     COVERS_DIR.mkdir(parents=True, exist_ok=True)
-    targets = load_targets(None)
-    if args.offset:
-        targets = targets[args.offset :]
-    if args.limit:
-        targets = targets[: args.limit]
+    targets_all = load_targets(None)
+    total_targets = len(targets_all)
+    if args.offset < 0:
+        try:
+            cursor = json.loads(CURSOR_PATH.read_text(encoding="utf-8"))
+            offset = int(cursor.get("nextOffset", 0))
+        except Exception:
+            offset = 0
+    else:
+        offset = args.offset
+    if total_targets:
+        offset = offset % total_targets
+    targets = targets_all[offset : offset + max(0, args.limit)]
 
     print(f"Targets: {len(targets)} | workers={args.workers} | covers_dir={COVERS_DIR}")
     results: list[dict[str, Any]] = []
@@ -391,8 +405,22 @@ def main():
     }
     out = ROOT / "data" / "catalog" / "cover_backfill_summary.json"
     out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps(summary["counts"], indent=2))
+
+    next_offset = (offset + len(targets)) % max(1, total_targets)
+    cursor_payload = {
+        "nextOffset": next_offset,
+        "lastOffset": offset,
+        "processed": len(targets),
+        "totalTargets": total_targets,
+        "updatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "lastCounts": counts,
+    }
+    CURSOR_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CURSOR_PATH.write_text(json.dumps(cursor_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(json.dumps({"offset": offset, "nextOffset": next_offset, "totalTargets": total_targets, **counts}, indent=2))
     print(f"Wrote {out}")
+    print(f"Wrote {CURSOR_PATH}")
 
 
 if __name__ == "__main__":
