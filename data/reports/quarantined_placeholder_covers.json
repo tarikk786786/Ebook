@@ -1,0 +1,775 @@
+{
+  "quarantined": 151,
+  "placeholder_hashes": {
+    "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8": 21,
+    "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4": 23,
+    "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9": 26,
+    "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1": 20,
+    "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0": 29,
+    "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27": 32
+  },
+  "min_dup": 15,
+  "db_status_after": {
+    "found": 6851,
+    "not_found": 860,
+    "pending": 78549
+  },
+  "items": [
+    {
+      "catalog_num": 78737,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78737.jpg"
+    },
+    {
+      "catalog_num": 78756,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78756.jpg"
+    },
+    {
+      "catalog_num": 78758,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78758.jpg"
+    },
+    {
+      "catalog_num": 78766,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78766.jpg"
+    },
+    {
+      "catalog_num": 78816,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78816.jpg"
+    },
+    {
+      "catalog_num": 78819,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78819.jpg"
+    },
+    {
+      "catalog_num": 78846,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78846.jpg"
+    },
+    {
+      "catalog_num": 78848,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78848.jpg"
+    },
+    {
+      "catalog_num": 78850,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78850.jpg"
+    },
+    {
+      "catalog_num": 78861,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78861.jpg"
+    },
+    {
+      "catalog_num": 78903,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78903.jpg"
+    },
+    {
+      "catalog_num": 78956,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78956.jpg"
+    },
+    {
+      "catalog_num": 78957,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78957.jpg"
+    },
+    {
+      "catalog_num": 78972,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\78972.jpg"
+    },
+    {
+      "catalog_num": 79003,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79003.jpg"
+    },
+    {
+      "catalog_num": 79009,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79009.jpg"
+    },
+    {
+      "catalog_num": 79049,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79049.jpg"
+    },
+    {
+      "catalog_num": 79109,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79109.jpg"
+    },
+    {
+      "catalog_num": 79136,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79136.jpg"
+    },
+    {
+      "catalog_num": 79157,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79157.jpg"
+    },
+    {
+      "catalog_num": 79194,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79194.jpg"
+    },
+    {
+      "catalog_num": 79201,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79201.jpg"
+    },
+    {
+      "catalog_num": 79205,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79205.jpg"
+    },
+    {
+      "catalog_num": 79228,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79228.jpg"
+    },
+    {
+      "catalog_num": 79233,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79233.jpg"
+    },
+    {
+      "catalog_num": 79242,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79242.jpg"
+    },
+    {
+      "catalog_num": 79276,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79276.jpg"
+    },
+    {
+      "catalog_num": 79294,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79294.jpg"
+    },
+    {
+      "catalog_num": 79300,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79300.jpg"
+    },
+    {
+      "catalog_num": 79306,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79306.jpg"
+    },
+    {
+      "catalog_num": 79332,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79332.jpg"
+    },
+    {
+      "catalog_num": 79344,
+      "sha256": "7e609de4f48a5286051457f7987d77bc22fb8ad959ab1198f9b12112a3317a27",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79344.jpg"
+    },
+    {
+      "catalog_num": 40486,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\40486.jpg"
+    },
+    {
+      "catalog_num": 42704,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\42704.jpg"
+    },
+    {
+      "catalog_num": 46544,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\46544.jpg"
+    },
+    {
+      "catalog_num": 46545,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\46545.jpg"
+    },
+    {
+      "catalog_num": 47004,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\47004.jpg"
+    },
+    {
+      "catalog_num": 47518,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\47518.jpg"
+    },
+    {
+      "catalog_num": 48452,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\48452.jpg"
+    },
+    {
+      "catalog_num": 49811,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\49811.jpg"
+    },
+    {
+      "catalog_num": 49973,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\49973.jpg"
+    },
+    {
+      "catalog_num": 53525,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\53525.jpg"
+    },
+    {
+      "catalog_num": 55617,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\55617.jpg"
+    },
+    {
+      "catalog_num": 56292,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\56292.jpg"
+    },
+    {
+      "catalog_num": 57289,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\57289.jpg"
+    },
+    {
+      "catalog_num": 57873,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\57873.jpg"
+    },
+    {
+      "catalog_num": 58162,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\58162.jpg"
+    },
+    {
+      "catalog_num": 60748,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\60748.jpg"
+    },
+    {
+      "catalog_num": 62005,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\62005.jpg"
+    },
+    {
+      "catalog_num": 65911,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\65911.jpg"
+    },
+    {
+      "catalog_num": 66065,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\66065.jpg"
+    },
+    {
+      "catalog_num": 68279,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\68279.jpg"
+    },
+    {
+      "catalog_num": 68639,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\68639.jpg"
+    },
+    {
+      "catalog_num": 71059,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\71059.jpg"
+    },
+    {
+      "catalog_num": 73515,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\73515.jpg"
+    },
+    {
+      "catalog_num": 74296,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\74296.jpg"
+    },
+    {
+      "catalog_num": 76516,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\76516.jpg"
+    },
+    {
+      "catalog_num": 77715,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\77715.jpg"
+    },
+    {
+      "catalog_num": 77790,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\77790.jpg"
+    },
+    {
+      "catalog_num": 79222,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\79222.jpg"
+    },
+    {
+      "catalog_num": 82312,
+      "sha256": "529c092660b6c1c89029ce0f7972203a57c07f1c23c7140487857d703fb8c2d0",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\82312.jpg"
+    },
+    {
+      "catalog_num": 2429,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2429.jpg"
+    },
+    {
+      "catalog_num": 2430,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2430.jpg"
+    },
+    {
+      "catalog_num": 2438,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2438.jpg"
+    },
+    {
+      "catalog_num": 2445,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2445.jpg"
+    },
+    {
+      "catalog_num": 2447,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2447.jpg"
+    },
+    {
+      "catalog_num": 2482,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2482.jpg"
+    },
+    {
+      "catalog_num": 2608,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2608.jpg"
+    },
+    {
+      "catalog_num": 2695,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2695.jpg"
+    },
+    {
+      "catalog_num": 2698,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2698.jpg"
+    },
+    {
+      "catalog_num": 2729,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2729.jpg"
+    },
+    {
+      "catalog_num": 2808,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2808.jpg"
+    },
+    {
+      "catalog_num": 2829,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2829.jpg"
+    },
+    {
+      "catalog_num": 3862,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3862.jpg"
+    },
+    {
+      "catalog_num": 3884,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3884.jpg"
+    },
+    {
+      "catalog_num": 3889,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3889.jpg"
+    },
+    {
+      "catalog_num": 3999,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3999.jpg"
+    },
+    {
+      "catalog_num": 4002,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4002.jpg"
+    },
+    {
+      "catalog_num": 4024,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4024.jpg"
+    },
+    {
+      "catalog_num": 4027,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4027.jpg"
+    },
+    {
+      "catalog_num": 4034,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4034.jpg"
+    },
+    {
+      "catalog_num": 4040,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4040.jpg"
+    },
+    {
+      "catalog_num": 4067,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4067.jpg"
+    },
+    {
+      "catalog_num": 4096,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4096.jpg"
+    },
+    {
+      "catalog_num": 4109,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4109.jpg"
+    },
+    {
+      "catalog_num": 4111,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4111.jpg"
+    },
+    {
+      "catalog_num": 4117,
+      "sha256": "39b1c28290c14f9af670759aca972fbc0bce6515cefb0e57eb4dbeef9e333fa9",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4117.jpg"
+    },
+    {
+      "catalog_num": 21265,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\21265.jpg"
+    },
+    {
+      "catalog_num": 21719,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\21719.jpg"
+    },
+    {
+      "catalog_num": 23008,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\23008.jpg"
+    },
+    {
+      "catalog_num": 30417,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\30417.jpg"
+    },
+    {
+      "catalog_num": 32114,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\32114.jpg"
+    },
+    {
+      "catalog_num": 34231,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\34231.jpg"
+    },
+    {
+      "catalog_num": 34909,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\34909.jpg"
+    },
+    {
+      "catalog_num": 36989,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\36989.jpg"
+    },
+    {
+      "catalog_num": 36990,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\36990.jpg"
+    },
+    {
+      "catalog_num": 39717,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\39717.jpg"
+    },
+    {
+      "catalog_num": 41868,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\41868.jpg"
+    },
+    {
+      "catalog_num": 43261,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\43261.jpg"
+    },
+    {
+      "catalog_num": 45494,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\45494.jpg"
+    },
+    {
+      "catalog_num": 48847,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\48847.jpg"
+    },
+    {
+      "catalog_num": 56764,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\56764.jpg"
+    },
+    {
+      "catalog_num": 57718,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\57718.jpg"
+    },
+    {
+      "catalog_num": 61064,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\61064.jpg"
+    },
+    {
+      "catalog_num": 64804,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\64804.jpg"
+    },
+    {
+      "catalog_num": 66243,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\66243.jpg"
+    },
+    {
+      "catalog_num": 68587,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\68587.jpg"
+    },
+    {
+      "catalog_num": 72725,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\72725.jpg"
+    },
+    {
+      "catalog_num": 76418,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\76418.jpg"
+    },
+    {
+      "catalog_num": 84371,
+      "sha256": "b72039e7378672b5a4a0c1845172a3baf4dc3e2c28af09d0d246a8dbfeacd7a4",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\84371.jpg"
+    },
+    {
+      "catalog_num": 1729,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\1729.jpg"
+    },
+    {
+      "catalog_num": 2448,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2448.jpg"
+    },
+    {
+      "catalog_num": 2478,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2478.jpg"
+    },
+    {
+      "catalog_num": 2494,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2494.jpg"
+    },
+    {
+      "catalog_num": 2514,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2514.jpg"
+    },
+    {
+      "catalog_num": 2521,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2521.jpg"
+    },
+    {
+      "catalog_num": 2528,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2528.jpg"
+    },
+    {
+      "catalog_num": 2560,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2560.jpg"
+    },
+    {
+      "catalog_num": 2569,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2569.jpg"
+    },
+    {
+      "catalog_num": 2573,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2573.jpg"
+    },
+    {
+      "catalog_num": 2611,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2611.jpg"
+    },
+    {
+      "catalog_num": 2643,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2643.jpg"
+    },
+    {
+      "catalog_num": 2666,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2666.jpg"
+    },
+    {
+      "catalog_num": 2669,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2669.jpg"
+    },
+    {
+      "catalog_num": 2670,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2670.jpg"
+    },
+    {
+      "catalog_num": 2681,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2681.jpg"
+    },
+    {
+      "catalog_num": 2699,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2699.jpg"
+    },
+    {
+      "catalog_num": 2701,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2701.jpg"
+    },
+    {
+      "catalog_num": 2705,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2705.jpg"
+    },
+    {
+      "catalog_num": 2710,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2710.jpg"
+    },
+    {
+      "catalog_num": 2714,
+      "sha256": "dec1dbef643fb93e4a38bb3de1a3aa54e16caf07fa53b5dbd0c138140c58b0f8",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2714.jpg"
+    },
+    {
+      "catalog_num": 2460,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2460.jpg"
+    },
+    {
+      "catalog_num": 2469,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2469.jpg"
+    },
+    {
+      "catalog_num": 2522,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2522.jpg"
+    },
+    {
+      "catalog_num": 2526,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2526.jpg"
+    },
+    {
+      "catalog_num": 2539,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2539.jpg"
+    },
+    {
+      "catalog_num": 2730,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2730.jpg"
+    },
+    {
+      "catalog_num": 2761,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2761.jpg"
+    },
+    {
+      "catalog_num": 2775,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2775.jpg"
+    },
+    {
+      "catalog_num": 2802,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2802.jpg"
+    },
+    {
+      "catalog_num": 2819,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\2819.jpg"
+    },
+    {
+      "catalog_num": 3861,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3861.jpg"
+    },
+    {
+      "catalog_num": 3878,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3878.jpg"
+    },
+    {
+      "catalog_num": 3929,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3929.jpg"
+    },
+    {
+      "catalog_num": 3940,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3940.jpg"
+    },
+    {
+      "catalog_num": 3954,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3954.jpg"
+    },
+    {
+      "catalog_num": 3979,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3979.jpg"
+    },
+    {
+      "catalog_num": 3992,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\3992.jpg"
+    },
+    {
+      "catalog_num": 4021,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4021.jpg"
+    },
+    {
+      "catalog_num": 4023,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4023.jpg"
+    },
+    {
+      "catalog_num": 4076,
+      "sha256": "dfc602a0f58790b3e1d705488dcb5df7397baec5d017d00f354a9d94408effb1",
+      "from": "C:\\Users\\tarik\\Downloads\\EBOOKS SELLING\\projects\\anon-trove-ebooks\\public\\covers\\4076.jpg"
+    }
+  ],
+  "items_truncated": false
+}

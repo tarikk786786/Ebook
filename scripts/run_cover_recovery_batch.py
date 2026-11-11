@@ -38,6 +38,7 @@ from lib_local_ebook_covers import (  # noqa: E402
     is_dark_or_tiny,
     save_image_bytes,
 )
+from lib_free_cover_providers import discover_free_cover_bytes  # noqa: E402
 try:
     from cover_worker_control import wait_if_paused, write_status  # noqa: E402
 except Exception:  # pragma: no cover
@@ -286,33 +287,20 @@ def process_one(entry: dict, gb_key: str, download_remote: bool) -> dict:
             confidence = "HIGH"
 
     if not cover_ok and download_remote:
-        # Stay polite to OL/IA/GB — uncontrolled fan-out causes timeouts.
-        time.sleep(random.uniform(0.35, 0.9))
-        # Skip Google Books when no API key — anonymous quota is exhausted (HTTP 429).
-        if gb_key:
-            url, conf = find_google_books(title, author, isbn13 or "", gb_key)
-            if url:
-                data = http_bytes(url)
-                if data and save_image_bytes(data, dest):
-                    cover_ok = True
-                    source = "google-books"
-                    confidence = conf
-        if not cover_ok:
-            ol_url, _ol_id, ol_conf = find_open_library(title, author, isbn13 or "")
-            if ol_url:
-                data = http_bytes(ol_url)
-                if data and save_image_bytes(data, dest):
-                    cover_ok = True
-                    source = "open-library"
-                    confidence = ol_conf
-        if not cover_ok:
-            ia = find_ia(title, author)
-            if ia:
-                data = http_bytes(ia)
-                if data and save_image_bytes(data, dest):
-                    cover_ok = True
-                    source = "internet-archive"
-                    confidence = "MEDIUM"
+        # Free stack: Google(key) → Open Library → IA → Wikimedia → Library of Congress
+        time.sleep(random.uniform(0.05, 0.15))
+        hit = discover_free_cover_bytes(
+            title=title,
+            author=author,
+            isbn13=isbn13 or "",
+            google_api_key=gb_key or "",
+        )
+        if hit:
+            data, src, conf, _url = hit
+            if data and save_image_bytes(data, dest):
+                cover_ok = True
+                source = src
+                confidence = conf
 
     if cover_ok and dest.exists():
         try:
@@ -394,6 +382,10 @@ def main() -> None:
         for catalog_num, slug, title, author, category, status in pending_rows:
             key = str(catalog_num)
             base = mapping.get(key) or {}
+            local_path = base.get("localPath")
+            local_paths = base.get("localPaths") or []
+            if args.require_local and not (local_path or local_paths):
+                continue
             entries.append(
                 {
                     "catalogNum": catalog_num,
@@ -402,8 +394,8 @@ def main() -> None:
                     "author": author or base.get("author") or "",
                     "category": category or base.get("category") or "",
                     "fileName": base.get("fileName"),
-                    "localPath": base.get("localPath"),
-                    "localPaths": base.get("localPaths") or [],
+                    "localPath": local_path,
+                    "localPaths": local_paths,
                     "dbStatus": status,
                     "dbCoverUrl": None,
                 }

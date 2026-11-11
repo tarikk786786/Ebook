@@ -9,13 +9,16 @@ description: Search authorized book metadata providers (Google Books, Open Libra
 
 1. Local extract (if file present)
 2. Google Books with `GOOGLE_BOOKS_API_KEY`
-3. Internet Archive
-4. Open Library (rate-limited; no Covers API bulk crawl)
+3. Open Library Search + Covers
+4. Internet Archive texts search
+5. Wikimedia Commons (book cover files)
+6. Library of Congress books JSON (when image fields exist)
 
 ## Code
 
 - TS: `lib/cover-recovery/providers/`
-- Python batch remotes in cover recovery scripts
+- Python: `scripts/lib_free_cover_providers.py` + `scripts/run_cover_recovery_batch.py`
+- Extra adapters: `scripts/cover_discovery/providers/` (Wikimedia, Crossref, IA, OL, GB)
 
 ## Rules
 

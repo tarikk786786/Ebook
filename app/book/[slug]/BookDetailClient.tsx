@@ -57,7 +57,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   const [imgError, setImgError] = useState(false);
   const resolveDetailCover = React.useCallback((_cover?: string) => {
     // Route through API so Open Library can replace synthetic local placeholders
-    return `/api/covers/${book.slug}?v=9`;
+    return `/api/covers/${book.slug}?v=10`;
   }, [book.slug]);
   const [detailSrc, setDetailSrc] = useState<string>(() => resolveDetailCover(book.coverImage));
 
@@ -67,7 +67,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
   }, [book.id, book.slug, book.coverImage, resolveDetailCover]);
 
   const handleCoverError = () => {
-    const apiFallback = `/api/covers/${book.slug}?v=9`;
+    const apiFallback = `/api/covers/${book.slug}?v=10`;
     const standardFallback = "/covers/standard-shelf-cover.jpg";
     if (!detailSrc.includes('/api/covers/')) {
       setDetailSrc(apiFallback);
@@ -794,7 +794,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   >
                     <div className="aspect-[3/4] rounded overflow-hidden bg-[#FAF8F5] border border-[#E8E4DC] mb-2.5">
                       <img
-                        src={`/api/covers/${rb.slug}?v=9`}
+                        src={`/api/covers/${rb.slug}?v=10`}
                         alt={rb.title}
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).src = '/covers/standard-shelf-cover.jpg';

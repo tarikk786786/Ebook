@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createHash } from 'crypto';
 import fs from 'fs';
 import path from 'path';
 import { getBookBySlug, getBookById } from '@/lib/catalog';
@@ -123,8 +124,34 @@ function readCoverFile(filePath: string, source: string, filename: string): Next
   }
 }
 
+/**
+ * Exact SHA-256 prefixes of mass-duplicated placeholder JPEGs previously
+ * installed under public/covers/{catalogNum}.jpg (same binary on 200–1700 books).
+ * Full hashes live in data/reports/quarantined_placeholder_covers.json after cleanup.
+ */
+const KNOWN_PLACEHOLDER_SHA256_PREFIXES = new Set([
+  'ce5d8075dc1e1ad3', // 10076-byte dark synthetic (~1051 copies)
+  '443f2e468fae', // 15361-byte duplicate template (~1794)
+  '4a33dbf5a4f7', // 70443-byte duplicate template (~1671)
+  'ed7c486adc27', // 27552-byte duplicate template (~438)
+  '22f66606e017', // 6747-byte duplicate template (~225)
+]);
+
+function sha256HexPrefix(buf: Buffer, hexLen = 16): string {
+  return createHash('sha256').update(buf).digest('hex').slice(0, hexLen);
+}
+
+function isKnownPlaceholderJpeg(buf: Buffer): boolean {
+  const full = sha256HexPrefix(buf, 64);
+  for (const prefix of KNOWN_PLACEHOLDER_SHA256_PREFIXES) {
+    if (full.startsWith(prefix)) return true;
+  }
+  return false;
+}
+
 /** Cheap heuristic: sample JPEG SOS entropy / size patterns of AnonTrove dark synthetics. */
 function isLikelyDarkSyntheticJpeg(buf: Buffer): boolean {
+  if (isKnownPlaceholderJpeg(buf)) return true;
   if (buf.length < 8000 || buf.length > 120000) return false;
   // Marker scan for start-of-scan; then sample payload bytes for near-zero dominance.
   let sos = -1;
