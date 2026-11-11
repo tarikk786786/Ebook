@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 66,
-    "keep_existing": 78,
-    "not_found": 355,
-    "bad_image": 1
-  },
-  "updatedCurated": 2,
-  "sampleDownloaded": [
-    {
-      "slug": "limitless-upgrade-your-brain-learn-anything-fa",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "limitless-upgrade-your-brain-learn-anything-fa.jpg",
-      "bytes": 3576,
-      "title": "Limitless: Upgrade Your Brain, Learn Anything Fa"
-    },
-    {
-      "slug": "mai-krishna-hu-vol-6-deep-trivedi",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "mai-krishna-hu-vol-6-deep-trivedi.jpg",
-      "bytes": 3576,
-      "title": "Mai Krishna Hu - Vol 6 Deep Trivedi"
-    },
-    {
-      "slug": "manuel-visuel-de-psychologie-cognitive",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "manuel-visuel-de-psychologie-cognitive.jpg",
-      "bytes": 27111,
-      "title": "Manuel visuel de psychologie cognitive"
-    },
-    {
-      "slug": "metaphysical-concepts-of-upanishads-explained",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "metaphysical-concepts-of-upanishads-explained.jpg",
-      "bytes": 3732,
-      "title": "Metaphysical Concepts Of Upanishads Explained"
-    },
-    {
-      "slug": "millionaire-real-estate-agent",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "millionaire-real-estate-agent.jpg",
-      "bytes": 31851,
-      "title": "Millionaire Real Estate Agent"
-    },
-    {
-      "slug": "model",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "model.jpg",
-      "bytes": 12831,
-      "title": "Model"
-    },
-    {
-      "slug": "never-get-angry-again",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "never-get-angry-again.jpg",
-      "bytes": 47618,
-      "title": "Never Get Angry Again"
-    },
-    {
-      "slug": "never-lose-a-customer-again",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "never-lose-a-customer-again.jpg",
-      "bytes": 25233,
-      "title": "Never Lose A Customer Again"
-    },
-    {
-      "slug": "non-disclosure-agreement",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "non-disclosure-agreement.jpg",
-      "bytes": 43890,
-      "title": "Non-Disclosure Agreement"
-    },
-    {
-      "slug": "parenting-without-power-struggles-raising-joyful",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "parenting-without-power-struggles-raising-joyful.jpg",
-      "bytes": 36792,
-      "title": "Parenting without power struggles raising joyful"
-    },
-    {
-      "slug": "priceless-the-myth-of-fair-value-and-how-to-take",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "priceless-the-myth-of-fair-value-and-how-to-take.jpg",
-      "bytes": 14046,
-      "title": "Priceless the myth of fair value and how to take"
-    },
-    {
-      "slug": "project-hail-mary",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "project-hail-mary.jpg",
-      "bytes": 39331,
-      "title": "Project Hail Mary"
-    },
-    {
-      "slug": "python-machine-learning-projects",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "python-machine-learning-projects.jpg",
-      "bytes": 75867,
-      "title": "Python Machine Learning Projects"
-    },
-    {
-      "slug": "python-for-data-science-for-dummies",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "python-for-data-science-for-dummies.jpg",
-      "bytes": 46122,
-      "title": "Python for Data Science For Dummies"
-    },
-    {
-      "slug": "python-machine-learning",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "python-machine-learning.jpg",
-      "bytes": 36030,
-      "title": "Python machine learning"
-    },
-    {
-      "slug": "quiet",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "quiet.jpg",
-      "bytes": 31977,
-      "title": "Quiet"
-    },
-    {
-      "slug": "property-valuation-capital-gain-report",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-capital-gain-report.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Capital Gain Report"
-    },
-    {
-      "slug": "quotes-that-will-change-your-life",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "quotes-that-will-change-your-life.jpg",
-      "bytes": 34807,
-      "title": "Quotes That Will Change Your life"
-    },
-    {
-      "slug": "quit-like-a-millionaire-shen",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "quit-like-a-millionaire-shen.jpg",
-      "bytes": 40853,
-      "title": "Quit Like A Millionaire Shen"
-    },
-    {
-      "slug": "responsible-ai",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "responsible-ai.jpg",
-      "bytes": 13216,
-      "title": "Responsible AI"
-    }
-  ],
-  "offset": 500,
-  "nextOffset": 1000,
-  "totalTargets": 94078,
-  "cumulativeCounts": {
-    "downloaded": 95,
-    "keep_existing": 210,
-    "not_found": 693,
+    "downloaded": 29,
+    "keep_existing": 120,
+    "not_found": 349,
     "bad_image": 2
   },
-  "totalProcessed": 1000
+  "updatedCurated": 1,
+  "sampleDownloaded": [
+    {
+      "slug": "lecture-notes",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "lecture-notes.jpg",
+      "bytes": 21487,
+      "title": "| Lecture Notes"
+    },
+    {
+      "slug": "cocaine",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cocaine.jpg",
+      "bytes": 11627,
+      "title": "Cocaine"
+    },
+    {
+      "slug": "detailed-advertisement",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "detailed-advertisement.jpg",
+      "bytes": 14426,
+      "title": "Detailed Advertisement"
+    },
+    {
+      "slug": "the-automatic-millionaire-david-bach",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-automatic-millionaire-david-bach.jpg",
+      "bytes": 25121,
+      "title": "The Automatic Millionaire David Bach"
+    },
+    {
+      "slug": "the-fountainhead",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-fountainhead.jpg",
+      "bytes": 30288,
+      "title": "The Fountainhead"
+    },
+    {
+      "slug": "way-of-the-wolf-straight-line-selling-master-the",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "way-of-the-wolf-straight-line-selling-master-the.jpg",
+      "bytes": 44673,
+      "title": "Way Of The Wolf Straight Line Selling Master The"
+    },
+    {
+      "slug": "why-success-always-starts-with-failure",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "why-success-always-starts-with-failure.jpg",
+      "bytes": 16307,
+      "title": "Why Success Always Starts With Failure"
+    },
+    {
+      "slug": "the-tipping-point",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-tipping-point.jpg",
+      "bytes": 15518,
+      "title": "The Tipping Point"
+    },
+    {
+      "slug": "building-story-brand-miller",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "building-story-brand-miller.jpg",
+      "bytes": 26669,
+      "title": "Building Story Brand MILLER"
+    },
+    {
+      "slug": "energy-motivation-hbr-emotional-intelligence-s",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "energy-motivation-hbr-emotional-intelligence-s.jpg",
+      "bytes": 3576,
+      "title": "Energy + Motivation HBR Emotional Intelligence S"
+    },
+    {
+      "slug": "financial-freedom-on-5-a-day-a-step",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "financial-freedom-on-5-a-day-a-step.jpg",
+      "bytes": 48023,
+      "title": "Financial Freedom on $5 a Day A Step"
+    },
+    {
+      "slug": "great-business-ideas",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "great-business-ideas.jpg",
+      "bytes": 26356,
+      "title": "Great Business Ideas"
+    },
+    {
+      "slug": "great-time-management-ideas",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "great-time-management-ideas.jpg",
+      "bytes": 13605,
+      "title": "Great Time Management Ideas"
+    },
+    {
+      "slug": "greatest-salesman-in-the-world",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "greatest-salesman-in-the-world.jpg",
+      "bytes": 44060,
+      "title": "Greatest Salesman in the World"
+    },
+    {
+      "slug": "hbrs-10-must-reads-on-business-model-innovation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "hbrs-10-must-reads-on-business-model-innovation.jpg",
+      "bytes": 30093,
+      "title": "HBRs 10 Must Reads on Business Model Innovation"
+    },
+    {
+      "slug": "how-to-write-a-business-plan",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "how-to-write-a-business-plan.jpg",
+      "bytes": 34548,
+      "title": "How To Write A Business Plan"
+    },
+    {
+      "slug": "kaching-how-to-run-an-online-business-that-pays",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "kaching-how-to-run-an-online-business-that-pays.jpg",
+      "bytes": 12921,
+      "title": "KaChing How to Run an Online Business that Pays"
+    },
+    {
+      "slug": "lean-six-sigma-business-transformation-for-dummi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "lean-six-sigma-business-transformation-for-dummi.jpg",
+      "bytes": 33070,
+      "title": "Lean Six Sigma Business Transformation For Dummi"
+    },
+    {
+      "slug": "management-and-entrepreneurship",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "management-and-entrepreneurship.jpg",
+      "bytes": 57672,
+      "title": "Management and Entrepreneurship"
+    },
+    {
+      "slug": "mind-management-not-time-management-productivity",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "mind-management-not-time-management-productivity.jpg",
+      "bytes": 29350,
+      "title": "Mind Management Not Time Management Productivity"
+    }
+  ],
+  "offset": 1000,
+  "nextOffset": 1500,
+  "totalTargets": 94078,
+  "cumulativeCounts": {
+    "downloaded": 124,
+    "keep_existing": 330,
+    "not_found": 1042,
+    "bad_image": 4
+  },
+  "totalProcessed": 1500
 }
