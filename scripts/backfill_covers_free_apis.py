@@ -184,9 +184,13 @@ def google_books_urls(title: str, author: str) -> list[str]:
     q = f'intitle:"{cleaned.split(":")[0].strip()}"'
     if author:
         q += f' inauthor:"{author.split(",")[0].strip()}"'
+    params = {"q": q, "maxResults": 5}
+    api_key = os.getenv("GOOGLE_BOOKS_API_KEY")
+    if api_key:
+        params["key"] = api_key
     data = http_json(
         "https://www.googleapis.com/books/v1/volumes?"
-        + urllib.parse.urlencode({"q": q, "maxResults": 5})
+        + urllib.parse.urlencode(params)
     )
     if not data or "items" not in data:
         return []
@@ -225,15 +229,25 @@ def internet_archive_urls(title: str, author: str) -> list[str]:
         + urllib.parse.urlencode(
             {
                 "q": q,
-                "fl[]": "identifier",
-                "rows": 5,
+                "fl[]": ["identifier", "title", "creator"],
+                "rows": 10,
                 "page": 1,
                 "output": "json",
             }
         )
     )
     docs = (((data or {}).get("response") or {}).get("docs")) or []
-    return [f"https://archive.org/services/img/{d['identifier']}" for d in docs if d.get("identifier")]
+    target_author = normalize_match_text(author)
+    matches = []
+    for doc in docs:
+        candidate_title = str(doc.get("title") or "")
+        title_score = title_match_score(cleaned, candidate_title)
+        candidate_author = normalize_match_text(" ".join(doc.get("creator") or []) if isinstance(doc.get("creator"), list) else str(doc.get("creator") or ""))
+        author_match = bool(target_author and any(part in candidate_author for part in target_author.split() if len(part) > 2))
+        if title_score >= (0.76 if author_match else 0.84) and doc.get("identifier"):
+            matches.append((1 if author_match else 0, title_score, str(doc["identifier"])))
+    matches.sort(reverse=True)
+    return [f"https://archive.org/services/img/{identifier}" for _, _, identifier in matches[:4]]
 
 
 def discover_cover(title: str, author: str, isbn: str | None = None) -> tuple[bytes | None, str]:
