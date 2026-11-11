@@ -99,6 +99,11 @@ export interface Book {
     wikipediaUrl?: string;
     photoUrl?: string;
   };
+  metadataConfidence?: 'HIGH' | 'MEDIUM' | 'LOW';
+  metadataSource?: string;
+  metadataSourceUrl?: string;
+  metadataVerifiedAt?: string;
+  metadataReviewRequired?: boolean;
 }
 
 export type RightsStatus = 
@@ -928,6 +933,7 @@ function getDirectoryOverlay(): Map<string, any> {
         "cover_map_from_pdf_list.json",
         "cover_url_index_86k.json",
         "market_price_overlay.json",
+        "verified_metadata_overlay_86k.json",
       ]) {
         const coverMapPath = path.resolve(process.cwd(), "data", "catalog", mapName);
         if (!fs.existsSync(coverMapPath)) continue;
@@ -988,7 +994,26 @@ function applyDirectoryOverlay(book: Book): Book {
   }
   if (overlay.fileSize && overlay.fileSize !== "—") next.fileSize = overlay.fileSize;
   if (overlay.fileName) next.fileName = overlay.fileName;
-  if (overlay.description) next.description = overlay.description;
+  if (overlay.description && (overlay.metadataConfidence === 'HIGH' || !next.description)) {
+    next.description = overlay.description;
+  }
+  if (overlay.publisher && (!next.publisher || next.publisher === 'Editorial Publication')) {
+    next.publisher = overlay.publisher;
+  }
+  if (overlay.publishedYear && !next.publicationYear) {
+    next.publishedYear = Number(overlay.publishedYear);
+    next.publicationYear = String(overlay.publishedYear);
+  }
+  if (overlay.isbn13 && !next.isbn13) next.isbn13 = String(overlay.isbn13);
+  if (overlay.isbn10 && !next.isbn10) next.isbn10 = String(overlay.isbn10);
+  if (overlay.language && !next.language) next.language = String(overlay.language);
+  if (overlay.metadataConfidence === 'HIGH') {
+    next.metadataConfidence = 'HIGH';
+    next.metadataSource = overlay.metadataSource || 'open-library';
+    next.metadataSourceUrl = overlay.metadataSourceUrl;
+    next.metadataVerifiedAt = overlay.metadataVerifiedAt;
+    next.metadataReviewRequired = false;
+  }
 
   // Real marketplace prices only — never invent verification from missing data.
   if (typeof overlay.lowestComparablePrice === "number" && overlay.lowestComparablePrice > 0) {
