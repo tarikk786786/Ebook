@@ -270,7 +270,7 @@ def load_targets(limit: int | None) -> list[dict[str, Any]]:
             entry = cover_index.get(str(key)) if key else None
             if isinstance(entry, dict):
                 url = entry.get("coverUrl") or entry.get("coverImage") or ""
-                if isinstance(url, str) and url.startswith(("https://", "http://")):
+                if isinstance(url, str) and (url.startswith(("https://", "http://")) or url.startswith(("/covers/", "/book-covers/"))):
                     return url
         return ""
 
