@@ -46,10 +46,12 @@
 
 ## 4. Commits / SHA
 
-*(Filled after push — see git log on `main`.)*
+| Commit | Message |
+|--------|---------|
+| `6f08aa43ae95abb1e4bfc9aca23238b8fdff9807` | `chore: production audit docs and Telegram signed-URL fail-closed` (**HEAD `main`**) |
+| `c8c420a…` | `feat: highlight missing covers as genuine with full refund` (cherry-pick of PR #1) |
 
-- Cherry-pick: `feat: highlight missing covers as genuine with full refund`
-- Follow-up: production docs + Telegram fail-closed signing
+Pushed to `origin/main` successfully.
 
 ---
 
@@ -83,10 +85,12 @@
 | Catalogue pagination/search | Code path via `lib/catalog.ts` + `/api/books` (no 86k browser load) |
 | Covers API | `/api/covers/[slug]` present with fallback (not marked verified) |
 | Telegram adapter | Present; signed URL fail-closed |
-| HTTP homepage | Pre-deploy: **200** on production URL |
-| `GET /api/books?limit=5` | Pre-deploy: **200** |
+| HTTP homepage | **200** on production URL |
+| `GET /api/books?limit=3` | **200** |
+| `GET /checkout` | **200** |
+| `POST /api/checkout` `{}` | **400** validation (expected; no payment created) |
 | Real payments | Not executed (smoke only) |
-| Playwright | Not required; not run (suite may exist elsewhere) |
+| Playwright | Not required; not run |
 
 ---
 
@@ -96,7 +100,7 @@
 |-------|--------|
 | Team | `tarik-pro-fitness` (`team_GaEwKT5Cmso3vxQihwOWeFxc`) |
 | Project | `ebook` |
-| CLI whoami | Authenticated |
+| CLI whoami | Authenticated (`786tarikislam-6234`) |
 | Linked `.vercel/project.json` | `projectName=ebook` |
 | Wrong project avoided | Did not deploy `anon-trove-ebooks` sibling |
 
@@ -106,18 +110,21 @@
 
 | Item | Value |
 |------|--------|
-| Method | Prefer `git push origin main` → Vercel Git integration production deploy |
-| Fallback | `npx vercel --prod --scope tarik-pro-fitness` if needed |
-| Poll | Until Ready or Error; confirm URL 200 |
+| Method | `git push origin main` (triggers Vercel Git integration) |
+| Fallback tried | `npx vercel --prod --scope tarik-pro-fitness --yes` |
+| Git push | **Succeeded** (`main` @ `6f08aa4`) |
+| New Vercel build for this SHA | **Blocked** — Hobby rate limit |
+| Error | `Resource is limited - try again in 1 day (more than 100, code: "api-deployments-free-per-day")` |
+| GitHub status | `Vercel – ebook`: failure — “Deployment rate limited — retry in 24 hours” |
+| Live production | Prior Ready deployment still serving (`ebook-fvbcjln26-…`) |
 
-*(Post-push status filled below after poll.)*
+**Auth fix / next action:** Wait ~24h or upgrade team plan / reduce deploy churn, then redeploy (`git push` empty commit or `npx vercel --prod --scope tarik-pro-fitness`). Env vars already updated on Production will bind on the next successful deploy.
 
 ---
 
 ## 10. Production URL
 
-- https://ebook-sandy-chi.vercel.app
-- Status after deploy: *(pending poll)*
+- https://ebook-sandy-chi.vercel.app → **HTTP 200** (live; serving last successful production deploy, not yet `6f08aa4`)
 
 ---
 
@@ -125,7 +132,7 @@
 
 | API | Status |
 |-----|--------|
-| `POST /api/checkout` | Present; Zod + server prices |
+| `POST /api/checkout` | Present; Zod + server prices; empty body → 400 |
 | `POST /api/webhooks/famgateway` | Present; HMAC required |
 | `GET/POST /api/poll` | Present |
 | `GET /api/download/[token]` | Present; AES token |
@@ -136,12 +143,13 @@
 
 ## 12. Remaining blockers
 
-1. **`TELEGRAM_BOT_TOKEN`** — not set locally → Telegram remote vault inactive until BotFather token is configured on Vercel.
-2. **Community marketplace (PRs #2–#6)** — not merged; needs `COMMUNITY_ACCESS_TOKEN_SECRET` + careful merge order.
-3. **Preview env** — still sparse (mostly `FAMGATEWAY_API_KEY`); mirror Production secrets for PR previews if needed.
-4. **Supabase / R2** — optional cloud layers still not fully configured.
-5. **npm audit** — dependency advisories remain (not suppressed; separate hardening pass).
-6. **Custom domains** (`tb.us.kg`, etc.) — confirm alias mapping remains intentional for `ebook` project.
+1. **Vercel Hobby daily deployment cap** (`api-deployments-free-per-day` >100) — **blocks shipping `6f08aa4` until reset/upgrade**.
+2. **`TELEGRAM_BOT_TOKEN`** — not set locally → Telegram remote vault inactive until BotFather token is configured on Vercel.
+3. **Community marketplace (PRs #2–#6)** — not merged; needs `COMMUNITY_ACCESS_TOKEN_SECRET` + careful merge order.
+4. **Preview env** — still sparse; mirror Production secrets for PR previews if needed.
+5. **New Production env vars** (CRON_SECRET, FamGateway URLs, support/store names, Telegram channel) — set on Vercel but apply fully after next successful deploy.
+6. **Supabase / R2** — optional cloud layers still not fully configured.
+7. **npm audit** — dependency advisories remain (not suppressed).
 
 ---
 
