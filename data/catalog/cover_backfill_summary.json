@@ -1,182 +1,142 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 29,
-    "keep_existing": 120,
-    "not_found": 349,
-    "bad_image": 2
+    "downloaded": 15,
+    "keep_existing": 181,
+    "not_found": 304,
+    "bad_image": 0
   },
-  "updatedCurated": 1,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "lecture-notes",
+      "slug": "time-management",
       "status": "downloaded",
       "source": "open-library",
-      "file": "lecture-notes.jpg",
-      "bytes": 21487,
-      "title": "| Lecture Notes"
+      "file": "time-management.jpg",
+      "bytes": 25936,
+      "title": "Time Management"
     },
     {
-      "slug": "cocaine",
+      "slug": "w-chan-kim-rene-e-mauborgne-blue-ocean-strategy",
       "status": "downloaded",
       "source": "open-library",
-      "file": "cocaine.jpg",
-      "bytes": 11627,
-      "title": "Cocaine"
+      "file": "w-chan-kim-rene-e-mauborgne-blue-ocean-strategy.jpg",
+      "bytes": 37907,
+      "title": "W Chan Kim, Renée Mauborgne Blue Ocean Strategy"
     },
     {
-      "slug": "detailed-advertisement",
+      "slug": "tendering-11",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "tendering-11.jpg",
+      "bytes": 13577,
+      "title": "& Tendering] 11"
+    },
+    {
+      "slug": "tendering-8",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "tendering-8.jpg",
+      "bytes": 14083,
+      "title": "& Tendering] 8"
+    },
+    {
+      "slug": "tendering-change-order-1-extra-item",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "tendering-change-order-1-extra-item.jpg",
+      "bytes": 13835,
+      "title": "& Tendering] Change order-1 extra item"
+    },
+    {
+      "slug": "tendering-approved-change-order",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "tendering-approved-change-order.jpg",
+      "bytes": 9856,
+      "title": "& Tendering] Approved Change Order"
+    },
+    {
+      "slug": "tendering-tender-volumes",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "tendering-tender-volumes.jpg",
+      "bytes": 12727,
+      "title": "& Tendering] Tender Volumes"
+    },
+    {
+      "slug": "0000",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "0000.jpg",
+      "bytes": 13763,
+      "title": "0000"
+    },
+    {
+      "slug": "course-introduction",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "detailed-advertisement.jpg",
-      "bytes": 14426,
-      "title": "Detailed Advertisement"
+      "file": "course-introduction.jpg",
+      "bytes": 5885,
+      "title": "Course Introduction"
     },
     {
-      "slug": "the-automatic-millionaire-david-bach",
+      "slug": "100-telegram-bots",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "100-telegram-bots.jpg",
+      "bytes": 14905,
+      "title": "100+ Telegram Bots"
+    },
+    {
+      "slug": "3-2-stakeholder-management",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-automatic-millionaire-david-bach.jpg",
-      "bytes": 25121,
-      "title": "The Automatic Millionaire David Bach"
+      "file": "3-2-stakeholder-management.jpg",
+      "bytes": 37422,
+      "title": "3.2 Stakeholder Management"
     },
     {
-      "slug": "the-fountainhead",
+      "slug": "attitude-is-everything-keller",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-fountainhead.jpg",
-      "bytes": 30288,
-      "title": "The Fountainhead"
+      "file": "attitude-is-everything-keller.jpg",
+      "bytes": 25517,
+      "title": "Attitude is Everything Keller"
     },
     {
-      "slug": "way-of-the-wolf-straight-line-selling-master-the",
+      "slug": "autocad-15",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "autocad-15.jpg",
+      "bytes": 10892,
+      "title": "AutoCAD] 15"
+    },
+    {
+      "slug": "autocad-6",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "autocad-6.jpg",
+      "bytes": 10448,
+      "title": "AutoCAD] 6"
+    },
+    {
+      "slug": "bottle-of-lies",
       "status": "downloaded",
       "source": "open-library",
-      "file": "way-of-the-wolf-straight-line-selling-master-the.jpg",
-      "bytes": 44673,
-      "title": "Way Of The Wolf Straight Line Selling Master The"
-    },
-    {
-      "slug": "why-success-always-starts-with-failure",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "why-success-always-starts-with-failure.jpg",
-      "bytes": 16307,
-      "title": "Why Success Always Starts With Failure"
-    },
-    {
-      "slug": "the-tipping-point",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-tipping-point.jpg",
-      "bytes": 15518,
-      "title": "The Tipping Point"
-    },
-    {
-      "slug": "building-story-brand-miller",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-story-brand-miller.jpg",
-      "bytes": 26669,
-      "title": "Building Story Brand MILLER"
-    },
-    {
-      "slug": "energy-motivation-hbr-emotional-intelligence-s",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "energy-motivation-hbr-emotional-intelligence-s.jpg",
-      "bytes": 3576,
-      "title": "Energy + Motivation HBR Emotional Intelligence S"
-    },
-    {
-      "slug": "financial-freedom-on-5-a-day-a-step",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "financial-freedom-on-5-a-day-a-step.jpg",
-      "bytes": 48023,
-      "title": "Financial Freedom on $5 a Day A Step"
-    },
-    {
-      "slug": "great-business-ideas",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "great-business-ideas.jpg",
-      "bytes": 26356,
-      "title": "Great Business Ideas"
-    },
-    {
-      "slug": "great-time-management-ideas",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "great-time-management-ideas.jpg",
-      "bytes": 13605,
-      "title": "Great Time Management Ideas"
-    },
-    {
-      "slug": "greatest-salesman-in-the-world",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "greatest-salesman-in-the-world.jpg",
-      "bytes": 44060,
-      "title": "Greatest Salesman in the World"
-    },
-    {
-      "slug": "hbrs-10-must-reads-on-business-model-innovation",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hbrs-10-must-reads-on-business-model-innovation.jpg",
-      "bytes": 30093,
-      "title": "HBRs 10 Must Reads on Business Model Innovation"
-    },
-    {
-      "slug": "how-to-write-a-business-plan",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "how-to-write-a-business-plan.jpg",
-      "bytes": 34548,
-      "title": "How To Write A Business Plan"
-    },
-    {
-      "slug": "kaching-how-to-run-an-online-business-that-pays",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "kaching-how-to-run-an-online-business-that-pays.jpg",
-      "bytes": 12921,
-      "title": "KaChing How to Run an Online Business that Pays"
-    },
-    {
-      "slug": "lean-six-sigma-business-transformation-for-dummi",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "lean-six-sigma-business-transformation-for-dummi.jpg",
-      "bytes": 33070,
-      "title": "Lean Six Sigma Business Transformation For Dummi"
-    },
-    {
-      "slug": "management-and-entrepreneurship",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "management-and-entrepreneurship.jpg",
-      "bytes": 57672,
-      "title": "Management and Entrepreneurship"
-    },
-    {
-      "slug": "mind-management-not-time-management-productivity",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "mind-management-not-time-management-productivity.jpg",
-      "bytes": 29350,
-      "title": "Mind Management Not Time Management Productivity"
+      "file": "bottle-of-lies.jpg",
+      "bytes": 34802,
+      "title": "Bottle of Lies"
     }
   ],
-  "offset": 1000,
-  "nextOffset": 1500,
+  "offset": 1500,
+  "nextOffset": 2000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 124,
-    "keep_existing": 330,
-    "not_found": 1042,
+    "downloaded": 139,
+    "keep_existing": 511,
+    "not_found": 1346,
     "bad_image": 4
   },
-  "totalProcessed": 1500
+  "totalProcessed": 2000
 }
