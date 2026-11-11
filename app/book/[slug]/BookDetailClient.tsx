@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import PaymentModal from '@/components/PaymentModal';
 import ReaderModal from '@/components/ReaderModal';
 import { Book } from '@/lib/catalog';
+import { buildBookResearchLinks, isSafeResearchUrl } from '@/lib/research-links';
 import { 
   ArrowLeft,
   ArrowRight, 
@@ -652,118 +653,176 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   )}
 
                   {activeTab === 'research' && (() => {
-                    const q = encodeURIComponent(`${book.title} ${book.author || ''}`.trim());
-                    const links = book.researchLinks || {
-                      googleBooks: `https://books.google.com/books?q=${q}`,
-                      openLibrary: `https://openlibrary.org/search?q=${q}`,
-                      crossref: `https://api.crossref.org/works?query.bibliographic=${q}&rows=5`,
-                      googleImages: `https://www.google.com/search?tbm=isch&q=${q}+book+cover`,
-                      wikimedia: `https://commons.wikimedia.org/w/index.php?search=${q}+book+cover&title=Special:MediaSearch&type=image`,
-                      wikipedia: `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(book.author || book.title)}`,
-                      internetArchive: `https://archive.org/search?query=${q}`,
-                      gutenberg: `https://www.gutenberg.org/ebooks/search/?query=${encodeURIComponent(book.title)}`,
-                      amazon: `https://www.amazon.in/s?k=${q}`,
-                      googlePlay: `https://play.google.com/store/search?q=${q}&c=books`,
+                    const links = {
+                      ...buildBookResearchLinks({ title: book.title, author: book.author }),
+                      ...(book.researchLinks || {}),
                     };
+
+                    const linkItems = [
+                      {
+                        key: 'googleBooks',
+                        label: 'Google Books',
+                        title: 'Search bibliographic records and editions',
+                        description: 'Match title, author, ISBN and edition manually.',
+                        url: links.googleBooks,
+                      },
+                      {
+                        key: 'openLibrary',
+                        label: 'Open Library',
+                        title: 'Search book and edition records',
+                        description: 'A search result is not proof of the exact edition.',
+                        url: links.openLibrary,
+                      },
+                      {
+                        key: 'crossref',
+                        label: 'Crossref',
+                        title: 'Search scholarly metadata and DOI records',
+                        description: 'Useful for academic titles and publisher metadata.',
+                        url: links.crossref,
+                      },
+                      {
+                        key: 'googleImages',
+                        label: 'Google Images',
+                        title: 'Find possible cover-image matches',
+                        description: 'Search results are not direct image files or reuse permission.',
+                        url: links.googleImages,
+                      },
+                      {
+                        key: 'wikimedia',
+                        label: 'Wikimedia Commons',
+                        title: 'Search image and cover candidates',
+                        description: 'Check the license and attribution on each individual file.',
+                        url: links.wikimedia,
+                      },
+                      {
+                        key: 'authorResearchGoogle',
+                        label: 'Author research',
+                        title: 'Search author biography and publications',
+                        description: 'Cross-check identity with primary or publisher sources.',
+                        url: links.authorResearchGoogle,
+                      },
+                      {
+                        key: 'wikipedia',
+                        label: 'Wikipedia',
+                        title: 'Search author background and bibliography',
+                        description: 'Use as a lead; verify important facts elsewhere.',
+                        url: links.wikipedia,
+                      },
+                      {
+                        key: 'internetArchive',
+                        label: 'Internet Archive',
+                        title: 'Search archive catalog and access options',
+                        description: 'Availability or lending does not grant redistribution rights.',
+                        url: links.internetArchive,
+                      },
+                      {
+                        key: 'gutenberg',
+                        label: 'Project Gutenberg',
+                        title: 'Search public-domain text editions',
+                        description: 'Confirm the title, edition and applicable jurisdiction.',
+                        url: links.gutenberg,
+                      },
+                      {
+                        key: 'amazon',
+                        label: 'Amazon India',
+                        title: 'Compare retail and Kindle listings',
+                        description: 'Confirm the digital edition and current listed price.',
+                        url: links.amazon,
+                      },
+                      {
+                        key: 'googlePlay',
+                        label: 'Google Play Books',
+                        title: 'Search digital book listings',
+                        description: 'Availability and pricing can differ by edition and region.',
+                        url: links.googlePlay,
+                      },
+                      {
+                        key: 'publisherOfficial',
+                        label: 'Publisher / official source',
+                        title: 'Search the publisher or official book page',
+                        description: 'Use the publisher page to confirm edition and pricing.',
+                        url: links.publisherOfficial,
+                      },
+                    ].map((item) => ({
+                      ...item,
+                      url: isSafeResearchUrl(item.url) ? item.url : undefined,
+                    }));
 
                     return (
                       <div className="space-y-4">
-                        <div className="p-3.5 bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl flex items-center justify-between">
+                        <div className="p-3.5 bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl flex items-center justify-between gap-3">
                           <div>
-                            <h4 className="font-serif font-bold text-xs text-[#24231F]">Universal 86,260 Bibliographic Link Directory</h4>
-                            <p className="text-[11px] text-[#6E685F] mt-0.5">Direct reference links from our master catalogue index across world digital libraries, publisher archives, and academic repositories.</p>
+                            <h4 className="font-serif font-bold text-xs text-[#24231F]">Book & Source Research Links</h4>
+                            <p className="text-[11px] text-[#6E685F] mt-0.5">Search links generated from this book's current title and author, with saved catalogue links taking priority.</p>
                           </div>
-                          <span className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200 shrink-0">VERIFIED LOOKUP</span>
+                          <span className="px-2 py-1 rounded text-[10px] font-mono font-semibold bg-amber-100 text-amber-900 border border-amber-200 shrink-0">NOT VERIFIED</span>
                         </div>
 
+                        <div className="p-3.5 bg-amber-50 border border-amber-200 rounded-xl">
+                          <p className="text-[11px] leading-relaxed text-amber-950">
+                            These are research queries, not verified book records, direct cover files, current prices, free-download guarantees or copyright permissions. Match the exact edition and check the source's licence before using an image or distributing a file.
+                          </p>
+                        </div>
+
+                        <div className="p-3.5 bg-white border border-[#E8E4DC] rounded-xl">
+                          <span className="text-[10px] uppercase tracking-wider font-bold text-[#9A704B]">Research target</span>
+                          <p className="font-serif text-sm font-semibold text-[#24231F] mt-1">{book.title}</p>
+                          <p className="text-[11px] text-[#6E685F] mt-0.5">Author / contributor: {book.author || 'Not listed'}</p>
+                          <p className="text-[10px] text-[#81796D] mt-1">Current catalogue filename: {book.fileName || 'Not available'}</p>
+                        </div>
+                        {book.researchSource && (
+                          <div className="p-3.5 bg-white border border-[#E8E4DC] rounded-xl space-y-2">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[10px] uppercase tracking-wider font-bold text-[#9A704B]">Uploaded master directory match</span>
+                              <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200">
+                                UNVERIFIED SOURCE
+                              </span>
+                            </div>
+                            <div className="grid grid-cols-2 gap-3 text-[11px]">
+                              <div>
+                                <span className="block text-[#81796D]">Manifest ID</span>
+                                <strong className="text-[#24231F]">#{book.researchSource.manifestId}</strong>
+                              </div>
+                              <div>
+                                <span className="block text-[#81796D]">Listed category</span>
+                                <strong className="text-[#24231F]">{book.researchSource.listedCategory || 'Not listed'}</strong>
+                              </div>
+                            </div>
+                            <div>
+                              <span className="block text-[10px] text-[#81796D]">Original listed title</span>
+                              <p className="text-xs text-[#24231F]">{book.researchSource.listedTitle || 'Not listed'}</p>
+                            </div>
+                            <div>
+                              <span className="block text-[10px] text-[#81796D]">Listed contributor (not verified)</span>
+                              <p className="text-xs text-[#24231F]">{book.researchSource.listedAuthor || 'Not listed'}</p>
+                            </div>
+                            <div>
+                              <span className="block text-[10px] text-[#81796D]">Source filename</span>
+                              <p className="text-xs text-[#24231F] break-all">{book.researchSource.sourceFilename || 'Not listed'}</p>
+                            </div>
+                          </div>
+                        )}
+
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          {links.openLibrary && (
-                            <a href={links.openLibrary} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Open Library</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">View Public Book & Edition Record</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Internet Archive Open Library Catalogue</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
-
-                          {links.googleBooks && (
-                            <a href={links.googleBooks} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Google Books</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Search Official Volume & ISBN</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Global Google Books Repository</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
-
-                          {links.internetArchive && (
-                            <a href={links.internetArchive} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Internet Archive</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Discover Archive Lending Copy</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Universal Non-Profit Digital Library</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
-
-                          {links.crossref && (
-                            <a href={links.crossref} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Crossref Metadata</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Query Academic DOI & Publisher Citations</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Official Crossref Works REST API</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
-
-                          {links.wikipedia && (
-                            <a href={links.wikipedia} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Wikipedia Knowledge</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Author Biography & Bibliography</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Wikimedia Free Encyclopedia</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
-
-                          {links.wikimedia && (
-                            <a href={links.wikimedia} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Wikimedia Commons</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Public Domain Cover Scans & Portraits</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Free Media Repository</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
-
-                          {links.gutenberg && (
-                            <a href={links.gutenberg} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Project Gutenberg</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Check Public Domain Editions</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Classic Literature Open Access</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
-
-                          {links.amazon && (
-                            <a href={links.amazon} target="_blank" rel="noopener noreferrer" className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between group">
-                              <div>
-                                <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">Amazon Marketplace</span>
-                                <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B]">Cross-Check Market Price & Reviews</span>
-                                <span className="text-[10px] text-[#81796D] block mt-0.5">Commercial Publisher Edition Check</span>
-                              </div>
-                              <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform">↗</span>
-                            </a>
-                          )}
+                          {linkItems.map((item) => {
+                            if (!item.url) return null;
+                            return (
+                              <a
+                                key={item.key}
+                                href={item.url}
+                                target="_blank"
+                                rel="noopener noreferrer nofollow"
+                                className="p-3 bg-white hover:bg-[#FAF8F5] border border-[#E8E4DC] hover:border-[#9A704B] rounded-lg transition-all flex items-start justify-between gap-3 group"
+                              >
+                                <div>
+                                  <span className="text-[10px] uppercase font-bold text-[#9A704B] tracking-wider block">{item.label}</span>
+                                  <span className="font-serif text-xs font-semibold text-[#24231F] group-hover:text-[#9A704B] block mt-1">{item.title}</span>
+                                  <span className="text-[10px] text-[#81796D] block mt-1">{item.description}</span>
+                                </div>
+                                <span className="text-xs text-[#9A704B] group-hover:translate-x-0.5 transition-transform shrink-0">↗</span>
+                              </a>
+                            );
+                          })}
                         </div>
                       </div>
                     );
