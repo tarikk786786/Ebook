@@ -2,6 +2,7 @@ import demandedBooks from '@/data/demanded_books_registry.json';
 import rawDynamicBooks from '@/data/books_registry.json';
 import enrichedStartupBooks from '@/data/enriched_1000_books.json';
 import curatedMasterclassesPdf from '@/data/catalog/curated_masterclasses_from_pdf.json';
+import { buildBookResearchLinks } from '@/lib/research-links';
 
 export interface Book {
   id: string;
@@ -81,6 +82,16 @@ export interface Book {
     amazon?: string;
     googlePlay?: string;
     publisherOfficial?: string;
+  };
+  researchSource?: {
+    manifestId: number;
+    listedTitle: string;
+    listedAuthor: string;
+    listedAuthorVerified: false;
+    listedCategory: string;
+    sourceFilename: string;
+    linkStatus: 'LOOKUP_LINKS_NOT_VERIFIED';
+    sourceLinkStatus?: string;
   };
   authorProfile?: {
     name: string;
@@ -822,6 +833,70 @@ function catalogNumFromBook(book: { id?: string; slug?: string; ref?: number | s
   return null;
 }
 
+let cachedResearchDirectory: Map<number, any> | null = null;
+
+function getResearchDirectoryRecord(manifestId: number): any | undefined {
+  if (typeof window !== "undefined") return undefined;
+  if (!cachedResearchDirectory) {
+    cachedResearchDirectory = new Map();
+    try {
+      const fs = eval("require('fs')");
+      const path = eval("require('path')");
+      const zlib = eval("require('zlib')");
+      const filePath = path.resolve(
+        process.cwd(),
+        "data",
+        "catalog",
+        "research_link_directory.json.gz"
+      );
+      if (fs.existsSync(filePath)) {
+        const compressed = fs.readFileSync(filePath);
+        const decoded = zlib.gunzipSync(compressed).toString("utf8");
+        const payload = JSON.parse(decoded);
+        for (const record of payload.records || []) {
+          const id = Number(record?.manifestId);
+          if (Number.isSafeInteger(id) && id > 0 && !cachedResearchDirectory.has(id)) {
+            cachedResearchDirectory.set(id, record);
+          }
+        }
+      }
+    } catch {
+      // Optional enrichment file: keep the catalog usable if it is not installed.
+    }
+  }
+  return cachedResearchDirectory.get(manifestId);
+}
+
+function applyResearchDirectoryOverlay(book: Book): Book {
+  const manifestId = catalogNumFromBook(book);
+  if (manifestId == null) return book;
+  const record = getResearchDirectoryRecord(manifestId);
+  if (!record) return book;
+
+  const generatedLinks = buildBookResearchLinks({
+    title: record.listedTitle || book.title,
+    author: record.listedAuthor || book.author,
+  });
+
+  return {
+    ...book,
+    researchSource: {
+      manifestId,
+      listedTitle: String(record.listedTitle || ""),
+      listedAuthor: String(record.listedAuthor || ""),
+      listedAuthorVerified: false,
+      listedCategory: String(record.listedCategory || ""),
+      sourceFilename: String(record.sourceFilename || ""),
+      linkStatus: "LOOKUP_LINKS_NOT_VERIFIED",
+      sourceLinkStatus: String(record.sourceLinkStatus || ""),
+    },
+    researchLinks: {
+      ...generatedLinks,
+      ...(book.researchLinks || {}),
+    },
+  };
+}
+
 function isSuppressedBook(book: any): boolean {
   const n = catalogNumFromBook(book);
   if (n == null) return false;
@@ -885,9 +960,9 @@ function applyDirectoryOverlay(book: Book): Book {
   if (!overlay) {
     const fixed = normalizePublicCoverPath(book.coverImage, book.slug);
     if (fixed && fixed !== book.coverImage) {
-      return { ...book, coverImage: fixed };
+      return applyResearchDirectoryOverlay({ ...book, coverImage: fixed });
     }
-    return book;
+    return applyResearchDirectoryOverlay(book);
   }
   const next = { ...book };
   if (overlay.category && (!book.category || book.category === "General & Technical Reference" || book.category === "General")) {
@@ -942,7 +1017,7 @@ function applyDirectoryOverlay(book: Book): Book {
   } else if (book.coverImage?.startsWith("/public/") || book.coverImage?.startsWith("/book-covers/")) {
     next.coverImage = normalizePublicCoverPath(book.coverImage, book.slug) || `/api/covers/${book.slug}`;
   }
-  return next;
+  return applyResearchDirectoryOverlay(next);
 }
 
 function getMaster86kList(): any[] {
