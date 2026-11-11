@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: anontrove-cover-recovery-main
+  group: anontrove-catalogue-enrichment-main
   cancel-in-progress: false
 
 jobs:
