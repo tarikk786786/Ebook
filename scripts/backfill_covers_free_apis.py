@@ -225,11 +225,11 @@ def load_targets(limit: int | None) -> list[dict[str, Any]]:
     books: list[dict[str, Any]] = []
     seen = set()
 
-    def add(b: dict[str, Any], source: str):
-        slug = b.get("slug") or slugify(b.get("title") or "")
+    def add(b: dict[str, Any], source: str, indexed_cover: str = ""):
+        slug = b.get("slug") or slugify(b.get("title") or b.get("name") or "")
         if not slug or slug in seen:
             return
-        title = b.get("title") or ""
+        title = b.get("title") or b.get("name") or ""
         if not title or len(title) < 3:
             return
         seen.add(slug)
@@ -237,12 +237,58 @@ def load_targets(limit: int | None) -> list[dict[str, Any]]:
             {
                 "slug": slug,
                 "title": title,
-                "author": b.get("author") or "",
+                "author": b.get("author") or b.get("authors") or "",
                 "isbn": b.get("isbn13") or b.get("isbn10") or b.get("isbn"),
                 "source": source,
-                "coverImage": b.get("coverImage") or b.get("coverUrl") or "",
+                "coverImage": indexed_cover or b.get("coverImage") or b.get("coverUrl") or "",
             }
         )
+
+    # The previous worker only read the 1.2k curated catalogue and small
+    # enrichment files. It skipped the actual 86k directory manifest and its
+    # 86k cover URL index. Include those records so recovery targets the real
+    # storefront catalogue rather than repeatedly processing a tiny subset.
+    index_path = ROOT / "data" / "catalog" / "cover_url_index_86k.json"
+    cover_index: dict[str, Any] = {}
+    if index_path.exists():
+        try:
+            index_payload = json.loads(index_path.read_text(encoding="utf-8"))
+            cover_index = index_payload.get("map") or index_payload if isinstance(index_payload, dict) else {}
+        except Exception:
+            cover_index = {}
+
+    def indexed_cover_for(book: dict[str, Any]) -> str:
+        keys = [
+            book.get("slug"),
+            f"ref:{book.get('catalogNum')}" if book.get("catalogNum") is not None else "",
+            f"ref:{book.get('ref')}" if book.get("ref") is not None else "",
+            str(book.get("catalogNum") or ""),
+            str(book.get("ref") or ""),
+            str(book.get("id") or "").replace("book-", ""),
+        ]
+        for key in keys:
+            entry = cover_index.get(str(key)) if key else None
+            if isinstance(entry, dict):
+                url = entry.get("coverUrl") or entry.get("coverImage") or ""
+                if isinstance(url, str) and url.startswith(("https://", "http://")):
+                    return url
+        return ""
+
+    directory = ROOT / "data" / "catalog" / "directory_86k_from_pdf.json"
+    if directory.exists():
+        try:
+            payload = json.loads(directory.read_text(encoding="utf-8"))
+            if isinstance(payload, list):
+                records = payload
+            elif isinstance(payload, dict):
+                records = next((payload.get(k) for k in ("books", "items", "documents", "records", "entries", "data") if isinstance(payload.get(k), list)), [])
+            else:
+                records = []
+            for b in records:
+                if isinstance(b, dict):
+                    add(b, "directory-86k", indexed_cover_for(b))
+        except Exception as exc:
+            print(f"Warning: unable to read 86k directory manifest: {exc}")
 
     curated = ROOT / "data" / "catalog" / "curated_masterclasses_from_pdf.json"
     if curated.exists():
@@ -308,6 +354,21 @@ def process_one(book: dict[str, Any], overwrite_synthetic: bool) -> dict[str, An
         pass
 
     data, source = discover_cover(book["title"], book.get("author") or "", book.get("isbn"))
+    # Prefer the repository's precomputed 86k cover index before making
+    # additional discovery requests. Indexed matches still remain reviewable.
+    indexed_url = str(book.get("coverImage") or "")
+    if indexed_url.startswith(("https://", "http://")):
+        indexed_data = http_get(indexed_url)
+        if indexed_data and save_jpeg(indexed_data, dest):
+            return {
+                "slug": slug,
+                "status": "downloaded",
+                "source": "existing-86k-cover-index",
+                "file": dest.name,
+                "bytes": dest.stat().st_size,
+                "title": book["title"],
+            }
+
     if not data:
         return {"slug": slug, "status": "not_found", "title": book["title"]}
 
