@@ -218,7 +218,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                   <span className="px-2 py-0.5 text-[9px] font-sans font-medium uppercase tracking-wider bg-white/95 text-[#24231F] border border-[#E8E4DC] rounded shadow-sm">
                     {book.format || 'PDF'}
                   </span>
-                  {discountPercent > 0 && (
+                  {canPurchase && discountPercent > 0 && (
                     <span className="px-2 py-0.5 text-[9px] font-sans font-bold uppercase tracking-wider bg-[#FAF6F1] text-[#9A704B] border border-[#F2E8DC] rounded">
                       Save {discountPercent}%
                     </span>
