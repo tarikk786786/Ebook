@@ -23,7 +23,7 @@ function resolveCoverSrc(book: Book): string {
     return cover;
   }
   // Resolve only genuinely missing or non-public local paths dynamically.
-  return `/api/covers/${book.slug}?v=10`;
+  return `/api/covers/${encodeURIComponent(book.slug)}?v=11`;
 }
 
 interface BookCardProps {
@@ -45,17 +45,26 @@ export default function BookCard({
 }: BookCardProps) {
   const [imgSrc, setImgSrc] = useState<string>(() => resolveCoverSrc(book));
   const [imgError, setImgError] = useState(false);
+  const [attemptedIsbn, setAttemptedIsbn] = useState(false);
   const { addToCart, items } = useCart();
   const isInCart = items.some((i) => i.bookId === book.id);
 
   useEffect(() => {
     setImgSrc(resolveCoverSrc(book));
     setImgError(false);
+    setAttemptedIsbn(false);
   }, [book.id, book.slug, book.coverImage]);
 
   const handleImageError = () => {
-    if (!imgSrc.includes('/api/covers/')) {
-      setImgSrc(`/api/covers/${book.slug}?v=10`);
+    // A valid ISBN is an exact-edition lookup, unlike speculative title-only covers.
+    const isbn = String(book.isbn13 || book.isbn10 || book.isbn || '').replace(/[^0-9X]/gi, '');
+    if (!attemptedIsbn && /^(?:[0-9]{13}|[0-9]{9}[0-9X])$/i.test(isbn)) {
+      setAttemptedIsbn(true);
+      setImgSrc(`https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-L.jpg?default=false`);
+      return;
+    }
+    if (!imgSrc.includes('/api/covers/') && !imgSrc.includes('covers.openlibrary.org')) {
+      setImgSrc(`/api/covers/${encodeURIComponent(book.slug)}?v=11`);
       return;
     }
     // Do not disguise a missing cover with a generic shelf image.
