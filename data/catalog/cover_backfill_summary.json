@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 49,
-    "keep_existing": 240,
-    "not_found": 210,
+    "downloaded": 124,
+    "keep_existing": 106,
+    "not_found": 269,
     "bad_image": 1
   },
-  "updatedCurated": 27,
+  "updatedCurated": 82,
   "sampleDownloaded": [
     {
-      "slug": "day-4-9-video-feedback-checklist",
+      "slug": "the-three-rules",
       "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "day-4-9-video-feedback-checklist.jpg",
-      "bytes": 9933,
-      "title": "Day 4. 9- Video feedback Checklist"
+      "source": "open-library",
+      "file": "the-three-rules.jpg",
+      "bytes": 15713,
+      "title": "The Three Rules"
     },
     {
-      "slug": "design-site-visit-checklist",
+      "slug": "your-strategy-needs-a-strategy",
       "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "design-site-visit-checklist.jpg",
-      "bytes": 9933,
-      "title": "Design] SITE VISIT CHECKLIST"
+      "source": "open-library",
+      "file": "your-strategy-needs-a-strategy.jpg",
+      "bytes": 31025,
+      "title": "Your Strategy Needs a Strategy"
     },
     {
-      "slug": "detective-cover-letter-for-fresher",
+      "slug": "blow-me-away",
       "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "detective-cover-letter-for-fresher.jpg",
-      "bytes": 9933,
-      "title": "Detective] Cover letter for Fresher"
+      "source": "open-library",
+      "file": "blow-me-away.jpg",
+      "bytes": 36321,
+      "title": "Blow Me Away"
     },
     {
-      "slug": "document",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-t",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "document.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-t.jpg",
+      "bytes": 23813,
+      "title": "Crossing the Chasm: Marketing and Selling High-T"
+    },
+    {
+      "slug": "good-to-great-why-some-companies-make-the-leap",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "good-to-great-why-some-companies-make-the-leap.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "scaling-your-startup",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "scaling-your-startup.jpg",
+      "bytes": 30625,
+      "title": "Scaling Your Startup"
+    },
+    {
+      "slug": "the-alchemist",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-alchemist.jpg",
+      "bytes": 25188,
+      "title": "The Alchemist"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-busi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-busi.jpg",
+      "bytes": 9842,
+      "title": "The Hard Thing About Hard Things Building A Busi"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-bus",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-bus.jpg",
+      "bytes": 9842,
+      "title": "The Hard Thing About Hard Things: Building a Bus"
+    },
+    {
+      "slug": "the-marketing-power-of-emotion",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-marketing-power-of-emotion.jpg",
+      "bytes": 13265,
+      "title": "The Marketing Power Of Emotion"
+    },
+    {
+      "slug": "the-lean-startup-continuous-innovation-playbook",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "the-lean-startup-continuous-innovation-playbook.jpg",
       "bytes": 3576,
-      "title": "Document"
+      "title": "The Lean Startup: Continuous Innovation Playbook"
     },
     {
-      "slug": "extreme-ownership",
+      "slug": "aws-certified-cloud-practitioner-all-in-one-exam",
       "status": "downloaded",
       "source": "open-library",
-      "file": "extreme-ownership.jpg",
-      "bytes": 22221,
-      "title": "Extreme-Ownership"
+      "file": "aws-certified-cloud-practitioner-all-in-one-exam.jpg",
+      "bytes": 49592,
+      "title": "AWS Certified Cloud Practitioner All in One Exam"
     },
     {
-      "slug": "in-search-of-excellence",
+      "slug": "aws-certified-cloud-practitioner-study-guide-clf",
       "status": "downloaded",
       "source": "open-library",
-      "file": "in-search-of-excellence.jpg",
-      "bytes": 37549,
-      "title": "In search of excellence"
+      "file": "aws-certified-cloud-practitioner-study-guide-clf.jpg",
+      "bytes": 29688,
+      "title": "AWS Certified Cloud Practitioner Study Guide Clf"
     },
     {
-      "slug": "india-s-most-fearless-2",
+      "slug": "building-secure-servers-with-linux",
       "status": "downloaded",
       "source": "open-library",
-      "file": "india-s-most-fearless-2.jpg",
-      "bytes": 62174,
-      "title": "India's Most Fearless 2"
+      "file": "building-secure-servers-with-linux.jpg",
+      "bytes": 61412,
+      "title": "Building Secure Servers with Linux"
     },
     {
-      "slug": "jakes-resume",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "jakes-resume.jpg",
-      "bytes": 4438,
-      "title": "Jakes-Resume"
-    },
-    {
-      "slug": "many-lives-many-masters",
+      "slug": "cloud-computing-simplified",
       "status": "downloaded",
       "source": "open-library",
-      "file": "many-lives-many-masters.jpg",
-      "bytes": 40282,
-      "title": "Many Lives, Many Masters"
+      "file": "cloud-computing-simplified.jpg",
+      "bytes": 41536,
+      "title": "Cloud Computing Simplified"
     },
     {
-      "slug": "only-love-is-real",
+      "slug": "exam-ref-dp-900-microsoft-azure-data-fundamental",
       "status": "downloaded",
       "source": "open-library",
-      "file": "only-love-is-real.jpg",
-      "bytes": 41676,
-      "title": "Only Love Is Real"
+      "file": "exam-ref-dp-900-microsoft-azure-data-fundamental.jpg",
+      "bytes": 28554,
+      "title": "Exam Ref DP 900 Microsoft Azure Data Fundamental"
     },
     {
-      "slug": "project-resource-allocation-pdf",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "project-resource-allocation-pdf.jpg",
-      "bytes": 9144,
-      "title": "Project ] Resource Allocation Pdf"
-    },
-    {
-      "slug": "same-soul-many-bodies",
+      "slug": "linux-command-line-and-shell-scripting-bible",
       "status": "downloaded",
       "source": "open-library",
-      "file": "same-soul-many-bodies.jpg",
-      "bytes": 38531,
-      "title": "Same Soul, Many Bodies"
+      "file": "linux-command-line-and-shell-scripting-bible.jpg",
+      "bytes": 35841,
+      "title": "Linux Command Line and Shell Scripting Bible"
     },
     {
-      "slug": "set-boundaries-find",
+      "slug": "linux-and-lpic-1-guide-to-linux-certification",
       "status": "downloaded",
       "source": "open-library",
-      "file": "set-boundaries-find.jpg",
-      "bytes": 27032,
-      "title": "Set Boundaries Find"
+      "file": "linux-and-lpic-1-guide-to-linux-certification.jpg",
+      "bytes": 38574,
+      "title": "Linux+ and LPIC 1 Guide to Linux Certification,"
     },
     {
-      "slug": "she-s-on-top",
+      "slug": "maxwell-john-c-the-15-invaluable-laws-of-growth",
       "status": "downloaded",
       "source": "open-library",
-      "file": "she-s-on-top.jpg",
-      "bytes": 30113,
-      "title": "She's On Top"
+      "file": "maxwell-john-c-the-15-invaluable-laws-of-growth.jpg",
+      "bytes": 33786,
+      "title": "Maxwell, John C The 15 Invaluable Laws of Growth"
     },
     {
-      "slug": "short-video-course",
+      "slug": "mcsa-guide-to-identity-with-windows-server-2016",
       "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "short-video-course.jpg",
-      "bytes": 9829,
-      "title": "Short Video Course"
-    },
-    {
-      "slug": "supplier-directory",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "supplier-directory.jpg",
-      "bytes": 3966,
-      "title": "Supplier Directory"
-    },
-    {
-      "slug": "the-big-picture-carroll",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "the-big-picture-carroll.jpg",
-      "bytes": 6166,
-      "title": "The Big Picture Carroll"
-    },
-    {
-      "slug": "the-science-of-extraordinary-performance",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "the-science-of-extraordinary-performance.jpg",
-      "bytes": 17296,
-      "title": "The Science Of Extraordinary Performance"
-    },
-    {
-      "slug": "the-power-of-one",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-power-of-one.jpg",
-      "bytes": 29287,
-      "title": "The Power of One"
-    },
-    {
-      "slug": "through-time-into-healing",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "through-time-into-healing.jpg",
-      "bytes": 31030,
-      "title": "Through Time Into Healing"
+      "source": "internet-archive",
+      "file": "mcsa-guide-to-identity-with-windows-server-2016.jpg",
+      "bytes": 12210,
+      "title": "MCSA Guide to Identity with Windows Server 2016,"
     }
   ],
-  "offset": 2000,
-  "nextOffset": 2500,
+  "offset": 2500,
+  "nextOffset": 3000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 188,
-    "keep_existing": 751,
-    "not_found": 1556,
-    "bad_image": 5
+    "downloaded": 312,
+    "keep_existing": 857,
+    "not_found": 1825,
+    "bad_image": 6
   },
-  "totalProcessed": 2500
+  "totalProcessed": 3000
 }
