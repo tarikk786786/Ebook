@@ -41,9 +41,46 @@ const securityHeaders = [
 
 const nextConfig = {
   experimental: {
-    // Include the optional gzip manifest index in the dynamic book detail route bundle.
+    // These files are read through fs at runtime (rather than imported). Without
+    // explicit tracing, Vercel's serverless functions omit the 86k catalog and
+    // cover/metadata indexes, so the storefront silently falls back to sparse
+    // records and generic cover placeholders.
     outputFileTracingIncludes: {
-      "/book/[slug]": ["./data/catalog/research_link_directory.json.gz"],
+      "/api/books": [
+        "./data/catalog/master_86k_part1.json",
+        "./data/catalog/master_86k_part2.json",
+        "./data/catalog/duplicate_suppression.json",
+        "./data/catalog/cover_map_from_pdfs.json",
+        "./data/catalog/cover_map_from_book_covers.json",
+        "./data/catalog/cover_map_from_pdf_list.json",
+        "./data/catalog/cover_url_index_86k.json",
+        "./data/catalog/market_price_overlay.json",
+        "./data/catalog/verified_metadata_overlay_86k.json",
+        "./data/catalog/curated_masterclasses_from_pdf.json",
+        "./data/catalog/research_link_directory.json.gz",
+      ],
+      "/api/covers/[slug]": [
+        "./data/catalog/master_86k_part1.json",
+        "./data/catalog/master_86k_part2.json",
+        "./data/catalog/cover_map_from_pdfs.json",
+        "./data/catalog/cover_map_from_book_covers.json",
+        "./data/catalog/cover_map_from_pdf_list.json",
+        "./data/catalog/cover_url_index_86k.json",
+        "./data/catalog/curated_masterclasses_from_pdf.json",
+      ],
+      "/book/[slug]": [
+        "./data/catalog/master_86k_part1.json",
+        "./data/catalog/master_86k_part2.json",
+        "./data/catalog/duplicate_suppression.json",
+        "./data/catalog/cover_map_from_pdfs.json",
+        "./data/catalog/cover_map_from_book_covers.json",
+        "./data/catalog/cover_map_from_pdf_list.json",
+        "./data/catalog/cover_url_index_86k.json",
+        "./data/catalog/market_price_overlay.json",
+        "./data/catalog/verified_metadata_overlay_86k.json",
+        "./data/catalog/curated_masterclasses_from_pdf.json",
+        "./data/catalog/research_link_directory.json.gz",
+      ],
     },
   },
   reactStrictMode: true,
