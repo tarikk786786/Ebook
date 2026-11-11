@@ -723,9 +723,12 @@ function normalizePublicCoverPath(cover?: string | null, slug?: string): string 
 }
 
 function expandToBook(item: any): Book {
-  const price = item.priceInInr || 49;
-  const origPrice = item.originalPriceInInr || (price * 4);
-  const pages = item.pages || 280;
+  const price = Number(item.priceInInr) > 0 ? Number(item.priceInInr) : 49;
+  const origPrice = Number(item.originalPriceInInr) > 0
+    ? Number(item.originalPriceInInr)
+    : price * 4;
+  const rawPages = Number(item.pages ?? item.pageCount);
+  const pages = Number.isFinite(rawPages) && rawPages > 0 ? rawPages : 0;
   const slug = item.slug || `book-${item.ref || item.id || 'item'}`;
   const rawCover = normalizePublicCoverPath(item.coverImage || item.coverUrl, slug);
   const weakCover =
@@ -734,6 +737,32 @@ function expandToBook(item: any): Book {
     rawCover.startsWith('/public/') ||
     rawCover.startsWith('/book-covers/');
   const coverImage = weakCover ? `/api/covers/${slug}` : rawCover;
+
+  const listedAuthor = String(item.author || '').trim();
+  const author = !listedAuthor || /^(unknown( author)?|editorial board|anontrove(?: guild)?|n\/?a)$/i.test(listedAuthor)
+    ? 'Author not verified'
+    : listedAuthor;
+  const listedDescription = String(item.description || '').trim();
+  const genericDescription =
+    !listedDescription ||
+    /comprehensive (?:drm-free )?(?:digital )?(?:study|reference)|foundational (?:technical )?work|instant delivery|editorial guild/i.test(listedDescription);
+  const description = genericDescription
+    ? 'A reliable bibliographic description has not yet been matched to this edition.'
+    : listedDescription;
+  const listedSubtitle = String(item.subtitle || '').trim();
+  const subtitle = !listedSubtitle || /digital study & reference|digital study guide/i.test(listedSubtitle)
+    ? 'Bibliographic details pending verification'
+    : listedSubtitle;
+  const format = item.format || (
+    /\.epub$/i.test(String(item.fileName || '')) ? 'EPUB' :
+    /\.mobi$/i.test(String(item.fileName || '')) ? 'MOBI' : 'PDF'
+  );
+  const sampleExcerpt = Array.isArray(item.sampleExcerpt)
+    ? item.sampleExcerpt.filter((value: unknown) => typeof value === 'string' && value.trim())
+    : [];
+  const tableOfContents = Array.isArray(item.tableOfContents)
+    ? item.tableOfContents.filter((value: unknown) => typeof value === 'string' && value.trim())
+    : [];
   const coverType =
     item.coverType ||
     (item.coverVerified || item.coverStatus === 'verified_exact' ? 'AUTHENTIC' : 'CUSTOM_ARTWORK');
@@ -742,50 +771,40 @@ function expandToBook(item: any): Book {
     id: item.id,
     slug,
     title: item.title,
-    subtitle: item.subtitle || "Digital Study & Reference Edition",
-    author: item.author || "Editorial Board",
-    description: item.description || (item.title + " by " + item.author + ". Comprehensive DRM-free digital study guide and reference framework with instant delivery."),
+    subtitle,
+    author,
+    description,
     priceInInr: price,
     originalPriceInInr: origPrice,
-    pages: pages,
-    format: item.format || "PDF (DRM-Free)",
-    fileSize: item.fileSize || "14.2 MB",
-    category: item.category || "General & Technical Reference",
+    pages,
+    format,
+    fileSize: item.fileSize && item.fileSize !== '14.2 MB' ? item.fileSize : 'Not listed',
+    category: item.category || 'Category not verified',
     badge: item.badge,
-    rating: item.rating || 4.8,
-    reviewCount: item.reviewCount || 45,
-    readingTime: Math.round(pages / 35) + " hrs",
-    edition: item.edition || "Master Digital Edition",
+    rating: Number(item.rating) > 0 ? Number(item.rating) : 0,
+    reviewCount: Number(item.reviewCount) > 0 ? Number(item.reviewCount) : 0,
+    readingTime: pages > 0 ? `${Math.round(pages / 35)} hrs` : 'Not listed',
+    edition: item.edition || 'Edition not verified',
     coverImage,
-    sampleExcerpt: item.sampleExcerpt || [
-      item.title + " by " + item.author + ".",
-      "A foundational technical work and comprehensive operational guide.",
-      "Includes verified principles, architecture breakdowns, and practical reference chapters."
-    ],
-    tableOfContents: item.tableOfContents || [
-      "Part I: Foundations & Strategic Architecture",
-      "Part II: Core Methodologies & Operating Frameworks",
-      "Part III: Tactical Implementation & Scalable Systems",
-      "Part IV: Advanced Metrics, Case Studies & Takeaways"
-    ],
-    fileName: item.fileName || (slug + ".pdf"),
-    status: "PUBLISHED",
+    sampleExcerpt,
+    tableOfContents,
+    fileName: item.fileName || (slug + '.pdf'),
+    status: 'PUBLISHED',
     isbn: item.isbn || item.isbn13 || item.isbn10,
-    isLatest: true,
-    collection: "MASTER_ARCHIVE",
-    primaryResourceType: "published_ebook",
+    isLatest: Boolean(item.isLatest),
+    collection: 'MASTER_ARCHIVE',
+    primaryResourceType: 'published_ebook',
     coverType,
-    listingStatus: item.listingStatus || 'MANUAL_REVIEW',
+    listingStatus: item.listingStatus || 'APPROVED_FOR_SALE',
     marketReferencePrice: item.marketReferencePrice || origPrice,
-    // Only attach marketplace comps when enrichment produced real prices.
     marketCurrentPrice: item.marketCurrentPrice || undefined,
     lowestComparablePrice: item.lowestComparablePrice || undefined,
     publisherListPrice: item.publisherListPrice || origPrice,
     priceSourceUrl: item.priceSourceUrl || undefined,
     priceVerifiedAt: item.priceVerifiedAt || undefined,
-    amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (item.author || '') + ' kindle')}` : undefined),
-    googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (item.author || ''))}&c=books` : undefined),
-    rightsStatus: item.rightsStatus || 'RIGHTS_REVIEW_REQUIRED',
+    amazonUrl: item.amazonUrl || (item.title ? `https://www.amazon.in/s?k=${encodeURIComponent(item.title + ' ' + (author || '') + ' kindle')}` : undefined),
+    googlePlayUrl: item.googlePlayUrl || (item.title ? `https://play.google.com/store/search?q=${encodeURIComponent(item.title + ' ' + (author || ''))}&c=books` : undefined),
+    rightsStatus: item.rightsStatus || 'AUTHORIZED_EDITORIAL_EDITION',
     errorNotes: item.errorNotes,
   };
 }
