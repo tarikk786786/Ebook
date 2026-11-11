@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    # Run nightly regression test at 02:00 UTC
     - cron: '0 2 * * *'
   workflow_dispatch:
 
@@ -17,16 +16,15 @@ jobs:
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
-
       - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
-
+          cache: npm
       - name: Install Node Dependencies
         run: npm ci
-
+      - name: Run Security Regression Tests
+        run: npm run test:security
       - name: Run Next.js Production Build
         run: npm run build
         env:
@@ -41,37 +39,24 @@ jobs:
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
-
       - name: Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install Python Playwright & Dependencies
+          cache: pip
+      - name: Install Playwright Chromium
         run: |
-          python -m pip install --upgrade pip
-          pip install playwright requests
-          playwright install --with-deps chromium
-
-      - name: Execute Full API Regression & Security Audit
-        run: |
-          python -u projects/Autonomous_QA_System/tests/test_05_api_suite.py
+          python -m pip install --disable-pip-version-check --retries 5 --timeout 60 playwright
+          python -m playwright install --with-deps chromium
+      - name: Execute Live Storefront & Responsive QA
+        run: python -u scripts/ci_live_qa.py
         env:
           EBOOK_SITE_URL: https://ebook-sandy-chi.vercel.app
-          ADMIN_ACCESS_SECRET: ${{ secrets.ADMIN_ACCESS_SECRET }}
-
-      - name: Execute Playwright Real User Simulation & Responsive Test
-        run: |
-          python -u projects/Autonomous_QA_System/tests/test_playwright_e2e.py
-        env:
-          EBOOK_SITE_URL: https://ebook-sandy-chi.vercel.app
-
       - name: Archive QA Test Reports & Screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: autonomous-qa-artifacts
-          path: |
-            projects/Autonomous_QA_System/reports/
-            projects/Autonomous_QA_System/screenshots/
+          path: artifacts/qa/
+          if-no-files-found: warn
           retention-days: 30
