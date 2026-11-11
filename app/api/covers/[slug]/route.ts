@@ -10,15 +10,6 @@ import { pickBestCandidate } from '@/lib/cover-recovery/matcher';
 
 export const dynamic = 'force-dynamic';
 
-function escapeXml(unsafe: string): string {
-  return (unsafe || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
-
 function slugify(input: string): string {
   return (input || '')
     .toLowerCase()
