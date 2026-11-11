@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 22,
-    "keep_existing": 236,
-    "not_found": 239,
-    "bad_image": 3
+    "downloaded": 60,
+    "keep_existing": 105,
+    "not_found": 334,
+    "bad_image": 1
   },
-  "updatedCurated": 0,
+  "updatedCurated": 1,
   "sampleDownloaded": [
     {
-      "slug": "untitled-presentation",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "untitled-presentation.jpg",
-      "bytes": 4431,
-      "title": "Untitled presentation"
-    },
-    {
-      "slug": "vulnerability-management",
+      "slug": "drive",
       "status": "downloaded",
       "source": "open-library",
-      "file": "vulnerability-management.jpg",
-      "bytes": 54454,
-      "title": "Vulnerability Management"
+      "file": "drive.jpg",
+      "bytes": 24745,
+      "title": "Drive"
     },
     {
-      "slug": "1403-pdf",
+      "slug": "eloquent-javascript",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "1403-pdf.jpg",
-      "bytes": 13676,
-      "title": "?????? ??????? ???????? ??? ????? 1403 Pdf"
+      "source": "open-library",
+      "file": "eloquent-javascript.jpg",
+      "bytes": 29981,
+      "title": "Eloquent JavaScript"
     },
     {
-      "slug": "download",
+      "slug": "enterprise-java-microservices",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "enterprise-java-microservices.jpg",
+      "bytes": 29574,
+      "title": "Enterprise Java Microservices"
+    },
+    {
+      "slug": "extracts",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "download.jpg",
+      "file": "extracts.jpg",
+      "bytes": 16288,
+      "title": "Extracts"
+    },
+    {
+      "slug": "flask-web-development-developing",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "flask-web-development-developing.jpg",
       "bytes": 3576,
-      "title": "Download"
+      "title": "Flask Web Development Developing"
     },
     {
-      "slug": "beyond-the-emyth",
+      "slug": "foundations-of-python-network-programming",
       "status": "downloaded",
       "source": "open-library",
-      "file": "beyond-the-emyth.jpg",
-      "bytes": 29547,
-      "title": "Beyond The Emyth"
+      "file": "foundations-of-python-network-programming.jpg",
+      "bytes": 48323,
+      "title": "Foundations Of Python Network Programming"
     },
     {
-      "slug": "building-python-microservices-with-fastapi",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-python-microservices-with-fastapi.jpg",
-      "bytes": 29271,
-      "title": "Building Python Microservices with FastAPI"
-    },
-    {
-      "slug": "building-modern-guis-with-tkinter-and-python",
+      "slug": "fluent-python-clear-concise-and-effective-pro",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "building-modern-guis-with-tkinter-and-python.jpg",
-      "bytes": 13651,
-      "title": "Building Modern GUIs with Tkinter and Python"
+      "file": "fluent-python-clear-concise-and-effective-pro.jpg",
+      "bytes": 11752,
+      "title": "Fluent Python: Clear, Concise, and Effective Pro"
     },
     {
-      "slug": "business-maharajas-piramal",
+      "slug": "frontend",
       "status": "downloaded",
       "source": "open-library",
-      "file": "business-maharajas-piramal.jpg",
-      "bytes": 16651,
-      "title": "Business Maharajas Piramal"
+      "file": "frontend.jpg",
+      "bytes": 31050,
+      "title": "Frontend"
     },
     {
-      "slug": "c-notes",
+      "slug": "full-stack-fastapi-react-mongodb",
       "status": "downloaded",
       "source": "open-library",
-      "file": "c-notes.jpg",
-      "bytes": 41149,
-      "title": "C++ notes"
+      "file": "full-stack-fastapi-react-mongodb.jpg",
+      "bytes": 20077,
+      "title": "Full-Stack-Fastapi-React-Mongodb"
     },
     {
-      "slug": "career-anchors",
+      "slug": "full-stack-quarkus-react-hands",
       "status": "downloaded",
       "source": "open-library",
-      "file": "career-anchors.jpg",
-      "bytes": 30241,
-      "title": "Career Anchors"
+      "file": "full-stack-quarkus-react-hands.jpg",
+      "bytes": 24530,
+      "title": "Full-Stack-Quarkus-React-Hands"
     },
     {
-      "slug": "clean-code",
+      "slug": "get-programming-with-node-js",
       "status": "downloaded",
       "source": "open-library",
-      "file": "clean-code.jpg",
-      "bytes": 41639,
-      "title": "Clean Code"
+      "file": "get-programming-with-node-js.jpg",
+      "bytes": 32458,
+      "title": "Get-Programming-With-Node-Js"
     },
     {
-      "slug": "clean-code-in-php",
+      "slug": "git-cheat-sheet-education",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "clean-code-in-php.jpg",
-      "bytes": 34241,
-      "title": "Clean Code in PHP"
+      "source": "internet-archive",
+      "file": "git-cheat-sheet-education.jpg",
+      "bytes": 11992,
+      "title": "Git Cheat Sheet Education"
     },
     {
-      "slug": "data-structures-and-algorithms-in-python",
+      "slug": "hands-on-devops-with-linux",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-and-algorithms-in-python.jpg",
-      "bytes": 46160,
-      "title": "Data Structures and Algorithms in Python"
+      "file": "hands-on-devops-with-linux.jpg",
+      "bytes": 48270,
+      "title": "Hands on DevOps with Linux"
     },
     {
-      "slug": "data-visualization-with-python",
+      "slug": "hands-on-web-scraping-with-python",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-visualization-with-python.jpg",
-      "bytes": 45178,
-      "title": "Data Visualization with Python"
+      "file": "hands-on-web-scraping-with-python.jpg",
+      "bytes": 35240,
+      "title": "Hands-On Web Scraping with Python"
     },
     {
-      "slug": "designing-data-intensive-applications-volume-1",
+      "slug": "how-to-code-in-react-js",
       "status": "downloaded",
       "source": "open-library",
-      "file": "designing-data-intensive-applications-volume-1.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications ? Volume 1"
+      "file": "how-to-code-in-react-js.jpg",
+      "bytes": 22465,
+      "title": "How To Code in React js"
     },
     {
-      "slug": "designing-data-intensive-applications-volume-2",
+      "slug": "implementing-devsecops-with-docker-and-kubernete",
       "status": "downloaded",
       "source": "open-library",
-      "file": "designing-data-intensive-applications-volume-2.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications ? Volume 2"
+      "file": "implementing-devsecops-with-docker-and-kubernete.jpg",
+      "bytes": 38932,
+      "title": "Implementing DevSecOps with Docker and Kubernete"
     },
     {
-      "slug": "devdas",
+      "slug": "infographic",
       "status": "downloaded",
       "source": "open-library",
-      "file": "devdas.jpg",
-      "bytes": 33531,
-      "title": "Devdas"
+      "file": "infographic.jpg",
+      "bytes": 36723,
+      "title": "Infographic"
     },
     {
-      "slug": "developing-leadership",
+      "slug": "java",
       "status": "downloaded",
       "source": "open-library",
-      "file": "developing-leadership.jpg",
-      "bytes": 21136,
-      "title": "Developing Leadership"
+      "file": "java.jpg",
+      "bytes": 36065,
+      "title": "Java"
     },
     {
-      "slug": "development-of-moral-philosophy-in-india",
+      "slug": "java-programming",
       "status": "downloaded",
       "source": "open-library",
-      "file": "development-of-moral-philosophy-in-india.jpg",
-      "bytes": 43978,
-      "title": "Development Of Moral Philosophy In India"
+      "file": "java-programming.jpg",
+      "bytes": 11663,
+      "title": "Java Programming?"
     },
     {
-      "slug": "devops",
+      "slug": "java-foundations-introduction-to-program-design",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "devops.jpg",
-      "bytes": 59200,
-      "title": "Devops"
+      "source": "internet-archive",
+      "file": "java-foundations-introduction-to-program-design.jpg",
+      "bytes": 10289,
+      "title": "Java Foundations Introduction to Program Design"
     }
   ],
-  "offset": 4500,
-  "nextOffset": 5000,
+  "offset": 5000,
+  "nextOffset": 5500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 770,
-    "keep_existing": 1489,
-    "not_found": 2731,
-    "bad_image": 10
+    "downloaded": 830,
+    "keep_existing": 1594,
+    "not_found": 3065,
+    "bad_image": 11
   },
-  "totalProcessed": 5000
+  "totalProcessed": 5500
 }

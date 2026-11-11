@@ -22375,14 +22375,17 @@
       "fileSize": "—",
       "note": "",
       "description": "Drive by AnonTrove Guild. Curated AnonTrove masterclass edition (120 pages). DRM-free PDF with instant delivery.",
-      "coverImage": "/book-covers/911.jpg",
-      "coverVerified": true,
-      "coverSource": "book-covers-ref",
-      "coverType": "AUTHENTIC",
+      "coverImage": "/covers/drive.jpg",
+      "coverVerified": false,
+      "coverSource": "open-library",
+      "coverType": "CUSTOM_ARTWORK",
       "collection": "LATEST_STARTUP",
       "sourceCatalog": "AnonTrove_Curated_Masterclasses_Catalog.pdf",
       "badge": "Curated",
-      "status": "PUBLISHED"
+      "status": "PUBLISHED",
+      "coverConfidence": "MEDIUM",
+      "coverReviewRequired": true,
+      "coverStatus": "review_required"
     },
     {
       "id": "book-curated-how-to-decide",
