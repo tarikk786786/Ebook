@@ -74,11 +74,13 @@ export interface Book {
     crossref?: string;
     googleImages?: string;
     wikimedia?: string;
+    authorResearchGoogle?: string;
     wikipedia?: string;
     internetArchive?: string;
     gutenberg?: string;
     amazon?: string;
     googlePlay?: string;
+    publisherOfficial?: string;
   };
   authorProfile?: {
     name: string;
