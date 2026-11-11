@@ -344,7 +344,7 @@ export default function BookDetailClient({ book, relatedBooks }: BookDetailClien
                 <div className="flex items-baseline justify-between">
                   <div>
                     <span className="font-serif text-3xl font-bold text-[#24231F]">{displayPrice}</span>
-                    {book.originalPriceInInr > book.priceInInr && (
+                    {canPurchase && book.originalPriceInInr > book.priceInInr && (
                       <span className="ml-2 text-sm text-[#81796D] line-through">{displayOriginalPrice}</span>
                     )}
                     <span className="ml-2 text-xs font-medium text-[#835C3A] bg-[#FAF6F1] px-2 py-0.5 rounded border border-[#F2E8DC]">
