@@ -26,7 +26,7 @@ jobs:
   recover-covers:
     name: Recover a resumable batch from the full 86k directory and indexed covers
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 360
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -41,20 +41,30 @@ jobs:
       - name: Install image validation dependency
         run: python -m pip install --disable-pip-version-check --retries 5 --timeout 60 Pillow
 
-      - name: Recover the next resumable batch
-        run: python -u scripts/backfill_covers_free_apis.py --limit 500 --workers 3
+      - name: Recover and push repeated batches until the run budget is used
         env:
           GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
-
-      - name: Commit recovered covers and cursor
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/covers data/catalog/curated_masterclasses_from_pdf.json data/catalog/cover_backfill_summary.json data/catalog/cover_backfill_cursor.json
-          if git diff --cached --quiet; then
-            echo "No cover files or progress state changed in this batch."
-            exit 0
-          fi
-          git commit -m "chore: recover next batch of ebook covers"
-          git pull --rebase origin main
-          git push origin HEAD:main
+
+          # GITHUB_TOKEN pushes do not trigger another Actions run. Keep the
+          # work in this job and persist the cursor after every 500-book batch.
+          # Ten batches = up to 5,000 records per run; later scheduled/manual
+          # runs resume from the saved cursor until the entire catalogue cycles.
+          for batch in $(seq 1 10); do
+            echo "========== COVER RECOVERY BATCH ${batch}/10 =========="
+            python -u scripts/backfill_covers_free_apis.py --limit 500 --workers 3
+
+            git add public/covers data/catalog/curated_masterclasses_from_pdf.json data/catalog/cover_backfill_summary.json data/catalog/cover_backfill_cursor.json
+            if git diff --cached --quiet; then
+              echo "No new files or progress changes; stopping this run."
+              break
+            fi
+
+            git commit -m "chore: recover ebook cover batch ${batch}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          done
