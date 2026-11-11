@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 36,
-    "keep_existing": 3,
-    "not_found": 459,
-    "bad_image": 2
+    "downloaded": 51,
+    "keep_existing": 5,
+    "not_found": 443,
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "charaka-samhita-text-with-english-tanslation-p-v",
+      "slug": "dayaram",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "charaka-samhita-text-with-english-tanslation-p-v.jpg",
-      "bytes": 18192,
-      "title": "Charaka Samhita Text With English Tanslation P V"
+      "file": "dayaram.jpg",
+      "bytes": 12780,
+      "title": "Dayaram"
     },
     {
-      "slug": "chasing-evil",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chasing-evil.jpg",
-      "bytes": 17043,
-      "title": "Chasing Evil"
-    },
-    {
-      "slug": "checklist",
+      "slug": "dbms",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "checklist.jpg",
+      "file": "dbms.jpg",
       "bytes": 3576,
-      "title": "Checklist"
+      "title": "Dbms"
     },
     {
-      "slug": "child-psychotherapy-homework-planner",
+      "slug": "descent-of-socrates",
       "status": "downloaded",
       "source": "open-library",
-      "file": "child-psychotherapy-homework-planner.jpg",
-      "bytes": 29420,
-      "title": "Child Psychotherapy Homework Planner"
+      "file": "descent-of-socrates.jpg",
+      "bytes": 34736,
+      "title": "Descent Of Socrates"
     },
     {
-      "slug": "childhood-sexual-abuse",
+      "slug": "design-patterns",
       "status": "downloaded",
       "source": "open-library",
-      "file": "childhood-sexual-abuse.jpg",
-      "bytes": 6039,
-      "title": "Childhood Sexual Abuse"
+      "file": "design-patterns.jpg",
+      "bytes": 40893,
+      "title": "Design Patterns"
     },
     {
-      "slug": "child-art-therapy",
+      "slug": "detox-your-ego",
       "status": "downloaded",
       "source": "open-library",
-      "file": "child-art-therapy.jpg",
-      "bytes": 49697,
-      "title": "Child Art Therapy"
+      "file": "detox-your-ego.jpg",
+      "bytes": 33436,
+      "title": "Detox Your Ego"
     },
     {
-      "slug": "chip-war-chris-miller",
+      "slug": "dharma-ki-avdharna",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "chip-war-chris-miller.jpg",
-      "bytes": 11211,
-      "title": "Chip war Chris miller"
+      "file": "dharma-ki-avdharna.jpg",
+      "bytes": 10785,
+      "title": "Dharma Ki Avdharna"
     },
     {
-      "slug": "chitra-adi-shankaracharya",
+      "slug": "dhyan-aur-gyan-swami-akhandananda-saraswati",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "chitra-adi-shankaracharya.jpg",
-      "bytes": 11262,
-      "title": "Chitra-Adi-Shankaracharya"
+      "file": "dhyan-aur-gyan-swami-akhandananda-saraswati.jpg",
+      "bytes": 13478,
+      "title": "Dhyan Aur Gyan Swami Akhandananda Saraswati"
     },
     {
-      "slug": "chromatography",
+      "slug": "did-you-know",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chromatography.jpg",
-      "bytes": 25602,
-      "title": "Chromatography"
+      "file": "did-you-know.jpg",
+      "bytes": 56732,
+      "title": "Did You Know"
     },
     {
-      "slug": "chromatography-1",
+      "slug": "distributed-services-with-go",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chromatography-1.jpg",
-      "bytes": 22151,
-      "title": "Chromatography 1"
+      "file": "distributed-services-with-go.jpg",
+      "bytes": 38661,
+      "title": "Distributed Services with Go"
     },
     {
-      "slug": "cognitive-behavioral-therapy-for-bipolar-disorde",
+      "slug": "django-for-professionals",
       "status": "downloaded",
       "source": "open-library",
-      "file": "cognitive-behavioral-therapy-for-bipolar-disorde.jpg",
-      "bytes": 22553,
-      "title": "Cognitive Behavioral Therapy for Bipolar Disorde"
+      "file": "django-for-professionals.jpg",
+      "bytes": 22359,
+      "title": "Django for professionals"
     },
     {
-      "slug": "cognitive-behavioral-therapy-for-ptsd-a-case-for",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "cognitive-behavioral-therapy-for-ptsd-a-case-for.jpg",
-      "bytes": 33639,
-      "title": "Cognitive Behavioral Therapy for PTSD A Case For"
-    },
-    {
-      "slug": "cognitive-behavioural-therapy-for-child-trauma-a",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "cognitive-behavioural-therapy-for-child-trauma-a.jpg",
-      "bytes": 51374,
-      "title": "Cognitive Behavioural Therapy for Child Trauma a"
-    },
-    {
-      "slug": "cognitive-biases",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "cognitive-biases.jpg",
-      "bytes": 14242,
-      "title": "Cognitive biases"
-    },
-    {
-      "slug": "cognitive-behavioral",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "cognitive-behavioral.jpg",
-      "bytes": 35337,
-      "title": "Cognitive-Behavioral"
-    },
-    {
-      "slug": "collector-sahiba",
+      "slug": "django-3",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "collector-sahiba.jpg",
-      "bytes": 22298,
-      "title": "Collector Sahiba ??????? ??????"
+      "file": "django-3.jpg",
+      "bytes": 3576,
+      "title": "Django 3"
     },
     {
-      "slug": "complex-ptsd-from-surviving-to-thriving",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "complex-ptsd-from-surviving-to-thriving.jpg",
-      "bytes": 15631,
-      "title": "Complex PTSD From Surviving to Thriving"
-    },
-    {
-      "slug": "computer-networks-global-edition",
+      "slug": "do-epic-shit",
       "status": "downloaded",
       "source": "open-library",
-      "file": "computer-networks-global-edition.jpg",
-      "bytes": 18934,
-      "title": "Computer Networks, Global Edition"
+      "file": "do-epic-shit.jpg",
+      "bytes": 25836,
+      "title": "Do Epic Shit"
     },
     {
-      "slug": "computer-networks-notes",
+      "slug": "do-it-today",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "computer-networks-notes.jpg",
-      "bytes": 11788,
-      "title": "Computer Networks Notes"
+      "source": "open-library",
+      "file": "do-it-today.jpg",
+      "bytes": 24194,
+      "title": "Do It Today"
     },
     {
-      "slug": "contagious-why-things-catch-on",
+      "slug": "do-the-work",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "do-the-work.jpg",
+      "bytes": 48558,
+      "title": "Do the Work"
+    },
+    {
+      "slug": "documents",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "contagious-why-things-catch-on.jpg",
-      "bytes": 15482,
-      "title": "Contagious Why Things Catch On"
+      "file": "documents.jpg",
+      "bytes": 3576,
+      "title": "Documents"
+    },
+    {
+      "slug": "dont-believe-everything-you-feel-a-cbt-workbook",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "dont-believe-everything-you-feel-a-cbt-workbook.jpg",
+      "bytes": 42369,
+      "title": "Dont Believe Everything You Feel A CBT Workbook"
+    },
+    {
+      "slug": "dopamine-detox",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "dopamine-detox.jpg",
+      "bytes": 51434,
+      "title": "Dopamine Detox"
+    },
+    {
+      "slug": "draupadi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "draupadi.jpg",
+      "bytes": 43478,
+      "title": "Draupadi"
+    },
+    {
+      "slug": "dreamjob",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "dreamjob.jpg",
+      "bytes": 27002,
+      "title": "DreamJob"
+    },
+    {
+      "slug": "drive-the-surprising-truth-about-what-motivates",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "drive-the-surprising-truth-about-what-motivates.jpg",
+      "bytes": 12671,
+      "title": "Drive The surprising truth about what motivates"
     }
   ],
-  "offset": 8500,
-  "nextOffset": 9000,
+  "offset": 9000,
+  "nextOffset": 9500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1268,
-    "keep_existing": 1813,
-    "not_found": 5900,
-    "bad_image": 19
+    "downloaded": 1319,
+    "keep_existing": 1818,
+    "not_found": 6343,
+    "bad_image": 20
   },
-  "totalProcessed": 9000
+  "totalProcessed": 9500
 }
