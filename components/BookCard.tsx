@@ -153,6 +153,14 @@ export default function BookCard({
             />
           )}
 
+          {imgError && (
+            <div className="absolute bottom-2 left-2 right-2 z-20 pointer-events-none">
+              <span className="inline-flex max-w-full px-2 py-0.5 text-[9px] font-sans font-semibold uppercase tracking-wider bg-white/95 text-[#5B5449] border border-[#E8E4DC] rounded-full shadow-sm backdrop-blur-sm">
+                Genuine file • Full refund
+              </span>
+            </div>
+          )}
+
           {/* Clean Editorial Badges (Aceternity / Magic UI pill pattern) */}
           <div className="absolute top-2 left-2 flex items-center gap-1.5 pointer-events-none z-10">
             <span className="px-2 py-0.5 text-[9px] font-sans font-semibold uppercase tracking-wider bg-white/95 text-[#24231F] border border-[#E8E4DC] rounded-full shadow-sm backdrop-blur-sm">

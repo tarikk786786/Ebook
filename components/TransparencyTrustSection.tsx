@@ -47,6 +47,11 @@ export default function TransparencyTrustSection() {
       num: '08',
       title: 'Zero Artificial Scarcity or Fake Urgency',
       desc: 'No countdown timers, no fake stock numbers, and no deceptive pressure tactics. Honest literature for curious minds.'
+    },
+    {
+      num: '09',
+      title: 'Missing Cover ≠ Fake Book',
+      desc: 'Some titles ship without a publisher thumbnail while artwork is recovered. The ebook file remains genuine. Wrong or unreadable files get a full refund.'
     }
   ];
 
@@ -61,7 +66,7 @@ export default function TransparencyTrustSection() {
             Our Promise: Complete Transparency for Every Book
           </h2>
           <p className="text-xs sm:text-sm text-[#A8A29E] leading-relaxed">
-            These eight operating principles govern every catalogue entry, price recommendation, and file download on AnonTrove:
+            These operating principles govern every catalogue entry, price recommendation, and file download on AnonTrove:
           </p>
         </div>
 
