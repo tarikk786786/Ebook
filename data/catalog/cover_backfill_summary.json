@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 27,
-    "keep_existing": 18,
-    "not_found": 455,
-    "bad_image": 0
+    "downloaded": 63,
+    "keep_existing": 20,
+    "not_found": 415,
+    "bad_image": 2
   },
-  "updatedCurated": 0,
+  "updatedCurated": 1,
   "sampleDownloaded": [
     {
-      "slug": "402",
+      "slug": "answers-to-basic-spiritual-questions-of-sadhaks",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "402.jpg",
+      "file": "answers-to-basic-spiritual-questions-of-sadhaks.jpg",
+      "bytes": 17125,
+      "title": "Answers-to-Basic-Spiritual-Questions-of-Sadhaks"
+    },
+    {
+      "slug": "anthem-ayn-rand",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "anthem-ayn-rand.jpg",
+      "bytes": 4672,
+      "title": "Anthem Ayn Rand"
+    },
+    {
+      "slug": "anthology-of-the-sanyas-upanishads",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "anthology-of-the-sanyas-upanishads.jpg",
+      "bytes": 4897,
+      "title": "Anthology Of The Sanyas Upanishads"
+    },
+    {
+      "slug": "apostle-s-cove",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apostle-s-cove.jpg",
+      "bytes": 10253,
+      "title": "Apostle'S Cove"
+    },
+    {
+      "slug": "apne-har-vichar-pan-na-karein-vishwas-edition",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "apne-har-vichar-pan-na-karein-vishwas-edition.jpg",
       "bytes": 3576,
-      "title": "402"
+      "title": "Apne Har Vichar Pan Na Karein Vishwas Edition"
     },
     {
-      "slug": "410",
+      "slug": "aquarius",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "410.jpg",
-      "bytes": 8549,
-      "title": "410"
+      "source": "open-library",
+      "file": "aquarius.jpg",
+      "bytes": 39350,
+      "title": "Aquarius"
     },
     {
-      "slug": "502",
+      "slug": "art-of-conversation",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "502.jpg",
-      "bytes": 7821,
-      "title": "502"
+      "source": "open-library",
+      "file": "art-of-conversation.jpg",
+      "bytes": 43573,
+      "title": "Art Of Conversation"
     },
     {
-      "slug": "539",
+      "slug": "art-therapy-for-groups-a-handbook-of-themes-and",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "art-therapy-for-groups-a-handbook-of-themes-and.jpg",
+      "bytes": 36609,
+      "title": "Art Therapy for Groups A Handbook of Themes and"
+    },
+    {
+      "slug": "artha-sastra-rangarajan-l-n-penguin",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "539.jpg",
+      "file": "artha-sastra-rangarajan-l-n-penguin.jpg",
+      "bytes": 15442,
+      "title": "Artha Sastra Rangarajan L N Penguin"
+    },
+    {
+      "slug": "arts-activities-for-children-and-young-people-in",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "arts-activities-for-children-and-young-people-in.jpg",
+      "bytes": 38164,
+      "title": "Arts Activities for Children and Young People in"
+    },
+    {
+      "slug": "ask-yourself",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "ask-yourself.jpg",
+      "bytes": 6629,
+      "title": "Ask Yourself"
+    },
+    {
+      "slug": "assignment-2",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "assignment-2.jpg",
+      "bytes": 45479,
+      "title": "Assignment 2"
+    },
+    {
+      "slug": "at-your-command",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "at-your-command.jpg",
+      "bytes": 19381,
+      "title": "At Your Command"
+    },
+    {
+      "slug": "astrology-for-everyone",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "astrology-for-everyone.jpg",
+      "bytes": 19074,
+      "title": "Astrology For Everyone"
+    },
+    {
+      "slug": "attitude-is-everything",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "attitude-is-everything.jpg",
+      "bytes": 84981,
+      "title": "Attitude Is Everything"
+    },
+    {
+      "slug": "awaken-the-giant-within-robbins",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "awaken-the-giant-within-robbins.jpg",
+      "bytes": 52731,
+      "title": "Awaken the Giant Within Robbins"
+    },
+    {
+      "slug": "awakened-imagination-the-search",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "awakened-imagination-the-search.jpg",
+      "bytes": 14944,
+      "title": "Awakened Imagination The Search"
+    },
+    {
+      "slug": "basics-cheatsheet",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "basics-cheatsheet.jpg",
       "bytes": 3576,
-      "title": "539"
+      "title": "Basics Cheatsheet"
     },
     {
-      "slug": "543",
+      "slug": "becoming",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "becoming.jpg",
+      "bytes": 41074,
+      "title": "Becoming"
+    },
+    {
+      "slug": "becoming-michelle-obama",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "543.jpg",
-      "bytes": 5100,
-      "title": "543"
-    },
-    {
-      "slug": "544",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "544.jpg",
-      "bytes": 5616,
-      "title": "544"
-    },
-    {
-      "slug": "5g-lte-narrowband-internet-of-things-nb-iot",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "5g-lte-narrowband-internet-of-things-nb-iot.jpg",
-      "bytes": 43256,
-      "title": "5G LTE Narrowband Internet of Things NB IoT"
-    },
-    {
-      "slug": "619",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "619.jpg",
-      "bytes": 26714,
-      "title": "619"
-    },
-    {
-      "slug": "625",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "625.jpg",
-      "bytes": 3576,
-      "title": "625"
-    },
-    {
-      "slug": "a-history-of-indian-literature-i",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "a-history-of-indian-literature-i.jpg",
-      "bytes": 14487,
-      "title": "A History of Indian Literature I"
-    },
-    {
-      "slug": "a-passage-to-india",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "a-passage-to-india.jpg",
-      "bytes": 14970,
-      "title": "A Passage To India"
-    },
-    {
-      "slug": "a-promised-land",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "a-promised-land.jpg",
-      "bytes": 29440,
-      "title": "A Promised Land"
-    },
-    {
-      "slug": "a-to-z-india-november-2021-issue",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "a-to-z-india-november-2021-issue.jpg",
-      "bytes": 11347,
-      "title": "A TO Z INDIA NOVEMBER 2021 Issue"
-    },
-    {
-      "slug": "a-true-guru",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "a-true-guru.jpg",
-      "bytes": 4516,
-      "title": "A True Guru"
-    },
-    {
-      "slug": "a-wonderful-creation",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "a-wonderful-creation.jpg",
-      "bytes": 5444,
-      "title": "A Wonderful Creation"
-    },
-    {
-      "slug": "a-promised-land-obama",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "a-promised-land-obama.jpg",
-      "bytes": 29440,
-      "title": "A promised land Obama"
-    },
-    {
-      "slug": "a-book-of-five-rings",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "a-book-of-five-rings.jpg",
-      "bytes": 50657,
-      "title": "A-book-of-five-rings"
-    },
-    {
-      "slug": "abraham-lincon",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "abraham-lincon.jpg",
-      "bytes": 36454,
-      "title": "Abraham Lincon"
-    },
-    {
-      "slug": "act-like-a-ceo",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "act-like-a-ceo.jpg",
-      "bytes": 30131,
-      "title": "Act Like a CEO"
-    },
-    {
-      "slug": "active-directory-administration-cookbook-proven",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "active-directory-administration-cookbook-proven.jpg",
-      "bytes": 46461,
-      "title": "Active Directory Administration Cookbook Proven"
+      "file": "becoming-michelle-obama.jpg",
+      "bytes": 7211,
+      "title": "Becoming - Michelle Obama"
     }
   ],
-  "offset": 7500,
-  "nextOffset": 8000,
+  "offset": 8000,
+  "nextOffset": 8500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1169,
-    "keep_existing": 1790,
-    "not_found": 5026,
-    "bad_image": 15
+    "downloaded": 1232,
+    "keep_existing": 1810,
+    "not_found": 5441,
+    "bad_image": 17
   },
-  "totalProcessed": 8000
+  "totalProcessed": 8500
 }

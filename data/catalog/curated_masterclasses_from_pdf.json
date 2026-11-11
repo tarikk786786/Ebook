@@ -22329,14 +22329,17 @@
       "fileSize": "—",
       "note": "",
       "description": "Blink by AnonTrove Guild. Curated AnonTrove masterclass edition (120 pages). DRM-free PDF with instant delivery.",
-      "coverImage": "/book-covers/909.jpg",
-      "coverVerified": true,
-      "coverSource": "book-covers-ref",
-      "coverType": "AUTHENTIC",
+      "coverImage": "/covers/blink.jpg",
+      "coverVerified": false,
+      "coverSource": "open-library",
+      "coverType": "CUSTOM_ARTWORK",
       "collection": "LATEST_STARTUP",
       "sourceCatalog": "AnonTrove_Curated_Masterclasses_Catalog.pdf",
       "badge": "Curated",
-      "status": "PUBLISHED"
+      "status": "PUBLISHED",
+      "coverConfidence": "MEDIUM",
+      "coverReviewRequired": true,
+      "coverStatus": "review_required"
     },
     {
       "id": "book-curated-decisive",
