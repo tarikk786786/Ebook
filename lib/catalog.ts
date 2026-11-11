@@ -9,7 +9,6 @@ export interface Book {
   slug: string;
   ref?: number | string;
   catalogNum?: number | string;
-  researchSource?: { manifestId?: number; listedTitle?: string; listedAuthor?: string };
   title: string;
   subtitle: string;
   author: string;
