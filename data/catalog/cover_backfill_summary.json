@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 124,
-    "keep_existing": 106,
-    "not_found": 269,
+    "downloaded": 106,
+    "keep_existing": 53,
+    "not_found": 340,
     "bad_image": 1
   },
-  "updatedCurated": 82,
+  "updatedCurated": 61,
   "sampleDownloaded": [
     {
-      "slug": "the-three-rules",
+      "slug": "essential-forensic-biology",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-three-rules.jpg",
-      "bytes": 15713,
-      "title": "The Three Rules"
+      "file": "essential-forensic-biology.jpg",
+      "bytes": 41296,
+      "title": "Essential Forensic Biology"
     },
     {
-      "slug": "your-strategy-needs-a-strategy",
+      "slug": "essentials-of-forensic-psychological-assessment",
       "status": "downloaded",
       "source": "open-library",
-      "file": "your-strategy-needs-a-strategy.jpg",
-      "bytes": 31025,
-      "title": "Your Strategy Needs a Strategy"
+      "file": "essentials-of-forensic-psychological-assessment.jpg",
+      "bytes": 14766,
+      "title": "Essentials of Forensic Psychological Assessment"
     },
     {
-      "slug": "blow-me-away",
+      "slug": "forensic",
       "status": "downloaded",
       "source": "open-library",
-      "file": "blow-me-away.jpg",
-      "bytes": 36321,
-      "title": "Blow Me Away"
+      "file": "forensic.jpg",
+      "bytes": 55370,
+      "title": "Forensic"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-t",
+      "slug": "forensic-analysis-of-fire-debris-and-explosives",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "forensic-analysis-of-fire-debris-and-explosives.jpg",
+      "bytes": 23935,
+      "title": "Forensic Analysis of Fire Debris and Explosives@"
+    },
+    {
+      "slug": "forensic-anthropology-an-introduction",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "crossing-the-chasm-marketing-and-selling-high-t.jpg",
-      "bytes": 23813,
-      "title": "Crossing the Chasm: Marketing and Selling High-T"
+      "file": "forensic-anthropology-an-introduction.jpg",
+      "bytes": 20621,
+      "title": "Forensic Anthropology An Introduction"
     },
     {
-      "slug": "good-to-great-why-some-companies-make-the-leap",
+      "slug": "forensic-engineering-investigation",
       "status": "downloaded",
       "source": "open-library",
-      "file": "good-to-great-why-some-companies-make-the-leap.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "forensic-engineering-investigation.jpg",
+      "bytes": 42398,
+      "title": "Forensic Engineering Investigation"
     },
     {
-      "slug": "scaling-your-startup",
+      "slug": "forensic-handwriting-identification-fundamental",
       "status": "downloaded",
       "source": "open-library",
-      "file": "scaling-your-startup.jpg",
-      "bytes": 30625,
-      "title": "Scaling Your Startup"
+      "file": "forensic-handwriting-identification-fundamental.jpg",
+      "bytes": 29658,
+      "title": "Forensic Handwriting Identification Fundamental"
     },
     {
-      "slug": "the-alchemist",
+      "slug": "forensic-medical-investigation-of-motor-vehicle",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-alchemist.jpg",
-      "bytes": 25188,
-      "title": "The Alchemist"
+      "file": "forensic-medical-investigation-of-motor-vehicle.jpg",
+      "bytes": 9712,
+      "title": "Forensic Medical Investigation of Motor Vehicle"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-busi",
+      "slug": "forensic-psychologic",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-busi.jpg",
-      "bytes": 9842,
-      "title": "The Hard Thing About Hard Things Building A Busi"
+      "file": "forensic-psychologic.jpg",
+      "bytes": 33292,
+      "title": "Forensic Psychologic"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-bus",
+      "slug": "forensic-psychological-assessment-in-practice-ca",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-bus.jpg",
-      "bytes": 9842,
-      "title": "The Hard Thing About Hard Things: Building a Bus"
+      "file": "forensic-psychological-assessment-in-practice-ca.jpg",
+      "bytes": 12052,
+      "title": "Forensic Psychological Assessment in Practice Ca"
     },
     {
-      "slug": "the-marketing-power-of-emotion",
+      "slug": "forensic-psychologists-casebook-psychological",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-marketing-power-of-emotion.jpg",
-      "bytes": 13265,
-      "title": "The Marketing Power Of Emotion"
+      "file": "forensic-psychologists-casebook-psychological.jpg",
+      "bytes": 11042,
+      "title": "Forensic Psychologists Casebook Psychological"
     },
     {
-      "slug": "the-lean-startup-continuous-innovation-playbook",
+      "slug": "forensic-psychology",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "forensic-psychology.jpg",
+      "bytes": 33292,
+      "title": "Forensic Psychology"
+    },
+    {
+      "slug": "forensic-science-in-wildlife-investigation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "forensic-science-in-wildlife-investigation.jpg",
+      "bytes": 45257,
+      "title": "Forensic Science In Wildlife Investigation"
+    },
+    {
+      "slug": "forensic-document-examination",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "forensic-document-examination.jpg",
+      "bytes": 34636,
+      "title": "Forensic document examination"
+    },
+    {
+      "slug": "forensic-science-the-basics",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "the-lean-startup-continuous-innovation-playbook.jpg",
-      "bytes": 3576,
-      "title": "The Lean Startup: Continuous Innovation Playbook"
+      "file": "forensic-science-the-basics.jpg",
+      "bytes": 17061,
+      "title": "Forensic science the basics"
     },
     {
-      "slug": "aws-certified-cloud-practitioner-all-in-one-exam",
+      "slug": "foundations-of-forensic-document-analysis-theory",
       "status": "downloaded",
       "source": "open-library",
-      "file": "aws-certified-cloud-practitioner-all-in-one-exam.jpg",
-      "bytes": 49592,
-      "title": "AWS Certified Cloud Practitioner All in One Exam"
+      "file": "foundations-of-forensic-document-analysis-theory.jpg",
+      "bytes": 23412,
+      "title": "Foundations of Forensic Document Analysis Theory"
     },
     {
-      "slug": "aws-certified-cloud-practitioner-study-guide-clf",
+      "slug": "hacking-for-dummies-beaver",
       "status": "downloaded",
       "source": "open-library",
-      "file": "aws-certified-cloud-practitioner-study-guide-clf.jpg",
-      "bytes": 29688,
-      "title": "AWS Certified Cloud Practitioner Study Guide Clf"
+      "file": "hacking-for-dummies-beaver.jpg",
+      "bytes": 46732,
+      "title": "Hacking For Dummies Beaver"
     },
     {
-      "slug": "building-secure-servers-with-linux",
+      "slug": "handbook-of-digital-and-multimedia-forensic-evid",
       "status": "downloaded",
       "source": "open-library",
-      "file": "building-secure-servers-with-linux.jpg",
-      "bytes": 61412,
-      "title": "Building Secure Servers with Linux"
+      "file": "handbook-of-digital-and-multimedia-forensic-evid.jpg",
+      "bytes": 14779,
+      "title": "Handbook of digital and multimedia forensic evid"
     },
     {
-      "slug": "cloud-computing-simplified",
+      "slug": "introduction-to-forensic-anthropology",
       "status": "downloaded",
       "source": "open-library",
-      "file": "cloud-computing-simplified.jpg",
-      "bytes": 41536,
-      "title": "Cloud Computing Simplified"
+      "file": "introduction-to-forensic-anthropology.jpg",
+      "bytes": 33076,
+      "title": "Introduction to Forensic Anthropology"
     },
     {
-      "slug": "exam-ref-dp-900-microsoft-azure-data-fundamental",
+      "slug": "introduction-to-forensic-psychology",
       "status": "downloaded",
       "source": "open-library",
-      "file": "exam-ref-dp-900-microsoft-azure-data-fundamental.jpg",
-      "bytes": 28554,
-      "title": "Exam Ref DP 900 Microsoft Azure Data Fundamental"
-    },
-    {
-      "slug": "linux-command-line-and-shell-scripting-bible",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "linux-command-line-and-shell-scripting-bible.jpg",
-      "bytes": 35841,
-      "title": "Linux Command Line and Shell Scripting Bible"
-    },
-    {
-      "slug": "linux-and-lpic-1-guide-to-linux-certification",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "linux-and-lpic-1-guide-to-linux-certification.jpg",
-      "bytes": 38574,
-      "title": "Linux+ and LPIC 1 Guide to Linux Certification,"
-    },
-    {
-      "slug": "maxwell-john-c-the-15-invaluable-laws-of-growth",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "maxwell-john-c-the-15-invaluable-laws-of-growth.jpg",
-      "bytes": 33786,
-      "title": "Maxwell, John C The 15 Invaluable Laws of Growth"
-    },
-    {
-      "slug": "mcsa-guide-to-identity-with-windows-server-2016",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "mcsa-guide-to-identity-with-windows-server-2016.jpg",
-      "bytes": 12210,
-      "title": "MCSA Guide to Identity with Windows Server 2016,"
+      "file": "introduction-to-forensic-psychology.jpg",
+      "bytes": 24102,
+      "title": "Introduction to Forensic Psychology"
     }
   ],
-  "offset": 2500,
-  "nextOffset": 3000,
+  "offset": 3000,
+  "nextOffset": 3500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 312,
-    "keep_existing": 857,
-    "not_found": 1825,
-    "bad_image": 6
+    "downloaded": 418,
+    "keep_existing": 910,
+    "not_found": 2165,
+    "bad_image": 7
   },
-  "totalProcessed": 3000
+  "totalProcessed": 3500
 }
