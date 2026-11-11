@@ -1,142 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 15,
-    "keep_existing": 181,
-    "not_found": 304,
-    "bad_image": 0
+    "downloaded": 49,
+    "keep_existing": 240,
+    "not_found": 210,
+    "bad_image": 1
   },
-  "updatedCurated": 0,
+  "updatedCurated": 27,
   "sampleDownloaded": [
     {
-      "slug": "time-management",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "time-management.jpg",
-      "bytes": 25936,
-      "title": "Time Management"
-    },
-    {
-      "slug": "w-chan-kim-rene-e-mauborgne-blue-ocean-strategy",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "w-chan-kim-rene-e-mauborgne-blue-ocean-strategy.jpg",
-      "bytes": 37907,
-      "title": "W Chan Kim, Renée Mauborgne Blue Ocean Strategy"
-    },
-    {
-      "slug": "tendering-11",
+      "slug": "day-4-9-video-feedback-checklist",
       "status": "downloaded",
       "source": "existing-86k-cover-index",
-      "file": "tendering-11.jpg",
-      "bytes": 13577,
-      "title": "& Tendering] 11"
+      "file": "day-4-9-video-feedback-checklist.jpg",
+      "bytes": 9933,
+      "title": "Day 4. 9- Video feedback Checklist"
     },
     {
-      "slug": "tendering-8",
+      "slug": "design-site-visit-checklist",
       "status": "downloaded",
       "source": "existing-86k-cover-index",
-      "file": "tendering-8.jpg",
-      "bytes": 14083,
-      "title": "& Tendering] 8"
+      "file": "design-site-visit-checklist.jpg",
+      "bytes": 9933,
+      "title": "Design] SITE VISIT CHECKLIST"
     },
     {
-      "slug": "tendering-change-order-1-extra-item",
+      "slug": "detective-cover-letter-for-fresher",
       "status": "downloaded",
       "source": "existing-86k-cover-index",
-      "file": "tendering-change-order-1-extra-item.jpg",
-      "bytes": 13835,
-      "title": "& Tendering] Change order-1 extra item"
+      "file": "detective-cover-letter-for-fresher.jpg",
+      "bytes": 9933,
+      "title": "Detective] Cover letter for Fresher"
     },
     {
-      "slug": "tendering-approved-change-order",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "tendering-approved-change-order.jpg",
-      "bytes": 9856,
-      "title": "& Tendering] Approved Change Order"
-    },
-    {
-      "slug": "tendering-tender-volumes",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "tendering-tender-volumes.jpg",
-      "bytes": 12727,
-      "title": "& Tendering] Tender Volumes"
-    },
-    {
-      "slug": "0000",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "0000.jpg",
-      "bytes": 13763,
-      "title": "0000"
-    },
-    {
-      "slug": "course-introduction",
+      "slug": "document",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "course-introduction.jpg",
-      "bytes": 5885,
-      "title": "Course Introduction"
+      "file": "document.jpg",
+      "bytes": 3576,
+      "title": "Document"
     },
     {
-      "slug": "100-telegram-bots",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "100-telegram-bots.jpg",
-      "bytes": 14905,
-      "title": "100+ Telegram Bots"
-    },
-    {
-      "slug": "3-2-stakeholder-management",
+      "slug": "extreme-ownership",
       "status": "downloaded",
       "source": "open-library",
-      "file": "3-2-stakeholder-management.jpg",
-      "bytes": 37422,
-      "title": "3.2 Stakeholder Management"
+      "file": "extreme-ownership.jpg",
+      "bytes": 22221,
+      "title": "Extreme-Ownership"
     },
     {
-      "slug": "attitude-is-everything-keller",
+      "slug": "in-search-of-excellence",
       "status": "downloaded",
       "source": "open-library",
-      "file": "attitude-is-everything-keller.jpg",
-      "bytes": 25517,
-      "title": "Attitude is Everything Keller"
+      "file": "in-search-of-excellence.jpg",
+      "bytes": 37549,
+      "title": "In search of excellence"
     },
     {
-      "slug": "autocad-15",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "autocad-15.jpg",
-      "bytes": 10892,
-      "title": "AutoCAD] 15"
-    },
-    {
-      "slug": "autocad-6",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "autocad-6.jpg",
-      "bytes": 10448,
-      "title": "AutoCAD] 6"
-    },
-    {
-      "slug": "bottle-of-lies",
+      "slug": "india-s-most-fearless-2",
       "status": "downloaded",
       "source": "open-library",
-      "file": "bottle-of-lies.jpg",
-      "bytes": 34802,
-      "title": "Bottle of Lies"
+      "file": "india-s-most-fearless-2.jpg",
+      "bytes": 62174,
+      "title": "India's Most Fearless 2"
+    },
+    {
+      "slug": "jakes-resume",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "jakes-resume.jpg",
+      "bytes": 4438,
+      "title": "Jakes-Resume"
+    },
+    {
+      "slug": "many-lives-many-masters",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "many-lives-many-masters.jpg",
+      "bytes": 40282,
+      "title": "Many Lives, Many Masters"
+    },
+    {
+      "slug": "only-love-is-real",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "only-love-is-real.jpg",
+      "bytes": 41676,
+      "title": "Only Love Is Real"
+    },
+    {
+      "slug": "project-resource-allocation-pdf",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "project-resource-allocation-pdf.jpg",
+      "bytes": 9144,
+      "title": "Project ] Resource Allocation Pdf"
+    },
+    {
+      "slug": "same-soul-many-bodies",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "same-soul-many-bodies.jpg",
+      "bytes": 38531,
+      "title": "Same Soul, Many Bodies"
+    },
+    {
+      "slug": "set-boundaries-find",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "set-boundaries-find.jpg",
+      "bytes": 27032,
+      "title": "Set Boundaries Find"
+    },
+    {
+      "slug": "she-s-on-top",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "she-s-on-top.jpg",
+      "bytes": 30113,
+      "title": "She's On Top"
+    },
+    {
+      "slug": "short-video-course",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "short-video-course.jpg",
+      "bytes": 9829,
+      "title": "Short Video Course"
+    },
+    {
+      "slug": "supplier-directory",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "supplier-directory.jpg",
+      "bytes": 3966,
+      "title": "Supplier Directory"
+    },
+    {
+      "slug": "the-big-picture-carroll",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "the-big-picture-carroll.jpg",
+      "bytes": 6166,
+      "title": "The Big Picture Carroll"
+    },
+    {
+      "slug": "the-science-of-extraordinary-performance",
+      "status": "downloaded",
+      "source": "existing-86k-cover-index",
+      "file": "the-science-of-extraordinary-performance.jpg",
+      "bytes": 17296,
+      "title": "The Science Of Extraordinary Performance"
+    },
+    {
+      "slug": "the-power-of-one",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-power-of-one.jpg",
+      "bytes": 29287,
+      "title": "The Power of One"
+    },
+    {
+      "slug": "through-time-into-healing",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "through-time-into-healing.jpg",
+      "bytes": 31030,
+      "title": "Through Time Into Healing"
     }
   ],
-  "offset": 1500,
-  "nextOffset": 2000,
+  "offset": 2000,
+  "nextOffset": 2500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 139,
-    "keep_existing": 511,
-    "not_found": 1346,
-    "bad_image": 4
+    "downloaded": 188,
+    "keep_existing": 751,
+    "not_found": 1556,
+    "bad_image": 5
   },
-  "totalProcessed": 2000
+  "totalProcessed": 2500
 }
