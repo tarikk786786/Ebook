@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 60,
-    "keep_existing": 105,
-    "not_found": 334,
-    "bad_image": 1
+    "downloaded": 110,
+    "keep_existing": 53,
+    "not_found": 337,
+    "bad_image": 0
   },
-  "updatedCurated": 1,
+  "updatedCurated": 52,
   "sampleDownloaded": [
     {
-      "slug": "drive",
+      "slug": "reactjs-foundations-building-interfaces",
       "status": "downloaded",
       "source": "open-library",
-      "file": "drive.jpg",
-      "bytes": 24745,
-      "title": "Drive"
+      "file": "reactjs-foundations-building-interfaces.jpg",
+      "bytes": 36027,
+      "title": "Reactjs-Foundations-Building-Interfaces"
     },
     {
-      "slug": "eloquent-javascript",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "eloquent-javascript.jpg",
-      "bytes": 29981,
-      "title": "Eloquent JavaScript"
-    },
-    {
-      "slug": "enterprise-java-microservices",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "enterprise-java-microservices.jpg",
-      "bytes": 29574,
-      "title": "Enterprise Java Microservices"
-    },
-    {
-      "slug": "extracts",
+      "slug": "sql-cheat-sheet",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "extracts.jpg",
-      "bytes": 16288,
-      "title": "Extracts"
+      "file": "sql-cheat-sheet.jpg",
+      "bytes": 13789,
+      "title": "SQL Cheat Sheet"
     },
     {
-      "slug": "flask-web-development-developing",
+      "slug": "sql-for-beginners",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "sql-for-beginners.jpg",
+      "bytes": 31456,
+      "title": "SQL For Beginners"
+    },
+    {
+      "slug": "sagittarius",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "sagittarius.jpg",
+      "bytes": 37830,
+      "title": "Sagittarius"
+    },
+    {
+      "slug": "saleem-siddiqui-learning-test-driven-development",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "saleem-siddiqui-learning-test-driven-development.jpg",
+      "bytes": 49640,
+      "title": "Saleem Siddiqui Learning Test Driven Development"
+    },
+    {
+      "slug": "software-architecture-with-c",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "software-architecture-with-c.jpg",
+      "bytes": 47655,
+      "title": "Software Architecture with C++"
+    },
+    {
+      "slug": "teach-yourself-java-in-21-days",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "teach-yourself-java-in-21-days.jpg",
+      "bytes": 37126,
+      "title": "Teach Yourself Java in 21 Days"
+    },
+    {
+      "slug": "the-code-of-criminal-procedure-1973",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "flask-web-development-developing.jpg",
-      "bytes": 3576,
-      "title": "Flask Web Development Developing"
+      "file": "the-code-of-criminal-procedure-1973.jpg",
+      "bytes": 11868,
+      "title": "The Code Of Criminal Procedure, 1973"
     },
     {
-      "slug": "foundations-of-python-network-programming",
+      "slug": "the-python-book",
       "status": "downloaded",
       "source": "open-library",
-      "file": "foundations-of-python-network-programming.jpg",
-      "bytes": 48323,
-      "title": "Foundations Of Python Network Programming"
+      "file": "the-python-book.jpg",
+      "bytes": 39417,
+      "title": "The Python Book"
     },
     {
-      "slug": "fluent-python-clear-concise-and-effective-pro",
+      "slug": "the-rust-programming-language-volume-10",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-rust-programming-language-volume-10.jpg",
+      "bytes": 48432,
+      "title": "The Rust Programming Language ? Volume 10"
+    },
+    {
+      "slug": "the-rust-programming-language-volume-12",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-rust-programming-language-volume-12.jpg",
+      "bytes": 48432,
+      "title": "The Rust Programming Language ? Volume 12"
+    },
+    {
+      "slug": "the-secret",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-secret.jpg",
+      "bytes": 53097,
+      "title": "The Secret"
+    },
+    {
+      "slug": "titles",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "titles.jpg",
+      "bytes": 30339,
+      "title": "Titles"
+    },
+    {
+      "slug": "traefik-api-gateway-for-microservices-with-java",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "traefik-api-gateway-for-microservices-with-java.jpg",
+      "bytes": 39292,
+      "title": "Traefik API Gateway for Microservices With Java"
+    },
+    {
+      "slug": "typescript-4-design-patterns-and-best-practices",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "typescript-4-design-patterns-and-best-practices.jpg",
+      "bytes": 64539,
+      "title": "Typescript 4 Design Patterns and Best Practices"
+    },
+    {
+      "slug": "uddhava-gita-swami-akhandananda-saraswati",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "fluent-python-clear-concise-and-effective-pro.jpg",
-      "bytes": 11752,
-      "title": "Fluent Python: Clear, Concise, and Effective Pro"
+      "file": "uddhava-gita-swami-akhandananda-saraswati.jpg",
+      "bytes": 29077,
+      "title": "Uddhava Gita - Swami Akhandananda Saraswati"
     },
     {
-      "slug": "frontend",
+      "slug": "visual-studio-code-for-python-programmers",
       "status": "downloaded",
       "source": "open-library",
-      "file": "frontend.jpg",
-      "bytes": 31050,
-      "title": "Frontend"
+      "file": "visual-studio-code-for-python-programmers.jpg",
+      "bytes": 26774,
+      "title": "Visual Studio Code for Python Programmers"
     },
     {
-      "slug": "full-stack-fastapi-react-mongodb",
+      "slug": "website-audit-checklist",
       "status": "downloaded",
       "source": "open-library",
-      "file": "full-stack-fastapi-react-mongodb.jpg",
-      "bytes": 20077,
-      "title": "Full-Stack-Fastapi-React-Mongodb"
+      "file": "website-audit-checklist.jpg",
+      "bytes": 58315,
+      "title": "Website Audit Checklist"
     },
     {
-      "slug": "full-stack-quarkus-react-hands",
+      "slug": "how-to-decide",
       "status": "downloaded",
       "source": "open-library",
-      "file": "full-stack-quarkus-react-hands.jpg",
-      "bytes": 24530,
-      "title": "Full-Stack-Quarkus-React-Hands"
+      "file": "how-to-decide.jpg",
+      "bytes": 29448,
+      "title": "How to Decide"
     },
     {
-      "slug": "get-programming-with-node-js",
+      "slug": "magic-words",
       "status": "downloaded",
       "source": "open-library",
-      "file": "get-programming-with-node-js.jpg",
-      "bytes": 32458,
-      "title": "Get-Programming-With-Node-Js"
-    },
-    {
-      "slug": "git-cheat-sheet-education",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "git-cheat-sheet-education.jpg",
-      "bytes": 11992,
-      "title": "Git Cheat Sheet Education"
-    },
-    {
-      "slug": "hands-on-devops-with-linux",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hands-on-devops-with-linux.jpg",
-      "bytes": 48270,
-      "title": "Hands on DevOps with Linux"
-    },
-    {
-      "slug": "hands-on-web-scraping-with-python",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hands-on-web-scraping-with-python.jpg",
-      "bytes": 35240,
-      "title": "Hands-On Web Scraping with Python"
-    },
-    {
-      "slug": "how-to-code-in-react-js",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "how-to-code-in-react-js.jpg",
-      "bytes": 22465,
-      "title": "How To Code in React js"
-    },
-    {
-      "slug": "implementing-devsecops-with-docker-and-kubernete",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "implementing-devsecops-with-docker-and-kubernete.jpg",
-      "bytes": 38932,
-      "title": "Implementing DevSecOps with Docker and Kubernete"
-    },
-    {
-      "slug": "infographic",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "infographic.jpg",
-      "bytes": 36723,
-      "title": "Infographic"
-    },
-    {
-      "slug": "java",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "java.jpg",
-      "bytes": 36065,
-      "title": "Java"
-    },
-    {
-      "slug": "java-programming",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "java-programming.jpg",
-      "bytes": 11663,
-      "title": "Java Programming?"
-    },
-    {
-      "slug": "java-foundations-introduction-to-program-design",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "java-foundations-introduction-to-program-design.jpg",
-      "bytes": 10289,
-      "title": "Java Foundations Introduction to Program Design"
+      "file": "magic-words.jpg",
+      "bytes": 29412,
+      "title": "Magic Words"
     }
   ],
-  "offset": 5000,
-  "nextOffset": 5500,
+  "offset": 5500,
+  "nextOffset": 6000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 830,
-    "keep_existing": 1594,
-    "not_found": 3065,
+    "downloaded": 940,
+    "keep_existing": 1647,
+    "not_found": 3402,
     "bad_image": 11
   },
-  "totalProcessed": 5500
+  "totalProcessed": 6000
 }
