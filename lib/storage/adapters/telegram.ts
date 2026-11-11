@@ -171,7 +171,12 @@ export class TelegramStorageAdapter implements IStorageAdapter {
   ): Promise<string> {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ebook-sandy-chi.vercel.app';
     const expiresAt = Math.floor(Date.now() / 1000) + Math.min(expiresInSeconds, 900);
-    const secret = process.env.STORAGE_SIGN_SECRET || process.env.DOWNLOAD_ENCRYPTION_SECRET || 'anontrove_ephemeral_signing_secret_2026';
+    const secret = (process.env.STORAGE_SIGN_SECRET || process.env.DOWNLOAD_ENCRYPTION_SECRET || '').trim();
+    if (secret.length < 32) {
+      throw new Error(
+        '[FATAL SECURITY] STORAGE_SIGN_SECRET or DOWNLOAD_ENCRYPTION_SECRET (min 32 chars) required for Telegram signed URLs. Refusing hardcoded fallback.'
+      );
+    }
 
     const hmac = crypto
       .createHmac('sha256', secret)
