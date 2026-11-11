@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 179,
-    "keep_existing": 188,
-    "not_found": 133,
+    "downloaded": 151,
+    "keep_existing": 155,
+    "not_found": 194,
     "bad_image": 0
   },
-  "updatedCurated": 174,
+  "updatedCurated": 131,
   "sampleDownloaded": [
     {
-      "slug": "mixed-questions",
+      "slug": "building-a-storybrand",
       "status": "downloaded",
       "source": "open-library",
-      "file": "mixed-questions.jpg",
-      "bytes": 25145,
-      "title": "Mixed Questions"
+      "file": "building-a-storybrand.jpg",
+      "bytes": 23007,
+      "title": "Building a StoryBrand"
     },
     {
-      "slug": "untitled-document",
+      "slug": "buyology",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "buyology.jpg",
+      "bytes": 5377,
+      "title": "Buyology"
+    },
+    {
+      "slug": "confessions-of-an-advertising-man",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "confessions-of-an-advertising-man.jpg",
+      "bytes": 20645,
+      "title": "Confessions of an Advertising Man"
+    },
+    {
+      "slug": "contagious",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "contagious.jpg",
+      "bytes": 28118,
+      "title": "Contagious"
+    },
+    {
+      "slug": "crushing-it",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crushing-it.jpg",
+      "bytes": 39679,
+      "title": "Crushing It!"
+    },
+    {
+      "slug": "how-brands-grow",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "how-brands-grow.jpg",
+      "bytes": 44235,
+      "title": "How Brands Grow"
+    },
+    {
+      "slug": "jab-jab-jab-right-hook",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "jab-jab-jab-right-hook.jpg",
+      "bytes": 62404,
+      "title": "Jab, Jab, Jab, Right Hook"
+    },
+    {
+      "slug": "kellogg-on-branding",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "kellogg-on-branding.jpg",
+      "bytes": 10813,
+      "title": "Kellogg on Branding"
+    },
+    {
+      "slug": "made-to-stick",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "made-to-stick.jpg",
+      "bytes": 26439,
+      "title": "Made to Stick"
+    },
+    {
+      "slug": "marketing-4-0",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "marketing-4-0.jpg",
+      "bytes": 38014,
+      "title": "Marketing 4.0"
+    },
+    {
+      "slug": "marketing-5-0",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "marketing-5-0.jpg",
+      "bytes": 47522,
+      "title": "Marketing 5.0"
+    },
+    {
+      "slug": "obviously-awesome",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "obviously-awesome.jpg",
+      "bytes": 33411,
+      "title": "Obviously Awesome"
+    },
+    {
+      "slug": "marketing-management",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "marketing-management.jpg",
+      "bytes": 53378,
+      "title": "Marketing Management"
+    },
+    {
+      "slug": "permission-marketing",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "permission-marketing.jpg",
+      "bytes": 33135,
+      "title": "Permission Marketing"
+    },
+    {
+      "slug": "principles-of-marketing",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "principles-of-marketing.jpg",
+      "bytes": 25434,
+      "title": "Principles of Marketing"
+    },
+    {
+      "slug": "ogilvy-on-advertising",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "untitled-document.jpg",
-      "bytes": 13334,
-      "title": "Untitled document"
+      "file": "ogilvy-on-advertising.jpg",
+      "bytes": 12599,
+      "title": "Ogilvy on Advertising"
     },
     {
-      "slug": "trading-in-the-zone",
+      "slug": "purple-cow",
       "status": "downloaded",
       "source": "open-library",
-      "file": "trading-in-the-zone.jpg",
-      "bytes": 26346,
-      "title": "Trading in the Zone"
+      "file": "purple-cow.jpg",
+      "bytes": 32201,
+      "title": "Purple Cow"
     },
     {
-      "slug": "bad-blood",
+      "slug": "the-anatomy-of-buzz",
       "status": "downloaded",
       "source": "open-library",
-      "file": "bad-blood.jpg",
-      "bytes": 21717,
-      "title": "Bad Blood"
+      "file": "the-anatomy-of-buzz.jpg",
+      "bytes": 25332,
+      "title": "The Anatomy of Buzz"
     },
     {
-      "slug": "billion-dollar-loser",
+      "slug": "the-brand-gap",
       "status": "downloaded",
       "source": "open-library",
-      "file": "billion-dollar-loser.jpg",
-      "bytes": 42291,
-      "title": "Billion Dollar Loser"
+      "file": "the-brand-gap.jpg",
+      "bytes": 21619,
+      "title": "The Brand Gap"
     },
     {
-      "slug": "call-me-ted",
+      "slug": "the-culting-of-brands",
       "status": "downloaded",
       "source": "open-library",
-      "file": "call-me-ted.jpg",
-      "bytes": 10404,
-      "title": "Call Me Ted"
-    },
-    {
-      "slug": "business-adventures",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "business-adventures.jpg",
-      "bytes": 38680,
-      "title": "Business Adventures"
-    },
-    {
-      "slug": "elon-musk",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "elon-musk.jpg",
-      "bytes": 31936,
-      "title": "Elon Musk"
-    },
-    {
-      "slug": "finding-my-virginity",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "finding-my-virginity.jpg",
-      "bytes": 46053,
-      "title": "Finding My Virginity"
-    },
-    {
-      "slug": "grinding-it-out",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "grinding-it-out.jpg",
-      "bytes": 49260,
-      "title": "Grinding It Out"
-    },
-    {
-      "slug": "iacocca",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "iacocca.jpg",
-      "bytes": 26615,
-      "title": "Iacocca"
-    },
-    {
-      "slug": "losing-my-virginity",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "losing-my-virginity.jpg",
-      "bytes": 39574,
-      "title": "Losing My Virginity"
-    },
-    {
-      "slug": "made-in-america",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "made-in-america.jpg",
-      "bytes": 65995,
-      "title": "Made in America"
-    },
-    {
-      "slug": "made-in-japan",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "made-in-japan.jpg",
-      "bytes": 7180,
-      "title": "Made in Japan"
-    },
-    {
-      "slug": "my-life-and-work",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "my-life-and-work.jpg",
-      "bytes": 18294,
-      "title": "My Life and Work"
-    },
-    {
-      "slug": "my-years-with-general-motors",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "my-years-with-general-motors.jpg",
-      "bytes": 48677,
-      "title": "My Years with General Motors"
-    },
-    {
-      "slug": "no-filter",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "no-filter.jpg",
-      "bytes": 46219,
-      "title": "No Filter"
-    },
-    {
-      "slug": "onward",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "onward.jpg",
-      "bytes": 65685,
-      "title": "Onward"
-    },
-    {
-      "slug": "pour-your-heart-into-it",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "pour-your-heart-into-it.jpg",
-      "bytes": 38879,
-      "title": "Pour Your Heart into It"
-    },
-    {
-      "slug": "shoe-dog",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "shoe-dog.jpg",
-      "bytes": 36887,
-      "title": "Shoe Dog"
+      "file": "the-culting-of-brands.jpg",
+      "bytes": 26468,
+      "title": "The Culting of Brands"
     }
   ],
-  "offset": 3500,
-  "nextOffset": 4000,
+  "offset": 4000,
+  "nextOffset": 4500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 597,
-    "keep_existing": 1098,
-    "not_found": 2298,
+    "downloaded": 748,
+    "keep_existing": 1253,
+    "not_found": 2492,
     "bad_image": 7
   },
-  "totalProcessed": 4000
+  "totalProcessed": 4500
 }
