@@ -74,6 +74,10 @@ export default function HomePage() {
   
   // Pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [catalogBooks, setCatalogBooks] = useState<Book[]>([]);
+  const [catalogTotal, setCatalogTotal] = useState<number>(0);
+  const [catalogLoading, setCatalogLoading] = useState<boolean>(true);
+  const [catalogError, setCatalogError] = useState<string | null>(null);
   const BOOKS_PER_PAGE = 24;
 
   // Load wishlist from local storage
@@ -102,95 +106,51 @@ export default function HomePage() {
     return ['All', ...AUTHORITATIVE_CATEGORIES.map(c => c.name)];
   }, []);
 
-  // Filter & Sort
-  const filteredBooks = useMemo(() => {
-    let result = BOOK_CATALOG.filter((book) => {
-      if (book.status === 'DRAFT') return false;
-
-      // Collection & Archive filter
-      if (selectedCollection === 'LATEST_2026' && !book.isLatest) return false;
-      if (selectedCollection === 'HINDI') {
-        const isHindi = book.language === 'hi' || (book.tags && book.tags.includes('hindi')) || (book.category && book.category.toLowerCase().includes('hindi')) || /[\u0900-\u097F]/.test(book.title);
-        if (!isHindi) return false;
-      }
-      if (selectedCollection === 'BUSINESS') {
-        const isBiz = (book.category && (book.category.toLowerCase().includes('business') || book.category.toLowerCase().includes('startup') || book.category.toLowerCase().includes('finance') || book.category.toLowerCase().includes('management'))) || (book.tags && book.tags.some(t => ['business', 'startup', 'finance'].includes(t.toLowerCase())));
-        if (!isBiz) return false;
-      }
-      if (selectedCollection === 'CLASSIC_ARCHIVE' && !book.isClassicArchive) return false;
-      if (selectedCollection === 'DEALS_29' && book.priceInInr > 29) return false;
-      if (selectedCollection === 'BOOKS') {
-        const isBook = ['published_ebook', 'textbook', 'professional_book'].includes(book.primaryResourceType || '') || book.isLatest;
-        if (!isBook) return false;
-      }
-      if (selectedCollection === 'NOTES') {
-        const isNote = ['study_notes', 'lecture_notes', 'exam_preparation'].includes(book.primaryResourceType || '') || (book.category && book.category.includes('Notes'));
-        if (!isNote) return false;
-      }
-      if (selectedCollection === 'CODE') {
-        const isCode = ['code_template', 'template'].includes(book.primaryResourceType || '');
-        if (!isCode) return false;
-      }
-
-      // Price filter
-      if (selectedPriceTier === '29' && book.priceInInr > 29) return false;
-      if (selectedPriceTier === 'UNDER_49' && book.priceInInr > 49) return false;
-      if (selectedPriceTier === 'UNDER_99' && book.priceInInr > 99) return false;
-      if (selectedPriceTier === 'PREMIUM' && book.priceInInr < 100) return false;
-
-      // Category filter
-      if (selectedCategory !== 'All') {
-        const catDef = AUTHORITATIVE_CATEGORIES.find(c => c.name === selectedCategory);
-        if (catDef) {
-          const match = catDef.matchedCatalogCategories.some(
-            mc => book.category?.toLowerCase() === mc.toLowerCase()
-          );
-          if (!match && book.category !== selectedCategory) return false;
-        } else if (book.category !== selectedCategory) {
-          return false;
-        }
-      }
-
-      // Search query
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase().trim();
-        const inTitle = book.title.toLowerCase().includes(q);
-        const inAuthor = (book.author || '').toLowerCase().includes(q);
-        const inDesc = (book.description || '').toLowerCase().includes(q);
-        const inCat = (book.category || '').toLowerCase().includes(q);
-        if (!inTitle && !inAuthor && !inDesc && !inCat) return false;
-      }
-
-      return true;
-    });
-
-    // Sorting: By default (POPULAR), showcase all Bestseller & Demanded books first
-    if (sortBy === 'CHEAPEST') {
-      result.sort((a, b) => a.priceInInr - b.priceInInr);
-    } else if (sortBy === 'TITLE') {
-      result.sort((a, b) => a.title.localeCompare(b.title));
-    } else {
-      // POPULAR: Prioritize Bestsellers, Demanded Guides, and High-Rating Titles
-      result.sort((a, b) => {
-        if (a.id === 'book-master-bundle') return -1;
-        if (b.id === 'book-master-bundle') return 1;
-
-        const aTop = (a.badge === 'Bestseller' || a.badge === 'All-Access Pass' || a.badge === 'Classic' || (a as any).isDemanded || (a.rating || 0) >= 4.9) ? 10 : 0;
-        const bTop = (b.badge === 'Bestseller' || b.badge === 'All-Access Pass' || b.badge === 'Classic' || (b as any).isDemanded || (b.rating || 0) >= 4.9) ? 10 : 0;
-        if (aTop !== bTop) return bTop - aTop;
-
-        return ((b.reviewCount || 0) * (b.rating || 0)) - ((a.reviewCount || 0) * (a.rating || 0));
+  // Fetch the complete archive through the server API so the 86k manifest
+  // stays off the client bundle and search/pagination cover the entire catalogue.
+  useEffect(() => {
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      setCatalogLoading(true);
+      setCatalogError(null);
+      const params = new URLSearchParams({
+        page: String(currentPage),
+        limit: String(BOOKS_PER_PAGE),
+        category: selectedCategory === 'All' ? 'ALL' : selectedCategory,
+        collection: selectedCollection,
+        priceTier: selectedPriceTier,
+        sort: sortBy === 'CHEAPEST' ? 'price_asc' : sortBy === 'TITLE' ? 'title' : 'featured',
       });
-    }
+      if (searchQuery.trim()) params.set('q', searchQuery.trim());
+      try {
+        const response = await fetch(`/api/books?${params.toString()}`, {
+          signal: controller.signal,
+          cache: 'no-store',
+        });
+        if (!response.ok) throw new Error(`Catalogue request failed (${response.status})`);
+        const payload = await response.json();
+        if (!payload.success || !Array.isArray(payload.books)) throw new Error('Catalogue response was invalid');
+        setCatalogBooks(payload.books);
+        setCatalogTotal(Number(payload.total) || 0);
+      } catch (error: any) {
+        if (error?.name !== 'AbortError') {
+          setCatalogError(error?.message || 'Unable to load the catalogue');
+          setCatalogBooks([]);
+          setCatalogTotal(0);
+        }
+      } finally {
+        if (!controller.signal.aborted) setCatalogLoading(false);
+      }
+    }, 250);
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [selectedCategory, selectedCollection, selectedPriceTier, sortBy, searchQuery, currentPage]);
 
-    return result;
-  }, [selectedCategory, selectedCollection, selectedPriceTier, sortBy, searchQuery]);
-
-  const totalPages = Math.ceil(filteredBooks.length / BOOKS_PER_PAGE);
-  const currentBooks = useMemo(() => {
-    const start = (currentPage - 1) * BOOKS_PER_PAGE;
-    return filteredBooks.slice(start, start + BOOKS_PER_PAGE);
-  }, [filteredBooks, currentPage]);
+  const filteredBooks = catalogBooks;
+  const totalPages = Math.ceil(catalogTotal / BOOKS_PER_PAGE);
+  const currentBooks = filteredBooks;
 
   const featuredSpotlight = useMemo(() => {
     return BOOK_CATALOG.filter(b => b.status === 'PUBLISHED' && b.coverImage).slice(0, 4);
@@ -231,7 +191,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E8E4DC] shadow-sm backdrop-blur-sm">
                 <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-[11px] font-medium text-[#24231F]">
-                  {BOOK_CATALOG.length.toLocaleString()} Verified Manuals & Textbooks
+                  {TOTAL_MAPPED_DOCUMENTS.toLocaleString()} eBook records
                 </span>
                 <span className="text-[#81796D] hidden xs:inline">•</span>
                 <span className="text-[11px] font-semibold text-[#9A704B] hidden xs:inline">Zero DRM</span>
@@ -284,7 +244,7 @@ export default function HomePage() {
               {/* Tremor / Park UI Inspired Key Metric Cards */}
               <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
-                  <div className="text-lg font-bold font-serif text-[#24231F]">{BOOK_CATALOG.length.toLocaleString()}+</div>
+                  <div className="text-lg font-bold font-serif text-[#24231F]">{TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+</div>
                   <div className="text-[11px] text-[#81796D] font-sans">Verified Manuals</div>
                 </div>
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
