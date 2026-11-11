@@ -3,7 +3,7 @@ import { createHash } from 'crypto';
 import fs from 'fs';
 import path from 'path';
 import { getBookBySlug, getBookById } from '@/lib/catalog';
-import { OpenLibraryProvider } from '@/lib/discovery/providers/openlibrary';
+import { discoverOpenLibraryCovers } from '@/lib/cover-recovery/providers/open-library';
 import { lookupCoverIndex } from '@/lib/cover-url-index';
 import { discoverGoogleBooksCovers } from '@/lib/cover-recovery/providers/google-books';
 import { pickBestCandidate } from '@/lib/cover-recovery/matcher';
@@ -262,49 +262,19 @@ async function fetchOpenLibraryCover(book: {
   isbn10?: string;
   isbn13?: string;
 } | undefined): Promise<NextResponse | null> {
-  if (!book) return null;
+  if (!book?.title) return null;
   try {
-    const isbn = book.isbn13 || book.isbn10 || book.isbn;
-    const coverUrls: string[] = [];
-
-    if (isbn && String(isbn).replace(/\D/g, '').length >= 10) {
-      coverUrls.push(`https://covers.openlibrary.org/b/isbn/${encodeURIComponent(String(isbn))}-L.jpg`);
-    }
-
-    if (book.title) {
-      const cleaned = cleanSearchTitle(book.title);
-      const titleCore = cleaned.split(/[:—(]/)[0].trim();
-      const titleTokens = titleCore.split(/\s+/).filter((w) => w.length > 2).slice(0, 4).join(' ');
-      const queries = [
-        `${cleaned} ${book.author || ''}`.trim(),
-        cleaned,
-        titleCore,
-        book.author ? `${book.author} ${titleTokens}`.trim() : '',
-        book.author ? `${titleTokens} ${book.author}`.trim() : '',
-      ].filter((q, i, arr) => q.length >= 4 && arr.indexOf(q) === i);
-
-      const authorNeedle = (book.author || '').toLowerCase().split(/\s+/).filter((w) => w.length > 2);
-      for (const query of queries) {
-        const docs = await OpenLibraryProvider.searchBooks(query, 10);
-        const withCover = docs.filter((d) => d.cover_i || d.cover_id);
-        if (!withCover.length) continue;
-
-        const authorMatch = withCover.find((d) => {
-          const names = (d.author_name || []).join(' ').toLowerCase();
-          return authorNeedle.length > 0 && authorNeedle.every((w) => names.includes(w));
-        });
-        const pick = authorMatch || withCover[0];
-        const url = OpenLibraryProvider.getCoverUrl(pick.cover_i || pick.cover_id || null, 'L');
-        if (url && !coverUrls.includes(url)) coverUrls.push(url);
-        if (coverUrls.length >= 3) break;
-      }
-    }
-
-    for (const coverUrl of coverUrls) {
-      const hit = await fetchRemoteCover(coverUrl, 'open-library');
-      if (hit) return hit;
-    }
-    return null;
+    const candidates = await discoverOpenLibraryCovers({
+      title: book.title,
+      author: book.author,
+      isbn13: book.isbn13 || (book.isbn?.length === 13 ? book.isbn : undefined),
+      isbn10: book.isbn10 || (book.isbn?.length === 10 ? book.isbn : undefined),
+    });
+    // Reject LOW-confidence title-only guesses. Medium/high matches remain
+    // visibly labelled review-required in the UI until an editor approves them.
+    const preferred = pickBestCandidate(candidates);
+    if (!preferred?.coverUrl) return null;
+    return await fetchRemoteCover(preferred.coverUrl, 'open-library');
   } catch {
     return null;
   }
@@ -325,7 +295,7 @@ async function fetchGoogleBooksCover(book: {
       isbn13: book.isbn13 || (book.isbn?.length === 13 ? book.isbn : undefined),
       isbn10: book.isbn10 || (book.isbn?.length === 10 ? book.isbn : undefined),
     });
-    const preferred = pickBestCandidate(candidates) || candidates[0];
+    const preferred = pickBestCandidate(candidates);
     if (!preferred?.coverUrl) return null;
     return await fetchRemoteCover(preferred.coverUrl, 'google-books');
   } catch {
@@ -428,55 +398,15 @@ export async function GET(
   const ol = await fetchOpenLibraryCover(book);
   if (ol) return ol;
 
-  const bookAny = book as { title?: string; author?: string; category?: string; isbn?: string; isbn10?: string; isbn13?: string; pages?: number };
-  const title = escapeXml(bookAny.title || cleanSlug.replace(/[-_]/g, ' ').toUpperCase());
-  const author = escapeXml(bookAny.author || 'AnonTrove Editorial Guild');
-  const category = escapeXml(bookAny.category || 'Curated Study Edition');
-  const isbn = escapeXml(bookAny.isbn13 || bookAny.isbn10 || bookAny.isbn || 'DRM-FREE-VERIFIED');
-  const pages = bookAny.pages || 320;
-
-  let primaryColor = '#10B981';
-  const catLower = category.toLowerCase();
-  if (catLower.includes('business') || catLower.includes('finance') || catLower.includes('startup')) {
-    primaryColor = '#3B82F6';
-  } else if (catLower.includes('security') || catLower.includes('hack') || catLower.includes('python')) {
-    primaryColor = '#10B981';
-  } else if (catLower.includes('hindi') || catLower.includes('literature')) {
-    primaryColor = '#F97316';
-  } else if (catLower.includes('classic') || catLower.includes('philosophy')) {
-    primaryColor = '#A855F7';
-  }
-
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
-  <defs>
-    <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F7F3EA"/>
-      <stop offset="100%" stop-color="#E8E1D2"/>
-    </linearGradient>
-  </defs>
-  <rect width="600" height="900" fill="url(#paper)"/>
-  <rect x="28" y="28" width="544" height="844" fill="none" stroke="#1F2937" stroke-width="3"/>
-  <rect x="28" y="28" width="544" height="132" fill="${primaryColor}"/>
-  <text x="50" y="110" font-family="Georgia, Cambria, serif" font-size="28" font-weight="700" fill="#FFFFFF">${title.slice(0, 28)}</text>
-  <text x="50" y="220" font-family="Georgia, serif" font-size="22" fill="#111827">
-    <tspan x="50" dy="0">${title.slice(0, 34)}</tspan>
-    ${title.length > 34 ? `<tspan x="50" dy="32">${title.slice(34, 68)}</tspan>` : ''}
-  </text>
-  <text x="50" y="320" font-family="Georgia, serif" font-size="18" fill="#374151">By ${author.slice(0, 40)}</text>
-  <rect x="50" y="350" width="160" height="4" fill="${primaryColor}"/>
-  <text x="50" y="410" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#4B5563">${category.slice(0, 40)}</text>
-  <text x="50" y="450" font-family="monospace" font-size="12" fill="#6B7280">${pages} pages · DRM-free digital edition</text>
-  <text x="50" y="820" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#6B7280">ANONTROVE ARCHIVE</text>
-  <text x="50" y="848" font-family="monospace" font-size="11" fill="#9CA3AF">ISBN ${isbn}</text>
-</svg>`;
-
-  return new NextResponse(svg, {
-    status: 200,
-    headers: {
-      'Content-Type': 'image/svg+xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=60, s-maxage=60',
-      'X-Cover-Source': 'synthetic-svg',
-      'X-Cover-Verified': 'false',
-    },
-  });
+  return NextResponse.json(
+    { success: false, error: 'cover_not_found', message: 'No sufficiently matched cover image was found for this edition.' },
+    {
+      status: 404,
+      headers: {
+        'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=3600',
+        'X-Cover-Source': 'not-found',
+        'X-Cover-Verified': 'false',
+      },
+    }
+  );
 }
