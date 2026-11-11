@@ -40,9 +40,11 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  // Include the optional gzip manifest index in the dynamic book detail route bundle.
-  outputFileTracingIncludes: {
-    "/book/[slug]": ["./data/catalog/research_link_directory.json.gz"],
+  experimental: {
+    // Include the optional gzip manifest index in the dynamic book detail route bundle.
+    outputFileTracingIncludes: {
+      "/book/[slug]": ["./data/catalog/research_link_directory.json.gz"],
+    },
   },
   reactStrictMode: true,
   poweredByHeader: false, // Strips 'X-Powered-By: Next.js' to prevent technology fingerprinting
