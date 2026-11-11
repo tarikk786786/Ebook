@@ -8,6 +8,9 @@ on:
       - '.github/workflows/free-cover-recovery.yml'
       - 'data/catalog/cover_url_index_86k.json'
       - 'data/catalog/directory_86k_from_pdf.json'
+      - 'components/BookCard.tsx'
+      - 'lib/cover-url-index.ts'
+      - 'app/api/covers/[slug]/route.ts'
   schedule:
     - cron: '30 2 * * *'
   workflow_dispatch:
@@ -53,4 +56,5 @@ jobs:
             exit 0
           fi
           git commit -m "chore: recover next batch of ebook covers"
+          git pull --rebase origin main
           git push origin HEAD:main
