@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 29,
-    "keep_existing": 132,
-    "not_found": 338,
+    "downloaded": 66,
+    "keep_existing": 78,
+    "not_found": 355,
     "bad_image": 1
   },
-  "updatedCurated": 0,
+  "updatedCurated": 2,
   "sampleDownloaded": [
     {
-      "slug": "adapt-why-success-always-starts-with-failure",
+      "slug": "limitless-upgrade-your-brain-learn-anything-fa",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "adapt-why-success-always-starts-with-failure.jpg",
-      "bytes": 16307,
-      "title": "Adapt - Why Success Always Starts with Failure"
+      "file": "limitless-upgrade-your-brain-learn-anything-fa.jpg",
+      "bytes": 3576,
+      "title": "Limitless: Upgrade Your Brain, Learn Anything Fa"
     },
     {
-      "slug": "detective-response-for-rejection-email",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "detective-response-for-rejection-email.jpg",
-      "bytes": 4836,
-      "title": "Detective] Response for Rejection Email"
-    },
-    {
-      "slug": "estimation-drain-drawing",
-      "status": "downloaded",
-      "source": "existing-86k-cover-index",
-      "file": "estimation-drain-drawing.jpg",
-      "bytes": 13835,
-      "title": "Estimation.] Drain Drawing"
-    },
-    {
-      "slug": "follow-every-rainbow",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "follow-every-rainbow.jpg",
-      "bytes": 9475,
-      "title": "Follow Every Rainbow"
-    },
-    {
-      "slug": "a-user-s-guide-to-the-brain",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "a-user-s-guide-to-the-brain.jpg",
-      "bytes": 28237,
-      "title": "A User's Guide to the Brain"
-    },
-    {
-      "slug": "ai-2041-ten-visions-for-our-future",
+      "slug": "mai-krishna-hu-vol-6-deep-trivedi",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "ai-2041-ten-visions-for-our-future.jpg",
-      "bytes": 5722,
-      "title": "AI 2041 Ten Visions for Our Future"
+      "file": "mai-krishna-hu-vol-6-deep-trivedi.jpg",
+      "bytes": 3576,
+      "title": "Mai Krishna Hu - Vol 6 Deep Trivedi"
     },
     {
-      "slug": "aws-certified-machine-learning-specialty-mls-c01",
+      "slug": "manuel-visuel-de-psychologie-cognitive",
       "status": "downloaded",
       "source": "open-library",
-      "file": "aws-certified-machine-learning-specialty-mls-c01.jpg",
-      "bytes": 56493,
-      "title": "AWS Certified Machine Learning Specialty MLS C01"
+      "file": "manuel-visuel-de-psychologie-cognitive.jpg",
+      "bytes": 27111,
+      "title": "Manuel visuel de psychologie cognitive"
     },
     {
-      "slug": "adobe-photoshop-pdf",
+      "slug": "metaphysical-concepts-of-upanishads-explained",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "adobe-photoshop-pdf.jpg",
-      "bytes": 19545,
-      "title": "Adobe Photoshop PDF"
+      "file": "metaphysical-concepts-of-upanishads-explained.jpg",
+      "bytes": 3732,
+      "title": "Metaphysical Concepts Of Upanishads Explained"
     },
     {
-      "slug": "against-the-odds",
+      "slug": "millionaire-real-estate-agent",
       "status": "downloaded",
       "source": "open-library",
-      "file": "against-the-odds.jpg",
-      "bytes": 49044,
-      "title": "Against the Odds"
+      "file": "millionaire-real-estate-agent.jpg",
+      "bytes": 31851,
+      "title": "Millionaire Real Estate Agent"
     },
     {
-      "slug": "all-is-well",
+      "slug": "model",
       "status": "downloaded",
       "source": "open-library",
-      "file": "all-is-well.jpg",
-      "bytes": 25062,
-      "title": "All Is Well"
+      "file": "model.jpg",
+      "bytes": 12831,
+      "title": "Model"
     },
     {
-      "slug": "andersen-s-fairy-tales",
+      "slug": "never-get-angry-again",
       "status": "downloaded",
       "source": "open-library",
-      "file": "andersen-s-fairy-tales.jpg",
-      "bytes": 45599,
-      "title": "Andersen's Fairy Tales"
+      "file": "never-get-angry-again.jpg",
+      "bytes": 47618,
+      "title": "Never Get Angry Again"
     },
     {
-      "slug": "bhagwan-the-god-that-failed",
+      "slug": "never-lose-a-customer-again",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "never-lose-a-customer-again.jpg",
+      "bytes": 25233,
+      "title": "Never Lose A Customer Again"
+    },
+    {
+      "slug": "non-disclosure-agreement",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "non-disclosure-agreement.jpg",
+      "bytes": 43890,
+      "title": "Non-Disclosure Agreement"
+    },
+    {
+      "slug": "parenting-without-power-struggles-raising-joyful",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "parenting-without-power-struggles-raising-joyful.jpg",
+      "bytes": 36792,
+      "title": "Parenting without power struggles raising joyful"
+    },
+    {
+      "slug": "priceless-the-myth-of-fair-value-and-how-to-take",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "bhagwan-the-god-that-failed.jpg",
-      "bytes": 14497,
-      "title": "Bhagwan The God That Failed"
+      "file": "priceless-the-myth-of-fair-value-and-how-to-take.jpg",
+      "bytes": 14046,
+      "title": "Priceless the myth of fair value and how to take"
     },
     {
-      "slug": "bloodstain-pattern-analysis",
+      "slug": "project-hail-mary",
       "status": "downloaded",
       "source": "open-library",
-      "file": "bloodstain-pattern-analysis.jpg",
-      "bytes": 36683,
-      "title": "Bloodstain Pattern Analysis"
+      "file": "project-hail-mary.jpg",
+      "bytes": 39331,
+      "title": "Project Hail Mary"
     },
     {
-      "slug": "braiding-sweetgrass",
+      "slug": "python-machine-learning-projects",
       "status": "downloaded",
       "source": "open-library",
-      "file": "braiding-sweetgrass.jpg",
-      "bytes": 25162,
-      "title": "Braiding Sweetgrass"
+      "file": "python-machine-learning-projects.jpg",
+      "bytes": 75867,
+      "title": "Python Machine Learning Projects"
     },
     {
-      "slug": "brain-training",
+      "slug": "python-for-data-science-for-dummies",
       "status": "downloaded",
       "source": "open-library",
-      "file": "brain-training.jpg",
-      "bytes": 38521,
-      "title": "Brain Training"
+      "file": "python-for-data-science-for-dummies.jpg",
+      "bytes": 46122,
+      "title": "Python for Data Science For Dummies"
     },
     {
-      "slug": "communication-skills-training",
+      "slug": "python-machine-learning",
       "status": "downloaded",
       "source": "open-library",
-      "file": "communication-skills-training.jpg",
-      "bytes": 40285,
-      "title": "Communication Skills Training"
+      "file": "python-machine-learning.jpg",
+      "bytes": 36030,
+      "title": "Python machine learning"
     },
     {
-      "slug": "daily-rituals-how-artists-work",
+      "slug": "quiet",
       "status": "downloaded",
       "source": "open-library",
-      "file": "daily-rituals-how-artists-work.jpg",
-      "bytes": 44203,
-      "title": "Daily Rituals How Artists Work"
+      "file": "quiet.jpg",
+      "bytes": 31977,
+      "title": "Quiet"
     },
     {
-      "slug": "docker-for-rails-developers",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "docker-for-rails-developers.jpg",
-      "bytes": 36738,
-      "title": "Docker for Rails Developers"
-    },
-    {
-      "slug": "ebook-manual",
+      "slug": "property-valuation-capital-gain-report",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "ebook-manual.jpg",
-      "bytes": 10141,
-      "title": "Ebook Manual"
+      "file": "property-valuation-capital-gain-report.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Capital Gain Report"
     },
     {
-      "slug": "emotional-first-aid",
+      "slug": "quotes-that-will-change-your-life",
       "status": "downloaded",
       "source": "open-library",
-      "file": "emotional-first-aid.jpg",
-      "bytes": 47743,
-      "title": "Emotional First Aid"
+      "file": "quotes-that-will-change-your-life.jpg",
+      "bytes": 34807,
+      "title": "Quotes That Will Change Your life"
+    },
+    {
+      "slug": "quit-like-a-millionaire-shen",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "quit-like-a-millionaire-shen.jpg",
+      "bytes": 40853,
+      "title": "Quit Like A Millionaire Shen"
+    },
+    {
+      "slug": "responsible-ai",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "responsible-ai.jpg",
+      "bytes": 13216,
+      "title": "Responsible AI"
     }
   ],
-  "offset": 0,
-  "nextOffset": 500,
+  "offset": 500,
+  "nextOffset": 1000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 29,
-    "keep_existing": 132,
-    "not_found": 338,
-    "bad_image": 1
+    "downloaded": 95,
+    "keep_existing": 210,
+    "not_found": 693,
+    "bad_image": 2
   },
-  "totalProcessed": 500
+  "totalProcessed": 1000
 }
