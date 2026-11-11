@@ -129,13 +129,13 @@ function readCoverFile(filePath: string, source: string, filename: string): Next
  * installed under public/covers/{catalogNum}.jpg (same binary on 200–1700 books).
  * Full hashes live in data/reports/quarantined_placeholder_covers.json after cleanup.
  */
-const KNOWN_PLACEHOLDER_SHA256_PREFIXES = new Set([
+const KNOWN_PLACEHOLDER_SHA256_PREFIXES = [
   'ce5d8075dc1e1ad3', // 10076-byte dark synthetic (~1051 copies)
   '443f2e468fae', // 15361-byte duplicate template (~1794)
   '4a33dbf5a4f7', // 70443-byte duplicate template (~1671)
   'ed7c486adc27', // 27552-byte duplicate template (~438)
   '22f66606e017', // 6747-byte duplicate template (~225)
-]);
+];
 
 function sha256HexPrefix(buf: Buffer, hexLen = 16): string {
   return createHash('sha256').update(buf).digest('hex').slice(0, hexLen);
@@ -143,10 +143,7 @@ function sha256HexPrefix(buf: Buffer, hexLen = 16): string {
 
 function isKnownPlaceholderJpeg(buf: Buffer): boolean {
   const full = sha256HexPrefix(buf, 64);
-  for (const prefix of KNOWN_PLACEHOLDER_SHA256_PREFIXES) {
-    if (full.startsWith(prefix)) return true;
-  }
-  return false;
+  return KNOWN_PLACEHOLDER_SHA256_PREFIXES.some((prefix) => full.startsWith(prefix));
 }
 
 /** Cheap heuristic: sample JPEG SOS entropy / size patterns of AnonTrove dark synthetics. */
