@@ -50,7 +50,7 @@ export async function discoverOpenLibraryCovers(
     const author = book.author.split(',')[0].trim();
     if (
       author &&
-      !/^(editorial board|anontrove|unknown)/i.test(author)
+      !/^(editorial board|anontrove|unknown|author not verified|n\/?a)$/i.test(author)
     ) {
       params.set('author', author);
     }
