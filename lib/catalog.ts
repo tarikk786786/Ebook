@@ -950,11 +950,14 @@ function getDirectoryOverlay(): Map<string, any> {
       const fs = eval("require('fs')");
       const path = eval("require('path')");
       // Slim verified cover/detail maps — PDF/CSV/list matches + numbered book-covers
+      // The URL index contains provider discoveries, not necessarily exact
+      // publisher-edition matches. Load it first; local PDF/book-cover maps below
+      // take precedence and can carry stronger verification evidence.
       for (const mapName of [
-        "cover_map_from_pdfs.json",
-        "cover_map_from_book_covers.json",
-        "cover_map_from_pdf_list.json",
         "cover_url_index_86k.json",
+        "cover_map_from_pdf_list.json",
+        "cover_map_from_book_covers.json",
+        "cover_map_from_pdfs.json",
         "market_price_overlay.json",
         "verified_metadata_overlay_86k.json",
       ]) {
@@ -964,11 +967,20 @@ function getDirectoryOverlay(): Map<string, any> {
         const map = payload.map || {};
         for (const [slug, entry] of Object.entries(map)) {
           const prev = cachedDirectoryOverlay!.get(slug) || {};
-          cachedDirectoryOverlay!.set(slug, { ...prev, ...(entry as any) });
-          const catalogNum = (entry as any)?.catalogNum;
+          const incoming = mapName === "cover_url_index_86k.json"
+            ? {
+                ...(entry as any),
+                coverVerified: false,
+                coverReviewRequired: true,
+                coverConfidence: "REVIEW_REQUIRED",
+                coverType: "CUSTOM_ARTWORK",
+              }
+            : (entry as any);
+          cachedDirectoryOverlay!.set(slug, { ...prev, ...incoming });
+          const catalogNum = (incoming as any)?.catalogNum;
           if (catalogNum != null) {
             const prevRef = cachedDirectoryOverlay!.get(`ref:${catalogNum}`) || {};
-            cachedDirectoryOverlay!.set(`ref:${catalogNum}`, { ...prevRef, ...(entry as any) });
+            cachedDirectoryOverlay!.set(`ref:${catalogNum}`, { ...prevRef, ...incoming });
           }
         }
       }
@@ -1059,7 +1071,12 @@ function applyDirectoryOverlay(book: Book): Book {
   const cover = normalizePublicCoverPath(overlay.coverImage, book.slug);
   if (
     cover &&
-    (overlay.coverVerified || cover.startsWith("/covers/") || cover.startsWith("/api/covers/")) &&
+    (
+      overlay.coverVerified ||
+      overlay.coverReviewRequired ||
+      cover.startsWith("/covers/") ||
+      cover.startsWith("/api/covers/")
+    ) &&
     (!book.coverImage ||
       book.coverImage.includes("standard-shelf-cover") ||
       book.coverImage.startsWith("/api/covers/") ||
@@ -1067,7 +1084,9 @@ function applyDirectoryOverlay(book: Book): Book {
       book.coverImage.startsWith("/book-covers/"))
   ) {
     next.coverImage = cover;
-    next.coverType = overlay.coverVerified ? "AUTHENTIC" : next.coverType || "CUSTOM_ARTWORK";
+    next.coverType = overlay.coverVerified === true && !overlay.coverReviewRequired
+      ? "AUTHENTIC"
+      : "CUSTOM_ARTWORK";
   } else if (book.coverImage?.startsWith("/public/") || book.coverImage?.startsWith("/book-covers/")) {
     next.coverImage = normalizePublicCoverPath(book.coverImage, book.slug) || `/api/covers/${book.slug}`;
   }
