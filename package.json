@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test:security": "node --experimental-strip-types --test tests/security_regression_suite.mjs",
+    "test:community": "node --experimental-strip-types --test tests/community_marketplace_suite.mjs",
     "test:seo": "node scripts/seo_audit.mjs && node scripts/validate_sitemap.mjs && node scripts/validate_schema.mjs && node scripts/check_canonicals.mjs"
   },
   "dependencies": {
