@@ -1,0 +1,44 @@
+name: Resumable Verified Metadata Enrichment
+
+on:
+  schedule:
+    - cron: '45 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: anontrove-metadata-enrichment-main
+  cancel-in-progress: false
+
+jobs:
+  enrich-metadata:
+    name: Enrich exact-match bibliographic metadata
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run conservative Open Library enrichment
+        run: python -u scripts/enrich_metadata_free_apis.py --limit 250 --workers 4
+
+      - name: Commit verified overlay, review queue and cursor
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/catalog/verified_metadata_overlay_86k.json data/catalog/metadata_review_queue_86k.json data/catalog/metadata_enrichment_cursor.json data/reports/metadata_enrichment_latest.json
+          if git diff --cached --quiet; then
+            echo "No verified metadata or progress state changed in this batch."
+            exit 0
+          fi
+          git commit -m "chore: enrich next verified ebook metadata batch"
+          git push origin HEAD:main
