@@ -782,6 +782,7 @@ function expandToBook(item: any): Book {
 }
 
 let cachedMasterIndex: any[] | null = null;
+let cachedCompleteCatalog: Book[] | null = null;
 let cachedDirectoryOverlay: Map<string, any> | null = null;
 let cachedDuplicateSuppression: {
   suppressed: Set<number>;
@@ -1100,5 +1101,26 @@ export function getBookBySlug(slug: string): Book | undefined {
 }
 
 export function getBookCatalog(): Book[] {
-  return BOOK_CATALOG.filter((b) => !isSuppressedBook(b));
+  if (cachedCompleteCatalog) return cachedCompleteCatalog;
+
+  // The 86k manifest is intentionally loaded server-side from split JSON files,
+  // not bundled into the browser's initial JavaScript payload.
+  const merged = BOOK_CATALOG
+    .filter((book) => !isSuppressedBook(book))
+    .map((book) => applyDirectoryOverlay(book));
+  const ids = new Set(merged.map((book) => book.id));
+  const slugs = new Set(merged.map((book) => book.slug));
+
+  for (const record of getMaster86kList()) {
+    if (!record || record.status === 'DRAFT') continue;
+    const expanded = applyDirectoryOverlay(expandToBook(record));
+    if (isSuppressedBook(expanded)) continue;
+    if (ids.has(expanded.id) || slugs.has(expanded.slug)) continue;
+    merged.push(expanded);
+    ids.add(expanded.id);
+    slugs.add(expanded.slug);
+  }
+
+  cachedCompleteCatalog = merged;
+  return cachedCompleteCatalog;
 }
