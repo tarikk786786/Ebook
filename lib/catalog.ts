@@ -652,7 +652,11 @@ function compileBookCatalog(): Book[] {
         collection: 'LATEST_STARTUP',
         primaryResourceType: 'published_ebook',
         coverType: cb.coverVerified ? 'AUTHENTIC' : (existing?.coverType || 'CUSTOM_ARTWORK'),
-        listingStatus: 'APPROVED_FOR_SALE',
+        // Do not infer redistribution permission from inclusion in a curated
+        // catalogue. Preserve an explicit approval only when the source record
+        // already contains one; otherwise keep this title in rights review.
+        listingStatus: cb.listingStatus || existing?.listingStatus || 'MANUAL_REVIEW',
+        rightsStatus: cb.rightsStatus || existing?.rightsStatus || 'RIGHTS_REVIEW_REQUIRED',
       };
       idMap.set(merged.id, merged);
     }
