@@ -365,9 +365,10 @@ export async function GET(
   if (localEarly) return localEarly;
 
   const indexed = lookupCoverIndex(cleanSlug, book as any);
-  if (indexed?.coverUrl && /^https?:\/\//i.test(indexed.coverUrl)) {
+  const indexedCoverUrl = indexed?.coverUrl || indexed?.coverImage;
+  if (indexedCoverUrl && /^https?:\/\//i.test(indexedCoverUrl)) {
     const cachedRemote = await fetchRemoteCover(
-      indexed.coverUrl,
+      indexedCoverUrl,
       indexed.coverSource || 'cover-index'
     );
     if (cachedRemote) return cachedRemote;
