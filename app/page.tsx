@@ -191,7 +191,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E8E4DC] shadow-sm backdrop-blur-sm">
                 <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-[11px] font-medium text-[#24231F]">
-                  {TOTAL_MAPPED_DOCUMENTS.toLocaleString()} eBook records
+                  {(catalogTotal || TOTAL_MAPPED_DOCUMENTS).toLocaleString()} eBook records
                 </span>
                 <span className="text-[#81796D] hidden xs:inline">•</span>
                 <span className="text-[11px] font-semibold text-[#9A704B] hidden xs:inline">Zero DRM</span>
@@ -244,7 +244,7 @@ export default function HomePage() {
               {/* Tremor / Park UI Inspired Key Metric Cards */}
               <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
-                  <div className="text-lg font-bold font-serif text-[#24231F]">{TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+</div>
+                  <div className="text-lg font-bold font-serif text-[#24231F]">{(catalogTotal || TOTAL_MAPPED_DOCUMENTS).toLocaleString()}+</div>
                   <div className="text-[11px] text-[#81796D] font-sans">eBook records</div>
                 </div>
                 <div className="p-3 bg-white/80 border border-[#E8E4DC] rounded-xl shadow-sm">
@@ -508,7 +508,7 @@ export default function HomePage() {
                       : 'bg-[#FAF8F5] border border-[#E8E4DC] text-[#6E685F] hover:text-[#24231F]'
                   }`}
                 >
-                  <span>🌟 All Titles ({TOTAL_MAPPED_DOCUMENTS.toLocaleString()}+)</span>
+                  <span>🌟 All Titles ({(catalogTotal || TOTAL_MAPPED_DOCUMENTS).toLocaleString()}+)</span>
                 </button>
                 <button
                   onClick={() => { setSelectedCollection('LATEST_2026'); setCurrentPage(1); }}
