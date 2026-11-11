@@ -833,9 +833,19 @@ function catalogNumFromBook(book: { id?: string; slug?: string; ref?: number | s
   return null;
 }
 
-let cachedResearchDirectory: Map<number, any> | null = null;
+let cachedResearchDirectory: Map<string, any | null> | null = null;
 
-function getResearchDirectoryRecord(manifestId: number): any | undefined {
+function normalizeDirectoryFilename(value?: string | null): string {
+  return String(value || "")
+    .trim()
+    .replace(/\\\\/g, "/")
+    .split("/")
+    .pop()
+    ?.trim()
+    .toLocaleLowerCase("en-US") || "";
+}
+
+function getResearchDirectoryRecord(book: Book): any | undefined {
   if (typeof window !== "undefined") return undefined;
   if (!cachedResearchDirectory) {
     cachedResearchDirectory = new Map();
@@ -854,9 +864,13 @@ function getResearchDirectoryRecord(manifestId: number): any | undefined {
         const decoded = zlib.gunzipSync(compressed).toString("utf8");
         const payload = JSON.parse(decoded);
         for (const record of payload.records || []) {
-          const id = Number(record?.manifestId);
-          if (Number.isSafeInteger(id) && id > 0 && !cachedResearchDirectory.has(id)) {
-            cachedResearchDirectory.set(id, record);
+          const filename = normalizeDirectoryFilename(record?.sourceFilename);
+          if (!filename) continue;
+          if (!cachedResearchDirectory.has(filename)) {
+            cachedResearchDirectory.set(filename, record);
+          } else {
+            // A non-unique filename cannot safely identify a catalog record.
+            cachedResearchDirectory.set(filename, null);
           }
         }
       }
@@ -864,13 +878,16 @@ function getResearchDirectoryRecord(manifestId: number): any | undefined {
       // Optional enrichment file: keep the catalog usable if it is not installed.
     }
   }
-  return cachedResearchDirectory.get(manifestId);
+
+  const filename = normalizeDirectoryFilename(book.fileName);
+  if (!filename) return undefined;
+  return cachedResearchDirectory.get(filename) || undefined;
 }
 
 function applyResearchDirectoryOverlay(book: Book): Book {
-  const manifestId = catalogNumFromBook(book);
-  if (manifestId == null) return book;
-  const record = getResearchDirectoryRecord(manifestId);
+  // The CSV Manifest ID is a source-row number, not assumed to equal catalogNum.
+  // Match only by a unique exact source filename to avoid cross-book metadata leaks.
+  const record = getResearchDirectoryRecord(book);
   if (!record) return book;
 
   const generatedLinks = buildBookResearchLinks({
@@ -881,7 +898,7 @@ function applyResearchDirectoryOverlay(book: Book): Book {
   return {
     ...book,
     researchSource: {
-      manifestId,
+      manifestId: Number(record.manifestId),
       listedTitle: String(record.listedTitle || ""),
       listedAuthor: String(record.listedAuthor || ""),
       listedAuthorVerified: false,
