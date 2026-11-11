@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { getBookById } from '@/lib/catalog';
+import { getBookById, getEffectiveRightsStatus } from '@/lib/catalog';
 import { createUnifiedPaymentOrder } from '@/lib/payments';
 import { CartItem, PaymentGatewayType } from '@/lib/payments/types';
 import { checkRateLimit } from '@/lib/rate-limit';
+
+const SALE_ELIGIBLE_RIGHTS = new Set(['RIGHTS_CONFIRMED', 'PUBLIC_DOMAIN_VERIFIED', 'OPEN_LICENCE_VERIFIED']);
+
+function canSellBook(book: ReturnType<typeof getBookById>): boolean {
+  return Boolean(book && SALE_ELIGIBLE_RIGHTS.has(getEffectiveRightsStatus(book)));
+}
 
 const CheckoutItemSchema = z.object({
   bookId: z.string().min(3).max(64).regex(/^[a-zA-Z0-9_-]+$/, 'bookId contains invalid characters'),
@@ -62,6 +68,9 @@ export async function POST(req: NextRequest) {
       if (!book) {
         return NextResponse.json({ error: 'Book does not exist in catalog' }, { status: 404 });
       }
+      if (!canSellBook(book)) {
+        return NextResponse.json({ error: 'This title is unavailable for purchase while its distribution rights are being verified.' }, { status: 403 });
+      }
 
       checkoutItems = [
         {
@@ -83,6 +92,9 @@ export async function POST(req: NextRequest) {
         const verifiedBook = getBookById(rawItem.bookId);
         if (!verifiedBook) {
           return NextResponse.json({ error: `Item ${rawItem.bookId} is not available in catalog` }, { status: 400 });
+        }
+        if (!canSellBook(verifiedBook)) {
+          return NextResponse.json({ error: `Item ${verifiedBook.title} is unavailable for purchase while its distribution rights are being verified.` }, { status: 403 });
         }
 
         checkoutItems.push({
