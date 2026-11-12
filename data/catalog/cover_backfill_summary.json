@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 56,
-    "keep_existing": 47,
-    "not_found": 396,
-    "bad_image": 1
+    "downloaded": 37,
+    "keep_existing": 18,
+    "not_found": 445,
+    "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-inner-game-of-tennis",
+      "slug": "where-good-ideas-come-from-johnson",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-inner-game-of-tennis.jpg",
-      "bytes": 7465,
-      "title": "The-Inner-Game-Of-Tennis"
+      "file": "where-good-ideas-come-from-johnson.jpg",
+      "bytes": 35549,
+      "title": "Where Good Ideas Come from Johnson"
     },
     {
-      "slug": "the-new-underworld-order-christopher-story",
+      "slug": "who-is-a-hindu-koenraad-elst",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "the-new-underworld-order-christopher-story.jpg",
-      "bytes": 16853,
-      "title": "The-New-Underworld-Order-Christopher-Story"
+      "file": "who-is-a-hindu-koenraad-elst.jpg",
+      "bytes": 14957,
+      "title": "Who Is A Hindu Koenraad Elst"
     },
     {
-      "slug": "the-puranas-in-the-light-of-modern-science",
+      "slug": "who-rules-the-world",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-puranas-in-the-light-of-modern-science.jpg",
-      "bytes": 57641,
-      "title": "The-Puranas-In-the-light-of-modern-science"
+      "file": "who-rules-the-world.jpg",
+      "bytes": 40769,
+      "title": "Who Rules the World"
     },
     {
-      "slug": "the-strangest-secret",
+      "slug": "who-will-cry-when-you-die",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-strangest-secret.jpg",
-      "bytes": 36265,
-      "title": "The-Strangest-Secret"
+      "file": "who-will-cry-when-you-die.jpg",
+      "bytes": 48372,
+      "title": "Who Will Cry When You Die"
     },
     {
-      "slug": "the-success-principles-jack-canfield-1",
+      "slug": "who-will-cry-when-you-will-die",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "who-will-cry-when-you-will-die.jpg",
+      "bytes": 48372,
+      "title": "Who Will Cry When You Will Die"
+    },
+    {
+      "slug": "who-moved-my-cheese",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "who-moved-my-cheese.jpg",
+      "bytes": 41692,
+      "title": "Who moved my cheese"
+    },
+    {
+      "slug": "why-men-don-t-listen-and-women-can-t-read",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "why-men-don-t-listen-and-women-can-t-read.jpg",
+      "bytes": 36499,
+      "title": "Why Men Don't Listen and Women Can't Read"
+    },
+    {
+      "slug": "why-men-want-sex-and-women-need-love",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "why-men-want-sex-and-women-need-love.jpg",
+      "bytes": 11827,
+      "title": "Why Men Want Sex and Women Need Love"
+    },
+    {
+      "slug": "why-we-sleep",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "why-we-sleep.jpg",
+      "bytes": 48948,
+      "title": "Why We Sleep"
+    },
+    {
+      "slug": "wild-reverence",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "wild-reverence.jpg",
+      "bytes": 39923,
+      "title": "Wild Reverence"
+    },
+    {
+      "slug": "wiley-beginning-database-design-solutions",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "wiley-beginning-database-design-solutions.jpg",
+      "bytes": 29826,
+      "title": "Wiley Beginning Database Design Solutions"
+    },
+    {
+      "slug": "will-it-fly",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "will-it-fly.jpg",
+      "bytes": 28458,
+      "title": "Will It Fly"
+    },
+    {
+      "slug": "will-smith",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "will-smith.jpg",
+      "bytes": 31500,
+      "title": "Will Smith"
+    },
+    {
+      "slug": "windows-11-all-in-one-for-dummies-ciprian-adrian",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "windows-11-all-in-one-for-dummies-ciprian-adrian.jpg",
+      "bytes": 57314,
+      "title": "Windows 11 All in One for Dummies Ciprian Adrian"
+    },
+    {
+      "slug": "wings-on-fire",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "the-success-principles-jack-canfield-1.jpg",
-      "bytes": 14205,
-      "title": "The-Success-Principles-Jack-Canfield-1"
+      "file": "wings-on-fire.jpg",
+      "bytes": 11046,
+      "title": "Wings On Fire"
     },
     {
-      "slug": "theory-and-cases-in-school-based-consultation-a",
+      "slug": "wings-of-fire",
       "status": "downloaded",
       "source": "open-library",
-      "file": "theory-and-cases-in-school-based-consultation-a.jpg",
-      "bytes": 4723,
-      "title": "Theory and Cases in School Based Consultation A"
+      "file": "wings-of-fire.jpg",
+      "bytes": 39554,
+      "title": "Wings of fire"
     },
     {
-      "slug": "thirukkural-ellis-commentary-ccrd",
+      "slug": "wisdom-from-darwin-to-munger",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "thirukkural-ellis-commentary-ccrd.jpg",
-      "bytes": 14076,
-      "title": "Thirukkural Ellis Commentary CCRD"
+      "file": "wisdom-from-darwin-to-munger.jpg",
+      "bytes": 10781,
+      "title": "Wisdom From Darwin To Munger"
     },
     {
-      "slug": "tim-o-brien-the-things-they-carried",
+      "slug": "woman-in-islam-swarup",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "tim-o-brien-the-things-they-carried.jpg",
-      "bytes": 5351,
-      "title": "Tim O'Brien - The Things They Carried"
+      "file": "woman-in-islam-swarup.jpg",
+      "bytes": 15515,
+      "title": "Woman in Islam Swarup"
     },
     {
-      "slug": "timing-of-events",
+      "slug": "wordpress-seo",
       "status": "downloaded",
       "source": "open-library",
-      "file": "timing-of-events.jpg",
-      "bytes": 36879,
-      "title": "Timing of Events"
+      "file": "wordpress-seo.jpg",
+      "bytes": 49414,
+      "title": "WordPress-SEO"
     },
     {
-      "slug": "tiny-css-projects",
+      "slug": "world-order",
       "status": "downloaded",
       "source": "open-library",
-      "file": "tiny-css-projects.jpg",
-      "bytes": 27342,
-      "title": "Tiny CSS Projects"
-    },
-    {
-      "slug": "tomorrow-and-tomorrow-and-tomorrow",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "tomorrow-and-tomorrow-and-tomorrow.jpg",
-      "bytes": 93016,
-      "title": "Tomorrow, and Tomorrow, and Tomorrow"
-    },
-    {
-      "slug": "topic-1",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "topic-1.jpg",
-      "bytes": 3940,
-      "title": "Topic 1"
-    },
-    {
-      "slug": "towards-god",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "towards-god.jpg",
-      "bytes": 63463,
-      "title": "Towards God"
-    },
-    {
-      "slug": "trace-evidences",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "trace-evidences.jpg",
-      "bytes": 38980,
-      "title": "Trace Evidences"
-    },
-    {
-      "slug": "treating-trauma-related-dissociation-a-practical",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "treating-trauma-related-dissociation-a-practical.jpg",
-      "bytes": 43135,
-      "title": "Treating Trauma Related Dissociation A Practical"
-    },
-    {
-      "slug": "tribute-to-hinduism",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "tribute-to-hinduism.jpg",
-      "bytes": 4959,
-      "title": "Tribute to Hinduism"
-    },
-    {
-      "slug": "trump-strategies-for-real-estate",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "trump-strategies-for-real-estate.jpg",
-      "bytes": 51202,
-      "title": "Trump Strategies For Real Estate"
-    },
-    {
-      "slug": "trump-the-art-of-the-deal",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "trump-the-art-of-the-deal.jpg",
-      "bytes": 37142,
-      "title": "Trump The Art of the Deal"
-    },
-    {
-      "slug": "trump-how-to-get-rich",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "trump-how-to-get-rich.jpg",
-      "bytes": 29168,
-      "title": "Trump, How to Get Rich"
-    },
-    {
-      "slug": "twisted-hate",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "twisted-hate.jpg",
-      "bytes": 24378,
-      "title": "Twisted Hate"
+      "file": "world-order.jpg",
+      "bytes": 5979,
+      "title": "World order"
     }
   ],
-  "offset": 13500,
-  "nextOffset": 14000,
+  "offset": 14000,
+  "nextOffset": 14500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1887,
-    "keep_existing": 1973,
-    "not_found": 10106,
+    "downloaded": 1924,
+    "keep_existing": 1991,
+    "not_found": 10551,
     "bad_image": 34
   },
-  "totalProcessed": 14000
+  "totalProcessed": 14500
 }
