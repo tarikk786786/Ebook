@@ -728,5 +728,168 @@
     "sourceUrl": "https://openlibrary.org/works/OL20748147W",
     "reason": "exact_title_without_matching_author_or_isbn",
     "status": "manual_review"
+  },
+  {
+    "slug": "1-fillupscientificpostsinnia",
+    "catalogNum": "01043",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "1-keep-viewers-engaged",
+    "catalogNum": "01048",
+    "title": "Untitled",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Lisa Jewell"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2023,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL29223248W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "12-sesame-crusted-tuna-with-cucumber-salad",
+    "catalogNum": "01311",
+    "title": "Untitled",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Lisa Jewell"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2023,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL29223248W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "12-sec-194g-tds-on-sale-of-lotterypdf",
+    "catalogNum": "01316",
+    "title": "The Lean Startup",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Eric Ries"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2011,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL16086010W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "126",
+    "catalogNum": "01335",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "13-2547",
+    "catalogNum": "01346",
+    "title": "Finding Flow",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Mihaly Csikszentmihalyi"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1997,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL506559W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "132-day-13-notes-english",
+    "catalogNum": "01374",
+    "title": "Untitled",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Lisa Jewell"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2023,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL29223248W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "143-day-14-notes-हद",
+    "catalogNum": "01432",
+    "title": "Blue Ocean Strategy",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [],
+    "suggestedPublisher": null,
+    "suggestedYear": 2004,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL27690478W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "140-874",
+    "catalogNum": "01434",
+    "title": "To Sell is Human",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Daniel H. Pink"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2012,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL20924665W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "144-r-c-k-r-odd-one-out-part-2-pdf",
+    "catalogNum": "01454",
+    "title": "Untitled document",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Sufyan Sher"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2018,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL29625947W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "147-1006",
+    "catalogNum": "01460",
+    "title": "Infographic",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Murray Dick"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2020,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL20748147W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
   }
 ]
