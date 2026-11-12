@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 40,
-    "keep_existing": 31,
-    "not_found": 429,
+    "downloaded": 156,
+    "keep_existing": 2,
+    "not_found": 342,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "seedtime-and-harvest",
+      "slug": "taurus",
       "status": "downloaded",
       "source": "open-library",
-      "file": "seedtime-and-harvest.jpg",
-      "bytes": 32191,
-      "title": "Seedtime and Harvest"
+      "file": "taurus.jpg",
+      "bytes": 32444,
+      "title": "Taurus"
     },
     {
-      "slug": "self-esteem-games-for-children",
+      "slug": "telegram",
       "status": "downloaded",
       "source": "open-library",
-      "file": "self-esteem-games-for-children.jpg",
-      "bytes": 42854,
-      "title": "Self Esteem Games for Children"
+      "file": "telegram.jpg",
+      "bytes": 49770,
+      "title": "Telegram"
     },
     {
-      "slug": "shame-and-the-origins-of-self-esteem-a-jungian-a",
+      "slug": "tell-me-everything",
       "status": "downloaded",
       "source": "open-library",
-      "file": "shame-and-the-origins-of-self-esteem-a-jungian-a.jpg",
-      "bytes": 17701,
-      "title": "Shame and the Origins of Self Esteem A Jungian A"
+      "file": "tell-me-everything.jpg",
+      "bytes": 52923,
+      "title": "Tell Me Everything"
     },
     {
-      "slug": "shannon-watts-fired-up",
+      "slug": "templates",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "templates.jpg",
+      "bytes": 41249,
+      "title": "Templates"
+    },
+    {
+      "slug": "text-book-of-astrology",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "text-book-of-astrology.jpg",
+      "bytes": 44040,
+      "title": "Text Book of Astrology"
+    },
+    {
+      "slug": "thank-you-note",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thank-you-note.jpg",
+      "bytes": 61696,
+      "title": "Thank You Note"
+    },
+    {
+      "slug": "the-120-days-of-sodom",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-120-days-of-sodom.jpg",
+      "bytes": 32154,
+      "title": "The 120 Days Of Sodom"
+    },
+    {
+      "slug": "the-33-strategies-of-war",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-33-strategies-of-war.jpg",
+      "bytes": 14946,
+      "title": "The 33 Strategies of War"
+    },
+    {
+      "slug": "the-4-hour-workweek-ferriss",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-4-hour-workweek-ferriss.jpg",
+      "bytes": 25573,
+      "title": "The 4 Hour Workweek Ferriss"
+    },
+    {
+      "slug": "the-4-hour-workweek-timothy-ferriss",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "shannon-watts-fired-up.jpg",
-      "bytes": 4871,
-      "title": "Shannon Watts - Fired Up"
+      "file": "the-4-hour-workweek-timothy-ferriss.jpg",
+      "bytes": 17661,
+      "title": "The 4 Hour Workweek Timothy Ferriss"
     },
     {
-      "slug": "silence",
+      "slug": "the-5-second-rule",
       "status": "downloaded",
       "source": "open-library",
-      "file": "silence.jpg",
-      "bytes": 19459,
-      "title": "Silence"
+      "file": "the-5-second-rule.jpg",
+      "bytes": 45640,
+      "title": "The 5 Second Rule"
     },
     {
-      "slug": "simple-effective-science-for-self-realization",
+      "slug": "the-5-love-languages",
       "status": "downloaded",
       "source": "open-library",
-      "file": "simple-effective-science-for-self-realization.jpg",
-      "bytes": 11182,
-      "title": "Simple & Effective Science For Self Realization"
+      "file": "the-5-love-languages.jpg",
+      "bytes": 38822,
+      "title": "The 5 Love Languages"
     },
     {
-      "slug": "simply-delicious",
+      "slug": "the-50th-law",
       "status": "downloaded",
       "source": "open-library",
-      "file": "simply-delicious.jpg",
-      "bytes": 52852,
-      "title": "Simply Delicious"
+      "file": "the-50th-law.jpg",
+      "bytes": 20797,
+      "title": "The 50Th Law"
     },
     {
-      "slug": "singular-plural",
+      "slug": "the-8-proven-secrets-to-smart-success",
       "status": "downloaded",
       "source": "open-library",
-      "file": "singular-plural.jpg",
-      "bytes": 5625,
-      "title": "Singular & Plural"
+      "file": "the-8-proven-secrets-to-smart-success.jpg",
+      "bytes": 31706,
+      "title": "The 8 Proven Secrets to SMART Success"
     },
     {
-      "slug": "sister-wife",
+      "slug": "the-addiction-progress-notes-planner",
       "status": "downloaded",
       "source": "open-library",
-      "file": "sister-wife.jpg",
-      "bytes": 40830,
-      "title": "Sister Wife"
+      "file": "the-addiction-progress-notes-planner.jpg",
+      "bytes": 44670,
+      "title": "The Addiction Progress Notes Planner"
     },
     {
-      "slug": "skeletal-trauma",
+      "slug": "the-addiction-recovery-skills-workbook-changing",
       "status": "downloaded",
       "source": "open-library",
-      "file": "skeletal-trauma.jpg",
-      "bytes": 67301,
-      "title": "Skeletal Trauma"
+      "file": "the-addiction-recovery-skills-workbook-changing.jpg",
+      "bytes": 50854,
+      "title": "The Addiction Recovery Skills Workbook Changing"
     },
     {
-      "slug": "skill-with-people",
+      "slug": "the-adjustment",
       "status": "downloaded",
       "source": "open-library",
-      "file": "skill-with-people.jpg",
-      "bytes": 25634,
-      "title": "Skill With People"
+      "file": "the-adjustment.jpg",
+      "bytes": 43960,
+      "title": "The Adjustment"
     },
     {
-      "slug": "social-media-monitoring",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "social-media-monitoring.jpg",
-      "bytes": 34762,
-      "title": "Social Media Monitoring"
-    },
-    {
-      "slug": "software-engineering",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "software-engineering.jpg",
-      "bytes": 5625,
-      "title": "Software Engineering"
-    },
-    {
-      "slug": "solve-it",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "solve-it.jpg",
-      "bytes": 16728,
-      "title": "Solve IT"
-    },
-    {
-      "slug": "sophie-s-world",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "sophie-s-world.jpg",
-      "bytes": 36059,
-      "title": "Sophie's World"
-    },
-    {
-      "slug": "speaker-identification",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "speaker-identification.jpg",
-      "bytes": 16920,
-      "title": "Speaker-Identification"
-    },
-    {
-      "slug": "spiritual-warrior-transforming-lust-into-love",
+      "slug": "the-antidote-burkeman",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "spiritual-warrior-transforming-lust-into-love.jpg",
-      "bytes": 18097,
-      "title": "Spiritual warrior, Transforming lust into love"
+      "file": "the-antidote-burkeman.jpg",
+      "bytes": 6099,
+      "title": "The Antidote Burkeman"
     },
     {
-      "slug": "spy-the-lie",
+      "slug": "the-art-of-learning",
       "status": "downloaded",
       "source": "open-library",
-      "file": "spy-the-lie.jpg",
-      "bytes": 48210,
-      "title": "Spy The Lie"
+      "file": "the-art-of-learning.jpg",
+      "bytes": 13790,
+      "title": "The Art Of Learning"
     },
     {
-      "slug": "sri-laksmi-legends-and-lores",
+      "slug": "the-art-of-manipulation-r-b-sparkman",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "sri-laksmi-legends-and-lores.jpg",
-      "bytes": 11926,
-      "title": "Sri Laksmi Legends and Lores"
-    },
-    {
-      "slug": "sri-sri-ramakrishna-kathamrita-volume-1",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "sri-sri-ramakrishna-kathamrita-volume-1.jpg",
-      "bytes": 56933,
-      "title": "Sri Sri Ramakrishna Kathamrita Volume 1"
+      "file": "the-art-of-manipulation-r-b-sparkman.jpg",
+      "bytes": 13409,
+      "title": "The Art Of Manipulation - R B Sparkman"
     }
   ],
-  "offset": 12500,
-  "nextOffset": 13000,
+  "offset": 13000,
+  "nextOffset": 13500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1675,
-    "keep_existing": 1924,
-    "not_found": 9368,
+    "downloaded": 1831,
+    "keep_existing": 1926,
+    "not_found": 9710,
     "bad_image": 33
   },
-  "totalProcessed": 13000
+  "totalProcessed": 13500
 }
