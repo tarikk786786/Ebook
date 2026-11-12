@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 67,
-    "keep_existing": 7,
-    "not_found": 425,
+    "downloaded": 54,
+    "keep_existing": 8,
+    "not_found": 437,
     "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "handbook-of-art-therapy",
+      "slug": "jane-the-art-of-living-alone-and-loving-it",
       "status": "downloaded",
       "source": "open-library",
-      "file": "handbook-of-art-therapy.jpg",
-      "bytes": 33361,
-      "title": "Handbook of Art Therapy"
+      "file": "jane-the-art-of-living-alone-and-loving-it.jpg",
+      "bytes": 42600,
+      "title": "Jane The art of living alone and loving it"
     },
     {
-      "slug": "handbook-of-psychological-assessment",
+      "slug": "jane-eyre",
       "status": "downloaded",
       "source": "open-library",
-      "file": "handbook-of-psychological-assessment.jpg",
-      "bytes": 41534,
-      "title": "Handbook of Psychological Assessment"
+      "file": "jane-eyre.jpg",
+      "bytes": 37234,
+      "title": "Jane Eyre"
     },
     {
-      "slug": "handwriting-sample",
+      "slug": "janki-mangal-of-goswami-tulsidas",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "handwriting-sample.jpg",
-      "bytes": 4682,
-      "title": "Handwriting sample"
+      "file": "janki-mangal-of-goswami-tulsidas.jpg",
+      "bytes": 4765,
+      "title": "Janki Mangal Of Goswami Tulsidas"
     },
     {
-      "slug": "happiness-express",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "happiness-express.jpg",
-      "bytes": 34679,
-      "title": "Happiness Express"
-    },
-    {
-      "slug": "harry-potter-and-the-chamber-of-secrets",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "harry-potter-and-the-chamber-of-secrets.jpg",
-      "bytes": 47427,
-      "title": "Harry Potter and the Chamber of Secrets"
-    },
-    {
-      "slug": "harry-potter-and-the-deathly-hallows",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "harry-potter-and-the-deathly-hallows.jpg",
-      "bytes": 59424,
-      "title": "Harry Potter and the Deathly Hallows"
-    },
-    {
-      "slug": "harry-potter-and-the-goblet-of-fire",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "harry-potter-and-the-goblet-of-fire.jpg",
-      "bytes": 39601,
-      "title": "Harry Potter and the Goblet of Fire"
-    },
-    {
-      "slug": "harry-potter-and-the-order-of-the-phoenix",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "harry-potter-and-the-order-of-the-phoenix.jpg",
-      "bytes": 44746,
-      "title": "Harry Potter and the Order of the Phoenix"
-    },
-    {
-      "slug": "harry-potter-and-the-half-blood-prince",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "harry-potter-and-the-half-blood-prince.jpg",
-      "bytes": 50017,
-      "title": "Harry Potter and the Half-Blood Prince"
-    },
-    {
-      "slug": "harry-potter-and-the-philosopher-s-stone",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "harry-potter-and-the-philosopher-s-stone.jpg",
-      "bytes": 53495,
-      "title": "Harry Potter and the Philosopher's Stone"
-    },
-    {
-      "slug": "harry-potter-and-the-prisoner-of-azkaban",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "harry-potter-and-the-prisoner-of-azkaban.jpg",
-      "bytes": 30861,
-      "title": "Harry Potter and the Prisoner of Azkaban"
-    },
-    {
-      "slug": "healing-is-the-new-high",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "healing-is-the-new-high.jpg",
-      "bytes": 21303,
-      "title": "Healing Is The New High ?????? ?? ? ???? ???"
-    },
-    {
-      "slug": "hell-yeah-or-no",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hell-yeah-or-no.jpg",
-      "bytes": 12632,
-      "title": "Hell Yeah or No"
-    },
-    {
-      "slug": "help-your-kids-with",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "help-your-kids-with.jpg",
-      "bytes": 22903,
-      "title": "Help Your Kids with"
-    },
-    {
-      "slug": "helping-children-to-cope-with-change-stress-and",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "helping-children-to-cope-with-change-stress-and.jpg",
-      "bytes": 42051,
-      "title": "Helping Children to Cope with Change, Stress and"
-    },
-    {
-      "slug": "high-road-leadership",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-road-leadership.jpg",
-      "bytes": 25835,
-      "title": "High Road Leadership"
-    },
-    {
-      "slug": "hindi-sahitya-ka-itihas",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hindi-sahitya-ka-itihas.jpg",
-      "bytes": 36534,
-      "title": "Hindi Sahitya Ka Itihas"
-    },
-    {
-      "slug": "historical-marvels-in-the-quran-a-ali",
+      "slug": "jnana-yoga-swami-vivekananda",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "historical-marvels-in-the-quran-a-ali.jpg",
-      "bytes": 18350,
-      "title": "Historical Marvels In the Quran - A Ali"
+      "file": "jnana-yoga-swami-vivekananda.jpg",
+      "bytes": 8655,
+      "title": "Jnana Yoga - Swami Vivekananda"
     },
     {
-      "slug": "history-of-india",
+      "slug": "john-c-maxwell-good-leaders-ask-great-questions",
       "status": "downloaded",
       "source": "open-library",
-      "file": "history-of-india.jpg",
-      "bytes": 49765,
-      "title": "History Of India"
+      "file": "john-c-maxwell-good-leaders-ask-great-questions.jpg",
+      "bytes": 29892,
+      "title": "John C Maxwell Good Leaders Ask Great Questions"
     },
     {
-      "slug": "history-of-philosophy",
+      "slug": "journal-prompts",
       "status": "downloaded",
       "source": "open-library",
-      "file": "history-of-philosophy.jpg",
-      "bytes": 14780,
-      "title": "History of Philosophy"
+      "file": "journal-prompts.jpg",
+      "bytes": 48365,
+      "title": "Journal Prompts"
+    },
+    {
+      "slug": "jump-start-vue-js",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "jump-start-vue-js.jpg",
+      "bytes": 20934,
+      "title": "Jump Start Vue js"
+    },
+    {
+      "slug": "kalyan-krishna-vachanamurt-anka",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "kalyan-krishna-vachanamurt-anka.jpg",
+      "bytes": 17371,
+      "title": "Kalyan Krishna Vachanamurt Anka"
+    },
+    {
+      "slug": "kalyan-ram-vachnamrit-ank",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "kalyan-ram-vachnamrit-ank.jpg",
+      "bytes": 11943,
+      "title": "Kalyan Ram Vachnamrit Ank"
+    },
+    {
+      "slug": "katabasis",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "katabasis.jpg",
+      "bytes": 60982,
+      "title": "Katabasis"
+    },
+    {
+      "slug": "kavitawali-ramayan-of-goswami-tulsidas",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "kavitawali-ramayan-of-goswami-tulsidas.jpg",
+      "bytes": 5157,
+      "title": "Kavitawali Ramayan Of Goswami Tulsidas"
+    },
+    {
+      "slug": "knowledge-encyclopedia",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "knowledge-encyclopedia.jpg",
+      "bytes": 59979,
+      "title": "Knowledge Encyclopedia"
+    },
+    {
+      "slug": "kotlin",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "kotlin.jpg",
+      "bytes": 16003,
+      "title": "Kotlin"
+    },
+    {
+      "slug": "krishna-ek-rahasya-edition",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "krishna-ek-rahasya-edition.jpg",
+      "bytes": 17050,
+      "title": "Krishna Ek Rahasya Edition"
+    },
+    {
+      "slug": "krishnavatara-iii-the-five-brothers",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "krishnavatara-iii-the-five-brothers.jpg",
+      "bytes": 67074,
+      "title": "Krishnavatara III The Five Brothers"
+    },
+    {
+      "slug": "krishnavatara-ii-the-wrath-of-an-emperor",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "krishnavatara-ii-the-wrath-of-an-emperor.jpg",
+      "bytes": 6515,
+      "title": "Krishnavatara II THE WRATH OF AN EMPEROR"
+    },
+    {
+      "slug": "lal-kitab",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "lal-kitab.jpg",
+      "bytes": 46694,
+      "title": "Lal Kitab"
+    },
+    {
+      "slug": "lapierre-dominique-and-larry-collins-freedom-at",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "lapierre-dominique-and-larry-collins-freedom-at.jpg",
+      "bytes": 22570,
+      "title": "Lapierre, Dominique and Larry Collins Freedom at"
+    },
+    {
+      "slug": "law-of-success-21st-century-edition",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "law-of-success-21st-century-edition.jpg",
+      "bytes": 19203,
+      "title": "Law of Success 21st Century Edition"
+    },
+    {
+      "slug": "leadership-1",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "leadership-1.jpg",
+      "bytes": 3904,
+      "title": "Leadership -1"
     }
   ],
-  "offset": 10000,
-  "nextOffset": 10500,
+  "offset": 10500,
+  "nextOffset": 11000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1450,
-    "keep_existing": 1834,
-    "not_found": 7193,
-    "bad_image": 23
+    "downloaded": 1504,
+    "keep_existing": 1842,
+    "not_found": 7630,
+    "bad_image": 24
   },
-  "totalProcessed": 10500
+  "totalProcessed": 11000
 }
