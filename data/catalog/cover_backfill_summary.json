@@ -2,181 +2,181 @@
   "processed": 500,
   "counts": {
     "downloaded": 64,
-    "keep_existing": 43,
-    "not_found": 393,
+    "keep_existing": 39,
+    "not_found": 397,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-75286",
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-45684",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-75286.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-22390",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-22390.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-64798",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-64798.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-21250",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-21250.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-29686",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-29686.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-19882",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-19882.jpg",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-45684.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-79390",
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-42264",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-79390.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-54082",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-54082.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-45874",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-45874.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-55906",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-55906.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-64114",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-64114.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-75742",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-75742.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-21706",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-21706.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-50206",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-50206.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-79846",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-79846.jpg",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-42264.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-15778",
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-59820",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-15778.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-59820.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-47242",
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-75552",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-47242.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-49294",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-49294.jpg",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-12-75552.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-40174",
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-48002",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-40174.jpg",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-48002.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-68294",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-68294.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-26798",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-26798.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-54158",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-54158.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-73994",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-73994.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-49978",
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-41390",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-10-49978.jpg",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-41390.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-23606",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-23606.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-69890",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-69890.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-44354",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-44354.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-35918",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-35918.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-28622",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-28622.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-74450",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-74450.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-20414",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-20414.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-17450",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-17450.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-17222",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-17222.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-32954",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-2-32954.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 18500,
-  "nextOffset": 19000,
+  "offset": 19000,
+  "nextOffset": 19500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2483,
-    "keep_existing": 4013,
-    "not_found": 12467,
+    "downloaded": 2547,
+    "keep_existing": 4052,
+    "not_found": 12864,
     "bad_image": 37
   },
-  "totalProcessed": 19000
+  "totalProcessed": 19500
 }
