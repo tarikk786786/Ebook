@@ -379,5 +379,354 @@
     "sourceUrl": "https://openlibrary.org/works/OL37791428W",
     "reason": "exact_title_without_matching_author_or_isbn",
     "status": "manual_review"
+  },
+  {
+    "slug": "017-gamer-name-5000-daily-use-vocabularytopic",
+    "catalogNum": "00521",
+    "title": "The 48 Laws of Power",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Robert Greene"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1998,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL1968368W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "017-gp-np-ratio",
+    "catalogNum": "00522",
+    "title": "The-Sociopath-Next-Door",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "Martha Stout"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2005,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL7988011W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "01bg-02",
+    "catalogNum": "00541",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "02-aura-cleansing",
+    "catalogNum": "00549",
+    "title": "The 21 Irrefutable Laws of Leadership",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "John C. Maxwell"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1998,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL28124W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "02-resource",
+    "catalogNum": "00562",
+    "title": "Copywriting",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Jonathan Gabay"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1996,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL9036922W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "02-sba-worksheet",
+    "catalogNum": "00563",
+    "title": "Self-Care Checklist",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Dane Thomas"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2021,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL25606767W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "023-alter-shut-delete-company-and-accounting-masters",
+    "catalogNum": "00597",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "026-class-6-basic-grammar",
+    "catalogNum": "00617",
+    "title": "Atomic-Habits",
+    "currentAuthor": "Editorial Board & Domain Experts",
+    "suggestedAuthors": [
+      "James Clear"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2016,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL17930368W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "03-7163",
+    "catalogNum": "00642",
+    "title": "Non-Disclosure Agreement",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Kelsey McKnight"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2017,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL24632760W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "03-1000-sub-club-get-1000-subs-fast",
+    "catalogNum": "00644",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "03-notes",
+    "catalogNum": "00654",
+    "title": "Managing Your Team",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "J. L. Spencer",
+      "J.L. Spencer",
+      "Adrian Pruss"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1992,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL9801073W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "034-r-c-k-r-nouns-part-3-pdf",
+    "catalogNum": "00694",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "039-r-c-k-r-close-test-mixed-question-part-2-10th-october",
+    "catalogNum": "00720",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "04-6202",
+    "catalogNum": "00732",
+    "title": "PowerPoint Presentation",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Philip Greiner"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2012,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL25811161W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "042-gamer-name-spoken-english-topic-wise-notesto",
+    "catalogNum": "00762",
+    "title": "Good to Great",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Collins, James C.",
+      "Jim Collins"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2001,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3486275W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "046-r-c-k-r-mock-test-3-pdf",
+    "catalogNum": "00787",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "05-cauliflower-steak-olives-and-mushrooms",
+    "catalogNum": "00805",
+    "title": "Untitled",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Lisa Jewell"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2023,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL29223248W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "051-r-c-k-r-cloze-test-mixed-questions-part-3-21st-december",
+    "catalogNum": "00832",
+    "title": "The New One Minute Manager",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Ken Blanchard",
+      "Spencer Johnson M.D."
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2015,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL20286958W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "067-speak-smart-aapki-awaaz-aapki-shakti-important-pdfs-te",
+    "catalogNum": "00897",
+    "title": "Assignment",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Caroline Anderson"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2002,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL5691729W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "076-gamer-name-practice-sheets-topic-wisepract",
+    "catalogNum": "00931",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "078-class-1-kitchen-vocabulary",
+    "catalogNum": "00938",
+    "title": "Assignment",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Caroline Anderson"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2002,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL5691729W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "083-gamer-name-practice-sheets-topic-wisepract",
+    "catalogNum": "00970",
+    "title": "Model",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Michael Gross"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 1995,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL3668066W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
+  },
+  {
+    "slug": "09-account-type-to-open-for-vanguard",
+    "catalogNum": "00990",
+    "title": "Infographic",
+    "currentAuthor": "AnonTrove Guild",
+    "suggestedAuthors": [
+      "Murray Dick"
+    ],
+    "suggestedPublisher": null,
+    "suggestedYear": 2020,
+    "suggestedIsbns": [],
+    "sourceUrl": "https://openlibrary.org/works/OL20748147W",
+    "reason": "exact_title_without_matching_author_or_isbn",
+    "status": "manual_review"
   }
 ]
