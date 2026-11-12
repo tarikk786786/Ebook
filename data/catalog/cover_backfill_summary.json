@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 67,
-    "keep_existing": 426,
-    "not_found": 7,
+    "downloaded": 248,
+    "keep_existing": 204,
+    "not_found": 48,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-great-ceo-within-by-matt-mochary",
+      "slug": "the-motivation-myth-by-jeff-haden",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-great-ceo-within-by-matt-mochary.jpg",
-      "bytes": 24896,
-      "title": "The Great CEO Within"
+      "file": "the-motivation-myth-by-jeff-haden.jpg",
+      "bytes": 26048,
+      "title": "The Motivation Myth"
     },
     {
-      "slug": "the-management-myth-by-matthew-stewart",
+      "slug": "the-7-habits-of-highly-effective-people-personal-by-workbook",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-management-myth-by-matthew-stewart.jpg",
-      "bytes": 9714,
-      "title": "The Management Myth"
+      "file": "the-7-habits-of-highly-effective-people-personal-by-workbook.jpg",
+      "bytes": 52743,
+      "title": "The 7 Habits of Highly Effective People Personal"
     },
     {
-      "slug": "the-human-side-of-enterprise-by-douglas-mcgregor",
+      "slug": "tiny-habits-by-bj-fogg",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-human-side-of-enterprise-by-douglas-mcgregor.jpg",
-      "bytes": 17839,
-      "title": "The Human Side of Enterprise"
+      "file": "tiny-habits-by-bj-fogg.jpg",
+      "bytes": 32425,
+      "title": "Tiny Habits"
     },
     {
-      "slug": "the-new-economics-by-w-edwards-deming",
+      "slug": "the-productivity-ninja-by-graham-allcott",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-new-economics-by-w-edwards-deming.jpg",
-      "bytes": 31899,
-      "title": "The New Economics"
+      "file": "the-productivity-ninja-by-graham-allcott.jpg",
+      "bytes": 32556,
+      "title": "The Productivity Ninja"
     },
     {
-      "slug": "ogilvy-on-advertising-by-david-ogilvy",
+      "slug": "the-art-of-focus-by-dan-koe",
       "status": "downloaded",
       "source": "open-library",
-      "file": "ogilvy-on-advertising-by-david-ogilvy.jpg",
-      "bytes": 51234,
-      "title": "Ogilvy on Advertising"
+      "file": "the-art-of-focus-by-dan-koe.jpg",
+      "bytes": 29991,
+      "title": "The Art of Focus"
     },
     {
-      "slug": "confessions-of-an-advertising-man-by-david-ogilvy",
+      "slug": "work-clean-by-dan-charnas",
       "status": "downloaded",
       "source": "open-library",
-      "file": "confessions-of-an-advertising-man-by-david-ogilvy.jpg",
-      "bytes": 20645,
-      "title": "Confessions of an Advertising Man"
+      "file": "work-clean-by-dan-charnas.jpg",
+      "bytes": 9458,
+      "title": "Work Clean"
     },
     {
-      "slug": "buyology-by-martin-lindstrom",
+      "slug": "mastering-the-rockefeller-habits-by-verne-harnish",
       "status": "downloaded",
       "source": "open-library",
-      "file": "buyology-by-martin-lindstrom.jpg",
-      "bytes": 21149,
-      "title": "Buyology"
+      "file": "mastering-the-rockefeller-habits-by-verne-harnish.jpg",
+      "bytes": 37609,
+      "title": "Mastering the Rockefeller Habits"
     },
     {
-      "slug": "the-new-rules-of-marketing-and-pr-by-david-meerman-scott",
+      "slug": "lean-thinking-by-james-p-womack-and-daniel-t-jones",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-new-rules-of-marketing-and-pr-by-david-meerman-scott.jpg",
-      "bytes": 53393,
-      "title": "The New Rules of Marketing and PR"
+      "file": "lean-thinking-by-james-p-womack-and-daniel-t-jones.jpg",
+      "bytes": 43015,
+      "title": "Lean Thinking"
     },
     {
-      "slug": "killing-giants-by-stephen-denny",
+      "slug": "the-phoenix-project-by-gene-kim-kevin-behr-and-george-spafford",
       "status": "downloaded",
       "source": "open-library",
-      "file": "killing-giants-by-stephen-denny.jpg",
-      "bytes": 22827,
-      "title": "Killing Giants"
+      "file": "the-phoenix-project-by-gene-kim-kevin-behr-and-george-spafford.jpg",
+      "bytes": 53176,
+      "title": "The Phoenix Project"
     },
     {
-      "slug": "made-you-look-by-carmen-simon",
+      "slug": "the-devops-handbook-by-gene-kim-jez-humble-patrick-debois-and-john-willis",
       "status": "downloaded",
       "source": "open-library",
-      "file": "made-you-look-by-carmen-simon.jpg",
-      "bytes": 23212,
-      "title": "Made You Look"
+      "file": "the-devops-handbook-by-gene-kim-jez-humble-patrick-debois-and-john-willis.jpg",
+      "bytes": 47932,
+      "title": "The DevOps Handbook"
     },
     {
-      "slug": "the-win-without-pitching-manifesto-by-blair-enns",
+      "slug": "the-unicorn-project-by-gene-kim",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-win-without-pitching-manifesto-by-blair-enns.jpg",
-      "bytes": 9790,
-      "title": "The Win Without Pitching Manifesto"
+      "file": "the-unicorn-project-by-gene-kim.jpg",
+      "bytes": 74784,
+      "title": "The Unicorn Project"
     },
     {
-      "slug": "smart-brevity-by-jim-vandehei-mike-allen-and-roy-schwartz",
+      "slug": "factory-physics-by-wallace-j-hopp-and-mark-l-spearman",
       "status": "downloaded",
       "source": "open-library",
-      "file": "smart-brevity-by-jim-vandehei-mike-allen-and-roy-schwartz.jpg",
-      "bytes": 17364,
-      "title": "Smart Brevity"
+      "file": "factory-physics-by-wallace-j-hopp-and-mark-l-spearman.jpg",
+      "bytes": 8328,
+      "title": "Factory Physics"
     },
     {
-      "slug": "principles-of-corporate-finance-by-richard-a-brealey-stewart-c-myers-and-franklin-allen",
+      "slug": "accelerate-by-nicole-forsgren-jez-humble-and-gene-kim",
       "status": "downloaded",
       "source": "open-library",
-      "file": "principles-of-corporate-finance-by-richard-a-brealey-stewart-c-myers-and-franklin-allen.jpg",
-      "bytes": 25126,
-      "title": "Principles of Corporate Finance"
+      "file": "accelerate-by-nicole-forsgren-jez-humble-and-gene-kim.jpg",
+      "bytes": 27684,
+      "title": "Accelerate"
     },
     {
-      "slug": "the-little-book-of-economics-by-greg-ip",
+      "slug": "the-toyota-production-system-by-taiichi-ohno",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-little-book-of-economics-by-greg-ip.jpg",
-      "bytes": 39986,
-      "title": "The Little Book of Economics"
+      "file": "the-toyota-production-system-by-taiichi-ohno.jpg",
+      "bytes": 28573,
+      "title": "The Toyota Production System"
     },
     {
-      "slug": "the-worldly-philosophers-by-robert-l-heilbroner",
+      "slug": "gemba-kaizen-by-masaaki-imai",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-worldly-philosophers-by-robert-l-heilbroner.jpg",
-      "bytes": 55054,
-      "title": "The Worldly Philosophers"
+      "file": "gemba-kaizen-by-masaaki-imai.jpg",
+      "bytes": 35766,
+      "title": "Gemba Kaizen"
     },
     {
-      "slug": "the-new-industrial-state-by-john-kenneth-galbraith",
+      "slug": "kaizen-by-masaaki-imai",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-new-industrial-state-by-john-kenneth-galbraith.jpg",
-      "bytes": 26439,
-      "title": "The New Industrial State"
+      "file": "kaizen-by-masaaki-imai.jpg",
+      "bytes": 17109,
+      "title": "Kaizen"
     },
     {
-      "slug": "the-travels-of-a-t-shirt-in-the-global-economy-by-pietra-rivoli",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "the-travels-of-a-t-shirt-in-the-global-economy-by-pietra-rivoli.jpg",
-      "bytes": 16821,
-      "title": "The Travels of a T-Shirt in the Global Economy"
-    },
-    {
-      "slug": "the-economics-book-by-dk",
+      "slug": "the-lean-six-sigma-pocket-toolbook-by-michael-l-george-john-maxey-david-t-rowlands-and-mar",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-economics-book-by-dk.jpg",
-      "bytes": 25130,
-      "title": "The Economics Book"
+      "file": "the-lean-six-sigma-pocket-toolbook-by-michael-l-george-john-maxey-david-t-rowlands-and-mar.jpg",
+      "bytes": 33263,
+      "title": "The Lean Six Sigma Pocket Toolbook"
     },
     {
-      "slug": "the-age-of-revolution-by-eric-hobsbawm",
+      "slug": "the-six-sigma-handbook-by-thomas-pyzdek-and-paul-keller",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-age-of-revolution-by-eric-hobsbawm.jpg",
-      "bytes": 44602,
-      "title": "The Age of Revolution"
+      "file": "the-six-sigma-handbook-by-thomas-pyzdek-and-paul-keller.jpg",
+      "bytes": 38157,
+      "title": "The Six Sigma Handbook"
     },
     {
-      "slug": "the-age-of-capital-by-eric-hobsbawm",
+      "slug": "lean-six-sigma-by-michael-l-george",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "the-age-of-capital-by-eric-hobsbawm.jpg",
-      "bytes": 17130,
-      "title": "The Age of Capital"
+      "source": "open-library",
+      "file": "lean-six-sigma-by-michael-l-george.jpg",
+      "bytes": 32837,
+      "title": "Lean Six Sigma"
+    },
+    {
+      "slug": "the-high-velocity-edge-by-steven-j-spear",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-high-velocity-edge-by-steven-j-spear.jpg",
+      "bytes": 22206,
+      "title": "The High-Velocity Edge"
     }
   ],
-  "offset": 15500,
-  "nextOffset": 16000,
+  "offset": 16000,
+  "nextOffset": 16500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2090,
-    "keep_existing": 2917,
-    "not_found": 10956,
+    "downloaded": 2338,
+    "keep_existing": 3121,
+    "not_found": 11004,
     "bad_image": 37
   },
-  "totalProcessed": 16000
+  "totalProcessed": 16500
 }
