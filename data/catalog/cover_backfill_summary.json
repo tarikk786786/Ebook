@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 64,
-    "keep_existing": 9,
+    "downloaded": 67,
+    "keep_existing": 7,
     "not_found": 425,
-    "bad_image": 2
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "essays-vol-2",
+      "slug": "handbook-of-art-therapy",
       "status": "downloaded",
       "source": "open-library",
-      "file": "essays-vol-2.jpg",
-      "bytes": 22141,
-      "title": "Essays Vol 2"
+      "file": "handbook-of-art-therapy.jpg",
+      "bytes": 33361,
+      "title": "Handbook of Art Therapy"
     },
     {
-      "slug": "essential-english-words-2",
+      "slug": "handbook-of-psychological-assessment",
       "status": "downloaded",
       "source": "open-library",
-      "file": "essential-english-words-2.jpg",
-      "bytes": 50737,
-      "title": "Essential English Words 2"
+      "file": "handbook-of-psychological-assessment.jpg",
+      "bytes": 41534,
+      "title": "Handbook of Psychological Assessment"
     },
     {
-      "slug": "essential-english-words-4-2nd",
+      "slug": "handwriting-sample",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "essential-english-words-4-2nd.jpg",
-      "bytes": 27048,
-      "title": "Essential English Words - 4 - 2nd"
+      "file": "handwriting-sample.jpg",
+      "bytes": 4682,
+      "title": "Handwriting sample"
     },
     {
-      "slug": "essential-english-words-2nd-ed-book-1",
+      "slug": "happiness-express",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "happiness-express.jpg",
+      "bytes": 34679,
+      "title": "Happiness Express"
+    },
+    {
+      "slug": "harry-potter-and-the-chamber-of-secrets",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "harry-potter-and-the-chamber-of-secrets.jpg",
+      "bytes": 47427,
+      "title": "Harry Potter and the Chamber of Secrets"
+    },
+    {
+      "slug": "harry-potter-and-the-deathly-hallows",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "harry-potter-and-the-deathly-hallows.jpg",
+      "bytes": 59424,
+      "title": "Harry Potter and the Deathly Hallows"
+    },
+    {
+      "slug": "harry-potter-and-the-goblet-of-fire",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "harry-potter-and-the-goblet-of-fire.jpg",
+      "bytes": 39601,
+      "title": "Harry Potter and the Goblet of Fire"
+    },
+    {
+      "slug": "harry-potter-and-the-order-of-the-phoenix",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "harry-potter-and-the-order-of-the-phoenix.jpg",
+      "bytes": 44746,
+      "title": "Harry Potter and the Order of the Phoenix"
+    },
+    {
+      "slug": "harry-potter-and-the-half-blood-prince",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "harry-potter-and-the-half-blood-prince.jpg",
+      "bytes": 50017,
+      "title": "Harry Potter and the Half-Blood Prince"
+    },
+    {
+      "slug": "harry-potter-and-the-philosopher-s-stone",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "harry-potter-and-the-philosopher-s-stone.jpg",
+      "bytes": 53495,
+      "title": "Harry Potter and the Philosopher's Stone"
+    },
+    {
+      "slug": "harry-potter-and-the-prisoner-of-azkaban",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "harry-potter-and-the-prisoner-of-azkaban.jpg",
+      "bytes": 30861,
+      "title": "Harry Potter and the Prisoner of Azkaban"
+    },
+    {
+      "slug": "healing-is-the-new-high",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "healing-is-the-new-high.jpg",
+      "bytes": 21303,
+      "title": "Healing Is The New High ?????? ?? ? ???? ???"
+    },
+    {
+      "slug": "hell-yeah-or-no",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "hell-yeah-or-no.jpg",
+      "bytes": 12632,
+      "title": "Hell Yeah or No"
+    },
+    {
+      "slug": "help-your-kids-with",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "help-your-kids-with.jpg",
+      "bytes": 22903,
+      "title": "Help Your Kids with"
+    },
+    {
+      "slug": "helping-children-to-cope-with-change-stress-and",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "helping-children-to-cope-with-change-stress-and.jpg",
+      "bytes": 42051,
+      "title": "Helping Children to Cope with Change, Stress and"
+    },
+    {
+      "slug": "high-road-leadership",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-road-leadership.jpg",
+      "bytes": 25835,
+      "title": "High Road Leadership"
+    },
+    {
+      "slug": "hindi-sahitya-ka-itihas",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "hindi-sahitya-ka-itihas.jpg",
+      "bytes": 36534,
+      "title": "Hindi Sahitya Ka Itihas"
+    },
+    {
+      "slug": "historical-marvels-in-the-quran-a-ali",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "essential-english-words-2nd-ed-book-1.jpg",
-      "bytes": 25146,
-      "title": "Essential English Words 2nd ed Book 1"
+      "file": "historical-marvels-in-the-quran-a-ali.jpg",
+      "bytes": 18350,
+      "title": "Historical Marvels In the Quran - A Ali"
     },
     {
-      "slug": "essential-english-words-6",
+      "slug": "history-of-india",
       "status": "downloaded",
       "source": "open-library",
-      "file": "essential-english-words-6.jpg",
-      "bytes": 49436,
-      "title": "Essential English Words 6"
+      "file": "history-of-india.jpg",
+      "bytes": 49765,
+      "title": "History Of India"
     },
     {
-      "slug": "essentials-of-kabc-ii-assessment",
+      "slug": "history-of-philosophy",
       "status": "downloaded",
       "source": "open-library",
-      "file": "essentials-of-kabc-ii-assessment.jpg",
-      "bytes": 41925,
-      "title": "Essentials of KABC II Assessment"
-    },
-    {
-      "slug": "essentials-of-nepsy-ii-assessment-essentials-of",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "essentials-of-nepsy-ii-assessment-essentials-of.jpg",
-      "bytes": 32026,
-      "title": "Essentials of NEPSY II Assessment Essentials of"
-    },
-    {
-      "slug": "essentials-of-wnv-assessment",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "essentials-of-wnv-assessment.jpg",
-      "bytes": 14212,
-      "title": "Essentials of WNV Assessment"
-    },
-    {
-      "slug": "etiquette-for-the-21st-century",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "etiquette-for-the-21st-century.jpg",
-      "bytes": 28993,
-      "title": "Etiquette for the 21st Century"
-    },
-    {
-      "slug": "everything-is-tuberculosis",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "everything-is-tuberculosis.jpg",
-      "bytes": 8997,
-      "title": "Everything Is Tuberculosis"
-    },
-    {
-      "slug": "everything-is-fucked-manson",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "everything-is-fucked-manson.jpg",
-      "bytes": 15049,
-      "title": "Everything Is Fucked Manson"
-    },
-    {
-      "slug": "exactly-what-to-say-m-jones",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "exactly-what-to-say-m-jones.jpg",
-      "bytes": 35456,
-      "title": "Exactly What to Say M Jones"
-    },
-    {
-      "slug": "ex-girlfriend",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "ex-girlfriend.jpg",
-      "bytes": 38534,
-      "title": "Ex Girlfriend"
-    },
-    {
-      "slug": "extraordinary-popular-delusions-mackay",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "extraordinary-popular-delusions-mackay.jpg",
-      "bytes": 51834,
-      "title": "Extraordinary Popular Delusions MacKay"
-    },
-    {
-      "slug": "extreme-ownership-willink",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "extreme-ownership-willink.jpg",
-      "bytes": 22221,
-      "title": "Extreme Ownership Willink"
-    },
-    {
-      "slug": "fact-questioned-documents",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "fact-questioned-documents.jpg",
-      "bytes": 19656,
-      "title": "FACT Questioned Documents"
-    },
-    {
-      "slug": "face-reading",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "face-reading.jpg",
-      "bytes": 15340,
-      "title": "Face Reading"
-    },
-    {
-      "slug": "factfulness-rosling",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "factfulness-rosling.jpg",
-      "bytes": 15085,
-      "title": "Factfulness Rosling"
-    },
-    {
-      "slug": "feel-the-fear-and-do-it-anyway",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "feel-the-fear-and-do-it-anyway.jpg",
-      "bytes": 38238,
-      "title": "Feel the fear and do it anyway"
-    },
-    {
-      "slug": "feel-good-productivity",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "feel-good-productivity.jpg",
-      "bytes": 34299,
-      "title": "Feel-Good Productivity"
+      "file": "history-of-philosophy.jpg",
+      "bytes": 14780,
+      "title": "History of Philosophy"
     }
   ],
-  "offset": 9500,
-  "nextOffset": 10000,
+  "offset": 10000,
+  "nextOffset": 10500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1383,
-    "keep_existing": 1827,
-    "not_found": 6768,
-    "bad_image": 22
+    "downloaded": 1450,
+    "keep_existing": 1834,
+    "not_found": 7193,
+    "bad_image": 23
   },
-  "totalProcessed": 10000
+  "totalProcessed": 10500
 }
