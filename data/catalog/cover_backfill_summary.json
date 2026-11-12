@@ -1,21 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 113,
-    "not_found": 387,
+    "downloaded": 3,
+    "keep_existing": 179,
+    "not_found": 318,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 23500,
-  "nextOffset": 24000,
+  "sampleDownloaded": [
+    {
+      "slug": "cu-wu4-the-conscious-uncoupling-creed-1",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "cu-wu4-the-conscious-uncoupling-creed-1.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chakravyuh-hindi-edition-nodrm",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chakravyuh-hindi-edition-nodrm.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chartered-financial-analyst-cfa-level-i-study-master-volume-5-42329",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chartered-financial-analyst-cfa-level-i-study-master-volume-5-42329.jpg",
+      "bytes": 52358,
+      "title": "The Intelligent Investor"
+    }
+  ],
+  "offset": 24000,
+  "nextOffset": 24500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2941,
-    "keep_existing": 4716,
-    "not_found": 16306,
+    "downloaded": 2944,
+    "keep_existing": 4895,
+    "not_found": 16624,
     "bad_image": 37
   },
-  "totalProcessed": 24000
+  "totalProcessed": 24500
 }
