@@ -1,21 +1,134 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 302,
-    "not_found": 198,
+    "downloaded": 14,
+    "keep_existing": 191,
+    "not_found": 295,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 17000,
-  "nextOffset": 17500,
+  "sampleDownloaded": [
+    {
+      "slug": "42-time-management-matrix",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "42-time-management-matrix.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "41-5633",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "41-5633.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "54-day-5-notes-हद",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "54-day-5-notes-हद.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "7-cold-calling-calling-statics-that-will-sober-you-down",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "7-cold-calling-calling-statics-that-will-sober-you-down.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "70-mandatory-itr-filing-itr-filing-requirement-ay-2026-27",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "70-mandatory-itr-filing-itr-filing-requirement-ay-2026-27.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "73-1080",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "73-1080.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "77-tds-in-tally-part-1-accounting-notes-tds-gst-fy2026-27-final",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "77-tds-in-tally-part-1-accounting-notes-tds-gst-fy2026-27-final.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "8-the-sss-method-password-abcd1234",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "8-the-sss-method-password-abcd1234.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "82-1071",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "82-1071.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "9-2551",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "9-2551.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "92-1061",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "92-1061.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "98-itr-2-online-gaming-ay-2026-27-section-115bbj-2026-05-05-11-56",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "98-itr-2-online-gaming-ay-2026-27-section-115bbj-2026-05-05-11-56.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "apexcreed-6-lecture",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-6-lecture.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "apexcreed-6-lecture-notes",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-6-lecture-notes.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    }
+  ],
+  "offset": 17500,
+  "nextOffset": 18000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2338,
-    "keep_existing": 3745,
-    "not_found": 11380,
+    "downloaded": 2352,
+    "keep_existing": 3936,
+    "not_found": 11675,
     "bad_image": 37
   },
-  "totalProcessed": 17500
+  "totalProcessed": 18000
 }
