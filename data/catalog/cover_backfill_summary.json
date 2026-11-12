@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 71,
-    "keep_existing": 34,
-    "not_found": 395,
+    "downloaded": 66,
+    "keep_existing": 50,
+    "not_found": 384,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-36197",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-26469",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-36197.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-26469.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-20465",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-55425",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-20465.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-22517",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-22517.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-53981",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-53981.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-55425.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-34601",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-48813",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-34601.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-56261",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-56261.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-39617",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-39617.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-47369",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-5-47369.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-48813.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-62911",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-67053",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-62911.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-79555",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-79555.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-69067",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-69067.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-31447",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-31447.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-67053.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-22555",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-71157",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-22555.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-71157.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-75261",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-75261.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-23467",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-49725",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-23467.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-49725.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-64963",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-75489",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-64963.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-75489.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-19591",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-65685",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-19591.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-16399",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-16399.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-81607",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-81607.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-54247",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-54247.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-65685.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-30079",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-69105",
       "status": "downloaded",
       "source": "open-library",
-      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-7-30079.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-69105.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-47217",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-47217.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-72069",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-72069.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-65913",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-65913.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-77313",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-77313.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-61809",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-61809.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-36273",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-36273.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-50409",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-50409.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-16893",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-16893.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-38781",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-38781.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-42429",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-9-42429.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 21500,
-  "nextOffset": 22000,
+  "offset": 22000,
+  "nextOffset": 22500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2842,
-    "keep_existing": 4313,
-    "not_found": 14808,
+    "downloaded": 2908,
+    "keep_existing": 4363,
+    "not_found": 15192,
     "bad_image": 37
   },
-  "totalProcessed": 22000
+  "totalProcessed": 22500
 }
