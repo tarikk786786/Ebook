@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 42,
-    "keep_existing": 24,
-    "not_found": 431,
-    "bad_image": 3
+    "downloaded": 30,
+    "keep_existing": 15,
+    "not_found": 454,
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "part-03-applications-24-april-2023-comput",
+      "slug": "raghavpandaviya",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "part-03-applications-24-april-2023-comput.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Applications :: 24 APRIL 2023 : Comput"
+      "file": "raghavpandaviya.jpg",
+      "bytes": 29727,
+      "title": "Raghavpandaviya"
     },
     {
-      "slug": "part-03-c-language-03-march-2023-computer",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-c-language-03-march-2023-computer.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : C language :: 03 MARCH 2023 : Computer"
-    },
-    {
-      "slug": "part-03-hardware-of-computer-16-feb-2023-c",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-hardware-of-computer-16-feb-2023-c.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Hardware of Computer : 16 Feb 2023 : C"
-    },
-    {
-      "slug": "part-03-html-30-march-2023-computer",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-html-30-march-2023-computer.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Html :: 30 MARCH 2023 : Computer :"
-    },
-    {
-      "slug": "part-03-internet-28-march-2023-computer",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-internet-28-march-2023-computer.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Internet :: 28 MARCH 2023 : Computer :"
-    },
-    {
-      "slug": "part-03-ms-word-25-feb-2023-computer",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-ms-word-25-feb-2023-computer.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Ms Word : 25 Feb 2023 : Computer :"
-    },
-    {
-      "slug": "part-03-networking-24-march-2023-computer",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-networking-24-march-2023-computer.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Networking :: 24 MARCH 2023 : Computer"
-    },
-    {
-      "slug": "part-03-networking-advance-14-april-2023",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-networking-advance-14-april-2023.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Networking advance :: 14 APRIL 2023 :"
-    },
-    {
-      "slug": "part-03-previous-year-questions-07-april-20",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-previous-year-questions-07-april-20.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Previous year questions :: 07 APRIL 20"
-    },
-    {
-      "slug": "part-03-rapid-revision-27-april-2023-comp",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-rapid-revision-27-april-2023-comp.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Rapid Revision :: 27 APRIL 2023 : Comp"
-    },
-    {
-      "slug": "part-03-software-22-feb-2023-computer",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-software-22-feb-2023-computer.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Software : 22 Feb 2023 : Computer :"
-    },
-    {
-      "slug": "part-03-file-and-it-s-type-03-aprile-2023",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-file-and-it-s-type-03-aprile-2023.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : file and it's type :: 03 APRILE 2023 :"
-    },
-    {
-      "slug": "part-03-advance-computer-revision-30-june",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-advance-computer-revision-30-june.jpg",
-      "bytes": 3576,
-      "title": "Part 03 :: Advance Computer Revision :: 30 JUNE"
-    },
-    {
-      "slug": "parvati-mangal-of-goswami-tulsidas",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "parvati-mangal-of-goswami-tulsidas.jpg",
-      "bytes": 4830,
-      "title": "Parvati Mangal Of Goswami Tulsidas"
-    },
-    {
-      "slug": "pdf-file",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "pdf-file.jpg",
-      "bytes": 10169,
-      "title": "Pdf File"
-    },
-    {
-      "slug": "perfect-questions-perfect-answers",
+      "slug": "raja-yoga",
       "status": "downloaded",
       "source": "open-library",
-      "file": "perfect-questions-perfect-answers.jpg",
-      "bytes": 45361,
-      "title": "Perfect-Questions-Perfect-Answers"
+      "file": "raja-yoga.jpg",
+      "bytes": 34407,
+      "title": "Raja Yoga"
     },
     {
-      "slug": "people-helping-people",
+      "slug": "rajayoga",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "rajayoga.jpg",
+      "bytes": 15073,
+      "title": "RajaYoga"
+    },
+    {
+      "slug": "ram-geeta-the-gospel-of-lord-ram",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "people-helping-people.jpg",
-      "bytes": 24320,
-      "title": "People Helping People"
+      "file": "ram-geeta-the-gospel-of-lord-ram.jpg",
+      "bytes": 4974,
+      "title": "Ram Geeta-The Gospel Of Lord Ram"
     },
     {
-      "slug": "person-centered-approach-to-recovery-in-medicine",
+      "slug": "ram-lala-nahachu-of-goswami-tulsidas",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "person-centered-approach-to-recovery-in-medicine.jpg",
-      "bytes": 31553,
-      "title": "Person Centered Approach to Recovery in Medicine"
+      "source": "internet-archive",
+      "file": "ram-lala-nahachu-of-goswami-tulsidas.jpg",
+      "bytes": 4881,
+      "title": "Ram Lala Nahachu Of Goswami Tulsidas"
     },
     {
-      "slug": "philosophy-of-education",
+      "slug": "rama-with-a-axe",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "philosophy-of-education.jpg",
-      "bytes": 42588,
-      "title": "Philosophy Of Education"
+      "source": "internet-archive",
+      "file": "rama-with-a-axe.jpg",
+      "bytes": 14073,
+      "title": "Rama with a Axe"
     },
     {
-      "slug": "phosphorus",
+      "slug": "ramana-maharshi",
       "status": "downloaded",
       "source": "open-library",
-      "file": "phosphorus.jpg",
-      "bytes": 26658,
-      "title": "Phosphorus"
+      "file": "ramana-maharshi.jpg",
+      "bytes": 30212,
+      "title": "Ramana Maharshi"
+    },
+    {
+      "slug": "rashis",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "rashis.jpg",
+      "bytes": 27595,
+      "title": "Rashis"
+    },
+    {
+      "slug": "raspberry-pi-cookbook",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raspberry-pi-cookbook.jpg",
+      "bytes": 45516,
+      "title": "Raspberry Pi Cookbook"
+    },
+    {
+      "slug": "read-people",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "read-people.jpg",
+      "bytes": 38718,
+      "title": "Read People"
+    },
+    {
+      "slug": "reading-between-the-lines",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "reading-between-the-lines.jpg",
+      "bytes": 29073,
+      "title": "Reading+Between+The+Lines"
+    },
+    {
+      "slug": "real-world-next-js",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "real-world-next-js.jpg",
+      "bytes": 46498,
+      "title": "Real-World Next js"
+    },
+    {
+      "slug": "relentless-s-grover",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "relentless-s-grover.jpg",
+      "bytes": 11530,
+      "title": "Relentless S Grover"
+    },
+    {
+      "slug": "retrograde-planets",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "retrograde-planets.jpg",
+      "bytes": 31694,
+      "title": "Retrograde Planets"
+    },
+    {
+      "slug": "rich-dad-poor-dad-kiyosaki",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "rich-dad-poor-dad-kiyosaki.jpg",
+      "bytes": 31751,
+      "title": "Rich Dad Poor Dad Kiyosaki"
+    },
+    {
+      "slug": "rich-dad-poor-dad-hindi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "rich-dad-poor-dad-hindi.jpg",
+      "bytes": 49119,
+      "title": "Rich dad Poor dad hindi"
+    },
+    {
+      "slug": "richest-man-in-babylon",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "richest-man-in-babylon.jpg",
+      "bytes": 78460,
+      "title": "Richest Man in Babylon"
+    },
+    {
+      "slug": "richard-templar-the-rules-of-work",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "richard-templar-the-rules-of-work.jpg",
+      "bytes": 13323,
+      "title": "Richard Templar The Rules of Work"
+    },
+    {
+      "slug": "rod-hemsell-the-philosophy-of-consciousness",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "rod-hemsell-the-philosophy-of-consciousness.jpg",
+      "bytes": 10888,
+      "title": "Rod-Hemsell-The-Philosophy-of-Consciousness"
+    },
+    {
+      "slug": "royal-descents-scottish-records",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "royal-descents-scottish-records.jpg",
+      "bytes": 25016,
+      "title": "Royal Descents, Scottish Records"
     }
   ],
-  "offset": 11500,
-  "nextOffset": 12000,
+  "offset": 12000,
+  "nextOffset": 12500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1605,
-    "keep_existing": 1878,
-    "not_found": 8485,
-    "bad_image": 32
+    "downloaded": 1635,
+    "keep_existing": 1893,
+    "not_found": 8939,
+    "bad_image": 33
   },
-  "totalProcessed": 12000
+  "totalProcessed": 12500
 }
