@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 37,
-    "keep_existing": 18,
-    "not_found": 445,
-    "bad_image": 0
+    "downloaded": 71,
+    "keep_existing": 99,
+    "not_found": 327,
+    "bad_image": 3
   },
-  "updatedCurated": 0,
+  "updatedCurated": 34,
   "sampleDownloaded": [
     {
-      "slug": "where-good-ideas-come-from-johnson",
+      "slug": "competing-in-the-age-of-ai",
       "status": "downloaded",
       "source": "open-library",
-      "file": "where-good-ideas-come-from-johnson.jpg",
-      "bytes": 35549,
-      "title": "Where Good Ideas Come from Johnson"
+      "file": "competing-in-the-age-of-ai.jpg",
+      "bytes": 56854,
+      "title": "Competing in the Age of AI"
     },
     {
-      "slug": "who-is-a-hindu-koenraad-elst",
+      "slug": "don-t-make-me-think",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "don-t-make-me-think.jpg",
+      "bytes": 51659,
+      "title": "Don't Make Me Think"
+    },
+    {
+      "slug": "human-machine",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "who-is-a-hindu-koenraad-elst.jpg",
-      "bytes": 14957,
-      "title": "Who Is A Hindu Koenraad Elst"
+      "file": "human-machine.jpg",
+      "bytes": 5651,
+      "title": "Human + Machine"
     },
     {
-      "slug": "who-rules-the-world",
+      "slug": "matchmakers",
       "status": "downloaded",
       "source": "open-library",
-      "file": "who-rules-the-world.jpg",
-      "bytes": 40769,
-      "title": "Who Rules the World"
+      "file": "matchmakers.jpg",
+      "bytes": 34066,
+      "title": "Matchmakers"
     },
     {
-      "slug": "who-will-cry-when-you-die",
+      "slug": "only-humans-need-apply",
       "status": "downloaded",
       "source": "open-library",
-      "file": "who-will-cry-when-you-die.jpg",
-      "bytes": 48372,
-      "title": "Who Will Cry When You Die"
+      "file": "only-humans-need-apply.jpg",
+      "bytes": 63942,
+      "title": "Only Humans Need Apply"
     },
     {
-      "slug": "who-will-cry-when-you-will-die",
+      "slug": "peopleware",
       "status": "downloaded",
       "source": "open-library",
-      "file": "who-will-cry-when-you-will-die.jpg",
-      "bytes": 48372,
-      "title": "Who Will Cry When You Will Die"
+      "file": "peopleware.jpg",
+      "bytes": 60205,
+      "title": "Peopleware"
     },
     {
-      "slug": "who-moved-my-cheese",
+      "slug": "platform-revolution",
       "status": "downloaded",
       "source": "open-library",
-      "file": "who-moved-my-cheese.jpg",
-      "bytes": 41692,
-      "title": "Who moved my cheese"
+      "file": "platform-revolution.jpg",
+      "bytes": 28014,
+      "title": "Platform Revolution"
     },
     {
-      "slug": "why-men-don-t-listen-and-women-can-t-read",
+      "slug": "platform-scale",
       "status": "downloaded",
       "source": "open-library",
-      "file": "why-men-don-t-listen-and-women-can-t-read.jpg",
-      "bytes": 36499,
-      "title": "Why Men Don't Listen and Women Can't Read"
+      "file": "platform-scale.jpg",
+      "bytes": 12904,
+      "title": "Platform Scale"
     },
     {
-      "slug": "why-men-want-sex-and-women-need-love",
+      "slug": "prediction-machines",
       "status": "downloaded",
       "source": "open-library",
-      "file": "why-men-want-sex-and-women-need-love.jpg",
-      "bytes": 11827,
-      "title": "Why Men Want Sex and Women Need Love"
+      "file": "prediction-machines.jpg",
+      "bytes": 28663,
+      "title": "Prediction Machines"
     },
     {
-      "slug": "why-we-sleep",
+      "slug": "power-and-prediction",
       "status": "downloaded",
       "source": "open-library",
-      "file": "why-we-sleep.jpg",
-      "bytes": 48948,
-      "title": "Why We Sleep"
+      "file": "power-and-prediction.jpg",
+      "bytes": 24543,
+      "title": "Power and Prediction"
     },
     {
-      "slug": "wild-reverence",
+      "slug": "the-ai-superpowers",
       "status": "downloaded",
       "source": "open-library",
-      "file": "wild-reverence.jpg",
-      "bytes": 39923,
-      "title": "Wild Reverence"
+      "file": "the-ai-superpowers.jpg",
+      "bytes": 39888,
+      "title": "The AI Superpowers"
     },
     {
-      "slug": "wiley-beginning-database-design-solutions",
+      "slug": "the-age-of-ai",
       "status": "downloaded",
       "source": "open-library",
-      "file": "wiley-beginning-database-design-solutions.jpg",
-      "bytes": 29826,
-      "title": "Wiley Beginning Database Design Solutions"
+      "file": "the-age-of-ai.jpg",
+      "bytes": 47092,
+      "title": "The Age of AI"
     },
     {
-      "slug": "will-it-fly",
+      "slug": "the-alignment-problem",
       "status": "downloaded",
       "source": "open-library",
-      "file": "will-it-fly.jpg",
-      "bytes": 28458,
-      "title": "Will It Fly"
+      "file": "the-alignment-problem.jpg",
+      "bytes": 24715,
+      "title": "The Alignment Problem"
     },
     {
-      "slug": "will-smith",
+      "slug": "the-big-nine",
       "status": "downloaded",
       "source": "open-library",
-      "file": "will-smith.jpg",
-      "bytes": 31500,
-      "title": "Will Smith"
+      "file": "the-big-nine.jpg",
+      "bytes": 50282,
+      "title": "The Big Nine"
     },
     {
-      "slug": "windows-11-all-in-one-for-dummies-ciprian-adrian",
+      "slug": "the-business-of-platforms",
       "status": "downloaded",
       "source": "open-library",
-      "file": "windows-11-all-in-one-for-dummies-ciprian-adrian.jpg",
-      "bytes": 57314,
-      "title": "Windows 11 All in One for Dummies Ciprian Adrian"
+      "file": "the-business-of-platforms.jpg",
+      "bytes": 25810,
+      "title": "The Business of Platforms"
     },
     {
-      "slug": "wings-on-fire",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "wings-on-fire.jpg",
-      "bytes": 11046,
-      "title": "Wings On Fire"
-    },
-    {
-      "slug": "wings-of-fire",
+      "slug": "the-cathedral-and-the-bazaar",
       "status": "downloaded",
       "source": "open-library",
-      "file": "wings-of-fire.jpg",
-      "bytes": 39554,
-      "title": "Wings of fire"
+      "file": "the-cathedral-and-the-bazaar.jpg",
+      "bytes": 50728,
+      "title": "The Cathedral and the Bazaar"
     },
     {
-      "slug": "wisdom-from-darwin-to-munger",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "wisdom-from-darwin-to-munger.jpg",
-      "bytes": 10781,
-      "title": "Wisdom From Darwin To Munger"
-    },
-    {
-      "slug": "woman-in-islam-swarup",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "woman-in-islam-swarup.jpg",
-      "bytes": 15515,
-      "title": "Woman in Islam Swarup"
-    },
-    {
-      "slug": "wordpress-seo",
+      "slug": "the-code-breaker",
       "status": "downloaded",
       "source": "open-library",
-      "file": "wordpress-seo.jpg",
-      "bytes": 49414,
-      "title": "WordPress-SEO"
+      "file": "the-code-breaker.jpg",
+      "bytes": 17651,
+      "title": "The Code Breaker"
     },
     {
-      "slug": "world-order",
+      "slug": "the-cold-start-problem",
       "status": "downloaded",
       "source": "open-library",
-      "file": "world-order.jpg",
-      "bytes": 5979,
-      "title": "World order"
+      "file": "the-cold-start-problem.jpg",
+      "bytes": 17362,
+      "title": "The Cold Start Problem"
+    },
+    {
+      "slug": "the-coming-wave",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-coming-wave.jpg",
+      "bytes": 23018,
+      "title": "The Coming Wave"
+    },
+    {
+      "slug": "the-design-of-everyday-things",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-design-of-everyday-things.jpg",
+      "bytes": 21344,
+      "title": "The Design of Everyday Things"
     }
   ],
-  "offset": 14000,
-  "nextOffset": 14500,
+  "offset": 14500,
+  "nextOffset": 15000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1924,
-    "keep_existing": 1991,
-    "not_found": 10551,
-    "bad_image": 34
+    "downloaded": 1995,
+    "keep_existing": 2090,
+    "not_found": 10878,
+    "bad_image": 37
   },
-  "totalProcessed": 14500
+  "totalProcessed": 15000
 }
