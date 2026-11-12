@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 71,
-    "keep_existing": 99,
-    "not_found": 327,
-    "bad_image": 3
+    "downloaded": 28,
+    "keep_existing": 401,
+    "not_found": 71,
+    "bad_image": 0
   },
-  "updatedCurated": 34,
+  "updatedCurated": 15,
   "sampleDownloaded": [
     {
-      "slug": "competing-in-the-age-of-ai",
+      "slug": "finding-flow",
       "status": "downloaded",
       "source": "open-library",
-      "file": "competing-in-the-age-of-ai.jpg",
-      "bytes": 56854,
-      "title": "Competing in the Age of AI"
+      "file": "finding-flow.jpg",
+      "bytes": 51252,
+      "title": "Finding Flow"
     },
     {
-      "slug": "don-t-make-me-think",
+      "slug": "music",
       "status": "downloaded",
       "source": "open-library",
-      "file": "don-t-make-me-think.jpg",
-      "bytes": 51659,
-      "title": "Don't Make Me Think"
+      "file": "music.jpg",
+      "bytes": 6817,
+      "title": "Music"
     },
     {
-      "slug": "human-machine",
+      "slug": "preposition",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "preposition.jpg",
+      "bytes": 28691,
+      "title": "Preposition"
+    },
+    {
+      "slug": "the-business-coach",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-business-coach.jpg",
+      "bytes": 27650,
+      "title": "The Business Coach"
+    },
+    {
+      "slug": "welcome",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "human-machine.jpg",
-      "bytes": 5651,
-      "title": "Human + Machine"
+      "file": "welcome.jpg",
+      "bytes": 3576,
+      "title": "Welcome"
     },
     {
-      "slug": "matchmakers",
+      "slug": "option-pricing-models-and-volatility",
       "status": "downloaded",
       "source": "open-library",
-      "file": "matchmakers.jpg",
-      "bytes": 34066,
-      "title": "Matchmakers"
+      "file": "option-pricing-models-and-volatility.jpg",
+      "bytes": 41087,
+      "title": "Option Pricing Models And Volatility"
     },
     {
-      "slug": "only-humans-need-apply",
+      "slug": "options-pricing-models-and-volatility",
       "status": "downloaded",
       "source": "open-library",
-      "file": "only-humans-need-apply.jpg",
-      "bytes": 63942,
-      "title": "Only Humans Need Apply"
+      "file": "options-pricing-models-and-volatility.jpg",
+      "bytes": 41087,
+      "title": "Options Pricing Models And Volatility"
     },
     {
-      "slug": "peopleware",
+      "slug": "barbarians-at-the-gate",
       "status": "downloaded",
       "source": "open-library",
-      "file": "peopleware.jpg",
-      "bytes": 60205,
-      "title": "Peopleware"
+      "file": "barbarians-at-the-gate.jpg",
+      "bytes": 8269,
+      "title": "Barbarians at the Gate"
     },
     {
-      "slug": "platform-revolution",
+      "slug": "the-great-a-p-and-the-struggle-for-small-business-in",
       "status": "downloaded",
       "source": "open-library",
-      "file": "platform-revolution.jpg",
-      "bytes": 28014,
-      "title": "Platform Revolution"
+      "file": "the-great-a-p-and-the-struggle-for-small-business-in.jpg",
+      "bytes": 25267,
+      "title": "The Great A&P and the Struggle for Small Business in"
     },
     {
-      "slug": "platform-scale",
+      "slug": "amaze-every-customer-every-time",
       "status": "downloaded",
       "source": "open-library",
-      "file": "platform-scale.jpg",
-      "bytes": 12904,
-      "title": "Platform Scale"
+      "file": "amaze-every-customer-every-time.jpg",
+      "bytes": 36200,
+      "title": "Amaze Every Customer Every Time"
     },
     {
-      "slug": "prediction-machines",
+      "slug": "delivering-happiness",
       "status": "downloaded",
       "source": "open-library",
-      "file": "prediction-machines.jpg",
-      "bytes": 28663,
-      "title": "Prediction Machines"
+      "file": "delivering-happiness.jpg",
+      "bytes": 28440,
+      "title": "Delivering Happiness"
     },
     {
-      "slug": "power-and-prediction",
+      "slug": "the-retail-doctor-s-guide-to-growing-your-business",
       "status": "downloaded",
       "source": "open-library",
-      "file": "power-and-prediction.jpg",
-      "bytes": 24543,
-      "title": "Power and Prediction"
+      "file": "the-retail-doctor-s-guide-to-growing-your-business.jpg",
+      "bytes": 30834,
+      "title": "The Retail Doctor's Guide to Growing Your Business"
     },
     {
-      "slug": "the-ai-superpowers",
+      "slug": "banker-to-the-poor",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-ai-superpowers.jpg",
-      "bytes": 39888,
-      "title": "The AI Superpowers"
+      "file": "banker-to-the-poor.jpg",
+      "bytes": 41962,
+      "title": "Banker to the Poor"
     },
     {
-      "slug": "the-age-of-ai",
+      "slug": "an-elegant-puzzle",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-age-of-ai.jpg",
-      "bytes": 47092,
-      "title": "The Age of AI"
+      "file": "an-elegant-puzzle.jpg",
+      "bytes": 47148,
+      "title": "An Elegant Puzzle"
     },
     {
-      "slug": "the-alignment-problem",
+      "slug": "3-d-negotiation",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-alignment-problem.jpg",
-      "bytes": 24715,
-      "title": "The Alignment Problem"
+      "file": "3-d-negotiation.jpg",
+      "bytes": 48448,
+      "title": "3-D Negotiation"
     },
     {
-      "slug": "the-big-nine",
+      "slug": "accelerate",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-big-nine.jpg",
-      "bytes": 50282,
-      "title": "The Big Nine"
+      "file": "accelerate.jpg",
+      "bytes": 27684,
+      "title": "Accelerate"
     },
     {
-      "slug": "the-business-of-platforms",
+      "slug": "broke-millennial",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-business-of-platforms.jpg",
-      "bytes": 25810,
-      "title": "The Business of Platforms"
+      "file": "broke-millennial.jpg",
+      "bytes": 32861,
+      "title": "Broke Millennial"
     },
     {
-      "slug": "the-cathedral-and-the-bazaar",
+      "slug": "agile-selling",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-cathedral-and-the-bazaar.jpg",
-      "bytes": 50728,
-      "title": "The Cathedral and the Bazaar"
+      "file": "agile-selling.jpg",
+      "bytes": 26117,
+      "title": "Agile Selling"
     },
     {
-      "slug": "the-code-breaker",
+      "slug": "built-to-sell",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-code-breaker.jpg",
-      "bytes": 17651,
-      "title": "The Code Breaker"
+      "file": "built-to-sell.jpg",
+      "bytes": 30169,
+      "title": "Built to Sell"
     },
     {
-      "slug": "the-cold-start-problem",
+      "slug": "blitzscaling",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-cold-start-problem.jpg",
-      "bytes": 17362,
-      "title": "The Cold Start Problem"
-    },
-    {
-      "slug": "the-coming-wave",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-coming-wave.jpg",
-      "bytes": 23018,
-      "title": "The Coming Wave"
-    },
-    {
-      "slug": "the-design-of-everyday-things",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-design-of-everyday-things.jpg",
-      "bytes": 21344,
-      "title": "The Design of Everyday Things"
+      "file": "blitzscaling.jpg",
+      "bytes": 23725,
+      "title": "Blitzscaling"
     }
   ],
-  "offset": 14500,
-  "nextOffset": 15000,
+  "offset": 15000,
+  "nextOffset": 15500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1995,
-    "keep_existing": 2090,
-    "not_found": 10878,
+    "downloaded": 2023,
+    "keep_existing": 2491,
+    "not_found": 10949,
     "bad_image": 37
   },
-  "totalProcessed": 15000
+  "totalProcessed": 15500
 }
