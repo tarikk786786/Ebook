@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 30,
-    "keep_existing": 15,
-    "not_found": 454,
-    "bad_image": 1
+    "downloaded": 40,
+    "keep_existing": 31,
+    "not_found": 429,
+    "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "raghavpandaviya",
+      "slug": "seedtime-and-harvest",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "seedtime-and-harvest.jpg",
+      "bytes": 32191,
+      "title": "Seedtime and Harvest"
+    },
+    {
+      "slug": "self-esteem-games-for-children",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "self-esteem-games-for-children.jpg",
+      "bytes": 42854,
+      "title": "Self Esteem Games for Children"
+    },
+    {
+      "slug": "shame-and-the-origins-of-self-esteem-a-jungian-a",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "shame-and-the-origins-of-self-esteem-a-jungian-a.jpg",
+      "bytes": 17701,
+      "title": "Shame and the Origins of Self Esteem A Jungian A"
+    },
+    {
+      "slug": "shannon-watts-fired-up",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "raghavpandaviya.jpg",
-      "bytes": 29727,
-      "title": "Raghavpandaviya"
+      "file": "shannon-watts-fired-up.jpg",
+      "bytes": 4871,
+      "title": "Shannon Watts - Fired Up"
     },
     {
-      "slug": "raja-yoga",
+      "slug": "silence",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raja-yoga.jpg",
-      "bytes": 34407,
-      "title": "Raja Yoga"
+      "file": "silence.jpg",
+      "bytes": 19459,
+      "title": "Silence"
     },
     {
-      "slug": "rajayoga",
+      "slug": "simple-effective-science-for-self-realization",
       "status": "downloaded",
       "source": "open-library",
-      "file": "rajayoga.jpg",
-      "bytes": 15073,
-      "title": "RajaYoga"
+      "file": "simple-effective-science-for-self-realization.jpg",
+      "bytes": 11182,
+      "title": "Simple & Effective Science For Self Realization"
     },
     {
-      "slug": "ram-geeta-the-gospel-of-lord-ram",
+      "slug": "simply-delicious",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "simply-delicious.jpg",
+      "bytes": 52852,
+      "title": "Simply Delicious"
+    },
+    {
+      "slug": "singular-plural",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "singular-plural.jpg",
+      "bytes": 5625,
+      "title": "Singular & Plural"
+    },
+    {
+      "slug": "sister-wife",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "sister-wife.jpg",
+      "bytes": 40830,
+      "title": "Sister Wife"
+    },
+    {
+      "slug": "skeletal-trauma",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "skeletal-trauma.jpg",
+      "bytes": 67301,
+      "title": "Skeletal Trauma"
+    },
+    {
+      "slug": "skill-with-people",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "skill-with-people.jpg",
+      "bytes": 25634,
+      "title": "Skill With People"
+    },
+    {
+      "slug": "social-media-monitoring",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "social-media-monitoring.jpg",
+      "bytes": 34762,
+      "title": "Social Media Monitoring"
+    },
+    {
+      "slug": "software-engineering",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "software-engineering.jpg",
+      "bytes": 5625,
+      "title": "Software Engineering"
+    },
+    {
+      "slug": "solve-it",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "solve-it.jpg",
+      "bytes": 16728,
+      "title": "Solve IT"
+    },
+    {
+      "slug": "sophie-s-world",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "sophie-s-world.jpg",
+      "bytes": 36059,
+      "title": "Sophie's World"
+    },
+    {
+      "slug": "speaker-identification",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "speaker-identification.jpg",
+      "bytes": 16920,
+      "title": "Speaker-Identification"
+    },
+    {
+      "slug": "spiritual-warrior-transforming-lust-into-love",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "ram-geeta-the-gospel-of-lord-ram.jpg",
-      "bytes": 4974,
-      "title": "Ram Geeta-The Gospel Of Lord Ram"
+      "file": "spiritual-warrior-transforming-lust-into-love.jpg",
+      "bytes": 18097,
+      "title": "Spiritual warrior, Transforming lust into love"
     },
     {
-      "slug": "ram-lala-nahachu-of-goswami-tulsidas",
+      "slug": "spy-the-lie",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "spy-the-lie.jpg",
+      "bytes": 48210,
+      "title": "Spy The Lie"
+    },
+    {
+      "slug": "sri-laksmi-legends-and-lores",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "ram-lala-nahachu-of-goswami-tulsidas.jpg",
-      "bytes": 4881,
-      "title": "Ram Lala Nahachu Of Goswami Tulsidas"
+      "file": "sri-laksmi-legends-and-lores.jpg",
+      "bytes": 11926,
+      "title": "Sri Laksmi Legends and Lores"
     },
     {
-      "slug": "rama-with-a-axe",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "rama-with-a-axe.jpg",
-      "bytes": 14073,
-      "title": "Rama with a Axe"
-    },
-    {
-      "slug": "ramana-maharshi",
+      "slug": "sri-sri-ramakrishna-kathamrita-volume-1",
       "status": "downloaded",
       "source": "open-library",
-      "file": "ramana-maharshi.jpg",
-      "bytes": 30212,
-      "title": "Ramana Maharshi"
-    },
-    {
-      "slug": "rashis",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "rashis.jpg",
-      "bytes": 27595,
-      "title": "Rashis"
-    },
-    {
-      "slug": "raspberry-pi-cookbook",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raspberry-pi-cookbook.jpg",
-      "bytes": 45516,
-      "title": "Raspberry Pi Cookbook"
-    },
-    {
-      "slug": "read-people",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "read-people.jpg",
-      "bytes": 38718,
-      "title": "Read People"
-    },
-    {
-      "slug": "reading-between-the-lines",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "reading-between-the-lines.jpg",
-      "bytes": 29073,
-      "title": "Reading+Between+The+Lines"
-    },
-    {
-      "slug": "real-world-next-js",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "real-world-next-js.jpg",
-      "bytes": 46498,
-      "title": "Real-World Next js"
-    },
-    {
-      "slug": "relentless-s-grover",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "relentless-s-grover.jpg",
-      "bytes": 11530,
-      "title": "Relentless S Grover"
-    },
-    {
-      "slug": "retrograde-planets",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "retrograde-planets.jpg",
-      "bytes": 31694,
-      "title": "Retrograde Planets"
-    },
-    {
-      "slug": "rich-dad-poor-dad-kiyosaki",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "rich-dad-poor-dad-kiyosaki.jpg",
-      "bytes": 31751,
-      "title": "Rich Dad Poor Dad Kiyosaki"
-    },
-    {
-      "slug": "rich-dad-poor-dad-hindi",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "rich-dad-poor-dad-hindi.jpg",
-      "bytes": 49119,
-      "title": "Rich dad Poor dad hindi"
-    },
-    {
-      "slug": "richest-man-in-babylon",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "richest-man-in-babylon.jpg",
-      "bytes": 78460,
-      "title": "Richest Man in Babylon"
-    },
-    {
-      "slug": "richard-templar-the-rules-of-work",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "richard-templar-the-rules-of-work.jpg",
-      "bytes": 13323,
-      "title": "Richard Templar The Rules of Work"
-    },
-    {
-      "slug": "rod-hemsell-the-philosophy-of-consciousness",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "rod-hemsell-the-philosophy-of-consciousness.jpg",
-      "bytes": 10888,
-      "title": "Rod-Hemsell-The-Philosophy-of-Consciousness"
-    },
-    {
-      "slug": "royal-descents-scottish-records",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "royal-descents-scottish-records.jpg",
-      "bytes": 25016,
-      "title": "Royal Descents, Scottish Records"
+      "file": "sri-sri-ramakrishna-kathamrita-volume-1.jpg",
+      "bytes": 56933,
+      "title": "Sri Sri Ramakrishna Kathamrita Volume 1"
     }
   ],
-  "offset": 12000,
-  "nextOffset": 12500,
+  "offset": 12500,
+  "nextOffset": 13000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1635,
-    "keep_existing": 1893,
-    "not_found": 8939,
+    "downloaded": 1675,
+    "keep_existing": 1924,
+    "not_found": 9368,
     "bad_image": 33
   },
-  "totalProcessed": 12500
+  "totalProcessed": 13000
 }
