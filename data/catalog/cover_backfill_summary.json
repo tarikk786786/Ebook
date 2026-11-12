@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 54,
-    "keep_existing": 41,
-    "not_found": 405,
+    "downloaded": 56,
+    "keep_existing": 89,
+    "not_found": 355,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-29420",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-53221",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-29420.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-27596",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-27596.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-38540",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-38540.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-16424",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-16424.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-63164",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-63164.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-36032",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-36032.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-57920",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-57920.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-77300",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-77300.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-81176",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-81176.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-79580",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-79580.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-80720",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-80720.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-56780",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-56780.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-53221.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-17336",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-18565",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-17336.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-18565.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-70460",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-80125",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-70460.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-80125.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-35437",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-35437.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-54272",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-25633",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-54272.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-25633.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-28369",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-28369.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-43873",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-43873.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-45241",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-45241.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-55868",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-75109",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-55868.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-75109.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-67813",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-67813.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-81265",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-81265.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-79124",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-78301",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-79124.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-78301.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-34981",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-34981.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-20389",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-20389.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-29053",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-29053.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-62252",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-19705",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-62252.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-19705.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-39680",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-68041",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-39680.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-68041.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-51308",
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-24037",
       "status": "downloaded",
       "source": "open-library",
-      "file": "atomic-habits-an-easy-proven-way-to-build-good-habits-volume-8-51308.jpg",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-24037.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-76477",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-76477.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-64165",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "black-hat-python-python-programming-for-hackers-and-pentesters-volume-1-64165.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 20000,
-  "nextOffset": 20500,
+  "offset": 20500,
+  "nextOffset": 21000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2656,
-    "keep_existing": 4133,
-    "not_found": 13674,
+    "downloaded": 2712,
+    "keep_existing": 4222,
+    "not_found": 14029,
     "bad_image": 37
   },
-  "totalProcessed": 20500
+  "totalProcessed": 21000
 }
