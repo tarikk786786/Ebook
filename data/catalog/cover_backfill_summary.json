@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 54,
-    "keep_existing": 8,
-    "not_found": 437,
-    "bad_image": 1
+    "downloaded": 59,
+    "keep_existing": 12,
+    "not_found": 424,
+    "bad_image": 5
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "jane-the-art-of-living-alone-and-loving-it",
+      "slug": "mastering-the-art-of-success",
       "status": "downloaded",
       "source": "open-library",
-      "file": "jane-the-art-of-living-alone-and-loving-it.jpg",
-      "bytes": 42600,
-      "title": "Jane The art of living alone and loving it"
+      "file": "mastering-the-art-of-success.jpg",
+      "bytes": 38478,
+      "title": "Mastering The Art Of Success"
     },
     {
-      "slug": "jane-eyre",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "jane-eyre.jpg",
-      "bytes": 37234,
-      "title": "Jane Eyre"
-    },
-    {
-      "slug": "janki-mangal-of-goswami-tulsidas",
+      "slug": "mastery-robert-greene",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "janki-mangal-of-goswami-tulsidas.jpg",
-      "bytes": 4765,
-      "title": "Janki Mangal Of Goswami Tulsidas"
+      "file": "mastery-robert-greene.jpg",
+      "bytes": 10341,
+      "title": "Mastery-Robert-Greene"
     },
     {
-      "slug": "jnana-yoga-swami-vivekananda",
+      "slug": "maximum-achievement-brian-tracy",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "jnana-yoga-swami-vivekananda.jpg",
-      "bytes": 8655,
-      "title": "Jnana Yoga - Swami Vivekananda"
+      "file": "maximum-achievement-brian-tracy.jpg",
+      "bytes": 4017,
+      "title": "Maximum Achievement - Brian Tracy"
     },
     {
-      "slug": "john-c-maxwell-good-leaders-ask-great-questions",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "john-c-maxwell-good-leaders-ask-great-questions.jpg",
-      "bytes": 29892,
-      "title": "John C Maxwell Good Leaders Ask Great Questions"
-    },
-    {
-      "slug": "journal-prompts",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "journal-prompts.jpg",
-      "bytes": 48365,
-      "title": "Journal Prompts"
-    },
-    {
-      "slug": "jump-start-vue-js",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "jump-start-vue-js.jpg",
-      "bytes": 20934,
-      "title": "Jump Start Vue js"
-    },
-    {
-      "slug": "kalyan-krishna-vachanamurt-anka",
+      "slug": "maya-the-whirlpool-of-delusions-in-creation",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "kalyan-krishna-vachanamurt-anka.jpg",
-      "bytes": 17371,
-      "title": "Kalyan Krishna Vachanamurt Anka"
+      "file": "maya-the-whirlpool-of-delusions-in-creation.jpg",
+      "bytes": 5686,
+      "title": "Maya-The Whirlpool Of Delusions In Creation"
     },
     {
-      "slug": "kalyan-ram-vachnamrit-ank",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "kalyan-ram-vachnamrit-ank.jpg",
-      "bytes": 11943,
-      "title": "Kalyan Ram Vachnamrit Ank"
-    },
-    {
-      "slug": "katabasis",
+      "slug": "maybe-you-should-talk-to-someone-gottlieb",
       "status": "downloaded",
       "source": "open-library",
-      "file": "katabasis.jpg",
-      "bytes": 60982,
-      "title": "Katabasis"
+      "file": "maybe-you-should-talk-to-someone-gottlieb.jpg",
+      "bytes": 38566,
+      "title": "Maybe You Should Talk To Someone Gottlieb"
     },
     {
-      "slug": "kavitawali-ramayan-of-goswami-tulsidas",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "kavitawali-ramayan-of-goswami-tulsidas.jpg",
-      "bytes": 5157,
-      "title": "Kavitawali Ramayan Of Goswami Tulsidas"
-    },
-    {
-      "slug": "knowledge-encyclopedia",
+      "slug": "measure-what-matters-doerr",
       "status": "downloaded",
       "source": "open-library",
-      "file": "knowledge-encyclopedia.jpg",
-      "bytes": 59979,
-      "title": "Knowledge Encyclopedia"
+      "file": "measure-what-matters-doerr.jpg",
+      "bytes": 34136,
+      "title": "Measure what matters Doerr"
     },
     {
-      "slug": "kotlin",
+      "slug": "medical-astrology",
       "status": "downloaded",
       "source": "open-library",
-      "file": "kotlin.jpg",
-      "bytes": 16003,
-      "title": "Kotlin"
+      "file": "medical-astrology.jpg",
+      "bytes": 29973,
+      "title": "Medical Astrology"
     },
     {
-      "slug": "krishna-ek-rahasya-edition",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "krishna-ek-rahasya-edition.jpg",
-      "bytes": 17050,
-      "title": "Krishna Ek Rahasya Edition"
-    },
-    {
-      "slug": "krishnavatara-iii-the-five-brothers",
+      "slug": "meditation-and-its-methods",
       "status": "downloaded",
       "source": "open-library",
-      "file": "krishnavatara-iii-the-five-brothers.jpg",
-      "bytes": 67074,
-      "title": "Krishnavatara III The Five Brothers"
+      "file": "meditation-and-its-methods.jpg",
+      "bytes": 63858,
+      "title": "Meditation and Its Methods"
     },
     {
-      "slug": "krishnavatara-ii-the-wrath-of-an-emperor",
+      "slug": "meditation-the-first-and-last-freedom",
       "status": "downloaded",
       "source": "open-library",
-      "file": "krishnavatara-ii-the-wrath-of-an-emperor.jpg",
-      "bytes": 6515,
-      "title": "Krishnavatara II THE WRATH OF AN EMPEROR"
+      "file": "meditation-the-first-and-last-freedom.jpg",
+      "bytes": 36970,
+      "title": "Meditation The First And Last Freedom"
     },
     {
-      "slug": "lal-kitab",
+      "slug": "meditations-aurelius",
       "status": "downloaded",
       "source": "open-library",
-      "file": "lal-kitab.jpg",
-      "bytes": 46694,
-      "title": "Lal Kitab"
+      "file": "meditations-aurelius.jpg",
+      "bytes": 34743,
+      "title": "Meditations Aurelius"
     },
     {
-      "slug": "lapierre-dominique-and-larry-collins-freedom-at",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "lapierre-dominique-and-larry-collins-freedom-at.jpg",
-      "bytes": 22570,
-      "title": "Lapierre, Dominique and Larry Collins Freedom at"
-    },
-    {
-      "slug": "law-of-success-21st-century-edition",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "law-of-success-21st-century-edition.jpg",
-      "bytes": 19203,
-      "title": "Law of Success 21st Century Edition"
-    },
-    {
-      "slug": "leadership-1",
+      "slug": "meditations",
       "status": "downloaded",
       "source": "open-library",
-      "file": "leadership-1.jpg",
-      "bytes": 3904,
-      "title": "Leadership -1"
+      "file": "meditations.jpg",
+      "bytes": 5114,
+      "title": "Meditations"
+    },
+    {
+      "slug": "meeting-agenda",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "meeting-agenda.jpg",
+      "bytes": 69851,
+      "title": "Meeting+Agenda"
+    },
+    {
+      "slug": "memory-manipulation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "memory-manipulation.jpg",
+      "bytes": 32148,
+      "title": "Memory Manipulation"
+    },
+    {
+      "slug": "men-are-from-mars-women-are-from-venus",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "men-are-from-mars-women-are-from-venus.jpg",
+      "bytes": 36897,
+      "title": "Men are from Mars, Women are from Venus"
+    },
+    {
+      "slug": "mental-models",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "mental-models.jpg",
+      "bytes": 43165,
+      "title": "Mental-Models"
+    },
+    {
+      "slug": "mercury",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "mercury.jpg",
+      "bytes": 20022,
+      "title": "Mercury"
+    },
+    {
+      "slug": "mexican-gothic",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "mexican-gothic.jpg",
+      "bytes": 36790,
+      "title": "Mexican Gothic"
+    },
+    {
+      "slug": "michelle-obama",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "michelle-obama.jpg",
+      "bytes": 30407,
+      "title": "Michelle Obama"
+    },
+    {
+      "slug": "microsoft-identity-and-access-administrator-exam",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "microsoft-identity-and-access-administrator-exam.jpg",
+      "bytes": 24802,
+      "title": "Microsoft Identity and Access Administrator Exam"
+    },
+    {
+      "slug": "mind-control-and-hypnosis",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "mind-control-and-hypnosis.jpg",
+      "bytes": 15978,
+      "title": "Mind Control And Hypnosis"
     }
   ],
-  "offset": 10500,
-  "nextOffset": 11000,
+  "offset": 11000,
+  "nextOffset": 11500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1504,
-    "keep_existing": 1842,
-    "not_found": 7630,
-    "bad_image": 24
+    "downloaded": 1563,
+    "keep_existing": 1854,
+    "not_found": 8054,
+    "bad_image": 29
   },
-  "totalProcessed": 11000
+  "totalProcessed": 11500
 }
