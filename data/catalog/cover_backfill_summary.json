@@ -1,134 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 14,
-    "keep_existing": 191,
-    "not_found": 295,
+    "downloaded": 67,
+    "keep_existing": 34,
+    "not_found": 399,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "42-time-management-matrix",
+      "slug": "apexcreed-chapter-00-part-01-who-is-trent",
       "status": "downloaded",
       "source": "open-library",
-      "file": "42-time-management-matrix.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "apexcreed-chapter-00-part-01-who-is-trent.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "41-5633",
+      "slug": "apexcreed-chapter-01-part-01-the-turning-point",
       "status": "downloaded",
       "source": "open-library",
-      "file": "41-5633.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "54-day-5-notes-हद",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "54-day-5-notes-हद.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "7-cold-calling-calling-statics-that-will-sober-you-down",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "7-cold-calling-calling-statics-that-will-sober-you-down.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "70-mandatory-itr-filing-itr-filing-requirement-ay-2026-27",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "70-mandatory-itr-filing-itr-filing-requirement-ay-2026-27.jpg",
+      "file": "apexcreed-chapter-01-part-01-the-turning-point.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "73-1080",
+      "slug": "apexcreed-chapter-01-part-02-why-would-you-even-try-ho",
       "status": "downloaded",
       "source": "open-library",
-      "file": "73-1080.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "77-tds-in-tally-part-1-accounting-notes-tds-gst-fy2026-27-final",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "77-tds-in-tally-part-1-accounting-notes-tds-gst-fy2026-27-final.jpg",
+      "file": "apexcreed-chapter-01-part-02-why-would-you-even-try-ho.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "8-the-sss-method-password-abcd1234",
+      "slug": "apexcreed-chapter-02-part-02-level-1-eating-for-muscle-g",
       "status": "downloaded",
       "source": "open-library",
-      "file": "8-the-sss-method-password-abcd1234.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "82-1071",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "82-1071.jpg",
+      "file": "apexcreed-chapter-02-part-02-level-1-eating-for-muscle-g.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "9-2551",
+      "slug": "apexcreed-chapter-02-part-04-level-3-appetite-control",
       "status": "downloaded",
       "source": "open-library",
-      "file": "9-2551.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "92-1061",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "92-1061.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "98-itr-2-online-gaming-ay-2026-27-section-115bbj-2026-05-05-11-56",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "98-itr-2-online-gaming-ay-2026-27-section-115bbj-2026-05-05-11-56.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "apexcreed-6-lecture",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "apexcreed-6-lecture.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "apexcreed-6-lecture-notes",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "apexcreed-6-lecture-notes.jpg",
+      "file": "apexcreed-chapter-02-part-04-level-3-appetite-control.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "apexcreed-chapter-02-part-06-level-5-hitting-your-micro",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-chapter-02-part-06-level-5-hitting-your-micro.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "apexcreed-chapter-03-part-02-mastering-strength-progress",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-chapter-03-part-02-mastering-strength-progress.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "apexcreed-chapter-04-part-01-phase-01-workout-b",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-chapter-04-part-01-phase-01-workout-b.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "apexcreed-chapter-04-part-02-phase-02-notes",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-chapter-04-part-02-phase-02-notes.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "apexcreed-chapter-04-part-05-3-day-workout-split",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-chapter-04-part-05-3-day-workout-split.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "apexcreed-chapter-05-part-01-building-the-ideal-male-bod",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-chapter-05-part-01-building-the-ideal-male-bod.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "apexcreed-chapter-06-part-01-how-to-fix-weak-points-in-y",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "apexcreed-chapter-06-part-01-how-to-fix-weak-points-in-y.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "dummiesbook",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "dummiesbook.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "dummiesbook-suse-linux-10-for-dummies",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "dummiesbook-suse-linux-10-for-dummies.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "skillwithgaurav-introduction-worksheet",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "skillwithgaurav-introduction-worksheet.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "skillwithgaurav-perfect-facebook-ads-template",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "skillwithgaurav-perfect-facebook-ads-template.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "a-b-c-s-of-behavior-by-sridhar-ramamoorti-z-lib-or",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a-b-c-s-of-behavior-by-sridhar-ramamoorti-z-lib-or.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "a-history-of-indian-literature-vol-i",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a-history-of-indian-literature-vol-i.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "aguidetoformatting",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "aguidetoformatting.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-roadmap-to-7-figures",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-roadmap-to-7-figures.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 17500,
-  "nextOffset": 18000,
+  "offset": 18000,
+  "nextOffset": 18500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2352,
-    "keep_existing": 3936,
-    "not_found": 11675,
+    "downloaded": 2419,
+    "keep_existing": 3970,
+    "not_found": 12074,
     "bad_image": 37
   },
-  "totalProcessed": 18000
+  "totalProcessed": 18500
 }
