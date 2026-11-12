@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 28,
-    "keep_existing": 401,
-    "not_found": 71,
+    "downloaded": 67,
+    "keep_existing": 426,
+    "not_found": 7,
     "bad_image": 0
   },
-  "updatedCurated": 15,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "finding-flow",
+      "slug": "the-great-ceo-within-by-matt-mochary",
       "status": "downloaded",
       "source": "open-library",
-      "file": "finding-flow.jpg",
-      "bytes": 51252,
-      "title": "Finding Flow"
+      "file": "the-great-ceo-within-by-matt-mochary.jpg",
+      "bytes": 24896,
+      "title": "The Great CEO Within"
     },
     {
-      "slug": "music",
+      "slug": "the-management-myth-by-matthew-stewart",
       "status": "downloaded",
       "source": "open-library",
-      "file": "music.jpg",
-      "bytes": 6817,
-      "title": "Music"
+      "file": "the-management-myth-by-matthew-stewart.jpg",
+      "bytes": 9714,
+      "title": "The Management Myth"
     },
     {
-      "slug": "preposition",
+      "slug": "the-human-side-of-enterprise-by-douglas-mcgregor",
       "status": "downloaded",
       "source": "open-library",
-      "file": "preposition.jpg",
-      "bytes": 28691,
-      "title": "Preposition"
+      "file": "the-human-side-of-enterprise-by-douglas-mcgregor.jpg",
+      "bytes": 17839,
+      "title": "The Human Side of Enterprise"
     },
     {
-      "slug": "the-business-coach",
+      "slug": "the-new-economics-by-w-edwards-deming",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-business-coach.jpg",
-      "bytes": 27650,
-      "title": "The Business Coach"
+      "file": "the-new-economics-by-w-edwards-deming.jpg",
+      "bytes": 31899,
+      "title": "The New Economics"
     },
     {
-      "slug": "welcome",
+      "slug": "ogilvy-on-advertising-by-david-ogilvy",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "ogilvy-on-advertising-by-david-ogilvy.jpg",
+      "bytes": 51234,
+      "title": "Ogilvy on Advertising"
+    },
+    {
+      "slug": "confessions-of-an-advertising-man-by-david-ogilvy",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "confessions-of-an-advertising-man-by-david-ogilvy.jpg",
+      "bytes": 20645,
+      "title": "Confessions of an Advertising Man"
+    },
+    {
+      "slug": "buyology-by-martin-lindstrom",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "buyology-by-martin-lindstrom.jpg",
+      "bytes": 21149,
+      "title": "Buyology"
+    },
+    {
+      "slug": "the-new-rules-of-marketing-and-pr-by-david-meerman-scott",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-new-rules-of-marketing-and-pr-by-david-meerman-scott.jpg",
+      "bytes": 53393,
+      "title": "The New Rules of Marketing and PR"
+    },
+    {
+      "slug": "killing-giants-by-stephen-denny",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "killing-giants-by-stephen-denny.jpg",
+      "bytes": 22827,
+      "title": "Killing Giants"
+    },
+    {
+      "slug": "made-you-look-by-carmen-simon",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "made-you-look-by-carmen-simon.jpg",
+      "bytes": 23212,
+      "title": "Made You Look"
+    },
+    {
+      "slug": "the-win-without-pitching-manifesto-by-blair-enns",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-win-without-pitching-manifesto-by-blair-enns.jpg",
+      "bytes": 9790,
+      "title": "The Win Without Pitching Manifesto"
+    },
+    {
+      "slug": "smart-brevity-by-jim-vandehei-mike-allen-and-roy-schwartz",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "smart-brevity-by-jim-vandehei-mike-allen-and-roy-schwartz.jpg",
+      "bytes": 17364,
+      "title": "Smart Brevity"
+    },
+    {
+      "slug": "principles-of-corporate-finance-by-richard-a-brealey-stewart-c-myers-and-franklin-allen",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "principles-of-corporate-finance-by-richard-a-brealey-stewart-c-myers-and-franklin-allen.jpg",
+      "bytes": 25126,
+      "title": "Principles of Corporate Finance"
+    },
+    {
+      "slug": "the-little-book-of-economics-by-greg-ip",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-little-book-of-economics-by-greg-ip.jpg",
+      "bytes": 39986,
+      "title": "The Little Book of Economics"
+    },
+    {
+      "slug": "the-worldly-philosophers-by-robert-l-heilbroner",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-worldly-philosophers-by-robert-l-heilbroner.jpg",
+      "bytes": 55054,
+      "title": "The Worldly Philosophers"
+    },
+    {
+      "slug": "the-new-industrial-state-by-john-kenneth-galbraith",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-new-industrial-state-by-john-kenneth-galbraith.jpg",
+      "bytes": 26439,
+      "title": "The New Industrial State"
+    },
+    {
+      "slug": "the-travels-of-a-t-shirt-in-the-global-economy-by-pietra-rivoli",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "welcome.jpg",
-      "bytes": 3576,
-      "title": "Welcome"
+      "file": "the-travels-of-a-t-shirt-in-the-global-economy-by-pietra-rivoli.jpg",
+      "bytes": 16821,
+      "title": "The Travels of a T-Shirt in the Global Economy"
     },
     {
-      "slug": "option-pricing-models-and-volatility",
+      "slug": "the-economics-book-by-dk",
       "status": "downloaded",
       "source": "open-library",
-      "file": "option-pricing-models-and-volatility.jpg",
-      "bytes": 41087,
-      "title": "Option Pricing Models And Volatility"
+      "file": "the-economics-book-by-dk.jpg",
+      "bytes": 25130,
+      "title": "The Economics Book"
     },
     {
-      "slug": "options-pricing-models-and-volatility",
+      "slug": "the-age-of-revolution-by-eric-hobsbawm",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-pricing-models-and-volatility.jpg",
-      "bytes": 41087,
-      "title": "Options Pricing Models And Volatility"
+      "file": "the-age-of-revolution-by-eric-hobsbawm.jpg",
+      "bytes": 44602,
+      "title": "The Age of Revolution"
     },
     {
-      "slug": "barbarians-at-the-gate",
+      "slug": "the-age-of-capital-by-eric-hobsbawm",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "barbarians-at-the-gate.jpg",
-      "bytes": 8269,
-      "title": "Barbarians at the Gate"
-    },
-    {
-      "slug": "the-great-a-p-and-the-struggle-for-small-business-in",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-great-a-p-and-the-struggle-for-small-business-in.jpg",
-      "bytes": 25267,
-      "title": "The Great A&P and the Struggle for Small Business in"
-    },
-    {
-      "slug": "amaze-every-customer-every-time",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "amaze-every-customer-every-time.jpg",
-      "bytes": 36200,
-      "title": "Amaze Every Customer Every Time"
-    },
-    {
-      "slug": "delivering-happiness",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "delivering-happiness.jpg",
-      "bytes": 28440,
-      "title": "Delivering Happiness"
-    },
-    {
-      "slug": "the-retail-doctor-s-guide-to-growing-your-business",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-retail-doctor-s-guide-to-growing-your-business.jpg",
-      "bytes": 30834,
-      "title": "The Retail Doctor's Guide to Growing Your Business"
-    },
-    {
-      "slug": "banker-to-the-poor",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "banker-to-the-poor.jpg",
-      "bytes": 41962,
-      "title": "Banker to the Poor"
-    },
-    {
-      "slug": "an-elegant-puzzle",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "an-elegant-puzzle.jpg",
-      "bytes": 47148,
-      "title": "An Elegant Puzzle"
-    },
-    {
-      "slug": "3-d-negotiation",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "3-d-negotiation.jpg",
-      "bytes": 48448,
-      "title": "3-D Negotiation"
-    },
-    {
-      "slug": "accelerate",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "accelerate.jpg",
-      "bytes": 27684,
-      "title": "Accelerate"
-    },
-    {
-      "slug": "broke-millennial",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "broke-millennial.jpg",
-      "bytes": 32861,
-      "title": "Broke Millennial"
-    },
-    {
-      "slug": "agile-selling",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "agile-selling.jpg",
-      "bytes": 26117,
-      "title": "Agile Selling"
-    },
-    {
-      "slug": "built-to-sell",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "built-to-sell.jpg",
-      "bytes": 30169,
-      "title": "Built to Sell"
-    },
-    {
-      "slug": "blitzscaling",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "blitzscaling.jpg",
-      "bytes": 23725,
-      "title": "Blitzscaling"
+      "source": "internet-archive",
+      "file": "the-age-of-capital-by-eric-hobsbawm.jpg",
+      "bytes": 17130,
+      "title": "The Age of Capital"
     }
   ],
-  "offset": 15000,
-  "nextOffset": 15500,
+  "offset": 15500,
+  "nextOffset": 16000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2023,
-    "keep_existing": 2491,
-    "not_found": 10949,
+    "downloaded": 2090,
+    "keep_existing": 2917,
+    "not_found": 10956,
     "bad_image": 37
   },
-  "totalProcessed": 15500
+  "totalProcessed": 16000
 }
