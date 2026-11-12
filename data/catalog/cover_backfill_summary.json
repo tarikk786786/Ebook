@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 59,
-    "keep_existing": 12,
-    "not_found": 424,
-    "bad_image": 5
+    "downloaded": 42,
+    "keep_existing": 24,
+    "not_found": 431,
+    "bad_image": 3
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "mastering-the-art-of-success",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "mastering-the-art-of-success.jpg",
-      "bytes": 38478,
-      "title": "Mastering The Art Of Success"
-    },
-    {
-      "slug": "mastery-robert-greene",
+      "slug": "part-03-applications-24-april-2023-comput",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "mastery-robert-greene.jpg",
-      "bytes": 10341,
-      "title": "Mastery-Robert-Greene"
+      "file": "part-03-applications-24-april-2023-comput.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Applications :: 24 APRIL 2023 : Comput"
     },
     {
-      "slug": "maximum-achievement-brian-tracy",
+      "slug": "part-03-c-language-03-march-2023-computer",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "maximum-achievement-brian-tracy.jpg",
-      "bytes": 4017,
-      "title": "Maximum Achievement - Brian Tracy"
+      "file": "part-03-c-language-03-march-2023-computer.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : C language :: 03 MARCH 2023 : Computer"
     },
     {
-      "slug": "maya-the-whirlpool-of-delusions-in-creation",
+      "slug": "part-03-hardware-of-computer-16-feb-2023-c",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "maya-the-whirlpool-of-delusions-in-creation.jpg",
-      "bytes": 5686,
-      "title": "Maya-The Whirlpool Of Delusions In Creation"
+      "file": "part-03-hardware-of-computer-16-feb-2023-c.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Hardware of Computer : 16 Feb 2023 : C"
     },
     {
-      "slug": "maybe-you-should-talk-to-someone-gottlieb",
+      "slug": "part-03-html-30-march-2023-computer",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "maybe-you-should-talk-to-someone-gottlieb.jpg",
-      "bytes": 38566,
-      "title": "Maybe You Should Talk To Someone Gottlieb"
+      "source": "internet-archive",
+      "file": "part-03-html-30-march-2023-computer.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Html :: 30 MARCH 2023 : Computer :"
     },
     {
-      "slug": "measure-what-matters-doerr",
+      "slug": "part-03-internet-28-march-2023-computer",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "measure-what-matters-doerr.jpg",
-      "bytes": 34136,
-      "title": "Measure what matters Doerr"
+      "source": "internet-archive",
+      "file": "part-03-internet-28-march-2023-computer.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Internet :: 28 MARCH 2023 : Computer :"
     },
     {
-      "slug": "medical-astrology",
+      "slug": "part-03-ms-word-25-feb-2023-computer",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "medical-astrology.jpg",
-      "bytes": 29973,
-      "title": "Medical Astrology"
+      "source": "internet-archive",
+      "file": "part-03-ms-word-25-feb-2023-computer.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Ms Word : 25 Feb 2023 : Computer :"
     },
     {
-      "slug": "meditation-and-its-methods",
+      "slug": "part-03-networking-24-march-2023-computer",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "meditation-and-its-methods.jpg",
-      "bytes": 63858,
-      "title": "Meditation and Its Methods"
+      "source": "internet-archive",
+      "file": "part-03-networking-24-march-2023-computer.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Networking :: 24 MARCH 2023 : Computer"
     },
     {
-      "slug": "meditation-the-first-and-last-freedom",
+      "slug": "part-03-networking-advance-14-april-2023",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "meditation-the-first-and-last-freedom.jpg",
-      "bytes": 36970,
-      "title": "Meditation The First And Last Freedom"
+      "source": "internet-archive",
+      "file": "part-03-networking-advance-14-april-2023.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Networking advance :: 14 APRIL 2023 :"
     },
     {
-      "slug": "meditations-aurelius",
+      "slug": "part-03-previous-year-questions-07-april-20",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "meditations-aurelius.jpg",
-      "bytes": 34743,
-      "title": "Meditations Aurelius"
+      "source": "internet-archive",
+      "file": "part-03-previous-year-questions-07-april-20.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Previous year questions :: 07 APRIL 20"
     },
     {
-      "slug": "meditations",
+      "slug": "part-03-rapid-revision-27-april-2023-comp",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "meditations.jpg",
-      "bytes": 5114,
-      "title": "Meditations"
+      "source": "internet-archive",
+      "file": "part-03-rapid-revision-27-april-2023-comp.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Rapid Revision :: 27 APRIL 2023 : Comp"
     },
     {
-      "slug": "meeting-agenda",
+      "slug": "part-03-software-22-feb-2023-computer",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "meeting-agenda.jpg",
-      "bytes": 69851,
-      "title": "Meeting+Agenda"
+      "source": "internet-archive",
+      "file": "part-03-software-22-feb-2023-computer.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : Software : 22 Feb 2023 : Computer :"
     },
     {
-      "slug": "memory-manipulation",
+      "slug": "part-03-file-and-it-s-type-03-aprile-2023",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "memory-manipulation.jpg",
-      "bytes": 32148,
-      "title": "Memory Manipulation"
+      "source": "internet-archive",
+      "file": "part-03-file-and-it-s-type-03-aprile-2023.jpg",
+      "bytes": 3576,
+      "title": "Part 03 : file and it's type :: 03 APRILE 2023 :"
     },
     {
-      "slug": "men-are-from-mars-women-are-from-venus",
+      "slug": "part-03-advance-computer-revision-30-june",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "men-are-from-mars-women-are-from-venus.jpg",
-      "bytes": 36897,
-      "title": "Men are from Mars, Women are from Venus"
+      "source": "internet-archive",
+      "file": "part-03-advance-computer-revision-30-june.jpg",
+      "bytes": 3576,
+      "title": "Part 03 :: Advance Computer Revision :: 30 JUNE"
     },
     {
-      "slug": "mental-models",
+      "slug": "parvati-mangal-of-goswami-tulsidas",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "mental-models.jpg",
-      "bytes": 43165,
-      "title": "Mental-Models"
+      "source": "internet-archive",
+      "file": "parvati-mangal-of-goswami-tulsidas.jpg",
+      "bytes": 4830,
+      "title": "Parvati Mangal Of Goswami Tulsidas"
     },
     {
-      "slug": "mercury",
+      "slug": "pdf-file",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "mercury.jpg",
-      "bytes": 20022,
-      "title": "Mercury"
+      "source": "internet-archive",
+      "file": "pdf-file.jpg",
+      "bytes": 10169,
+      "title": "Pdf File"
     },
     {
-      "slug": "mexican-gothic",
+      "slug": "perfect-questions-perfect-answers",
       "status": "downloaded",
       "source": "open-library",
-      "file": "mexican-gothic.jpg",
-      "bytes": 36790,
-      "title": "Mexican Gothic"
+      "file": "perfect-questions-perfect-answers.jpg",
+      "bytes": 45361,
+      "title": "Perfect-Questions-Perfect-Answers"
     },
     {
-      "slug": "michelle-obama",
+      "slug": "people-helping-people",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "michelle-obama.jpg",
-      "bytes": 30407,
-      "title": "Michelle Obama"
+      "source": "internet-archive",
+      "file": "people-helping-people.jpg",
+      "bytes": 24320,
+      "title": "People Helping People"
     },
     {
-      "slug": "microsoft-identity-and-access-administrator-exam",
+      "slug": "person-centered-approach-to-recovery-in-medicine",
       "status": "downloaded",
       "source": "open-library",
-      "file": "microsoft-identity-and-access-administrator-exam.jpg",
-      "bytes": 24802,
-      "title": "Microsoft Identity and Access Administrator Exam"
+      "file": "person-centered-approach-to-recovery-in-medicine.jpg",
+      "bytes": 31553,
+      "title": "Person Centered Approach to Recovery in Medicine"
     },
     {
-      "slug": "mind-control-and-hypnosis",
+      "slug": "philosophy-of-education",
       "status": "downloaded",
       "source": "open-library",
-      "file": "mind-control-and-hypnosis.jpg",
-      "bytes": 15978,
-      "title": "Mind Control And Hypnosis"
+      "file": "philosophy-of-education.jpg",
+      "bytes": 42588,
+      "title": "Philosophy Of Education"
+    },
+    {
+      "slug": "phosphorus",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "phosphorus.jpg",
+      "bytes": 26658,
+      "title": "Phosphorus"
     }
   ],
-  "offset": 11000,
-  "nextOffset": 11500,
+  "offset": 11500,
+  "nextOffset": 12000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 1563,
-    "keep_existing": 1854,
-    "not_found": 8054,
-    "bad_image": 29
+    "downloaded": 1605,
+    "keep_existing": 1878,
+    "not_found": 8485,
+    "bad_image": 32
   },
-  "totalProcessed": 11500
+  "totalProcessed": 12000
 }
