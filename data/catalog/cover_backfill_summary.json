@@ -1,182 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 33,
-    "keep_existing": 122,
-    "not_found": 345,
+    "downloaded": 0,
+    "keep_existing": 118,
+    "not_found": 382,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-28441",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-28441.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-18181",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-18181.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-69709",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-69709.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-47821",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-47821.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-68113",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-68113.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-69937",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-69937.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-43717",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-43717.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-30265",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-30265.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-21145",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-21145.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-1-53749",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-1-53749.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-25439",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-25439.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-55535",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-55535.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-32051",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-32051.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-43223",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-43223.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-24299",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-24299.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-81983",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-81983.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-32735",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-32735.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-45959",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-45959.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-32963",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-32963.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "building-microservices-designing-fine-grained-systems-volume-11-81071",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "building-microservices-designing-fine-grained-systems-volume-11-81071.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    }
-  ],
-  "offset": 22500,
-  "nextOffset": 23000,
+  "sampleDownloaded": [],
+  "offset": 23000,
+  "nextOffset": 23500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 2941,
-    "keep_existing": 4485,
-    "not_found": 15537,
+    "keep_existing": 4603,
+    "not_found": 15919,
     "bad_image": 37
   },
-  "totalProcessed": 23000
+  "totalProcessed": 23500
 }
