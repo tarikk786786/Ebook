@@ -1,182 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 248,
-    "keep_existing": 204,
-    "not_found": 48,
+    "downloaded": 0,
+    "keep_existing": 322,
+    "not_found": 178,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "the-motivation-myth-by-jeff-haden",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-motivation-myth-by-jeff-haden.jpg",
-      "bytes": 26048,
-      "title": "The Motivation Myth"
-    },
-    {
-      "slug": "the-7-habits-of-highly-effective-people-personal-by-workbook",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-7-habits-of-highly-effective-people-personal-by-workbook.jpg",
-      "bytes": 52743,
-      "title": "The 7 Habits of Highly Effective People Personal"
-    },
-    {
-      "slug": "tiny-habits-by-bj-fogg",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "tiny-habits-by-bj-fogg.jpg",
-      "bytes": 32425,
-      "title": "Tiny Habits"
-    },
-    {
-      "slug": "the-productivity-ninja-by-graham-allcott",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-productivity-ninja-by-graham-allcott.jpg",
-      "bytes": 32556,
-      "title": "The Productivity Ninja"
-    },
-    {
-      "slug": "the-art-of-focus-by-dan-koe",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-focus-by-dan-koe.jpg",
-      "bytes": 29991,
-      "title": "The Art of Focus"
-    },
-    {
-      "slug": "work-clean-by-dan-charnas",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "work-clean-by-dan-charnas.jpg",
-      "bytes": 9458,
-      "title": "Work Clean"
-    },
-    {
-      "slug": "mastering-the-rockefeller-habits-by-verne-harnish",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "mastering-the-rockefeller-habits-by-verne-harnish.jpg",
-      "bytes": 37609,
-      "title": "Mastering the Rockefeller Habits"
-    },
-    {
-      "slug": "lean-thinking-by-james-p-womack-and-daniel-t-jones",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "lean-thinking-by-james-p-womack-and-daniel-t-jones.jpg",
-      "bytes": 43015,
-      "title": "Lean Thinking"
-    },
-    {
-      "slug": "the-phoenix-project-by-gene-kim-kevin-behr-and-george-spafford",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-phoenix-project-by-gene-kim-kevin-behr-and-george-spafford.jpg",
-      "bytes": 53176,
-      "title": "The Phoenix Project"
-    },
-    {
-      "slug": "the-devops-handbook-by-gene-kim-jez-humble-patrick-debois-and-john-willis",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-devops-handbook-by-gene-kim-jez-humble-patrick-debois-and-john-willis.jpg",
-      "bytes": 47932,
-      "title": "The DevOps Handbook"
-    },
-    {
-      "slug": "the-unicorn-project-by-gene-kim",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-unicorn-project-by-gene-kim.jpg",
-      "bytes": 74784,
-      "title": "The Unicorn Project"
-    },
-    {
-      "slug": "factory-physics-by-wallace-j-hopp-and-mark-l-spearman",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "factory-physics-by-wallace-j-hopp-and-mark-l-spearman.jpg",
-      "bytes": 8328,
-      "title": "Factory Physics"
-    },
-    {
-      "slug": "accelerate-by-nicole-forsgren-jez-humble-and-gene-kim",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "accelerate-by-nicole-forsgren-jez-humble-and-gene-kim.jpg",
-      "bytes": 27684,
-      "title": "Accelerate"
-    },
-    {
-      "slug": "the-toyota-production-system-by-taiichi-ohno",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-toyota-production-system-by-taiichi-ohno.jpg",
-      "bytes": 28573,
-      "title": "The Toyota Production System"
-    },
-    {
-      "slug": "gemba-kaizen-by-masaaki-imai",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gemba-kaizen-by-masaaki-imai.jpg",
-      "bytes": 35766,
-      "title": "Gemba Kaizen"
-    },
-    {
-      "slug": "kaizen-by-masaaki-imai",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "kaizen-by-masaaki-imai.jpg",
-      "bytes": 17109,
-      "title": "Kaizen"
-    },
-    {
-      "slug": "the-lean-six-sigma-pocket-toolbook-by-michael-l-george-john-maxey-david-t-rowlands-and-mar",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-lean-six-sigma-pocket-toolbook-by-michael-l-george-john-maxey-david-t-rowlands-and-mar.jpg",
-      "bytes": 33263,
-      "title": "The Lean Six Sigma Pocket Toolbook"
-    },
-    {
-      "slug": "the-six-sigma-handbook-by-thomas-pyzdek-and-paul-keller",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-six-sigma-handbook-by-thomas-pyzdek-and-paul-keller.jpg",
-      "bytes": 38157,
-      "title": "The Six Sigma Handbook"
-    },
-    {
-      "slug": "lean-six-sigma-by-michael-l-george",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "lean-six-sigma-by-michael-l-george.jpg",
-      "bytes": 32837,
-      "title": "Lean Six Sigma"
-    },
-    {
-      "slug": "the-high-velocity-edge-by-steven-j-spear",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-high-velocity-edge-by-steven-j-spear.jpg",
-      "bytes": 22206,
-      "title": "The High-Velocity Edge"
-    }
-  ],
-  "offset": 16000,
-  "nextOffset": 16500,
+  "sampleDownloaded": [],
+  "offset": 16500,
+  "nextOffset": 17000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 2338,
-    "keep_existing": 3121,
-    "not_found": 11004,
+    "keep_existing": 3443,
+    "not_found": 11182,
     "bad_image": 37
   },
-  "totalProcessed": 16500
+  "totalProcessed": 17000
 }
