@@ -1,21 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 127,
-    "not_found": 373,
+    "downloaded": 51,
+    "keep_existing": 124,
+    "not_found": 325,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 25500,
-  "nextOffset": 26000,
+  "sampleDownloaded": [
+    {
+      "slug": "class-3-vocabulary-1",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "class-3-vocabulary-1.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-73429",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-73429.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-72289",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-72289.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-49489",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-49489.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-38089",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-38089.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-34213",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-34213.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-31249",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-31249.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-23953",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-23953.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-18025",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-18025.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-61573",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-61573.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-39913",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-39913.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-43561",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-43561.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-29881",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-29881.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-21217",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-21217.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-55873",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-55873.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-32389",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-32389.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-66817",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-66817.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-38545",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-38545.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-52909",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-52909.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-71377",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "clean-architecture-a-craftsman-s-guide-to-software-structure-volume-1-71377.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    }
+  ],
+  "offset": 26000,
+  "nextOffset": 26500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 2944,
-    "keep_existing": 5250,
-    "not_found": 17769,
+    "downloaded": 2995,
+    "keep_existing": 5374,
+    "not_found": 18094,
     "bad_image": 37
   },
-  "totalProcessed": 26000
+  "totalProcessed": 26500
 }
