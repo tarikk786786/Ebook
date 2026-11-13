@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 33,
-    "keep_existing": 238,
-    "not_found": 229,
+    "downloaded": 39,
+    "keep_existing": 237,
+    "not_found": 224,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "dsc-setting-for-tm-windows-10-user-manual-for-dsc-on-trademark",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-80328",
       "status": "downloaded",
       "source": "open-library",
-      "file": "dsc-setting-for-tm-windows-10-user-manual-for-dsc-on-trademark.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "dollarpremium-file-answer-1-20250423-143626-dyp-week-3",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dollarpremium-file-answer-1-20250423-143626-dyp-week-3.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "daniel-kahneman-thinking-fast-and-slow-libgen-lc",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "daniel-kahneman-thinking-fast-and-slow-libgen-lc.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-30358",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-30358.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-42442",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-42442.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-41530",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-41530.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-47914",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-47914.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-78694",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-78694.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-80746",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-80746.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-68206",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-68206.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-80328.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-50878",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-75996",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-50878.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-75996.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-39060",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-39060.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-77554",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-59580",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-77554.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-59580.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-71892",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-71892.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-66876",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-66876.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-64330",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-38376",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-64330.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-50650",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-50650.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-49054",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-49054.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-38376.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-50194",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-12-30852",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-50194.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-12-30852.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-58858",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-44342",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-58858.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-44342.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-23518",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-24278",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-23518.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-41986",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-41986.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-24278.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-34006",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-78086",
       "status": "downloaded",
       "source": "open-library",
-      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-34006.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-78086.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-25646",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-25646.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-58934",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-58934.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-56654",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-56654.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-74666",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-74666.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-30662",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-30662.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-20402",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-20402.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-66686",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-66686.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-68054",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-68054.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-2-65090",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-2-65090.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 30000,
-  "nextOffset": 30500,
+  "offset": 30500,
+  "nextOffset": 31000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3473,
-    "keep_existing": 5985,
-    "not_found": 21005,
+    "downloaded": 3512,
+    "keep_existing": 6222,
+    "not_found": 21229,
     "bad_image": 37
   },
-  "totalProcessed": 30500
+  "totalProcessed": 31000
 }
