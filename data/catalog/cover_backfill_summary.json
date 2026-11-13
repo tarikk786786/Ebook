@@ -2,45 +2,45 @@
   "processed": 500,
   "counts": {
     "downloaded": 3,
-    "keep_existing": 110,
-    "not_found": 387,
+    "keep_existing": 109,
+    "not_found": 388,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "design-aspect-reporting-for-geotechnical-work-bore-hole-location",
+      "slug": "designing-data-intensive-applications-volume-2-40862",
       "status": "downloaded",
       "source": "open-library",
-      "file": "design-aspect-reporting-for-geotechnical-work-bore-hole-location.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "designing-data-intensive-applications-volume-2-40862.jpg",
+      "bytes": 30170,
+      "title": "Yellavula Naren Building Restful Web Services With Go"
     },
     {
-      "slug": "designing-data-intensive-applications-volume-10-53782",
+      "slug": "designing-data-intensive-applications-volume-2-29690",
       "status": "downloaded",
       "source": "open-library",
-      "file": "designing-data-intensive-applications-volume-10-53782.jpg",
-      "bytes": 36317,
-      "title": "Natural Language Processing with Python and spaCy"
+      "file": "designing-data-intensive-applications-volume-2-29690.jpg",
+      "bytes": 40986,
+      "title": "Never Split The Difference"
     },
     {
-      "slug": "designing-data-intensive-applications-volume-10-60166",
+      "slug": "designing-data-intensive-applications-volume-2-74378",
       "status": "downloaded",
       "source": "open-library",
-      "file": "designing-data-intensive-applications-volume-10-60166.jpg",
-      "bytes": 30747,
-      "title": "Microsoft Certified Azure Data Fundamentals Study Guide Exam DP"
+      "file": "designing-data-intensive-applications-volume-2-74378.jpg",
+      "bytes": 27977,
+      "title": "Safe and Secure Cyber Physical Systems and Internet of Things Systems"
     }
   ],
-  "offset": 33500,
-  "nextOffset": 34000,
+  "offset": 34000,
+  "nextOffset": 34500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3623,
-    "keep_existing": 6833,
-    "not_found": 23507,
+    "downloaded": 3626,
+    "keep_existing": 6942,
+    "not_found": 23895,
     "bad_image": 37
   },
-  "totalProcessed": 34000
+  "totalProcessed": 34500
 }
