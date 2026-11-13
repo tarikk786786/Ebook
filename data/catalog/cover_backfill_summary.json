@@ -1,166 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 18,
-    "keep_existing": 157,
-    "not_found": 325,
+    "downloaded": 33,
+    "keep_existing": 238,
+    "not_found": 229,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-18283",
+      "slug": "dsc-setting-for-tm-windows-10-user-manual-for-dsc-on-trademark",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-18283.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-37435",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-37435.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-45643",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-45643.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-47011",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-47011.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-19651",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-19651.jpg",
+      "file": "dsc-setting-for-tm-windows-10-user-manual-for-dsc-on-trademark.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34243",
+      "slug": "dollarpremium-file-answer-1-20250423-143626-dyp-week-3",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34243.jpg",
+      "file": "dollarpremium-file-answer-1-20250423-143626-dyp-week-3.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34927",
+      "slug": "daniel-kahneman-thinking-fast-and-slow-libgen-lc",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34927.jpg",
+      "file": "daniel-kahneman-thinking-fast-and-slow-libgen-lc.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-35839",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-30358",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-35839.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-30358.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-16915",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-42442",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-16915.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-42442.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-41530",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-41530.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-52027",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-47914",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-52027.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-47914.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-78694",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-78694.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-80746",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-80746.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-32875",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-68206",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-32875.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-54991",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-54991.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-68206.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-25351",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-50878",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-25351.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-50878.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-74181",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-77554",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-74181.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-34737",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-34737.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-63237",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-63237.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-77554.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-27441",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-64330",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-27441.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-64330.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-50650",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-50650.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-49054",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-49054.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-23565",
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-50194",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-23565.jpg",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-50194.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-58858",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-58858.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-23518",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-23518.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-41986",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-41986.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "data-structures-algorithms-comprehensive-problem-set-volume-10-34006",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "data-structures-algorithms-comprehensive-problem-set-volume-10-34006.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 29500,
-  "nextOffset": 30000,
+  "offset": 30000,
+  "nextOffset": 30500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3440,
-    "keep_existing": 5747,
-    "not_found": 20776,
+    "downloaded": 3473,
+    "keep_existing": 5985,
+    "not_found": 21005,
     "bad_image": 37
   },
-  "totalProcessed": 30000
+  "totalProcessed": 30500
 }
