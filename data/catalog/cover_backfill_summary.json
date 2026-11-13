@@ -1,182 +1,166 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 56,
-    "keep_existing": 41,
-    "not_found": 403,
+    "downloaded": 18,
+    "keep_existing": 157,
+    "not_found": 325,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-59703",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-18283",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-59703.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-18283.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-37435",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-37435.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-45643",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-45643.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-39411",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-47011",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-39411.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-66087",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-66087.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-42147",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-42147.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-33255",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-33255.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-52407",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-52407.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-54459",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-54459.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-21627",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-21627.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-47011.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-41235",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-19651",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-3-41235.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-78893",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-78893.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-39449",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-39449.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-49025",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-49025.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-76385",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-76385.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-27821",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-27821.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-19651.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-35345",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34243",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-35345.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34243.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-40133",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34927",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-40133.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-32837",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-32837.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-34927.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-48569",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-35839",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-48569.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-35839.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-36485",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-16915",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-36485.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-16915.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-52027",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-52027.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-32875",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-32875.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-54991",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-54991.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-25351",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-7-25351.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-74181",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-74181.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-34737",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-34737.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-63237",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-63237.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-27441",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-27441.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-67949",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-23565",
       "status": "downloaded",
       "source": "open-library",
-      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-5-67949.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-9-23565.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 29000,
-  "nextOffset": 29500,
+  "offset": 29500,
+  "nextOffset": 30000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3422,
-    "keep_existing": 5590,
-    "not_found": 20451,
+    "downloaded": 3440,
+    "keep_existing": 5747,
+    "not_found": 20776,
     "bad_image": 37
   },
-  "totalProcessed": 29500
+  "totalProcessed": 30000
 }
