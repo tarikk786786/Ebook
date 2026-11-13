@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 80,
-    "keep_existing": 28,
-    "not_found": 392,
+    "downloaded": 76,
+    "keep_existing": 34,
+    "not_found": 390,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "comprehensive-digital-guide-2609",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-76727",
       "status": "downloaded",
       "source": "open-library",
-      "file": "comprehensive-digital-guide-2609.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-76727.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-32951",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-32951.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "comprehensive-digital-guide-8385",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-22463",
       "status": "downloaded",
       "source": "open-library",
-      "file": "comprehensive-digital-guide-8385.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-22463.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-42527",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-42527.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-55295",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-55295.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "comprehensive-digital-guide-9856",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-54383",
       "status": "downloaded",
       "source": "open-library",
-      "file": "comprehensive-digital-guide-9856.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "comprehensive-digital-guide-9636",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "comprehensive-digital-guide-9636.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-54383.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "comprehensive-digital-guide-3189",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-54155",
       "status": "downloaded",
       "source": "open-library",
-      "file": "comprehensive-digital-guide-3189.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "comprehensive-digital-guide-3528",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "comprehensive-digital-guide-3528.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-54155.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "comprehensive-digital-guide-7392",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-40931",
       "status": "downloaded",
       "source": "open-library",
-      "file": "comprehensive-digital-guide-7392.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "comprehensive-digital-guide-7163",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "comprehensive-digital-guide-7163.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "comprehensive-digital-guide-2510",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "comprehensive-digital-guide-2510.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "comprehensive-digital-guide-3173",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "comprehensive-digital-guide-3173.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "comprehensive-digital-guide-5204",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "comprehensive-digital-guide-5204.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "construction-work-check-list-checklist-for-painting-external",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "construction-work-check-list-checklist-for-painting-external.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-40931.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "construction-work-check-list-checklist-for-internal-plaster",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-45947",
       "status": "downloaded",
       "source": "open-library",
-      "file": "construction-work-check-list-checklist-for-internal-plaster.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "construction-work-check-list-checklist-for-structural-steel-works",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "construction-work-check-list-checklist-for-structural-steel-works.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "construction-work-check-list-checklist-for-concreting-of-column-1",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "construction-work-check-list-checklist-for-concreting-of-column-1.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "construction-work-check-list-checklist-for-filling-compaction-1",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "construction-work-check-list-checklist-for-filling-compaction-1.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-45947.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "construction-work-check-list-checklist-for-painting-internal-1",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-74675",
       "status": "downloaded",
       "source": "open-library",
-      "file": "construction-work-check-list-checklist-for-painting-internal-1.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "construction-work-check-list-checklist-for-concreting-rcc",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "construction-work-check-list-checklist-for-concreting-rcc.jpg",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-74675.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "contract-tendering-running-account-final-bill-clause",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-49367",
       "status": "downloaded",
       "source": "open-library",
-      "file": "contract-tendering-running-account-final-bill-clause.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-49367.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "contract-tendering-tutorial-2-type-of-construction-contracts",
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-25427",
       "status": "downloaded",
       "source": "open-library",
-      "file": "contract-tendering-tutorial-2-type-of-construction-contracts.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-25427.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-65099",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-65099.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-25883",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-25883.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-44123",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-44123.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-77639",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-77639.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-76499",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-76499.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-30671",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-30671.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-55067",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-55067.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-39335",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "crossing-the-chasm-marketing-and-selling-high-tech-products-volume-11-39335.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 28000,
-  "nextOffset": 28500,
+  "offset": 28500,
+  "nextOffset": 29000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3290,
-    "keep_existing": 5515,
-    "not_found": 19658,
+    "downloaded": 3366,
+    "keep_existing": 5549,
+    "not_found": 20048,
     "bad_image": 37
   },
-  "totalProcessed": 28500
+  "totalProcessed": 29000
 }
