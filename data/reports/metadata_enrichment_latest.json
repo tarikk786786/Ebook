@@ -1,16 +1,16 @@
 {
-  "offset": 1500,
-  "nextOffset": 2000,
+  "offset": 2000,
+  "nextOffset": 2500,
   "totalTargets": 86337,
   "processed": 500,
   "counts": {
-    "verified": 3,
-    "review": 19,
-    "not_found": 477,
+    "verified": 2,
+    "review": 27,
+    "not_found": 465,
     "error": 0,
-    "skipped": 1
+    "skipped": 6
   },
-  "verifiedOverlayEntries": 32,
-  "manualReviewQueue": 78,
+  "verifiedOverlayEntries": 36,
+  "manualReviewQueue": 105,
   "provider": "Open Library"
 }
