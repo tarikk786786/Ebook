@@ -1,70 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 6,
-    "keep_existing": 163,
-    "not_found": 331,
+    "downloaded": 0,
+    "keep_existing": 120,
+    "not_found": 380,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "everyday-millionaires-how-ordinary-people-built-extraordinary-wealth",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "everyday-millionaires-how-ordinary-people-built-extraordinary-wealth.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "existential-therapy-100-key-points-and-techniques-susan-iacovou",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "existential-therapy-100-key-points-and-techniques-susan-iacovou.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "experiencing-the-body-a-psychoanalytic-dialogue-on-psychosomatics",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "experiencing-the-body-a-psychoanalytic-dialogue-on-psychosomatics.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "farsighted-how-we-make-the-decisions-that-matter-the-most-steven",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "farsighted-how-we-make-the-decisions-that-matter-the-most-steven.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "fast-and-easy-trance-training-wheels-cheat-sheet",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "fast-and-easy-trance-training-wheels-cheat-sheet.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "fluent-python-clear-concise-and-effective-programming-volume-10-27754",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "fluent-python-clear-concise-and-effective-programming-volume-10-27754.jpg",
-      "bytes": 37057,
-      "title": "Gary John Bishop Unfu K Yourself Get Out Of Your Head And Into Your"
-    }
-  ],
-  "offset": 38000,
-  "nextOffset": 38500,
+  "sampleDownloaded": [],
+  "offset": 38500,
+  "nextOffset": 39000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 3858,
-    "keep_existing": 7949,
-    "not_found": 26656,
+    "keep_existing": 8069,
+    "not_found": 27036,
     "bad_image": 37
   },
-  "totalProcessed": 38500
+  "totalProcessed": 39000
 }
