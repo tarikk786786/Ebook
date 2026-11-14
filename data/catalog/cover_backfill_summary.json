@@ -1,182 +1,70 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 52,
-    "keep_existing": 38,
-    "not_found": 410,
+    "downloaded": 6,
+    "keep_existing": 163,
+    "not_found": 331,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-32827",
+      "slug": "everyday-millionaires-how-ordinary-people-built-extraordinary-wealth",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-32827.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "everyday-millionaires-how-ordinary-people-built-extraordinary-wealth.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-59503",
+      "slug": "existential-therapy-100-key-points-and-techniques-susan-iacovou",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-59503.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-70447",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-70447.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-43543",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-43543.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-21655",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-21655.jpg",
-      "bytes": 32360,
-      "title": "Trillion Dollar Coach"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-44227",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-44227.jpg",
-      "bytes": 39546,
-      "title": "Why Has Nobody Told Me This Before"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-48103",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-48103.jpg",
+      "file": "existential-therapy-100-key-points-and-techniques-susan-iacovou.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-30091",
+      "slug": "experiencing-the-body-a-psychoanalytic-dialogue-on-psychosomatics",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-30091.jpg",
+      "file": "experiencing-the-body-a-psychoanalytic-dialogue-on-psychosomatics.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-38299",
+      "slug": "farsighted-how-we-make-the-decisions-that-matter-the-most-steven",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-38299.jpg",
+      "file": "farsighted-how-we-make-the-decisions-that-matter-the-most-steven.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-27583",
+      "slug": "fast-and-easy-trance-training-wheels-cheat-sheet",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-27583.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-18691",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-18691.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-52663",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-52663.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-34423",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-34423.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-64975",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-64975.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-26215",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-26215.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-69307",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-69307.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-58135",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-58135.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-75007",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-75007.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-49927",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-49927.jpg",
+      "file": "fast-and-easy-trance-training-wheels-cheat-sheet.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-29407",
+      "slug": "fluent-python-clear-concise-and-effective-programming-volume-10-27754",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-29407.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "fluent-python-clear-concise-and-effective-programming-volume-10-27754.jpg",
+      "bytes": 37057,
+      "title": "Gary John Bishop Unfu K Yourself Get Out Of Your Head And Into Your"
     }
   ],
-  "offset": 37500,
-  "nextOffset": 38000,
+  "offset": 38000,
+  "nextOffset": 38500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3852,
-    "keep_existing": 7786,
-    "not_found": 26325,
+    "downloaded": 3858,
+    "keep_existing": 7949,
+    "not_found": 26656,
     "bad_image": 37
   },
-  "totalProcessed": 38000
+  "totalProcessed": 38500
 }
