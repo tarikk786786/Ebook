@@ -2,29 +2,29 @@
   "processed": 500,
   "counts": {
     "downloaded": 1,
-    "keep_existing": 101,
-    "not_found": 398,
+    "keep_existing": 120,
+    "not_found": 379,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "fluent-python-clear-concise-and-effective-programming-volume-8-61004",
+      "slug": "fluent-python-clear-concise-and-effective-programming-volume-8-82892",
       "status": "downloaded",
       "source": "open-library",
-      "file": "fluent-python-clear-concise-and-effective-programming-volume-8-61004.jpg",
-      "bytes": 49780,
-      "title": "Winning"
+      "file": "fluent-python-clear-concise-and-effective-programming-volume-8-82892.jpg",
+      "bytes": 25721,
+      "title": "Common Stocks and Uncommon Profits"
     }
   ],
-  "offset": 39500,
-  "nextOffset": 40000,
+  "offset": 40000,
+  "nextOffset": 40500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3863,
-    "keep_existing": 8283,
-    "not_found": 27817,
+    "downloaded": 3864,
+    "keep_existing": 8403,
+    "not_found": 28196,
     "bad_image": 37
   },
-  "totalProcessed": 40000
+  "totalProcessed": 40500
 }
