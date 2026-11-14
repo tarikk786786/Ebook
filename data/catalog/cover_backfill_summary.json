@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 64,
-    "keep_existing": 30,
-    "not_found": 406,
+    "downloaded": 52,
+    "keep_existing": 38,
+    "not_found": 410,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-34347",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-32827",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-34347.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-32827.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-37539",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-59503",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-37539.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-59503.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-77667",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-70447",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-77667.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-70447.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-43543",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-43543.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-82683",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-21655",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-82683.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-21655.jpg",
+      "bytes": 32360,
+      "title": "Trillion Dollar Coach"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-40731",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-44227",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-40731.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-44227.jpg",
+      "bytes": 39546,
+      "title": "Why Has Nobody Told Me This Before"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-72879",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-48103",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-72879.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-48103.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-32979",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-30091",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-32979.jpg",
-      "bytes": 25762,
-      "title": "The Royal Families of England, Scotland, and Wales"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-37767",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-37767.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-30091.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-63075",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-38299",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-63075.jpg",
-      "bytes": 15073,
-      "title": "RajaYoga"
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-38299.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-39363",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-27583",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-39363.jpg",
-      "bytes": 38851,
-      "title": "Dream Psychology"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-50535",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-3-50535.jpg",
-      "bytes": 47191,
-      "title": "Network Programmability and Automation"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-48749",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-48749.jpg",
-      "bytes": 22588,
-      "title": "When Breath Becomes Air"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-72233",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-72233.jpg",
-      "bytes": 43923,
-      "title": "Making 8-bit Arcade Games in C"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-76565",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-76565.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-20705",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-20705.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-38261",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-38261.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-27583.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-66077",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-18691",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-66077.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-18691.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-52663",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-52663.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-51485",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-34423",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-51485.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-34423.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-64975",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-64975.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-26215",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-26215.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-69307",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-69307.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-58135",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-58135.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-75007",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-75007.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-53765",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-49927",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-53765.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-49927.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-16829",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-29407",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-5-16829.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-7-29407.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 37000,
-  "nextOffset": 37500,
+  "offset": 37500,
+  "nextOffset": 38000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3800,
-    "keep_existing": 7748,
-    "not_found": 25915,
+    "downloaded": 3852,
+    "keep_existing": 7786,
+    "not_found": 26325,
     "bad_image": 37
   },
-  "totalProcessed": 37500
+  "totalProcessed": 38000
 }
