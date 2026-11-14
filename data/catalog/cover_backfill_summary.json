@@ -1,30 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 123,
+    "downloaded": 2,
+    "keep_existing": 122,
     "not_found": 376,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "good-to-great-why-some-companies-make-the-leap-volume-4-70648",
+      "slug": "good-to-great-why-some-companies-make-the-leap-volume-6-25542",
       "status": "downloaded",
       "source": "open-library",
-      "file": "good-to-great-why-some-companies-make-the-leap-volume-4-70648.jpg",
-      "bytes": 48522,
-      "title": "CompTIA PenTest+ Certification All in One Exam Guide Exam PT0 002"
+      "file": "good-to-great-why-some-companies-make-the-leap-volume-6-25542.jpg",
+      "bytes": 42051,
+      "title": "Helping Children to Cope with Change, Stress and Anxiety A Photocopiable"
+    },
+    {
+      "slug": "hbr-emotional-intelligence-ultimate-boxed-set-14-books-hbr-emotional",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "hbr-emotional-intelligence-ultimate-boxed-set-14-books-hbr-emotional.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     }
   ],
-  "offset": 43000,
-  "nextOffset": 43500,
+  "offset": 43500,
+  "nextOffset": 44000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3871,
-    "keep_existing": 9058,
-    "not_found": 30534,
+    "downloaded": 3873,
+    "keep_existing": 9180,
+    "not_found": 30910,
     "bad_image": 37
   },
-  "totalProcessed": 43500
+  "totalProcessed": 44000
 }
