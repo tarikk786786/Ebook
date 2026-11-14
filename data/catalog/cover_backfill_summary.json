@@ -1,21 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 88,
-    "not_found": 412,
+    "downloaded": 1,
+    "keep_existing": 123,
+    "not_found": 376,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 42500,
-  "nextOffset": 43000,
+  "sampleDownloaded": [
+    {
+      "slug": "good-to-great-why-some-companies-make-the-leap-volume-4-70648",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "good-to-great-why-some-companies-make-the-leap-volume-4-70648.jpg",
+      "bytes": 48522,
+      "title": "CompTIA PenTest+ Certification All in One Exam Guide Exam PT0 002"
+    }
+  ],
+  "offset": 43000,
+  "nextOffset": 43500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3870,
-    "keep_existing": 8935,
-    "not_found": 30158,
+    "downloaded": 3871,
+    "keep_existing": 9058,
+    "not_found": 30534,
     "bad_image": 37
   },
-  "totalProcessed": 43000
+  "totalProcessed": 43500
 }
