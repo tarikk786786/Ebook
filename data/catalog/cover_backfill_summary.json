@@ -1,46 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 99,
-    "not_found": 398,
+    "downloaded": 0,
+    "keep_existing": 96,
+    "not_found": 404,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-10-38290",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-10-38290.jpg",
-      "bytes": 33070,
-      "title": "Lean Six Sigma Business Transformation For Dummies"
-    },
-    {
-      "slug": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-10-26662",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-10-26662.jpg",
-      "bytes": 42679,
-      "title": "The Mental Retardation and Developmental Disability Treatment Planner"
-    },
-    {
-      "slug": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-12-56112",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-12-56112.jpg",
-      "bytes": 40630,
-      "title": "Peter Hopkirk The Great Game On Secret Service In High Asia John"
-    }
-  ],
-  "offset": 44000,
-  "nextOffset": 44500,
+  "sampleDownloaded": [],
+  "offset": 44500,
+  "nextOffset": 45000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 3876,
-    "keep_existing": 9279,
-    "not_found": 31308,
+    "keep_existing": 9375,
+    "not_found": 31712,
     "bad_image": 37
   },
-  "totalProcessed": 44500
+  "totalProcessed": 45000
 }
