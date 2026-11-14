@@ -1,21 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 120,
-    "not_found": 380,
+    "downloaded": 4,
+    "keep_existing": 113,
+    "not_found": 383,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 38500,
-  "nextOffset": 39000,
+  "sampleDownloaded": [
+    {
+      "slug": "fluent-python-clear-concise-and-effective-programming-volume-2-39686",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "fluent-python-clear-concise-and-effective-programming-volume-2-39686.jpg",
+      "bytes": 38932,
+      "title": "Implementing DevSecOps with Docker and Kubernetes José Manuel Ortega"
+    },
+    {
+      "slug": "fluent-python-clear-concise-and-effective-programming-volume-2-72290",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "fluent-python-clear-concise-and-effective-programming-volume-2-72290.jpg",
+      "bytes": 5722,
+      "title": "AI 2041 Ten Visions for Our Future"
+    },
+    {
+      "slug": "fluent-python-clear-concise-and-effective-programming-volume-4-23764",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "fluent-python-clear-concise-and-effective-programming-volume-4-23764.jpg",
+      "bytes": 42325,
+      "title": "Mike Meyers CompTIA Network+ Guide to Managing and Troubleshooting"
+    },
+    {
+      "slug": "fluent-python-clear-concise-and-effective-programming-volume-4-82816",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "fluent-python-clear-concise-and-effective-programming-volume-4-82816.jpg",
+      "bytes": 29114,
+      "title": "Grow Rich With The Power Of Your Subconsci Joseph Murphy"
+    }
+  ],
+  "offset": 39000,
+  "nextOffset": 39500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3858,
-    "keep_existing": 8069,
-    "not_found": 27036,
+    "downloaded": 3862,
+    "keep_existing": 8182,
+    "not_found": 27419,
     "bad_image": 37
   },
-  "totalProcessed": 39000
+  "totalProcessed": 39500
 }
