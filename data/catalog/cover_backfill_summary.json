@@ -1,30 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 120,
-    "not_found": 379,
+    "downloaded": 4,
+    "keep_existing": 110,
+    "not_found": 386,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "fluent-python-clear-concise-and-effective-programming-volume-8-82892",
+      "slug": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-1-24611",
       "status": "downloaded",
       "source": "open-library",
-      "file": "fluent-python-clear-concise-and-effective-programming-volume-8-82892.jpg",
-      "bytes": 25721,
-      "title": "Common Stocks and Uncommon Profits"
+      "file": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-1-24611.jpg",
+      "bytes": 38819,
+      "title": "Network Forensics Tracking Hackers through Cyberspace"
+    },
+    {
+      "slug": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-1-50375",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-1-50375.jpg",
+      "bytes": 37790,
+      "title": "Adult Children of Emotionally Immature Parents How to Heal from"
+    },
+    {
+      "slug": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-1-18455",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-1-18455.jpg",
+      "bytes": 36486,
+      "title": "Nmap Network Exploration and Security Auditing Cookbook Network"
+    },
+    {
+      "slug": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-3-25143",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "generative-deep-learning-teaching-machines-to-paint-write-and-play-volume-3-25143.jpg",
+      "bytes": 29567,
+      "title": "Rust standard library cookbook over 75 recipes to leverage the power"
     }
   ],
-  "offset": 40000,
-  "nextOffset": 40500,
+  "offset": 40500,
+  "nextOffset": 41000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3864,
-    "keep_existing": 8403,
-    "not_found": 28196,
+    "downloaded": 3868,
+    "keep_existing": 8513,
+    "not_found": 28582,
     "bad_image": 37
   },
-  "totalProcessed": 40500
+  "totalProcessed": 41000
 }
