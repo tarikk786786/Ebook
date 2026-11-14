@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 36,
-    "keep_existing": 126,
-    "not_found": 338,
+    "downloaded": 71,
+    "keep_existing": 38,
+    "not_found": 391,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-42061",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-70523",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-42061.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-70523.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-54601",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-45671",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-54601.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-45671.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-29749",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-83519",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-29749.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-83519.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-45937",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-18083",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-45937.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-18083.jpg",
+      "bytes": 63858,
+      "title": "Meditation and Its Methods"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-73031",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-73031.jpg",
+      "bytes": 19791,
+      "title": "On Becoming a Person A Therapist’s View of Psychotherapy"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-55019",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-55019.jpg",
+      "bytes": 30310,
+      "title": "The one thing"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-49091",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-49091.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-57755",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-57755.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-19679",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-19679.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-26291",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-26291.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-51637",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-40427",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-51637.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-40427.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-57299",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-57299.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-64595",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-64595.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-23821",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-65735",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-23821.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-57793",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-57793.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-65735.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-33853",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-28571",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-33853.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-45709",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-45709.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-73753",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-73753.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-27925",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-27925.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-28571.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-82189",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-21047",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-82189.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-21047.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-65507",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-65507.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-54335",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-54335.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-38413",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-31307",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-38413.jpg",
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-31307.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-22225",
+      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-32219",
       "status": "downloaded",
       "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-22225.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-22681",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-22681.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-19717",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-19717.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-37729",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-37729.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-28609",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-28609.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-46165",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-46165.jpg",
-      "bytes": 21260,
-      "title": "The True Story of the Origin of the National Society of the Daughters"
-    },
-    {
-      "slug": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-54829",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-1-54829.jpg",
-      "bytes": 30443,
-      "title": "Start With Why"
+      "file": "engineering-mathematics-advanced-calculus-lecture-notes-volume-11-32219.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     }
   ],
-  "offset": 36000,
-  "nextOffset": 36500,
+  "offset": 36500,
+  "nextOffset": 37000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3665,
-    "keep_existing": 7680,
-    "not_found": 25118,
+    "downloaded": 3736,
+    "keep_existing": 7718,
+    "not_found": 25509,
     "bad_image": 37
   },
-  "totalProcessed": 36500
+  "totalProcessed": 37000
 }
