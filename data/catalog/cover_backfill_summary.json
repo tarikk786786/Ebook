@@ -2,29 +2,29 @@
   "processed": 500,
   "counts": {
     "downloaded": 1,
-    "keep_existing": 109,
-    "not_found": 390,
+    "keep_existing": 112,
+    "not_found": 387,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "designing-data-intensive-applications-volume-2-31514",
+      "slug": "designing-data-intensive-applications-volume-6-71034",
       "status": "downloaded",
       "source": "open-library",
-      "file": "designing-data-intensive-applications-volume-2-31514.jpg",
-      "bytes": 43657,
-      "title": "The Cambridge Handbook of Forensic Psychology Cambridge Handbooks"
+      "file": "designing-data-intensive-applications-volume-6-71034.jpg",
+      "bytes": 58132,
+      "title": "Forensic Psychology and Neuropsychology for Criminal and Civil Cases"
     }
   ],
-  "offset": 34500,
-  "nextOffset": 35000,
+  "offset": 35000,
+  "nextOffset": 35500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3627,
-    "keep_existing": 7051,
-    "not_found": 24285,
+    "downloaded": 3628,
+    "keep_existing": 7163,
+    "not_found": 24672,
     "bad_image": 37
   },
-  "totalProcessed": 35000
+  "totalProcessed": 35500
 }
