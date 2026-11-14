@@ -1,38 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 112,
-    "not_found": 386,
+    "downloaded": 0,
+    "keep_existing": 88,
+    "not_found": 412,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "good-to-great-why-some-companies-make-the-leap-volume-10-55714",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "good-to-great-why-some-companies-make-the-leap-volume-10-55714.jpg",
-      "bytes": 15779,
-      "title": "Leonardo Da Vinci, Artist, Thinker and Man of Science"
-    },
-    {
-      "slug": "good-to-great-why-some-companies-make-the-leap-volume-10-78514",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "good-to-great-why-some-companies-make-the-leap-volume-10-78514.jpg",
-      "bytes": 46711,
-      "title": "Microsoft Azure Security Technologies Certification and Beyond Gain"
-    }
-  ],
-  "offset": 42000,
-  "nextOffset": 42500,
+  "sampleDownloaded": [],
+  "offset": 42500,
+  "nextOffset": 43000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 3870,
-    "keep_existing": 8847,
-    "not_found": 29746,
+    "keep_existing": 8935,
+    "not_found": 30158,
     "bad_image": 37
   },
-  "totalProcessed": 42500
+  "totalProcessed": 43000
 }
