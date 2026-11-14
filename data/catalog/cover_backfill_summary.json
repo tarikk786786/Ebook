@@ -2,29 +2,29 @@
   "processed": 500,
   "counts": {
     "downloaded": 1,
-    "keep_existing": 112,
-    "not_found": 387,
+    "keep_existing": 391,
+    "not_found": 108,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "designing-data-intensive-applications-volume-6-71034",
+      "slug": "digital-marketing-with-drupal-the-ultimate-guide-to-build-and-dep",
       "status": "downloaded",
       "source": "open-library",
-      "file": "designing-data-intensive-applications-volume-6-71034.jpg",
-      "bytes": 58132,
-      "title": "Forensic Psychology and Neuropsychology for Criminal and Civil Cases"
+      "file": "digital-marketing-with-drupal-the-ultimate-guide-to-build-and-dep.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 35000,
-  "nextOffset": 35500,
+  "offset": 35500,
+  "nextOffset": 36000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3628,
-    "keep_existing": 7163,
-    "not_found": 24672,
+    "downloaded": 3629,
+    "keep_existing": 7554,
+    "not_found": 24780,
     "bad_image": 37
   },
-  "totalProcessed": 35500
+  "totalProcessed": 36000
 }
