@@ -1,30 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 114,
-    "not_found": 385,
+    "downloaded": 30,
+    "keep_existing": 76,
+    "not_found": 394,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-8-56036",
+      "slug": "harvard-business-review-on-brand-management-erich-joachimsthaler",
       "status": "downloaded",
       "source": "open-library",
-      "file": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-8-56036.jpg",
-      "bytes": 37208,
-      "title": "Digital Technology for Forensic Footwear Analysis and Vertebrate"
+      "file": "harvard-business-review-on-brand-management-erich-joachimsthaler.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "hayat-hindi-edition",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "hayat-hindi-edition.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-27742",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-27742.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-82918",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-82918.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-69010",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-69010.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-41422",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-41422.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-42562",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-42562.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-33442",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-33442.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-41650",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-41650.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-75166",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-75166.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-16342",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-16342.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-65362",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-65362.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-48262",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-48262.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-59662",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-59662.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-40966",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-40966.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-19306",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-19306.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-65818",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-65818.jpg",
+      "bytes": 22294,
+      "title": "Brianna Wiest 101 Essays That Will Change The Way You Think Thought"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-61258",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-61258.jpg",
+      "bytes": 10405,
+      "title": "Mark H McCormack What They Don’t Teach You at Harvard Business School"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-33898",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-33898.jpg",
+      "bytes": 33292,
+      "title": "Forensic Psychologic"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-31618",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-31618.jpg",
+      "bytes": 3802,
+      "title": "Flying In The Sky"
     }
   ],
-  "offset": 45000,
-  "nextOffset": 45500,
+  "offset": 45500,
+  "nextOffset": 46000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3877,
-    "keep_existing": 9489,
-    "not_found": 32097,
+    "downloaded": 3907,
+    "keep_existing": 9565,
+    "not_found": 32491,
     "bad_image": 37
   },
-  "totalProcessed": 45500
+  "totalProcessed": 46000
 }
