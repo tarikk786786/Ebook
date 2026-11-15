@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 64,
-    "keep_existing": 35,
-    "not_found": 401,
+    "downloaded": 40,
+    "keep_existing": 58,
+    "not_found": 402,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-61168",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-6-62802",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-61168.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-6-62802.jpg",
+      "bytes": 35504,
+      "title": "Getting Things Done"
+    },
+    {
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-6-20394",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-6-20394.jpg",
+      "bytes": 46637,
+      "title": "Capricorn"
+    },
+    {
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-6-24954",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-6-24954.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-82600",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-35480",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-82600.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-49084",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-49084.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-35480.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-18304",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-35024",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-18304.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-35024.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-60028",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-56228",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-60028.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-61852",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-61852.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-61624",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-61624.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-38140",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-38140.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-56836",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-56836.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-56228.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-78040",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-36848",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-78040.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-36848.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-21800",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-21800.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-49388",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-49388.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-34948",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-76976",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-34948.jpg",
-      "bytes": 33609,
-      "title": "How-to-Become-a-People-Magnet"
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-76976.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-19900",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-16100",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-19900.jpg",
-      "bytes": 25628,
-      "title": "High performance habits"
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-16100.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-76216",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-73100",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-76216.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-73100.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-80624",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-80624.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-17392",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-44372",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-17392.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-44372.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-50680",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-20888",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-50680.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-20888.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-21724",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-41864",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-21724.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-30844",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-30844.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-41864.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-77812",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-59192",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-77812.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-59192.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-79028",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-79028.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-27728",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-27728.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-35176",
+      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-8-66260",
       "status": "downloaded",
       "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-35176.jpg",
+      "file": "llm-engineer-s-handbook-production-ai-systems-volume-8-66260.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "llm-engineer-s-handbook-production-ai-systems-volume-4-55468",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "llm-engineer-s-handbook-production-ai-systems-volume-4-55468.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 51000,
-  "nextOffset": 51500,
+  "offset": 51500,
+  "nextOffset": 52000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4288,
-    "keep_existing": 11472,
-    "not_found": 35703,
+    "downloaded": 4328,
+    "keep_existing": 11530,
+    "not_found": 36105,
     "bad_image": 37
   },
-  "totalProcessed": 51500
+  "totalProcessed": 52000
 }
