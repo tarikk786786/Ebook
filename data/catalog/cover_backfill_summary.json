@@ -2,20 +2,20 @@
   "processed": 500,
   "counts": {
     "downloaded": 0,
-    "keep_existing": 454,
-    "not_found": 46,
+    "keep_existing": 443,
+    "not_found": 57,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [],
-  "offset": 59000,
-  "nextOffset": 59500,
+  "offset": 59500,
+  "nextOffset": 60000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 4761,
-    "keep_existing": 13892,
-    "not_found": 40810,
+    "keep_existing": 14335,
+    "not_found": 40867,
     "bad_image": 37
   },
-  "totalProcessed": 59500
+  "totalProcessed": 60000
 }
