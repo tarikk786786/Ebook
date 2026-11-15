@@ -1,21 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 96,
-    "not_found": 404,
+    "downloaded": 1,
+    "keep_existing": 114,
+    "not_found": 385,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 44500,
-  "nextOffset": 45000,
+  "sampleDownloaded": [
+    {
+      "slug": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-8-56036",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow-volume-8-56036.jpg",
+      "bytes": 37208,
+      "title": "Digital Technology for Forensic Footwear Analysis and Vertebrate"
+    }
+  ],
+  "offset": 45000,
+  "nextOffset": 45500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3876,
-    "keep_existing": 9375,
-    "not_found": 31712,
+    "downloaded": 3877,
+    "keep_existing": 9489,
+    "not_found": 32097,
     "bad_image": 37
   },
-  "totalProcessed": 45000
+  "totalProcessed": 45500
 }
