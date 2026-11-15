@@ -1,46 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 103,
-    "not_found": 394,
+    "downloaded": 4,
+    "keep_existing": 154,
+    "not_found": 342,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "learning-typescript-enhance-your-web-development-volume-3-40371",
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-80575",
       "status": "downloaded",
       "source": "open-library",
-      "file": "learning-typescript-enhance-your-web-development-volume-3-40371.jpg",
-      "bytes": 54135,
-      "title": "Treating Co occurring Adolescent PTSD and Addiction Mindfulness"
+      "file": "learning-typescript-enhance-your-web-development-volume-7-80575.jpg",
+      "bytes": 22560,
+      "title": "Python for Teenagers"
     },
     {
-      "slug": "learning-typescript-enhance-your-web-development-volume-3-78219",
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-32923",
       "status": "downloaded",
       "source": "open-library",
-      "file": "learning-typescript-enhance-your-web-development-volume-3-78219.jpg",
-      "bytes": 51447,
-      "title": "Building Virtual Pentesting Labs for Advanced Penetration Testing"
+      "file": "learning-typescript-enhance-your-web-development-volume-7-32923.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "learning-typescript-enhance-your-web-development-volume-5-24221",
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-59599",
       "status": "downloaded",
       "source": "open-library",
-      "file": "learning-typescript-enhance-your-web-development-volume-5-24221.jpg",
-      "bytes": 35120,
-      "title": "CEH v12 Certified Ethical Hacker Study Guide with 750 Practice Test"
+      "file": "learning-typescript-enhance-your-web-development-volume-7-59599.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-18331",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "learning-typescript-enhance-your-web-development-volume-7-18331.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 52500,
-  "nextOffset": 53000,
+  "offset": 53000,
+  "nextOffset": 53500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4332,
-    "keep_existing": 11747,
-    "not_found": 36884,
+    "downloaded": 4336,
+    "keep_existing": 11901,
+    "not_found": 37226,
     "bad_image": 37
   },
-  "totalProcessed": 53000
+  "totalProcessed": 53500
 }
