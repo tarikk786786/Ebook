@@ -1,21 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 452,
-    "not_found": 48,
+    "downloaded": 2,
+    "keep_existing": 145,
+    "not_found": 353,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 49000,
-  "nextOffset": 49500,
+  "sampleDownloaded": [
+    {
+      "slug": "kubernetes-in-action-container-orchestration-engine-volume-6-69558",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "kubernetes-in-action-container-orchestration-engine-volume-6-69558.jpg",
+      "bytes": 22555,
+      "title": "The Small Business Online Marketing Handbook Converting Online Conversations"
+    },
+    {
+      "slug": "kubernetes-in-action-container-orchestration-engine-volume-8-72104",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "kubernetes-in-action-container-orchestration-engine-volume-8-72104.jpg",
+      "bytes": 39844,
+      "title": "Expand The Power Of Your Subconscious Mind C James Jensen"
+    }
+  ],
+  "offset": 49500,
+  "nextOffset": 50000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4102,
-    "keep_existing": 11226,
-    "not_found": 34135,
+    "downloaded": 4104,
+    "keep_existing": 11371,
+    "not_found": 34488,
     "bad_image": 37
   },
-  "totalProcessed": 49500
+  "totalProcessed": 50000
 }
