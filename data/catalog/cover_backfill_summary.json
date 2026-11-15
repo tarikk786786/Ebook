@@ -1,182 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 25,
-    "keep_existing": 162,
-    "not_found": 313,
+    "downloaded": 0,
+    "keep_existing": 443,
+    "not_found": 57,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-58484",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-58484.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-44804",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-44804.jpg",
-      "bytes": 50495,
-      "title": "The Therapist’s Notebook for Children and Adolescents Homework"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-45260",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-45260.jpg",
-      "bytes": 50737,
-      "title": "Essential English Words 2"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-47996",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-47996.jpg",
-      "bytes": 57180,
-      "title": "Our Feathered Friends"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-41612",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-41612.jpg",
-      "bytes": 29386,
-      "title": "Essentials of Assessment Report Writing Essentials of Psychological"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-56204",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-56204.jpg",
-      "bytes": 15642,
-      "title": "The Subtle Art of Not Giving a Fck Manson"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-27020",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-27020.jpg",
-      "bytes": 25230,
-      "title": "History of Philosophy"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-47540",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-47540.jpg",
-      "bytes": 46657,
-      "title": "Unlimited-Memory"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-61448",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-61448.jpg",
-      "bytes": 71126,
-      "title": "Bug Bounty Bootcamp"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-68972",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-68972.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-21776",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-21776.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-8-29756",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-8-29756.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "highway-billing-standard-epc-agreement-road-project",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "highway-billing-standard-epc-agreement-road-project.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "hinglish-9762",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hinglish-9762.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "hinglish-9116",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hinglish-9116.jpg",
-      "bytes": 34762,
-      "title": "Social Media Monitoring"
-    },
-    {
-      "slug": "hinglish-9724",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hinglish-9724.jpg",
-      "bytes": 22863,
-      "title": "The Locked Gate"
-    },
-    {
-      "slug": "hinglish-8637",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hinglish-8637.jpg",
-      "bytes": 16164,
-      "title": "How to Deal with Difficult People"
-    },
-    {
-      "slug": "hinglish-7630",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hinglish-7630.jpg",
-      "bytes": 30577,
-      "title": "Malware Analysis Using Artificial Intelligence and Deep Learning"
-    },
-    {
-      "slug": "hinglish-7156",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hinglish-7156.jpg",
-      "bytes": 34679,
-      "title": "Happiness Express"
-    },
-    {
-      "slug": "how-to-meet-your-self-dr-nicole-lep",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "how-to-meet-your-self-dr-nicole-lep.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    }
-  ],
-  "offset": 47500,
-  "nextOffset": 48000,
+  "sampleDownloaded": [],
+  "offset": 48000,
+  "nextOffset": 48500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 4102,
-    "keep_existing": 9875,
-    "not_found": 33986,
+    "keep_existing": 10318,
+    "not_found": 34043,
     "bad_image": 37
   },
-  "totalProcessed": 48000
+  "totalProcessed": 48500
 }
