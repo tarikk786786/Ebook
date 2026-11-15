@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 30,
-    "keep_existing": 76,
-    "not_found": 394,
+    "downloaded": 56,
+    "keep_existing": 75,
+    "not_found": 369,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "harvard-business-review-on-brand-management-erich-joachimsthaler",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-39142",
       "status": "downloaded",
       "source": "open-library",
-      "file": "harvard-business-review-on-brand-management-erich-joachimsthaler.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "hayat-hindi-edition",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hayat-hindi-edition.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-39142.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-27742",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-30934",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-27742.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-30934.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-82918",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-32530",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-82918.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-69010",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-69010.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-41422",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-41422.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-32530.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-42562",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-56698",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-42562.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-56698.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-33442",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-66730",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-33442.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-41650",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-41650.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-66730.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-75166",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-57154",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-75166.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-57154.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-68782",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-68782.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-49858",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-49858.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-16342",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-38230",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-16342.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-65362",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-65362.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-38230.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-48262",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-78358",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-48262.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-78358.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-34126",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-34126.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-53278",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-53278.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-66502",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-66502.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-61030",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-61030.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-59662",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-12-35076",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-59662.jpg",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-12-35076.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-12-73836",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-12-73836.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-12-32796",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-12-32796.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-40966",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-12-77028",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-40966.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-12-77028.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-19306",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-12-58560",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-19306.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-12-58560.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-65818",
+      "slug": "high-frequency-financial-architecture-quantitative-python-volume-12-37356",
       "status": "downloaded",
       "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-65818.jpg",
-      "bytes": 22294,
-      "title": "Brianna Wiest 101 Essays That Will Change The Way You Think Thought"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-61258",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-61258.jpg",
-      "bytes": 10405,
-      "title": "Mark H McCormack What They Don’t Teach You at Harvard Business School"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-33898",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-33898.jpg",
-      "bytes": 33292,
-      "title": "Forensic Psychologic"
-    },
-    {
-      "slug": "high-frequency-financial-architecture-quantitative-python-volume-10-31618",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "high-frequency-financial-architecture-quantitative-python-volume-10-31618.jpg",
-      "bytes": 3802,
-      "title": "Flying In The Sky"
+      "file": "high-frequency-financial-architecture-quantitative-python-volume-12-37356.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 45500,
-  "nextOffset": 46000,
+  "offset": 46000,
+  "nextOffset": 46500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 3907,
-    "keep_existing": 9565,
-    "not_found": 32491,
+    "downloaded": 3963,
+    "keep_existing": 9640,
+    "not_found": 32860,
     "bad_image": 37
   },
-  "totalProcessed": 46000
+  "totalProcessed": 46500
 }
