@@ -1,38 +1,86 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 101,
-    "not_found": 397,
+    "downloaded": 8,
+    "keep_existing": 143,
+    "not_found": 349,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-5-61541",
+      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-9-61845",
       "status": "downloaded",
       "source": "open-library",
-      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-5-61541.jpg",
-      "bytes": 55389,
-      "title": "The Purpose Driven Life What on Earth Am I Here For"
+      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-9-61845.jpg",
+      "bytes": 19932,
+      "title": "Psychosomatic Famili"
     },
     {
-      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-5-23009",
+      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-9-24453",
       "status": "downloaded",
       "source": "open-library",
-      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-5-23009.jpg",
-      "bytes": 10459,
-      "title": "How to Stop Worrying and Start Living Dale"
+      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-9-24453.jpg",
+      "bytes": 35528,
+      "title": "Separation Anxiety in Children and Adolescents An Individualized"
+    },
+    {
+      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-9-42465",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-9-42465.jpg",
+      "bytes": 26273,
+      "title": "Dont Let Your Emotions Run Your Life for Teens Dialectical Behavior"
+    },
+    {
+      "slug": "social-media-marketing-workbook-2022-secret-tricks-for-successful",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "social-media-marketing-workbook-2022-secret-tricks-for-successful.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "speeches-that-roused-the-world-by-colin-salter",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "speeches-that-roused-the-world-by-colin-salter.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "steve-jobs-walton-isaacson",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "steve-jobs-walton-isaacson.jpg",
+      "bytes": 29295,
+      "title": "Succeeding When You're Supposed to Fail"
+    },
+    {
+      "slug": "stock-market-crash-know-5-reasons-behind-the-crash-of-stock-marke",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "stock-market-crash-know-5-reasons-behind-the-crash-of-stock-marke.jpg",
+      "bytes": 32317,
+      "title": "Gut The Inside Story of Our Body's Most Underrated Organ"
+    },
+    {
+      "slug": "stri-sahityakar-mamta-mehrotra-jeevan-sahitya-aur-sangharsh-hindi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "stri-sahityakar-mamta-mehrotra-jeevan-sahitya-aur-sangharsh-hindi.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 64000,
-  "nextOffset": 64500,
+  "offset": 64500,
+  "nextOffset": 65000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4973,
-    "keep_existing": 15479,
-    "not_found": 44011,
+    "downloaded": 4981,
+    "keep_existing": 15622,
+    "not_found": 44360,
     "bad_image": 37
   },
-  "totalProcessed": 64500
+  "totalProcessed": 65000
 }
