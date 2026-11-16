@@ -1,30 +1,126 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 111,
-    "not_found": 388,
+    "downloaded": 13,
+    "keep_existing": 90,
+    "not_found": 397,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-49863",
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-38767",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-49863.jpg",
-      "bytes": 43672,
-      "title": "Quiet The Power Of Introverts In A World That Cant Stop Talking"
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-38767.jpg",
+      "bytes": 34922,
+      "title": "Linux Kernel Programming Part 2 Char Device Drivers and Kernel Synchronization"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-35803",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-35803.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-77527",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-77527.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-60921",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-60921.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-75741",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-75741.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-34701",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-34701.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-73005",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-73005.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-26949",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-26949.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-28545",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-28545.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37437",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37437.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-44733",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-44733.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-72321",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-72321.jpg",
+      "bytes": 15435,
+      "title": "The Mind of the Buyer"
+    },
+    {
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37893",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37893.jpg",
+      "bytes": 25602,
+      "title": "Chromatography"
     }
   ],
-  "offset": 68000,
-  "nextOffset": 68500,
+  "offset": 68500,
+  "nextOffset": 69000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4995,
-    "keep_existing": 16672,
-    "not_found": 46796,
+    "downloaded": 5008,
+    "keep_existing": 16762,
+    "not_found": 47193,
     "bad_image": 37
   },
-  "totalProcessed": 68500
+  "totalProcessed": 69000
 }
