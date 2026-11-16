@@ -1,46 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 237,
-    "not_found": 260,
+    "downloaded": 2,
+    "keep_existing": 153,
+    "not_found": 345,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-35778",
+      "slug": "the-art-of-reading-minds-how-to-understand-and-influence-others",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-35778.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "the-art-of-reading-minds-how-to-understand-and-influence-others.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-79592",
+      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-46405",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-79592.jpg",
-      "bytes": 7822,
-      "title": "The Millionaire Next Door"
-    },
-    {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-17348",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-17348.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-46405.jpg",
+      "bytes": 19575,
+      "title": "Instrumental Method of Chemical Analysis"
     }
   ],
-  "offset": 66500,
-  "nextOffset": 67000,
+  "offset": 67000,
+  "nextOffset": 67500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4991,
-    "keep_existing": 16285,
-    "not_found": 45687,
+    "downloaded": 4993,
+    "keep_existing": 16438,
+    "not_found": 46032,
     "bad_image": 37
   },
-  "totalProcessed": 67000
+  "totalProcessed": 67500
 }
