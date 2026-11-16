@@ -1,126 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 13,
-    "keep_existing": 90,
+    "downloaded": 41,
+    "keep_existing": 62,
     "not_found": 397,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-38767",
+      "slug": "the-immortal-king-rao-vauhini-vara",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-38767.jpg",
-      "bytes": 34922,
-      "title": "Linux Kernel Programming Part 2 Char Device Drivers and Kernel Synchronization"
+      "file": "the-immortal-king-rao-vauhini-vara.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-35803",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-79609",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-35803.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-77527",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-77527.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-79609.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-60921",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-83257",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-60921.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-83257.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-75741",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-16225",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-75741.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-16225.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-30589",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-30589.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-33781",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-33781.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-80521",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-80521.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-65017",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-65017.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-17365",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-17365.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-25117",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-25117.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-34701",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-31729",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-34701.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-31729.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-61369",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-61369.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-28993",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-28993.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-32413",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-32413.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-73005",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-33553",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-73005.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-33553.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-26949",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-54073",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-26949.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-54073.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-28545",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-70033",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-28545.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-70033.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37437",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-75049",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37437.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-44733",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-44733.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-75049.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-72321",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-60229",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-72321.jpg",
-      "bytes": 15435,
-      "title": "The Mind of the Buyer"
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-60229.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37893",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-1-19873",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-37893.jpg",
-      "bytes": 25602,
-      "title": "Chromatography"
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-1-19873.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     }
   ],
-  "offset": 68500,
-  "nextOffset": 69000,
+  "offset": 69000,
+  "nextOffset": 69500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5008,
-    "keep_existing": 16762,
-    "not_found": 47193,
+    "downloaded": 5049,
+    "keep_existing": 16824,
+    "not_found": 47590,
     "bad_image": 37
   },
-  "totalProcessed": 69000
+  "totalProcessed": 69500
 }
