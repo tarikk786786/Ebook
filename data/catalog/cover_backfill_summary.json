@@ -1,182 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 54,
-    "keep_existing": 45,
-    "not_found": 401,
+    "downloaded": 3,
+    "keep_existing": 330,
+    "not_found": 167,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-20178",
+      "slug": "python-unit-3-by-sandeep-sir-python-u-3-lec-7-not",
       "status": "downloaded",
       "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-20178.jpg",
-      "bytes": 33436,
-      "title": "Detox Your Ego"
+      "file": "python-unit-3-by-sandeep-sir-python-u-3-lec-7-not.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-24510",
+      "slug": "rig-the-miracle-morning-graphic-summary",
       "status": "downloaded",
       "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-24510.jpg",
-      "bytes": 39554,
-      "title": "Wings of fire"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-36822",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-36822.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-37506",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-37506.jpg",
+      "file": "rig-the-miracle-morning-graphic-summary.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-39558",
+      "slug": "rwa-computer-gyan-full-book-ssc-cgl-special-ankit-bhati-sir",
       "status": "downloaded",
       "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-39558.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-47994",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-47994.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-58710",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-58710.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-26790",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-26790.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-40926",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-40926.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-32946",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-32946.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-78774",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-78774.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-21090",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-21090.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-46854",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-46854.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-82878",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-82878.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-51870",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-6-51870.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-64220",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-64220.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-48944",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-48944.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-39368",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-39368.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-36632",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-36632.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-47576",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "price-action-breakdown-order-flow-liquidity-engineering-volume-8-47576.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "rwa-computer-gyan-full-book-ssc-cgl-special-ankit-bhati-sir.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     }
   ],
-  "offset": 61500,
-  "nextOffset": 62000,
+  "offset": 62000,
+  "nextOffset": 62500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4959,
-    "keep_existing": 14629,
-    "not_found": 42375,
+    "downloaded": 4962,
+    "keep_existing": 14959,
+    "not_found": 42542,
     "bad_image": 37
   },
-  "totalProcessed": 62000
+  "totalProcessed": 62500
 }
