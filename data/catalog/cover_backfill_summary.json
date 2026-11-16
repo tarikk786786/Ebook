@@ -1,30 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 171,
-    "not_found": 328,
+    "downloaded": 2,
+    "keep_existing": 113,
+    "not_found": 385,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-10-53182",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-10-53182.jpg",
-      "bytes": 27476,
-      "title": "MCA Microsoft 365 Teams Administrator Study Guide Exam MS 700 Ben"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380.jpg",
+      "bytes": 4475,
+      "title": "The Art Of War"
+    },
+    {
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-82632",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-82632.jpg",
+      "bytes": 16685,
+      "title": "How I Made One Million Dollars Last Year Trading Commodities"
     }
   ],
-  "offset": 65000,
-  "nextOffset": 65500,
+  "offset": 65500,
+  "nextOffset": 66000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4982,
-    "keep_existing": 15793,
-    "not_found": 44688,
+    "downloaded": 4984,
+    "keep_existing": 15906,
+    "not_found": 45073,
     "bad_image": 37
   },
-  "totalProcessed": 65500
+  "totalProcessed": 66000
 }
