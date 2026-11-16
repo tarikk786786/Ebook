@@ -1,15 +1,15 @@
 {
-  "nextOffset": 5500,
-  "lastOffset": 5000,
+  "nextOffset": 6000,
+  "lastOffset": 5500,
   "processed": 500,
   "totalTargets": 86337,
   "retryKeys": [],
-  "updatedAt": "2026-11-15T19:02:48Z",
+  "updatedAt": "2026-11-16T06:37:06Z",
   "lastCounts": {
     "verified": 0,
     "review": 0,
-    "not_found": 466,
+    "not_found": 473,
     "error": 0,
-    "skipped": 34
+    "skipped": 27
   }
 }
