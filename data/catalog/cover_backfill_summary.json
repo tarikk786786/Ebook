@@ -1,38 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 113,
-    "not_found": 385,
+    "downloaded": 4,
+    "keep_existing": 142,
+    "not_found": 354,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-76742",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380.jpg",
-      "bytes": 4475,
-      "title": "The Art Of War"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-76742.jpg",
+      "bytes": 44457,
+      "title": "Counseling and Psychotherapy With Religious Persons A Rational Emotive"
     },
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-82632",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-37298",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-82632.jpg",
-      "bytes": 16685,
-      "title": "How I Made One Million Dollars Last Year Trading Commodities"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-37298.jpg",
+      "bytes": 39957,
+      "title": "Richard Saferstein Criminalistics An Introduction to Forensic Science"
+    },
+    {
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014.jpg",
+      "bytes": 24683,
+      "title": "Stolen Focus"
     }
   ],
-  "offset": 65500,
-  "nextOffset": 66000,
+  "offset": 66000,
+  "nextOffset": 66500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4984,
-    "keep_existing": 15906,
-    "not_found": 45073,
+    "downloaded": 4988,
+    "keep_existing": 16048,
+    "not_found": 45427,
     "bad_image": 37
   },
-  "totalProcessed": 66000
+  "totalProcessed": 66500
 }
