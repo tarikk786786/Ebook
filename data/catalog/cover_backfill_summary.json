@@ -2,37 +2,37 @@
   "processed": 500,
   "counts": {
     "downloaded": 2,
-    "keep_existing": 97,
-    "not_found": 401,
+    "keep_existing": 101,
+    "not_found": 397,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-11-69179",
+      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-5-61541",
       "status": "downloaded",
       "source": "open-library",
-      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-11-69179.jpg",
-      "bytes": 14779,
-      "title": "Handbook of digital and multimedia forensic evidence"
+      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-5-61541.jpg",
+      "bytes": 55389,
+      "title": "The Purpose Driven Life What on Earth Am I Here For"
     },
     {
-      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-3-44403",
+      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-5-23009",
       "status": "downloaded",
       "source": "open-library",
-      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-3-44403.jpg",
-      "bytes": 4475,
-      "title": "The Art of War"
+      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-5-23009.jpg",
+      "bytes": 10459,
+      "title": "How to Stop Worrying and Start Living Dale"
     }
   ],
-  "offset": 63500,
-  "nextOffset": 64000,
+  "offset": 64000,
+  "nextOffset": 64500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4971,
-    "keep_existing": 15378,
-    "not_found": 43614,
+    "downloaded": 4973,
+    "keep_existing": 15479,
+    "not_found": 44011,
     "bad_image": 37
   },
-  "totalProcessed": 64000
+  "totalProcessed": 64500
 }
