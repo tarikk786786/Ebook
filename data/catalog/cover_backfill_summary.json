@@ -1,54 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 4,
-    "keep_existing": 142,
-    "not_found": 354,
+    "downloaded": 3,
+    "keep_existing": 237,
+    "not_found": 260,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-76742",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-35778",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-76742.jpg",
-      "bytes": 44457,
-      "title": "Counseling and Psychotherapy With Religious Persons A Rational Emotive"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-35778.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-37298",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-79592",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-2-37298.jpg",
-      "bytes": 39957,
-      "title": "Richard Saferstein Criminalistics An Introduction to Forensic Science"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-79592.jpg",
+      "bytes": 7822,
+      "title": "The Millionaire Next Door"
     },
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-17348",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014.jpg",
-      "bytes": 24683,
-      "title": "Stolen Focus"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-17348.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 66000,
-  "nextOffset": 66500,
+  "offset": 66500,
+  "nextOffset": 67000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 4988,
-    "keep_existing": 16048,
-    "not_found": 45427,
+    "downloaded": 4991,
+    "keep_existing": 16285,
+    "not_found": 45687,
     "bad_image": 37
   },
-  "totalProcessed": 66500
+  "totalProcessed": 67000
 }
