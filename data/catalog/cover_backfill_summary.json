@@ -1,94 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 9,
-    "keep_existing": 234,
-    "not_found": 257,
+    "downloaded": 3,
+    "keep_existing": 121,
+    "not_found": 376,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "understanding-the-difference-between-habits-and-obsessive",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-1-55825",
       "status": "downloaded",
       "source": "open-library",
-      "file": "understanding-the-difference-between-habits-and-obsessive.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-1-55825.jpg",
+      "bytes": 49013,
+      "title": "Beyond the Blues A Workbook to Help Teens Overcome Depression Lisa"
     },
     {
-      "slug": "dollarpremium-answer-2-20260708-034338-144-8-the-mirror-tracker-printa",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247",
       "status": "downloaded",
       "source": "open-library",
-      "file": "dollarpremium-answer-2-20260708-034338-144-8-the-mirror-tracker-printa.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "vp-menon-the-unsung-by-narayani-basu",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-66959",
       "status": "downloaded",
       "source": "open-library",
-      "file": "vp-menon-the-unsung-by-narayani-basu.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "vocab-videos-lecture-47-owspdf",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "vocab-videos-lecture-47-owspdf.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "dollarpremium-answer-2-20251120-170111-141-ᴹᴿℂr𝕒ckєr⁰³-odd-one-out-par",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dollarpremium-answer-2-20251120-170111-141-ᴹᴿℂr𝕒ckєr⁰³-odd-one-out-par.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "why-is-the-stock-market-rising-even-as-the-omicron-case-escalates",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "why-is-the-stock-market-rising-even-as-the-omicron-case-escalates.jpg",
-      "bytes": 19748,
-      "title": "Counseling and Psychotherapy with Children and Adolescents Theory"
-    },
-    {
-      "slug": "win-every-argument-the-art-of-debating-persuading-and-public-spea",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "win-every-argument-the-art-of-debating-persuading-and-public-spea.jpg",
-      "bytes": 54114,
-      "title": "Discipline Is Destiny"
-    },
-    {
-      "slug": "yayati-hindi",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "yayati-hindi.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "your-micro-niche-worksheet-9013",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "your-micro-niche-worksheet-9013.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-66959.jpg",
+      "bytes": 26557,
+      "title": "Diagnostic and Statistical Manual of Mental Disorders, 5th Edition"
     }
   ],
-  "offset": 82000,
-  "nextOffset": 82500,
+  "offset": 82500,
+  "nextOffset": 83000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5483,
-    "keep_existing": 19980,
-    "not_found": 56999,
+    "downloaded": 5486,
+    "keep_existing": 20101,
+    "not_found": 57375,
     "bad_image": 38
   },
-  "totalProcessed": 82500
+  "totalProcessed": 83000
 }
