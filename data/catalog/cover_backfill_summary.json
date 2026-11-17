@@ -1,46 +1,62 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 92,
-    "not_found": 405,
+    "downloaded": 5,
+    "keep_existing": 103,
+    "not_found": 392,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-rust-programming-language-volume-6-74838",
+      "slug": "the-rust-programming-language-volume-6-78942",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-6-74838.jpg",
-      "bytes": 56493,
-      "title": "AWS Certified Machine Learning Specialty MLS C01 Certification Guide"
+      "file": "the-rust-programming-language-volume-6-78942.jpg",
+      "bytes": 25166,
+      "title": "Investor Behavior The Psychology of Financial Planning and Investing"
     },
     {
-      "slug": "the-rust-programming-language-volume-6-82818",
+      "slug": "the-rust-programming-language-volume-6-75294",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-6-82818.jpg",
-      "bytes": 42440,
-      "title": "The Rise of Islam and The Bengal Frontier 1204-1760"
+      "file": "the-rust-programming-language-volume-6-75294.jpg",
+      "bytes": 26602,
+      "title": "Arianna Huffington On Becoming Fearless in Love, Work, and Life"
     },
     {
-      "slug": "the-rust-programming-language-volume-6-29694",
+      "slug": "the-rust-programming-language-volume-8-63476",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-6-29694.jpg",
-      "bytes": 25181,
-      "title": "Free Yourself From Anxiety A self help guide to overcoming anxiety"
+      "file": "the-rust-programming-language-volume-8-63476.jpg",
+      "bytes": 56261,
+      "title": "The Very Secret Society of Irregular Witches Sangu Mandanna"
+    },
+    {
+      "slug": "the-steal-the-attempt-to-overturn-the-2020-election-and-the-peopl",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-steal-the-attempt-to-overturn-the-2020-election-and-the-peopl.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-voltage-effect-how-to-make-good-ideas-great-and-great-ideas",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-voltage-effect-how-to-make-good-ideas-great-and-great-ideas.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 75500,
-  "nextOffset": 76000,
+  "offset": 76000,
+  "nextOffset": 76500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5221,
-    "keep_existing": 18313,
-    "not_found": 52429,
+    "downloaded": 5226,
+    "keep_existing": 18416,
+    "not_found": 52821,
     "bad_image": 37
   },
-  "totalProcessed": 76000
+  "totalProcessed": 76500
 }
