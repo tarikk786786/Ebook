@@ -1,70 +1,62 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 6,
-    "keep_existing": 172,
-    "not_found": 322,
+    "downloaded": 5,
+    "keep_existing": 174,
+    "not_found": 321,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-5-19289",
+      "slug": "the-web-application-hacker-s-handbook-volume-9-78873",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-5-19289.jpg",
-      "bytes": 36228,
-      "title": "Working with Children to Heal Interpersonal Trauma The Power of"
+      "file": "the-web-application-hacker-s-handbook-volume-9-78873.jpg",
+      "bytes": 17295,
+      "title": "life and work of Sardar Vallabhbhai Patel"
     },
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-7-67435",
+      "slug": "the-web-application-hacker-s-handbook-volume-9-26205",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-7-67435.jpg",
+      "file": "the-web-application-hacker-s-handbook-volume-9-26205.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-power-of-radical-forgiveness-an-experience-of-deep-emotional",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-power-of-radical-forgiveness-an-experience-of-deep-emotional.jpg",
+      "bytes": 65990,
+      "title": "The Essentials of Forensic Medicine and Toxicology"
+    },
+    {
+      "slug": "the-power-of-your-subconscious-mind-pdf-book-in-hindi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-power-of-your-subconscious-mind-pdf-book-in-hindi.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-7-27307",
+      "slug": "thelea1",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-7-27307.jpg",
+      "file": "thelea1.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-7-54439",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-7-54439.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-9-19137",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-9-19137.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-9-20505",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-9-20505.jpg",
-      "bytes": 24773,
-      "title": "Brief Intervention for School Problems, Second Edition Outcome Informed"
     }
   ],
-  "offset": 77500,
-  "nextOffset": 78000,
+  "offset": 78000,
+  "nextOffset": 78500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5240,
-    "keep_existing": 18891,
-    "not_found": 53832,
+    "downloaded": 5245,
+    "keep_existing": 19065,
+    "not_found": 54153,
     "bad_image": 37
   },
-  "totalProcessed": 78000
+  "totalProcessed": 78500
 }
