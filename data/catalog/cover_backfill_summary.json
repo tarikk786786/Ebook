@@ -1,46 +1,62 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 121,
-    "not_found": 376,
+    "downloaded": 5,
+    "keep_existing": 147,
+    "not_found": 348,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-1-55825",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-71823",
       "status": "downloaded",
       "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-1-55825.jpg",
-      "bytes": 49013,
-      "title": "Beyond the Blues A Workbook to Help Teens Overcome Depression Lisa"
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-71823.jpg",
+      "bytes": 22791,
+      "title": "ISC2 SSCP Systems Security Certified Practitioner Official Practice"
     },
     {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-18015",
       "status": "downloaded",
       "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247.jpg",
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-18015.jpg",
+      "bytes": 48976,
+      "title": "The Unfair Advantage"
+    },
+    {
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-69771",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-69771.jpg",
+      "bytes": 31050,
+      "title": "Frontend"
+    },
+    {
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-37851",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-37851.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-66959",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-5-70721",
       "status": "downloaded",
       "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-66959.jpg",
-      "bytes": 26557,
-      "title": "Diagnostic and Statistical Manual of Mental Disorders, 5th Edition"
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-5-70721.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 82500,
-  "nextOffset": 83000,
+  "offset": 83000,
+  "nextOffset": 83500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5486,
-    "keep_existing": 20101,
-    "not_found": 57375,
+    "downloaded": 5491,
+    "keep_existing": 20248,
+    "not_found": 57723,
     "bad_image": 38
   },
-  "totalProcessed": 83000
+  "totalProcessed": 83500
 }
