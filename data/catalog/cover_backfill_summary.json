@@ -2,53 +2,53 @@
   "processed": 500,
   "counts": {
     "downloaded": 4,
-    "keep_existing": 145,
-    "not_found": 351,
+    "keep_existing": 117,
+    "not_found": 379,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "thinking-fast-and-slow-volume-12-56364",
+      "slug": "thinking-fast-and-slow-volume-4-80152",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-56364.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "thinking-fast-and-slow-volume-4-80152.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "thinking-fast-and-slow-volume-12-53856",
+      "slug": "thinking-fast-and-slow-volume-4-68296",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-53856.jpg",
-      "bytes": 31903,
-      "title": "Client centered therapy, its current practice, implications, and"
+      "file": "thinking-fast-and-slow-volume-4-68296.jpg",
+      "bytes": 22222,
+      "title": "Criminal Psychology"
     },
     {
-      "slug": "thinking-fast-and-slow-volume-12-31284",
+      "slug": "thinking-fast-and-slow-volume-4-30448",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-31284.jpg",
-      "bytes": 24802,
-      "title": "Microsoft Identity and Access Administrator Exam Guide Implement"
+      "source": "internet-archive",
+      "file": "thinking-fast-and-slow-volume-4-30448.jpg",
+      "bytes": 12546,
+      "title": "Children’s Drawings Iconic Coding of the Environment"
     },
     {
-      "slug": "thinking-fast-and-slow-volume-12-54312",
+      "slug": "thinking-fast-and-slow-volume-4-40252",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-54312.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "thinking-fast-and-slow-volume-4-40252.jpg",
+      "bytes": 34066,
+      "title": "How Not to Say What You Mean A Dictionary of Euphemisms"
     }
   ],
-  "offset": 78500,
-  "nextOffset": 79000,
+  "offset": 79000,
+  "nextOffset": 79500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5249,
-    "keep_existing": 19210,
-    "not_found": 54504,
+    "downloaded": 5253,
+    "keep_existing": 19327,
+    "not_found": 54883,
     "bad_image": 37
   },
-  "totalProcessed": 79000
+  "totalProcessed": 79500
 }
