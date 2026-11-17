@@ -1,38 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 151,
-    "not_found": 347,
+    "downloaded": 0,
+    "keep_existing": 136,
+    "not_found": 364,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "the-lean-startup-continuous-innovation-playbook-volume-2-68138",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "the-lean-startup-continuous-innovation-playbook-volume-2-68138.jpg",
-      "bytes": 12362,
-      "title": "Getting Things Done The Art of Stress Free Productivity"
-    },
-    {
-      "slug": "the-lean-startup-continuous-innovation-playbook-volume-2-82502",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "the-lean-startup-continuous-innovation-playbook-volume-2-82502.jpg",
-      "bytes": 15422,
-      "title": "The Book Of Man"
-    }
-  ],
-  "offset": 71500,
-  "nextOffset": 72000,
+  "sampleDownloaded": [],
+  "offset": 72000,
+  "nextOffset": 72500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 5206,
-    "keep_existing": 17378,
-    "not_found": 49379,
+    "keep_existing": 17514,
+    "not_found": 49743,
     "bad_image": 37
   },
-  "totalProcessed": 72000
+  "totalProcessed": 72500
 }
