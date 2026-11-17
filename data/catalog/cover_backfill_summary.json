@@ -1,46 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 129,
-    "not_found": 368,
+    "downloaded": 1,
+    "keep_existing": 107,
+    "not_found": 392,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-lean-startup-continuous-innovation-playbook-volume-8-53204",
+      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-1-66853",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-lean-startup-continuous-innovation-playbook-volume-8-53204.jpg",
-      "bytes": 44289,
-      "title": "The Power Of Your Subconscious Mind Joseph Murphy"
-    },
-    {
-      "slug": "the-lean-startup-continuous-innovation-playbook-volume-8-47960",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-lean-startup-continuous-innovation-playbook-volume-8-47960.jpg",
-      "bytes": 20315,
-      "title": "The Mountain Is You Wiest"
-    },
-    {
-      "slug": "the-power-of-your-subconscious-mind-1-1",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-power-of-your-subconscious-mind-1-1.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-1-66853.jpg",
+      "bytes": 19613,
+      "title": "The other side of sadness what the new science of bereavement tells"
     }
   ],
-  "offset": 72500,
-  "nextOffset": 73000,
+  "offset": 73000,
+  "nextOffset": 73500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5209,
-    "keep_existing": 17643,
-    "not_found": 50111,
+    "downloaded": 5210,
+    "keep_existing": 17750,
+    "not_found": 50503,
     "bad_image": 37
   },
-  "totalProcessed": 73000
+  "totalProcessed": 73500
 }
