@@ -1,78 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 7,
-    "keep_existing": 129,
-    "not_found": 364,
+    "downloaded": 29,
+    "keep_existing": 111,
+    "not_found": 360,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "thinking-fast-and-slow-volume-6-17718",
+      "slug": "thinking-fast-and-slow-volume-8-29612",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-6-17718.jpg",
-      "bytes": 44412,
-      "title": "I Will Teach You to Be Rich"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-6-39378",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-6-39378.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-6-40974",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-6-40974.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-8-30752",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-8-30752.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-8-31664",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-8-31664.jpg",
+      "file": "thinking-fast-and-slow-volume-8-29612.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "thinking-fast-and-slow-volume-8-39872",
+      "slug": "top-50-os-interview-questions-pdf-20231107-101916-0000",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-8-39872.jpg",
-      "bytes": 24757,
-      "title": "Cool Connections with Cognitive Behavioural Therapy Encouraging"
+      "file": "top-50-os-interview-questions-pdf-20231107-101916-0000.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "thinking-fast-and-slow-volume-8-67916",
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-19834",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-8-67916.jpg",
-      "bytes": 42260,
-      "title": "Brian Tracy"
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-19834.jpg",
+      "bytes": 44289,
+      "title": "The Power Of Your Subconscious Mind Murphy"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-66802",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-66802.jpg",
+      "bytes": 51434,
+      "title": "Dopamine Detox"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-73414",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-73414.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-51070",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-51070.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-29410",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-29410.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-37846",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-37846.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-40354",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-40354.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-53806",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-53806.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-67258",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-67258.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-72274",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-72274.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-25990",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-25990.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-39442",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-39442.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-64522",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-64522.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-76378",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-76378.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-31462",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-31462.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-44230",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-44230.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-18922",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-18922.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-51754",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-10-51754.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 79500,
-  "nextOffset": 80000,
+  "offset": 80000,
+  "nextOffset": 80500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5260,
-    "keep_existing": 19456,
-    "not_found": 55247,
+    "downloaded": 5289,
+    "keep_existing": 19567,
+    "not_found": 55607,
     "bad_image": 37
   },
-  "totalProcessed": 80000
+  "totalProcessed": 80500
 }
