@@ -1,62 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 5,
-    "keep_existing": 174,
-    "not_found": 321,
+    "downloaded": 4,
+    "keep_existing": 145,
+    "not_found": 351,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-9-78873",
+      "slug": "thinking-fast-and-slow-volume-12-56364",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-9-78873.jpg",
-      "bytes": 17295,
-      "title": "life and work of Sardar Vallabhbhai Patel"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-9-26205",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-9-26205.jpg",
+      "file": "thinking-fast-and-slow-volume-12-56364.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "the-power-of-radical-forgiveness-an-experience-of-deep-emotional",
+      "slug": "thinking-fast-and-slow-volume-12-53856",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-power-of-radical-forgiveness-an-experience-of-deep-emotional.jpg",
-      "bytes": 65990,
-      "title": "The Essentials of Forensic Medicine and Toxicology"
+      "file": "thinking-fast-and-slow-volume-12-53856.jpg",
+      "bytes": 31903,
+      "title": "Client centered therapy, its current practice, implications, and"
     },
     {
-      "slug": "the-power-of-your-subconscious-mind-pdf-book-in-hindi",
+      "slug": "thinking-fast-and-slow-volume-12-31284",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-power-of-your-subconscious-mind-pdf-book-in-hindi.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "thinking-fast-and-slow-volume-12-31284.jpg",
+      "bytes": 24802,
+      "title": "Microsoft Identity and Access Administrator Exam Guide Implement"
     },
     {
-      "slug": "thelea1",
+      "slug": "thinking-fast-and-slow-volume-12-54312",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thelea1.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "thinking-fast-and-slow-volume-12-54312.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 78000,
-  "nextOffset": 78500,
+  "offset": 78500,
+  "nextOffset": 79000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5245,
-    "keep_existing": 19065,
-    "not_found": 54153,
+    "downloaded": 5249,
+    "keep_existing": 19210,
+    "not_found": 54504,
     "bad_image": 37
   },
-  "totalProcessed": 78500
+  "totalProcessed": 79000
 }
