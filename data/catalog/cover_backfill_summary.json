@@ -1,38 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 114,
-    "not_found": 384,
+    "downloaded": 3,
+    "keep_existing": 163,
+    "not_found": 334,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-7-21139",
+      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-41697",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-7-21139.jpg",
-      "bytes": 26019,
-      "title": "Microsoft Azure Fundamentals Certification and Beyond Simplified"
+      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-41697.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-81597",
+      "slug": "the-rust-programming-language-volume-10-46414",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-81597.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "the-rust-programming-language-volume-10-46414.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-rust-programming-language-volume-12-19548",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-rust-programming-language-volume-12-19548.jpg",
+      "bytes": 36884,
+      "title": "Peter B Kyne The Go Getter A Story That Tells You How To Be One"
     }
   ],
-  "offset": 74000,
-  "nextOffset": 74500,
+  "offset": 74500,
+  "nextOffset": 75000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5213,
-    "keep_existing": 17964,
-    "not_found": 51286,
+    "downloaded": 5216,
+    "keep_existing": 18127,
+    "not_found": 51620,
     "bad_image": 37
   },
-  "totalProcessed": 74500
+  "totalProcessed": 75000
 }
