@@ -1,54 +1,78 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 4,
-    "keep_existing": 117,
-    "not_found": 379,
+    "downloaded": 7,
+    "keep_existing": 129,
+    "not_found": 364,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "thinking-fast-and-slow-volume-4-80152",
+      "slug": "thinking-fast-and-slow-volume-6-17718",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-4-80152.jpg",
+      "file": "thinking-fast-and-slow-volume-6-17718.jpg",
+      "bytes": 44412,
+      "title": "I Will Teach You to Be Rich"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-6-39378",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-6-39378.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-6-40974",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-6-40974.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-8-30752",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-8-30752.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-8-31664",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-8-31664.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "thinking-fast-and-slow-volume-4-68296",
+      "slug": "thinking-fast-and-slow-volume-8-39872",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-4-68296.jpg",
-      "bytes": 22222,
-      "title": "Criminal Psychology"
+      "file": "thinking-fast-and-slow-volume-8-39872.jpg",
+      "bytes": 24757,
+      "title": "Cool Connections with Cognitive Behavioural Therapy Encouraging"
     },
     {
-      "slug": "thinking-fast-and-slow-volume-4-30448",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "thinking-fast-and-slow-volume-4-30448.jpg",
-      "bytes": 12546,
-      "title": "Children’s Drawings Iconic Coding of the Environment"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-4-40252",
+      "slug": "thinking-fast-and-slow-volume-8-67916",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-4-40252.jpg",
-      "bytes": 34066,
-      "title": "How Not to Say What You Mean A Dictionary of Euphemisms"
+      "file": "thinking-fast-and-slow-volume-8-67916.jpg",
+      "bytes": 42260,
+      "title": "Brian Tracy"
     }
   ],
-  "offset": 79000,
-  "nextOffset": 79500,
+  "offset": 79500,
+  "nextOffset": 80000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5253,
-    "keep_existing": 19327,
-    "not_found": 54883,
+    "downloaded": 5260,
+    "keep_existing": 19456,
+    "not_found": 55247,
     "bad_image": 37
   },
-  "totalProcessed": 79500
+  "totalProcessed": 80000
 }
