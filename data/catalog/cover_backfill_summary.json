@@ -1,46 +1,62 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 144,
-    "not_found": 353,
+    "downloaded": 5,
+    "keep_existing": 159,
+    "not_found": 336,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-1-17617",
+      "slug": "the-web-application-hacker-s-handbook-volume-3-39771",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-1-17617.jpg",
-      "bytes": 36609,
-      "title": "Art Therapy for Groups A Handbook of Themes and Exercises"
+      "file": "the-web-application-hacker-s-handbook-volume-3-39771.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-1-80089",
+      "slug": "the-web-application-hacker-s-handbook-volume-3-79899",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-1-80089.jpg",
+      "file": "the-web-application-hacker-s-handbook-volume-3-79899.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "the-web-application-hacker-s-handbook-volume-3-78303",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-web-application-hacker-s-handbook-volume-3-78303.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-web-application-hacker-s-handbook-volume-5-82901",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-web-application-hacker-s-handbook-volume-5-82901.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "the-web-application-hacker-s-handbook-volume-5-79709",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-web-application-hacker-s-handbook-volume-5-79709.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-11-27839",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-11-27839.jpg",
-      "bytes": 42283,
-      "title": "The Quest"
     }
   ],
-  "offset": 76500,
-  "nextOffset": 77000,
+  "offset": 77000,
+  "nextOffset": 77500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5229,
-    "keep_existing": 18560,
-    "not_found": 53174,
+    "downloaded": 5234,
+    "keep_existing": 18719,
+    "not_found": 53510,
     "bad_image": 37
   },
-  "totalProcessed": 77000
+  "totalProcessed": 77500
 }
