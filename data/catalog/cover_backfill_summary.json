@@ -1,62 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 5,
-    "keep_existing": 103,
-    "not_found": 392,
+    "downloaded": 3,
+    "keep_existing": 144,
+    "not_found": 353,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-rust-programming-language-volume-6-78942",
+      "slug": "the-web-application-hacker-s-handbook-volume-1-17617",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-6-78942.jpg",
-      "bytes": 25166,
-      "title": "Investor Behavior The Psychology of Financial Planning and Investing"
+      "file": "the-web-application-hacker-s-handbook-volume-1-17617.jpg",
+      "bytes": 36609,
+      "title": "Art Therapy for Groups A Handbook of Themes and Exercises"
     },
     {
-      "slug": "the-rust-programming-language-volume-6-75294",
+      "slug": "the-web-application-hacker-s-handbook-volume-1-80089",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-6-75294.jpg",
-      "bytes": 26602,
-      "title": "Arianna Huffington On Becoming Fearless in Love, Work, and Life"
-    },
-    {
-      "slug": "the-rust-programming-language-volume-8-63476",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-rust-programming-language-volume-8-63476.jpg",
-      "bytes": 56261,
-      "title": "The Very Secret Society of Irregular Witches Sangu Mandanna"
-    },
-    {
-      "slug": "the-steal-the-attempt-to-overturn-the-2020-election-and-the-peopl",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-steal-the-attempt-to-overturn-the-2020-election-and-the-peopl.jpg",
+      "file": "the-web-application-hacker-s-handbook-volume-1-80089.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-voltage-effect-how-to-make-good-ideas-great-and-great-ideas",
+      "slug": "the-web-application-hacker-s-handbook-volume-11-27839",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-voltage-effect-how-to-make-good-ideas-great-and-great-ideas.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "the-web-application-hacker-s-handbook-volume-11-27839.jpg",
+      "bytes": 42283,
+      "title": "The Quest"
     }
   ],
-  "offset": 76000,
-  "nextOffset": 76500,
+  "offset": 76500,
+  "nextOffset": 77000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5226,
-    "keep_existing": 18416,
-    "not_found": 52821,
+    "downloaded": 5229,
+    "keep_existing": 18560,
+    "not_found": 53174,
     "bad_image": 37
   },
-  "totalProcessed": 76500
+  "totalProcessed": 77000
 }
