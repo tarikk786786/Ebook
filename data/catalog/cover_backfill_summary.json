@@ -1,30 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 100,
-    "not_found": 399,
+    "downloaded": 2,
+    "keep_existing": 114,
+    "not_found": 384,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-5-80609",
+      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-7-21139",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-5-80609.jpg",
-      "bytes": 27854,
-      "title": "Melinda Gates The Moment of Lift How Empowering Women Changes the"
+      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-7-21139.jpg",
+      "bytes": 26019,
+      "title": "Microsoft Azure Fundamentals Certification and Beyond Simplified"
+    },
+    {
+      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-81597",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-81597.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     }
   ],
-  "offset": 73500,
-  "nextOffset": 74000,
+  "offset": 74000,
+  "nextOffset": 74500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5211,
-    "keep_existing": 17850,
-    "not_found": 50902,
+    "downloaded": 5213,
+    "keep_existing": 17964,
+    "not_found": 51286,
     "bad_image": 37
   },
-  "totalProcessed": 74000
+  "totalProcessed": 74500
 }
