@@ -1,38 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 94,
-    "not_found": 404,
+    "downloaded": 3,
+    "keep_existing": 92,
+    "not_found": 405,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-rust-programming-language-volume-2-73166",
+      "slug": "the-rust-programming-language-volume-6-74838",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-2-73166.jpg",
-      "bytes": 40387,
-      "title": "Skeletal Trauma"
+      "file": "the-rust-programming-language-volume-6-74838.jpg",
+      "bytes": 56493,
+      "title": "AWS Certified Machine Learning Specialty MLS C01 Certification Guide"
     },
     {
-      "slug": "the-rust-programming-language-volume-2-39650",
+      "slug": "the-rust-programming-language-volume-6-82818",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-2-39650.jpg",
-      "bytes": 67779,
-      "title": "Quality Assurance and Quality Control: Abrasion Test File"
+      "file": "the-rust-programming-language-volume-6-82818.jpg",
+      "bytes": 42440,
+      "title": "The Rise of Islam and The Bengal Frontier 1204-1760"
+    },
+    {
+      "slug": "the-rust-programming-language-volume-6-29694",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-rust-programming-language-volume-6-29694.jpg",
+      "bytes": 25181,
+      "title": "Free Yourself From Anxiety A self help guide to overcoming anxiety"
     }
   ],
-  "offset": 75000,
-  "nextOffset": 75500,
+  "offset": 75500,
+  "nextOffset": 76000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5218,
-    "keep_existing": 18221,
-    "not_found": 52024,
+    "downloaded": 5221,
+    "keep_existing": 18313,
+    "not_found": 52429,
     "bad_image": 37
   },
-  "totalProcessed": 75500
+  "totalProcessed": 76000
 }
