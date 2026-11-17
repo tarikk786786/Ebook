@@ -1,46 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 163,
-    "not_found": 334,
+    "downloaded": 2,
+    "keep_existing": 94,
+    "not_found": 404,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-41697",
+      "slug": "the-rust-programming-language-volume-2-73166",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-41697.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "the-rust-programming-language-volume-2-73166.jpg",
+      "bytes": 40387,
+      "title": "Skeletal Trauma"
     },
     {
-      "slug": "the-rust-programming-language-volume-10-46414",
+      "slug": "the-rust-programming-language-volume-2-39650",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-rust-programming-language-volume-10-46414.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-rust-programming-language-volume-12-19548",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-rust-programming-language-volume-12-19548.jpg",
-      "bytes": 36884,
-      "title": "Peter B Kyne The Go Getter A Story That Tells You How To Be One"
+      "file": "the-rust-programming-language-volume-2-39650.jpg",
+      "bytes": 67779,
+      "title": "Quality Assurance and Quality Control: Abrasion Test File"
     }
   ],
-  "offset": 74500,
-  "nextOffset": 75000,
+  "offset": 75000,
+  "nextOffset": 75500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5216,
-    "keep_existing": 18127,
-    "not_found": 51620,
+    "downloaded": 5218,
+    "keep_existing": 18221,
+    "not_found": 52024,
     "bad_image": 37
   },
-  "totalProcessed": 75000
+  "totalProcessed": 75500
 }
