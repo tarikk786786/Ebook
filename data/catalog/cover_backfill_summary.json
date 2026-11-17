@@ -1,78 +1,70 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 7,
-    "keep_existing": 114,
-    "not_found": 379,
+    "downloaded": 6,
+    "keep_existing": 258,
+    "not_found": 236,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-27895",
+      "slug": "construction-work-check-list-achecklist-for-reinforcement",
       "status": "downloaded",
       "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-27895.jpg",
-      "bytes": 42387,
-      "title": "Microsoft Security Operations Analyst Exam Ref SC 200 Certification"
-    },
-    {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-61639",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-61639.jpg",
-      "bytes": 9322,
-      "title": "Introduction to Scientific Programming with Python"
-    },
-    {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-33823",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-33823.jpg",
-      "bytes": 40165,
-      "title": "The Path of Prosperity"
-    },
-    {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-28579",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-28579.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-51379",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-7-51379.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-9-34545",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-9-34545.jpg",
+      "file": "construction-work-check-list-achecklist-for-reinforcement.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-9-43665",
+      "slug": "effective-resume-senior-engineer-resume",
       "status": "downloaded",
       "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-9-43665.jpg",
+      "file": "effective-resume-senior-engineer-resume.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "professional-autocad-4",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "professional-autocad-4.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "quality-assurance-and-quality-control-pdf-file-1-2",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "quality-assurance-and-quality-control-pdf-file-1-2.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "module-2-chapter-1-role-of-thumbnails-in-content-engagem-1",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "module-2-chapter-1-role-of-thumbnails-in-content-engagem-1.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "session-9",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "session-9.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 83500,
-  "nextOffset": 84000,
+  "offset": 84000,
+  "nextOffset": 84500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5498,
-    "keep_existing": 20362,
-    "not_found": 58102,
+    "downloaded": 5504,
+    "keep_existing": 20620,
+    "not_found": 58338,
     "bad_image": 38
   },
-  "totalProcessed": 84000
+  "totalProcessed": 84500
 }
