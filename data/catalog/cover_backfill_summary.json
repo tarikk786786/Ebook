@@ -1,21 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 136,
-    "not_found": 364,
+    "downloaded": 3,
+    "keep_existing": 129,
+    "not_found": 368,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 72000,
-  "nextOffset": 72500,
+  "sampleDownloaded": [
+    {
+      "slug": "the-lean-startup-continuous-innovation-playbook-volume-8-53204",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-lean-startup-continuous-innovation-playbook-volume-8-53204.jpg",
+      "bytes": 44289,
+      "title": "The Power Of Your Subconscious Mind Joseph Murphy"
+    },
+    {
+      "slug": "the-lean-startup-continuous-innovation-playbook-volume-8-47960",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-lean-startup-continuous-innovation-playbook-volume-8-47960.jpg",
+      "bytes": 20315,
+      "title": "The Mountain Is You Wiest"
+    },
+    {
+      "slug": "the-power-of-your-subconscious-mind-1-1",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-power-of-your-subconscious-mind-1-1.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    }
+  ],
+  "offset": 72500,
+  "nextOffset": 73000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5206,
-    "keep_existing": 17514,
-    "not_found": 49743,
+    "downloaded": 5209,
+    "keep_existing": 17643,
+    "not_found": 50111,
     "bad_image": 37
   },
-  "totalProcessed": 72500
+  "totalProcessed": 73000
 }
