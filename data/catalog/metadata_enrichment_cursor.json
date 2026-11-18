@@ -1,26 +1,15 @@
 {
-  "nextOffset": 7499,
-  "lastOffset": 7000,
+  "nextOffset": 7989,
+  "lastOffset": 7499,
   "processed": 500,
   "totalTargets": 86337,
-  "retryKeys": [
-    "07440",
-    "07442",
-    "07448",
-    "07449",
-    "07453",
-    "07457",
-    "07463",
-    "07473",
-    "07476",
-    "07486"
-  ],
-  "updatedAt": "2026-11-17T21:20:22Z",
+  "retryKeys": [],
+  "updatedAt": "2026-11-18T07:36:51Z",
   "lastCounts": {
     "verified": 0,
     "review": 0,
-    "not_found": 464,
-    "error": 10,
-    "skipped": 26
+    "not_found": 476,
+    "error": 0,
+    "skipped": 24
   }
 }
