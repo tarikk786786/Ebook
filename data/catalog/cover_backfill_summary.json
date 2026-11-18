@@ -1,62 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 5,
-    "keep_existing": 180,
-    "not_found": 315,
+    "downloaded": 21,
+    "keep_existing": 184,
+    "not_found": 295,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "gita-rahasya-volume-6-36246",
+      "slug": "godan-volume-6-45438",
       "status": "downloaded",
       "source": "open-library",
-      "file": "gita-rahasya-volume-6-36246.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "gita-rahasya-volume-8-48368",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-8-48368.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "gita-rahasya-volume-8-19184",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-8-19184.jpg",
+      "file": "godan-volume-6-45438.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "gita-rahasya-volume-8-71168",
+      "slug": "godan-volume-10-21802",
       "status": "downloaded",
       "source": "open-library",
-      "file": "gita-rahasya-volume-8-71168.jpg",
-      "bytes": 19788,
-      "title": "Creative Arts and Play Therapy for Attachment Problems Cathy A Malchiodi"
+      "file": "godan-volume-10-21802.jpg",
+      "bytes": 42359,
+      "title": "Cultural History Of India"
     },
     {
-      "slug": "godan-volume-10-34114",
+      "slug": "godan-volume-10-70366",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-10-34114.jpg",
+      "file": "godan-volume-10-70366.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-10-51898",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-51898.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "godan-volume-10-82678",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-82678.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "godan-volume-10-41866",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-41866.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "godan-volume-10-35710",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-35710.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "godan-volume-10-64666",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-64666.jpg",
+      "bytes": 52396,
+      "title": "Palm Reading"
+    },
+    {
+      "slug": "godan-volume-10-59878",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-59878.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "godan-volume-10-42094",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-42094.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "godan-volume-10-62386",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-62386.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-10-46882",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-46882.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-10-72646",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-72646.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "godan-volume-10-32518",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-32518.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-10-63526",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-63526.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "godan-volume-10-69682",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-69682.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "godan-volume-10-36622",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-36622.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "godan-volume-10-17470",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-17470.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "godan-volume-10-74014",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-74014.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "godan-volume-10-58738",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-58738.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 86000,
-  "nextOffset": 86500,
+  "offset": 86500,
+  "nextOffset": 87000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5519,
-    "keep_existing": 21200,
-    "not_found": 59743,
+    "downloaded": 5540,
+    "keep_existing": 21384,
+    "not_found": 60038,
     "bad_image": 38
   },
-  "totalProcessed": 86500
+  "totalProcessed": 87000
 }
