@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 63,
-    "keep_existing": 40,
-    "not_found": 397,
+    "downloaded": 29,
+    "keep_existing": 41,
+    "not_found": 430,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "chanakya-niti-volume-7-29215",
+      "slug": "डपरशन-कय-ह",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-29215.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "डपरशन-कय-ह.jpg",
+      "bytes": 26368,
+      "title": "The Alchemist"
     },
     {
-      "slug": "chanakya-niti-volume-7-81427",
+      "slug": "दन-9",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-81427.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-7-37195",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-7-37195.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "chanakya-niti-volume-7-81199",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-7-81199.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-7-23059",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-7-23059.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "chanakya-niti-volume-7-62047",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-7-62047.jpg",
+      "file": "दन-9.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "chanakya-niti-volume-7-16675",
+      "slug": "दषट-रवदर-कमर",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-16675.jpg",
+      "file": "दषट-रवदर-कमर.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "धयनयग",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "धयनयग.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "chanakya-niti-volume-7-75271",
+      "slug": "madhushala-volume-10-65086",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-75271.jpg",
+      "file": "madhushala-volume-10-65086.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "madhushala-volume-10-78994",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-78994.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "chanakya-niti-volume-7-36967",
+      "slug": "madhushala-volume-10-47074",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-36967.jpg",
+      "file": "madhushala-volume-10-47074.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "chanakya-niti-volume-7-67747",
+      "slug": "madhushala-volume-10-45478",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-67747.jpg",
+      "file": "madhushala-volume-10-45478.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "madhushala-volume-10-82642",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-82642.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "chanakya-niti-volume-7-56575",
+      "slug": "madhushala-volume-10-70330",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-56575.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "madhushala-volume-10-70330.jpg",
+      "bytes": 16442,
+      "title": "Study Like A Champ"
     },
     {
-      "slug": "chanakya-niti-volume-7-64783",
+      "slug": "madhushala-volume-10-35446",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-64783.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "madhushala-volume-10-35446.jpg",
+      "bytes": 39350,
+      "title": "Aquarius"
     },
     {
-      "slug": "chanakya-niti-volume-7-43579",
+      "slug": "madhushala-volume-10-24046",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-43579.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "chanakya-niti-volume-7-57031",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-7-57031.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "chanakya-niti-volume-7-26707",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-7-26707.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "chanakya-niti-volume-7-35827",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-7-35827.jpg",
+      "file": "madhushala-volume-10-24046.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "chanakya-niti-volume-7-48595",
+      "slug": "madhushala-volume-12-45744",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-48595.jpg",
+      "file": "madhushala-volume-12-45744.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "madhushala-volume-12-71052",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-12-71052.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "chanakya-niti-volume-7-74587",
+      "slug": "madhushala-volume-12-39360",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-74587.jpg",
+      "file": "madhushala-volume-12-39360.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "chanakya-niti-volume-7-53155",
+      "slug": "madhushala-volume-12-72648",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-53155.jpg",
-      "bytes": 32688,
-      "title": "What Really Matters"
+      "file": "madhushala-volume-12-72648.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "chanakya-niti-volume-7-63187",
+      "slug": "madhushala-volume-12-33660",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-7-63187.jpg",
-      "bytes": 36059,
-      "title": "Sophie's World"
+      "file": "madhushala-volume-12-33660.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "madhushala-volume-12-66720",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-12-66720.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "madhushala-volume-4-32596",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-4-32596.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "madhushala-volume-4-17548",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-4-17548.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 89500,
-  "nextOffset": 90000,
+  "offset": 90000,
+  "nextOffset": 90500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5893,
-    "keep_existing": 21617,
-    "not_found": 62452,
+    "downloaded": 5922,
+    "keep_existing": 21658,
+    "not_found": 62882,
     "bad_image": 38
   },
-  "totalProcessed": 90000
+  "totalProcessed": 90500
 }
