@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 182,
-    "keep_existing": 152,
-    "not_found": 166,
+    "downloaded": 55,
+    "keep_existing": 59,
+    "not_found": 386,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "raag-darbari-volume-5-74813",
+      "slug": "raag-darbari-volume-9-23817",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-74813.jpg",
-      "bytes": 40495,
-      "title": "The Art of Thinking in Systems"
+      "file": "raag-darbari-volume-9-23817.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "raag-darbari-volume-5-17813",
+      "slug": "raag-darbari-volume-9-44337",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-17813.jpg",
-      "bytes": 22504,
-      "title": "The Great Mental Models,"
+      "file": "raag-darbari-volume-9-44337.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "raag-darbari-volume-5-32405",
+      "slug": "raag-darbari-volume-9-62121",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-32405.jpg",
-      "bytes": 51536,
-      "title": "Super Thinking"
+      "file": "raag-darbari-volume-9-62121.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "raag-darbari-volume-5-62045",
+      "slug": "raag-darbari-volume-9-67137",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-62045.jpg",
-      "bytes": 22504,
-      "title": "The Great Mental Models,"
+      "file": "raag-darbari-volume-9-67137.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "raag-darbari-volume-5-58625",
+      "slug": "raag-darbari-volume-9-78993",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-58625.jpg",
-      "bytes": 12782,
-      "title": "The Practicing Stoic"
+      "file": "raag-darbari-volume-9-78993.jpg",
+      "bytes": 19955,
+      "title": "Maps of Meaning"
     },
     {
-      "slug": "raag-darbari-volume-5-58397",
+      "slug": "raag-darbari-volume-9-62349",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-58397.jpg",
-      "bytes": 22504,
-      "title": "The Great Mental Models,"
+      "file": "raag-darbari-volume-9-62349.jpg",
+      "bytes": 31815,
+      "title": "CISA Certified Information Systems Auditor Bundle"
     },
     {
-      "slug": "raag-darbari-volume-5-22601",
+      "slug": "raag-darbari-volume-9-44793",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-22601.jpg",
-      "bytes": 30609,
-      "title": "The Digital Mindset"
+      "file": "raag-darbari-volume-9-44793.jpg",
+      "bytes": 39020,
+      "title": "The Detection of Deception in Forensic Contexts"
     },
     {
-      "slug": "raag-darbari-volume-5-50189",
+      "slug": "raag-darbari-volume-9-24957",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-50189.jpg",
-      "bytes": 13340,
-      "title": "Essentialism"
+      "file": "raag-darbari-volume-9-24957.jpg",
+      "bytes": 27267,
+      "title": "Minutes+of+the+Meeting"
     },
     {
-      "slug": "raag-darbari-volume-5-42209",
+      "slug": "raag-darbari-volume-9-59385",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-42209.jpg",
-      "bytes": 30606,
-      "title": "Getting Things Done"
+      "file": "raag-darbari-volume-9-59385.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "raag-darbari-volume-5-66833",
+      "slug": "raag-darbari-volume-9-75801",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-66833.jpg",
-      "bytes": 30310,
-      "title": "The ONE Thing"
+      "file": "raag-darbari-volume-9-75801.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "raag-darbari-volume-5-41753",
+      "slug": "raag-darbari-volume-9-17205",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-41753.jpg",
-      "bytes": 40103,
-      "title": "The 80/20 Principle"
+      "file": "raag-darbari-volume-9-17205.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "raag-darbari-volume-5-57485",
+      "slug": "raag-darbari-volume-9-69645",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-57485.jpg",
-      "bytes": 42918,
-      "title": "Eat That Frog!"
+      "file": "raag-darbari-volume-9-69645.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "raag-darbari-volume-5-67745",
+      "slug": "raag-darbari-volume-9-39549",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-67745.jpg",
-      "bytes": 46144,
-      "title": "The Power of Full Engagement"
+      "file": "raag-darbari-volume-9-39549.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "raag-darbari-volume-5-81653",
+      "slug": "raag-darbari-volume-9-80817",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-81653.jpg",
-      "bytes": 38353,
-      "title": "The Productivity Project"
+      "file": "raag-darbari-volume-9-80817.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "raag-darbari-volume-5-74357",
+      "slug": "raag-darbari-volume-9-65085",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-74357.jpg",
-      "bytes": 18462,
-      "title": "Indistractable"
+      "file": "raag-darbari-volume-9-65085.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "raag-darbari-volume-5-61133",
+      "slug": "raag-darbari-volume-9-42969",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-61133.jpg",
-      "bytes": 10560,
-      "title": "The Practicing Mind"
+      "file": "raag-darbari-volume-9-42969.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "raag-darbari-volume-5-19181",
+      "slug": "raag-darbari-volume-9-83553",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-19181.jpg",
-      "bytes": 33640,
-      "title": "Make Time"
+      "file": "raag-darbari-volume-9-83553.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "raag-darbari-volume-5-78005",
+      "slug": "raag-darbari-volume-9-42285",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-78005.jpg",
-      "bytes": 24638,
-      "title": "The Compound Effect"
+      "file": "raag-darbari-volume-9-42285.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "raag-darbari-volume-5-72761",
+      "slug": "raag-darbari-volume-9-39093",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-72761.jpg",
-      "bytes": 31488,
-      "title": "The Miracle Morning"
+      "file": "raag-darbari-volume-9-39093.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "raag-darbari-volume-5-37877",
+      "slug": "raag-darbari-volume-9-48441",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-37877.jpg",
-      "bytes": 39418,
-      "title": "The 12 Week Year"
+      "file": "raag-darbari-volume-9-48441.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 93000,
-  "nextOffset": 93500,
+  "offset": 93500,
+  "nextOffset": 94000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6708,
-    "keep_existing": 22152,
-    "not_found": 64602,
+    "downloaded": 6763,
+    "keep_existing": 22211,
+    "not_found": 64988,
     "bad_image": 38
   },
-  "totalProcessed": 93500
+  "totalProcessed": 94000
 }
