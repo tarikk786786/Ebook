@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 68,
-    "keep_existing": 31,
-    "not_found": 401,
+    "downloaded": 57,
+    "keep_existing": 51,
+    "not_found": 392,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "godan-volume-4-80968",
+      "slug": "godan-volume-8-51176",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-80968.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "godan-volume-4-82336",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-82336.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "godan-volume-4-32404",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-32404.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-4-21688",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-21688.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-4-31492",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-31492.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-4-58852",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-58852.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-4-72304",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-72304.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-4-71620",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-71620.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-4-67744",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-67744.jpg",
+      "file": "godan-volume-8-51176.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-4-56344",
+      "slug": "godan-volume-8-63260",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-56344.jpg",
+      "file": "godan-volume-8-63260.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-8-77852",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-77852.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-4-26020",
+      "slug": "godan-volume-8-53228",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-26020.jpg",
+      "file": "godan-volume-8-53228.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-8-70784",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-70784.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-8-28148",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-28148.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "godan-volume-4-16900",
+      "slug": "godan-volume-8-21308",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-16900.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "godan-volume-4-81424",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-81424.jpg",
+      "file": "godan-volume-8-21308.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-4-81880",
+      "slug": "godan-volume-8-34304",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-81880.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "godan-volume-8-34304.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "godan-volume-4-20776",
+      "slug": "godan-volume-8-57104",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-20776.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "godan-volume-8-57104.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "godan-volume-4-16216",
+      "slug": "godan-volume-8-39776",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-16216.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-4-59080",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-59080.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-4-29668",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-4-29668.jpg",
+      "file": "godan-volume-8-39776.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-4-60448",
+      "slug": "godan-volume-8-75572",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-60448.jpg",
+      "file": "godan-volume-8-75572.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-8-48440",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-48440.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-8-28604",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-28604.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-8-29972",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-29972.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-8-16976",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-16976.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-8-60068",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-60068.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "godan-volume-4-56800",
+      "slug": "godan-volume-8-23360",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-4-56800.jpg",
+      "file": "godan-volume-8-23360.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-8-36812",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-36812.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-8-45932",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-45932.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-8-46616",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-8-46616.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 87500,
-  "nextOffset": 88000,
+  "offset": 88000,
+  "nextOffset": 88500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5680,
-    "keep_existing": 21453,
-    "not_found": 60829,
+    "downloaded": 5737,
+    "keep_existing": 21504,
+    "not_found": 61221,
     "bad_image": 38
   },
-  "totalProcessed": 88000
+  "totalProcessed": 88500
 }
