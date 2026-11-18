@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 47,
-    "keep_existing": 33,
-    "not_found": 420,
+    "downloaded": 46,
+    "keep_existing": 40,
+    "not_found": 414,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "chanakya-niti-volume-9-51825",
+      "slug": "chanakya-niti-volume-11-25871",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-9-51825.jpg",
-      "bytes": 22978,
-      "title": "ISC2 CISSP Certified Information Systems Security Professional Official"
-    },
-    {
-      "slug": "chanakya-niti-volume-9-39741",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-9-39741.jpg",
-      "bytes": 30986,
-      "title": "One Cancer Cure"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-79717",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-79717.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-47797",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-47797.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-51445",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-51445.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-32521",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-32521.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-41185",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-41185.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-68773",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-68773.jpg",
+      "file": "chanakya-niti-volume-11-25871.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "chanakya-niti-volume-1-78349",
+      "slug": "chanakya-niti-volume-11-54371",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-78349.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-32293",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-32293.jpg",
+      "file": "chanakya-niti-volume-11-54371.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "chanakya-niti-volume-1-40957",
+      "slug": "chanakya-niti-volume-11-75803",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-40957.jpg",
+      "file": "chanakya-niti-volume-11-75803.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-11-31343",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-11-31343.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "chanakya-niti-volume-1-30469",
+      "slug": "chanakya-niti-volume-11-67823",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-30469.jpg",
+      "file": "chanakya-niti-volume-11-67823.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-45783",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-45783.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "chanakya-niti-volume-1-39361",
+      "slug": "chanakya-niti-volume-3-38031",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-39361.jpg",
+      "file": "chanakya-niti-volume-3-38031.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-43275",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-43275.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-28227",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-28227.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-30051",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-30051.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-43959",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-43959.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-53991",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-53991.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-22755",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-22755.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-39171",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-39171.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "chanakya-niti-volume-1-67405",
+      "slug": "chanakya-niti-volume-3-40995",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-67405.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "chanakya-niti-volume-3-40995.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "chanakya-niti-volume-1-30697",
+      "slug": "chanakya-niti-volume-3-40767",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-30697.jpg",
-      "bytes": 29981,
-      "title": "Eloquent JavaScript"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-37765",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-37765.jpg",
-      "bytes": 60660,
-      "title": "English 3"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-56689",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-56689.jpg",
-      "bytes": 29542,
-      "title": "How to Win Friends and Influence People by"
-    },
-    {
-      "slug": "chanakya-niti-volume-1-66265",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-1-66265.jpg",
+      "file": "chanakya-niti-volume-3-40767.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "chanakya-niti-volume-1-20893",
+      "slug": "chanakya-niti-volume-3-80667",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-20893.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "chanakya-niti-volume-3-80667.jpg",
+      "bytes": 12052,
+      "title": "Forensic Psychological Assessment in Practice Case Studies"
     },
     {
-      "slug": "chanakya-niti-volume-1-24541",
+      "slug": "chanakya-niti-volume-3-57867",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-1-24541.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "chanakya-niti-volume-3-57867.jpg",
+      "bytes": 38545,
+      "title": "What got you here wont get you there how successful people become"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-31419",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-31419.jpg",
+      "bytes": 53495,
+      "title": "Harry Potter and the Philosopher's Stone"
+    },
+    {
+      "slug": "chanakya-niti-volume-3-53763",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-3-53763.jpg",
+      "bytes": 50961,
+      "title": "Getting the love you want Hendrix"
     }
   ],
-  "offset": 88500,
-  "nextOffset": 89000,
+  "offset": 89000,
+  "nextOffset": 89500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5784,
-    "keep_existing": 21537,
-    "not_found": 61641,
+    "downloaded": 5830,
+    "keep_existing": 21577,
+    "not_found": 62055,
     "bad_image": 38
   },
-  "totalProcessed": 89000
+  "totalProcessed": 89500
 }
