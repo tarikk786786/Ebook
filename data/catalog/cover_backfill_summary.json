@@ -1,86 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 8,
-    "keep_existing": 134,
-    "not_found": 358,
+    "downloaded": 0,
+    "keep_existing": 157,
+    "not_found": 343,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "advancedpersonalfinance-ramits-investment-portfolio",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "advancedpersonalfinance-ramits-investment-portfolio.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "कसर-रग-क-यग-और-कल-नरधरण",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "कसर-रग-क-यग-और-कल-नरधरण.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "gita-rahasya-volume-10-49090",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-10-49090.jpg",
-      "bytes": 4317,
-      "title": "English Vocabulary in Use PRE INTERMEDIATE & INTERMEDIATE"
-    },
-    {
-      "slug": "gita-rahasya-volume-12-51636",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-12-51636.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "gita-rahasya-volume-2-30698",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-2-30698.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "gita-rahasya-volume-8-17132",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-8-17132.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "gita-rahasya-volume-10-28342",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-10-28342.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "gita-rahasya-volume-10-50002",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "gita-rahasya-volume-10-50002.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    }
-  ],
-  "offset": 84500,
-  "nextOffset": 85000,
+  "sampleDownloaded": [],
+  "offset": 85000,
+  "nextOffset": 85500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 5512,
-    "keep_existing": 20754,
-    "not_found": 58696,
+    "keep_existing": 20911,
+    "not_found": 59039,
     "bad_image": 38
   },
-  "totalProcessed": 85000
+  "totalProcessed": 85500
 }
