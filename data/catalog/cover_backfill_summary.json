@@ -1,21 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 157,
-    "not_found": 343,
+    "downloaded": 2,
+    "keep_existing": 109,
+    "not_found": 389,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 85000,
-  "nextOffset": 85500,
+  "sampleDownloaded": [
+    {
+      "slug": "gita-rahasya-volume-2-66494",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "gita-rahasya-volume-2-66494.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "gita-rahasya-volume-4-66532",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "gita-rahasya-volume-4-66532.jpg",
+      "bytes": 23778,
+      "title": "Secrets Successful People Know About Time Management The Productivity"
+    }
+  ],
+  "offset": 85500,
+  "nextOffset": 86000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5512,
-    "keep_existing": 20911,
-    "not_found": 59039,
+    "downloaded": 5514,
+    "keep_existing": 21020,
+    "not_found": 59428,
     "bad_image": 38
   },
-  "totalProcessed": 85500
+  "totalProcessed": 86000
 }
