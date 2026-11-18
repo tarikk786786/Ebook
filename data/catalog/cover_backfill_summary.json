@@ -1,21 +1,30 @@
 {
-  "processed": 78,
+  "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 11,
-    "not_found": 67,
-    "bad_image": 0
+    "downloaded": 1,
+    "keep_existing": 170,
+    "not_found": 328,
+    "bad_image": 1
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 94000,
-  "nextOffset": 0,
+  "sampleDownloaded": [
+    {
+      "slug": "ai-2041-ten-visions-for-our-future",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "ai-2041-ten-visions-for-our-future.jpg",
+      "bytes": 5722,
+      "title": "AI 2041 Ten Visions for Our Future"
+    }
+  ],
+  "offset": 0,
+  "nextOffset": 500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6763,
-    "keep_existing": 22222,
-    "not_found": 65055,
-    "bad_image": 38
+    "downloaded": 6764,
+    "keep_existing": 22392,
+    "not_found": 65383,
+    "bad_image": 39
   },
-  "totalProcessed": 94078
+  "totalProcessed": 94578
 }
