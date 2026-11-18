@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 57,
-    "keep_existing": 51,
-    "not_found": 392,
+    "downloaded": 47,
+    "keep_existing": 33,
+    "not_found": 420,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "godan-volume-8-51176",
+      "slug": "chanakya-niti-volume-9-51825",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-51176.jpg",
+      "file": "chanakya-niti-volume-9-51825.jpg",
+      "bytes": 22978,
+      "title": "ISC2 CISSP Certified Information Systems Security Professional Official"
+    },
+    {
+      "slug": "chanakya-niti-volume-9-39741",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-9-39741.jpg",
+      "bytes": 30986,
+      "title": "One Cancer Cure"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-79717",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-79717.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-47797",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-47797.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-51445",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-51445.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-32521",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-32521.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-8-63260",
+      "slug": "chanakya-niti-volume-1-41185",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-63260.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "chanakya-niti-volume-1-41185.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "godan-volume-8-77852",
+      "slug": "chanakya-niti-volume-1-68773",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-77852.jpg",
+      "file": "chanakya-niti-volume-1-68773.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-8-53228",
+      "slug": "chanakya-niti-volume-1-78349",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-53228.jpg",
+      "file": "chanakya-niti-volume-1-78349.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "godan-volume-8-70784",
+      "slug": "chanakya-niti-volume-1-32293",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-70784.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "chanakya-niti-volume-1-32293.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "godan-volume-8-28148",
+      "slug": "chanakya-niti-volume-1-40957",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-28148.jpg",
+      "file": "chanakya-niti-volume-1-40957.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-30469",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-30469.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-39361",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-39361.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "godan-volume-8-21308",
+      "slug": "chanakya-niti-volume-1-67405",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-21308.jpg",
+      "file": "chanakya-niti-volume-1-67405.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-30697",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-30697.jpg",
+      "bytes": 29981,
+      "title": "Eloquent JavaScript"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-37765",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-37765.jpg",
+      "bytes": 60660,
+      "title": "English 3"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-56689",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-56689.jpg",
+      "bytes": 29542,
+      "title": "How to Win Friends and Influence People by"
+    },
+    {
+      "slug": "chanakya-niti-volume-1-66265",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-1-66265.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-8-34304",
+      "slug": "chanakya-niti-volume-1-20893",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-34304.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "chanakya-niti-volume-1-20893.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-8-57104",
+      "slug": "chanakya-niti-volume-1-24541",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-8-57104.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-8-39776",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-39776.jpg",
+      "file": "chanakya-niti-volume-1-24541.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "godan-volume-8-75572",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-75572.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-8-48440",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-48440.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-8-28604",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-28604.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-8-29972",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-29972.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-8-16976",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-16976.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-8-60068",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-60068.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "godan-volume-8-23360",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-23360.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-8-36812",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-36812.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-8-45932",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-45932.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "godan-volume-8-46616",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-8-46616.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 88000,
-  "nextOffset": 88500,
+  "offset": 88500,
+  "nextOffset": 89000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 5737,
-    "keep_existing": 21504,
-    "not_found": 61221,
+    "downloaded": 5784,
+    "keep_existing": 21537,
+    "not_found": 61641,
     "bad_image": 38
   },
-  "totalProcessed": 88500
+  "totalProcessed": 89000
 }
