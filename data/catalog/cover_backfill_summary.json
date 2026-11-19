@@ -1,126 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 13,
-    "keep_existing": 300,
-    "not_found": 187,
-    "bad_image": 0
+    "downloaded": 0,
+    "keep_existing": 259,
+    "not_found": 238,
+    "bad_image": 3
   },
-  "updatedCurated": 12,
-  "sampleDownloaded": [
-    {
-      "slug": "buyology",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "buyology.jpg",
-      "bytes": 5377,
-      "title": "Buyology"
-    },
-    {
-      "slug": "confessions-of-an-advertising-man",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "confessions-of-an-advertising-man.jpg",
-      "bytes": 20645,
-      "title": "Confessions of an Advertising Man"
-    },
-    {
-      "slug": "kellogg-on-branding",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "kellogg-on-branding.jpg",
-      "bytes": 10813,
-      "title": "Kellogg on Branding"
-    },
-    {
-      "slug": "made-you-look",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "made-you-look.jpg",
-      "bytes": 23212,
-      "title": "Made You Look"
-    },
-    {
-      "slug": "the-negotiation-book",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-negotiation-book.jpg",
-      "bytes": 18635,
-      "title": "The Negotiation Book"
-    },
-    {
-      "slug": "the-art-of-negotiation",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-negotiation.jpg",
-      "bytes": 30499,
-      "title": "The Art of Negotiation"
-    },
-    {
-      "slug": "the-six-sigma-handbook",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-six-sigma-handbook.jpg",
-      "bytes": 14085,
-      "title": "The Six Sigma Handbook"
-    },
-    {
-      "slug": "the-service-profit-chain",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-service-profit-chain.jpg",
-      "bytes": 35791,
-      "title": "The Service Profit Chain"
-    },
-    {
-      "slug": "the-supply-chain-revolution",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-supply-chain-revolution.jpg",
-      "bytes": 28163,
-      "title": "The Supply Chain Revolution"
-    },
-    {
-      "slug": "the-power-of-positive-thinking",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-power-of-positive-thinking.jpg",
-      "bytes": 20334,
-      "title": "The Power Of Positive Thinking"
-    },
-    {
-      "slug": "the-little-book-of-economics",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-little-book-of-economics.jpg",
-      "bytes": 41251,
-      "title": "The Little Book of Economics"
-    },
-    {
-      "slug": "the-bullet-journal-method",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-bullet-journal-method.jpg",
-      "bytes": 18212,
-      "title": "The Bullet Journal Method"
-    },
-    {
-      "slug": "the-one-thing",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-one-thing.jpg",
-      "bytes": 30310,
-      "title": "The ONE Thing"
-    }
-  ],
-  "offset": 4000,
-  "nextOffset": 4500,
+  "updatedCurated": 0,
+  "sampleDownloaded": [],
+  "offset": 4500,
+  "nextOffset": 5000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 6798,
-    "keep_existing": 24236,
-    "not_found": 67498,
-    "bad_image": 46
+    "keep_existing": 24495,
+    "not_found": 67736,
+    "bad_image": 49
   },
-  "totalProcessed": 98578
+  "totalProcessed": 99078
 }
