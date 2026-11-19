@@ -1,62 +1,126 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 5,
-    "keep_existing": 368,
-    "not_found": 126,
-    "bad_image": 1
+    "downloaded": 13,
+    "keep_existing": 300,
+    "not_found": 187,
+    "bad_image": 0
   },
-  "updatedCurated": 5,
+  "updatedCurated": 12,
   "sampleDownloaded": [
     {
-      "slug": "the-future-is-asian",
+      "slug": "buyology",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-future-is-asian.jpg",
-      "bytes": 34378,
-      "title": "The Future Is Asian"
+      "file": "buyology.jpg",
+      "bytes": 5377,
+      "title": "Buyology"
     },
     {
-      "slug": "the-myths-of-innovation",
+      "slug": "confessions-of-an-advertising-man",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-myths-of-innovation.jpg",
-      "bytes": 16860,
-      "title": "The Myths of Innovation"
+      "file": "confessions-of-an-advertising-man.jpg",
+      "bytes": 20645,
+      "title": "Confessions of an Advertising Man"
     },
     {
-      "slug": "the-great-ceo-within",
+      "slug": "kellogg-on-branding",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-great-ceo-within.jpg",
-      "bytes": 24896,
-      "title": "The Great CEO Within"
+      "file": "kellogg-on-branding.jpg",
+      "bytes": 10813,
+      "title": "Kellogg on Branding"
     },
     {
-      "slug": "the-score-takes-care-of-itself",
+      "slug": "made-you-look",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-score-takes-care-of-itself.jpg",
-      "bytes": 50228,
-      "title": "The Score Takes Care of Itself"
+      "file": "made-you-look.jpg",
+      "bytes": 23212,
+      "title": "Made You Look"
     },
     {
-      "slug": "the-management-myth",
+      "slug": "the-negotiation-book",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-management-myth.jpg",
-      "bytes": 9714,
-      "title": "The Management Myth"
+      "file": "the-negotiation-book.jpg",
+      "bytes": 18635,
+      "title": "The Negotiation Book"
+    },
+    {
+      "slug": "the-art-of-negotiation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-negotiation.jpg",
+      "bytes": 30499,
+      "title": "The Art of Negotiation"
+    },
+    {
+      "slug": "the-six-sigma-handbook",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-six-sigma-handbook.jpg",
+      "bytes": 14085,
+      "title": "The Six Sigma Handbook"
+    },
+    {
+      "slug": "the-service-profit-chain",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-service-profit-chain.jpg",
+      "bytes": 35791,
+      "title": "The Service Profit Chain"
+    },
+    {
+      "slug": "the-supply-chain-revolution",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-supply-chain-revolution.jpg",
+      "bytes": 28163,
+      "title": "The Supply Chain Revolution"
+    },
+    {
+      "slug": "the-power-of-positive-thinking",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-power-of-positive-thinking.jpg",
+      "bytes": 20334,
+      "title": "The Power Of Positive Thinking"
+    },
+    {
+      "slug": "the-little-book-of-economics",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-little-book-of-economics.jpg",
+      "bytes": 41251,
+      "title": "The Little Book of Economics"
+    },
+    {
+      "slug": "the-bullet-journal-method",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-bullet-journal-method.jpg",
+      "bytes": 18212,
+      "title": "The Bullet Journal Method"
+    },
+    {
+      "slug": "the-one-thing",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-one-thing.jpg",
+      "bytes": 30310,
+      "title": "The ONE Thing"
     }
   ],
-  "offset": 3500,
-  "nextOffset": 4000,
+  "offset": 4000,
+  "nextOffset": 4500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6785,
-    "keep_existing": 23936,
-    "not_found": 67311,
+    "downloaded": 6798,
+    "keep_existing": 24236,
+    "not_found": 67498,
     "bad_image": 46
   },
-  "totalProcessed": 98078
+  "totalProcessed": 98578
 }
