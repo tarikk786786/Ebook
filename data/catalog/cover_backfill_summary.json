@@ -2,37 +2,37 @@
   "processed": 500,
   "counts": {
     "downloaded": 2,
-    "keep_existing": 40,
-    "not_found": 456,
-    "bad_image": 2
+    "keep_existing": 55,
+    "not_found": 442,
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "d16",
+      "slug": "encyclopedia-of-crime-and-justice",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "d16.jpg",
-      "bytes": 5921,
-      "title": "D16"
+      "file": "encyclopedia-of-crime-and-justice.jpg",
+      "bytes": 7142,
+      "title": "Encyclopedia of Crime and Justice"
     },
     {
-      "slug": "d30",
+      "slug": "english-1",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "d30.jpg",
-      "bytes": 14508,
-      "title": "D30"
+      "file": "english-1.jpg",
+      "bytes": 8132,
+      "title": "English 1"
     }
   ],
-  "offset": 8500,
-  "nextOffset": 9000,
+  "offset": 9000,
+  "nextOffset": 9500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6820,
-    "keep_existing": 25318,
-    "not_found": 70886,
-    "bad_image": 54
+    "downloaded": 6822,
+    "keep_existing": 25373,
+    "not_found": 71328,
+    "bad_image": 55
   },
-  "totalProcessed": 103078
+  "totalProcessed": 103578
 }
