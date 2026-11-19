@@ -1,21 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 196,
-    "not_found": 303,
-    "bad_image": 1
+    "downloaded": 4,
+    "keep_existing": 287,
+    "not_found": 209,
+    "bad_image": 0
   },
-  "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 1500,
-  "nextOffset": 2000,
+  "updatedCurated": 2,
+  "sampleDownloaded": [
+    {
+      "slug": "reflection",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "reflection.jpg",
+      "bytes": 3576,
+      "title": "Reflection"
+    },
+    {
+      "slug": "test7",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "test7.jpg",
+      "bytes": 3576,
+      "title": "Test7"
+    },
+    {
+      "slug": "the-attacker-s-advantage",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-attacker-s-advantage.jpg",
+      "bytes": 16650,
+      "title": "The Attacker's Advantage"
+    },
+    {
+      "slug": "the-rise-and-fall-of-strategic-planning",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-rise-and-fall-of-strategic-planning.jpg",
+      "bytes": 23747,
+      "title": "The Rise and Fall of Strategic Planning"
+    }
+  ],
+  "offset": 2000,
+  "nextOffset": 2500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6768,
-    "keep_existing": 22880,
-    "not_found": 66388,
+    "downloaded": 6772,
+    "keep_existing": 23167,
+    "not_found": 66597,
     "bad_image": 42
   },
-  "totalProcessed": 96078
+  "totalProcessed": 96578
 }
