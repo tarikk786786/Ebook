@@ -2,53 +2,53 @@
   "processed": 500,
   "counts": {
     "downloaded": 4,
-    "keep_existing": 287,
-    "not_found": 209,
-    "bad_image": 0
+    "keep_existing": 235,
+    "not_found": 259,
+    "bad_image": 2
   },
-  "updatedCurated": 2,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "reflection",
+      "slug": "integrated-marketing",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "reflection.jpg",
+      "file": "integrated-marketing.jpg",
       "bytes": 3576,
-      "title": "Reflection"
+      "title": "Integrated Marketing"
     },
     {
-      "slug": "test7",
+      "slug": "maxwell-john-c-the-15-invaluable-laws-of-growth",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "maxwell-john-c-the-15-invaluable-laws-of-growth.jpg",
+      "bytes": 33786,
+      "title": "Maxwell, John C The 15 Invaluable Laws of Growth"
+    },
+    {
+      "slug": "level-5-hitting-your-micronutrients-lifestyl",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "test7.jpg",
+      "file": "level-5-hitting-your-micronutrients-lifestyl.jpg",
       "bytes": 3576,
-      "title": "Test7"
+      "title": "Level 5 : Hitting Your Micronutrients & Lifestyl"
     },
     {
-      "slug": "the-attacker-s-advantage",
+      "slug": "markdown-to-pdf",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-attacker-s-advantage.jpg",
-      "bytes": 16650,
-      "title": "The Attacker's Advantage"
-    },
-    {
-      "slug": "the-rise-and-fall-of-strategic-planning",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-rise-and-fall-of-strategic-planning.jpg",
-      "bytes": 23747,
-      "title": "The Rise and Fall of Strategic Planning"
+      "source": "internet-archive",
+      "file": "markdown-to-pdf.jpg",
+      "bytes": 3576,
+      "title": "Markdown To PDF"
     }
   ],
-  "offset": 2000,
-  "nextOffset": 2500,
+  "offset": 2500,
+  "nextOffset": 3000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6772,
-    "keep_existing": 23167,
-    "not_found": 66597,
-    "bad_image": 42
+    "downloaded": 6776,
+    "keep_existing": 23402,
+    "not_found": 66856,
+    "bad_image": 44
   },
-  "totalProcessed": 96578
+  "totalProcessed": 97078
 }
