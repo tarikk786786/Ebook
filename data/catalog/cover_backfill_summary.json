@@ -1,30 +1,134 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 73,
-    "not_found": 424,
-    "bad_image": 2
+    "downloaded": 14,
+    "keep_existing": 71,
+    "not_found": 414,
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "fce-1",
+      "slug": "history-of-art-modern-art",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "fce-1.jpg",
-      "bytes": 15293,
-      "title": "Fce 1"
+      "file": "history-of-art-modern-art.jpg",
+      "bytes": 25485,
+      "title": "History of Art - Modern Art"
+    },
+    {
+      "slug": "how-to-stop-worrying-and-start-living-dale",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "how-to-stop-worrying-and-start-living-dale.jpg",
+      "bytes": 10459,
+      "title": "How to Stop Worrying and Start Living Dale"
+    },
+    {
+      "slug": "increase-your-value",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "increase-your-value.jpg",
+      "bytes": 3738,
+      "title": "Increase Your Value"
+    },
+    {
+      "slug": "instrumental-method-of-chemical-analysis",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "instrumental-method-of-chemical-analysis.jpg",
+      "bytes": 19575,
+      "title": "Instrumental Method of Chemical Analysis"
+    },
+    {
+      "slug": "interior-design-agreement-templete",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-agreement-templete.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: Agreement Templete"
+    },
+    {
+      "slug": "interior-design-boq-estimation",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-boq-estimation.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: BOQ & Estimation"
+    },
+    {
+      "slug": "interior-design-demolition",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-demolition.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: DEMOLITION"
+    },
+    {
+      "slug": "interior-design-design-process",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-design-process.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: Design Process"
+    },
+    {
+      "slug": "interior-design-kitchen-pantry-unit",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-kitchen-pantry-unit.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: KITCHEN PANTRY UNIT"
+    },
+    {
+      "slug": "interior-design-kitchen-working-drawing",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-kitchen-working-drawing.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: KITCHEN WORKING DRAWING"
+    },
+    {
+      "slug": "interior-design-kitchen-design-requirement-form",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-kitchen-design-requirement-form.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: Kitchen Design Requirement form"
+    },
+    {
+      "slug": "interior-design-master-bedroom-wardrobe",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-master-bedroom-wardrobe.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: MASTER BEDROOM WARDROBE"
+    },
+    {
+      "slug": "interior-design-plumbing-drawing-bathroom",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-plumbing-drawing-bathroom.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: PLUMBING DRAWING BATHROOM"
+    },
+    {
+      "slug": "interior-design-tv-unit-room-working-drawing",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "interior-design-tv-unit-room-working-drawing.jpg",
+      "bytes": 10183,
+      "title": "Interior Design: TV UNIT ROOM) WORKING DRAWING"
     }
   ],
-  "offset": 9500,
-  "nextOffset": 10000,
+  "offset": 10000,
+  "nextOffset": 10500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6823,
-    "keep_existing": 25446,
-    "not_found": 71752,
-    "bad_image": 57
+    "downloaded": 6837,
+    "keep_existing": 25517,
+    "not_found": 72166,
+    "bad_image": 58
   },
-  "totalProcessed": 104078
+  "totalProcessed": 104578
 }
