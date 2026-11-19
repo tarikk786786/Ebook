@@ -2,20 +2,20 @@
   "processed": 500,
   "counts": {
     "downloaded": 0,
-    "keep_existing": 259,
-    "not_found": 238,
-    "bad_image": 3
+    "keep_existing": 166,
+    "not_found": 333,
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [],
-  "offset": 4500,
-  "nextOffset": 5000,
+  "offset": 5000,
+  "nextOffset": 5500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 6798,
-    "keep_existing": 24495,
-    "not_found": 67736,
-    "bad_image": 49
+    "keep_existing": 24661,
+    "not_found": 68069,
+    "bad_image": 50
   },
-  "totalProcessed": 99078
+  "totalProcessed": 99578
 }
