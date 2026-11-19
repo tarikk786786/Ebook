@@ -1,62 +1,78 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 5,
-    "keep_existing": 65,
-    "not_found": 430,
+    "downloaded": 7,
+    "keep_existing": 43,
+    "not_found": 450,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "introduction-to-c-language",
+      "slug": "177",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "introduction-to-c-language.jpg",
-      "bytes": 13618,
-      "title": "Introduction to C Language"
+      "file": "177.jpg",
+      "bytes": 4407,
+      "title": "177"
     },
     {
-      "slug": "121",
+      "slug": "204",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "121.jpg",
-      "bytes": 7119,
-      "title": "121"
+      "file": "204.jpg",
+      "bytes": 10555,
+      "title": "204"
     },
     {
-      "slug": "124",
+      "slug": "208",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "124.jpg",
-      "bytes": 3576,
-      "title": "124"
+      "file": "208.jpg",
+      "bytes": 4728,
+      "title": "208"
     },
     {
-      "slug": "125",
+      "slug": "224",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "125.jpg",
-      "bytes": 7193,
-      "title": "125"
+      "file": "224.jpg",
+      "bytes": 12314,
+      "title": "224"
     },
     {
-      "slug": "141",
+      "slug": "261",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "141.jpg",
-      "bytes": 3576,
-      "title": "141"
+      "file": "261.jpg",
+      "bytes": 6775,
+      "title": "261"
+    },
+    {
+      "slug": "3-1",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "3-1.jpg",
+      "bytes": 9172,
+      "title": "3.1"
+    },
+    {
+      "slug": "310",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "310.jpg",
+      "bytes": 6024,
+      "title": "310"
     }
   ],
-  "offset": 6500,
-  "nextOffset": 7000,
+  "offset": 7000,
+  "nextOffset": 7500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6808,
-    "keep_existing": 25108,
-    "not_found": 69112,
+    "downloaded": 6815,
+    "keep_existing": 25151,
+    "not_found": 69562,
     "bad_image": 50
   },
-  "totalProcessed": 101078
+  "totalProcessed": 101578
 }
