@@ -1,38 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 55,
-    "not_found": 442,
-    "bad_image": 1
+    "downloaded": 1,
+    "keep_existing": 73,
+    "not_found": 424,
+    "bad_image": 2
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "encyclopedia-of-crime-and-justice",
+      "slug": "fce-1",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "encyclopedia-of-crime-and-justice.jpg",
-      "bytes": 7142,
-      "title": "Encyclopedia of Crime and Justice"
-    },
-    {
-      "slug": "english-1",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "english-1.jpg",
-      "bytes": 8132,
-      "title": "English 1"
+      "file": "fce-1.jpg",
+      "bytes": 15293,
+      "title": "Fce 1"
     }
   ],
-  "offset": 9000,
-  "nextOffset": 9500,
+  "offset": 9500,
+  "nextOffset": 10000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6822,
-    "keep_existing": 25373,
-    "not_found": 71328,
-    "bad_image": 55
+    "downloaded": 6823,
+    "keep_existing": 25446,
+    "not_found": 71752,
+    "bad_image": 57
   },
-  "totalProcessed": 103578
+  "totalProcessed": 104078
 }
