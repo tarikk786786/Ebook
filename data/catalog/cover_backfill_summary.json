@@ -2,29 +2,29 @@
   "processed": 500,
   "counts": {
     "downloaded": 1,
-    "keep_existing": 170,
-    "not_found": 328,
+    "keep_existing": 146,
+    "not_found": 352,
     "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "ai-2041-ten-visions-for-our-future",
+      "slug": "the-mountain-is-you-wiest",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "ai-2041-ten-visions-for-our-future.jpg",
-      "bytes": 5722,
-      "title": "AI 2041 Ten Visions for Our Future"
+      "source": "open-library",
+      "file": "the-mountain-is-you-wiest.jpg",
+      "bytes": 20315,
+      "title": "The Mountain Is You Wiest"
     }
   ],
-  "offset": 0,
-  "nextOffset": 500,
+  "offset": 500,
+  "nextOffset": 1000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6764,
-    "keep_existing": 22392,
-    "not_found": 65383,
-    "bad_image": 39
+    "downloaded": 6765,
+    "keep_existing": 22538,
+    "not_found": 65735,
+    "bad_image": 40
   },
-  "totalProcessed": 94578
+  "totalProcessed": 95078
 }
