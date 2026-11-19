@@ -1,30 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
+    "downloaded": 3,
     "keep_existing": 146,
-    "not_found": 352,
+    "not_found": 350,
     "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-mountain-is-you-wiest",
+      "slug": "the-fountainhead",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-mountain-is-you-wiest.jpg",
-      "bytes": 20315,
-      "title": "The Mountain Is You Wiest"
+      "file": "the-fountainhead.jpg",
+      "bytes": 30288,
+      "title": "The Fountainhead"
+    },
+    {
+      "slug": "energy-motivation-hbr-emotional-intelligence-s",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "energy-motivation-hbr-emotional-intelligence-s.jpg",
+      "bytes": 3576,
+      "title": "Energy + Motivation HBR Emotional Intelligence S"
+    },
+    {
+      "slug": "hbrs-10-must-reads-on-business-model-innovation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "hbrs-10-must-reads-on-business-model-innovation.jpg",
+      "bytes": 30093,
+      "title": "HBRs 10 Must Reads on Business Model Innovation"
     }
   ],
-  "offset": 500,
-  "nextOffset": 1000,
+  "offset": 1000,
+  "nextOffset": 1500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6765,
-    "keep_existing": 22538,
-    "not_found": 65735,
-    "bad_image": 40
+    "downloaded": 6768,
+    "keep_existing": 22684,
+    "not_found": 66085,
+    "bad_image": 41
   },
-  "totalProcessed": 95078
+  "totalProcessed": 95578
 }
