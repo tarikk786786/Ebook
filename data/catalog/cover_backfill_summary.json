@@ -1,46 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 163,
-    "not_found": 334,
+    "downloaded": 2,
+    "keep_existing": 219,
+    "not_found": 279,
     "bad_image": 0
   },
   "updatedCurated": 1,
   "sampleDownloaded": [
     {
-      "slug": "the-win-without-pitching-manifesto",
+      "slug": "the-power-of-your-subconscious-mind",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-win-without-pitching-manifesto.jpg",
-      "bytes": 9790,
-      "title": "The Win Without Pitching Manifesto"
+      "file": "the-power-of-your-subconscious-mind.jpg",
+      "bytes": 44289,
+      "title": "The Power of Your Subconscious Mind"
     },
     {
-      "slug": "discipline-equals-freedom",
+      "slug": "the-entrepreneurial-mind",
       "status": "downloaded",
       "source": "open-library",
-      "file": "discipline-equals-freedom.jpg",
-      "bytes": 6860,
-      "title": "Discipline Equals Freedom"
-    },
-    {
-      "slug": "life-after-google-gilder",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "life-after-google-gilder.jpg",
-      "bytes": 24277,
-      "title": "Life After Google Gilder"
+      "file": "the-entrepreneurial-mind.jpg",
+      "bytes": 30216,
+      "title": "The Entrepreneurial Mind"
     }
   ],
-  "offset": 5500,
-  "nextOffset": 6000,
+  "offset": 6000,
+  "nextOffset": 6500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6801,
-    "keep_existing": 24824,
-    "not_found": 68403,
+    "downloaded": 6803,
+    "keep_existing": 25043,
+    "not_found": 68682,
     "bad_image": 50
   },
-  "totalProcessed": 100078
+  "totalProcessed": 100578
 }
