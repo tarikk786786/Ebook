@@ -2,53 +2,53 @@
   "processed": 500,
   "counts": {
     "downloaded": 4,
-    "keep_existing": 235,
-    "not_found": 259,
-    "bad_image": 2
+    "keep_existing": 166,
+    "not_found": 329,
+    "bad_image": 1
   },
-  "updatedCurated": 0,
+  "updatedCurated": 1,
   "sampleDownloaded": [
     {
-      "slug": "integrated-marketing",
+      "slug": "part-03-cyber-attack-01-april-2023-comput",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "integrated-marketing.jpg",
+      "file": "part-03-cyber-attack-01-april-2023-comput.jpg",
       "bytes": 3576,
-      "title": "Integrated Marketing"
+      "title": "Part 03 : Cyber Attack :: 01 APRIL 2023 : Comput"
     },
     {
-      "slug": "maxwell-john-c-the-15-invaluable-laws-of-growth",
+      "slug": "great-masters-liszt-his-life-and-music",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "great-masters-liszt-his-life-and-music.jpg",
+      "bytes": 8962,
+      "title": "Great Masters: Liszt - His Life and Music"
+    },
+    {
+      "slug": "the-history-of-the-united-states-2nd-edition",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "the-history-of-the-united-states-2nd-edition.jpg",
+      "bytes": 20657,
+      "title": "The History of the United States, 2nd Edition"
+    },
+    {
+      "slug": "the-great-economists",
       "status": "downloaded",
       "source": "open-library",
-      "file": "maxwell-john-c-the-15-invaluable-laws-of-growth.jpg",
-      "bytes": 33786,
-      "title": "Maxwell, John C The 15 Invaluable Laws of Growth"
-    },
-    {
-      "slug": "level-5-hitting-your-micronutrients-lifestyl",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "level-5-hitting-your-micronutrients-lifestyl.jpg",
-      "bytes": 3576,
-      "title": "Level 5 : Hitting Your Micronutrients & Lifestyl"
-    },
-    {
-      "slug": "markdown-to-pdf",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "markdown-to-pdf.jpg",
-      "bytes": 3576,
-      "title": "Markdown To PDF"
+      "file": "the-great-economists.jpg",
+      "bytes": 31550,
+      "title": "The Great Economists"
     }
   ],
-  "offset": 2500,
-  "nextOffset": 3000,
+  "offset": 3000,
+  "nextOffset": 3500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6776,
-    "keep_existing": 23402,
-    "not_found": 66856,
-    "bad_image": 44
+    "downloaded": 6780,
+    "keep_existing": 23568,
+    "not_found": 67185,
+    "bad_image": 45
   },
-  "totalProcessed": 97078
+  "totalProcessed": 97578
 }
