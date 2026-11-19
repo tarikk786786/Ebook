@@ -1,78 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 7,
-    "keep_existing": 43,
-    "not_found": 450,
+    "downloaded": 1,
+    "keep_existing": 45,
+    "not_found": 454,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "177",
+      "slug": "477",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "177.jpg",
-      "bytes": 4407,
-      "title": "177"
-    },
-    {
-      "slug": "204",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "204.jpg",
-      "bytes": 10555,
-      "title": "204"
-    },
-    {
-      "slug": "208",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "208.jpg",
-      "bytes": 4728,
-      "title": "208"
-    },
-    {
-      "slug": "224",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "224.jpg",
-      "bytes": 12314,
-      "title": "224"
-    },
-    {
-      "slug": "261",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "261.jpg",
-      "bytes": 6775,
-      "title": "261"
-    },
-    {
-      "slug": "3-1",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "3-1.jpg",
-      "bytes": 9172,
-      "title": "3.1"
-    },
-    {
-      "slug": "310",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "310.jpg",
-      "bytes": 6024,
-      "title": "310"
+      "file": "477.jpg",
+      "bytes": 7905,
+      "title": "477"
     }
   ],
-  "offset": 7000,
-  "nextOffset": 7500,
+  "offset": 7500,
+  "nextOffset": 8000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6815,
-    "keep_existing": 25151,
-    "not_found": 69562,
+    "downloaded": 6816,
+    "keep_existing": 25196,
+    "not_found": 70016,
     "bad_image": 50
   },
-  "totalProcessed": 101578
+  "totalProcessed": 102078
 }
