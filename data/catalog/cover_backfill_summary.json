@@ -2,37 +2,37 @@
   "processed": 500,
   "counts": {
     "downloaded": 2,
-    "keep_existing": 82,
-    "not_found": 414,
+    "keep_existing": 40,
+    "not_found": 456,
     "bad_image": 2
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "auth",
+      "slug": "d16",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "auth.jpg",
-      "bytes": 3576,
-      "title": "Auth"
+      "file": "d16.jpg",
+      "bytes": 5921,
+      "title": "D16"
     },
     {
-      "slug": "captivate-the-science-of-succeeding-with",
+      "slug": "d30",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "captivate-the-science-of-succeeding-with.jpg",
-      "bytes": 6022,
-      "title": "Captivate The Science of Succeeding with"
+      "file": "d30.jpg",
+      "bytes": 14508,
+      "title": "D30"
     }
   ],
-  "offset": 8000,
-  "nextOffset": 8500,
+  "offset": 8500,
+  "nextOffset": 9000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6818,
-    "keep_existing": 25278,
-    "not_found": 70430,
-    "bad_image": 52
+    "downloaded": 6820,
+    "keep_existing": 25318,
+    "not_found": 70886,
+    "bad_image": 54
   },
-  "totalProcessed": 102578
+  "totalProcessed": 103078
 }
