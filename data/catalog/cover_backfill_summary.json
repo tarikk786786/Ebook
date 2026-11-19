@@ -1,54 +1,62 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 4,
-    "keep_existing": 166,
-    "not_found": 329,
+    "downloaded": 5,
+    "keep_existing": 368,
+    "not_found": 126,
     "bad_image": 1
   },
-  "updatedCurated": 1,
+  "updatedCurated": 5,
   "sampleDownloaded": [
     {
-      "slug": "part-03-cyber-attack-01-april-2023-comput",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "part-03-cyber-attack-01-april-2023-comput.jpg",
-      "bytes": 3576,
-      "title": "Part 03 : Cyber Attack :: 01 APRIL 2023 : Comput"
-    },
-    {
-      "slug": "great-masters-liszt-his-life-and-music",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "great-masters-liszt-his-life-and-music.jpg",
-      "bytes": 8962,
-      "title": "Great Masters: Liszt - His Life and Music"
-    },
-    {
-      "slug": "the-history-of-the-united-states-2nd-edition",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "the-history-of-the-united-states-2nd-edition.jpg",
-      "bytes": 20657,
-      "title": "The History of the United States, 2nd Edition"
-    },
-    {
-      "slug": "the-great-economists",
+      "slug": "the-future-is-asian",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-great-economists.jpg",
-      "bytes": 31550,
-      "title": "The Great Economists"
+      "file": "the-future-is-asian.jpg",
+      "bytes": 34378,
+      "title": "The Future Is Asian"
+    },
+    {
+      "slug": "the-myths-of-innovation",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-myths-of-innovation.jpg",
+      "bytes": 16860,
+      "title": "The Myths of Innovation"
+    },
+    {
+      "slug": "the-great-ceo-within",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-great-ceo-within.jpg",
+      "bytes": 24896,
+      "title": "The Great CEO Within"
+    },
+    {
+      "slug": "the-score-takes-care-of-itself",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-score-takes-care-of-itself.jpg",
+      "bytes": 50228,
+      "title": "The Score Takes Care of Itself"
+    },
+    {
+      "slug": "the-management-myth",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-management-myth.jpg",
+      "bytes": 9714,
+      "title": "The Management Myth"
     }
   ],
-  "offset": 3000,
-  "nextOffset": 3500,
+  "offset": 3500,
+  "nextOffset": 4000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6780,
-    "keep_existing": 23568,
-    "not_found": 67185,
-    "bad_image": 45
+    "downloaded": 6785,
+    "keep_existing": 23936,
+    "not_found": 67311,
+    "bad_image": 46
   },
-  "totalProcessed": 97578
+  "totalProcessed": 98078
 }
