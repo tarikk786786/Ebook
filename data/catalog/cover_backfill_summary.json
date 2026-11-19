@@ -1,21 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 166,
-    "not_found": 333,
-    "bad_image": 1
+    "downloaded": 3,
+    "keep_existing": 163,
+    "not_found": 334,
+    "bad_image": 0
   },
-  "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 5000,
-  "nextOffset": 5500,
+  "updatedCurated": 1,
+  "sampleDownloaded": [
+    {
+      "slug": "the-win-without-pitching-manifesto",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-win-without-pitching-manifesto.jpg",
+      "bytes": 9790,
+      "title": "The Win Without Pitching Manifesto"
+    },
+    {
+      "slug": "discipline-equals-freedom",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "discipline-equals-freedom.jpg",
+      "bytes": 6860,
+      "title": "Discipline Equals Freedom"
+    },
+    {
+      "slug": "life-after-google-gilder",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "life-after-google-gilder.jpg",
+      "bytes": 24277,
+      "title": "Life After Google Gilder"
+    }
+  ],
+  "offset": 5500,
+  "nextOffset": 6000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6798,
-    "keep_existing": 24661,
-    "not_found": 68069,
+    "downloaded": 6801,
+    "keep_existing": 24824,
+    "not_found": 68403,
     "bad_image": 50
   },
-  "totalProcessed": 99578
+  "totalProcessed": 100078
 }
