@@ -1,38 +1,62 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 219,
-    "not_found": 279,
+    "downloaded": 5,
+    "keep_existing": 65,
+    "not_found": 430,
     "bad_image": 0
   },
-  "updatedCurated": 1,
+  "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-power-of-your-subconscious-mind",
+      "slug": "introduction-to-c-language",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-power-of-your-subconscious-mind.jpg",
-      "bytes": 44289,
-      "title": "The Power of Your Subconscious Mind"
+      "source": "internet-archive",
+      "file": "introduction-to-c-language.jpg",
+      "bytes": 13618,
+      "title": "Introduction to C Language"
     },
     {
-      "slug": "the-entrepreneurial-mind",
+      "slug": "121",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-entrepreneurial-mind.jpg",
-      "bytes": 30216,
-      "title": "The Entrepreneurial Mind"
+      "source": "internet-archive",
+      "file": "121.jpg",
+      "bytes": 7119,
+      "title": "121"
+    },
+    {
+      "slug": "124",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "124.jpg",
+      "bytes": 3576,
+      "title": "124"
+    },
+    {
+      "slug": "125",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "125.jpg",
+      "bytes": 7193,
+      "title": "125"
+    },
+    {
+      "slug": "141",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "141.jpg",
+      "bytes": 3576,
+      "title": "141"
     }
   ],
-  "offset": 6000,
-  "nextOffset": 6500,
+  "offset": 6500,
+  "nextOffset": 7000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6803,
-    "keep_existing": 25043,
-    "not_found": 68682,
+    "downloaded": 6808,
+    "keep_existing": 25108,
+    "not_found": 69112,
     "bad_image": 50
   },
-  "totalProcessed": 100578
+  "totalProcessed": 101078
 }
