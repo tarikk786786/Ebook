@@ -2,37 +2,37 @@
   "processed": 500,
   "counts": {
     "downloaded": 2,
-    "keep_existing": 54,
-    "not_found": 444,
-    "bad_image": 0
+    "keep_existing": 173,
+    "not_found": 323,
+    "bad_image": 2
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "wisdom-from-darwin-to-munger",
+      "slug": "millionaire-success-habits-the-gateway-to-wealth",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "wisdom-from-darwin-to-munger.jpg",
-      "bytes": 10781,
-      "title": "Wisdom From Darwin To Munger"
+      "file": "millionaire-success-habits-the-gateway-to-wealth.jpg",
+      "bytes": 15384,
+      "title": "Millionaire Success Habits The Gateway to Wealth"
     },
     {
-      "slug": "worksheet-1",
+      "slug": "the-little-book-that-builds-wealth-the-knockout",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "worksheet-1.jpg",
-      "bytes": 8029,
-      "title": "Worksheet 1"
+      "source": "open-library",
+      "file": "the-little-book-that-builds-wealth-the-knockout.jpg",
+      "bytes": 30605,
+      "title": "The Little Book That Builds Wealth The Knockout"
     }
   ],
-  "offset": 14000,
-  "nextOffset": 14500,
+  "offset": 14500,
+  "nextOffset": 15000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6889,
-    "keep_existing": 26135,
-    "not_found": 75483,
-    "bad_image": 71
+    "downloaded": 6891,
+    "keep_existing": 26308,
+    "not_found": 75806,
+    "bad_image": 73
   },
-  "totalProcessed": 108578
+  "totalProcessed": 109078
 }
