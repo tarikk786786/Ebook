@@ -1,78 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 7,
-    "keep_existing": 486,
-    "not_found": 7,
+    "downloaded": 2,
+    "keep_existing": 450,
+    "not_found": 48,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-great-ceo-within-by-matt-mochary",
+      "slug": "the-great-beanie-baby-bubble-by-zac-bissonnette",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-great-ceo-within-by-matt-mochary.jpg",
-      "bytes": 24896,
-      "title": "The Great CEO Within"
+      "file": "the-great-beanie-baby-bubble-by-zac-bissonnette.jpg",
+      "bytes": 31330,
+      "title": "The Great Beanie Baby Bubble"
     },
     {
-      "slug": "the-management-myth-by-matthew-stewart",
+      "slug": "the-future-is-asian-by-parag-khanna",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-management-myth-by-matthew-stewart.jpg",
-      "bytes": 9714,
-      "title": "The Management Myth"
-    },
-    {
-      "slug": "confessions-of-an-advertising-man-by-david-ogilvy",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "confessions-of-an-advertising-man-by-david-ogilvy.jpg",
-      "bytes": 20645,
-      "title": "Confessions of an Advertising Man"
-    },
-    {
-      "slug": "made-you-look-by-carmen-simon",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "made-you-look-by-carmen-simon.jpg",
-      "bytes": 23212,
-      "title": "Made You Look"
-    },
-    {
-      "slug": "the-win-without-pitching-manifesto-by-blair-enns",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-win-without-pitching-manifesto-by-blair-enns.jpg",
-      "bytes": 9790,
-      "title": "The Win Without Pitching Manifesto"
-    },
-    {
-      "slug": "the-little-book-of-economics-by-greg-ip",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-little-book-of-economics-by-greg-ip.jpg",
-      "bytes": 39986,
-      "title": "The Little Book of Economics"
-    },
-    {
-      "slug": "the-bullet-journal-method-by-ryder-carroll",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-bullet-journal-method-by-ryder-carroll.jpg",
-      "bytes": 55846,
-      "title": "The Bullet Journal Method"
+      "file": "the-future-is-asian-by-parag-khanna.jpg",
+      "bytes": 34378,
+      "title": "The Future Is Asian"
     }
   ],
-  "offset": 15500,
-  "nextOffset": 16000,
+  "offset": 16000,
+  "nextOffset": 16500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6901,
-    "keep_existing": 27223,
-    "not_found": 75881,
+    "downloaded": 6903,
+    "keep_existing": 27673,
+    "not_found": 75929,
     "bad_image": 73
   },
-  "totalProcessed": 110078
+  "totalProcessed": 110578
 }
