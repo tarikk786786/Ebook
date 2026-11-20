@@ -1,38 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 450,
-    "not_found": 48,
+    "downloaded": 0,
+    "keep_existing": 322,
+    "not_found": 178,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "the-great-beanie-baby-bubble-by-zac-bissonnette",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-great-beanie-baby-bubble-by-zac-bissonnette.jpg",
-      "bytes": 31330,
-      "title": "The Great Beanie Baby Bubble"
-    },
-    {
-      "slug": "the-future-is-asian-by-parag-khanna",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-future-is-asian-by-parag-khanna.jpg",
-      "bytes": 34378,
-      "title": "The Future Is Asian"
-    }
-  ],
-  "offset": 16000,
-  "nextOffset": 16500,
+  "sampleDownloaded": [],
+  "offset": 16500,
+  "nextOffset": 17000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 6903,
-    "keep_existing": 27673,
-    "not_found": 75929,
+    "keep_existing": 27995,
+    "not_found": 76107,
     "bad_image": 73
   },
-  "totalProcessed": 110578
+  "totalProcessed": 111078
 }
