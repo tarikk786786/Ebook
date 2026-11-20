@@ -1,46 +1,78 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 429,
-    "not_found": 68,
+    "downloaded": 7,
+    "keep_existing": 486,
+    "not_found": 7,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "goods-and-services-tax",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "goods-and-services-tax.jpg",
-      "bytes": 7255,
-      "title": "Goods and Services Tax"
-    },
-    {
-      "slug": "the-attackers-advantage-by-ram-charan",
+      "slug": "the-great-ceo-within-by-matt-mochary",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-attackers-advantage-by-ram-charan.jpg",
-      "bytes": 41449,
-      "title": "The Attacker's Advantage"
+      "file": "the-great-ceo-within-by-matt-mochary.jpg",
+      "bytes": 24896,
+      "title": "The Great CEO Within"
     },
     {
-      "slug": "the-myths-of-innovation-by-scott-berkun",
+      "slug": "the-management-myth-by-matthew-stewart",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-myths-of-innovation-by-scott-berkun.jpg",
-      "bytes": 16860,
-      "title": "The Myths of Innovation"
+      "file": "the-management-myth-by-matthew-stewart.jpg",
+      "bytes": 9714,
+      "title": "The Management Myth"
+    },
+    {
+      "slug": "confessions-of-an-advertising-man-by-david-ogilvy",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "confessions-of-an-advertising-man-by-david-ogilvy.jpg",
+      "bytes": 20645,
+      "title": "Confessions of an Advertising Man"
+    },
+    {
+      "slug": "made-you-look-by-carmen-simon",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "made-you-look-by-carmen-simon.jpg",
+      "bytes": 23212,
+      "title": "Made You Look"
+    },
+    {
+      "slug": "the-win-without-pitching-manifesto-by-blair-enns",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-win-without-pitching-manifesto-by-blair-enns.jpg",
+      "bytes": 9790,
+      "title": "The Win Without Pitching Manifesto"
+    },
+    {
+      "slug": "the-little-book-of-economics-by-greg-ip",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-little-book-of-economics-by-greg-ip.jpg",
+      "bytes": 39986,
+      "title": "The Little Book of Economics"
+    },
+    {
+      "slug": "the-bullet-journal-method-by-ryder-carroll",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-bullet-journal-method-by-ryder-carroll.jpg",
+      "bytes": 55846,
+      "title": "The Bullet Journal Method"
     }
   ],
-  "offset": 15000,
-  "nextOffset": 15500,
+  "offset": 15500,
+  "nextOffset": 16000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6894,
-    "keep_existing": 26737,
-    "not_found": 75874,
+    "downloaded": 6901,
+    "keep_existing": 27223,
+    "not_found": 75881,
     "bad_image": 73
   },
-  "totalProcessed": 109578
+  "totalProcessed": 110078
 }
