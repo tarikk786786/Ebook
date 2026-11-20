@@ -1,38 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 173,
-    "not_found": 323,
-    "bad_image": 2
+    "downloaded": 3,
+    "keep_existing": 429,
+    "not_found": 68,
+    "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "millionaire-success-habits-the-gateway-to-wealth",
+      "slug": "goods-and-services-tax",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "millionaire-success-habits-the-gateway-to-wealth.jpg",
-      "bytes": 15384,
-      "title": "Millionaire Success Habits The Gateway to Wealth"
+      "file": "goods-and-services-tax.jpg",
+      "bytes": 7255,
+      "title": "Goods and Services Tax"
     },
     {
-      "slug": "the-little-book-that-builds-wealth-the-knockout",
+      "slug": "the-attackers-advantage-by-ram-charan",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-little-book-that-builds-wealth-the-knockout.jpg",
-      "bytes": 30605,
-      "title": "The Little Book That Builds Wealth The Knockout"
+      "file": "the-attackers-advantage-by-ram-charan.jpg",
+      "bytes": 41449,
+      "title": "The Attacker's Advantage"
+    },
+    {
+      "slug": "the-myths-of-innovation-by-scott-berkun",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-myths-of-innovation-by-scott-berkun.jpg",
+      "bytes": 16860,
+      "title": "The Myths of Innovation"
     }
   ],
-  "offset": 14500,
-  "nextOffset": 15000,
+  "offset": 15000,
+  "nextOffset": 15500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6891,
-    "keep_existing": 26308,
-    "not_found": 75806,
+    "downloaded": 6894,
+    "keep_existing": 26737,
+    "not_found": 75874,
     "bad_image": 73
   },
-  "totalProcessed": 109078
+  "totalProcessed": 109578
 }
