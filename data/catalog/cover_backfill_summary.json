@@ -1,86 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 8,
-    "keep_existing": 151,
-    "not_found": 339,
-    "bad_image": 2
+    "downloaded": 3,
+    "keep_existing": 103,
+    "not_found": 393,
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-5-love-languages",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-5-love-languages.jpg",
-      "bytes": 38822,
-      "title": "The 5 Love Languages"
-    },
-    {
-      "slug": "the-adjustment",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-adjustment.jpg",
-      "bytes": 43960,
-      "title": "The Adjustment"
-    },
-    {
-      "slug": "the-art-of-war",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-war.jpg",
-      "bytes": 4475,
-      "title": "The Art Of War"
-    },
-    {
-      "slug": "the-concise-mastery",
+      "slug": "tukaram-balchandra-nemade",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "the-concise-mastery.jpg",
-      "bytes": 6780,
-      "title": "The Concise Mastery"
+      "file": "tukaram-balchandra-nemade.jpg",
+      "bytes": 18708,
+      "title": "Tukaram Balchandra Nemade"
     },
     {
-      "slug": "the-long-road-home",
+      "slug": "updated",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-long-road-home.jpg",
-      "bytes": 20411,
-      "title": "The Long Road Home"
+      "source": "internet-archive",
+      "file": "updated.jpg",
+      "bytes": 3576,
+      "title": "Updated"
     },
     {
-      "slug": "the-quest",
+      "slug": "week-1",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "the-quest.jpg",
-      "bytes": 42283,
-      "title": "The Quest"
-    },
-    {
-      "slug": "the-search-for-major-plagge-the-nazi",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-search-for-major-plagge-the-nazi.jpg",
-      "bytes": 26899,
-      "title": "The Search For Major Plagge The Nazi"
-    },
-    {
-      "slug": "the-new-map-for-relationships",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-new-map-for-relationships.jpg",
-      "bytes": 50325,
-      "title": "The new map for relationships"
+      "source": "internet-archive",
+      "file": "week-1.jpg",
+      "bytes": 3576,
+      "title": "Week 1"
     }
   ],
-  "offset": 13000,
-  "nextOffset": 13500,
+  "offset": 13500,
+  "nextOffset": 14000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6884,
-    "keep_existing": 25978,
-    "not_found": 74646,
-    "bad_image": 70
+    "downloaded": 6887,
+    "keep_existing": 26081,
+    "not_found": 75039,
+    "bad_image": 71
   },
-  "totalProcessed": 107578
+  "totalProcessed": 108078
 }
