@@ -1,46 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 46,
-    "not_found": 450,
+    "downloaded": 4,
+    "keep_existing": 69,
+    "not_found": 426,
     "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "rahu",
+      "slug": "sheet1",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "rahu.jpg",
-      "bytes": 15001,
-      "title": "Rahu"
-    },
-    {
-      "slug": "resume",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "resume.jpg",
+      "file": "sheet1.jpg",
       "bytes": 3576,
-      "title": "Resume"
+      "title": "Sheet1"
     },
     {
-      "slug": "revit-architecture-notes-of-revit",
+      "slug": "sophie-s-world",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "sophie-s-world.jpg",
+      "bytes": 36059,
+      "title": "Sophie's World"
+    },
+    {
+      "slug": "stress-less-more-success",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "stress-less-more-success.jpg",
+      "bytes": 5420,
+      "title": "Stress less more success"
+    },
+    {
+      "slug": "superintelligence-paths-dangers-strategies",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "revit-architecture-notes-of-revit.jpg",
-      "bytes": 12302,
-      "title": "Revit architecture: Notes of revit"
+      "file": "superintelligence-paths-dangers-strategies.jpg",
+      "bytes": 19507,
+      "title": "Superintelligence Paths, Dangers, Strategies"
     }
   ],
-  "offset": 12000,
-  "nextOffset": 12500,
+  "offset": 12500,
+  "nextOffset": 13000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6872,
-    "keep_existing": 25758,
-    "not_found": 73881,
-    "bad_image": 67
+    "downloaded": 6876,
+    "keep_existing": 25827,
+    "not_found": 74307,
+    "bad_image": 68
   },
-  "totalProcessed": 106578
+  "totalProcessed": 107078
 }
