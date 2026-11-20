@@ -1,14 +1,14 @@
 {
-  "offset": 8989,
-  "nextOffset": 9489,
+  "offset": 9489,
+  "nextOffset": 9982,
   "totalTargets": 86337,
   "processed": 500,
   "counts": {
     "verified": 0,
     "review": 0,
     "not_found": 468,
-    "error": 7,
-    "skipped": 25
+    "error": 0,
+    "skipped": 32
   },
   "verifiedOverlayEntries": 36,
   "manualReviewQueue": 105,
