@@ -1,182 +1,46 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 20,
-    "keep_existing": 64,
-    "not_found": 415,
+    "downloaded": 3,
+    "keep_existing": 46,
+    "not_found": 450,
     "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "playing-with-fire",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "playing-with-fire.jpg",
-      "bytes": 43043,
-      "title": "Playing with Fire"
-    },
-    {
-      "slug": "presentation",
+      "slug": "rahu",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "presentation.jpg",
+      "file": "rahu.jpg",
+      "bytes": 15001,
+      "title": "Rahu"
+    },
+    {
+      "slug": "resume",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "resume.jpg",
       "bytes": 3576,
-      "title": "Presentation"
+      "title": "Resume"
     },
     {
-      "slug": "property-valuation-data-of-bank",
+      "slug": "revit-architecture-notes-of-revit",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "property-valuation-data-of-bank.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Data of Bank"
-    },
-    {
-      "slug": "property-valuation-agreement",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-agreement.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Agreement"
-    },
-    {
-      "slug": "property-valuation-flat-report",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-flat-report.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Flat Report"
-    },
-    {
-      "slug": "property-valuation-important-points-for-ibbi",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-important-points-for-ibbi.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Important Points for IBBI"
-    },
-    {
-      "slug": "property-valuation-industrial-premises-report",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-industrial-premises-report.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Industrial Premises Report"
-    },
-    {
-      "slug": "property-valuation-kanpur-circle-rate",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-kanpur-circle-rate.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Kanpur Circle Rate"
-    },
-    {
-      "slug": "property-valuation-latest-case-studies",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-latest-case-studies.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Latest Case Studies"
-    },
-    {
-      "slug": "property-valuation-notes-for-ibbi",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-notes-for-ibbi.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Notes for IBBI"
-    },
-    {
-      "slug": "property-valuation-part-property-report",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-part-property-report.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Part Property Report"
-    },
-    {
-      "slug": "property-valuation-plinth-area-rates-2018",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-plinth-area-rates-2018.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Plinth Area Rates 2018"
-    },
-    {
-      "slug": "property-valuation-plinth-area-rates-2020",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-plinth-area-rates-2020.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Plinth Area Rates 2020"
-    },
-    {
-      "slug": "property-valuation-property",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-property.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Property"
-    },
-    {
-      "slug": "property-valuation-property-document",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-property-document.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Property Document"
-    },
-    {
-      "slug": "property-valuation-rent-calculation-report",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-rent-calculation-report.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Rent Calculation Report"
-    },
-    {
-      "slug": "property-valuation-sd",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-sd.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: SD"
-    },
-    {
-      "slug": "property-valuation-sanctioned-drawing",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "property-valuation-sanctioned-drawing.jpg",
-      "bytes": 7037,
-      "title": "Property Valuation: Sanctioned Drawing"
-    },
-    {
-      "slug": "psychosomatic-famili",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "psychosomatic-famili.jpg",
-      "bytes": 19932,
-      "title": "Psychosomatic Famili"
-    },
-    {
-      "slug": "quantum-healing",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "quantum-healing.jpg",
-      "bytes": 3576,
-      "title": "Quantum Healing"
+      "file": "revit-architecture-notes-of-revit.jpg",
+      "bytes": 12302,
+      "title": "Revit architecture: Notes of revit"
     }
   ],
-  "offset": 11500,
-  "nextOffset": 12000,
+  "offset": 12000,
+  "nextOffset": 12500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6869,
-    "keep_existing": 25712,
-    "not_found": 73431,
-    "bad_image": 66
+    "downloaded": 6872,
+    "keep_existing": 25758,
+    "not_found": 73881,
+    "bad_image": 67
   },
-  "totalProcessed": 106078
+  "totalProcessed": 106578
 }
