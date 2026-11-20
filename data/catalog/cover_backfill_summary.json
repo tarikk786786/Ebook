@@ -1,102 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 10,
-    "keep_existing": 70,
+    "downloaded": 20,
+    "keep_existing": 64,
     "not_found": 415,
-    "bad_image": 5
+    "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "mind-maps",
+      "slug": "playing-with-fire",
       "status": "downloaded",
-      "source": "internet-archive",
-      "file": "mind-maps.jpg",
-      "bytes": 5667,
-      "title": "Mind Maps"
+      "source": "open-library",
+      "file": "playing-with-fire.jpg",
+      "bytes": 43043,
+      "title": "Playing with Fire"
     },
     {
-      "slug": "models-attract-women-through-honesty",
+      "slug": "presentation",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "models-attract-women-through-honesty.jpg",
-      "bytes": 11189,
-      "title": "Models - Attract Women through Honesty"
-    },
-    {
-      "slug": "models-attract-women-through-honesty-manson",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "models-attract-women-through-honesty-manson.jpg",
-      "bytes": 11189,
-      "title": "Models Attract Women Through Honesty Manson"
-    },
-    {
-      "slug": "models-attract-women-through-honesty-mark-manson",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "models-attract-women-through-honesty-mark-manson.jpg",
-      "bytes": 11189,
-      "title": "Models Attract Women Through Honesty Mark Manson"
-    },
-    {
-      "slug": "notices-class-schedule-pdf-ultimate-english",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "notices-class-schedule-pdf-ultimate-english.jpg",
-      "bytes": 7683,
-      "title": "Notices: Class Schedule PDF] Ultimate -English-"
-    },
-    {
-      "slug": "notices-test-planner-pdf-transformer-english",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "notices-test-planner-pdf-transformer-english.jpg",
-      "bytes": 7683,
-      "title": "Notices: Test Planner PDF] TRANSFORMER -ENGLISH-"
-    },
-    {
-      "slug": "notices-telegram-group-link-pdf-only-telegram-g",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "notices-telegram-group-link-pdf-only-telegram-g.jpg",
-      "bytes": 7683,
-      "title": "Notices: Telegram Group Link PDF Only Telegram G"
-    },
-    {
-      "slug": "notices-test-planner-pdf-test-planner-ultimate",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "notices-test-planner-pdf-test-planner-ultimate.jpg",
-      "bytes": 7683,
-      "title": "Notices: Test Planner PDF] Test Planner ULTIMATE"
-    },
-    {
-      "slug": "notification",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "notification.jpg",
+      "file": "presentation.jpg",
       "bytes": 3576,
-      "title": "Notification"
+      "title": "Presentation"
     },
     {
-      "slug": "pandas-cheat-sheet",
+      "slug": "property-valuation-data-of-bank",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "pandas-cheat-sheet.jpg",
-      "bytes": 4257,
-      "title": "Pandas Cheat Sheet"
+      "file": "property-valuation-data-of-bank.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Data of Bank"
+    },
+    {
+      "slug": "property-valuation-agreement",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-agreement.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Agreement"
+    },
+    {
+      "slug": "property-valuation-flat-report",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-flat-report.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Flat Report"
+    },
+    {
+      "slug": "property-valuation-important-points-for-ibbi",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-important-points-for-ibbi.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Important Points for IBBI"
+    },
+    {
+      "slug": "property-valuation-industrial-premises-report",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-industrial-premises-report.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Industrial Premises Report"
+    },
+    {
+      "slug": "property-valuation-kanpur-circle-rate",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-kanpur-circle-rate.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Kanpur Circle Rate"
+    },
+    {
+      "slug": "property-valuation-latest-case-studies",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-latest-case-studies.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Latest Case Studies"
+    },
+    {
+      "slug": "property-valuation-notes-for-ibbi",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-notes-for-ibbi.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Notes for IBBI"
+    },
+    {
+      "slug": "property-valuation-part-property-report",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-part-property-report.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Part Property Report"
+    },
+    {
+      "slug": "property-valuation-plinth-area-rates-2018",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-plinth-area-rates-2018.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Plinth Area Rates 2018"
+    },
+    {
+      "slug": "property-valuation-plinth-area-rates-2020",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-plinth-area-rates-2020.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Plinth Area Rates 2020"
+    },
+    {
+      "slug": "property-valuation-property",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-property.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Property"
+    },
+    {
+      "slug": "property-valuation-property-document",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-property-document.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Property Document"
+    },
+    {
+      "slug": "property-valuation-rent-calculation-report",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-rent-calculation-report.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Rent Calculation Report"
+    },
+    {
+      "slug": "property-valuation-sd",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-sd.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: SD"
+    },
+    {
+      "slug": "property-valuation-sanctioned-drawing",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "property-valuation-sanctioned-drawing.jpg",
+      "bytes": 7037,
+      "title": "Property Valuation: Sanctioned Drawing"
+    },
+    {
+      "slug": "psychosomatic-famili",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "psychosomatic-famili.jpg",
+      "bytes": 19932,
+      "title": "Psychosomatic Famili"
+    },
+    {
+      "slug": "quantum-healing",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "quantum-healing.jpg",
+      "bytes": 3576,
+      "title": "Quantum Healing"
     }
   ],
-  "offset": 11000,
-  "nextOffset": 11500,
+  "offset": 11500,
+  "nextOffset": 12000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6849,
-    "keep_existing": 25648,
-    "not_found": 73016,
-    "bad_image": 65
+    "downloaded": 6869,
+    "keep_existing": 25712,
+    "not_found": 73431,
+    "bad_image": 66
   },
-  "totalProcessed": 105578
+  "totalProcessed": 106078
 }
