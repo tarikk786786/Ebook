@@ -1,46 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 103,
-    "not_found": 393,
-    "bad_image": 1
+    "downloaded": 2,
+    "keep_existing": 54,
+    "not_found": 444,
+    "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "tukaram-balchandra-nemade",
+      "slug": "wisdom-from-darwin-to-munger",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "tukaram-balchandra-nemade.jpg",
-      "bytes": 18708,
-      "title": "Tukaram Balchandra Nemade"
+      "file": "wisdom-from-darwin-to-munger.jpg",
+      "bytes": 10781,
+      "title": "Wisdom From Darwin To Munger"
     },
     {
-      "slug": "updated",
+      "slug": "worksheet-1",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "updated.jpg",
-      "bytes": 3576,
-      "title": "Updated"
-    },
-    {
-      "slug": "week-1",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "week-1.jpg",
-      "bytes": 3576,
-      "title": "Week 1"
+      "file": "worksheet-1.jpg",
+      "bytes": 8029,
+      "title": "Worksheet 1"
     }
   ],
-  "offset": 13500,
-  "nextOffset": 14000,
+  "offset": 14000,
+  "nextOffset": 14500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6887,
-    "keep_existing": 26081,
-    "not_found": 75039,
+    "downloaded": 6889,
+    "keep_existing": 26135,
+    "not_found": 75483,
     "bad_image": 71
   },
-  "totalProcessed": 108078
+  "totalProcessed": 108578
 }
