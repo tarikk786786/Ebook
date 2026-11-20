@@ -1,38 +1,102 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 61,
-    "not_found": 435,
-    "bad_image": 2
+    "downloaded": 10,
+    "keep_existing": 70,
+    "not_found": 415,
+    "bad_image": 5
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "know-the-only-truth",
+      "slug": "mind-maps",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "know-the-only-truth.jpg",
-      "bytes": 8592,
-      "title": "Know The Only Truth"
+      "file": "mind-maps.jpg",
+      "bytes": 5667,
+      "title": "Mind Maps"
     },
     {
-      "slug": "mark-manson-the-subtle-art-of-not-giving-a-f-ck",
+      "slug": "models-attract-women-through-honesty",
       "status": "downloaded",
-      "source": "open-library",
-      "file": "mark-manson-the-subtle-art-of-not-giving-a-f-ck.jpg",
-      "bytes": 15642,
-      "title": "Mark Manson The Subtle Art of Not Giving a F ck"
+      "source": "internet-archive",
+      "file": "models-attract-women-through-honesty.jpg",
+      "bytes": 11189,
+      "title": "Models - Attract Women through Honesty"
+    },
+    {
+      "slug": "models-attract-women-through-honesty-manson",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "models-attract-women-through-honesty-manson.jpg",
+      "bytes": 11189,
+      "title": "Models Attract Women Through Honesty Manson"
+    },
+    {
+      "slug": "models-attract-women-through-honesty-mark-manson",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "models-attract-women-through-honesty-mark-manson.jpg",
+      "bytes": 11189,
+      "title": "Models Attract Women Through Honesty Mark Manson"
+    },
+    {
+      "slug": "notices-class-schedule-pdf-ultimate-english",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "notices-class-schedule-pdf-ultimate-english.jpg",
+      "bytes": 7683,
+      "title": "Notices: Class Schedule PDF] Ultimate -English-"
+    },
+    {
+      "slug": "notices-test-planner-pdf-transformer-english",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "notices-test-planner-pdf-transformer-english.jpg",
+      "bytes": 7683,
+      "title": "Notices: Test Planner PDF] TRANSFORMER -ENGLISH-"
+    },
+    {
+      "slug": "notices-telegram-group-link-pdf-only-telegram-g",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "notices-telegram-group-link-pdf-only-telegram-g.jpg",
+      "bytes": 7683,
+      "title": "Notices: Telegram Group Link PDF Only Telegram G"
+    },
+    {
+      "slug": "notices-test-planner-pdf-test-planner-ultimate",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "notices-test-planner-pdf-test-planner-ultimate.jpg",
+      "bytes": 7683,
+      "title": "Notices: Test Planner PDF] Test Planner ULTIMATE"
+    },
+    {
+      "slug": "notification",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "notification.jpg",
+      "bytes": 3576,
+      "title": "Notification"
+    },
+    {
+      "slug": "pandas-cheat-sheet",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "pandas-cheat-sheet.jpg",
+      "bytes": 4257,
+      "title": "Pandas Cheat Sheet"
     }
   ],
-  "offset": 10500,
-  "nextOffset": 11000,
+  "offset": 11000,
+  "nextOffset": 11500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6839,
-    "keep_existing": 25578,
-    "not_found": 72601,
-    "bad_image": 60
+    "downloaded": 6849,
+    "keep_existing": 25648,
+    "not_found": 73016,
+    "bad_image": 65
   },
-  "totalProcessed": 105078
+  "totalProcessed": 105578
 }
