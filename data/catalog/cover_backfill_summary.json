@@ -1,134 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 14,
-    "keep_existing": 71,
-    "not_found": 414,
-    "bad_image": 1
+    "downloaded": 2,
+    "keep_existing": 61,
+    "not_found": 435,
+    "bad_image": 2
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "history-of-art-modern-art",
+      "slug": "know-the-only-truth",
       "status": "downloaded",
       "source": "internet-archive",
-      "file": "history-of-art-modern-art.jpg",
-      "bytes": 25485,
-      "title": "History of Art - Modern Art"
+      "file": "know-the-only-truth.jpg",
+      "bytes": 8592,
+      "title": "Know The Only Truth"
     },
     {
-      "slug": "how-to-stop-worrying-and-start-living-dale",
+      "slug": "mark-manson-the-subtle-art-of-not-giving-a-f-ck",
       "status": "downloaded",
       "source": "open-library",
-      "file": "how-to-stop-worrying-and-start-living-dale.jpg",
-      "bytes": 10459,
-      "title": "How to Stop Worrying and Start Living Dale"
-    },
-    {
-      "slug": "increase-your-value",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "increase-your-value.jpg",
-      "bytes": 3738,
-      "title": "Increase Your Value"
-    },
-    {
-      "slug": "instrumental-method-of-chemical-analysis",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "instrumental-method-of-chemical-analysis.jpg",
-      "bytes": 19575,
-      "title": "Instrumental Method of Chemical Analysis"
-    },
-    {
-      "slug": "interior-design-agreement-templete",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-agreement-templete.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: Agreement Templete"
-    },
-    {
-      "slug": "interior-design-boq-estimation",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-boq-estimation.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: BOQ & Estimation"
-    },
-    {
-      "slug": "interior-design-demolition",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-demolition.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: DEMOLITION"
-    },
-    {
-      "slug": "interior-design-design-process",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-design-process.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: Design Process"
-    },
-    {
-      "slug": "interior-design-kitchen-pantry-unit",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-kitchen-pantry-unit.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: KITCHEN PANTRY UNIT"
-    },
-    {
-      "slug": "interior-design-kitchen-working-drawing",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-kitchen-working-drawing.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: KITCHEN WORKING DRAWING"
-    },
-    {
-      "slug": "interior-design-kitchen-design-requirement-form",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-kitchen-design-requirement-form.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: Kitchen Design Requirement form"
-    },
-    {
-      "slug": "interior-design-master-bedroom-wardrobe",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-master-bedroom-wardrobe.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: MASTER BEDROOM WARDROBE"
-    },
-    {
-      "slug": "interior-design-plumbing-drawing-bathroom",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-plumbing-drawing-bathroom.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: PLUMBING DRAWING BATHROOM"
-    },
-    {
-      "slug": "interior-design-tv-unit-room-working-drawing",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "interior-design-tv-unit-room-working-drawing.jpg",
-      "bytes": 10183,
-      "title": "Interior Design: TV UNIT ROOM) WORKING DRAWING"
+      "file": "mark-manson-the-subtle-art-of-not-giving-a-f-ck.jpg",
+      "bytes": 15642,
+      "title": "Mark Manson The Subtle Art of Not Giving a F ck"
     }
   ],
-  "offset": 10000,
-  "nextOffset": 10500,
+  "offset": 10500,
+  "nextOffset": 11000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 6837,
-    "keep_existing": 25517,
-    "not_found": 72166,
-    "bad_image": 58
+    "downloaded": 6839,
+    "keep_existing": 25578,
+    "not_found": 72601,
+    "bad_image": 60
   },
-  "totalProcessed": 104578
+  "totalProcessed": 105078
 }
