@@ -1,30 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 181,
-    "not_found": 318,
+    "downloaded": 0,
+    "keep_existing": 106,
+    "not_found": 394,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "cu-wu4-the-conscious-uncoupling-creed-1",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "cu-wu4-the-conscious-uncoupling-creed-1.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    }
-  ],
-  "offset": 24000,
-  "nextOffset": 24500,
+  "sampleDownloaded": [],
+  "offset": 24500,
+  "nextOffset": 25000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 7505,
-    "keep_existing": 29451,
-    "not_found": 81549,
+    "keep_existing": 29557,
+    "not_found": 81943,
     "bad_image": 73
   },
-  "totalProcessed": 118578
+  "totalProcessed": 119078
 }
