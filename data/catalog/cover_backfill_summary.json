@@ -1,30 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
+    "downloaded": 0,
     "keep_existing": 113,
-    "not_found": 386,
+    "not_found": 387,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "design-aspect-reporting-for-geotechnical-work-bore-hole-location",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "design-aspect-reporting-for-geotechnical-work-bore-hole-location.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    }
-  ],
-  "offset": 33500,
-  "nextOffset": 34000,
+  "sampleDownloaded": [],
+  "offset": 34000,
+  "nextOffset": 34500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 8183,
-    "keep_existing": 31394,
-    "not_found": 88428,
+    "keep_existing": 31507,
+    "not_found": 88815,
     "bad_image": 73
   },
-  "totalProcessed": 128078
+  "totalProcessed": 128578
 }
