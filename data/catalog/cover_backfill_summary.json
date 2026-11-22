@@ -1,21 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 113,
-    "not_found": 387,
+    "downloaded": 1,
+    "keep_existing": 393,
+    "not_found": 106,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 35000,
-  "nextOffset": 35500,
+  "sampleDownloaded": [
+    {
+      "slug": "digital-marketing-with-drupal-the-ultimate-guide-to-build-and-dep",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "digital-marketing-with-drupal-the-ultimate-guide-to-build-and-dep.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    }
+  ],
+  "offset": 35500,
+  "nextOffset": 36000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 8183,
-    "keep_existing": 31730,
-    "not_found": 89592,
+    "downloaded": 8184,
+    "keep_existing": 32123,
+    "not_found": 89698,
     "bad_image": 73
   },
-  "totalProcessed": 129578
+  "totalProcessed": 130078
 }
