@@ -1,54 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 4,
-    "keep_existing": 167,
-    "not_found": 329,
+    "downloaded": 0,
+    "keep_existing": 120,
+    "not_found": 380,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "everyday-millionaires-how-ordinary-people-built-extraordinary-wealth",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "everyday-millionaires-how-ordinary-people-built-extraordinary-wealth.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "existential-therapy-100-key-points-and-techniques-susan-iacovou",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "existential-therapy-100-key-points-and-techniques-susan-iacovou.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "experiencing-the-body-a-psychoanalytic-dialogue-on-psychosomatics",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "experiencing-the-body-a-psychoanalytic-dialogue-on-psychosomatics.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "farsighted-how-we-make-the-decisions-that-matter-the-most-steven",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "farsighted-how-we-make-the-decisions-that-matter-the-most-steven.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    }
-  ],
-  "offset": 38000,
-  "nextOffset": 38500,
+  "sampleDownloaded": [],
+  "offset": 38500,
+  "nextOffset": 39000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 8386,
-    "keep_existing": 32522,
-    "not_found": 91597,
+    "keep_existing": 32642,
+    "not_found": 91977,
     "bad_image": 73
   },
-  "totalProcessed": 132578
+  "totalProcessed": 133078
 }
