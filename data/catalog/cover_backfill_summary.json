@@ -1,30 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 123,
-    "not_found": 376,
+    "downloaded": 0,
+    "keep_existing": 103,
+    "not_found": 397,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "hbr-emotional-intelligence-ultimate-boxed-set-14-books-hbr-emotional",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "hbr-emotional-intelligence-ultimate-boxed-set-14-books-hbr-emotional.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    }
-  ],
-  "offset": 43500,
-  "nextOffset": 44000,
+  "sampleDownloaded": [],
+  "offset": 44000,
+  "nextOffset": 44500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 8388,
-    "keep_existing": 33771,
-    "not_found": 95846,
+    "keep_existing": 33874,
+    "not_found": 96243,
     "bad_image": 73
   },
-  "totalProcessed": 138078
+  "totalProcessed": 138578
 }
