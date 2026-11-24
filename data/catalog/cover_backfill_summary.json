@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 69,
-    "keep_existing": 38,
-    "not_found": 393,
+    "downloaded": 51,
+    "keep_existing": 25,
+    "not_found": 424,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-28983",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-64399",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-28983.jpg",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-64399.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-20319",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-42511",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-20319.jpg",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-42511.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-55279",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-55279.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-16063",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-16063.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-17811",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-68959",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-17811.jpg",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-68959.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-67059",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-58699",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-67059.jpg",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-58699.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-19407",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-81955",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-19407.jpg",
-      "bytes": 57833,
-      "title": "How Finance Works Desai"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-81955.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-39015",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-53227",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-39015.jpg",
-      "bytes": 93016,
-      "title": "Tomorrow, and Tomorrow, and Tomorrow"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-53227.jpg",
+      "bytes": 78460,
+      "title": "The Richest Man In Babylon"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-70479",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-29971",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-70479.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-29971.jpg",
+      "bytes": 45817,
+      "title": "Master Your Emotions"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-80511",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-24727",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-80511.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-24727.jpg",
+      "bytes": 23737,
+      "title": "Stillness Speaks"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-39927",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-48439",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-39927.jpg",
-      "bytes": 34690,
-      "title": "Affidavit"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-48439.jpg",
+      "bytes": 25957,
+      "title": "My Life in Full"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-76863",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-48667",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-76863.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-48667.jpg",
+      "bytes": 18462,
+      "title": "The Personal MBA Kaufman"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-65691",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-73063",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-65691.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-72075",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-72075.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-16443",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-16443.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-33315",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-33315.jpg",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-73063.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-39471",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-83551",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-39471.jpg",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-83551.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-21459",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-30883",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-21459.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-30883.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-78003",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-81727",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-78003.jpg",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-81727.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-3-22827",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-16747",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-3-22827.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-16747.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-5-61853",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-58927",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-5-61853.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-58927.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-5-82601",
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-30655",
       "status": "downloaded",
       "source": "open-library",
-      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-5-82601.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-30655.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "machine-learning-yearning-technical-strategy-for-ai-volume-7-68503",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "machine-learning-yearning-technical-strategy-for-ai-volume-7-68503.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 54500,
-  "nextOffset": 55000,
+  "offset": 55000,
+  "nextOffset": 55500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 8970,
-    "keep_existing": 36876,
-    "not_found": 103159,
+    "downloaded": 9021,
+    "keep_existing": 36901,
+    "not_found": 103583,
     "bad_image": 73
   },
-  "totalProcessed": 149078
+  "totalProcessed": 149578
 }
