@@ -1,21 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 107,
-    "not_found": 393,
+    "downloaded": 4,
+    "keep_existing": 155,
+    "not_found": 341,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 52500,
-  "nextOffset": 53000,
+  "sampleDownloaded": [
+    {
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-80575",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "learning-typescript-enhance-your-web-development-volume-7-80575.jpg",
+      "bytes": 22560,
+      "title": "Python for Teenagers"
+    },
+    {
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-32923",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "learning-typescript-enhance-your-web-development-volume-7-32923.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-59599",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "learning-typescript-enhance-your-web-development-volume-7-59599.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "learning-typescript-enhance-your-web-development-volume-7-18331",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "learning-typescript-enhance-your-web-development-volume-7-18331.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    }
+  ],
+  "offset": 53000,
+  "nextOffset": 53500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 8834,
-    "keep_existing": 36362,
-    "not_found": 101809,
+    "downloaded": 8838,
+    "keep_existing": 36517,
+    "not_found": 102150,
     "bad_image": 73
   },
-  "totalProcessed": 147078
+  "totalProcessed": 147578
 }
