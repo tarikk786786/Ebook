@@ -1,38 +1,70 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 334,
-    "not_found": 164,
+    "downloaded": 6,
+    "keep_existing": 215,
+    "not_found": 279,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "python-unit-3-by-sandeep-sir-python-u-3-lec-7-not",
+      "slug": "rationality-for-mort-by-gigerenzer-gerd-z-liborg",
       "status": "downloaded",
       "source": "open-library",
-      "file": "python-unit-3-by-sandeep-sir-python-u-3-lec-7-not.jpg",
+      "file": "rationality-for-mort-by-gigerenzer-gerd-z-liborg.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "dollarpremium-answer-2-20251120-170309-006-ᴹᴿℂr𝕒ckєr⁰³-reading-compreh",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "dollarpremium-answer-2-20251120-170309-006-ᴹᴿℂr𝕒ckєr⁰³-reading-compreh.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "recalibrate-online-workbook-module-11-key-metrics-and-scorecard",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "recalibrate-online-workbook-module-11-key-metrics-and-scorecard.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "recalibrate-online-workbook-module-7-vision-and-purpose",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "recalibrate-online-workbook-module-7-vision-and-purpose.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "rwa-computer-gyan-full-book-ssc-cgl-special-ankit-bhati-sir",
+      "slug": "section-400-2026-01-06-03-27-29-dc5863-enpdf",
       "status": "downloaded",
       "source": "open-library",
-      "file": "rwa-computer-gyan-full-book-ssc-cgl-special-ankit-bhati-sir.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "section-400-2026-01-06-03-27-29-dc5863-enpdf.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "a",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "a.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 62000,
-  "nextOffset": 62500,
+  "offset": 62500,
+  "nextOffset": 63000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9453,
-    "keep_existing": 39586,
-    "not_found": 107466,
+    "downloaded": 9459,
+    "keep_existing": 39801,
+    "not_found": 107745,
     "bad_image": 73
   },
-  "totalProcessed": 156578
+  "totalProcessed": 157078
 }
