@@ -1,38 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 154,
-    "not_found": 344,
+    "downloaded": 0,
+    "keep_existing": 124,
+    "not_found": 376,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "the-art-of-reading-minds-how-to-understand-and-influence-others",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-art-of-reading-minds-how-to-understand-and-influence-others.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-46405",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-hard-thing-about-hard-things-building-a-business-when-there-are-no-easy-46405.jpg",
-      "bytes": 19575,
-      "title": "Instrumental Method of Chemical Analysis"
-    }
-  ],
-  "offset": 67000,
-  "nextOffset": 67500,
+  "sampleDownloaded": [],
+  "offset": 67500,
+  "nextOffset": 68000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 9472,
-    "keep_existing": 41086,
-    "not_found": 110947,
+    "keep_existing": 41210,
+    "not_found": 111323,
     "bad_image": 73
   },
-  "totalProcessed": 161578
+  "totalProcessed": 162078
 }
