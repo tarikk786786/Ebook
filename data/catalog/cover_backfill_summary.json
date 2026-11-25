@@ -1,30 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 114,
-    "not_found": 385,
+    "downloaded": 2,
+    "keep_existing": 145,
+    "not_found": 353,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380.jpg",
-      "bytes": 4475,
-      "title": "The Art Of War"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014.jpg",
+      "bytes": 24683,
+      "title": "Stolen Focus"
     }
   ],
-  "offset": 65500,
-  "nextOffset": 66000,
+  "offset": 66000,
+  "nextOffset": 66500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9466,
-    "keep_existing": 40549,
-    "not_found": 109990,
+    "downloaded": 9468,
+    "keep_existing": 40694,
+    "not_found": 110343,
     "bad_image": 73
   },
-  "totalProcessed": 160078
+  "totalProcessed": 160578
 }
