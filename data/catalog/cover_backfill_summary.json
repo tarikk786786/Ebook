@@ -1,21 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 173,
-    "not_found": 327,
+    "downloaded": 1,
+    "keep_existing": 114,
+    "not_found": 385,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 65000,
-  "nextOffset": 65500,
+  "sampleDownloaded": [
+    {
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-12-46380.jpg",
+      "bytes": 4475,
+      "title": "The Art Of War"
+    }
+  ],
+  "offset": 65500,
+  "nextOffset": 66000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9465,
-    "keep_existing": 40435,
-    "not_found": 109605,
+    "downloaded": 9466,
+    "keep_existing": 40549,
+    "not_found": 109990,
     "bad_image": 73
   },
-  "totalProcessed": 159578
+  "totalProcessed": 160078
 }
