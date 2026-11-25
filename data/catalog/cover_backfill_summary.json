@@ -1,30 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 103,
-    "not_found": 396,
+    "downloaded": 4,
+    "keep_existing": 148,
+    "not_found": 348,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-5-23009",
+      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-9-61845",
       "status": "downloaded",
       "source": "open-library",
-      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-5-23009.jpg",
-      "bytes": 10459,
-      "title": "How to Stop Worrying and Start Living Dale"
+      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-9-61845.jpg",
+      "bytes": 19932,
+      "title": "Psychosomatic Famili"
+    },
+    {
+      "slug": "social-media-marketing-workbook-2022-secret-tricks-for-successful",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "social-media-marketing-workbook-2022-secret-tricks-for-successful.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "speeches-that-roused-the-world-by-colin-salter",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "speeches-that-roused-the-world-by-colin-salter.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "stri-sahityakar-mamta-mehrotra-jeevan-sahitya-aur-sangharsh-hindi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "stri-sahityakar-mamta-mehrotra-jeevan-sahitya-aur-sangharsh-hindi.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 64000,
-  "nextOffset": 64500,
+  "offset": 64500,
+  "nextOffset": 65000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9461,
-    "keep_existing": 40114,
-    "not_found": 108930,
+    "downloaded": 9465,
+    "keep_existing": 40262,
+    "not_found": 109278,
     "bad_image": 73
   },
-  "totalProcessed": 158578
+  "totalProcessed": 159078
 }
