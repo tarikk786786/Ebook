@@ -1,21 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 111,
-    "not_found": 389,
+    "downloaded": 1,
+    "keep_existing": 99,
+    "not_found": 400,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 63000,
-  "nextOffset": 63500,
+  "sampleDownloaded": [
+    {
+      "slug": "site-reliability-engineering-how-google-runs-production-systems-volume-3-44403",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "site-reliability-engineering-how-google-runs-production-systems-volume-3-44403.jpg",
+      "bytes": 4475,
+      "title": "The Art of War"
+    }
+  ],
+  "offset": 63500,
+  "nextOffset": 64000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9459,
-    "keep_existing": 39912,
-    "not_found": 108134,
+    "downloaded": 9460,
+    "keep_existing": 40011,
+    "not_found": 108534,
     "bad_image": 73
   },
-  "totalProcessed": 157578
+  "totalProcessed": 158078
 }
