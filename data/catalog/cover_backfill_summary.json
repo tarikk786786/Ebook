@@ -2,37 +2,37 @@
   "processed": 500,
   "counts": {
     "downloaded": 2,
-    "keep_existing": 145,
-    "not_found": 353,
+    "keep_existing": 238,
+    "not_found": 260,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-35778",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-4-63784.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-35778.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014",
+      "slug": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-17348",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-6-67014.jpg",
-      "bytes": 24683,
-      "title": "Stolen Focus"
+      "file": "the-art-of-deception-controlling-the-human-element-of-security-volume-8-17348.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 66000,
-  "nextOffset": 66500,
+  "offset": 66500,
+  "nextOffset": 67000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9468,
-    "keep_existing": 40694,
-    "not_found": 110343,
+    "downloaded": 9470,
+    "keep_existing": 40932,
+    "not_found": 110603,
     "bad_image": 73
   },
-  "totalProcessed": 160578
+  "totalProcessed": 161078
 }
