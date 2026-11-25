@@ -1,46 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 3,
-    "keep_existing": 242,
-    "not_found": 255,
+    "downloaded": 0,
+    "keep_existing": 456,
+    "not_found": 44,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "pdf-resources-bankstart-working-out-hacks-byhn-t-file",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "pdf-resources-bankstart-working-out-hacks-byhn-t-file.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "dollarpremium-answer-2-20251120-170206-311-ᴹᴿℂr𝕒ckєr⁰³-parajumblessent",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dollarpremium-answer-2-20251120-170206-311-ᴹᴿℂr𝕒ckєr⁰³-parajumblessent.jpg",
-      "bytes": 45781,
-      "title": "Most Important Questions"
-    },
-    {
-      "slug": "dollarpremium-answer-2-20251120-170043-051-ᴹᴿℂr𝕒ckєr⁰³-cloze-test-mixe",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dollarpremium-answer-2-20251120-170043-051-ᴹᴿℂr𝕒ckєr⁰³-cloze-test-mixe.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    }
-  ],
-  "offset": 58000,
-  "nextOffset": 58500,
+  "sampleDownloaded": [],
+  "offset": 58500,
+  "nextOffset": 59000,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 9256,
-    "keep_existing": 37604,
-    "not_found": 105645,
+    "keep_existing": 38060,
+    "not_found": 105689,
     "bad_image": 73
   },
-  "totalProcessed": 152578
+  "totalProcessed": 153078
 }
