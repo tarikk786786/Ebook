@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 69,
-    "keep_existing": 45,
-    "not_found": 386,
+    "downloaded": 61,
+    "keep_existing": 40,
+    "not_found": 399,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-80295",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-18355",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-80295.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-18355.jpg",
+      "bytes": 27443,
+      "title": "Sapiens A Brief History of Humankind"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-18507",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-69655",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-18507.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-69655.jpg",
+      "bytes": 35337,
+      "title": "Cognitive-Behavioral"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-21243",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-27019",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-21243.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-27019.jpg",
+      "bytes": 14034,
+      "title": "The Business School KIYOSAKI"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-81891",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-62131",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-81891.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-62131.jpg",
+      "bytes": 14148,
+      "title": "The Elephant In The Brain"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-51567",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-51871",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-51567.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-51871.jpg",
+      "bytes": 25936,
+      "title": "Time Management"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-58179",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-20635",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-58179.jpg",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-20635.jpg",
+      "bytes": 30232,
+      "title": "The-Life-of-Hinduism"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-60763",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-60763.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-19647",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-76723",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-19647.jpg",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-76723.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-40471",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-40471.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-59775",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-66007",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-59775.jpg",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-66007.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-75355",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-75355.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-58939",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-58939.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-73987",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-73987.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-60535",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-60535.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-19267",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-19267.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-74215",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-74215.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-77787",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-22915",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-77787.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-22915.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-68667",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-24055",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-68667.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-24055.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-75507",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-66691",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-75507.jpg",
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-66691.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-49971",
+      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-7-37279",
       "status": "downloaded",
       "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-49971.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-49743",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-49743.jpg",
-      "bytes": 12533,
-      "title": "Handbook for Theory, Research, and Practice in Gestalt Therapy Handbook"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-28311",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-28311.jpg",
-      "bytes": 20411,
-      "title": "The Long Road Home"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-38571",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-38571.jpg",
-      "bytes": 46158,
-      "title": "Stealing fire"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-50199",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-50199.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-53391",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-53391.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-3-23295",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-3-23295.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-5-56393",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-5-56393.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "options-volatility-pricing-advanced-trading-strategies-volume-5-83753",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "options-volatility-pricing-advanced-trading-strategies-volume-5-83753.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "options-volatility-pricing-advanced-trading-strategies-volume-7-37279.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 57000,
-  "nextOffset": 57500,
+  "offset": 57500,
+  "nextOffset": 58000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9192,
-    "keep_existing": 37322,
-    "not_found": 104991,
+    "downloaded": 9253,
+    "keep_existing": 37362,
+    "not_found": 105390,
     "bad_image": 73
   },
-  "totalProcessed": 151578
+  "totalProcessed": 152078
 }
