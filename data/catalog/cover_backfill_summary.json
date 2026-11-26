@@ -1,62 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 5,
-    "keep_existing": 159,
-    "not_found": 336,
+    "downloaded": 4,
+    "keep_existing": 177,
+    "not_found": 319,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-3-39771",
+      "slug": "the-web-application-hacker-s-handbook-volume-7-67435",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-3-39771.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-3-79899",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-3-79899.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-3-78303",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-3-78303.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-5-82901",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-5-82901.jpg",
+      "file": "the-web-application-hacker-s-handbook-volume-7-67435.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-5-79709",
+      "slug": "the-web-application-hacker-s-handbook-volume-7-27307",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-5-79709.jpg",
+      "file": "the-web-application-hacker-s-handbook-volume-7-27307.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "the-web-application-hacker-s-handbook-volume-7-54439",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-web-application-hacker-s-handbook-volume-7-54439.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-web-application-hacker-s-handbook-volume-9-19137",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-web-application-hacker-s-handbook-volume-9-19137.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 77000,
-  "nextOffset": 77500,
+  "offset": 77500,
+  "nextOffset": 78000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9691,
-    "keep_existing": 43401,
-    "not_found": 118413,
+    "downloaded": 9695,
+    "keep_existing": 43578,
+    "not_found": 118732,
     "bad_image": 73
   },
-  "totalProcessed": 171578
+  "totalProcessed": 172078
 }
