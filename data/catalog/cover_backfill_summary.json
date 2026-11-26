@@ -1,21 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 103,
-    "not_found": 397,
+    "downloaded": 1,
+    "keep_existing": 115,
+    "not_found": 384,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 73500,
-  "nextOffset": 74000,
+  "sampleDownloaded": [
+    {
+      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-81597",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-81597.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    }
+  ],
+  "offset": 74000,
+  "nextOffset": 74500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9680,
-    "keep_existing": 42514,
-    "not_found": 115811,
+    "downloaded": 9681,
+    "keep_existing": 42629,
+    "not_found": 116195,
     "bad_image": 73
   },
-  "totalProcessed": 168078
+  "totalProcessed": 168578
 }
