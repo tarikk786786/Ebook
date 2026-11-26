@@ -1,21 +1,38 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 137,
-    "not_found": 363,
+    "downloaded": 2,
+    "keep_existing": 130,
+    "not_found": 368,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 72000,
-  "nextOffset": 72500,
+  "sampleDownloaded": [
+    {
+      "slug": "the-lean-startup-continuous-innovation-playbook-volume-8-47960",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-lean-startup-continuous-innovation-playbook-volume-8-47960.jpg",
+      "bytes": 20315,
+      "title": "The Mountain Is You Wiest"
+    },
+    {
+      "slug": "the-power-of-your-subconscious-mind-1-1",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-power-of-your-subconscious-mind-1-1.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    }
+  ],
+  "offset": 72500,
+  "nextOffset": 73000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9678,
-    "keep_existing": 42173,
-    "not_found": 114654,
+    "downloaded": 9680,
+    "keep_existing": 42303,
+    "not_found": 115022,
     "bad_image": 73
   },
-  "totalProcessed": 166578
+  "totalProcessed": 167078
 }
