@@ -1,38 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 109,
-    "not_found": 389,
+    "downloaded": 1,
+    "keep_existing": 145,
+    "not_found": 354,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-steal-the-attempt-to-overturn-the-2020-election-and-the-peopl",
+      "slug": "the-web-application-hacker-s-handbook-volume-1-80089",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-steal-the-attempt-to-overturn-the-2020-election-and-the-peopl.jpg",
+      "file": "the-web-application-hacker-s-handbook-volume-1-80089.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-voltage-effect-how-to-make-good-ideas-great-and-great-ideas",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-voltage-effect-how-to-make-good-ideas-great-and-great-ideas.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
     }
   ],
-  "offset": 76000,
-  "nextOffset": 76500,
+  "offset": 76500,
+  "nextOffset": 77000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9685,
-    "keep_existing": 43097,
-    "not_found": 117723,
+    "downloaded": 9686,
+    "keep_existing": 43242,
+    "not_found": 118077,
     "bad_image": 73
   },
-  "totalProcessed": 170578
+  "totalProcessed": 171078
 }
