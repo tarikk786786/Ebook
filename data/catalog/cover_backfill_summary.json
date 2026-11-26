@@ -2,53 +2,53 @@
   "processed": 500,
   "counts": {
     "downloaded": 4,
-    "keep_existing": 177,
-    "not_found": 319,
+    "keep_existing": 178,
+    "not_found": 318,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-7-67435",
+      "slug": "the-web-application-hacker-s-handbook-volume-9-78873",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-7-67435.jpg",
+      "file": "the-web-application-hacker-s-handbook-volume-9-78873.jpg",
+      "bytes": 17295,
+      "title": "life and work of Sardar Vallabhbhai Patel"
+    },
+    {
+      "slug": "the-web-application-hacker-s-handbook-volume-9-26205",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-web-application-hacker-s-handbook-volume-9-26205.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "the-power-of-your-subconscious-mind-pdf-book-in-hindi",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-power-of-your-subconscious-mind-pdf-book-in-hindi.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "the-web-application-hacker-s-handbook-volume-7-27307",
+      "slug": "thelea1",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-7-27307.jpg",
+      "file": "thelea1.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-7-54439",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-7-54439.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-web-application-hacker-s-handbook-volume-9-19137",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-web-application-hacker-s-handbook-volume-9-19137.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 77500,
-  "nextOffset": 78000,
+  "offset": 78000,
+  "nextOffset": 78500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9695,
-    "keep_existing": 43578,
-    "not_found": 118732,
+    "downloaded": 9699,
+    "keep_existing": 43756,
+    "not_found": 119050,
     "bad_image": 73
   },
-  "totalProcessed": 172078
+  "totalProcessed": 172578
 }
