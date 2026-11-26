@@ -1,38 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 165,
-    "not_found": 333,
+    "downloaded": 0,
+    "keep_existing": 98,
+    "not_found": 402,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-41697",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-psychology-of-money-timeless-lessons-on-wealth-and-greed-volume-9-41697.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-rust-programming-language-volume-10-46414",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-rust-programming-language-volume-10-46414.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    }
-  ],
-  "offset": 74500,
-  "nextOffset": 75000,
+  "sampleDownloaded": [],
+  "offset": 75000,
+  "nextOffset": 75500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 9683,
-    "keep_existing": 42794,
-    "not_found": 116528,
+    "keep_existing": 42892,
+    "not_found": 116930,
     "bad_image": 73
   },
-  "totalProcessed": 169078
+  "totalProcessed": 169578
 }
