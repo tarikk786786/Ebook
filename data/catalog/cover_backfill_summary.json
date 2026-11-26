@@ -1,182 +1,21 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 27,
-    "keep_existing": 208,
-    "not_found": 265,
+    "downloaded": 0,
+    "keep_existing": 114,
+    "not_found": 386,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-7-74707",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-7-74707.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-7-33667",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-7-33667.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-7-72199",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-7-72199.jpg",
-      "bytes": 7289,
-      "title": "Software Engineering"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-7-71287",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-7-71287.jpg",
-      "bytes": 52358,
-      "title": "The Intelligent Investor"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-7-30703",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-7-30703.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-7-28195",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-7-28195.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-46017",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-46017.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-76113",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-76113.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-25269",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-25269.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-55137",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-55137.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-47385",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-47385.jpg",
-      "bytes": 25719,
-      "title": "Ikigai"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-77253",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-77253.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-60609",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-60609.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-64713",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-64713.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-66081",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-66081.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-34161",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-34161.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-21393",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-21393.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-68817",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-68817.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-81813",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-81813.jpg",
-      "bytes": 48023,
-      "title": "Financial Freedom on $5 a Day A Step"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-9-50805",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-9-50805.jpg",
-      "bytes": 39441,
-      "title": "The Business of The 21st Century"
-    }
-  ],
-  "offset": 70500,
-  "nextOffset": 71000,
+  "sampleDownloaded": [],
+  "offset": 71000,
+  "nextOffset": 71500,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 9678,
-    "keep_existing": 41767,
-    "not_found": 113560,
+    "keep_existing": 41881,
+    "not_found": 113946,
     "bad_image": 73
   },
-  "totalProcessed": 165078
+  "totalProcessed": 165578
 }
