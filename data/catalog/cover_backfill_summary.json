@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 63,
-    "keep_existing": 38,
-    "not_found": 399,
+    "downloaded": 64,
+    "keep_existing": 44,
+    "not_found": 392,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-55859",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-54833",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-55859.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-54833.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-71021",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-71021.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-39443",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-21773",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-39443.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-21773.jpg",
+      "bytes": 24638,
+      "title": "The Compound Effect"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-48221",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-48221.jpg",
+      "bytes": 39341,
+      "title": "The Art and Practice of Astral Projection"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-23597",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-23597.jpg",
+      "bytes": 3576,
+      "title": "Ariadne Florentina Six Lectures on Wood and Metal Engraving"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-82421",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-82421.jpg",
+      "bytes": 19381,
+      "title": "At Your Command"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-68969",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-68969.jpg",
+      "bytes": 45802,
+      "title": "Write+it+Right"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-38417",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-38417.jpg",
+      "bytes": 38531,
+      "title": "Same Soul, Many Bodies"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-25193",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-25193.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-60191",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-72161",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-60191.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-72161.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-60875",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-37505",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-60875.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-17783",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-17783.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-37505.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-19151",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-40925",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-19151.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-40925.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-51755",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-24509",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-51755.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-24509.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-21659",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-48677",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-21659.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-48677.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-16073",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-16073.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-43547",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-57569",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-43547.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-17555",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-17555.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-69311",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-69311.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-32831",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-32831.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-57569.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-51071",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-24053",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-51071.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-24053.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-33743",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-80369",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-33743.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-18695",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-18695.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-56999",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-56999.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-80369.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-77975",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-72845",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-77975.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-72845.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-82307",
+      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-5-28613",
       "status": "downloaded",
       "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-82307.jpg",
+      "file": "the-intelligent-investor-modern-portfolio-theory-volume-5-28613.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-56771",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-56771.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "the-intelligent-investor-modern-portfolio-theory-volume-11-69083",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "the-intelligent-investor-modern-portfolio-theory-volume-11-69083.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     }
   ],
-  "offset": 69500,
-  "nextOffset": 70000,
+  "offset": 70000,
+  "nextOffset": 70500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9587,
-    "keep_existing": 41515,
-    "not_found": 112903,
+    "downloaded": 9651,
+    "keep_existing": 41559,
+    "not_found": 113295,
     "bad_image": 73
   },
-  "totalProcessed": 164078
+  "totalProcessed": 164578
 }
