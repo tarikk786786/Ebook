@@ -1,54 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 4,
-    "keep_existing": 147,
-    "not_found": 349,
+    "downloaded": 1,
+    "keep_existing": 121,
+    "not_found": 378,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "thinking-fast-and-slow-volume-12-56364",
+      "slug": "thinking-fast-and-slow-volume-4-80152",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-56364.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-12-75516",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-75516.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-12-37896",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-37896.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "thinking-fast-and-slow-volume-12-54312",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-12-54312.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "thinking-fast-and-slow-volume-4-80152.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     }
   ],
-  "offset": 78500,
-  "nextOffset": 79000,
+  "offset": 79000,
+  "nextOffset": 79500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9703,
-    "keep_existing": 43903,
-    "not_found": 119399,
+    "downloaded": 9704,
+    "keep_existing": 44024,
+    "not_found": 119777,
     "bad_image": 73
   },
-  "totalProcessed": 173078
+  "totalProcessed": 173578
 }
