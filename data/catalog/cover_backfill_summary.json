@@ -1,21 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 157,
-    "not_found": 343,
+    "downloaded": 1,
+    "keep_existing": 110,
+    "not_found": 389,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 85000,
-  "nextOffset": 85500,
+  "sampleDownloaded": [
+    {
+      "slug": "gita-rahasya-volume-2-66494",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "gita-rahasya-volume-2-66494.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    }
+  ],
+  "offset": 85500,
+  "nextOffset": 86000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9945,
-    "keep_existing": 45623,
-    "not_found": 123936,
+    "downloaded": 9946,
+    "keep_existing": 45733,
+    "not_found": 124325,
     "bad_image": 74
   },
-  "totalProcessed": 179578
+  "totalProcessed": 180078
 }
