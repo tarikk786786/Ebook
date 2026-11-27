@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 72,
-    "keep_existing": 38,
-    "not_found": 390,
+    "downloaded": 68,
+    "keep_existing": 31,
+    "not_found": 401,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "godan-volume-10-79942",
+      "slug": "godan-volume-4-80968",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-10-79942.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "godan-volume-4-80968.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "godan-volume-12-40080",
+      "slug": "godan-volume-4-82336",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-40080.jpg",
+      "file": "godan-volume-4-82336.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "godan-volume-4-32404",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-4-32404.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-12-40992",
+      "slug": "godan-volume-4-21688",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-40992.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "godan-volume-12-81576",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-12-81576.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "godan-volume-12-68124",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-12-68124.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "godan-volume-12-31188",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-12-31188.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "godan-volume-12-28908",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-12-28908.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "godan-volume-12-19788",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-12-19788.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "godan-volume-12-25032",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-12-25032.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "godan-volume-12-83856",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "godan-volume-12-83856.jpg",
+      "file": "godan-volume-4-21688.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-12-47376",
+      "slug": "godan-volume-4-31492",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-47376.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "godan-volume-4-31492.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "godan-volume-12-49200",
+      "slug": "godan-volume-4-58852",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-49200.jpg",
+      "file": "godan-volume-4-58852.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-4-72304",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-4-72304.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-4-71620",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-4-71620.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "godan-volume-4-67744",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-4-67744.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-12-19332",
+      "slug": "godan-volume-4-56344",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-19332.jpg",
+      "file": "godan-volume-4-56344.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-4-26020",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-4-26020.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "godan-volume-4-16900",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-4-16900.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "godan-volume-12-82944",
+      "slug": "godan-volume-4-81424",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-82944.jpg",
-      "bytes": 18348,
-      "title": "Poor Charlie's Almanack"
+      "file": "godan-volume-4-81424.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-12-20928",
+      "slug": "godan-volume-4-81880",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-20928.jpg",
-      "bytes": 32875,
-      "title": "Handbook of Art Therapy"
+      "file": "godan-volume-4-81880.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-12-67440",
+      "slug": "godan-volume-4-20776",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-67440.jpg",
-      "bytes": 25062,
-      "title": "All Is Well"
+      "file": "godan-volume-4-20776.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-12-72000",
+      "slug": "godan-volume-4-16216",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-72000.jpg",
-      "bytes": 13790,
-      "title": "The Art Of Learning"
+      "file": "godan-volume-4-16216.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-12-16140",
+      "slug": "godan-volume-4-59080",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-16140.jpg",
-      "bytes": 11326,
-      "title": "Lions And Scavengers"
+      "file": "godan-volume-4-59080.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "godan-volume-12-80436",
+      "slug": "godan-volume-4-29668",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-80436.jpg",
-      "bytes": 63669,
-      "title": "Palmistry"
+      "file": "godan-volume-4-29668.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "godan-volume-12-66300",
+      "slug": "godan-volume-4-60448",
       "status": "downloaded",
       "source": "open-library",
-      "file": "godan-volume-12-66300.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "godan-volume-4-60448.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "godan-volume-4-56800",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-4-56800.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 87000,
-  "nextOffset": 87500,
+  "offset": 87500,
+  "nextOffset": 88000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 10043,
-    "keep_existing": 46136,
-    "not_found": 125325,
+    "downloaded": 10111,
+    "keep_existing": 46167,
+    "not_found": 125726,
     "bad_image": 74
   },
-  "totalProcessed": 181578
+  "totalProcessed": 182078
 }
