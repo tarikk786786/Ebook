@@ -1,182 +1,78 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 48,
-    "keep_existing": 66,
-    "not_found": 386,
+    "downloaded": 7,
+    "keep_existing": 237,
+    "not_found": 256,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-81774",
+      "slug": "understanding-the-difference-between-habits-and-obsessive",
       "status": "downloaded",
       "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-81774.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-25686",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-25686.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-22038",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-22038.jpg",
+      "file": "understanding-the-difference-between-habits-and-obsessive.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-23634",
+      "slug": "dollarpremium-answer-2-20260708-034338-144-8-the-mirror-tracker-printa",
       "status": "downloaded",
       "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-23634.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-29790",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-29790.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-50994",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-50994.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-47802",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-47802.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-79266",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-79266.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-19758",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-19758.jpg",
+      "file": "dollarpremium-answer-2-20260708-034338-144-8-the-mirror-tracker-printa.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-32070",
+      "slug": "vp-menon-the-unsung-by-narayani-basu",
       "status": "downloaded",
       "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-32070.jpg",
-      "bytes": 12379,
-      "title": "The Universe Has Your Back"
+      "file": "vp-menon-the-unsung-by-narayani-basu.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-36402",
+      "slug": "vocab-videos-lecture-47-owspdf",
       "status": "downloaded",
       "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-36402.jpg",
+      "file": "vocab-videos-lecture-47-owspdf.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "dollarpremium-answer-2-20251120-170111-141-ᴹᴿℂr𝕒ckєr⁰³-odd-one-out-par",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "dollarpremium-answer-2-20251120-170111-141-ᴹᴿℂr𝕒ckєr⁰³-odd-one-out-par.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-54186",
+      "slug": "win-every-argument-the-art-of-debating-persuading-and-public-spea",
       "status": "downloaded",
       "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-54186.jpg",
-      "bytes": 38632,
-      "title": "How I Made It 40 Successful Entrepreneurs Reveal How They Made Millions"
+      "file": "win-every-argument-the-art-of-debating-persuading-and-public-spea.jpg",
+      "bytes": 54114,
+      "title": "Discipline Is Destiny"
     },
     {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-74934",
+      "slug": "your-micro-niche-worksheet-9013",
       "status": "downloaded",
       "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-6-74934.jpg",
-      "bytes": 34210,
-      "title": "How to Talk to Anyone"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-38720",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-38720.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-46928",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-46928.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-30968",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-30968.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-47156",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-47156.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-29600",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-29600.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-32792",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-32792.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-53312",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "upsc-civil-services-general-studies-comprehensive-blueprint-volume-8-53312.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "your-micro-niche-worksheet-9013.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 81500,
-  "nextOffset": 82000,
+  "offset": 82000,
+  "nextOffset": 82500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9916,
-    "keep_existing": 44447,
-    "not_found": 121641,
+    "downloaded": 9923,
+    "keep_existing": 44684,
+    "not_found": 121897,
     "bad_image": 74
   },
-  "totalProcessed": 176078
+  "totalProcessed": 176578
 }
