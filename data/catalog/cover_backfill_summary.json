@@ -1,30 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 123,
-    "not_found": 376,
+    "downloaded": 4,
+    "keep_existing": 148,
+    "not_found": 348,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-18015",
       "status": "downloaded",
       "source": "open-library",
-      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247.jpg",
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-18015.jpg",
+      "bytes": 48976,
+      "title": "The Unfair Advantage"
+    },
+    {
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-69771",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-69771.jpg",
+      "bytes": 31050,
+      "title": "Frontend"
+    },
+    {
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-37851",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-3-37851.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-5-70721",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-5-70721.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     }
   ],
-  "offset": 82500,
-  "nextOffset": 83000,
+  "offset": 83000,
+  "nextOffset": 83500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9924,
-    "keep_existing": 44807,
-    "not_found": 122273,
+    "downloaded": 9928,
+    "keep_existing": 44955,
+    "not_found": 122621,
     "bad_image": 74
   },
-  "totalProcessed": 177078
+  "totalProcessed": 177578
 }
