@@ -1,30 +1,54 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 110,
-    "not_found": 389,
+    "downloaded": 4,
+    "keep_existing": 181,
+    "not_found": 315,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "gita-rahasya-volume-2-66494",
+      "slug": "gita-rahasya-volume-6-36246",
       "status": "downloaded",
       "source": "open-library",
-      "file": "gita-rahasya-volume-2-66494.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "gita-rahasya-volume-6-36246.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "gita-rahasya-volume-8-48368",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "gita-rahasya-volume-8-48368.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "gita-rahasya-volume-8-19184",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "gita-rahasya-volume-8-19184.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "godan-volume-10-34114",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "godan-volume-10-34114.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     }
   ],
-  "offset": 85500,
-  "nextOffset": 86000,
+  "offset": 86000,
+  "nextOffset": 86500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9946,
-    "keep_existing": 45733,
-    "not_found": 124325,
+    "downloaded": 9950,
+    "keep_existing": 45914,
+    "not_found": 124640,
     "bad_image": 74
   },
-  "totalProcessed": 180078
+  "totalProcessed": 180578
 }
