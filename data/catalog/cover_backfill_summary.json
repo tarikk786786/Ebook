@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 46,
+    "downloaded": 62,
     "keep_existing": 40,
-    "not_found": 414,
+    "not_found": 398,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "chanakya-niti-volume-11-25871",
+      "slug": "chanakya-niti-volume-7-29215",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-11-25871.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "chanakya-niti-volume-11-54371",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-11-54371.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-11-75803",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-11-75803.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "chanakya-niti-volume-11-31343",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-11-31343.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "chanakya-niti-volume-11-67823",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-11-67823.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-45783",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-45783.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-38031",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-38031.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-43275",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-43275.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-28227",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-28227.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-30051",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-30051.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-43959",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-43959.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-53991",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-53991.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-22755",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-22755.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "chanakya-niti-volume-3-39171",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "chanakya-niti-volume-3-39171.jpg",
+      "file": "chanakya-niti-volume-7-29215.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "chanakya-niti-volume-3-40995",
+      "slug": "chanakya-niti-volume-7-81427",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-3-40995.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "chanakya-niti-volume-7-81427.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "chanakya-niti-volume-3-40767",
+      "slug": "chanakya-niti-volume-7-37195",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-3-40767.jpg",
+      "file": "chanakya-niti-volume-7-37195.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-81199",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-81199.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-23059",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-23059.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-62047",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-62047.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "chanakya-niti-volume-3-80667",
+      "slug": "chanakya-niti-volume-7-16675",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-3-80667.jpg",
-      "bytes": 12052,
-      "title": "Forensic Psychological Assessment in Practice Case Studies"
+      "file": "chanakya-niti-volume-7-16675.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "chanakya-niti-volume-3-57867",
+      "slug": "chanakya-niti-volume-7-75271",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-3-57867.jpg",
-      "bytes": 38545,
-      "title": "What got you here wont get you there how successful people become"
+      "file": "chanakya-niti-volume-7-75271.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "chanakya-niti-volume-3-31419",
+      "slug": "chanakya-niti-volume-7-36967",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-3-31419.jpg",
-      "bytes": 53495,
-      "title": "Harry Potter and the Philosopher's Stone"
+      "file": "chanakya-niti-volume-7-36967.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "chanakya-niti-volume-3-53763",
+      "slug": "chanakya-niti-volume-7-67747",
       "status": "downloaded",
       "source": "open-library",
-      "file": "chanakya-niti-volume-3-53763.jpg",
-      "bytes": 50961,
-      "title": "Getting the love you want Hendrix"
+      "file": "chanakya-niti-volume-7-67747.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-56575",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-56575.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-64783",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-64783.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-43579",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-43579.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-57031",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-57031.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-26707",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-26707.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-35827",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-35827.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-48595",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-48595.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-74587",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-74587.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-53155",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-53155.jpg",
+      "bytes": 32688,
+      "title": "What Really Matters"
+    },
+    {
+      "slug": "chanakya-niti-volume-7-63187",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "chanakya-niti-volume-7-63187.jpg",
+      "bytes": 36059,
+      "title": "Sophie's World"
     }
   ],
-  "offset": 89000,
-  "nextOffset": 89500,
+  "offset": 89500,
+  "nextOffset": 90000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 10260,
-    "keep_existing": 46291,
-    "not_found": 126953,
+    "downloaded": 10322,
+    "keep_existing": 46331,
+    "not_found": 127351,
     "bad_image": 74
   },
-  "totalProcessed": 183578
+  "totalProcessed": 184078
 }
