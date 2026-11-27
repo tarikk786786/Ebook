@@ -1,30 +1,62 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 1,
-    "keep_existing": 121,
-    "not_found": 378,
+    "downloaded": 5,
+    "keep_existing": 132,
+    "not_found": 363,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "thinking-fast-and-slow-volume-4-80152",
+      "slug": "thinking-fast-and-slow-volume-6-39378",
       "status": "downloaded",
       "source": "open-library",
-      "file": "thinking-fast-and-slow-volume-4-80152.jpg",
+      "file": "thinking-fast-and-slow-volume-6-39378.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-6-40974",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-6-40974.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-8-30752",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-8-30752.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-8-31664",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-8-31664.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "thinking-fast-and-slow-volume-8-67916",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "thinking-fast-and-slow-volume-8-67916.jpg",
+      "bytes": 42260,
+      "title": "Brian Tracy"
     }
   ],
-  "offset": 79000,
-  "nextOffset": 79500,
+  "offset": 79500,
+  "nextOffset": 80000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9704,
-    "keep_existing": 44024,
-    "not_found": 119777,
+    "downloaded": 9709,
+    "keep_existing": 44156,
+    "not_found": 120140,
     "bad_image": 73
   },
-  "totalProcessed": 173578
+  "totalProcessed": 174078
 }

@@ -1,20 +1,20 @@
 {
-  "nextOffset": 79500,
-  "lastOffset": 79000,
+  "nextOffset": 80000,
+  "lastOffset": 79500,
   "processed": 500,
-  "totalProcessed": 173578,
+  "totalProcessed": 174078,
   "totalTargets": 94078,
   "totalCounts": {
-    "downloaded": 9704,
-    "keep_existing": 44024,
-    "not_found": 119777,
+    "downloaded": 9709,
+    "keep_existing": 44156,
+    "not_found": 120140,
     "bad_image": 73
   },
-  "updatedAt": "2026-11-27T00:07:32Z",
+  "updatedAt": "2026-11-27T00:13:57Z",
   "lastCounts": {
-    "downloaded": 1,
-    "keep_existing": 121,
-    "not_found": 378,
+    "downloaded": 5,
+    "keep_existing": 132,
+    "not_found": 363,
     "bad_image": 0
   }
 }
