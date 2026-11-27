@@ -1,78 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 7,
-    "keep_existing": 237,
-    "not_found": 256,
+    "downloaded": 1,
+    "keep_existing": 123,
+    "not_found": 376,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "understanding-the-difference-between-habits-and-obsessive",
+      "slug": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247",
       "status": "downloaded",
       "source": "open-library",
-      "file": "understanding-the-difference-between-habits-and-obsessive.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "dollarpremium-answer-2-20260708-034338-144-8-the-mirror-tracker-printa",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dollarpremium-answer-2-20260708-034338-144-8-the-mirror-tracker-printa.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "vp-menon-the-unsung-by-narayani-basu",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "vp-menon-the-unsung-by-narayani-basu.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "vocab-videos-lecture-47-owspdf",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "vocab-videos-lecture-47-owspdf.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "dollarpremium-answer-2-20251120-170111-141-ᴹᴿℂr𝕒ckєr⁰³-odd-one-out-par",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "dollarpremium-answer-2-20251120-170111-141-ᴹᴿℂr𝕒ckєr⁰³-odd-one-out-par.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "win-every-argument-the-art-of-debating-persuading-and-public-spea",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "win-every-argument-the-art-of-debating-persuading-and-public-spea.jpg",
-      "bytes": 54114,
-      "title": "Discipline Is Destiny"
-    },
-    {
-      "slug": "your-micro-niche-worksheet-9013",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "your-micro-niche-worksheet-9013.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "zero-to-one-notes-on-startups-and-how-to-build-the-future-volume-11-43247.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     }
   ],
-  "offset": 82000,
-  "nextOffset": 82500,
+  "offset": 82500,
+  "nextOffset": 83000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 9923,
-    "keep_existing": 44684,
-    "not_found": 121897,
+    "downloaded": 9924,
+    "keep_existing": 44807,
+    "not_found": 122273,
     "bad_image": 74
   },
-  "totalProcessed": 176578
+  "totalProcessed": 177078
 }
