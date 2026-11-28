@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 154,
-    "keep_existing": 51,
-    "not_found": 295,
+    "downloaded": 292,
+    "keep_existing": 166,
+    "not_found": 42,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "raag-darbari-volume-3-67023",
+      "slug": "raag-darbari-volume-11-72191",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-67023.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "raag-darbari-volume-11-72191.jpg",
+      "bytes": 23747,
+      "title": "The Rise and Fall of Strategic Planning"
     },
     {
-      "slug": "raag-darbari-volume-3-33963",
+      "slug": "raag-darbari-volume-11-51899",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-33963.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "raag-darbari-volume-11-51899.jpg",
+      "bytes": 41449,
+      "title": "The Attacker's Advantage"
     },
     {
-      "slug": "raag-darbari-volume-3-28947",
+      "slug": "raag-darbari-volume-11-51215",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-28947.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "raag-darbari-volume-11-51215.jpg",
+      "bytes": 30443,
+      "title": "Start with Why"
     },
     {
-      "slug": "raag-darbari-volume-3-37155",
+      "slug": "raag-darbari-volume-11-26135",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-37155.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "raag-darbari-volume-11-26135.jpg",
+      "bytes": 15810,
+      "title": "Leaders Eat Last"
     },
     {
-      "slug": "raag-darbari-volume-3-41943",
+      "slug": "raag-darbari-volume-11-30695",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-41943.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "raag-darbari-volume-11-30695.jpg",
+      "bytes": 22730,
+      "title": "The Infinite Game"
     },
     {
-      "slug": "raag-darbari-volume-3-17547",
+      "slug": "raag-darbari-volume-11-83591",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-17547.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "raag-darbari-volume-11-83591.jpg",
+      "bytes": 36963,
+      "title": "Dare to Lead"
     },
     {
-      "slug": "raag-darbari-volume-3-48327",
+      "slug": "raag-darbari-volume-11-54635",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-48327.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "raag-darbari-volume-11-54635.jpg",
+      "bytes": 26539,
+      "title": "The Leadership Challenge"
     },
     {
-      "slug": "raag-darbari-volume-3-72495",
+      "slug": "raag-darbari-volume-11-68771",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-72495.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "raag-darbari-volume-11-68771.jpg",
+      "bytes": 33592,
+      "title": "Leadership on the Line"
     },
     {
-      "slug": "raag-darbari-volume-3-22335",
+      "slug": "raag-darbari-volume-11-44147",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-22335.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "raag-darbari-volume-11-44147.jpg",
+      "bytes": 44665,
+      "title": "Primal Leadership"
     },
     {
-      "slug": "raag-darbari-volume-3-72267",
+      "slug": "raag-darbari-volume-11-57599",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-3-72267.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "raag-darbari-volume-11-57599.jpg",
+      "bytes": 32217,
+      "title": "Emotional Intelligence"
     },
     {
-      "slug": "raag-darbari-volume-5-80741",
+      "slug": "raag-darbari-volume-11-19295",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-80741.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
+      "file": "raag-darbari-volume-11-19295.jpg",
+      "bytes": 29892,
+      "title": "Good Leaders Ask Great Questions"
     },
     {
-      "slug": "raag-darbari-volume-5-25565",
+      "slug": "raag-darbari-volume-11-19751",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-25565.jpg",
-      "bytes": 52923,
-      "title": "Tell Me Everything"
+      "file": "raag-darbari-volume-11-19751.jpg",
+      "bytes": 34070,
+      "title": "Developing the Leader Within You 2.0"
     },
     {
-      "slug": "raag-darbari-volume-5-70481",
+      "slug": "raag-darbari-volume-11-18611",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-70481.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "raag-darbari-volume-11-18611.jpg",
+      "bytes": 25327,
+      "title": "The Motive"
     },
     {
-      "slug": "raag-darbari-volume-5-36509",
+      "slug": "raag-darbari-volume-11-82679",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-36509.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "raag-darbari-volume-11-82679.jpg",
+      "bytes": 27914,
+      "title": "The Five Dysfunctions of a Team"
     },
     {
-      "slug": "raag-darbari-volume-5-47909",
+      "slug": "raag-darbari-volume-11-32519",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-47909.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+      "file": "raag-darbari-volume-11-32519.jpg",
+      "bytes": 28749,
+      "title": "The Advantage"
     },
     {
-      "slug": "raag-darbari-volume-5-61589",
+      "slug": "raag-darbari-volume-11-50987",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-5-61589.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "raag-darbari-volume-11-50987.jpg",
+      "bytes": 47541,
+      "title": "Multipliers"
     },
     {
-      "slug": "raag-darbari-volume-7-31987",
+      "slug": "raag-darbari-volume-11-16559",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-7-31987.jpg",
-      "bytes": 5444,
-      "title": "A Wonderful Creation"
+      "file": "raag-darbari-volume-11-16559.jpg",
+      "bytes": 23730,
+      "title": "Turn the Ship Around!"
     },
     {
-      "slug": "raag-darbari-volume-7-74623",
+      "slug": "raag-darbari-volume-11-23855",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-7-74623.jpg",
-      "bytes": 36454,
-      "title": "Abraham Lincon"
+      "file": "raag-darbari-volume-11-23855.jpg",
+      "bytes": 22221,
+      "title": "Extreme Ownership"
     },
     {
-      "slug": "raag-darbari-volume-7-73255",
+      "slug": "raag-darbari-volume-11-16331",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-7-73255.jpg",
-      "bytes": 39513,
-      "title": "Rich Dad’s Before You Quit Your Job Kiyosaki"
+      "file": "raag-darbari-volume-11-16331.jpg",
+      "bytes": 25281,
+      "title": "The Dichotomy of Leadership"
     },
     {
-      "slug": "raag-darbari-volume-7-43843",
+      "slug": "raag-darbari-volume-11-77663",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-7-43843.jpg",
-      "bytes": 38338,
-      "title": "The Psychology Of Money Housel"
+      "file": "raag-darbari-volume-11-77663.jpg",
+      "bytes": 35311,
+      "title": "Wooden on Leadership"
     }
   ],
-  "offset": 92000,
-  "nextOffset": 92500,
+  "offset": 92500,
+  "nextOffset": 93000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 10687,
-    "keep_existing": 46555,
-    "not_found": 129262,
+    "downloaded": 10979,
+    "keep_existing": 46721,
+    "not_found": 129304,
     "bad_image": 74
   },
-  "totalProcessed": 186578
+  "totalProcessed": 187078
 }
