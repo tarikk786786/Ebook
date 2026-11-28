@@ -1,38 +1,30 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 2,
-    "keep_existing": 171,
-    "not_found": 326,
+    "downloaded": 1,
+    "keep_existing": 146,
+    "not_found": 352,
     "bad_image": 1
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "ai-2041-ten-visions-for-our-future",
-      "status": "downloaded",
-      "source": "internet-archive",
-      "file": "ai-2041-ten-visions-for-our-future.jpg",
-      "bytes": 5722,
-      "title": "AI 2041 Ten Visions for Our Future"
-    },
-    {
-      "slug": "bloodstain-pattern-analysis",
+      "slug": "the-mountain-is-you-wiest",
       "status": "downloaded",
       "source": "open-library",
-      "file": "bloodstain-pattern-analysis.jpg",
-      "bytes": 36683,
-      "title": "Bloodstain Pattern Analysis"
+      "file": "the-mountain-is-you-wiest.jpg",
+      "bytes": 20315,
+      "title": "The Mountain Is You Wiest"
     }
   ],
-  "offset": 0,
-  "nextOffset": 500,
+  "offset": 500,
+  "nextOffset": 1000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 11218,
-    "keep_existing": 47115,
-    "not_found": 130248,
-    "bad_image": 75
+    "downloaded": 11219,
+    "keep_existing": 47261,
+    "not_found": 130600,
+    "bad_image": 76
   },
-  "totalProcessed": 188656
+  "totalProcessed": 189156
 }
