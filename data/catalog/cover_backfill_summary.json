@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 292,
-    "keep_existing": 166,
-    "not_found": 42,
+    "downloaded": 182,
+    "keep_existing": 152,
+    "not_found": 166,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "raag-darbari-volume-11-72191",
+      "slug": "raag-darbari-volume-5-32405",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-72191.jpg",
-      "bytes": 23747,
-      "title": "The Rise and Fall of Strategic Planning"
+      "file": "raag-darbari-volume-5-32405.jpg",
+      "bytes": 51536,
+      "title": "Super Thinking"
     },
     {
-      "slug": "raag-darbari-volume-11-51899",
+      "slug": "raag-darbari-volume-5-17813",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-51899.jpg",
-      "bytes": 41449,
-      "title": "The Attacker's Advantage"
+      "file": "raag-darbari-volume-5-17813.jpg",
+      "bytes": 22504,
+      "title": "The Great Mental Models,"
     },
     {
-      "slug": "raag-darbari-volume-11-51215",
+      "slug": "raag-darbari-volume-5-74813",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-51215.jpg",
-      "bytes": 30443,
-      "title": "Start with Why"
+      "file": "raag-darbari-volume-5-74813.jpg",
+      "bytes": 40495,
+      "title": "The Art of Thinking in Systems"
     },
     {
-      "slug": "raag-darbari-volume-11-26135",
+      "slug": "raag-darbari-volume-5-62045",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-26135.jpg",
-      "bytes": 15810,
-      "title": "Leaders Eat Last"
+      "file": "raag-darbari-volume-5-62045.jpg",
+      "bytes": 22504,
+      "title": "The Great Mental Models,"
     },
     {
-      "slug": "raag-darbari-volume-11-30695",
+      "slug": "raag-darbari-volume-5-58397",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-30695.jpg",
-      "bytes": 22730,
-      "title": "The Infinite Game"
+      "file": "raag-darbari-volume-5-58397.jpg",
+      "bytes": 22504,
+      "title": "The Great Mental Models,"
     },
     {
-      "slug": "raag-darbari-volume-11-83591",
+      "slug": "raag-darbari-volume-5-58625",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-83591.jpg",
-      "bytes": 36963,
-      "title": "Dare to Lead"
+      "file": "raag-darbari-volume-5-58625.jpg",
+      "bytes": 12782,
+      "title": "The Practicing Stoic"
     },
     {
-      "slug": "raag-darbari-volume-11-54635",
+      "slug": "raag-darbari-volume-5-22601",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-54635.jpg",
-      "bytes": 26539,
-      "title": "The Leadership Challenge"
+      "file": "raag-darbari-volume-5-22601.jpg",
+      "bytes": 30609,
+      "title": "The Digital Mindset"
     },
     {
-      "slug": "raag-darbari-volume-11-68771",
+      "slug": "raag-darbari-volume-5-42209",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-68771.jpg",
-      "bytes": 33592,
-      "title": "Leadership on the Line"
+      "file": "raag-darbari-volume-5-42209.jpg",
+      "bytes": 30606,
+      "title": "Getting Things Done"
     },
     {
-      "slug": "raag-darbari-volume-11-44147",
+      "slug": "raag-darbari-volume-5-50189",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-44147.jpg",
-      "bytes": 44665,
-      "title": "Primal Leadership"
+      "file": "raag-darbari-volume-5-50189.jpg",
+      "bytes": 13340,
+      "title": "Essentialism"
     },
     {
-      "slug": "raag-darbari-volume-11-57599",
+      "slug": "raag-darbari-volume-5-57485",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-57599.jpg",
-      "bytes": 32217,
-      "title": "Emotional Intelligence"
+      "file": "raag-darbari-volume-5-57485.jpg",
+      "bytes": 42918,
+      "title": "Eat That Frog!"
     },
     {
-      "slug": "raag-darbari-volume-11-19295",
+      "slug": "raag-darbari-volume-5-41753",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-19295.jpg",
-      "bytes": 29892,
-      "title": "Good Leaders Ask Great Questions"
+      "file": "raag-darbari-volume-5-41753.jpg",
+      "bytes": 40103,
+      "title": "The 80/20 Principle"
     },
     {
-      "slug": "raag-darbari-volume-11-19751",
+      "slug": "raag-darbari-volume-5-81653",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-19751.jpg",
-      "bytes": 34070,
-      "title": "Developing the Leader Within You 2.0"
+      "file": "raag-darbari-volume-5-81653.jpg",
+      "bytes": 38353,
+      "title": "The Productivity Project"
     },
     {
-      "slug": "raag-darbari-volume-11-18611",
+      "slug": "raag-darbari-volume-5-67745",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-18611.jpg",
-      "bytes": 25327,
-      "title": "The Motive"
+      "file": "raag-darbari-volume-5-67745.jpg",
+      "bytes": 46144,
+      "title": "The Power of Full Engagement"
     },
     {
-      "slug": "raag-darbari-volume-11-82679",
+      "slug": "raag-darbari-volume-5-66833",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-82679.jpg",
-      "bytes": 27914,
-      "title": "The Five Dysfunctions of a Team"
+      "file": "raag-darbari-volume-5-66833.jpg",
+      "bytes": 30310,
+      "title": "The ONE Thing"
     },
     {
-      "slug": "raag-darbari-volume-11-32519",
+      "slug": "raag-darbari-volume-5-61133",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-32519.jpg",
-      "bytes": 28749,
-      "title": "The Advantage"
+      "file": "raag-darbari-volume-5-61133.jpg",
+      "bytes": 10560,
+      "title": "The Practicing Mind"
     },
     {
-      "slug": "raag-darbari-volume-11-50987",
+      "slug": "raag-darbari-volume-5-74357",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-50987.jpg",
-      "bytes": 47541,
-      "title": "Multipliers"
+      "file": "raag-darbari-volume-5-74357.jpg",
+      "bytes": 18462,
+      "title": "Indistractable"
     },
     {
-      "slug": "raag-darbari-volume-11-16559",
+      "slug": "raag-darbari-volume-5-78005",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-16559.jpg",
-      "bytes": 23730,
-      "title": "Turn the Ship Around!"
+      "file": "raag-darbari-volume-5-78005.jpg",
+      "bytes": 24638,
+      "title": "The Compound Effect"
     },
     {
-      "slug": "raag-darbari-volume-11-23855",
+      "slug": "raag-darbari-volume-5-72761",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-23855.jpg",
-      "bytes": 22221,
-      "title": "Extreme Ownership"
+      "file": "raag-darbari-volume-5-72761.jpg",
+      "bytes": 31488,
+      "title": "The Miracle Morning"
     },
     {
-      "slug": "raag-darbari-volume-11-16331",
+      "slug": "raag-darbari-volume-5-19181",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-16331.jpg",
-      "bytes": 25281,
-      "title": "The Dichotomy of Leadership"
+      "file": "raag-darbari-volume-5-19181.jpg",
+      "bytes": 33640,
+      "title": "Make Time"
     },
     {
-      "slug": "raag-darbari-volume-11-77663",
+      "slug": "raag-darbari-volume-5-37877",
       "status": "downloaded",
       "source": "open-library",
-      "file": "raag-darbari-volume-11-77663.jpg",
-      "bytes": 35311,
-      "title": "Wooden on Leadership"
+      "file": "raag-darbari-volume-5-37877.jpg",
+      "bytes": 39418,
+      "title": "The 12 Week Year"
     }
   ],
-  "offset": 92500,
-  "nextOffset": 93000,
+  "offset": 93000,
+  "nextOffset": 93500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 10979,
-    "keep_existing": 46721,
-    "not_found": 129304,
+    "downloaded": 11161,
+    "keep_existing": 46873,
+    "not_found": 129470,
     "bad_image": 74
   },
-  "totalProcessed": 187078
+  "totalProcessed": 187578
 }
