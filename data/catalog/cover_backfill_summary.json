@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 45,
-    "keep_existing": 41,
-    "not_found": 414,
+    "downloaded": 47,
+    "keep_existing": 33,
+    "not_found": 420,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "डपरशन-कय-ह",
+      "slug": "madhushala-volume-10-29974",
       "status": "downloaded",
       "source": "open-library",
-      "file": "डपरशन-कय-ह.jpg",
-      "bytes": 26368,
-      "title": "The Alchemist"
-    },
-    {
-      "slug": "दन-9",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "दन-9.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "दषट-रवदर-कमर",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "दषट-रवदर-कमर.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "धयनयग",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "धयनयग.jpg",
+      "file": "madhushala-volume-10-29974.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "madhushala-volume-10-65086",
+      "slug": "madhushala-volume-10-58474",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-10-65086.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "madhushala-volume-10-78994",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-10-78994.jpg",
+      "file": "madhushala-volume-10-58474.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "madhushala-volume-10-47074",
+      "slug": "madhushala-volume-10-53458",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-10-47074.jpg",
+      "file": "madhushala-volume-10-53458.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "madhushala-volume-10-43426",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-43426.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "madhushala-volume-10-20854",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-20854.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "madhushala-volume-10-45478",
+      "slug": "madhushala-volume-10-17890",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-10-45478.jpg",
+      "file": "madhushala-volume-10-17890.jpg",
       "bytes": 16860,
       "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "madhushala-volume-10-82642",
+      "slug": "madhushala-volume-10-45706",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-10-82642.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "madhushala-volume-10-70330",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-10-70330.jpg",
-      "bytes": 16442,
-      "title": "Study Like A Champ"
-    },
-    {
-      "slug": "madhushala-volume-10-35446",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-10-35446.jpg",
-      "bytes": 39350,
-      "title": "Aquarius"
-    },
-    {
-      "slug": "madhushala-volume-10-24046",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-10-24046.jpg",
+      "file": "madhushala-volume-10-45706.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "madhushala-volume-12-22716",
+      "slug": "madhushala-volume-10-78766",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-12-22716.jpg",
+      "file": "madhushala-volume-10-78766.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "madhushala-volume-12-45744",
+      "slug": "madhushala-volume-10-45250",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-12-45744.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "madhushala-volume-10-45250.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
     },
     {
-      "slug": "madhushala-volume-12-71052",
+      "slug": "madhushala-volume-10-25186",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-12-71052.jpg",
+      "file": "madhushala-volume-10-25186.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "madhushala-volume-12-39360",
+      "slug": "madhushala-volume-10-50266",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-12-39360.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "madhushala-volume-12-72648",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-12-72648.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "madhushala-volume-12-33660",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-12-33660.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "madhushala-volume-12-66720",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-12-66720.jpg",
+      "file": "madhushala-volume-10-50266.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "madhushala-volume-2-66530",
+      "slug": "madhushala-volume-10-67594",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-2-66530.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "madhushala-volume-10-67594.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "madhushala-volume-10-71014",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-71014.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "madhushala-volume-10-52318",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-52318.jpg",
+      "bytes": 28512,
+      "title": "Good to Great: Why Some Companies Make the Leap"
+    },
+    {
+      "slug": "madhushala-volume-10-29518",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-29518.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+    },
+    {
+      "slug": "madhushala-volume-10-79450",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-79450.jpg",
+      "bytes": 49862,
+      "title": "The Next Millionaire Next Door"
+    },
+    {
+      "slug": "madhushala-volume-10-63262",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-63262.jpg",
+      "bytes": 62419,
+      "title": "The Life-Changing Magic of Tidying Up"
+    },
+    {
+      "slug": "madhushala-volume-10-58018",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-58018.jpg",
+      "bytes": 39612,
+      "title": "Atomic Habits Clear"
+    },
+    {
+      "slug": "madhushala-volume-10-40006",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-40006.jpg",
+      "bytes": 29350,
+      "title": "Mind management not time management david kadavy"
+    },
+    {
+      "slug": "madhushala-volume-10-23818",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "madhushala-volume-10-23818.jpg",
+      "bytes": 35295,
+      "title": "Python Basics"
     }
   ],
-  "offset": 90000,
-  "nextOffset": 90500,
+  "offset": 90500,
+  "nextOffset": 91000,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 10367,
-    "keep_existing": 46372,
-    "not_found": 127765,
+    "downloaded": 10414,
+    "keep_existing": 46405,
+    "not_found": 128185,
     "bad_image": 74
   },
-  "totalProcessed": 184578
+  "totalProcessed": 185078
 }
