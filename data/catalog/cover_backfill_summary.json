@@ -1,21 +1,38 @@
 {
-  "processed": 78,
+  "processed": 500,
   "counts": {
-    "downloaded": 0,
-    "keep_existing": 11,
-    "not_found": 67,
-    "bad_image": 0
+    "downloaded": 2,
+    "keep_existing": 171,
+    "not_found": 326,
+    "bad_image": 1
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [],
-  "offset": 94000,
-  "nextOffset": 0,
+  "sampleDownloaded": [
+    {
+      "slug": "ai-2041-ten-visions-for-our-future",
+      "status": "downloaded",
+      "source": "internet-archive",
+      "file": "ai-2041-ten-visions-for-our-future.jpg",
+      "bytes": 5722,
+      "title": "AI 2041 Ten Visions for Our Future"
+    },
+    {
+      "slug": "bloodstain-pattern-analysis",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "bloodstain-pattern-analysis.jpg",
+      "bytes": 36683,
+      "title": "Bloodstain Pattern Analysis"
+    }
+  ],
+  "offset": 0,
+  "nextOffset": 500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 11216,
-    "keep_existing": 46944,
-    "not_found": 129922,
-    "bad_image": 74
+    "downloaded": 11218,
+    "keep_existing": 47115,
+    "not_found": 130248,
+    "bad_image": 75
   },
-  "totalProcessed": 188156
+  "totalProcessed": 188656
 }
