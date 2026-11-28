@@ -1,182 +1,21 @@
 {
-  "processed": 500,
+  "processed": 78,
   "counts": {
-    "downloaded": 55,
-    "keep_existing": 60,
-    "not_found": 385,
+    "downloaded": 0,
+    "keep_existing": 11,
+    "not_found": 67,
     "bad_image": 0
   },
   "updatedCurated": 0,
-  "sampleDownloaded": [
-    {
-      "slug": "raag-darbari-volume-9-23817",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-23817.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "raag-darbari-volume-9-44337",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-44337.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "raag-darbari-volume-9-62121",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-62121.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "raag-darbari-volume-9-67137",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-67137.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "raag-darbari-volume-9-62349",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-62349.jpg",
-      "bytes": 31815,
-      "title": "CISA Certified Information Systems Auditor Bundle"
-    },
-    {
-      "slug": "raag-darbari-volume-9-78993",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-78993.jpg",
-      "bytes": 19955,
-      "title": "Maps of Meaning"
-    },
-    {
-      "slug": "raag-darbari-volume-9-44793",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-44793.jpg",
-      "bytes": 39020,
-      "title": "The Detection of Deception in Forensic Contexts"
-    },
-    {
-      "slug": "raag-darbari-volume-9-24957",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-24957.jpg",
-      "bytes": 27267,
-      "title": "Minutes+of+the+Meeting"
-    },
-    {
-      "slug": "raag-darbari-volume-9-59385",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-59385.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "raag-darbari-volume-9-75801",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-75801.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "raag-darbari-volume-9-17205",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-17205.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "raag-darbari-volume-9-69645",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-69645.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "raag-darbari-volume-9-39549",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-39549.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "raag-darbari-volume-9-80817",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-80817.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "raag-darbari-volume-9-65085",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-65085.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "raag-darbari-volume-9-42969",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-42969.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
-    },
-    {
-      "slug": "raag-darbari-volume-9-83553",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-83553.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "raag-darbari-volume-9-42285",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-42285.jpg",
-      "bytes": 45348,
-      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
-    },
-    {
-      "slug": "raag-darbari-volume-9-39093",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-39093.jpg",
-      "bytes": 51498,
-      "title": "Designing Data-Intensive Applications"
-    },
-    {
-      "slug": "raag-darbari-volume-9-48441",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "raag-darbari-volume-9-48441.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    }
-  ],
-  "offset": 93500,
-  "nextOffset": 94000,
+  "sampleDownloaded": [],
+  "offset": 94000,
+  "nextOffset": 0,
   "totalTargets": 94078,
   "cumulativeCounts": {
     "downloaded": 11216,
-    "keep_existing": 46933,
-    "not_found": 129855,
+    "keep_existing": 46944,
+    "not_found": 129922,
     "bad_image": 74
   },
-  "totalProcessed": 188078
+  "totalProcessed": 188156
 }
