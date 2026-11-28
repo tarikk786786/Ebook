@@ -1,182 +1,182 @@
 {
   "processed": 500,
   "counts": {
-    "downloaded": 64,
-    "keep_existing": 39,
-    "not_found": 397,
+    "downloaded": 154,
+    "keep_existing": 51,
+    "not_found": 295,
     "bad_image": 0
   },
   "updatedCurated": 0,
   "sampleDownloaded": [
     {
-      "slug": "madhushala-volume-6-36738",
+      "slug": "raag-darbari-volume-3-67023",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-36738.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
-    },
-    {
-      "slug": "madhushala-volume-6-73446",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-6-73446.jpg",
-      "bytes": 28030,
-      "title": "Exam Ref Pl 900 Microsoft Power Platform Fundamentals Craig Zacker"
-    },
-    {
-      "slug": "madhushala-volume-6-52698",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-6-52698.jpg",
-      "bytes": 20797,
-      "title": "The 50Th Law"
-    },
-    {
-      "slug": "madhushala-volume-6-48594",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-6-48594.jpg",
-      "bytes": 26779,
-      "title": "1-Gemstones"
-    },
-    {
-      "slug": "madhushala-volume-6-39930",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-6-39930.jpg",
-      "bytes": 61696,
-      "title": "Thank You Note"
-    },
-    {
-      "slug": "madhushala-volume-6-26934",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-6-26934.jpg",
+      "file": "raag-darbari-volume-3-67023.jpg",
       "bytes": 30465,
       "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "madhushala-volume-6-41298",
+      "slug": "raag-darbari-volume-3-33963",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-41298.jpg",
+      "file": "raag-darbari-volume-3-33963.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "madhushala-volume-6-65010",
+      "slug": "raag-darbari-volume-3-28947",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-65010.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "raag-darbari-volume-3-28947.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "madhushala-volume-6-81654",
+      "slug": "raag-darbari-volume-3-37155",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-81654.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "raag-darbari-volume-3-37155.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "madhushala-volume-6-73902",
+      "slug": "raag-darbari-volume-3-41943",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-73902.jpg",
-      "bytes": 28512,
-      "title": "Good to Great: Why Some Companies Make the Leap"
+      "file": "raag-darbari-volume-3-41943.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "madhushala-volume-6-59538",
+      "slug": "raag-darbari-volume-3-17547",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-59538.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "raag-darbari-volume-3-17547.jpg",
+      "bytes": 30465,
+      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
     },
     {
-      "slug": "madhushala-volume-6-68430",
+      "slug": "raag-darbari-volume-3-48327",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-68430.jpg",
-      "bytes": 16860,
-      "title": "The Web Application Hacker's Handbook"
+      "file": "raag-darbari-volume-3-48327.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "madhushala-volume-6-76638",
+      "slug": "raag-darbari-volume-3-72495",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-76638.jpg",
+      "file": "raag-darbari-volume-3-72495.jpg",
+      "bytes": 45348,
+      "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    },
+    {
+      "slug": "raag-darbari-volume-3-22335",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raag-darbari-volume-3-22335.jpg",
       "bytes": 51498,
       "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "madhushala-volume-6-60906",
+      "slug": "raag-darbari-volume-3-72267",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-60906.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "raag-darbari-volume-3-72267.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
     },
     {
-      "slug": "madhushala-volume-6-32178",
+      "slug": "raag-darbari-volume-5-80741",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-32178.jpg",
+      "file": "raag-darbari-volume-5-80741.jpg",
+      "bytes": 51498,
+      "title": "Designing Data-Intensive Applications"
+    },
+    {
+      "slug": "raag-darbari-volume-5-25565",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raag-darbari-volume-5-25565.jpg",
+      "bytes": 52923,
+      "title": "Tell Me Everything"
+    },
+    {
+      "slug": "raag-darbari-volume-5-70481",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raag-darbari-volume-5-70481.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "madhushala-volume-6-56574",
+      "slug": "raag-darbari-volume-5-36509",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-6-56574.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "madhushala-volume-6-45174",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-6-45174.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
-    },
-    {
-      "slug": "madhushala-volume-6-39246",
-      "status": "downloaded",
-      "source": "open-library",
-      "file": "madhushala-volume-6-39246.jpg",
+      "file": "raag-darbari-volume-5-36509.jpg",
       "bytes": 28512,
       "title": "Good to Great: Why Some Companies Make the Leap"
     },
     {
-      "slug": "madhushala-volume-8-33356",
+      "slug": "raag-darbari-volume-5-47909",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-8-33356.jpg",
+      "file": "raag-darbari-volume-5-47909.jpg",
       "bytes": 45348,
       "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
     },
     {
-      "slug": "madhushala-volume-8-65960",
+      "slug": "raag-darbari-volume-5-61589",
       "status": "downloaded",
       "source": "open-library",
-      "file": "madhushala-volume-8-65960.jpg",
-      "bytes": 30465,
-      "title": "Options Volatility & Pricing: Advanced Trading Strategies"
+      "file": "raag-darbari-volume-5-61589.jpg",
+      "bytes": 16860,
+      "title": "The Web Application Hacker's Handbook"
+    },
+    {
+      "slug": "raag-darbari-volume-7-31987",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raag-darbari-volume-7-31987.jpg",
+      "bytes": 5444,
+      "title": "A Wonderful Creation"
+    },
+    {
+      "slug": "raag-darbari-volume-7-74623",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raag-darbari-volume-7-74623.jpg",
+      "bytes": 36454,
+      "title": "Abraham Lincon"
+    },
+    {
+      "slug": "raag-darbari-volume-7-73255",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raag-darbari-volume-7-73255.jpg",
+      "bytes": 39513,
+      "title": "Rich Dad’s Before You Quit Your Job Kiyosaki"
+    },
+    {
+      "slug": "raag-darbari-volume-7-43843",
+      "status": "downloaded",
+      "source": "open-library",
+      "file": "raag-darbari-volume-7-43843.jpg",
+      "bytes": 38338,
+      "title": "The Psychology Of Money Housel"
     }
   ],
-  "offset": 91500,
-  "nextOffset": 92000,
+  "offset": 92000,
+  "nextOffset": 92500,
   "totalTargets": 94078,
   "cumulativeCounts": {
-    "downloaded": 10533,
-    "keep_existing": 46504,
-    "not_found": 128967,
+    "downloaded": 10687,
+    "keep_existing": 46555,
+    "not_found": 129262,
     "bad_image": 74
   },
-  "totalProcessed": 186078
+  "totalProcessed": 186578
 }
